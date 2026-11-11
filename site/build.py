@@ -64,9 +64,9 @@ STRINGS = {
             "ultrasound.money",
             "growthepie",
         ],
-        "about_heading": "关于本页",
+        "about_heading": "关于本站",
         "sources_link_pre": "完整研究来源见",
-        "sources_link": "关于页",
+        "sources_link": "关于本站",
         "nav_label": "站点导航",
         "nav_home": "目录",
         "nav_archive": "归档",
@@ -98,6 +98,12 @@ STRINGS = {
         "day_nav_label": "前后日报",
         "kw_sep": "、",
         "example": "示例",
+        "article_entry_pre": "专题文章：",
+        "article_kicker": "专题",
+        "article_back": "返回目录",
+        "cite_day": "日报",
+        "cite_src": "原文",
+        "diagram_title": "理想以太坊账户的组件结构图",
     },
     "en": {
         "html_lang": "en",
@@ -134,9 +140,9 @@ STRINGS = {
             "ultrasound.money",
             "growthepie",
         ],
-        "about_heading": "About",
+        "about_heading": "About this site",
         "sources_link_pre": "The full list of sources is on the ",
-        "sources_link": "About page",
+        "sources_link": "About this site page",
         "nav_label": "Site navigation",
         "nav_home": "Home",
         "nav_archive": "Archive",
@@ -168,6 +174,28 @@ STRINGS = {
         "day_nav_label": "Previous and next reports",
         "kw_sep": ", ",
         "example": "Example",
+        "article_entry_pre": "Feature article: ",
+        "article_kicker": "Feature",
+        "article_back": "Back to all reports",
+        "cite_day": "daily",
+        "cite_src": "source",
+        "diagram_title": "Component diagram of the ideal Ethereum account",
+    },
+}
+
+ARTICLES = {
+    "ideal-account": {
+        "published": "2026-11-11",
+        "zh": {
+            "title": "理想的以太坊账户：功能、标准与评估",
+            "lede": "基于本站一年日报（2025-11-12 至 2026-11-11）的资料，梳理一个具备关键功能的以太坊账户该如何构建、各组件遵守哪些标准，以及如何评估它的安全与隐私。",
+            "keywords": ["账户抽象", "EIP-8141", "EIP-7702", "ERC-4337", "EIP-8250", "EIP-8272", "隐私", "后量子"],
+        },
+        "en": {
+            "title": "The ideal Ethereum account: features, standards and how to evaluate them",
+            "lede": "Drawing on a year of this site's daily reports (2025-11-12 to 2026-11-11), we lay out how to build an Ethereum account with every key feature, which standards each component follows, and how to judge its security and privacy.",
+            "keywords": ["account abstraction", "EIP-8141", "EIP-7702", "ERC-4337", "EIP-8250", "EIP-8272", "privacy", "post-quantum"],
+        },
     },
 }
 
@@ -337,8 +365,15 @@ def intro_block_html(c: Ctx, include_sources: bool) -> str:
         )
     return (
         f'<section class="about-intro"><h2>{esc(s["about_heading"])}</h2>'
-        f"<p>{esc(s['intro'])}</p>{sources}{suggest_html(c)}</section>"
+        f"<p>{esc(s['intro'])}</p>{article_entry_html(c)}{sources}{suggest_html(c)}</section>"
     )
+
+
+def article_entry_html(c: Ctx) -> str:
+    links = "".join(
+        f'<a href="{esc(c.href(slug + "/"))}">{esc(meta[c.lang]["title"])}</a>' for slug, meta in ARTICLES.items()
+    )
+    return f'<p class="article-entry">{esc(c.s["article_entry_pre"])}{links}{c.s["sentence_end"]}</p>'
 
 
 def footer_html(c: Ctx) -> str:
@@ -656,6 +691,131 @@ def render_about(c: Ctx) -> str:
   </header>
   <main class="about-page">
     {intro_block_html(c, include_sources=True)}
+  </main>
+  {footer_html(c)}
+</body>
+</html>
+"""
+
+
+SVG_LAYERS = [
+    # (zh band, en band, [(label, zh desc, en desc, style)])  style: s=live/settled, d=candidate/proposed, g=not recorded
+    ("钱包与交互", "Wallet layer", [
+        ("ERC-7730", "可读签名", "Clear signing", "g"),
+        ("EIP-7906", "交易断言", "Assertions", "d"),
+        ("ERC-7930 / 7828", "跨链地址", "Interop addresses", "d"),
+    ]),
+    ("交易格式", "Transaction format", [
+        ("EIP-8141", "帧交易，L1", "Frames, L1", "s"),
+        ("ERC-4337", "UserOp 与 bundler", "UserOps, bundlers", "s"),
+        ("EIP-7702", "EOA 委托", "EOA delegation", "s"),
+        ("EIP-8430", "AA 交易，L2 先行", "AA tx, L2 first", "d"),
+    ]),
+    ("验证与签名", "Signatures", [
+        ("EIP-7951", "P256，passkey", "P256, passkeys", "s"),
+        ("ERC-7913", "非地址公钥", "Non-address keys", "s"),
+        ("EIP-7932", "签名算法注册", "Algorithm registry", "d"),
+        ("EIP-8288", "后量子签名聚合", "PQ aggregation", "d"),
+    ]),
+    ("执行、nonce 与付费", "Nonces and fees", [
+        ("EIP-8250", "keyed nonce 并发", "Keyed nonces", "d"),
+        ("4337 paymaster", "代付 gas", "Sponsored gas", "s"),
+        ("8141 payer", "付款方帧", "Payer frame", "s"),
+        ("ERC-7579 / 8286", "模块化账户", "Modular accounts", "d"),
+    ]),
+    ("权限、恢复与委托安全", "Keys and delegation", [
+        ("EIP-8130", "Keystore 与 actor", "Keystore, actors", "d"),
+        ("ERC-8403 / 8231", "授权方与后量子公钥", "Authorities, PQ keys", "d"),
+        ("EIP-8476 / 8477", "关闭或限时委托", "Opt-out, expiry", "d"),
+        ("EIP-8425", "量子冻结与恢复", "Quantum freeze", "d"),
+    ]),
+    ("隐私与抗审查", "Privacy, anti-censorship", [
+        ("ERC-5564 / 6538", "隐身地址", "Stealth addresses", "g"),
+        ("ERC-8441", "后量子隐身地址", "PQ stealth", "d"),
+        ("EIP-8272", "recent roots", "Recent roots", "d"),
+        ("FOCIL EIP-7805", "包含列表", "Inclusion lists", "s"),
+    ]),
+]
+
+
+def article_svg(lang: str) -> str:
+    zh = lang == "zh"
+    W, band_h, gap, top, left_w = 960, 74, 14, 40, 200
+    H = top + len(SVG_LAYERS) * (band_h + gap) + 56
+    out = [f'<svg class="arch" viewBox="0 0 {W} {H}" role="img" aria-labelledby="arch-title" xmlns="http://www.w3.org/2000/svg">',
+           f'<title id="arch-title">{esc(STRINGS[lang]["diagram_title"])}</title>',
+           '<defs><marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
+           '<path d="M0 0L10 5L0 10z" fill="#5c564d"/></marker></defs>',
+           f'<text x="{W/2}" y="24" text-anchor="middle" class="arch-h">{esc("用户" if zh else "User")}</text>']
+    for i, (bz, be, boxes) in enumerate(SVG_LAYERS):
+        y = top + i * (band_h + gap)
+        out.append(f'<rect x="8" y="{y}" width="{W-16}" height="{band_h}" rx="12" class="arch-band"/>')
+        out.append(f'<text x="22" y="{y + band_h/2 + 5}" class="arch-band-t">{esc(bz if zh else be)}</text>')
+        n = len(boxes)
+        bw = (W - left_w - 24 - (n - 1) * 10) / n
+        for j, (lab, dz, de, st) in enumerate(boxes):
+            x = left_w + j * (bw + 10)
+            cls = {"s": "arch-box", "d": "arch-box dashed", "g": "arch-box grey"}[st]
+            out.append(f'<rect x="{x:.0f}" y="{y+10}" width="{bw:.0f}" height="{band_h-20}" rx="8" class="{cls}"/>')
+            out.append(f'<text x="{x+bw/2:.0f}" y="{y+32}" text-anchor="middle" class="arch-l">{esc(lab)}</text>')
+            out.append(f'<text x="{x+bw/2:.0f}" y="{y+50}" text-anchor="middle" class="arch-d">{esc(dz if zh else de)}</text>')
+        if i < len(SVG_LAYERS) - 1:
+            out.append(f'<line x1="{W/2}" y1="{y+band_h}" x2="{W/2}" y2="{y+band_h+gap}" stroke="#5c564d" marker-end="url(#arr)"/>')
+    out.append(f'<line x1="{W/2}" y1="30" x2="{W/2}" y2="{top}" stroke="#5c564d" marker-end="url(#arr)"/>')
+    ly = H - 22
+    leg = [("arch-box", "实线：已上线或已定" if zh else "Solid: live or settled"),
+           ("arch-box dashed", "虚线：候选或提议中" if zh else "Dashed: candidate or proposed"),
+           ("arch-box grey", "灰色：资料未记录状态" if zh else "Grey: status not in our sources")]
+    for k, (cls, t) in enumerate(leg):
+        x = 24 + k * 310
+        out.append(f'<rect x="{x}" y="{ly-12}" width="26" height="16" rx="4" class="{cls}"/>')
+        out.append(f'<text x="{x+34}" y="{ly+1}" class="arch-d" text-anchor="start">{esc(t)}</text>')
+    out.append("</svg>")
+    return f'<figure class="arch-fig">{"".join(out)}</figure>'
+
+
+CITE_RE = re.compile(r"\{\{c:([^}]*)\}\}")
+
+
+def render_article_body(c: Ctx, raw: str, day_dates: set[str]) -> str:
+    s = c.s
+
+    def cite(m: re.Match) -> str:
+        parts = [p.strip() for p in m.group(1).split("|") if p.strip()]
+        date, urls = parts[0], parts[1:]
+        if date not in day_dates:
+            raise SystemExit(f"article cites a day that does not exist: {date}")
+        bits = [f'<a href="{esc(c.href(f"days/{date}/"))}">{esc(s["cite_day"])} {esc(date)}</a>']
+        for k, u in enumerate(urls, 1):
+            label = s["cite_src"] if len(urls) == 1 else f'{s["cite_src"]} {k}'
+            bits.append(f'<a href="{esc(u)}" rel="noopener noreferrer">{esc(label)}</a>')
+        o, cl = ("（", "）") if c.lang == "zh" else ("(", ")")
+        return f'<span class="cite">{o}{" · ".join(bits)}{cl}</span>'
+
+    body = CITE_RE.sub(cite, raw)
+    return body.replace("{{svg}}", article_svg(c.lang))
+
+
+def render_article(c: Ctx, slug: str, raw: str, day_dates: set[str]) -> str:
+    s = c.s
+    meta = ARTICLES[slug]
+    m = meta[c.lang]
+    body = render_article_body(c, raw, day_dates)
+    pub = meta["published"]
+    return f"""{head_html(c, f'{m["title"]} · {s["brand"]}', m["lede"], og_type="article", keywords=m["keywords"], published=pub)}
+<body>
+  <header class="site-header">
+    {nav_html(c, "")}
+    <p class="eyebrow">{esc(s["article_kicker"])} · {esc(s["eyebrow"])}</p>
+    <h1>{esc(m["title"])}</h1>
+    <p class="lede">{esc(m["lede"])}</p>
+    <p class="article-date"><time datetime="{esc(pub)}">{esc(fmt_date(pub, c.lang))}</time></p>
+  </header>
+  <main class="article-page">
+    <article class="article-body">
+{body}
+    </article>
+    <p class="article-back"><a href="{esc(c.href("about/"))}">{esc(s["about_heading"])}</a> · <a href="{esc(c.href(""))}">{esc(s["article_back"])}</a></p>
   </main>
   {footer_html(c)}
 </body>
@@ -990,6 +1150,34 @@ EXTRA_STYLES = """
 .site-nav { flex-wrap: wrap; align-items: baseline; }
 .site-nav a.lang-switch { margin-left: auto; border: 1px solid var(--line); border-radius: 999px; padding: 0 0.7rem; }
 .site-nav a.lang-switch:hover { border-color: var(--accent); }
+
+.article-page { width: min(920px, calc(100% - 2rem)); margin: 0 auto 3rem; }
+.article-body { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.4rem 1.6rem 1.8rem; }
+.article-body h2 { font-family: var(--serif); font-size: 1.35rem; margin: 2rem 0 0.8rem; }
+.article-body h2:first-of-type { margin-top: 1rem; }
+.article-body h3 { font-size: 1.08rem; margin: 1.4rem 0 0.6rem; }
+.article-body li { margin: 0.35rem 0; }
+.article-note { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.cite { color: var(--muted); font-size: 0.82rem; white-space: normal; }
+.cite a { color: var(--muted); }
+.cite a:hover { color: var(--accent); }
+.table-wrap { overflow-x: auto; margin: 0.8rem 0 1.2rem; }
+.article-body table { border-collapse: collapse; width: 100%; font-size: 0.92rem; min-width: 640px; }
+.article-body th, .article-body td { border: 1px solid var(--line); padding: 0.5rem 0.6rem; vertical-align: top; text-align: left; }
+.article-body th { background: var(--tag); }
+.arch-fig { margin: 1rem 0 1.4rem; overflow-x: auto; }
+.arch { width: 100%; min-width: 640px; height: auto; font-family: var(--sans); }
+.arch-band { fill: #f6f2e8; stroke: var(--line); }
+.arch-band-t { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.arch-box { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.4; }
+.arch-box.dashed { fill: #fffcf6; stroke-dasharray: 6 4; }
+.arch-box.grey { fill: #ece7dc; stroke: #9a9284; stroke-dasharray: 2 3; }
+.arch-l { font-size: 13px; font-weight: 600; fill: var(--ink); }
+.arch-d { font-size: 11.5px; fill: var(--muted); }
+.arch-h { font-size: 13px; fill: var(--muted); }
+.article-date { color: var(--muted); font-size: 0.9rem; margin: 0.3rem 0 0; }
+.article-back { margin-top: 1.4rem; }
+.about-intro .article-entry { margin-top: 0.85rem; font-weight: 600; }
 html[lang="en"] body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans CJK SC", sans-serif; }
 """
 
@@ -1076,7 +1264,14 @@ def main() -> int:
                   render_day(Ctx(lang, path, base, site_url), day, image_name(day) in existing, newer, older, existing))
             if lang == "zh":
                 sitemap_paths.append((path, day["date"]))
-    sitemap_paths[1:1] = [("archive/", newest), ("about/", "")]
+    day_dates = {d["date"] for d in days}
+    for lang in LANG_ORDER:
+        lang_dir = out_dir / STRINGS[lang]["prefix"]
+        for slug in ARTICLES:
+            raw = (here / "articles" / f"{slug}.{lang}.html").read_text(encoding="utf-8")
+            write(lang_dir / slug / "index.html",
+                  render_article(Ctx(lang, f"{slug}/", base, site_url), slug, raw, day_dates))
+    sitemap_paths[1:1] = [("archive/", newest), ("about/", "")] + [(f"{slug}/", m["published"]) for slug, m in ARTICLES.items()]
 
     write(out_dir / "404.html", render_404(base))
     write(out_dir / "_redirects", "/page/1 / 301\n/page/1/ / 301\n/en/page/1 /en/ 301\n/en/page/1/ /en/ 301\n/en /en/ 301\n")

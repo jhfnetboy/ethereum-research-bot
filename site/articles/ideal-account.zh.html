@@ -1,0 +1,125 @@
+<p class="article-note">资料范围：本站 2025-11-12 至 2026-11-11 的 365 篇日报及其中引用的原始来源。状态截至 2026-11-11（UTC+7）。每条论断后的括号先链到本站当天日报，再链到原始来源。状态标签：<strong>已上线</strong>指已在以太坊主网激活；<strong>已定</strong>指 Final 或已排期（SFI）；<strong>候选</strong>指 CFI，已进入升级范围但仍可能调整；<strong>提议中</strong>指 Draft 或 PFI；<strong>已否决</strong>指 DFI 或被会议拒绝；<strong>撤回</strong>指 Withdrawn。标为“本文建议”的内容是根据资料做的综合判断，不是任何团队的决定。</p>
+
+<h2 id="conclusions">核心结论</h2>
+<ol>
+<li><strong>今天就能搭出接近理想的账户，但要拼装。</strong>EIP-7702 让 EOA 运行合约代码，已随 Pectra 上线 {{c:2026-02-18|https://blog.ethereum.org/en/2026/02/18/protocol-priorities-update-2026}}；ERC-4337 于 2026-06-02 成为 Final，EntryPoint、bundler 和 paymaster 接口固定下来 {{c:2026-06-02|https://github.com/ethereum/ERCs/pull/1773}}；ERC-7913 让账户验证没有以太坊地址的密钥（如 passkey、后量子密钥），2025-12-16 成为 Final {{c:2025-12-16|https://github.com/ethereum/ERCs/pull/1213}}。</li>
+<li><strong>L1 的原生 AA 路线已定为 EIP-8141 帧交易。</strong>2026-08-27 EIP-8141 被列为 Hegotá 的 SFI，并注明具体实现（包括 EIP 编号）仍可能改变 {{c:2026-08-27|https://github.com/ethereum/EIPs/pull/12251}}；2026-09-10 的 ACDE #245 把它定为 Hegotá 的 headliner {{c:2026-09-10|https://x.com/vdWijden/status/2098068285791121842}} {{c:2026-09-11|https://x.com/ethrex_client/status/2098440608922608110}}。Base 表示会在 L2 上推出 EIP-8130 {{c:2026-08-21|https://x.com/jessepollak/status/2090844327748796902}}，其交易类型后来拆分为 EIP-8430 {{c:2026-10-08|https://github.com/ethereum/EIPs/pull/12386}}。</li>
+<li><strong>隐私走“协议给原语、应用做隐私”的路线。</strong>EIP-8250 keyed nonce、EIP-8272 recent roots 和 EIP-7906 交易断言在 2026-09-24 成为 Hegotá 候选（CFI）{{c:2026-09-24|https://github.com/ethereum/EIPs/pull/12377}}，而协议内置隐私转账的 EIP-8182 在 2026-09-10 被否决（DFI）{{c:2026-09-10|https://x.com/vdWijden/status/2098068285791121842}}。</li>
+<li><strong>这一年最大的账户安全事件，问题出在授权路径，不在密码学。</strong>2026-10-29 Binance 安全事件约 63 亿美元受影响 {{c:2026-10-30|https://ethereal.news/ethereal-news-weekly-45/}}；初步报告显示攻击者控制签名服务后用 50 笔交易设置恶意 7702 委托，MPC 钱包撤销授权耗时更长 {{c:2026-11-03|https://x.com/binance/status/2117626126214504729}}。7702 作者之一 lightclient 称 7702 只是“现有攻击的加速剂” {{c:2026-11-03|https://x.com/dapplion/status/2117362449942708670}}。</li>
+<li><strong>后量子只做到“可替换、可聚合”，方案未定。</strong>EIP-8141 把签名放到独立列表，为将来聚合（包括后量子签名）留出空间，2026-05-22 合并 {{c:2026-05-22|https://github.com/ethereum/EIPs/pull/11481}}；EIP-8288（后量子签名与 STARK 聚合帧）、EIP-8425（量子冻结与账户恢复）都还是草案 {{c:2026-06-06|https://github.com/ethereum/EIPs/pull/11772}} {{c:2026-10-24|https://github.com/ethereum/EIPs/pull/12383}}。</li>
+</ol>
+
+<h2 id="features">一、关键 feature 清单</h2>
+<p>下表列出理想账户应具备的能力、资料中对应的标准和当前状态。没有在资料中出现的能力不列入。</p>
+<div class="table-wrap"><table>
+<thead><tr><th>能力</th><th>理想账户应做到</th><th>对应标准</th><th>状态（日期）</th></tr></thead>
+<tbody>
+<tr><td>原生 AA 与可编程验证</td><td>验证逻辑、付费和执行由账户代码决定，不依赖链下 bundler</td><td>EIP-8141；过渡期 ERC-4337、EIP-7702</td><td>8141 已定为 Hegotá headliner（2026-09-10）；4337 Final（2026-06-02）；7702 已上线 {{c:2026-09-10|https://x.com/vdWijden/status/2098068285791121842}} {{c:2026-09-11|https://x.com/ethrex_client/status/2098440608922608110}}</td></tr>
+<tr><td>签名算法可选（passkey、P256）</td><td>用手机安全芯片里的 passkey 签名，账户能识别多种算法</td><td>EIP-7951 secp256r1 预编译、ERC-7913、EIP-7932</td><td>7951 属于 Fusaka，Fusaka 于 2025-12-04 在主网激活 {{c:2025-11-24|https://x.com/poojaranjan19/status/1992964449393623282}} {{c:2025-12-04|https://ethereal.news/ethereal-news-weekly-1/}}；7913 Final；7932 提议中，未进 Glamsterdam {{c:2025-12-04|https://ethereal.news/ethereal-news-weekly-1/}}</td></tr>
+<tr><td>密钥轮换与恢复</td><td>换钥匙不换地址；丢失时可按预设规则恢复</td><td>EIP-8130 Keystore、ERC-8403、ERC-8231</td><td>均提议中 {{c:2026-10-08|https://github.com/ethereum/EIPs/pull/12386}} {{c:2026-09-03|https://ethereum-magicians.org/t/erc-8403-account-authority-lifecycle/29570}}</td></tr>
+<tr><td>后量子迁移</td><td>能切换到后量子签名，旧 ECDSA 密钥可停用</td><td>EIP-8141 签名列表、EIP-8288、EIP-8425、EIP-7851、EIP-8151</td><td>签名列表已并入 8141 规范（2026-05-22）；8288、8425 提议中；7851 已否决（2026-09-10） {{c:2026-09-10|https://x.com/vdWijden/status/2098068285791121842}}</td></tr>
+<tr><td>gas 代付与 ERC-20 付费</td><td>第三方或代币付 gas，用户账户里不必有 ETH</td><td>ERC-4337 paymaster、EIP-8141 付款方、EIP-8130/8430 payer</td><td>4337 Final；8141 已定；8430 提议中 {{c:2026-04-29|https://github.com/ethereum/EIPs/pull/11577}}</td></tr>
+<tr><td>批量与并发 nonce</td><td>一笔交易原子执行多步；多笔交易互不阻塞</td><td>EIP-8141 原子批量、EIP-8250 keyed nonce</td><td>8141 批量 2026-05-13 合并入规范；8250 候选（2026-09-24） {{c:2026-05-13|https://github.com/ethereum/EIPs/pull/11652}} {{c:2026-09-24|https://github.com/ethereum/EIPs/pull/12377}}</td></tr>
+<tr><td>隐私转账与隐身地址</td><td>收款不暴露主地址；隐私提款不依赖中继者</td><td>ERC-5564、ERC-6538、ERC-8441、EIP-8272</td><td>8441 草案合并（2026-10-29）；8272 候选 {{c:2026-10-29|https://github.com/ethereum/ERCs/pull/2059}}</td></tr>
+<tr><td>跨链与跨 L2</td><td>同一地址格式跨链可读；跨 L2 操作由账户自己完成</td><td>ERC-7930、ERC-7828、EIL、ERC-7683</td><td>7930、7828 进入 Review（2026-04-28） {{c:2026-04-28|https://github.com/ethereum/ERCs/pull/1708}}；EIL 为研究提案 {{c:2025-11-13|https://ethresear.ch/t/eil-trust-minimized-cross-l2-interop/23437}}</td></tr>
+<tr><td>委托与权限</td><td>给会话密钥、代理授权有限权限；委托可撤销、可永久关闭</td><td>EIP-7702、ERC-7579 与 ERC-8286、8130 actor 策略、EIP-8476、EIP-8477</td><td>7702 已上线；8286 草案（2026-07-28）；8476、8477 提议中 {{c:2026-07-28|https://github.com/ethereum/ERCs/pull/1794}} {{c:2026-10-30|https://github.com/ethereum/EIPs/pull/12600}}</td></tr>
+<tr><td>可读签名与交易断言</td><td>签名前看懂要做什么；结果不符就整笔回滚</td><td>ERC-7730、EIP-7906</td><td>7906 候选（2026-09-24），断言失败回滚执行部分 {{c:2026-10-09|https://github.com/ethereum/EIPs/pull/12466}}</td></tr>
+</tbody></table></div>
+
+<h2 id="components">二、各组件遵守的标准与组合方式</h2>
+<h3 id="diagram">结构图</h3>
+<p>下图按层次展示理想账户的组件。实线框是已上线或已定的标准，虚线框是候选或提议中的标准，灰色点线框是资料中没有记录状态的标准。</p>
+{{svg}}
+
+<h3 id="standards">组件与标准对照</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>组件</th><th>标准</th><th>作用</th><th>状态与日期</th></tr></thead>
+<tbody>
+<tr><td rowspan="4">交易与账户核心</td><td>EIP-8141 帧交易</td><td>交易由多个帧组成：验证前缀（含付款方批准）加执行主体；EOA 通过默认代码也能使用</td><td>2026-01-29 提为 headliner 候选；2026-03-26 CFI；2026-08-27 SFI；2026-09-10 定为 headliner {{c:2026-03-26|https://forkcast.org/calls/acde/233}} {{c:2026-03-10|https://github.com/ethereum/EIPs/pull/11379}} {{c:2026-10-09|https://github.com/ethereum/EIPs/pull/12472}}</td></tr>
+<tr><td>ERC-4337</td><td>合约层 AA：EntryPoint、bundler、paymaster</td><td>Final，2026-06-02 {{c:2026-06-02|https://github.com/ethereum/ERCs/pull/1773}}</td></tr>
+<tr><td>EIP-7702</td><td>EOA 一次签名即可委托给合约代码</td><td>已上线（Pectra，2025） {{c:2026-02-18|https://blog.ethereum.org/en/2026/02/18/protocol-priorities-update-2026}}</td></tr>
+<tr><td>EIP-8130 / EIP-8430</td><td>8130 只保留 Keystore；交易类型拆为 8430，给现有 EOA 批量、代付和二维 nonce，L2 可先上</td><td>提议中；2026-10-08 拆分 {{c:2026-10-08|https://github.com/ethereum/EIPs/pull/12386}} {{c:2026-09-29|https://github.com/ethereum/EIPs/pull/12385}} {{c:2026-09-30|https://ethereum-magicians.org/t/eip-8430-aa-transaction-type-split-out-from-8130/29810}}</td></tr>
+<tr><td rowspan="4">验证与签名</td><td>EIP-7951</td><td>secp256r1（P256）预编译，passkey 所用曲线</td><td>随 Fusaka 于 2025-12-04 激活 {{c:2025-11-24|https://x.com/poojaranjan19/status/1992964449393623282}}</td></tr>
+<tr><td>ERC-7913</td><td>验证没有以太坊地址的公钥</td><td>Final，2025-12-16 {{c:2025-12-16|https://github.com/ethereum/ERCs/pull/1213}}</td></tr>
+<tr><td>EIP-7932</td><td>协议层签名算法注册表，2025-12-03 去掉自带交易包装</td><td>提议中；2025-12-04 未进 Glamsterdam {{c:2025-12-03|https://github.com/ethereum/EIPs/pull/10754}}</td></tr>
+<tr><td>8141 签名规范</td><td>P256 路径固定 low-s，防签名可塑性</td><td>2026-07-22 合并入规范 {{c:2026-07-22|https://github.com/ethereum/EIPs/pull/11984}}</td></tr>
+<tr><td>并发</td><td>EIP-8250</td><td>同一发送方多条独立 nonce 序列，隐私协议可共享发送方</td><td>2026-05-12 合并为草案；2026-09-24 CFI；2026-10-09 提议改为一次性已用标记 {{c:2026-05-12|https://github.com/ethereum/EIPs/pull/11598}} {{c:2026-10-09|https://github.com/ethereum/EIPs/pull/12467}}</td></tr>
+<tr><td rowspan="3">权限、模块与恢复</td><td>ERC-7579 与 ERC-8286</td><td>模块化账户；8286 定义 7579 模块在帧交易里的验证流程</td><td>8286 草案，2026-07-28 {{c:2026-07-28|https://github.com/ethereum/ERCs/pull/1794}}</td></tr>
+<tr><td>EIP-8130 actor 策略</td><td>给密钥限定调用范围和到期时间，可作会话密钥基础</td><td>提议中 {{c:2026-06-04|https://github.com/ethereum/EIPs/pull/11766}} {{c:2026-07-02|https://github.com/ethereum/EIPs/pull/11847}}</td></tr>
+<tr><td>ERC-8403、ERC-8231</td><td>账户授权方的生命周期；后量子公钥注册、轮换、撤销</td><td>讨论中 {{c:2026-09-03|https://ethereum-magicians.org/t/erc-8403-account-authority-lifecycle/29570}} {{c:2026-04-14|https://ethereum-magicians.org/t/erc-8231-post-quantum-key-registry/28235}}</td></tr>
+<tr><td rowspan="3">委托安全</td><td>EIP-8476</td><td>EOA 永久关闭 7702 委托</td><td>提议中，2026-10-30 {{c:2026-10-30|https://github.com/ethereum/EIPs/pull/12600}}</td></tr>
+<tr><td>EIP-8477</td><td>授权须锚定最近 256 个区块内，签了未用的授权会自行失效</td><td>提议中，2026-11-04 {{c:2026-11-04|https://ethereum-magicians.org/t/eip-8477-recent-block-bound-delegation-authorizations/30269}}</td></tr>
+<tr><td>EIP-7851、EIP-8151</td><td>停用被委托 EOA 的原 ECDSA 密钥，ecRecover 感知停用</td><td>2026-06-09 PFI；7851 于 2026-09-10 DFI {{c:2026-06-09|https://github.com/ethereum/EIPs/pull/11786}}</td></tr>
+<tr><td rowspan="2">后量子</td><td>EIP-8288</td><td>后量子签名和 STARK 作为交易依赖，在内存池层聚合为一个递归证明</td><td>提议中，2026-06-06 提交 {{c:2026-06-06|https://ethereum-magicians.org/t/eip-8288-frame-type-for-pq-sig-and-stark-aggregation/28723}}</td></tr>
+<tr><td>EIP-8425</td><td>冻结旧 ECDSA 授权并恢复未迁移账户</td><td>草案，2026-10-24 合并 {{c:2026-10-24|https://github.com/ethereum/EIPs/pull/12383}}</td></tr>
+<tr><td rowspan="4">隐私</td><td>EIP-8272</td><td>交易引用最近的状态根，隐私池提款的前提之一</td><td>2026-06-06 合并为草案；2026-09-24 CFI {{c:2026-06-06|https://github.com/ethereum/EIPs/pull/11726}}</td></tr>
+<tr><td>ERC-5564、ERC-6538、ERC-8441</td><td>隐身地址；8441 用 ML-KEM-768 加 secp256k1 ECDH 混合，防将来量子计算机回溯收款人</td><td>8441 草案，2026-10-29 {{c:2026-10-29|https://github.com/ethereum/ERCs/pull/2059}}</td></tr>
+<tr><td>EIP-8182</td><td>协议内置隐私 ETH 和 ERC-20 转账</td><td>2026-09-10 DFI {{c:2026-03-04|https://github.com/ethereum/EIPs/pull/11373}} {{c:2026-09-10|https://x.com/vdWijden/status/2098068285791121842}}</td></tr>
+<tr><td>FOCIL（EIP-7805）</td><td>包含列表强制打包，隐私交易不易被审查</td><td>Hegotá headliner {{c:2026-04-10|https://blog.ethereum.org/en/2026/04/10/checkpoint-9}}</td></tr>
+<tr><td rowspan="2">交互与跨链</td><td>EIP-7906</td><td>交易断言状态变化，不符则回滚</td><td>CFI，2026-09-24 {{c:2026-09-24|https://github.com/ethereum/EIPs/pull/12377}}</td></tr>
+<tr><td>ERC-7930、ERC-7828</td><td>跨链互操作地址格式</td><td>Review，2026-04-28 {{c:2026-04-28|https://github.com/ethereum/ERCs/pull/1709}}</td></tr>
+</tbody></table></div>
+
+<h3 id="assembly">如何组合搭建</h3>
+<p><strong>路径 A：现在可用（本文建议）。</strong></p>
+<ol>
+<li>入口保留 EOA 地址，用 EIP-7702 委托到一份经过审计的 ERC-7579 模块化账户实现。7702 已上线，4337 已 Final {{c:2026-02-18|https://blog.ethereum.org/en/2026/02/18/protocol-priorities-update-2026}} {{c:2026-06-02|https://github.com/ethereum/ERCs/pull/1773}}。</li>
+<li>验证模块接受 passkey：链上通过 EIP-7951 预编译验证 P256，通过 ERC-7913 接口验证非地址公钥 {{c:2025-12-16|https://github.com/ethereum/ERCs/pull/1213}}。不过 dankrad 认为 passkey 并不等同于内置在手机里的硬件钱包，只是适合快速创建热钱包 {{c:2026-05-31|https://x.com/dankrad/status/2061047552363917436}}。</li>
+<li>gas 由 ERC-4337 paymaster 代付，批量调用由账户代码执行。</li>
+<li>收款用 ERC-5564/6538 隐身地址；kohaku-cli 已演示把转账和公告打包成一个 4337 UserOp {{c:2026-08-10|https://x.com/kassandraETH/status/2086842348323872918}}。</li>
+<li>恢复：Safe 已提供不迁移地址、把 owner 轮换为抗量子哈希签名者的路径 {{c:2026-04-01|https://x.com/koeppelmann/status/2039095395419148292}}；也有面向 4337/7579 账户、不依赖守护人的时间锁恢复讨论 {{c:2026-07-14|https://ethereum-magicians.org/t/timelock-account-recovery-a-trust-minimized-recovery-system-for-smart-accounts/29009}}。</li>
+</ol>
+<p><strong>路径 B：Hegotá 之后的 L1 目标形态（已定加候选）。</strong></p>
+<ol>
+<li>交易改用 EIP-8141 帧交易：验证帧调用账户自己的验证逻辑，付款方帧批准付费，执行帧做原子批量 {{c:2026-05-13|https://github.com/ethereum/EIPs/pull/11652}}。</li>
+<li>EIP-8250 keyed nonce 让多笔交易并发，隐私池等协议可以共享一个发送方 {{c:2026-05-12|https://github.com/ethereum/EIPs/pull/11598}}。</li>
+<li>EIP-8272 引用最近状态根，配合 FOCIL，soispoke 称这一组合能在 Hegotá 带来原生、去信任、抗审查的隐私交易 {{c:2026-05-26|https://x.com/soispoke/status/2059269087381852618}}。</li>
+<li>EIP-7906 断言让钱包展示交易的确切效果，结果不符整笔回滚 {{c:2026-11-06|https://x.com/ethereumfndn/status/2118479704412045627|https://blog.ethereum.org/en/2026/10/05/transaction-assertions}}。</li>
+<li>现有 ERC-7579 模块通过 ERC-8286 接入帧交易，降低迁移成本 {{c:2026-07-28|https://github.com/ethereum/ERCs/pull/1794}}。</li>
+</ol>
+<p><strong>路径 C：L2 先行。</strong>Base 计划推出 EIP-8130 {{c:2026-08-21|https://x.com/jessepollak/status/2090844327748796902}}；EIP-8430 给现有 EOA 批量、代付和二维 nonce，L2 可能先上，L1 走 EIP-8141，两者交易字段和内存池规则不同，SDK 需要分别支持 {{c:2026-09-29|https://github.com/ethereum/EIPs/pull/12385}} {{c:2026-09-30|https://ethereum-magicians.org/t/eip-8430-aa-transaction-type-split-out-from-8130/29810}}。</p>
+
+<h2 id="evaluation">三、安全与隐私：评估维度和方法</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>维度</th><th>要回答的问题</th><th>评估方法</th><th>这一年资料中的证据</th></tr></thead>
+<tbody>
+<tr><td>威胁模型与授权路径</td><td>谁能让账户做事？一共有几条授权路径？</td><td>列出所有能授权的主体（原密钥、7702 委托、Keystore actor、模块、付款方），逐条推演被盗后的后果</td><td>donnoh_eth 用 EIP-8130 在 Base 测试网绕过时间锁钱包的时间锁 {{c:2026-08-29|https://x.com/donnoh_eth/status/2093407080581353796}}；账户层限额挡不住已有 transferFrom 授权，有人提出把限速放进资产 {{c:2026-11-02|https://ethresear.ch/t/asset-level-spending-limits-and-recovery-should-rate-limiting-live-in-the-asset-rather-than-the-account/26205}}</td></tr>
+<tr><td>密钥丢失与恢复</td><td>丢钥匙或被盗后多久能止损、恢复？</td><td>演练：撤销委托、轮换密钥、恢复控制各需几笔交易、几个签名、多少时间</td><td>Binance 报告：暂停提款不会让链上 7702 授权失效，MPC 无单一密钥可立即撤销 {{c:2026-11-03|https://x.com/binance/status/2117626126214504729}}</td></tr>
+<tr><td>签名重放</td><td>一个签名能否在别的账户、别的链、别的时间被重用？</td><td>检查签名哈希覆盖的字段：链 ID、发送方、付款方、nonce、有效期</td><td>8130 付款方签名跨发送方重放 2026-05-04 修复 {{c:2026-05-04|https://github.com/ethereum/EIPs/pull/11591}}；四个授权与重放严重问题 {{c:2026-05-07|https://github.com/ethereum/EIPs/pull/11612}}；委托因 gas 不足回滚时签好的 7702 委托可被任何人重用（INV-8） {{c:2026-11-06|https://github.com/ethereum/glamsterdam-gas-invariants}}</td></tr>
+<tr><td>委托风险</td><td>委托是否等于一份长期有效的指令？</td><td>审计签名系统能批准什么；检查委托后的代码与初始化是否绑定签名</td><td>Trail of Bits：攻击者拿到有效签名后，委托能让之后存入的资金也被转走 {{c:2026-11-07|https://blog.trailofbits.com/2026/11/06/after-binance-check-what-your-signing-systems-can-approve/}}；Köppelmann 称 7702 只被用来高效作案，不是根因 {{c:2026-10-30|https://x.com/koeppelmann/status/2115927796992393407}}</td></tr>
+<tr><td>后量子</td><td>公钥已暴露的账户能否不换地址迁移？</td><td>检查能否切换签名算法、能否停用旧 ECDSA 密钥、后量子签名的 gas 与数据成本</td><td>后量子签名可能比 ECDSA 大几十倍，单独列出签名才能将来聚合 {{c:2026-05-22|https://github.com/ethereum/EIPs/pull/11481}}；EIP-8425 草案处理未迁移账户 {{c:2026-10-24|https://github.com/ethereum/EIPs/pull/12383}}</td></tr>
+<tr><td>隐私泄露面</td><td>发送方、收款方、金额、IP、钱包本身哪些会暴露？</td><td>逐层检查：链上发送方、中继者、公告日志、RPC 读取、钱包软件</td><td>帧交易上的隐私池可由池合约当发送方、自付 gas，无需中继者 {{c:2026-11-06|https://ethresear.ch/t/a-privacy-pool-on-frame-transactions-what-works-and-the-case-that-does-not-yet/26223}}；binji_x 指出钱包本身被攻破则链上隐私无用 {{c:2026-04-05|https://x.com/binji_x/status/2040703905378546038}}</td></tr>
+<tr><td>gas 与可用性成本</td><td>每项安全与隐私功能要多付多少 gas？</td><td>在目标分叉规则下实测首笔交易、委托、证明验证的 gas</td><td>EIP-8037 下一次 7702 空账户授权从 25,000 涨到 235,606 gas；隐私池提款约 679,322 gas，证明验证超过验证 gas 上限 {{c:2026-11-06|https://blog.ethereum.org/en/2026/11/06/glamsterdam-8037-8038|https://ethresear.ch/t/a-privacy-pool-on-frame-transactions-what-works-and-the-case-that-does-not-yet/26223}}</td></tr>
+<tr><td>内存池与抗审查</td><td>交易能否安全进入公共内存池、不被审查？</td><td>检查验证阶段可读的状态范围、批量限制、包含列表兼容性</td><td>8130 把验证限于已知验证器和世界状态，便于内存池安全处理 {{c:2026-03-06|https://github.com/ethereum/EIPs/pull/11380}}；8141 允许任意帧原子批量但公共内存池的验证前缀禁止批量 {{c:2026-05-13|https://github.com/ethereum/EIPs/pull/11652}}；Vitalik 称 FOCIL 与 AA 有重要协同 {{c:2026-02-19|https://x.com/VitalikButerin/status/2024523896360464791}}</td></tr>
+<tr><td>规范成熟度</td><td>规范是否还在做破坏性修改？</td><td>跟踪规范 PR 中的 breaking change 和客户端实现情况</td><td>8141 在 2026-10-31 合并 nonce 边界的破坏性修复 {{c:2026-10-31|https://github.com/ethereum/EIPs/pull/12603}}；ethrex 已运行两个公共测试网，其中一个专用于帧交易 {{c:2026-09-11|https://x.com/ethrex_client/status/2098440608922608110}}</td></tr>
+</tbody></table></div>
+
+<h2 id="tradeoffs">四、路线取舍与未定问题</h2>
+<h3>主要取舍</h3>
+<ul>
+<li><strong>通用平台还是开箱即用。</strong>lightclient 认为 8130 有一半是应用层细节，不该写进协议，8141 支持无许可创新 {{c:2026-08-22|https://x.com/lightclients/status/2090862398928552188}}；Ethlabs 周报把 8130 定位为开箱即用的账户方案，8141 是账户平台 {{c:2026-08-31}}。代价：8141 灵活但钱包要自己实现验证，8130 好集成但限制模式 {{c:2026-08-22|https://x.com/lightclients/status/2090862398928552188}}。</li>
+<li><strong>协议内置隐私还是给原语。</strong>8182 已否决，8250、8272 进入候选（见上文）。隐私功能因此主要落在应用和钱包层。</li>
+<li><strong>账户层保护还是资产层保护。</strong>密钥能重新委托时，写在账户里的策略都可能被换掉，因此有人主张把限速放进资产 {{c:2026-11-02|https://ethresear.ch/t/asset-level-spending-limits-and-recovery-should-rate-limiting-live-in-the-asset-rather-than-the-account/26205}}。</li>
+<li><strong>7702 的便利与常驻风险。</strong>一个签名即可升级 EOA，攻击者同样高效 {{c:2026-10-30|https://github.com/ethereum/EIPs/pull/12600}}；EIP-8476 给机构永久关闭委托的选项，EIP-8477 让未用授权自动过期。</li>
+<li><strong>后量子：EOA 直接换算法还是经智能账户。</strong>EIP-8202 让 EOA 通过 scheme_id 选择签名算法，不必用智能账户，与 8141、8164 路线不同 {{c:2026-04-23|https://github.com/ethereum/EIPs/pull/11438}}。</li>
+</ul>
+<h3>仍未定的问题</h3>
+<ul>
+<li>Hegotá 主网时间：资料中没有日期。Glamsterdam 在 Hoodi 的分叉已因 EIP-8037 的合约兼容问题推迟，未定新日期 {{c:2026-10-22|https://blog.ethereum.org/en/2026/10/22/glamsterdam-hoodi-delay}}，ACDE #249 定于 11 月 19 日讨论审计结果 {{c:2026-11-11|https://github.com/ethereum/pm/issues/2285}}。</li>
+<li>8141 的最终形态：SFI 时已注明实现和 EIP 编号可能改变 {{c:2026-08-27|https://github.com/ethereum/EIPs/pull/12251}}，Derek Chiang 也说 SFI 只是表明以太坊会在 Hegotá 推出 AA，不代表现有写法定型；之后每周召开会议尝试收敛 8141 与 8130 {{c:2026-08-27|https://github.com/ethereum/EIPs/pull/12251}} {{c:2026-08-28|https://x.com/decentrek/status/2093026086552752141}}。</li>
+<li>验证 gas 上限能否容纳 zk 证明验证：隐私池实测超限 {{c:2026-11-06|https://ethresear.ch/t/a-privacy-pool-on-frame-transactions-what-works-and-the-case-that-does-not-yet/26223}}。</li>
+<li>EIP-8250 是否改为一次性已用标记 {{c:2026-10-09|https://github.com/ethereum/EIPs/pull/12467}}；EIP-8298 SETCODEFROM 仍是 Hegotá 候选讨论中 {{c:2026-10-07|https://ethresear.ch/t/who-cleans-up-the-code-setcodefroms-dangling-bytecode-and-futureproof-design-choices/26127}}。</li>
+<li>后量子签名方案没有统一结论：Falcon、ML-DSA、哈希签名等都有草案或实现讨论 {{c:2026-04-11|https://github.com/ethereum/EIPs/pull/11511}} {{c:2026-06-05|https://ethereum-magicians.org/t/post-quantum-erc-4337-wots-39-winternitz-one-time-signature-wallet-for-ethereum/28715}}。</li>
+<li>委托防护：EIP-8476、EIP-8477 都是草案。</li>
+</ul>
+
+<h2 id="gaps">五、资料没有覆盖的部分</h2>
+<ul>
+<li>ERC-6900、ERC-7715、ERC-7710、ERC-7739 在这一年的日报中没有出现，本文不评价。</li>
+<li>ERC-7579 本身的状态变化没有出现在资料中，只记录了相关的 ERC-7780 模块类型和 ERC-8286。</li>
+<li>各 L2 对 P256 预编译的支持情况、具体钱包产品的市场份额和审计结果，资料中没有。</li>
+<li>Hegotá 的主网日期、EIP-8141 在各客户端的完成度，资料中没有完整数据。</li>
+</ul>
+
+<h2 id="method">六、方法说明</h2>
+<p>本文只使用本站日报收录的信息和它们引用的原始链接。状态按资料中最近一次记录的会议决定或 PR 合并来写；会议结论来自 Ethereal news 或 EIP-8081 元 EIP 的记录。日期均为 UTC+7。发现错误或遗漏，欢迎发邮件告诉我们。</p>

@@ -18,7 +18,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10560",
       "date": "2025-11-20",
       "title_en": "Add EIP: Precompile for Falcon support",
-      "note_en": "(simonmasson), merged after submission on October 1, 20257, 2025; Magicians: Open question to core devs about EIP-7932 (SirSpudlington), 05:38: if EIP-6404 interoperates with EIP-7932, should it become a registry plus precompile so AA can verify signatures for every algorithm efficiently.",
+      "note_en": "(simonmasson), merged after submission on October 17, 2025; Magicians: Open question to core devs about EIP-7932 (SirSpudlington), 05:38: if EIP-6404 interoperates with EIP-7932, should it become a registry plus precompile so AA can verify signatures for every algorithm efficiently.",
       "topic_en": "Account signatures: Falcon and EIP-7932"
     },
     {
@@ -28,7 +28,7 @@
       "url": "https://ethereum-magicians.org/t/open-question-to-the-core-devs-about-eip-7932/26636",
       "date": "2025-11-20",
       "title_en": "Magicians: Open question to core devs about EIP-7932",
-      "note_en": "Add EIP: Precompile for Falcon support (simonmasson), merged after submission on October 1, 20257, 2025; Magicians: Open question to core devs about EIP-7932 (SirSpudlington), 05:38: if EIP-6404 interoperates with EIP-7932, should it become a registry plus precompile so AA can verify signatures for every algorithm efficiently.",
+      "note_en": "Add EIP: Precompile for Falcon support (simonmasson), merged after submission on October 17, 2025; Magicians: Open question to core devs about EIP-7932 (SirSpudlington), 05:38: if EIP-6404 interoperates with EIP-7932, should it become a registry plus precompile so AA can verify signatures for every algorithm efficiently.",
       "topic_en": "Account signatures: Falcon and EIP-7932"
     },
     {

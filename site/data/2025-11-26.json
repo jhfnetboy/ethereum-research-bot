@@ -57,7 +57,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10790",
       "date": "2025-11-26",
       "title_en": "Add EIP: Let exits use the consolidation queue",
-      "note_en": "(fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 2, 20259, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
+      "note_en": "(fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 29, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
       "topic_en": "Other updates"
     },
     {
@@ -67,7 +67,7 @@
       "url": "https://github.com/ethereum/ERCs/pull/1140",
       "date": "2025-11-26",
       "title_en": "Add ERC: Purpose-Bound ERC-20 with Conditional Unlock",
-      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 2, 20259, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
+      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 29, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
       "topic_en": "Other updates"
     },
     {
@@ -77,7 +77,7 @@
       "url": "https://github.com/ethereum/ERCs/pull/1194",
       "date": "2025-11-26",
       "title_en": "Add ERC: Payout Race",
-      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 2, 20259, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
+      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 29, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
       "topic_en": "Other updates"
     },
     {
@@ -104,6 +104,7 @@
   "image": {
     "source_url": "https://github.com/ethereum/EIPs/pull/10790",
     "credit": "GitHub, ethereum/EIPs PR 10790",
+    "local_path": "assets/2025-11-26.jpg",
     "credit_en": "GitHub, ethereum/EIPs PR 10790"
   },
   "keywords_en": [

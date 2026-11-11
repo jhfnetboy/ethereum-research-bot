@@ -37,7 +37,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/9476",
       "date": "2025-12-09",
       "title_en": "Add EIP: Restricted Behavior Transaction Type",
-      "note_en": "(forshtat), merged after submission on March 1, 20252, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
+      "note_en": "(forshtat), merged after submission on March 12, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
       "topic_en": "Transactions: a new type and the mempool"
     },
     {
@@ -47,7 +47,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10853",
       "date": "2025-12-09",
       "title_en": "Add EIP: eth/vhash, a blob aware mempool",
-      "note_en": "Add EIP: Restricted Behavior Transaction Type (forshtat), merged after submission on March 1, 20252, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
+      "note_en": "Add EIP: Restricted Behavior Transaction Type (forshtat), merged after submission on March 12, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
       "topic_en": "Transactions: a new type and the mempool"
     },
     {
@@ -57,7 +57,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10801",
       "date": "2025-12-09",
       "title_en": "EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking",
-      "note_en": "Add EIP: Restricted Behavior Transaction Type (forshtat), merged after submission on March 1, 20252, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
+      "note_en": "Add EIP: Restricted Behavior Transaction Type (forshtat), merged after submission on March 12, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
       "topic_en": "Transactions: a new type and the mempool"
     },
     {
