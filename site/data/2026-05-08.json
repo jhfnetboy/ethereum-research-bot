@@ -1,0 +1,191 @@
+{
+  "date": "2026-05-08",
+  "keywords": [
+    "EIP-8141 frames 规范整理",
+    "EIP-8246 提议列为 Glamsterdam CFI",
+    "EIP-7904 改为 Informational 无需重新定价计算操作",
+    "EIP-8038 与 EIP-8037 对齐",
+    "EIP-7708 系统转账与销毁日志 gas 成本",
+    "Ethereal news #22 报道 Glamsterdam 后 200M+ gas 上限目标",
+    "CoW DAO 赔付域名劫持受害者"
+  ],
+  "summary": "lightclient 提交 EIP-8141 规范整理，以提高过去两个月高频修改后的可读性。chfast 提交 EIP-7773 更新，把 EIP-8246 列为 Glamsterdam 的 CFI。misilva73 提议把 EIP-7904 改为 Informational，因为在 BAL 优化稳定后，所有计算操作在现有 gas 成本下都已达到 100 Mgas/s 目标。Ethereal news #22 发布。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 整理",
+      "title": "EIP-8141：frames 整理",
+      "note": "（lightclient）提交：过去两个月规范修改频繁，整体一致性下降，本次以提高可读性为主，同时修正发现的几个问题，例如为 frame 引入 skipped 状态。",
+      "url": "https://github.com/ethereum/EIPs/pull/11621",
+      "date": "2026-05-08",
+      "title_en": "EIP-8141: frames cleanup",
+      "note_en": "(lightclient), submitted: after two months of frequent changes the spec's coherence had declined; this mainly improves readability while fixing a few issues found along the way, such as adding a skipped status for frames.",
+      "topic_en": "Native AA: cleaning up EIP-8141"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7904：转为 Informational（无需重新定价计算操作）",
+      "note": "（misilva73）提交：在 EIP-7928 BAL 优化稳定后重新分析，在 100 Mgas/s 目标下，所有考察的计算操作与预编译按当前 gas 成本都已达标。",
+      "url": "https://github.com/ethereum/EIPs/pull/11622",
+      "date": "2026-05-08",
+      "title_en": "EIP-7904: convert to Informational (no compute repricing needed)",
+      "note_en": "(misilva73), submitted: rerunning the analysis with EIP-7928 BAL optimizations stable, every examined compute operation and precompile meets the 100 Mgas/s target at its current gas cost.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8038：与 EIP-8037 对齐并澄清规范与理由",
+      "note": "（misilva73）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11623",
+      "date": "2026-05-08",
+      "title_en": "EIP-8038: align with EIP-8037 and clarify spec and rationale",
+      "note_en": "(misilva73), submitted.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7708：新增系统发出的转账与销毁日志 gas 成本",
+      "note": "（danceratopz）提交：TRANSFER_LOG_COST = 1,756（相当于 LOG3），BURN_LOG_COST = 1,381（相当于 LOG2）；EIP-7708：借助 EIP-8246 简化（marioevz）提交；EIP-2780：补上带转账的 CREATE 的日志成本（danceratopz）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11627",
+      "date": "2026-05-08",
+      "title_en": "EIP-7708: add gas costs for system emitted transfer and burn logs",
+      "note_en": "(danceratopz), submitted: TRANSFER_LOG_COST = 1,756 (LOG3 equivalent) and BURN_LOG_COST = 1,381 (LOG2 equivalent); EIP-7708: use EIP-8246 to simplify (marioevz), submitted; EIP-2780: add missing log costs for CREATE with endowment (danceratopz), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7708：借助 EIP-8246 简化",
+      "note": "EIP-7708：新增系统发出的转账与销毁日志 gas 成本（danceratopz）提交：TRANSFER_LOG_COST = 1,756（相当于 LOG3），BURN_LOG_COST = 1,381（相当于 LOG2）；EIP-7708：借助 EIP-8246 简化（marioevz）提交；EIP-2780：补上带转账的 CREATE 的日志成本（danceratopz）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11634",
+      "date": "2026-05-08",
+      "title_en": "EIP-7708: use EIP-8246 to simplify",
+      "note_en": "EIP-7708: add gas costs for system emitted transfer and burn logs (danceratopz), submitted: TRANSFER_LOG_COST = 1,756 (LOG3 equivalent) and BURN_LOG_COST = 1,381 (LOG2 equivalent); EIP-7708: use EIP-8246 to simplify (marioevz), submitted; EIP-2780: add missing log costs for CREATE with endowment (danceratopz), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-2780：补上带转账的 CREATE 的日志成本",
+      "note": "EIP-7708：新增系统发出的转账与销毁日志 gas 成本（danceratopz）提交：TRANSFER_LOG_COST = 1,756（相当于 LOG3），BURN_LOG_COST = 1,381（相当于 LOG2）；EIP-7708：借助 EIP-8246 简化（marioevz）提交；EIP-2780：补上带转账的 CREATE 的日志成本（danceratopz）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11586",
+      "date": "2026-05-08",
+      "title_en": "EIP-2780: add missing log costs for CREATE with endowment",
+      "note_en": "EIP-7708: add gas costs for system emitted transfer and burn logs (danceratopz), submitted: TRANSFER_LOG_COST = 1,756 (LOG3 equivalent) and BURN_LOG_COST = 1,381 (LOG2 equivalent); EIP-7708: use EIP-8246 to simplify (marioevz), submitted; EIP-2780: add missing log costs for CREATE with endowment (danceratopz), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7773：把 EIP-8246 列为 Glamsterdam CFI",
+      "note": "（chfast）提交；EIP-8246：移至 Review（chfast）提交；EIP-8131：新增实证影响报告（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11625",
+      "date": "2026-05-08",
+      "title_en": "EIP-7773: CFI EIP-8246 for Glamsterdam",
+      "note_en": "(chfast), submitted; EIP-8246: Move to Review (chfast), submitted; EIP-8131: add empirical impact report (nerolation), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8246：移至 Review",
+      "note": "EIP-7773：把 EIP-8246 列为 Glamsterdam CFI（chfast）提交；EIP-8246：移至 Review（chfast）提交；EIP-8131：新增实证影响报告（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11626",
+      "date": "2026-05-08",
+      "title_en": "EIP-8246: Move to Review",
+      "note_en": "EIP-7773: CFI EIP-8246 for Glamsterdam (chfast), submitted; EIP-8246: Move to Review (chfast), submitted; EIP-8131: add empirical impact report (nerolation), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8131：新增实证影响报告",
+      "note": "EIP-7773：把 EIP-8246 列为 Glamsterdam CFI（chfast）提交；EIP-8246：移至 Review（chfast）提交；EIP-8131：新增实证影响报告（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11628",
+      "date": "2026-05-08",
+      "title_en": "EIP-8131: add empirical impact report",
+      "note_en": "EIP-7773: CFI EIP-8246 for Glamsterdam (chfast), submitted; EIP-8246: Move to Review (chfast), submitted; EIP-8131: add empirical impact report (nerolation), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EtherealnewsHQ：Ethereal news #22 发布，涉及 timbeiko 提出 Glamsterdam 后 200M+ gas 上限目标、主网达到 2500 万个区块、Arbitrum DAO 投票释放冻结的 ETH",
+      "note": "19:48。",
+      "url": "https://x.com/EtherealnewsHQ/status/2052732387663208875",
+      "date": "2026-05-08",
+      "title_en": "EtherealnewsHQ: Ethereal news #22 is out, with timbeiko's 200M+ gas limit target after Glamsterdam, 25M blocks on mainnet and the Arbitrum DAO voting to release frozen ETH",
+      "note_en": "19:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "koeppelmann：CoWSwap 遭域名注册商导致的攻击，CoW DAO 决定赔付受影响用户",
+      "note": "20:54。",
+      "url": "https://x.com/koeppelmann/status/2052749088563540442",
+      "date": "2026-05-08",
+      "title_en": "koeppelmann: CoWSwap was hit through its domain registrar, and CoW DAO decided to reimburse affected users",
+      "note_en": "20:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：正在 CLAP 中形式化验证 Aptos Keyless 约 140 万个 ZK 约束",
+      "note": "18:34；class_lambda：zkSummit 14 上介绍后量子 zkVM Lambda VM 02:36。",
+      "url": "https://x.com/Nethermind/status/2052713841377612146",
+      "date": "2026-05-08",
+      "title_en": "Nethermind: formally verifying the roughly 1.4M ZK constraints of Aptos Keyless in CLAP",
+      "note_en": "18:34; class_lambda: Lambda VM, a minimal post-quantum zkVM, presented at zkSummit 14, 02:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "class_lambda：zkSummit 14 上介绍后量子 zkVM Lambda VM",
+      "note": "Nethermind：正在 CLAP 中形式化验证 Aptos Keyless 约 140 万个 ZK 约束 18:34；class_lambda：zkSummit 14 上介绍后量子 zkVM Lambda VM 02:36。",
+      "url": "https://x.com/class_lambda/status/2052472757196103895",
+      "date": "2026-05-08",
+      "title_en": "class_lambda: Lambda VM, a minimal post-quantum zkVM, presented at zkSummit 14",
+      "note_en": "Nethermind: formally verifying the roughly 1.4M ZK constraints of Aptos Keyless in CLAP, 18:34; class_lambda: Lambda VM, a minimal post-quantum zkVM, presented at zkSummit 14, 02:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7723：根据 ACDT #74 更新 SFI 定义",
+      "note": "（nixorokish）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11475",
+      "date": "2026-05-08",
+      "title_en": "EIP-7723: update the SFI definition based on ACDT #74",
+      "note_en": "(nixorokish), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：量子可恢复性",
+      "note": "23:47。",
+      "url": "https://x.com/colludingnode/status/2052792475727614368",
+      "date": "2026-05-08",
+      "title_en": "colludingnode: quantum recoverability",
+      "note_en": "23:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "nero_eth：比特币不需要一个其实只是套着多签与信任假设的更差混币器的“新”隐私方案，CoinJoin 已经可用",
+      "note": "02:59。",
+      "url": "https://x.com/nero_eth/status/2052478561823469741",
+      "date": "2026-05-08",
+      "title_en": "nero_eth: Bitcoin does not need a \"new\" privacy solution that is really a worse mixer wrapped in multisigs and trust assumptions; CoinJoins already work",
+      "note_en": "02:59.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/EtherealnewsHQ/status/2052732387663208875",
+    "credit": "X @EtherealnewsHQ",
+    "local_path": "assets/2026-05-08.jpg",
+    "credit_en": "X @EtherealnewsHQ"
+  },
+  "keywords_en": [
+    "EIP-8141 frames cleanup",
+    "EIP-8246 proposed as Glamsterdam CFI",
+    "EIP-7904 becomes Informational with no compute repricing needed",
+    "EIP-8038 aligned with EIP-8037",
+    "EIP-7708 gas costs for system transfer and burn logs",
+    "Ethereal news #22 on a 200M+ gas limit target after Glamsterdam",
+    "CoW DAO reimburses domain hijack victims"
+  ],
+  "summary_en": "lightclient submitted an EIP-8141 cleanup to restore readability after two months of rapid spec changes. chfast submitted an EIP-7773 update listing EIP-8246 as CFI for Glamsterdam. misilva73 proposed turning EIP-7904 Informational, since with BAL optimizations stable every compute operation meets the 100 Mgas/s target at current gas costs. Ethereal news #22 came out."
+}

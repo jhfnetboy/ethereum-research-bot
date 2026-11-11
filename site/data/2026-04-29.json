@@ -1,0 +1,189 @@
+{
+  "date": "2026-04-29",
+  "keywords": [
+    "EIP-8141 允许 payer 先于 sender 批准",
+    "默认账户移除 RLP 调用批处理",
+    "EIP-8130 新增 opaque_input 字段",
+    "用 ZK 证明与隐藏公钥一笔交易升级钱包到后量子",
+    "Starknet 原生隐私基础设施",
+    "铭文贡献 44 万美元 gas 费"
+  ],
+  "summary": "lightclient 对 EIP-8141 做了两项修改：允许 payer 先于 sender 批准，作为 guarantor 角色方案的更简替代；以及因已有 frame 批处理而移除默认账户的 RLP 调用批处理。前者误合并后被回滚并重新提交。ethresear.ch 提出借助 EIP-7702 与隐藏公钥的 ZK 证明，一笔交易把任何 EOA 升级到后量子安全。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8141：允许 payer 先于 sender 批准",
+      "note": "（lightclient）提交并合并：作为 #11555 guarantor 角色的替代，作者认为直接允许 payer 先批准更简单；本应只建草稿，随即由 #11579 回滚（提交并合并），并以 #11580 重新提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11575",
+      "date": "2026-04-29",
+      "title_en": "EIP-8141: allow payer to approve before sender",
+      "note_en": "(lightclient), submitted and merged: an alternative to the #11555 guarantor role, which the author finds simpler; it was meant to be a draft, so #11579 reverted it (submitted and merged) and #11580 resubmitted it.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "#11579",
+      "note": "EIP-8141：允许 payer 先于 sender 批准（lightclient）提交并合并：作为 #11555 guarantor 角色的替代，作者认为直接允许 payer 先批准更简单；本应只建草稿，随即由 #11579 回滚（提交并合并），并以 #11580 重新提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11579",
+      "date": "2026-04-29",
+      "title_en": "#11579",
+      "note_en": "EIP-8141: allow payer to approve before sender (lightclient), submitted and merged: an alternative to the #11555 guarantor role, which the author finds simpler; it was meant to be a draft, so #11579 reverted it (submitted and merged) and #11580 resubmitted it.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "#11580",
+      "note": "EIP-8141：允许 payer 先于 sender 批准（lightclient）提交并合并：作为 #11555 guarantor 角色的替代，作者认为直接允许 payer 先批准更简单；本应只建草稿，随即由 #11579 回滚（提交并合并），并以 #11580 重新提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11580",
+      "date": "2026-04-29",
+      "title_en": "#11580",
+      "note_en": "EIP-8141: allow payer to approve before sender (lightclient), submitted and merged: an alternative to the #11555 guarantor role, which the author finds simpler; it was meant to be a draft, so #11579 reverted it (submitted and merged) and #11580 resubmitted it.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8141：移除默认账户的 RLP 调用批处理",
+      "note": "（lightclient）提交并合并：有了 frame 批处理后，默认账户不再需要 RLP 调用批处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/11577",
+      "date": "2026-04-29",
+      "title_en": "EIP-8141: remove the RLP call batch for the default account",
+      "note_en": "(lightclient), submitted and merged: with frame batching, the default account no longer needs RLP call batches.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8130：新增 opaque_input 字节字段",
+      "note": "（pochenai）提交：在 AA 交易中恢复旧交易 input 字段承担的交易级元数据角色（如 ERC-8021 归因后缀），不参与 EVM 执行，但必须纳入 sender 与 payer 的签名哈希，防止中继或构建者替换。",
+      "url": "https://github.com/ethereum/EIPs/pull/11578",
+      "date": "2026-04-29",
+      "title_en": "EIP-8130: add an opaque_input bytes field",
+      "note_en": "(pochenai), submitted: restores the transaction level metadata role of the legacy input field (such as ERC-8021 attribution suffixes) in AA transactions; it is not part of EVM execution but must be in both the sender and payer signature hashes so relayers and builders cannot swap it.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "后量子：一笔交易升级 EOA",
+      "title": "ethresear.ch：用 ZK 证明与隐藏公钥，一笔交易把任何以太坊钱包升级到后量子安全",
+      "note": "18:07：EOA 通过 EIP-7702 委托给只接受隐藏公钥下 ECDSA 知识 ZK 证明的合约，地址不变、无需迁移资产、无需共识改动，Apple M1 上证明 87 ms、验证 65 ms、证明 226 KB。",
+      "url": "https://ethresear.ch/t/upgrade-any-ethereum-wallet-to-post-quantum-security-in-one-transaction-using-zk-proofs-with-a-hidden-public-key/24754",
+      "date": "2026-04-29",
+      "title_en": "ethresear.ch: upgrade any Ethereum wallet to post-quantum security in one transaction using ZK proofs with a hidden public key",
+      "note_en": "18:07: the EOA delegates via EIP-7702 to a contract that only accepts ZK proofs of ECDSA knowledge under a hidden public key, with no address change, no asset migration and no consensus change; 87 ms to prove, 65 ms to verify and a 226 KB proof on Apple M1.",
+      "topic_en": "Post-quantum: upgrading an EOA in one transaction"
+    },
+    {
+      "topic": "后量子：一笔交易升级 EOA",
+      "title": "PQ Interop #37 议程",
+      "note": "02:48。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-37-april-29-2026/28392",
+      "date": "2026-04-29",
+      "title_en": "PQ Interop #37 agenda",
+      "note_en": "02:48.",
+      "topic_en": "Post-quantum: upgrading an EOA in one transaction"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWareLtd：Starknet 现已具备原生隐私基础设施",
+      "note": "15:09。",
+      "url": "https://x.com/StarkWareLtd/status/2049400685758656895",
+      "date": "2026-04-29",
+      "title_en": "StarkWareLtd: Starknet now has native infrastructure for privacy",
+      "note_en": "15:09.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "EliBenSasson：即使有 ZK 证明，区块链隐私也远非简单",
+      "note": "19:48。",
+      "url": "https://x.com/EliBenSasson/status/2049470815154889034",
+      "date": "2026-04-29",
+      "title_en": "EliBenSasson: even with ZK proofs, blockchain privacy is anything but simple",
+      "note_en": "19:48.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "以太坊基金会博客：2026 年第一季度资助分配更新",
+      "note": "",
+      "url": "https://blog.ethereum.org/en/2026/04/29/allocation-q1-26",
+      "date": "2026-04-29",
+      "title_en": "EF blog: Allocation Update, Q1 2026",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie_eth：过去 7 天铭文产生 440,570 美元 gas 费",
+      "note": "22:11。",
+      "url": "https://x.com/growthepie_eth/status/2049506771811602814",
+      "date": "2026-04-29",
+      "title_en": "growthepie_eth: inscriptions generated $440,570 in gas fees over the past 7 days",
+      "note_en": "22:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "solidity_lang：开发者最想要的近期功能是更好的 gas 优化（44%）、EIP-712 typehash 支持（29%）",
+      "note": "20:02。",
+      "url": "https://x.com/solidity_lang/status/2049474305688535123",
+      "date": "2026-04-29",
+      "title_en": "solidity_lang: the most wanted near term features are better gas optimizations (44%) and EIP-712 typehash support (29%)",
+      "note_en": "20:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8182：更新",
+      "note": "（RogerPodacter）提交并合并；Magicians：ERC-8281 观测承诺协议 16:07。",
+      "url": "https://github.com/ethereum/EIPs/pull/11576",
+      "date": "2026-04-29",
+      "title_en": "EIP-8182: update",
+      "note_en": "(RogerPodacter), submitted and merged; Magicians: ERC-8281 Observation Commitment Protocol, 16:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8281 观测承诺协议",
+      "note": "EIP-8182：更新（RogerPodacter）提交并合并；Magicians：ERC-8281 观测承诺协议 16:07。",
+      "url": "https://ethereum-magicians.org/t/erc-8281-observation-commitment-protocol-ocp/28399",
+      "date": "2026-04-29",
+      "title_en": "Magicians: ERC-8281 Observation Commitment Protocol",
+      "note_en": "EIP-8182: update (RogerPodacter), submitted and merged; Magicians: ERC-8281 Observation Commitment Protocol, 16:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pirapira：博文《软件开发的最终形态》，论证汇编加 Lean 证明是终局",
+      "note": "13:18。",
+      "url": "https://x.com/pirapira/status/2049372672664986111",
+      "date": "2026-04-29",
+      "title_en": "pirapira: a blog post, The Final Form of Software Development, arguing assembly plus Lean proofs is final",
+      "note_en": "13:18.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：过去几个月一个好变化是人们不再把量子计算当 FUD",
+      "note": "11:31。",
+      "url": "https://x.com/EliBenSasson/status/2049345839244443883",
+      "date": "2026-04-29",
+      "title_en": "EliBenSasson: one change for the better in recent months is that people stopped treating quantum computers as FUD",
+      "note_en": "11:31.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/upgrade-any-ethereum-wallet-to-post-quantum-security-in-one-transaction-using-zk-proofs-with-a-hidden-public-key/24754",
+    "credit": "ethresear.ch, Upgrade any Ethereum wallet to post-quantum security in one transaction using ZK proofs with a hidden public key",
+    "local_path": "assets/2026-04-29.jpg",
+    "credit_en": "ethresear.ch, Upgrade any Ethereum wallet to post-quantum security in one transaction using ZK proofs with a hidden public key"
+  },
+  "keywords_en": [
+    "EIP-8141 lets the payer approve before the sender",
+    "default account drops RLP call batches",
+    "EIP-8130 adds an opaque_input field",
+    "upgrade any wallet to post-quantum in one transaction with ZK proofs and a hidden public key",
+    "Starknet native privacy infrastructure",
+    "inscriptions generate $440K in gas fees"
+  ],
+  "summary_en": "lightclient made two EIP-8141 changes: letting the payer approve before the sender, a simpler alternative to the guarantor role, and removing RLP call batches from the default account now that frame batching exists. The first was merged by accident, reverted and resubmitted. ethresear.ch proposed using EIP-7702 and ZK proofs under a hidden public key to upgrade any EOA to post-quantum security in one transaction."
+}

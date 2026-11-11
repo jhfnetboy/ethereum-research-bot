@@ -1,0 +1,161 @@
+{
+  "date": "2026-05-10",
+  "keywords": [
+    "Kohaku 项目重新思考资金",
+    "AI 与生活中的隐私",
+    "strkBTC 隐私被指留有全局查看后门",
+    "ZO0k 低开销 ZK IOP 框架",
+    "EIP-8246 列为 Glamsterdam CFI 合并",
+    "延迟状态根提议纳入",
+    "加密绑架与数据泄露"
+  ],
+  "summary": "周日。binji_x 介绍由 Vitalik 与 ncsgy 主导的 Kohaku 项目，目标是在资金、AI 与生活各方面重新思考在线安全与隐私。ameensol 批评 strkBTC 及 Starknet 隐私方案内置拥有全局查看权限的后门，且用户无法知道是否被使用。EIP-7773 更新合并，EIP-8246 正式列为 Glamsterdam 的 CFI。",
+  "items": [
+    {
+      "topic": "隐私：Kohaku 与查看权限之争",
+      "title": "binji_x：隐私不只关乎钱，Kohaku 项目由核心贡献者 Vitalik 与 ncsgy 介绍，是在资金、AI 与生活中重新思考在线安全与隐私的认真尝试",
+      "note": "20:56。",
+      "url": "https://x.com/binji_x/status/2053474253773631530",
+      "date": "2026-05-10",
+      "title_en": "binji_x: privacy is more than money; Kohaku, explained by core contributors Vitalik and ncsgy, is a serious attempt to rethink online safety and privacy across money, AI and life",
+      "note_en": "20:56.",
+      "topic_en": "Privacy: Kohaku and the viewing rights debate"
+    },
+    {
+      "topic": "隐私：Kohaku 与查看权限之争",
+      "title": "ameensol：strkBTC 及 Starknet 隐私加入了拥有全局查看权限的后门，用户永远无法知道它是否被使用，却仍宣传为隐私",
+      "note": "21:58。",
+      "url": "https://x.com/ameensol/status/2053489909621768596",
+      "date": "2026-05-10",
+      "title_en": "ameensol: strkBTC and Starknet privacy add a backdoor with global god mode viewing privileges, and users can never know whether it was used, yet it is still advertised as privacy",
+      "note_en": "21:58.",
+      "topic_en": "Privacy: Kohaku and the viewing rights debate"
+    },
+    {
+      "topic": "隐私：Kohaku 与查看权限之争",
+      "title": "EliBenSasson：Zcash 与 Starknet 都领先于时代，也都因此在市场上吃了亏",
+      "note": "19:08；EliBenSasson：隐私是比特币进入 DeFi 缺失的一环，strkBTC 5 月 12 日上线 21:46。",
+      "url": "https://x.com/EliBenSasson/status/2053447037085979051",
+      "date": "2026-05-10",
+      "title_en": "EliBenSasson: Zcash and Starknet were both ahead of their time and both suffered in the markets for it",
+      "note_en": "19:08; EliBenSasson: privacy is the missing piece for Bitcoin in DeFi; strkBTC on May 12, 21:46.",
+      "topic_en": "Privacy: Kohaku and the viewing rights debate"
+    },
+    {
+      "topic": "隐私：Kohaku 与查看权限之争",
+      "title": "EliBenSasson：隐私是比特币进入 DeFi 缺失的一环，strkBTC 5 月 12 日上线",
+      "note": "EliBenSasson：Zcash 与 Starknet 都领先于时代，也都因此在市场上吃了亏 19:08；EliBenSasson：隐私是比特币进入 DeFi 缺失的一环，strkBTC 5 月 12 日上线 21:46。",
+      "url": "https://x.com/EliBenSasson/status/2053486904507535633",
+      "date": "2026-05-10",
+      "title_en": "EliBenSasson: privacy is the missing piece for Bitcoin in DeFi; strkBTC on May 12",
+      "note_en": "EliBenSasson: Zcash and Starknet were both ahead of their time and both suffered in the markets for it, 19:08; EliBenSasson: privacy is the missing piece for Bitcoin in DeFi; strkBTC on May 12, 21:46.",
+      "topic_en": "Privacy: Kohaku and the viewing rights debate"
+    },
+    {
+      "topic": "隐私：Kohaku 与查看权限之争",
+      "title": "LefterisJP：法国每隔几天就发生加密绑架，受害者因持仓信息泄露被盯上，数据来自服务器、泄露或 SaaS 追踪工具",
+      "note": "20:16。",
+      "url": "https://x.com/LefterisJP/status/2053464084570427442",
+      "date": "2026-05-10",
+      "title_en": "LefterisJP: crypto kidnappings happen in France every few days, targeting people whose holdings leaked from a server, a breach or a SaaS tracker",
+      "note_en": "20:16.",
+      "topic_en": "Privacy: Kohaku and the viewing rights debate"
+    },
+    {
+      "topic": "升级与密码学",
+      "title": "EIP-7773：把 EIP-8246 列为 Glamsterdam CFI",
+      "note": "（chfast）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11625",
+      "date": "2026-05-10",
+      "title_en": "EIP-7773: CFI EIP-8246 for Glamsterdam",
+      "note_en": "(chfast), merged.",
+      "topic_en": "Upgrades and cryptography"
+    },
+    {
+      "topic": "升级与密码学",
+      "title": "EIP-7862：把延迟状态根列入 PFI",
+      "note": "（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11637",
+      "date": "2026-05-10",
+      "title_en": "EIP-7862: add Delayed State Root to PFI",
+      "note_en": "(nerolation), submitted.",
+      "topic_en": "Upgrades and cryptography"
+    },
+    {
+      "topic": "升级与密码学",
+      "title": "tcoratger：基于哈希的 SNARK 快速、抗量子且透明，但历来难以低开销实现零知识，ZO0k 是低开销 ZK IOP 框架",
+      "note": "20:03。",
+      "url": "https://x.com/tcoratger/status/2053460922325217588",
+      "date": "2026-05-10",
+      "title_en": "tcoratger: hash based SNARKs are fast, PQ secure and transparent but historically lacked ZK without heavy overhead; ZO0k is a minimal overhead ZK IOP framework",
+      "note_en": "20:03.",
+      "topic_en": "Upgrades and cryptography"
+    },
+    {
+      "topic": "其他动态",
+      "title": "etheconomiczone：EEZ 首次社区电话会将于 5 月 13 日举行",
+      "note": "01:03。",
+      "url": "https://x.com/etheconomiczone/status/2053173965418385528",
+      "date": "2026-05-10",
+      "title_en": "etheconomiczone: the first EEZ community call is on May 13",
+      "note_en": "01:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048：扩充 metadata_contract tokenURI 示例",
+      "note": "（nxt3d）提交并合并；新增 ERC：Dive Log（BradMyrick）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1736",
+      "date": "2026-05-10",
+      "title_en": "ERC-8048: expand the metadata_contract tokenURI example",
+      "note_en": "(nxt3d), submitted and merged; Add ERC: Dive Log (BradMyrick), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Dive Log",
+      "note": "ERC-8048：扩充 metadata_contract tokenURI 示例（nxt3d）提交并合并；新增 ERC：Dive Log（BradMyrick）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1735",
+      "date": "2026-05-10",
+      "title_en": "Add ERC: Dive Log",
+      "note_en": "ERC-8048: expand the metadata_contract tokenURI example (nxt3d), submitted and merged; Add ERC: Dive Log (BradMyrick), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP 编辑答疑 #99 议程",
+      "note": "00:51。",
+      "url": "https://ethereum-magicians.org/t/eip-editing-office-hour-eip-erc-meeting-99-may-12-2026/28476",
+      "date": "2026-05-10",
+      "title_en": "EIP Editing Office Hour #99 agenda",
+      "note_en": "00:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWareLtd：原生隐私、抗量子与大规模扩展",
+      "note": "19:02。",
+      "url": "https://x.com/StarkWareLtd/status/2053445528478761027",
+      "date": "2026-05-10",
+      "title_en": "StarkWareLtd: native privacy, quantum resistance and massive scale",
+      "note_en": "19:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/binji_x/status/2053474253773631530",
+    "credit": "X @binji_x",
+    "local_path": "assets/2026-05-10.jpg",
+    "credit_en": "X @binji_x"
+  },
+  "keywords_en": [
+    "Kohaku rethinks privacy across money",
+    "AI and life",
+    "strkBTC privacy accused of a global viewing backdoor",
+    "ZO0k minimal overhead ZK IOP framework",
+    "EIP-8246 CFI for Glamsterdam merged",
+    "Delayed State Root proposed for inclusion",
+    "crypto kidnappings and data leaks"
+  ],
+  "summary_en": "A Sunday. binji_x introduced the Kohaku project led by Vitalik and ncsgy, which aims to rethink online safety and privacy across money, AI and life. ameensol criticized strkBTC and Starknet privacy for a built in backdoor with global viewing privileges whose use users can never detect. An EIP-7773 update merged, making EIP-8246 CFI for Glamsterdam."
+}

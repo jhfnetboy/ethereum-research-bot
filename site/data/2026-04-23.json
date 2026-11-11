@@ -1,0 +1,211 @@
+{
+  "date": "2026-04-23",
+  "keywords": [
+    "ACDE #235",
+    "Scheme-Agile 交易让 EOA 选择签名算法",
+    "EIP-8237 CL 与 EL 独立同步",
+    "Hegotá 由 FOCIL 领衔",
+    "L2BEAT ZK 目录加入抗量子标识",
+    "硬件钱包与隐私证明",
+    "可变 PTC 截止时间与统一 calldata 价格"
+  ],
+  "summary": "ACDE #235 上 Nixo 将共同主持 ACD，bal-devnet-3 以 1 亿 gas 上限运行良好，EIP-8037 被提出复杂度担忧，Hegotá 新增 EIP-8237 等非头号提案。Giulio2002 的 Scheme-Agile 交易 EIP 合并，新增 `0x05` 交易类型，让 EOA 通过 `scheme_id` 选择 secp256k1、P256 或 Falcon-512 签名。ProtocolGuild 介绍 Hegotá 将由 FOCIL 领衔。",
+  "items": [
+    {
+      "topic": "账户：可选签名算法的交易",
+      "title": "新 EIP：Scheme-Agile Transactions",
+      "note": "（Giulio2002）合并：新增 EIP-2718 类型 `0x05` 的 SchemedTransaction，EOA 通过 `scheme_id` 选择签名算法，首批三种为 secp256k1（与现有地址推导兼容）、P256/secp256r1（passkey、WebAuthn、Secure Enclave）和 Falcon-512（后量子，FIPS 206）；字段与 EIP-1559 相同，只把 `v, r, s` 换成 `scheme_id` 加签名数据，非 secp256k1 方案的地址带方案前缀以避免跨方案碰撞，后量子签名体积约大 10 倍并收取额外 gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/11438",
+      "date": "2026-04-23",
+      "title_en": "New EIP: Scheme-Agile Transactions",
+      "note_en": "(Giulio2002), merged: a `0x05` EIP-2718 SchemedTransaction lets EOAs pick a signature algorithm via `scheme_id`, launching with secp256k1 (same address derivation as today), P256/secp256r1 (passkeys, WebAuthn, Secure Enclave) and Falcon-512 (post-quantum, FIPS 206); fields match EIP-1559 with `v, r, s` replaced by `scheme_id` plus signature data, non secp256k1 addresses carry a scheme prefix to avoid cross scheme collisions, and post-quantum signatures, about 10x larger, pay a gas surcharge.",
+      "topic_en": "Accounts: transactions with a selectable signature algorithm"
+    },
+    {
+      "topic": "账户：可选签名算法的交易",
+      "title": "Magicians：EIP-8225 ECRECOVER 感知原生密钥",
+      "note": "21:52。",
+      "url": "https://ethereum-magicians.org/t/eip-8225-ecrecover-native-key-awareness/28332",
+      "date": "2026-04-23",
+      "title_en": "Magicians: EIP-8225 ECRECOVER Native Key Awareness",
+      "note_en": "21:52.",
+      "topic_en": "Accounts: transactions with a selectable signature algorithm"
+    },
+    {
+      "topic": "ACDE #235 与 Hegotá",
+      "title": "新 EIP：CL 与 EL 独立同步",
+      "note": "（potuz）提交，讨论帖 18:14；EIP-8081 提议纳入 EIP-7979（gcolvin）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11557",
+      "date": "2026-04-23",
+      "title_en": "New EIP: Independent CL/EL Sync",
+      "note_en": "(potuz), submitted, with a discussion, 18:14; EIP-8081: propose EIP-7979 for inclusion (gcolvin), submitted.",
+      "topic_en": "ACDE #235 and Hegotá"
+    },
+    {
+      "topic": "ACDE #235 与 Hegotá",
+      "title": "讨论帖",
+      "note": "新 EIP：CL 与 EL 独立同步（potuz）提交，讨论帖 18:14；EIP-8081 提议纳入 EIP-7979（gcolvin）提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8237-independent-cl-el-sync/28331",
+      "date": "2026-04-23",
+      "title_en": "discussion",
+      "note_en": "New EIP: Independent CL/EL Sync (potuz), submitted, with a discussion, 18:14; EIP-8081: propose EIP-7979 for inclusion (gcolvin), submitted.",
+      "topic_en": "ACDE #235 and Hegotá"
+    },
+    {
+      "topic": "ACDE #235 与 Hegotá",
+      "title": "EIP-8081 提议纳入 EIP-7979",
+      "note": "新 EIP：CL 与 EL 独立同步（potuz）提交，讨论帖 18:14；EIP-8081 提议纳入 EIP-7979（gcolvin）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11561",
+      "date": "2026-04-23",
+      "title_en": "EIP-8081: propose EIP-7979 for inclusion",
+      "note_en": "New EIP: Independent CL/EL Sync (potuz), submitted, with a discussion, 18:14; EIP-8081: propose EIP-7979 for inclusion (gcolvin), submitted.",
+      "topic_en": "ACDE #235 and Hegotá"
+    },
+    {
+      "topic": "ACDE #235 与 Hegotá",
+      "title": "ProtocolGuild：Glamsterdam 之后的主网升级 Hegotá 将由分叉选择包含列表（FOCIL）领衔",
+      "note": "00:58。",
+      "url": "https://x.com/ProtocolGuild/status/2047012298980786461",
+      "date": "2026-04-23",
+      "title_en": "ProtocolGuild: Hegotá, the mainnet upgrade after Glamsterdam, will be headlined by Fork Choice Inclusion Lists (FOCIL)",
+      "note_en": "00:58.",
+      "topic_en": "ACDE #235 and Hegotá"
+    },
+    {
+      "topic": "ACDE #235 与 Hegotá",
+      "title": "ethresear.ch：可变 PTC 截止时间、仿射计量与统一 calldata 价格",
+      "note": "01:31（aelowsson）。",
+      "url": "https://ethresear.ch/t/the-case-for-a-variable-ptc-deadline-with-affine-metering-and-a-unified-calldata-price/24708",
+      "date": "2026-04-23",
+      "title_en": "ethresear.ch: the case for a variable PTC deadline with affine metering and a unified calldata price",
+      "note_en": "01:31 (aelowsson).",
+      "topic_en": "ACDE #235 and Hegotá"
+    },
+    {
+      "topic": "隐私",
+      "title": "kassandraETH：硬件钱包算力不足以在本地生成 ZK 证明，但 Railgun 这类把见证生成与证明生成分开的设计，让隐私协议容易与硬件钱包集成",
+      "note": "01:02。",
+      "url": "https://x.com/kassandraETH/status/2047013220007768436",
+      "date": "2026-04-23",
+      "title_en": "kassandraETH: hardware wallets lack the compute to generate ZK proofs locally, but designs like Railgun's that separate witness and proof generation let privacy protocols integrate with hardware wallets easily",
+      "note_en": "01:02.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "ethbeat_org：ZK 目录加入抗量子评估与标识，部分 L2 证明系统已能应对 Q-day",
+      "note": "21:11。",
+      "url": "https://x.com/ethbeat_org/status/2047317378799645181",
+      "date": "2026-04-23",
+      "title_en": "ethbeat_org: the ZK Catalog adds quantum resistance assessments and a badge, and some L2 proving systems are ready for Q-day",
+      "note_en": "21:11.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "EIP-8182 更新",
+      "note": "（RogerPodacter）提交并合并；EliBenSasson：DeFi 加隐私等于 STRK20 11:36。",
+      "url": "https://github.com/ethereum/EIPs/pull/11565",
+      "date": "2026-04-23",
+      "title_en": "EIP-8182 update",
+      "note_en": "(RogerPodacter), submitted and merged; EliBenSasson: DeFi plus privacy equals STRK20, 11:36.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "EliBenSasson：DeFi 加隐私等于 STRK20",
+      "note": "EIP-8182 更新（RogerPodacter）提交并合并；EliBenSasson：DeFi 加隐私等于 STRK20 11:36。",
+      "url": "https://x.com/EliBenSasson/status/2047172815665713357",
+      "date": "2026-04-23",
+      "title_en": "EliBenSasson: DeFi plus privacy equals STRK20",
+      "note_en": "EIP-8182 update (RogerPodacter), submitted and merged; EliBenSasson: DeFi plus privacy equals STRK20, 11:36.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：EVM 控制流基础",
+      "note": "（gcolvin）合并；EIP-7981 简化参考实现伪代码（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11353",
+      "date": "2026-04-23",
+      "title_en": "New EIP: Foundations of EVM Control Flow",
+      "note_en": "(gcolvin), merged; EIP-7981: simplify reference implementation pseudocode (nerolation), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7981 简化参考实现伪代码",
+      "note": "新 EIP：EVM 控制流基础（gcolvin）合并；EIP-7981 简化参考实现伪代码（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11564",
+      "date": "2026-04-23",
+      "title_en": "EIP-7981: simplify reference implementation pseudocode",
+      "note_en": "New EIP: Foundations of EVM Control Flow (gcolvin), merged; EIP-7981: simplify reference implementation pseudocode (nerolation), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：容量预言机",
+      "note": "23:12（mbahrani）；Magicians：需要位掩码操作码吗，Aave V4 Core 字节码 23.3% 是位掩码 02:40；Hegotá 征集吉祥物 14:18。",
+      "url": "https://ethresear.ch/t/capacity-oracles/24716",
+      "date": "2026-04-23",
+      "title_en": "ethresear.ch: Capacity oracles",
+      "note_en": "23:12 (mbahrani); Magicians: do we need a bitmasking opcode? 23.3% of Aave V4 Core bytecode is bitmasking, 02:40; mascot needed for Hegotá, 14:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：需要位掩码操作码吗，Aave V4 Core 字节码 23.3% 是位掩码",
+      "note": "ethresear.ch：容量预言机 23:12（mbahrani）；Magicians：需要位掩码操作码吗，Aave V4 Core 字节码 23.3% 是位掩码 02:40；Hegotá 征集吉祥物 14:18。",
+      "url": "https://ethereum-magicians.org/t/do-we-need-a-bitmasking-opcode-23-3-of-aave-v4-core-bytecode-is-bitmasking/28323",
+      "date": "2026-04-23",
+      "title_en": "Magicians: do we need a bitmasking opcode? 23.3% of Aave V4 Core bytecode is bitmasking",
+      "note_en": "Ethresear.ch: Capacity oracles, 23:12 (mbahrani); Magicians: do we need a bitmasking opcode? 23.3% of Aave V4 Core bytecode is bitmasking, 02:40; mascot needed for Hegotá, 14:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Hegotá 征集吉祥物",
+      "note": "ethresear.ch：容量预言机 23:12（mbahrani）；Magicians：需要位掩码操作码吗，Aave V4 Core 字节码 23.3% 是位掩码 02:40；Hegotá 征集吉祥物 14:18。",
+      "url": "https://ethereum-magicians.org/t/mascot-needed-for-hegota-upgrade/28327",
+      "date": "2026-04-23",
+      "title_en": "mascot needed for Hegotá",
+      "note_en": "Ethresear.ch: Capacity oracles, 23:12 (mbahrani); Magicians: do we need a bitmasking opcode? 23.3% of Aave V4 Core bytecode is bitmasking, 02:40; mascot needed for Hegotá, 14:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "decentrek：投票显示，只要利益足够大，以太坊也不能免于 Arbitrum 式的干预",
+      "note": "04:06。",
+      "url": "https://x.com/decentrek/status/2047059378722000991",
+      "date": "2026-04-23",
+      "title_en": "decentrek: a poll shows Ethereum is not immune to Arbitrum style interventions if the stakes are high enough",
+      "note_en": "04:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：rotki 入选 TheDAO Fund 的以太坊安全 QF 轮，中心化税务工具都是地址与 API 密钥的蜜罐",
+      "note": "22:53。",
+      "url": "https://x.com/LefterisJP/status/2047343190823309529",
+      "date": "2026-04-23",
+      "title_en": "LefterisJP: rotki joined TheDAO Fund's Ethereum Security QF round; centralized tax tools are honeypots of addresses and API keys",
+      "note_en": "22:53.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/capacity-oracles/24716",
+    "credit": "ethresear.ch, Capacity oracles (mbahrani)",
+    "local_path": "assets/2026-04-23.jpg",
+    "credit_en": "ethresear.ch, Capacity oracles (mbahrani)"
+  },
+  "keywords_en": [
+    "ACDE #235",
+    "scheme-agile transactions let EOAs choose a signature algorithm",
+    "EIP-8237 independent CL/EL sync",
+    "Hegotá headlined by FOCIL",
+    "L2BEAT ZK catalog adds a quantum resistance badge",
+    "hardware wallets and privacy proofs",
+    "variable PTC deadline with a unified calldata price"
+  ],
+  "summary_en": "At ACDE #235, Nixo was named co-lead of ACD, bal-devnet-3 was running well at a 100M gas limit, complexity concerns were raised about EIP-8037, and non-headliners such as EIP-8237 were proposed for Hegotá. Giulio2002's Scheme-Agile Transactions EIP was merged, adding a `0x05` type that lets EOAs choose secp256k1, P256 or Falcon-512 signatures via `scheme_id`. ProtocolGuild explained that Hegotá will be headlined by FOCIL."
+}

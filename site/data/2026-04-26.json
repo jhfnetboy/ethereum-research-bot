@@ -1,0 +1,107 @@
+{
+  "date": "2026-04-26",
+  "keywords": [
+    "EIP-7932 拆分预编译并支持自主与分离签名",
+    "ACDE #236 议程",
+    "可组合的模块化稳定币",
+    "Starknet 隐私与可组合性",
+    "链上发薪需要隐私"
+  ],
+  "summary": "周日。SirSpudlington 提交 EIP-7932 重构，使其更适配 EIP-8141 与 EIP-8164，把签名正式区分为自主签名与分离签名，并拆分预编译。ACDE #236 议程发布，会议定于 5 月 7 日。EliBenSasson 以链上发工资为例，说明没有隐私加密就无法大规模采用。",
+  "items": [
+    {
+      "topic": "账户：EIP-7932 重构",
+      "title": "EIP-7932：拆分预编译并加入自主与分离签名支持",
+      "note": "（SirSpudlington）提交：为更好配合 EIP-8141 与 EIP-8164，把签名形式化为自主签名（Autonomous）与分离签名（Detached），并重命名相关恢复函数。",
+      "url": "https://github.com/ethereum/EIPs/pull/11571",
+      "date": "2026-04-26",
+      "title_en": "EIP-7932: separate the precompile and add autonomous and detached signature support",
+      "note_en": "(SirSpudlington), submitted: to work better with EIP-8141 and EIP-8164, signatures are formalized as autonomous or detached and the recovery functions are renamed.",
+      "topic_en": "Accounts: refactoring EIP-7932"
+    },
+    {
+      "topic": "隐私",
+      "title": "EliBenSasson：没有隐私，加密就无法大规模采用；设想一家公司考虑链上发工资，没有雇主或雇员会愿意把薪资公开",
+      "note": "20:12。",
+      "url": "https://x.com/EliBenSasson/status/2048389651702886412",
+      "date": "2026-04-26",
+      "title_en": "EliBenSasson: crypto cannot reach mass adoption without privacy; no employer or employee considering onchain salaries would agree to make pay public",
+      "note_en": "20:12.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "EliBenSasson：Starknet 隐私的独特之处在于把隐私、良好体验与可组合性结合在一个系统里",
+      "note": "01:02。",
+      "url": "https://x.com/EliBenSasson/status/2048100416743747589",
+      "date": "2026-04-26",
+      "title_en": "EliBenSasson: Starknet's privacy is unique in combining privacy, strong UX and composability in one system",
+      "note_en": "01:02.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #236 议程",
+      "note": "17:59。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-236-may-7-2026/28353",
+      "date": "2026-04-26",
+      "title_en": "ACDE #236 agenda",
+      "note_en": "17:59.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：作为同质货币商品的模块化可组合稳定币",
+      "note": "22:41。",
+      "url": "https://ethresear.ch/t/modular-and-composable-stablecoins-as-homogeneous-monetary-goods/24738",
+      "date": "2026-04-26",
+      "title_en": "ethresear.ch: Modular and Composable Stablecoins as Homogeneous Monetary Goods",
+      "note_en": "22:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：代理支付的乐观托管",
+      "note": "（albbm）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1707",
+      "date": "2026-04-26",
+      "title_en": "ERC: Optimistic Escrow for Agent Payments",
+      "note_en": "(albbm), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "solidity_lang：Solidity 2025 开发者调查，基于 VS Code 的编辑器约占 80%",
+      "note": "20:00。",
+      "url": "https://x.com/solidity_lang/status/2048386695369048527",
+      "date": "2026-04-26",
+      "title_en": "solidity_lang: Solidity Developer Survey 2025, VS Code based editors account for about 80% of usage",
+      "note_en": "20:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：发起投票询问比特币的未来哪项更重要",
+      "note": "19:16。",
+      "url": "https://x.com/EliBenSasson/status/2048375672477712854",
+      "date": "2026-04-26",
+      "title_en": "EliBenSasson: a poll on what matters more for Bitcoin's future",
+      "note_en": "19:16.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/modular-and-composable-stablecoins-as-homogeneous-monetary-goods/24738",
+    "credit": "ethresear.ch, Modular and Composable Stablecoins as Homogeneous Monetary Goods",
+    "local_path": "assets/2026-04-26.jpg",
+    "credit_en": "ethresear.ch, Modular and Composable Stablecoins as Homogeneous Monetary Goods"
+  },
+  "keywords_en": [
+    "EIP-7932 separates the precompile and adds autonomous and detached signatures",
+    "ACDE #236 agenda",
+    "modular and composable stablecoins",
+    "Starknet privacy with composability",
+    "onchain payroll needs privacy"
+  ],
+  "summary_en": "A Sunday. SirSpudlington submitted an EIP-7932 refactor to suit EIP-8141 and EIP-8164 better, formalizing autonomous and detached signatures and separating the precompile. The ACDE #236 agenda was posted for May 7. EliBenSasson used onchain payroll to argue crypto cannot reach mass adoption without privacy."
+}

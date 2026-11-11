@@ -1,0 +1,191 @@
+{
+  "date": "2026-05-04",
+  "keywords": [
+    "frame 交易的 keyed nonce EIP",
+    "frame 交易加二维 nonce 让隐私提款无需中继",
+    "EIP-8037 固定 CPSB 合并",
+    "EIP-8130 重放修复合并",
+    "EIP-7708 记录 Soldøgn Interop 决定",
+    "用 CREATE2 重新部署委托指示符",
+    "ERC-4337 按应用划分 nonce 通道"
+  ],
+  "summary": "soispoke 提交 frame 交易的 keyed nonce EIP，让一个 EIP-8141 发送者并行运行多条独立 nonce 序列，服务无信任隐私协议。nero_eth 指出 frame 交易加二维 nonce 后，隐私提款可以直接用提款资金付费，不再需要第三方中继。EIP-8037 的固定 CPSB 修改与 EIP-8130 的 payer 签名重放修复均合并。",
+  "items": [
+    {
+      "topic": "原生 AA 与隐私：keyed nonce",
+      "title": "新增 EIP：frame 交易的 keyed nonce",
+      "note": "（soispoke）提交：让一个 EIP-8141 发送者并行运行多条独立 nonce 序列，而不是单一线性队列（首个版本 #11597 已关闭）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11598",
+      "date": "2026-05-04",
+      "title_en": "Add EIP: Keyed Nonces for Frame Transactions",
+      "note_en": "(soispoke), submitted: lets one EIP-8141 sender run multiple independent nonce sequences in parallel instead of a single linear queue (the first version, #11597, was closed).",
+      "topic_en": "Native AA and privacy: keyed nonces"
+    },
+    {
+      "topic": "原生 AA 与隐私：keyed nonce",
+      "title": "#11597",
+      "note": "新增 EIP：frame 交易的 keyed nonce（soispoke）提交：让一个 EIP-8141 发送者并行运行多条独立 nonce 序列，而不是单一线性队列（首个版本 #11597 已关闭）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11597",
+      "date": "2026-05-04",
+      "title_en": "#11597",
+      "note_en": "Add EIP: Keyed Nonces for Frame Transactions (soispoke), submitted: lets one EIP-8141 sender run multiple independent nonce sequences in parallel instead of a single linear queue (the first version, #11597, was closed).",
+      "topic_en": "Native AA and privacy: keyed nonces"
+    },
+    {
+      "topic": "原生 AA 与隐私：keyed nonce",
+      "title": "nero_eth：以太坊正把隐私变成一等原语，frame 交易（EIP-8141）加二维 nonce 后，费用可直接从提款中支付，不再需要第三方中继或实名账户",
+      "note": "18:44。",
+      "url": "https://x.com/nero_eth/status/2051266642039001142",
+      "date": "2026-05-04",
+      "title_en": "nero_eth: Ethereum is turning privacy into a first class primitive; with frame transactions (EIP-8141) and 2D nonces, fees can be paid from the withdrawal itself, with no third party relayer or doxxed account",
+      "note_en": "18:44.",
+      "topic_en": "Native AA and privacy: keyed nonces"
+    },
+    {
+      "topic": "原生 AA 与隐私：keyed nonce",
+      "title": "soispoke：人们还没准备好迎接以太坊的隐私篇章",
+      "note": "19:54。",
+      "url": "https://x.com/soispoke/status/2051284315267338716",
+      "date": "2026-05-04",
+      "title_en": "soispoke: people are not ready for the Ethereum privacy arc",
+      "note_en": "19:54.",
+      "topic_en": "Native AA and privacy: keyed nonces"
+    },
+    {
+      "topic": "原生 AA 与隐私：keyed nonce",
+      "title": "Magicians：ERC-4337 账户的按应用划分 nonce 通道（草案）",
+      "note": "10:33。",
+      "url": "https://ethereum-magicians.org/t/draft-app-scoped-nonce-lanes-for-erc-4337-accounts/28424",
+      "date": "2026-05-04",
+      "title_en": "Magicians: app scoped nonce lanes for ERC-4337 accounts (draft)",
+      "note_en": "10:33.",
+      "topic_en": "Native AA and privacy: keyed nonces"
+    },
+    {
+      "topic": "交易与 gas：合并与新提案",
+      "title": "EIP-8037：固定 CPSB 与 frame 计费",
+      "note": "（misilva73）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11573",
+      "date": "2026-05-04",
+      "title_en": "EIP-8037: fixed CPSB plus frame accounting",
+      "note_en": "(misilva73), merged.",
+      "topic_en": "Transactions and gas: merges and new proposals"
+    },
+    {
+      "topic": "交易与 gas：合并与新提案",
+      "title": "EIP-8130：防止跨发送者的 payer 签名重放",
+      "note": "（pochenai）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11591",
+      "date": "2026-05-04",
+      "title_en": "EIP-8130: prevent cross sender payer signature replay",
+      "note_en": "(pochenai), merged.",
+      "topic_en": "Transactions and gas: merges and new proposals"
+    },
+    {
+      "topic": "交易与 gas：合并与新提案",
+      "title": "EIP-7708：记录 Soldøgn Interop 分组讨论的决定",
+      "note": "（Carsons-Eels）提交并合并：不把 EIP-7708 扩展到优先费、基础费销毁与提款，并写明理由。",
+      "url": "https://github.com/ethereum/EIPs/pull/11596",
+      "date": "2026-05-04",
+      "title_en": "EIP-7708: Soldøgn Interop breakout decisions",
+      "note_en": "(Carsons-Eels), submitted and merged: EIP-7708 will not be extended to priority fees, base fee burn or withdrawals, and the rationale is documented.",
+      "topic_en": "Transactions and gas: merges and new proposals"
+    },
+    {
+      "topic": "交易与 gas：合并与新提案",
+      "title": "新增 EIP：用 CREATE2 重新部署委托指示符",
+      "note": "（chunter-cb）提交：通过合约创建部署 EIP-7702 式委托指示符，并定义只允许用新委托指示符替换现有委托指示符的 CREATE2 碰撞例外。",
+      "url": "https://github.com/ethereum/EIPs/pull/11599",
+      "date": "2026-05-04",
+      "title_en": "Add EIP: CREATE2 redeployment for delegation indicators",
+      "note_en": "(chunter-cb), submitted: deploys EIP-7702 style delegation indicators through contract creation, with a narrow CREATE2 collision exception that only lets a delegation indicator replace another one.",
+      "topic_en": "Transactions and gas: merges and new proposals"
+    },
+    {
+      "topic": "交易与 gas：合并与新提案",
+      "title": "EIP-7981：简化规范",
+      "note": "（chfast）提交，行为不变。",
+      "url": "https://github.com/ethereum/EIPs/pull/11600",
+      "date": "2026-05-04",
+      "title_en": "EIP-7981: simplify spec",
+      "note_en": "(chfast), submitted, behavior unchanged.",
+      "topic_en": "Transactions and gas: merges and new proposals"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8249 智能账户通用中继架构",
+      "note": "15:35；ERC-7905 最小主权桥接代币 15:42。",
+      "url": "https://ethereum-magicians.org/t/erc-8249-generic-relayer-architecture-for-smart-accounts/28426",
+      "date": "2026-05-04",
+      "title_en": "Magicians: ERC-8249 Generic Relayer Architecture for Smart Accounts",
+      "note_en": "15:35; ERC-7905 Minimal Sovereign Bridged Token, 15:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7905 最小主权桥接代币",
+      "note": "Magicians：ERC-8249 智能账户通用中继架构 15:35；ERC-7905 最小主权桥接代币 15:42。",
+      "url": "https://ethereum-magicians.org/t/erc-7905-minimal-sovereign-bridged-token-minimal-xerc20/28427",
+      "date": "2026-05-04",
+      "title_en": "ERC-7905 Minimal Sovereign Bridged Token",
+      "note_en": "Magicians: ERC-8249 Generic Relayer Architecture for Smart Accounts, 15:35; ERC-7905 Minimal Sovereign Bridged Token, 15:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #7 议程",
+      "note": "23:56。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-7-may-12-2026/28430",
+      "date": "2026-05-04",
+      "title_en": "FCR #7 agenda",
+      "note_en": "23:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWareLtd：原生隐私、后量子安全与大规模扩展",
+      "note": "15:12。",
+      "url": "https://x.com/StarkWareLtd/status/2051213429852033353",
+      "date": "2026-05-04",
+      "title_en": "StarkWareLtd: native privacy, post-quantum security and massive scale",
+      "note_en": "15:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：Glamsterdam 版“以太坊到底是什么”，越来越多生活将通过软件运行",
+      "note": "21:14。",
+      "url": "https://x.com/binji_x/status/2051304504163700997",
+      "date": "2026-05-04",
+      "title_en": "binji_x: WTF is Ethereum, Glamsterdam edition: more of your life will run through software",
+      "note_en": "21:14.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：别再找借口回避让比特币做好抗量子准备这项艰难但必要的工作",
+      "note": "12:13。",
+      "url": "https://x.com/EliBenSasson/status/2051168231159640422",
+      "date": "2026-05-04",
+      "title_en": "EliBenSasson: stop looking for excuses to avoid the tough but necessary work of getting Bitcoin quantum ready",
+      "note_en": "12:13.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/nero_eth/status/2051266642039001142",
+    "credit": "X @nero_eth",
+    "local_path": "assets/2026-05-04.jpg",
+    "credit_en": "X @nero_eth"
+  },
+  "keywords_en": [
+    "keyed nonces for frame transactions EIP",
+    "frame transactions plus 2D nonces let private withdrawals skip relayers",
+    "EIP-8037 fixed CPSB merged",
+    "EIP-8130 replay fix merged",
+    "EIP-7708 records Soldøgn Interop decisions",
+    "CREATE2 redeployment for delegation indicators",
+    "app scoped nonce lanes for ERC-4337"
+  ],
+  "summary_en": "soispoke submitted an EIP for keyed nonces in frame transactions, letting one EIP-8141 sender run several independent nonce sequences in parallel for trustless privacy protocols. nero_eth noted that with frame transactions and 2D nonces, private withdrawals can pay fees from the withdrawal itself with no third party relayer. The EIP-8037 fixed CPSB change and the EIP-8130 payer signature replay fix both merged."
+}

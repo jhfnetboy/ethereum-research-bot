@@ -1,0 +1,139 @@
+{
+  "date": "2026-04-27",
+  "keywords": [
+    "Starknet 靠原生 AA 迁移到抗量子",
+    "Fallback Proposers EIP",
+    "独立 CL/EL 同步 EIP 合并",
+    "是否把共识层预设参数暴露给 EVM",
+    "隐私写入以太坊 2026 路线图终局目标",
+    "Encrypt The Mempool #3 议程"
+  ],
+  "summary": "EliBenSasson 表示 Starknet 用户迁移到完全抗量子会很容易，关键是原生 AA。ProtocolGuild 强调隐私已成为以太坊 2026 路线图的明确终局目标。EIP 仓库合并 potuz 的独立 CL/EL 同步提案。Magicians 讨论是否在 BeaconState 中加入预设参数承诺，让合约无需信任方即可验证。",
+  "items": [
+    {
+      "topic": "账户：原生 AA 与后量子迁移",
+      "title": "EliBenSasson：Starknet 迁移到完全抗量子对用户会非常容易，关键是原生 AA，这是 Starknet 最重要的设计选择之一，当时不受欢迎但非常正确",
+      "note": "19:05。",
+      "url": "https://x.com/EliBenSasson/status/2048735277435224537",
+      "date": "2026-04-27",
+      "title_en": "EliBenSasson: Starknet's migration to full quantum resistance will be very easy for users, thanks to native AA, one of its most important design choices, unpopular at the time but excellent",
+      "note_en": "19:05.",
+      "topic_en": "Accounts: native AA and post-quantum migration"
+    },
+    {
+      "topic": "账户：原生 AA 与后量子迁移",
+      "title": "EliBenSasson：ZEC 是隐私的谢林点，后量子密码的谢林点是什么",
+      "note": "20:50。",
+      "url": "https://x.com/EliBenSasson/status/2048761673570222377",
+      "date": "2026-04-27",
+      "title_en": "EliBenSasson: ZEC is the crypto Schelling point for privacy; what is the Schelling point for post-quantum crypto?",
+      "note_en": "20:50.",
+      "topic_en": "Accounts: native AA and post-quantum migration"
+    },
+    {
+      "topic": "隐私",
+      "title": "ProtocolGuild：以太坊 2026 路线图最大的新增内容是把隐私列为明确的终局目标，隐私是让全世界上链的前提",
+      "note": "02:56。",
+      "url": "https://x.com/ProtocolGuild/status/2048853841500946722",
+      "date": "2026-04-27",
+      "title_en": "ProtocolGuild: the biggest addition to Ethereum's 2026 roadmap is privacy as an explicit endgame goal, a prerequisite to onboarding the whole world",
+      "note_en": "02:56.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "Encrypt The Mempool #3 议程",
+      "note": "21:55，会议定于 4 月 29 日。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-3-april-29-2026/28371",
+      "date": "2026-04-27",
+      "title_en": "Encrypt The Mempool #3 agenda",
+      "note_en": "21:55, for a call on April 29.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "共识层预设与 EVM",
+      "title": "Magicians：是否应把共识层协议预设参数暴露给 EVM",
+      "note": "04:16：自 EIP-4788 起合约可用 SSZ 证明验证 BeaconState 字段，但罚没系数等预设只存在于客户端代码中，合约只能硬编码或依赖治理维护的表；提议在 BeaconState 中加入 preset_root 承诺。",
+      "url": "https://ethereum-magicians.org/t/should-consensus-layer-protocol-presets-be-exposed-to-the-evm/28361",
+      "date": "2026-04-27",
+      "title_en": "Magicians: should consensus layer protocol presets be exposed to the EVM?",
+      "note_en": "04:16: since EIP-4788 contracts can verify BeaconState fields with SSZ proofs, but presets such as slashing quotients live only in client code, so contracts hardcode them or rely on governance maintained tables; the post proposes a preset_root commitment in BeaconState.",
+      "topic_en": "CL presets and the EVM"
+    },
+    {
+      "topic": "共识层预设与 EVM",
+      "title": "新增 EIP：独立 CL/EL 同步",
+      "note": "（potuz）合并；新增 EIP：Fallback Proposers（soispoke）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11557",
+      "date": "2026-04-27",
+      "title_en": "Add EIP: Independent CL/EL Sync",
+      "note_en": "(potuz), merged; Add EIP: Fallback Proposers (soispoke), submitted.",
+      "topic_en": "CL presets and the EVM"
+    },
+    {
+      "topic": "共识层预设与 EVM",
+      "title": "新增 EIP：Fallback Proposers",
+      "note": "新增 EIP：独立 CL/EL 同步（potuz）合并；新增 EIP：Fallback Proposers（soispoke）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11572",
+      "date": "2026-04-27",
+      "title_en": "Add EIP: Fallback Proposers",
+      "note_en": "Add EIP: Independent CL/EL Sync (potuz), merged; Add EIP: Fallback Proposers (soispoke), submitted.",
+      "topic_en": "CL presets and the EVM"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：UltrafastSecp256k1，面向钱包、ZK 与高吞吐工具的多后端 secp256k1 引擎",
+      "note": "01:28；CAAS：开源密码库的持续审计服务 01:30。",
+      "url": "https://ethereum-magicians.org/t/ultrafastsecp256k1-a-multi-backend-secp256k1-execution-engine-for-wallets-zk-and-high-throughput-ethereum-tooling/28358",
+      "date": "2026-04-27",
+      "title_en": "Magicians: UltrafastSecp256k1, a multi backend secp256k1 engine for wallets, ZK and high throughput tooling",
+      "note_en": "01:28; CAAS: continuous audit as a service for open source cryptographic libraries, 01:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "CAAS：开源密码库的持续审计服务",
+      "note": "Magicians：UltrafastSecp256k1，面向钱包、ZK 与高吞吐工具的多后端 secp256k1 引擎 01:28；CAAS：开源密码库的持续审计服务 01:30。",
+      "url": "https://ethereum-magicians.org/t/caas-continuous-audit-as-a-service-reproducible-security-evidence-for-open-source-cryptographic-libraries/28359",
+      "date": "2026-04-27",
+      "title_en": "CAAS: continuous audit as a service for open source cryptographic libraries",
+      "note_en": "Magicians: UltrafastSecp256k1, a multi backend secp256k1 engine for wallets, ZK and high throughput tooling, 01:28; CAAS: continuous audit as a service for open source cryptographic libraries, 01:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "chain_security：thedaofund 的 ETHSecurity 徽章发放完成，7 名 ChainSecurity 审计员入选",
+      "note": "21:51。",
+      "url": "https://x.com/chain_security/status/2048777083447312796",
+      "date": "2026-04-27",
+      "title_en": "chain_security: the ETHSecurity badge distribution from thedaofund is done, with 7 ChainSecurity auditors earning a place",
+      "note_en": "21:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano_：强烈建议接入 Litecoin 的服务与跨链桥重新审视安全假设",
+      "note": "06:23。",
+      "url": "https://x.com/tayvano_/status/2048543559243153610",
+      "date": "2026-04-27",
+      "title_en": "tayvano_: strongly recommends services and bridges that integrated Litecoin re-examine their security assumptions",
+      "note_en": "06:23.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/should-consensus-layer-protocol-presets-be-exposed-to-the-evm/28361",
+    "credit": "Ethereum Magicians, Should consensus-layer protocol presets be exposed to the EVM?",
+    "local_path": "assets/2026-04-27.jpg",
+    "credit_en": "Ethereum Magicians, Should consensus-layer protocol presets be exposed to the EVM?"
+  },
+  "keywords_en": [
+    "Starknet relies on native AA to go quantum resistant",
+    "Fallback Proposers EIP",
+    "Independent CL/EL Sync EIP merged",
+    "should CL protocol presets be exposed to the EVM",
+    "privacy joins Ethereum's 2026 roadmap as an endgame goal",
+    "Encrypt The Mempool #3 agenda"
+  ],
+  "summary_en": "EliBenSasson said moving Starknet users to full quantum resistance will be easy, and native AA is the key. ProtocolGuild stressed that privacy is now an explicit endgame goal on Ethereum's 2026 roadmap. The EIPs repo merged potuz's Independent CL/EL Sync proposal. Magicians discussed adding a preset commitment to BeaconState so contracts can verify presets without a trusted party."
+}

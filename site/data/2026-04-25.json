@@ -1,0 +1,127 @@
+{
+  "date": "2026-04-25",
+  "keywords": [
+    "原生 AA 让 Tempo 用户更容易迁移到后量子签名",
+    "STEEL 团队提出 EIP-8037 修订方案",
+    "Canton 上 USDC 转账需 Circle 签名之问",
+    "后量子签名聚合实验",
+    "ERC-8241 协议控制权披露"
+  ],
+  "summary": "周六。gakonst 表示由于原生 AA，Tempo 用户迁移到后量子签名会更容易，只需给现有账户添加新密钥，无需转移资产，再停用非后量子密钥。STEEL 团队提交 EIP-8037 修订草案，试图解决实现与测试中发现的问题。bkiepuszewski 质疑 Canton 网络上的 USDC 转账都需要 Circle 签名。",
+  "items": [
+    {
+      "topic": "账户：原生 AA 与后量子迁移",
+      "title": "gakonst：因为有原生 AA，Tempo 用户迁移到后量子签名比其他地方更容易，只需为现有账户添加新密钥，不用转移或迁移资产，再停用非后量子密钥（可选择加入，或通过协议升级）",
+      "note": "01:53。",
+      "url": "https://x.com/gakonst/status/2047750718191452581",
+      "date": "2026-04-25",
+      "title_en": "gakonst: migrating Tempo users to post-quantum signatures will be easier than elsewhere because of native AA: add a new key to the existing account without transferring or migrating assets, then disable non post-quantum keys (opt in or via a protocol upgrade)",
+      "note_en": "01:53.",
+      "topic_en": "Accounts: native AA and post-quantum migration"
+    },
+    {
+      "topic": "账户：原生 AA 与后量子迁移",
+      "title": "gakonst：用 openvm 试验后量子签名聚合",
+      "note": "03:27。",
+      "url": "https://x.com/gakonst/status/2047774398162276544",
+      "date": "2026-04-25",
+      "title_en": "gakonst: experimenting with post-quantum signature aggregation on openvm",
+      "note_en": "03:27.",
+      "topic_en": "Accounts: native AA and post-quantum migration"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 修订",
+      "title": "EIP-8037：修订方案",
+      "note": "（Carsons-Eels）提交：STEEL 团队尝试调和现有 EIP-8037 定义中的问题以及实现和测试中发现的影响，草案仍有待补全的细节。",
+      "url": "https://github.com/ethereum/EIPs/pull/11570",
+      "date": "2026-04-25",
+      "title_en": "EIP-8037: proposal for revising 8037",
+      "note_en": "(Carsons-Eels), submitted: the STEEL team tries to reconcile issues in the current EIP-8037 definition and effects found during implementation and testing, with some details still to be specified.",
+      "topic_en": "Transactions and gas: an EIP-8037 revision"
+    },
+    {
+      "topic": "隐私与控制权",
+      "title": "bkiepuszewski：听说 Canton 网络上每笔 USDC 转账都需要 Circle 签名，每笔 USDC 都可被 Circle 扣押，Circle 也能看到每笔转账，这是真的吗",
+      "note": "14:28。",
+      "url": "https://x.com/bkiepuszewski/status/2047940819458380113",
+      "date": "2026-04-25",
+      "title_en": "bkiepuszewski: hears that on Canton every USDC transfer needs a Circle signature, every USDC holding can be seized by Circle and Circle sees every transfer; is this true?",
+      "note_en": "14:28.",
+      "topic_en": "Privacy and control"
+    },
+    {
+      "topic": "隐私与控制权",
+      "title": "Magicians：ERC-8241 协议控制权披露",
+      "note": "17:14，对应 ERC PR（chegecjay-rgb）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8241-protocol-control-disclosure/28343",
+      "date": "2026-04-25",
+      "title_en": "Magicians: ERC-8241 Protocol Control Disclosure",
+      "note_en": "17:14, with an ERC PR (chegecjay-rgb) submitted.",
+      "topic_en": "Privacy and control"
+    },
+    {
+      "topic": "隐私与控制权",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8241 协议控制权披露 17:14，对应 ERC PR（chegecjay-rgb）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1706",
+      "date": "2026-04-25",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8241 Protocol Control Disclosure, 17:14, with an ERC PR (chegecjay-rgb) submitted.",
+      "topic_en": "Privacy and control"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zooko：一篇在伪造 ZK 证明、部分逆向 Google 秘密电路等三方面都极为出色的研究",
+      "note": "01:11。",
+      "url": "https://x.com/zooko/status/2047740352665415789",
+      "date": "2026-04-25",
+      "title_en": "zooko: a tour de force in three areas, including forging a ZKP and partially reverse engineering Google's secret circuit",
+      "note_en": "01:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ProtocolGuild：以太坊核心协议开发的终局，L1 一万 TPS、L2 一千万 TPS、后量子、隐私、经久耐用",
+      "note": "02:05。",
+      "url": "https://x.com/ProtocolGuild/status/2047753805752852653",
+      "date": "2026-04-25",
+      "title_en": "ProtocolGuild: the core protocol endgame of 10K TPS on L1, 10M TPS on L2, post-quantum, private and built to last",
+      "note_en": "02:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8217 代理 NFT 身份绑定",
+      "note": "02:54。",
+      "url": "https://ethereum-magicians.org/t/add-erc-8217-agent-nft-identity-bindings/28339",
+      "date": "2026-04-25",
+      "title_en": "Magicians: ERC-8217 Agent NFT Identity Bindings",
+      "note_en": "02:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：rotki 参与以太坊安全 QF 轮，倡导自托管、本地优先与数据主权",
+      "note": "16:30。",
+      "url": "https://x.com/LefterisJP/status/2047971515832950979",
+      "date": "2026-04-25",
+      "title_en": "LefterisJP: rotki is in the Ethereum Security QF round, advocating self hosted, local first apps and data sovereignty",
+      "note_en": "16:30.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8241-protocol-control-disclosure/28343",
+    "credit": "Ethereum Magicians, ERC-8241: Protocol Control Disclosure",
+    "local_path": "assets/2026-04-25.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8241: Protocol Control Disclosure"
+  },
+  "keywords_en": [
+    "native AA makes Tempo's move to post-quantum signatures easier",
+    "STEEL proposes an EIP-8037 revision",
+    "does every USDC transfer on Canton need a Circle signature",
+    "post-quantum signature aggregation experiments",
+    "ERC-8241 Protocol Control Disclosure"
+  ],
+  "summary_en": "A Saturday. gakonst said native AA makes it easier to migrate Tempo users to post-quantum signatures: add a new key to the existing account without moving assets, then disable the non post-quantum keys. The STEEL team submitted a draft revision of EIP-8037 addressing issues found in implementation and testing. bkiepuszewski questioned whether every USDC transfer on Canton requires a Circle signature."
+}

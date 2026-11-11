@@ -1,0 +1,129 @@
+{
+  "date": "2026-05-02",
+  "keywords": [
+    "EIP-8130 防止跨发送者重放 payer 签名",
+    "多维费用市场的 gas 溢出",
+    "ERC-4337 风格 nonce 的 Keyed Transfer With Authorization",
+    "智能账户通用中继架构移至 ERC",
+    "是否把计算出的信标状态聚合值暴露为字段",
+    "Soldøgn Interop 回顾"
+  ],
+  "summary": "周六。pochenai 提交 EIP-8130 修正，防止两个交易数据相同的 EOA 复用同一个 payer 签名耗尽 payer 的 gas 存款。ethresear.ch 分析 EIP-7999 的“通用溢出”方案，在多维费用市场中保留 CALL 周围的旧式标量 gas 预留模式。BrianBland 提出使用二维 nonce 的 ERC-20 转账授权方案。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8130 payer 签名重放",
+      "title": "EIP-8130：防止跨发送者的 payer 签名重放",
+      "note": "（pochenai）提交：payer 签名哈希包含 from 字段，但规范没说明 EOA 路径下 from 为空时填什么；若编码为空，两个交易数据相同的 EOA 会得到同一 payer 哈希，第二个 EOA 可复用签名耗尽 payer 的 gas 存款，因此要求用恢复出的发送者地址填入。",
+      "url": "https://github.com/ethereum/EIPs/pull/11591",
+      "date": "2026-05-02",
+      "title_en": "EIP-8130: prevent cross sender payer signature replay",
+      "note_en": "(pochenai), submitted: the payer signature hash includes a from field, but the spec did not say what goes there on the EOA path where from is empty; encoded as empty, two EOAs with identical transaction data would share a payer hash, letting the second reuse the signature and drain the payer's gas deposit, so the recovered sender address must be substituted.",
+      "topic_en": "Native AA: EIP-8130 payer signature replay"
+    },
+    {
+      "topic": "交易与 gas：多维费用市场的 gas 溢出",
+      "title": "ethresear.ch：多维费用市场的 gas 溢出",
+      "note": "00:42：分析 EIP-7999 的“通用溢出”，作为在 CALL 周围保留旧式标量 gas 预留模式的最小方案，同时避免把所有 EVM gas 都按最贵资源定价；文中致谢 Vitalik 提供主要思路。",
+      "url": "https://ethresear.ch/t/gas-overflow-for-multidimensional-fee-markets/24766",
+      "date": "2026-05-02",
+      "title_en": "ethresear.ch: Gas overflow for multidimensional fee markets",
+      "note_en": "00:42: analyzes \"universal overflow\" for EIP-7999 as a minimal way to keep the legacy scalar retained gas pattern around CALL while avoiding pricing all EVM gas at the most expensive resource; it credits Vitalik for the main idea.",
+      "topic_en": "Transactions and gas: gas overflow in multidimensional fee markets"
+    },
+    {
+      "topic": "账户与支付标准",
+      "title": "新增 ERC：Keyed Transfer With Authorization",
+      "note": "（BrianBland）提交：ERC-20 转账授权采用 (uint192 nonceKey, uint64 nonceSequence) 拆分，沿用 ERC-4337 的半抽象 nonce 编码，让重复付款给同一对象时每个 (payer, key) 只占一个存储槽。",
+      "url": "https://github.com/ethereum/ERCs/pull/1715",
+      "date": "2026-05-02",
+      "title_en": "Add ERC: Keyed Transfer With Authorization",
+      "note_en": "(BrianBland), submitted: ERC-20 transfer authorizations split nonces into (uint192 nonceKey, uint64 nonceSequence), mirroring ERC-4337's semi abstracted encoding, so repeat payments to one counterparty use one storage slot per (payer, key).",
+      "topic_en": "Account and payment standards"
+    },
+    {
+      "topic": "账户与支付标准",
+      "title": "新增 ERC：智能账户通用中继架构",
+      "note": "（seansing）提交，从 EIP 仓库移来。",
+      "url": "https://github.com/ethereum/ERCs/pull/1716",
+      "date": "2026-05-02",
+      "title_en": "Add ERC: Generic Relayer Architecture for Smart Accounts",
+      "note_en": "(seansing), submitted, moved over from the EIPs repo.",
+      "topic_en": "Account and payment standards"
+    },
+    {
+      "topic": "账户与支付标准",
+      "title": "新增 ERC：ERC-8004 代理的 x402 支付收据绑定",
+      "note": "（hilarl）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1717",
+      "date": "2026-05-02",
+      "title_en": "Add ERC: x402 Payment Receipt Binding for ERC-8004 Agents",
+      "note_en": "(hilarl), submitted.",
+      "topic_en": "Account and payment standards"
+    },
+    {
+      "topic": "其他动态",
+      "title": "以太坊基金会博客：Soldøgn Interop 回顾",
+      "note": "",
+      "url": "https://blog.ethereum.org/en/2026/05/02/soldogn-interop-recap",
+      "date": "2026-05-02",
+      "title_en": "EF blog: Soldøgn Interop Recap",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：是否应把计算出的信标状态聚合值（如 total_active_balance）暴露为 BeaconState 字段",
+      "note": "04:32。",
+      "url": "https://ethereum-magicians.org/t/should-computed-beacon-state-aggregates-be-exposed-as-beaconstate-fields/28417",
+      "date": "2026-05-02",
+      "title_en": "Magicians: should computed beacon state aggregates (such as total_active_balance) be exposed as BeaconState fields?",
+      "note_en": "04:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：多 VM 指针代币模式",
+      "note": "（hilarl）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11592",
+      "date": "2026-05-02",
+      "title_en": "Add EIP: Multi-VM Pointer-Token Pattern",
+      "note_en": "(hilarl), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊的哲学债务与 DeFi 安全的未来",
+      "note": "20:31。",
+      "url": "https://ethresear.ch/t/the-philosophical-debt-of-ethereum-and-the-future-of-defi-security-a-usage-based-free-insurance-layer-funded-white-hat-economy/24770",
+      "date": "2026-05-02",
+      "title_en": "ethresear.ch: The Philosophical Debt of Ethereum and the Future of DeFi Security",
+      "note_en": "20:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ECHInstitute：Giveth 以太坊安全 QF 轮第一周已有 20 位捐赠者，配捐池 500 ETH",
+      "note": "01:23。",
+      "url": "https://x.com/ECHInstitute/status/2050279996011540604",
+      "date": "2026-05-02",
+      "title_en": "ECHInstitute: 20 donors in week one of the Giveth Ethereum Security QF round, with a 500 ETH matching pool",
+      "note_en": "01:23.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/gas-overflow-for-multidimensional-fee-markets/24766",
+    "credit": "ethresear.ch, Gas overflow for multidimensional fee markets",
+    "local_path": "assets/2026-05-02.jpg",
+    "credit_en": "ethresear.ch, Gas overflow for multidimensional fee markets"
+  },
+  "keywords_en": [
+    "EIP-8130 prevents cross sender payer signature replay",
+    "gas overflow for multidimensional fee markets",
+    "Keyed Transfer With Authorization with ERC-4337 style nonces",
+    "generic relayer architecture moves to ERCs",
+    "should computed beacon state aggregates be exposed as fields",
+    "Soldøgn Interop recap"
+  ],
+  "summary_en": "A Saturday. pochenai submitted an EIP-8130 fix so two EOAs with identical transaction data cannot reuse one payer signature and drain the payer's gas deposit. ethresear.ch analyzed \"universal overflow\" for EIP-7999, keeping the legacy scalar gas retention pattern around CALL in a multidimensional fee market. BrianBland proposed an ERC-20 transfer authorization scheme using 2D nonces."
+}

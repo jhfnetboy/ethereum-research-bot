@@ -1,0 +1,159 @@
+{
+  "date": "2026-04-18",
+  "keywords": [
+    "eth.limo DNS 注册商遭攻击",
+    "EIP-8141 签名哈希混入交易类型",
+    "EIP-8037 SELFDESTRUCT 状态 gas 退款规则",
+    "EIP-7906 与 FRAMEPARAM 对齐",
+    "Meta EIP-8235 EIP 标签",
+    "potuz 评价 Tempo 隐私与 AA"
+  ],
+  "summary": "Vitalik 转告 eth.limo 的 DNS 注册商遭到攻击，提醒大家在确认恢复前不要访问相关 .eth.limo 页面，可直接通过 IPFS 访问他的博客。derekchiang 提交 EIP-8141 修改，把交易类型混入签名哈希。ACDC #178 议程发布，会议定于 5 月 14 日。",
+  "items": [
+    {
+      "topic": "安全：eth.limo DNS 攻击",
+      "title": "Vitalik：eth.limo 告知其 DNS 注册商遭到攻击，确认恢复正常之前请不要访问 vitalik.eth.limo 或其他 .eth.limo 页面，可通过 IPFS 直接查看博客",
+      "note": "15:05。",
+      "url": "https://x.com/VitalikButerin/status/2045413438659416215",
+      "date": "2026-04-18",
+      "title_en": "Vitalik: eth.limo warned him of an attack on their DNS registrar, so do not visit vitalik.eth.limo or other .eth.limo pages until they confirm things are back to normal; the blog can be read via IPFS directly",
+      "note_en": "15:05.",
+      "topic_en": "Security: the eth.limo DNS attack"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "EIP-8141：把交易类型混入签名哈希",
+      "note": "（derekchiang）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11544",
+      "date": "2026-04-18",
+      "title_en": "EIP-8141: mix the transaction type into the sighash",
+      "note_en": "(derekchiang), submitted.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "EIP-7906：补充缺失的 slot_key 参数，并把类似操作码命名为 FRAMEPARAM",
+      "note": "（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11546",
+      "date": "2026-04-18",
+      "title_en": "EIP-7906: add the missing slot_key parameter and name FRAMEPARAM as a similar opcode",
+      "note_en": "(forshtat), submitted and merged.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "EIP-8037：更新账户 SELFDESTRUCT 时的状态 gas 退款规则",
+      "note": "（abc-123-c）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11543",
+      "date": "2026-04-18",
+      "title_en": "EIP-8037: update state gas refund rules for account SELFDESTRUCT",
+      "note_en": "(abc-123-c), submitted.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "potuz_eth：不理解时间线上对 Tempo 隐私方案的抱怨，这对其用户是务实的方案，其 AA 做法也很好",
+      "note": "03:42。",
+      "url": "https://x.com/potuz_eth/status/2045241416432152700",
+      "date": "2026-04-18",
+      "title_en": "potuz_eth: doesn't understand the timeline's complaints about Tempo's privacy solution, which is practical for its users, and its approach to AA is also good",
+      "note_en": "03:42.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #178 议程",
+      "note": "21:44；RPC Standards #25 议程 22:36；Stateless Implementer's Call #51 议程 22:54。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-178-may-14-2026/28276",
+      "date": "2026-15-00",
+      "title_en": "ACDC #178 agenda",
+      "note_en": "21:44; RPC Standards #25 agenda, 22:36; Stateless Implementer's Call #51 agenda, 22:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #25 议程",
+      "note": "ACDC #178 议程 21:44；RPC Standards #25 议程 22:36；Stateless Implementer's Call #51 议程 22:54。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-25-april-20-2026-15-00-utc/28277",
+      "date": "2026-15-00",
+      "title_en": "RPC Standards #25 agenda",
+      "note_en": "ACDC #178 agenda, 21:44; RPC Standards #25 agenda, 22:36; Stateless Implementer's Call #51 agenda, 22:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Stateless Implementer's Call #51 议程",
+      "note": "ACDC #178 议程 21:44；RPC Standards #25 议程 22:36；Stateless Implementer's Call #51 议程 22:54。",
+      "url": "https://ethereum-magicians.org/t/stateless-implementers-call-51-may-04-2026/28278",
+      "date": "2026-15-00",
+      "title_en": "Stateless Implementer's Call #51 agenda",
+      "note_en": "ACDC #178 agenda, 21:44; RPC Standards #25 agenda, 22:36; Stateless Implementer's Call #51 agenda, 22:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：Meta EIP-8235 EIP 标签",
+      "note": "06:20（SirSpudlington），对应 EIP PR 提交。",
+      "url": "https://ethereum-magicians.org/t/meta-eip-8235-eip-tagging/28275",
+      "date": "2026-04-18",
+      "title_en": "Magicians: Meta EIP-8235 EIP Tagging",
+      "note_en": "06:20 (SirSpudlington), with an EIP PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP PR",
+      "note": "Magicians：Meta EIP-8235 EIP 标签 06:20（SirSpudlington），对应 EIP PR 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11545",
+      "date": "2026-04-18",
+      "title_en": "EIP PR",
+      "note_en": "Magicians: Meta EIP-8235 EIP Tagging, 06:20 (SirSpudlington), with an EIP PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP：不变布局守卫操作码",
+      "note": "（Helkomine）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11542",
+      "date": "2026-04-18",
+      "title_en": "EIP: Invariant Layout Guard Opcode",
+      "note_en": "(Helkomine), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "jessepollak：Base 上 DeFi TVL 接近 50 亿美元",
+      "note": "00:03。",
+      "url": "https://x.com/jessepollak/status/2045186333405270322",
+      "date": "2026-04-18",
+      "title_en": "jessepollak: Base DeFi TVL since launch is approaching $5B",
+      "note_en": "00:03.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "koeppelmann：EEZ 让 L2 可以有隐私或特定权限，而 L1 持有大部分流动性并同步连接一切",
+      "note": "14:01。",
+      "url": "https://x.com/koeppelmann/status/2045397356925886501",
+      "date": "2026-04-18",
+      "title_en": "koeppelmann: the EEZ lets L2s have privacy or specific permissions while L1 holds most liquidity and connects everything synchronously",
+      "note_en": "14:01.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/meta-eip-8235-eip-tagging/28275",
+    "credit": "Ethereum Magicians, Meta EIP-8235: EIP Tagging (SirSpudlington)",
+    "local_path": "assets/2026-04-18.jpg",
+    "credit_en": "Ethereum Magicians, Meta EIP-8235: EIP Tagging (SirSpudlington)"
+  },
+  "keywords_en": [
+    "eth.limo DNS registrar attacked",
+    "EIP-8141 mixes the transaction type into the sighash",
+    "EIP-8037 state gas refunds for SELFDESTRUCT",
+    "EIP-7906 aligned with FRAMEPARAM",
+    "Meta EIP-8235 EIP tagging",
+    "potuz on Tempo's privacy and AA"
+  ],
+  "summary_en": "Vitalik relayed that eth.limo's DNS registrar had been attacked and asked people not to visit the affected .eth.limo pages until it was confirmed safe, pointing to his blog on IPFS. derekchiang submitted an EIP-8141 change mixing the transaction type into the signature hash. The ACDC #178 agenda was posted for May 14."
+}

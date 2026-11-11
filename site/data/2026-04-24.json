@@ -1,0 +1,159 @@
+{
+  "date": "2026-04-24",
+  "keywords": [
+    "EIP-8141 放宽内存池规则不再要求特定工厂",
+    "EIP-8163 提议纳入 Hegotá 并移至 Review",
+    "抗胁迫金库 ERC",
+    "ERC-8239 代理技能注册表",
+    "Ethereal news #20",
+    "Coinbase 后量子报告"
+  ],
+  "summary": "derekchiang 提交 EIP-8141 修改，放宽内存池规则，不再要求账户由特定工厂部署。pdobacz 提议把 EIP-8163（保留 EXTENSION 操作码）纳入 Hegotá 并移至 Review。Ethereal news #20 发布，内容涵盖 rsETH 恢复计划与 Arbitrum 冻结攻击者 ETH。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 内存池规则",
+      "title": "EIP-8141：放宽内存池规则，不再要求特定工厂",
+      "note": "（derekchiang）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11567",
+      "date": "2026-04-24",
+      "title_en": "EIP-8141: relax mempool rules to not require a specific factory",
+      "note_en": "(derekchiang), submitted.",
+      "topic_en": "Native AA: EIP-8141 mempool rules"
+    },
+    {
+      "topic": "Hegotá 与安全",
+      "title": "EIP-8081：提议纳入 EIP-8163",
+      "note": "（pdobacz）提交；EIP-8163：移至 Review（pdobacz）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11568",
+      "date": "2026-04-24",
+      "title_en": "EIP-8081: propose EIP-8163 for inclusion",
+      "note_en": "(pdobacz), submitted; EIP-8163: move to Review (pdobacz), submitted.",
+      "topic_en": "Hegotá and security"
+    },
+    {
+      "topic": "Hegotá 与安全",
+      "title": "EIP-8163：移至 Review",
+      "note": "EIP-8081：提议纳入 EIP-8163（pdobacz）提交；EIP-8163：移至 Review（pdobacz）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11569",
+      "date": "2026-04-24",
+      "title_en": "EIP-8163: move to Review",
+      "note_en": "EIP-8081: propose EIP-8163 for inclusion (pdobacz), submitted; EIP-8163: move to Review (pdobacz), submitted.",
+      "topic_en": "Hegotá and security"
+    },
+    {
+      "topic": "Hegotá 与安全",
+      "title": "ERC：抗胁迫金库",
+      "note": "（cmayorga）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1703",
+      "date": "2026-04-24",
+      "title_en": "ERC: Coercion-Resistant Vault",
+      "note_en": "(cmayorga), submitted.",
+      "topic_en": "Hegotá and security"
+    },
+    {
+      "topic": "Hegotá 与安全",
+      "title": "preston_vanloon：用硬件钱包、在专用电脑上签名、建立核对数据与模拟交易的操作流程",
+      "note": "22:41。",
+      "url": "https://x.com/preston_vanloon/status/2047702548828561735",
+      "date": "2026-04-24",
+      "title_en": "preston_vanloon: use a hardware wallet, sign from a dedicated computer and build an SOP that verifies data and simulates transactions",
+      "note_en": "22:41.",
+      "topic_en": "Hegotá and security"
+    },
+    {
+      "topic": "Hegotá 与安全",
+      "title": "tcoratger：推荐 Coinbase 新发布的后量子报告",
+      "note": "20:38。",
+      "url": "https://x.com/tcoratger/status/2047671574640071051",
+      "date": "2026-04-24",
+      "title_en": "tcoratger: recommends the new post-quantum report from Coinbase",
+      "note_en": "20:38.",
+      "topic_en": "Hegotá and security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EtherealnewsHQ：Ethereal news #20 发布，涉及 ETH 是生产性货币、恢复 rsETH 支撑的联合行动与 Arbitrum 安全委员会冻结攻击者 ETH",
+      "note": "20:03。",
+      "url": "https://x.com/EtherealnewsHQ/status/2047662800714236151",
+      "date": "2026-04-24",
+      "title_en": "EtherealnewsHQ: Ethereal news #20 is out, covering ETH as productive money, the joint effort to restore rsETH backing and the Arbitrum security council freezing exploiter ETH",
+      "note_en": "20:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereumfndn：dAI 团队为在 X Layer 上基于 ERC-8004 构建的项目提供战略指导",
+      "note": "20:55；Magicians：ERC-8239 代理技能注册表 05:49。",
+      "url": "https://x.com/ethereumfndn/status/2047675852436218045",
+      "date": "2026-04-24",
+      "title_en": "ethereumfndn: the dAI team is giving strategic guidance to projects building on ERC-8004 on X Layer",
+      "note_en": "20:55; Magicians: ERC-8239 Agent Skill Registry, 05:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8239 代理技能注册表",
+      "note": "ethereumfndn：dAI 团队为在 X Layer 上基于 ERC-8004 构建的项目提供战略指导 20:55；Magicians：ERC-8239 代理技能注册表 05:49。",
+      "url": "https://ethereum-magicians.org/t/erc-8239-agent-skill-registry/28335",
+      "date": "2026-04-24",
+      "title_en": "Magicians: ERC-8239 Agent Skill Registry",
+      "note_en": "Ethereumfndn: the dAI team is giving strategic guidance to projects building on ERC-8004 on X Layer, 20:55; Magicians: ERC-8239 Agent Skill Registry, 05:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "网站：显示撤回原因",
+      "note": "（jochem-brouwer）合并；EIP-8178 增加共同作者（Giulio2002）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11529",
+      "date": "2026-04-24",
+      "title_en": "Website: show the withdrawn reason",
+      "note_en": "(jochem-brouwer), merged; EIP-8178: add a coauthor (Giulio2002), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8178 增加共同作者",
+      "note": "网站：显示撤回原因（jochem-brouwer）合并；EIP-8178 增加共同作者（Giulio2002）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11566",
+      "date": "2026-04-24",
+      "title_en": "EIP-8178: add a coauthor",
+      "note_en": "Website: show the withdrawn reason (jochem-brouwer), merged; EIP-8178: add a coauthor (Giulio2002), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "bkiepuszewski：自己的银行账户曾多次被冻结，其中一次是永久冻结",
+      "note": "12:10。",
+      "url": "https://x.com/bkiepuszewski/status/2047543633142792620",
+      "date": "2026-04-24",
+      "title_en": "bkiepuszewski: his bank accounts have been frozen several times, once permanently",
+      "note_en": "12:10.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：后量子安全会像隐私一样，有一天突然不再是可选项",
+      "note": "18:44。",
+      "url": "https://x.com/EliBenSasson/status/2047642900310249514",
+      "date": "2026-04-24",
+      "title_en": "EliBenSasson: post-quantum security will go the way of privacy and one day suddenly stop being optional",
+      "note_en": "18:44.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8239-agent-skill-registry/28335",
+    "credit": "Ethereum Magicians, ERC-8239: Agent Skill Registry",
+    "local_path": "assets/2026-04-24.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8239: Agent Skill Registry"
+  },
+  "keywords_en": [
+    "EIP-8141 relaxes mempool rules to drop the specific factory requirement",
+    "EIP-8163 proposed for Hegotá and moved to Review",
+    "coercion resistant vault ERC",
+    "ERC-8239 Agent Skill Registry",
+    "Ethereal news #20",
+    "Coinbase post-quantum report"
+  ],
+  "summary_en": "derekchiang submitted an EIP-8141 change relaxing mempool rules so accounts no longer need a specific factory. pdobacz proposed EIP-8163 (reserve the EXTENSION opcode) for Hegotá and moved it to Review. Ethereal news #20 came out, covering the rsETH recovery effort and Arbitrum freezing the exploiter's ETH."
+}

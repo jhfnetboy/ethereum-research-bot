@@ -1,0 +1,157 @@
+{
+  "date": "2026-04-19",
+  "keywords": [
+    "rsETH 跨链桥被攻击损失约 3 亿美元",
+    "koeppelmann 转向“安全优先于中立”",
+    "eth.limo 恢复",
+    "EIP-8037 SSTORE 恢复退款回滚语义",
+    "zkVM 中的寄存器设计"
+  ],
+  "summary": "周日。koeppelmann 称 rsETH 跨链桥被攻击造成约 3 亿美元直接损失，并已让 Aave 市值蒸发超过 2 亿美元；他表示在自己能影响的系统中将默认“安全优先于中立”，支持暂停开关、每日限额等安全网。Vitalik 确认 eth.limo 问题已解决。",
+  "items": [
+    {
+      "topic": "安全：rsETH 跨链桥事件",
+      "title": "koeppelmann：rsETH 跨链桥被攻击，造成约 3 亿美元直接损失，总得有人承担；此外已让 Aave 市值蒸发超过 2 亿美元",
+      "note": "19:21。",
+      "url": "https://x.com/koeppelmann/status/2045840215357403262",
+      "date": "2026-04-19",
+      "title_en": "koeppelmann: the rsETH bridge hack caused about $300 million in direct losses that someone will have to eat, and has already wiped out more than $200 million in Aave market cap",
+      "note_en": "19:21.",
+      "topic_en": "Security: the rsETH bridge incident"
+    },
+    {
+      "topic": "安全：rsETH 跨链桥事件",
+      "title": "koeppelmann：虽然痛苦，但在自己能影响的系统中将默认“安全优先于中立”：“全部暂停”功能、每日限额、每笔交易都必须经过的额外安全层，都可以要",
+      "note": "19:52；bkiepuszewski：同意，前提是不默认交给一个能随时卷走所有人资金的中心化实体，而大多数协议恰恰如此 20:20。",
+      "url": "https://x.com/koeppelmann/status/2045848120920088612",
+      "date": "2026-04-19",
+      "title_en": "koeppelmann: as much as it pains him, for things he has influence over he will switch to the default of security over neutrality: a \"pause everything\" function, a daily limit, an extra safety layer every transaction must pass",
+      "note_en": "19:52; bkiepuszewski: agrees, assuming that does not default to a centralized entity that can rug anyone, which is the case for most protocols, 20:20.",
+      "topic_en": "Security: the rsETH bridge incident"
+    },
+    {
+      "topic": "安全：rsETH 跨链桥事件",
+      "title": "bkiepuszewski：同意，前提是不默认交给一个能随时卷走所有人资金的中心化实体，而大多数协议恰恰如此",
+      "note": "koeppelmann：虽然痛苦，但在自己能影响的系统中将默认“安全优先于中立”：“全部暂停”功能、每日限额、每笔交易都必须经过的额外安全层，都可以要 19:52；bkiepuszewski：同意，前提是不默认交给一个能随时卷走所有人资金的中心化实体，而大多数协议恰恰如此 20:20。",
+      "url": "https://x.com/bkiepuszewski/status/2045855060848988285",
+      "date": "2026-04-19",
+      "title_en": "bkiepuszewski: agrees, assuming that does not default to a centralized entity that can rug anyone, which is the case for most protocols",
+      "note_en": "Koeppelmann: as much as it pains him, for things he has influence over he will switch to the default of security over neutrality: a \"pause everything\" function, a daily limit, an extra safety layer every transaction must pass, 19:52; bkiepuszewski: agrees, assuming that does not default to a centralized entity that can rug anyone, which is the case for most protocols, 20:20.",
+      "topic_en": "Security: the rsETH bridge incident"
+    },
+    {
+      "topic": "安全：rsETH 跨链桥事件",
+      "title": "LefterisJP：想要无聊而安全的 DeFi，能以 1.7% 的年化把 ETH 放进协议然后安心不管",
+      "note": "04:59。",
+      "url": "https://x.com/LefterisJP/status/2045623278492852503",
+      "date": "2026-04-19",
+      "title_en": "LefterisJP: wants boring and safe DeFi where ETH can be parked at 1.7% APR and left alone",
+      "note_en": "04:59.",
+      "topic_en": "Security: the rsETH bridge incident"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：澄清 SSTORE 恢复退款的回滚语义",
+      "note": "（spencer-tb）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11548",
+      "date": "2026-04-19",
+      "title_en": "EIP-8037: clarify SSTORE restoration refund rollback semantics",
+      "note_en": "(spencer-tb), submitted.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7928：区块访问索引改为 uint64",
+      "note": "（nerolation）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11535",
+      "date": "2026-04-19",
+      "title_en": "EIP-7928: change the block access index to uint64",
+      "note_en": "(nerolation), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：eth.limo 问题已全部解决",
+      "note": "07:19。",
+      "url": "https://x.com/VitalikButerin/status/2045658410104877172",
+      "date": "2026-04-19",
+      "title_en": "Vitalik: all resolved now with eth.limo",
+      "note_en": "07:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger：标准 RISC-V 有 32 个寄存器，硬件中溢出到缓存很便宜，但在 zkVM 中每次内存操作都是昂贵的约束",
+      "note": "05:08。",
+      "url": "https://x.com/tcoratger/status/2045625649289703535",
+      "date": "2026-04-19",
+      "title_en": "tcoratger: standard RISC-V has 32 registers and spilling to cache is cheap in hardware, but in zkVMs every memory operation is an expensive constraint",
+      "note_en": "05:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊缺失的验证原语",
+      "note": "00:07。",
+      "url": "https://ethresear.ch/t/the-missing-verification-primitive-in-ethereum/24684",
+      "date": "2026-04-19",
+      "title_en": "ethresear.ch: The Missing Verification Primitive in Ethereum",
+      "note_en": "00:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP：延迟结算同质化代币",
+      "note": "（LevanIlashvili）提交；ERC-8126 增加共同作者（Cybercentry）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11547",
+      "date": "2026-04-19",
+      "title_en": "EIP: Deferred-Settlement Fungible Tokens",
+      "note_en": "(LevanIlashvili), submitted; ERC-8126: add a coauthor (Cybercentry), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8126 增加共同作者",
+      "note": "EIP：延迟结算同质化代币（LevanIlashvili）提交；ERC-8126 增加共同作者（Cybercentry）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1691",
+      "date": "2026-04-19",
+      "title_en": "ERC-8126: add a coauthor",
+      "note_en": "EIP: Deferred-Settlement Fungible Tokens (LevanIlashvili), submitted; ERC-8126: add a coauthor (Cybercentry), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：ZK-STARK 用于隐私、扩容与后量子安全",
+      "note": "22:58。",
+      "url": "https://x.com/EliBenSasson/status/2045894815003394505",
+      "date": "2026-04-19",
+      "title_en": "EliBenSasson: ZK-STARKs for privacy, scale and post-quantum security",
+      "note_en": "22:58.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：一切都在被攻击，web2 和 web3 都是",
+      "note": "23:17。",
+      "url": "https://x.com/fede_intern/status/2045899718169911566",
+      "date": "2026-04-19",
+      "title_en": "fede_intern: everything is getting hacked, web2 and web3 alike",
+      "note_en": "23:17.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/koeppelmann/status/2045848120920088612",
+    "credit": "X, @koeppelmann",
+    "local_path": "assets/2026-04-19.jpg",
+    "credit_en": "X, @koeppelmann"
+  },
+  "keywords_en": [
+    "rsETH bridge hack with about $300M in losses",
+    "koeppelmann switches to \"security over neutrality\"",
+    "eth.limo resolved",
+    "EIP-8037 SSTORE restoration refund rollback semantics",
+    "register design in zkVMs"
+  ],
+  "summary_en": "A Sunday. koeppelmann said the rsETH bridge hack caused about $300 million in direct losses and had already wiped out more than $200 million of Aave market cap; for systems he can influence he will default to \"security over neutrality\", backing pause switches, daily limits and similar safety nets. Vitalik confirmed the eth.limo issue was resolved."
+}

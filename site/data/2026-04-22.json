@@ -1,0 +1,201 @@
+{
+  "date": "2026-04-22",
+  "keywords": [
+    "Native Account Abstraction #1",
+    "EIP-8141 引入 guarantor 草案",
+    "EIP-8141 签名哈希混入交易类型合并",
+    "EIP-8182 用 ML-KEM-768 传递票据",
+    "EIP-7702 月活接近 200 万",
+    "Starknet Shinobi 原生隐私",
+    "比特币后量子签名 SHRINCS 与 SHRIMPS"
+  ],
+  "summary": "原生账户抽象第一次分组会议召开。derekchiang 提交 EIP-8141 的 guarantor 草案：即使发送者验证失败，guarantor 也会为交易付费，内存池节点因此无需先验证发送者；他此前把交易类型混入签名哈希的修改合并。RogerPodacter 让 EIP-8182 改用 ML-KEM-768 传递私密票据，当天提交并合并。lightclient 称 EIP-7702 月活正接近 200 万。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 的 guarantor 与签名哈希",
+      "title": "议程",
+      "note": "Native Account Abstraction #1 召开（议程）。",
+      "url": "https://ethereum-magicians.org/t/native-account-abstraction-1-april-22-2026/28227",
+      "date": "2026-04-22",
+      "title_en": "agenda",
+      "note_en": "Native Account Abstraction #1 took place (agenda).",
+      "topic_en": "Native AA: guarantors and the sighash in EIP-8141"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 的 guarantor 与签名哈希",
+      "title": "EIP-8141：支持 guarantor",
+      "note": "（derekchiang）提交，作为征求早期反馈的草案：引入 guarantor 这一付费方，即使发送者验证失败也为交易付费；只要交易有 guarantor，内存池节点就无需检查发送者验证能否通过。",
+      "url": "https://github.com/ethereum/EIPs/pull/11555",
+      "date": "2026-04-22",
+      "title_en": "EIP-8141: add support for guarantors",
+      "note_en": "(derekchiang), submitted as a draft for early feedback: a guarantor is a payer that pays for the transaction even if sender validation fails, so as long as a transaction has a guarantor, mempool nodes need not check whether sender validation passes.",
+      "topic_en": "Native AA: guarantors and the sighash in EIP-8141"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 的 guarantor 与签名哈希",
+      "title": "EIP-8141：签名哈希混入交易类型",
+      "note": "（derekchiang）合并，该 PR 于 4 月 18 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11544",
+      "date": "2026-04-22",
+      "title_en": "EIP-8141: mix the transaction type into the sighash",
+      "note_en": "(derekchiang), merged; submitted on April 18.",
+      "topic_en": "Native AA: guarantors and the sighash in EIP-8141"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 的 guarantor 与签名哈希",
+      "title": "lightclients：EIP-7702 正迈向 200 万月活",
+      "note": "21:14；EIP-2780：澄清与 EIP-7702 和 EIP-7928 的交互（gurukamath）合并。",
+      "url": "https://x.com/lightclients/status/2046955885763998023",
+      "date": "2026-04-22",
+      "title_en": "lightclients: en route to 2M MAU of 7702",
+      "note_en": "21:14; EIP-2780: clarify interactions with EIP-7702 and EIP-7928 (gurukamath), merged.",
+      "topic_en": "Native AA: guarantors and the sighash in EIP-8141"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 的 guarantor 与签名哈希",
+      "title": "EIP-2780：澄清与 EIP-7702 和 EIP-7928 的交互",
+      "note": "lightclients：EIP-7702 正迈向 200 万月活 21:14；EIP-2780：澄清与 EIP-7702 和 EIP-7928 的交互（gurukamath）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11332",
+      "date": "2026-04-22",
+      "title_en": "EIP-2780: clarify interactions with EIP-7702 and EIP-7928",
+      "note_en": "Lightclients: en route to 2M MAU of 7702, 21:14; EIP-2780: clarify interactions with EIP-7702 and EIP-7928 (gurukamath), merged.",
+      "topic_en": "Native AA: guarantors and the sighash in EIP-8141"
+    },
+    {
+      "topic": "隐私：EIP-8182 与 L2 隐私",
+      "title": "EIP-8182：用 ML-KEM-768 传递票据",
+      "note": "（RogerPodacter）提交并合并；同日另一项 EIP-8182 更新也提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11554",
+      "date": "2026-04-22",
+      "title_en": "EIP-8182: use ML-KEM-768 for note delivery",
+      "note_en": "(RogerPodacter), submitted and merged; another EIP-8182 update was also submitted and merged the same day.",
+      "topic_en": "Privacy: EIP-8182 and L2 privacy"
+    },
+    {
+      "topic": "隐私：EIP-8182 与 L2 隐私",
+      "title": "EIP-8182 更新",
+      "note": "EIP-8182：用 ML-KEM-768 传递票据（RogerPodacter）提交并合并；同日另一项 EIP-8182 更新也提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11556",
+      "date": "2026-04-22",
+      "title_en": "another EIP-8182 update",
+      "note_en": "EIP-8182: use ML-KEM-768 for note delivery (RogerPodacter), submitted and merged; another EIP-8182 update was also submitted and merged the same day.",
+      "topic_en": "Privacy: EIP-8182 and L2 privacy"
+    },
+    {
+      "topic": "隐私：EIP-8182 与 L2 隐私",
+      "title": "StarkWare：Starknet 已具备原生隐私基础设施，Shinobi 升级带来其历史上最大的应用机会",
+      "note": "21:51。",
+      "url": "https://x.com/StarkWareLtd/status/2046965133868695917",
+      "date": "2026-04-22",
+      "title_en": "StarkWare: Starknet now has the infrastructure for native privacy, and the Shinobi upgrade unlocks its biggest application opportunity",
+      "note_en": "21:51.",
+      "topic_en": "Privacy: EIP-8182 and L2 privacy"
+    },
+    {
+      "topic": "隐私：EIP-8182 与 L2 隐私",
+      "title": "aztecnetwork：Aztec Alpha 是唯一拥有真正无许可、去中心化排序器集合的 L2，并带有协议级隐私",
+      "note": "02:08。",
+      "url": "https://x.com/aztecnetwork/status/2046667347960779110",
+      "date": "2026-04-22",
+      "title_en": "aztecnetwork: Aztec Alpha is the only L2 with a real permissionless, decentralized sequencer set, plus protocol level privacy",
+      "note_en": "02:08.",
+      "topic_en": "Privacy: EIP-8182 and L2 privacy"
+    },
+    {
+      "topic": "后量子签名",
+      "title": "tcoratger：后量子签名体积巨大，威胁比特币吞吐量；结合有状态的效率与无状态的安全，介绍 SHRINCS",
+      "note": "04:33；以及 Blockstream 的 SHRIMPS，多台有状态设备上 2.5 KB 的后量子签名 01:45。",
+      "url": "https://x.com/tcoratger/status/2046704007993872724",
+      "date": "2026-04-22",
+      "title_en": "tcoratger: post-quantum signatures are massive and threaten Bitcoin throughput; SHRINCS combines stateful efficiency with stateless safety",
+      "note_en": "04:33; and Blockstream's SHRIMPS, 2.5 KB post-quantum signatures across multiple stateful devices, 01:45.",
+      "topic_en": "Post-quantum signatures"
+    },
+    {
+      "topic": "后量子签名",
+      "title": "以及 Blockstream 的 SHRIMPS，多台有状态设备上 2.5 KB 的后量子签名",
+      "note": "tcoratger：后量子签名体积巨大，威胁比特币吞吐量；结合有状态的效率与无状态的安全，介绍 SHRINCS 04:33；以及 Blockstream 的 SHRIMPS，多台有状态设备上 2.5 KB 的后量子签名 01:45。",
+      "url": "https://x.com/tcoratger/status/2046661553961771212",
+      "date": "2026-04-22",
+      "title_en": "and Blockstream's SHRIMPS, 2.5 KB post-quantum signatures across multiple stateful devices",
+      "note_en": "Tcoratger: post-quantum signatures are massive and threaten Bitcoin throughput; SHRINCS combines stateful efficiency with stateless safety, 04:33; and Blockstream's SHRIMPS, 2.5 KB post-quantum signatures across multiple stateful devices, 01:45.",
+      "topic_en": "Post-quantum signatures"
+    },
+    {
+      "topic": "后量子签名",
+      "title": "Post Quantum transaction signature（PQTS）Breakout #7 议程",
+      "note": "14:33。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-7/28316",
+      "date": "2026-04-22",
+      "title_en": "Post Quantum transaction signature (PQTS) Breakout #7 agenda",
+      "note_en": "14:33.",
+      "topic_en": "Post-quantum signatures"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8240 代理与资产的信任基础设施",
+      "note": "18:12；ERC：AI 代理认证钱包（Cybercentry）合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8240-trust-infrastructure-for-agents-and-assets/28322",
+      "date": "2026-04-22",
+      "title_en": "Magicians: ERC-8240 Trust Infrastructure for Agents and Assets",
+      "note_en": "18:12; ERC: AI Agent Authenticated Wallet (Cybercentry), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：AI 代理认证钱包",
+      "note": "Magicians：ERC-8240 代理与资产的信任基础设施 18:12；ERC：AI 代理认证钱包（Cybercentry）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1606",
+      "date": "2026-04-22",
+      "title_en": "ERC: AI Agent Authenticated Wallet",
+      "note_en": "Magicians: ERC-8240 Trust Infrastructure for Agents and Assets, 18:12; ERC: AI Agent Authenticated Wallet (Cybercentry), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：We for fun and profit",
+      "note": "02:04。",
+      "url": "https://ethresear.ch/t/we-for-fun-and-profit/24700",
+      "date": "2026-04-22",
+      "title_en": "ethresear.ch: We for fun and profit",
+      "note_en": "02:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zooko：Shielded Labs 与其他团队正在紧急保护用户并加强 Zcash 安全",
+      "note": "03:30。",
+      "url": "https://x.com/zooko/status/2046687953297289448",
+      "date": "2026-04-22",
+      "title_en": "zooko: Shielded Labs is working with others to urgently defend users and strengthen Zcash security",
+      "note_en": "03:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：所有区块链都应有通往后量子安全的清晰路径",
+      "note": "19:14。",
+      "url": "https://x.com/EliBenSasson/status/2046925628591468852",
+      "date": "2026-04-22",
+      "title_en": "EliBenSasson: all blockchains should have a clear path toward post-quantum security",
+      "note_en": "19:14.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11555",
+    "credit": "GitHub, ethereum/EIPs #11555 (derekchiang)",
+    "local_path": "assets/2026-04-22.jpg",
+    "credit_en": "GitHub, ethereum/EIPs #11555 (derekchiang)"
+  },
+  "keywords_en": [
+    "Native Account Abstraction #1",
+    "EIP-8141 guarantor draft",
+    "EIP-8141 sighash type mixing merged",
+    "EIP-8182 uses ML-KEM-768 for note delivery",
+    "EIP-7702 nearing 2M MAU",
+    "Starknet Shinobi native privacy",
+    "Bitcoin post-quantum signatures SHRINCS and SHRIMPS"
+  ],
+  "summary_en": "The first native account abstraction breakout took place. derekchiang submitted a guarantor draft for EIP-8141: a guarantor pays for the transaction even if sender validation fails, so mempool nodes do not need to check sender validation first; his change mixing the transaction type into the sighash was merged. RogerPodacter moved EIP-8182 to ML-KEM-768 for private note delivery, submitted and merged the same day. lightclient said EIP-7702 is heading toward 2 million MAU."
+}

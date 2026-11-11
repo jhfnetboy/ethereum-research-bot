@@ -1,0 +1,199 @@
+{
+  "date": "2026-04-14",
+  "keywords": [
+    "EF 推出以太坊审计补贴",
+    "ERC-8231 后量子密钥注册表",
+    "EIP-8188 记录账户与存储槽最后写入区块",
+    "Native Account Abstraction #1 议程",
+    "Scroll 决定引发 rollup 安全阶段争论",
+    "Kohaku 与后量子"
+  ],
+  "summary": "以太坊基金会与审计机构联合推出以太坊审计补贴，降低构建者的审计成本。Magicians 上提出 ERC-8231，为 NIST 标准化的后量子密钥定义链上注册、轮换、吊销与迁移接口。EIP-8188 讨论帖开设，为每个账户和存储槽记录最后写入的区块号，作为冷热状态分离的第一步。Native Account Abstraction 第一次分组会议议程发布。",
+  "items": [
+    {
+      "topic": "账户：后量子密钥与原生 AA 会议",
+      "title": "Magicians：ERC-8231 后量子密钥注册表",
+      "note": "16:42（Valisthea），为 ML-KEM（FIPS 203）、ML-DSA（FIPS 204）与 SLH-DSA（FIPS 205）定义链上注册、轮换、吊销与迁移的标准接口，并非要立即替换 secp256k1；对应 ERC PR 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8231-post-quantum-key-registry/28235",
+      "date": "2026-04-14",
+      "title_en": "Magicians: ERC-8231 Post-Quantum Key Registry",
+      "note_en": "16:42 (Valisthea), a standard interface for onchain registration, rotation, revocation and migration of ML-KEM (FIPS 203), ML-DSA (FIPS 204) and SLH-DSA (FIPS 205) keys, not an immediate replacement for secp256k1; the ERC PR was submitted.",
+      "topic_en": "Accounts: post-quantum keys and the native AA call"
+    },
+    {
+      "topic": "账户：后量子密钥与原生 AA 会议",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8231 后量子密钥注册表 16:42（Valisthea），为 ML-KEM（FIPS 203）、ML-DSA（FIPS 204）与 SLH-DSA（FIPS 205）定义链上注册、轮换、吊销与迁移的标准接口，并非要立即替换 secp256k1；对应 ERC PR 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1684",
+      "date": "2026-04-14",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8231 Post-Quantum Key Registry, 16:42 (Valisthea), a standard interface for onchain registration, rotation, revocation and migration of ML-KEM (FIPS 203), ML-DSA (FIPS 204) and SLH-DSA (FIPS 205) keys, not an immediate replacement for secp256k1; the ERC PR was submitted.",
+      "topic_en": "Accounts: post-quantum keys and the native AA call"
+    },
+    {
+      "topic": "账户：后量子密钥与原生 AA 会议",
+      "title": "Native Account Abstraction #1 议程",
+      "note": "02:24，会议定于 4 月 22 日。",
+      "url": "https://ethereum-magicians.org/t/native-account-abstraction-1-april-22-2026/28227",
+      "date": "2026-04-14",
+      "title_en": "Native Account Abstraction #1 agenda",
+      "note_en": "02:24, with the call set for April 22.",
+      "topic_en": "Accounts: post-quantum keys and the native AA call"
+    },
+    {
+      "topic": "账户：后量子密钥与原生 AA 会议",
+      "title": "EIP-8130：修正哨兵地址",
+      "note": "（chunter-cb）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11492",
+      "date": "2026-04-14",
+      "title_en": "EIP-8130: fix sentinel addresses",
+      "note_en": "(chunter-cb), merged.",
+      "topic_en": "Accounts: post-quantum keys and the native AA call"
+    },
+    {
+      "topic": "账户：后量子密钥与原生 AA 会议",
+      "title": "binji_x：正在准备解释 Kohaku 与后量子以太坊",
+      "note": "17:02。",
+      "url": "https://x.com/binji_x/status/2043993177963565299",
+      "date": "2026-04-14",
+      "title_en": "binji_x: preparing to explain Kohaku and post-quantum Ethereum",
+      "note_en": "17:02.",
+      "topic_en": "Accounts: post-quantum keys and the native AA call"
+    },
+    {
+      "topic": "状态与 gas：EIP-8188",
+      "title": "Magicians：EIP-8188 账户与存储槽的最后写入区块",
+      "note": "14:21（weiihann），为每个账户和存储槽记录最后一次写入的区块号，作为冷热状态分离的第一步。",
+      "url": "https://ethereum-magicians.org/t/eip8188-last-written-block-for-accounts-and-slots/28234",
+      "date": "2026-04-14",
+      "title_en": "Magicians: EIP-8188 Last-Written Block for Accounts and Slots",
+      "note_en": "14:21 (weiihann), recording the block number of the last write to every account and storage slot, a first step toward hot and cold state separation.",
+      "topic_en": "State and gas: EIP-8188"
+    },
+    {
+      "topic": "状态与 gas：EIP-8188",
+      "title": "EIP-8037：澄清溢出的状态 gas 计入状态 gas",
+      "note": "（qu0b）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11522",
+      "date": "2026-04-14",
+      "title_en": "EIP-8037: clarify that spillover state gas counts as state gas",
+      "note_en": "(qu0b), merged.",
+      "topic_en": "State and gas: EIP-8188"
+    },
+    {
+      "topic": "安全",
+      "title": "ethereumfndn：以太坊审计补贴，与审计机构联合补贴以太坊构建者的审计费用；安全审计是最佳实践但价格昂贵",
+      "note": "22:13。",
+      "url": "https://x.com/ethereumfndn/status/2044071448663244931",
+      "date": "2026-04-14",
+      "title_en": "ethereumfndn: the Ethereum Audit Subsidy, a joint initiative with audit providers to subsidize audit costs for Ethereum builders; audits are best practice but expensive",
+      "note_en": "22:13.",
+      "topic_en": "Security"
+    },
+    {
+      "topic": "安全",
+      "title": "hasufl：Scroll 的这一决定虽然挨骂，但显然是正确的，用户很少、尚未找到产品市场契合的创业项目不需要 Stage 1 或 Stage 2 rollup",
+      "note": "15:06；bkiepuszewski：在 Stage 1 系统中，即时升级的能力不再掌握在核心团队手中 02:11。",
+      "url": "https://x.com/hasufl/status/2043964160812142598",
+      "date": "2026-04-14",
+      "title_en": "hasufl: despite the backlash, Scroll's decision is obviously correct, since a pre product market fit startup with few users doesn't need a Stage 1 or Stage 2 rollup",
+      "note_en": "15:06; bkiepuszewski: in Stage 1 systems the ability to instantly upgrade is no longer in the core team's hands, 02:11.",
+      "topic_en": "Security"
+    },
+    {
+      "topic": "安全",
+      "title": "bkiepuszewski：在 Stage 1 系统中，即时升级的能力不再掌握在核心团队手中",
+      "note": "hasufl：Scroll 的这一决定虽然挨骂，但显然是正确的，用户很少、尚未找到产品市场契合的创业项目不需要 Stage 1 或 Stage 2 rollup 15:06；bkiepuszewski：在 Stage 1 系统中，即时升级的能力不再掌握在核心团队手中 02:11。",
+      "url": "https://x.com/bkiepuszewski/status/2043768956972826663",
+      "date": "2026-04-14",
+      "title_en": "bkiepuszewski: in Stage 1 systems the ability to instantly upgrade is no longer in the core team's hands",
+      "note_en": "Hasufl: despite the backlash, Scroll's decision is obviously correct, since a pre product market fit startup with few users doesn't need a Stage 1 or Stage 2 rollup, 15:06; bkiepuszewski: in Stage 1 systems the ability to instantly upgrade is no longer in the core team's hands, 02:11.",
+      "topic_en": "Security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #78 议程",
+      "note": "05:02。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-78-april-20-2026/28229",
+      "date": "2026-04-14",
+      "title_en": "ACDT #78 agenda",
+      "note_en": "05:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8232 代表型 RWA 的链上代理",
+      "note": "22:01。",
+      "url": "https://ethereum-magicians.org/t/erc-8232-onchain-agency-for-represented-rwas/28240",
+      "date": "2026-04-14",
+      "title_en": "Magicians: ERC-8232 Onchain Agency for Represented RWAs",
+      "note_en": "22:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7945 移至 Review",
+      "note": "ERC 状态变更合并：ERC-7945 移至 Review、ERC-8167 移至 Review；ERC-7730 修正不一致（manuelwedler）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1607",
+      "date": "2026-04-14",
+      "title_en": "ERC-7945 to Review",
+      "note_en": "ERC status changes merged: ERC-7945 to Review and ERC-8167 to Review; ERC-7730 inconsistency fixes (manuelwedler), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8167 移至 Review",
+      "note": "ERC 状态变更合并：ERC-7945 移至 Review、ERC-8167 移至 Review；ERC-7730 修正不一致（manuelwedler）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1610",
+      "date": "2026-04-14",
+      "title_en": "ERC-8167 to Review",
+      "note_en": "ERC status changes merged: ERC-7945 to Review and ERC-8167 to Review; ERC-7730 inconsistency fixes (manuelwedler), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730 修正不一致",
+      "note": "ERC 状态变更合并：ERC-7945 移至 Review、ERC-8167 移至 Review；ERC-7730 修正不一致（manuelwedler）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1623",
+      "date": "2026-04-14",
+      "title_en": "ERC-7730 inconsistency fixes",
+      "note_en": "ERC status changes merged: ERC-7945 to Review and ERC-8167 to Review; ERC-7730 inconsistency fixes (manuelwedler), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：Lean 运行时中发现并修复整数溢出 bug，AI 把 zlib 重写成 Lean 并得到证明正确的实现",
+      "note": "02:37。",
+      "url": "https://x.com/zooko/status/2043775479019397142",
+      "date": "2026-04-14",
+      "title_en": "zooko: an integer overflow bug was found and fixed in the Lean runtime, and an AI rewrote zlib into Lean with a proven correct implementation",
+      "note_en": "02:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：ZK-STARK 是后量子安全的，区块链应为量子时代做准备",
+      "note": "19:15。",
+      "url": "https://x.com/EliBenSasson/status/2044026821566480682",
+      "date": "2026-04-14",
+      "title_en": "EliBenSasson: ZK-STARKs are post-quantum secure and blockchains should prepare for the quantum era",
+      "note_en": "19:15.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/ethereumfndn/status/2044071448663244931",
+    "credit": "X, @ethereumfndn",
+    "local_path": "assets/2026-04-14.jpg",
+    "credit_en": "X, @ethereumfndn"
+  },
+  "keywords_en": [
+    "EF launches the Ethereum Audit Subsidy",
+    "ERC-8231 Post-Quantum Key Registry",
+    "EIP-8188 records the last written block for accounts and slots",
+    "Native Account Abstraction #1 agenda",
+    "Scroll decision sparks a rollup stage debate",
+    "Kohaku and post-quantum"
+  ],
+  "summary_en": "The Ethereum Foundation and audit providers launched the Ethereum Audit Subsidy to lower audit costs for builders. ERC-8231 was proposed on Magicians, defining onchain registration, rotation, revocation and migration of NIST standardized post-quantum keys. A discussion thread opened for EIP-8188, which records the block number of the last write to every account and storage slot as a first step toward hot and cold state separation. The agenda for the first Native Account Abstraction breakout was posted."
+}

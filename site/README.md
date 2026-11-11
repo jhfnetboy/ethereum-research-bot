@@ -54,7 +54,7 @@
 - `keywords` / `keywords_en` 建议 3 到 5 个，首页卡片会显示，详情页标题会同时带两种语言的日期和前 3 个关键词。
 - `summary` / `summary_en` 是卡片上的关键信息，也用作各语言页面的 meta description 和 Open Graph 描述。
 - `url` 和 `date` 只有一份，两种语言共用，保证链接和日期完全一致。
-- `image` 可省略。没有配图时，构建脚本用简洁占位样式，不会编造或生成假图。
+- `image` 可省略。没有配图，或 `local_path` 指向的文件不存在时，构建脚本统一兜底为站点默认图 `assets/default.jpg`（品牌图，不冒充新闻配图），配图来源显示为“默认配图”。
 - `image.local_path` 相对站点根目录，通常是 `assets/` 下的文件。
 - `image.source_url` 和 `image.credit` 必须记录真实出处。
 - `items` 会按 `topic`（英文页按 `topic_en`）分组出现在详情页。

@@ -1,0 +1,179 @@
+{
+  "date": "2026-04-15",
+  "keywords": [
+    "EIP-7976 明确 calldata 下限为每字节 64 gas",
+    "EIP-8141 规范收紧合并",
+    "钱包隐私 paymaster 能力草案",
+    "L2 费用金库反馈控制",
+    "CowSwap 前端被入侵",
+    "提款凭证预注册 EIP 合并"
+  ],
+  "summary": "nerolation 澄清 EIP-7976 与 EIP-7981，把下限成本明确为每个 calldata 或访问列表字节 64 gas，当天提交并合并。benaadams 的 EIP-8141 规范收紧合并。Magicians 上出现基于 EIP-5792 的钱包隐私 paymaster 能力草案。koeppelmann 就 CowSwap 前端被入侵表态，认为用户进入恶意界面的事情还会继续发生。",
+  "items": [
+    {
+      "topic": "交易与 gas：EIP-7976 与 EIP-7981",
+      "title": "EIP-7976：澄清 token 抽象",
+      "note": "（nerolation）提交并合并：把 EIP-7976 与 EIP-7981 的下限成本明确为每个 calldata 或访问列表字节 64 gas（每个地址 1280 gas，每个存储键 2048 gas），token 抽象仅为与 EIP-7623 保持一致而保留。",
+      "url": "https://github.com/ethereum/EIPs/pull/11525",
+      "date": "2026-04-15",
+      "title_en": "EIP-7976: clarify token abstraction",
+      "note_en": "(nerolation), submitted and merged: the floor cost in EIP-7976 and EIP-7981 is stated as 64 gas per calldata or access list byte (1280 gas per address, 2048 gas per storage key), with the token abstraction kept only for consistency with EIP-7623.",
+      "topic_en": "Transactions and gas: EIP-7976 and EIP-7981"
+    },
+    {
+      "topic": "交易与 gas：EIP-7976 与 EIP-7981",
+      "title": "ethresear.ch：L2 费用金库，用反馈控制为 L1 成本定价",
+      "note": "19:00（linoscope，Nethermind Research 与伯尔尼大学）。",
+      "url": "https://ethresear.ch/t/the-l2-fee-vault-pricing-l1-costs-with-feedback-control/24656",
+      "date": "2026-04-15",
+      "title_en": "ethresear.ch: The L2 Fee Vault, pricing L1 costs with feedback control",
+      "note_en": "19:00 (linoscope, Nethermind Research and the University of Bern).",
+      "topic_en": "Transactions and gas: EIP-7976 and EIP-7981"
+    },
+    {
+      "topic": "原生 AA 与钱包隐私",
+      "title": "EIP-8141：收紧规范",
+      "note": "（benaadams）合并，该 PR 于 4 月 13 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11521",
+      "date": "2026-04-15",
+      "title_en": "EIP-8141: tighten spec",
+      "note_en": "(benaadams), merged; the PR was submitted on April 13.",
+      "topic_en": "Native AA and wallet privacy"
+    },
+    {
+      "topic": "原生 AA 与钱包隐私",
+      "title": "Magicians：钱包隐私 paymaster 能力草案",
+      "note": "22:31（karandeep），基于 EIP-5792 能力机制，让应用请求兼容钱包用用户控制的、保护隐私的 paymaster 支付 gas。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-wallet-privacy-paymaster-capability/28255",
+      "date": "2026-04-15",
+      "title_en": "Magicians: draft ERC for a wallet privacy paymaster capability",
+      "note_en": "22:31 (karandeep), using EIP-5792 capabilities so apps can ask compatible wallets to fund gas through a user controlled, privacy preserving paymaster.",
+      "topic_en": "Native AA and wallet privacy"
+    },
+    {
+      "topic": "安全",
+      "title": "koeppelmann：不回避 CowSwap 界面被入侵的责任，但用户进入恶意界面的事情还会继续发生，无论是社交账号被盗、恶意 Google 广告还是 DNS 攻击",
+      "note": "19:09。",
+      "url": "https://x.com/koeppelmann/status/2044387754562203787",
+      "date": "2026-04-15",
+      "title_en": "koeppelmann: not dodging blame for the CowSwap interface compromise, but users ending up on malicious interfaces will keep happening, whether via hacked social accounts, malicious Google ads or DNS attacks",
+      "note_en": "19:09.",
+      "topic_en": "Security"
+    },
+    {
+      "topic": "安全",
+      "title": "LefterisJP：“他们知道他钱包里的确切金额”，问题在于数据泄露，每个中心化追踪器和仪表盘都是风险",
+      "note": "16:15。",
+      "url": "https://x.com/LefterisJP/status/2044343936081101113",
+      "date": "2026-04-15",
+      "title_en": "LefterisJP: \"they knew the exact amount in his wallet\"; the real story is leaked data, and every centralized tracker and dashboard is a risk",
+      "note_en": "16:15.",
+      "topic_en": "Security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "升级命名规范",
+      "note": "EIP 合并：升级命名规范（poojaranjan）、提款凭证预注册（avsetsin）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11161",
+      "date": "2026-04-15",
+      "title_en": "Upgrade Nomenclature",
+      "note_en": "EIPs merged: Upgrade Nomenclature (poojaranjan) and Withdrawal credentials preregistration (avsetsin).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "提款凭证预注册",
+      "note": "EIP 合并：升级命名规范（poojaranjan）、提款凭证预注册（avsetsin）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11450",
+      "date": "2026-04-15",
+      "title_en": "Withdrawal credentials preregistration",
+      "note_en": "EIPs merged: Upgrade Nomenclature (poojaranjan) and Withdrawal credentials preregistration (avsetsin).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8233 Warden 安全代币托管合约",
+      "note": "18:08；让 ERC-7540 可同质化 20:04。",
+      "url": "https://ethereum-magicians.org/t/erc-8233-warden-secure-token-custody-contract/28252",
+      "date": "2026-04-15",
+      "title_en": "Magicians: ERC-8233 Warden secure token custody contract",
+      "note_en": "18:08; Making 7540 Fungible, 20:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "让 ERC-7540 可同质化",
+      "note": "Magicians：ERC-8233 Warden 安全代币托管合约 18:08；让 ERC-7540 可同质化 20:04。",
+      "url": "https://ethereum-magicians.org/t/making-7540-fungible/28253",
+      "date": "2026-04-15",
+      "title_en": "Making 7540 Fungible",
+      "note_en": "Magicians: ERC-8233 Warden secure token custody contract, 18:08; Making 7540 Fungible, 20:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8126 移至 Review",
+      "note": "ERC 合并：ERC-8126 移至 Review、ERC-8161 移至 Review、ERC-8048 AI 代理 NFT 元数据示例（nxt3d，提交并合并）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1608",
+      "date": "2026-04-15",
+      "title_en": "ERC-8126 to Review",
+      "note_en": "ERCs merged: ERC-8126 to Review, ERC-8161 to Review, and an ERC-8048 AI agent NFT metadata example (nxt3d, submitted and merged).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8161 移至 Review",
+      "note": "ERC 合并：ERC-8126 移至 Review、ERC-8161 移至 Review、ERC-8048 AI 代理 NFT 元数据示例（nxt3d，提交并合并）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1660",
+      "date": "2026-04-15",
+      "title_en": "ERC-8161 to Review",
+      "note_en": "ERCs merged: ERC-8126 to Review, ERC-8161 to Review, and an ERC-8048 AI agent NFT metadata example (nxt3d, submitted and merged).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048 AI 代理 NFT 元数据示例",
+      "note": "ERC 合并：ERC-8126 移至 Review、ERC-8161 移至 Review、ERC-8048 AI 代理 NFT 元数据示例（nxt3d，提交并合并）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1686",
+      "date": "2026-04-15",
+      "title_en": "an ERC-8048 AI agent NFT metadata example",
+      "note_en": "ERCs merged: ERC-8126 to Review, ERC-8161 to Review, and an ERC-8048 AI agent NFT metadata example (nxt3d, submitted and merged).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "raulvk：在代理式编程时代，(A)GPL 许可证还有意义吗",
+      "note": "22:00。",
+      "url": "https://x.com/raulvk/status/2044430698774212868",
+      "date": "2026-04-15",
+      "title_en": "raulvk: do (A)GPL licenses still make sense in the age of agentic coding?",
+      "note_en": "22:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：可扩展、透明、后量子安全的计算完整性，自 2018 年起",
+      "note": "16:32。",
+      "url": "https://x.com/StarkWareLtd/status/2044348063465062902",
+      "date": "2026-04-15",
+      "title_en": "StarkWare: scalable, transparent, post-quantum secure computational integrity, since 2018",
+      "note_en": "16:32.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/the-l2-fee-vault-pricing-l1-costs-with-feedback-control/24656",
+    "credit": "ethresear.ch, The L2 Fee Vault: Pricing L1 Costs with Feedback Control (linoscope)",
+    "local_path": "assets/2026-04-15.jpg",
+    "credit_en": "ethresear.ch, The L2 Fee Vault: Pricing L1 Costs with Feedback Control (linoscope)"
+  },
+  "keywords_en": [
+    "EIP-7976 makes the calldata floor explicit at 64 gas per byte",
+    "EIP-8141 spec tightening merged",
+    "draft wallet privacy paymaster capability",
+    "L2 fee vault with feedback control",
+    "CowSwap interface compromise",
+    "withdrawal credentials preregistration EIP merged"
+  ],
+  "summary_en": "nerolation clarified EIP-7976 and EIP-7981 by making the floor cost explicit at 64 gas per calldata or access list byte, submitted and merged the same day. benaadams's EIP-8141 spec tightening was merged. A draft wallet privacy paymaster capability built on EIP-5792 appeared on Magicians. koeppelmann addressed the CowSwap interface compromise, saying users landing on malicious interfaces will keep happening."
+}

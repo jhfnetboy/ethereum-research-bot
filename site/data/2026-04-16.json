@@ -1,0 +1,189 @@
+{
+  "date": "2026-04-16",
+  "keywords": [
+    "Frame 交易与隐私的三道门",
+    "EIP-7701 提议撤回并由 EIP-8141 取代",
+    "Tempo Zones 隐私测试网",
+    "EIP-8037 依重定价会议结论调整状态 gas 记账",
+    "EIP-8142 BiB 模块化",
+    "比特币 BIP-361"
+  ],
+  "summary": "nero_eth 在 ethresear.ch 分析 frame 交易（EIP-8141）如何让隐私协议不再依赖中继，以及公共内存池准入、FOCIL 执行和无状态路线这三道“门”在哪里冲突。forshtat 提交把 EIP-7701 移至 Withdrawn 的 PR，撤回原因是被 EIP-8141 取代。gakonst 宣布 Tempo Zones 上线测试网，每个 zone 都是私密的。",
+  "items": [
+    {
+      "topic": "隐私与原生 AA：frame 交易的三道门",
+      "title": "ethresear.ch：Frame 交易与隐私的三道门",
+      "note": "20:06（Nero_eth）：以 EIP-8141 为前提，说明 frame 交易有望消除隐私协议对中继的依赖，因为 Tornado Cash、Railgun 这类协议的取款地址是新地址、没有 ETH 支付 gas，今天只能依赖中心化、可审查的中继；但公共内存池准入规则、FOCIL 执行与无状态路线各自划定了支持哪些交易的边界，文章分析这些边界在隐私交易上的交叉与冲突。",
+      "url": "https://ethresear.ch/t/frame-transactions-and-the-three-gates-to-privacy/24666",
+      "date": "2026-04-16",
+      "title_en": "ethresear.ch: Frame Transactions and the Three Gates to Privacy",
+      "note_en": "20:06 (Nero_eth): taking EIP-8141 as given, it shows frame transactions could eliminate relayers from privacy protocols, since withdrawers from protocols like Tornado Cash and Railgun use fresh addresses with no ETH for gas and today rely on centralized, censorable relayers; but public mempool admission rules, FOCIL enforcement and the statelessness roadmap each draw different boundaries around supported transactions, and the post maps where they intersect and conflict for privacy transactions.",
+      "topic_en": "Privacy and native AA: the three gates for frame transactions"
+    },
+    {
+      "topic": "隐私与原生 AA：frame 交易的三道门",
+      "title": "EIP-7701：移至 Withdrawn",
+      "note": "（forshtat）提交，撤回原因写明“被 EIP-8141 取代”。",
+      "url": "https://github.com/ethereum/EIPs/pull/11528",
+      "date": "2026-04-16",
+      "title_en": "EIP-7701: move to Withdrawn",
+      "note_en": "(forshtat), submitted, with the withdrawal reason \"Superseded by EIP-8141\".",
+      "topic_en": "Privacy and native AA: the three gates for frame transactions"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 与 BiB",
+      "title": "EIP-8037：更多状态 gas 记账修改",
+      "note": "（spencer-tb）提交：依据当天 gas 重定价会议的结论，以及 misilva73 的状态 gas 记账审查澄清规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/11532",
+      "date": "2026-04-16",
+      "title_en": "EIP-8037: more state gas accounting changes",
+      "note_en": "(spencer-tb), submitted: clarifies the rules based on outcomes from the day's gas repricings call and misilva73's state gas accounting review.",
+      "topic_en": "Transactions and gas: EIP-8037 and BiB"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 与 BiB",
+      "title": "EIP-8142：让 BiB 模块化",
+      "note": "（jihoonsong）提交，使 Block-in-Blobs 更精确并与其他 zkEVM 功能前向兼容。",
+      "url": "https://github.com/ethereum/EIPs/pull/11530",
+      "date": "2026-04-16",
+      "title_en": "EIP-8142: make BiB modular",
+      "note_en": "(jihoonsong), submitted, making Block-in-Blobs more precise and forward compatible with other zkEVM features.",
+      "topic_en": "Transactions and gas: EIP-8037 and BiB"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 与 BiB",
+      "title": "EIP-7708：澄清非零余额的销毁日志",
+      "note": "（chfast）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11527",
+      "date": "2026-04-16",
+      "title_en": "EIP-7708: clarify burn log emission for non-zero balances",
+      "note_en": "(chfast), submitted and merged.",
+      "topic_en": "Transactions and gas: EIP-8037 and BiB"
+    },
+    {
+      "topic": "隐私落地",
+      "title": "gakonst：Tempo Zones 上线 Tempo 测试网，每个 zone 都私密、快速且彼此互通，支持用于私密代理支付的 MPP，并已集成进 Tempo Wallet",
+      "note": "21:29；dankrad：隐私即将来到 Tempo 20:34。",
+      "url": "https://x.com/gakonst/status/2044785361348428107",
+      "date": "2026-04-16",
+      "title_en": "gakonst: Tempo Zones launched on the Tempo testnet; every zone is private, fast and interoperable, supports MPP for private agentic payments and is integrated in Tempo Wallet",
+      "note_en": "21:29; dankrad: privacy is coming to Tempo, 20:34.",
+      "topic_en": "Privacy in practice"
+    },
+    {
+      "topic": "隐私落地",
+      "title": "dankrad：隐私即将来到 Tempo",
+      "note": "gakonst：Tempo Zones 上线 Tempo 测试网，每个 zone 都私密、快速且彼此互通，支持用于私密代理支付的 MPP，并已集成进 Tempo Wallet 21:29；dankrad：隐私即将来到 Tempo 20:34。",
+      "url": "https://x.com/dankrad/status/2044771332374630437",
+      "date": "2026-04-16",
+      "title_en": "dankrad: privacy is coming to Tempo",
+      "note_en": "Gakonst: Tempo Zones launched on the Tempo testnet; every zone is private, fast and interoperable, supports MPP for private agentic payments and is integrated in Tempo Wallet, 21:29; dankrad: privacy is coming to Tempo, 20:34.",
+      "topic_en": "Privacy in practice"
+    },
+    {
+      "topic": "隐私落地",
+      "title": "fede_intern：把 L1 gas limit 大幅提高、尽快转向 lean Ethereum、用多个 ZK 实现证明 L1，并加入隐私",
+      "note": "19:56。",
+      "url": "https://x.com/fede_intern/status/2044761745147805950",
+      "date": "2026-04-16",
+      "title_en": "fede_intern: raise the L1 gas limit dramatically, move to lean Ethereum soon, prove the L1 with multiple ZK implementations and add privacy",
+      "note_en": "19:56.",
+      "topic_en": "Privacy in practice"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8130：把 from 改为 sender",
+      "note": "（chunter-cb）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11526",
+      "date": "2026-04-16",
+      "title_en": "EIP-8130: move from to sender",
+      "note_en": "(chunter-cb), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：在去重与压缩之外再减少 30% 的合约代码存储",
+      "note": "02:12。",
+      "url": "https://ethresear.ch/t/30-reduction-in-stored-contract-code-size-beyond-deduplication-and-compression/24659",
+      "date": "2026-04-16",
+      "title_en": "ethresear.ch: 30% reduction in stored contract code size beyond deduplication and compression",
+      "note_en": "02:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7943：移至 Final",
+      "note": "（xaler5）提交；EIP-8070 标题加上 eth/72 协议版本前缀（barnabasbusa）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1690",
+      "date": "2026-04-16",
+      "title_en": "ERC-7943: move to Final",
+      "note_en": "(xaler5), submitted; EIP-8070: prefix the title with the eth/72 protocol version (barnabasbusa), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8070 标题加上 eth/72 协议版本前缀",
+      "note": "ERC-7943：移至 Final（xaler5）提交；EIP-8070 标题加上 eth/72 协议版本前缀（barnabasbusa）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11531",
+      "date": "2026-04-16",
+      "title_en": "EIP-8070: prefix the title with the eth/72 protocol version",
+      "note_en": "ERC-7943: move to Final (xaler5), submitted; EIP-8070: prefix the title with the eth/72 protocol version (barnabasbusa), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger：比特币 BIP-361，后量子迁移与旧签名退役",
+      "note": "04:32；PQ Interop #36 议程 22:38。",
+      "url": "https://x.com/tcoratger/status/2044529305095385092",
+      "date": "2026-04-16",
+      "title_en": "tcoratger: Bitcoin BIP-361, post-quantum migration and legacy signature sunset",
+      "note_en": "04:32; PQ Interop #36 agenda, 22:38.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #36 议程",
+      "note": "tcoratger：比特币 BIP-361，后量子迁移与旧签名退役 04:32；PQ Interop #36 议程 22:38。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-36-apr-22-2026/28262",
+      "date": "2026-04-16",
+      "title_en": "PQ Interop #36 agenda",
+      "note_en": "Tcoratger: Bitcoin BIP-361, post-quantum migration and legacy signature sunset, 04:32; PQ Interop #36 agenda, 22:38.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：无论量子计算机 2029 年到来还是几十年后，单是潜在威胁就足以让人恐慌",
+      "note": "18:49。",
+      "url": "https://x.com/EliBenSasson/status/2044744925267312924",
+      "date": "2026-04-16",
+      "title_en": "EliBenSasson: whether quantum computers arrive in 2029 or decades later, the potential alone will scare people",
+      "note_en": "18:49.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano_：100 万美元 QF 轮申请截止提醒",
+      "note": "01:29。",
+      "url": "https://x.com/tayvano_/status/2044483298274238480",
+      "date": "2026-04-16",
+      "title_en": "tayvano_: deadline reminder for the $1M QF round",
+      "note_en": "01:29.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/frame-transactions-and-the-three-gates-to-privacy/24666",
+    "credit": "ethresear.ch, Frame Transactions and the Three Gates to Privacy (Nero_eth)",
+    "local_path": "assets/2026-04-16.jpg",
+    "credit_en": "ethresear.ch, Frame Transactions and the Three Gates to Privacy (Nero_eth)"
+  },
+  "keywords_en": [
+    "frame transactions and the three gates to privacy",
+    "EIP-7701 proposed for withdrawal as superseded by EIP-8141",
+    "Tempo Zones private testnet",
+    "EIP-8037 state gas accounting updated after the repricing call",
+    "EIP-8142 BiB made modular",
+    "Bitcoin BIP-361"
+  ],
+  "summary_en": "On ethresear.ch, nero_eth analyzed how frame transactions (EIP-8141) could free privacy protocols from relayers, and where three \"gates\" (public mempool admission, FOCIL enforcement and the statelessness roadmap) conflict. forshtat submitted a PR moving EIP-7701 to Withdrawn, with the reason given as superseded by EIP-8141. gakonst announced Tempo Zones on testnet, with every zone private."
+}

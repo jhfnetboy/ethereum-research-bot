@@ -1,0 +1,201 @@
+{
+  "date": "2026-05-06",
+  "keywords": [
+    "EIP-8141 对 frame 交易禁用 EIP-3607 检查",
+    "加密敏捷交易 EIP 合并",
+    "EIP-8130 创建条目防重放",
+    "EIP-8037 修复 bal-devnet-6 发现的问题",
+    "EIP-8254 限制每块存款请求",
+    "ERC-8255 自动过期授权",
+    "Vitalik 谈预测市场预言机"
+  ],
+  "summary": "两项长期 PR 合并：EIP-8141 对 frame 交易禁用 EIP-3607 检查，以及 shemnon 的加密敏捷交易（CATX）EIP，把交易体与签名分离以便迁移后量子签名。pochenai 收紧 EIP-8130 创建条目校验，misilva73 修复 bal-devnet-6 暴露的 EIP-8037 问题。moodysalem 提出会自动过期的 ERC-20 授权。",
+  "items": [
+    {
+      "topic": "原生 AA 与签名",
+      "title": "EIP-8141：对 frame 交易禁用 EIP-3607 检查",
+      "note": "（Thegaram）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11272",
+      "date": "2026-05-06",
+      "title_en": "EIP-8141: disable the EIP-3607 check for frame transactions",
+      "note_en": "(Thegaram), merged.",
+      "topic_en": "Native AA and signatures"
+    },
+    {
+      "topic": "原生 AA 与签名",
+      "title": "新增 EIP：加密敏捷交易",
+      "note": "（shemnon）合并：CATX 用扁平结构把交易体与签名分开，签名按位置承诺以防密钥替换，尾部签名可剥离以支持 ZK 签名聚合，迁移后量子签名不必改交易语义。",
+      "url": "https://github.com/ethereum/EIPs/pull/11413",
+      "date": "2026-05-06",
+      "title_en": "Add EIP: Cryptographically Agile Transactions",
+      "note_en": "(shemnon), merged: CATX uses a flat structure that separates the body from signatures, commits signatures by position to prevent key substitution and lets trailing signatures be stripped for ZK aggregation, so post-quantum migration does not change transaction semantics.",
+      "topic_en": "Native AA and signatures"
+    },
+    {
+      "topic": "原生 AA 与签名",
+      "title": "EIP-8130：创建条目增加已有账户与代码大小检查",
+      "note": "（pochenai）提交：除 code_size(from) == 0 外，还要求 nonce(from) == 0 且无既有 owner_config，防止创建条目被重放到反事实地址上已有交易记录的 EOA。",
+      "url": "https://github.com/ethereum/EIPs/pull/11609",
+      "date": "2026-05-06",
+      "title_en": "EIP-8130: add create entry existing account and code size guards",
+      "note_en": "(pochenai), submitted: besides code_size(from) == 0, it now requires nonce(from) == 0 and no existing owner_config, so a create entry cannot be replayed against an EOA with history at the counterfactual address.",
+      "topic_en": "Native AA and signatures"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：修复 bal-devnet-6 发现的问题",
+      "note": "（misilva73）提交：如合约创建交易回滚时退还新账户部分的固有状态 gas；EIP-8037：澄清 SELFDESTRUCT 收费（misilva73）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11611",
+      "date": "2026-05-06",
+      "title_en": "EIP-8037: fix bugs from bal-devnet-6",
+      "note_en": "(misilva73), submitted: for example refunding the new account part of intrinsic state gas when a contract creation transaction reverts; EIP-8037: clarify SELFDESTRUCT charges (misilva73), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：澄清 SELFDESTRUCT 收费",
+      "note": "EIP-8037：修复 bal-devnet-6 发现的问题（misilva73）提交：如合约创建交易回滚时退还新账户部分的固有状态 gas；EIP-8037：澄清 SELFDESTRUCT 收费（misilva73）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11606",
+      "date": "2026-05-06",
+      "title_en": "EIP-8037: clarify SELFDESTRUCT charges",
+      "note_en": "EIP-8037: fix bugs from bal-devnet-6 (misilva73), submitted: for example refunding the new account part of intrinsic state gas when a contract creation transaction reverts; EIP-8037: clarify SELFDESTRUCT charges (misilva73), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "新增 EIP：限制每块存款请求数",
+      "note": "（barnabasbusa）提交；Magicians：EIP-8254 16:06。",
+      "url": "https://github.com/ethereum/EIPs/pull/11607",
+      "date": "2026-05-06",
+      "title_en": "Add EIP: Cap Deposit Requests Per Block",
+      "note_en": "(barnabasbusa), submitted; Magicians: EIP-8254, 16:06.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "Magicians：EIP-8254",
+      "note": "新增 EIP：限制每块存款请求数（barnabasbusa）提交；Magicians：EIP-8254 16:06。",
+      "url": "https://ethereum-magicians.org/t/eip-8254-cap-deposit-requests-per-block/28453",
+      "date": "2026-05-06",
+      "title_en": "Magicians: EIP-8254",
+      "note_en": "Add EIP: Cap Deposit Requests Per Block (barnabasbusa), submitted; Magicians: EIP-8254, 16:06.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "新增 EIP：升级 pre-Spurious-Dragon 账户",
+      "note": "（jochem-brouwer）提交；EIP-8246：移除 SELFDESTRUCT 销毁（chfast）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11605",
+      "date": "2026-05-06",
+      "title_en": "Add EIP: Upgrade pre-Spurious-Dragon accounts",
+      "note_en": "(jochem-brouwer), submitted; EIP-8246: Remove SELFDESTRUCT Burn (chfast), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8246：移除 SELFDESTRUCT 销毁",
+      "note": "新增 EIP：升级 pre-Spurious-Dragon 账户（jochem-brouwer）提交；EIP-8246：移除 SELFDESTRUCT 销毁（chfast）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11590",
+      "date": "2026-05-06",
+      "title_en": "EIP-8246: Remove SELFDESTRUCT Burn",
+      "note_en": "Add EIP: Upgrade pre-Spurious-Dragon accounts (jochem-brouwer), submitted; EIP-8246: Remove SELFDESTRUCT Burn (chfast), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "授权安全",
+      "title": "新增 ERC-8255：会过期的代币授权",
+      "note": "（moodysalem）提交：为 ERC-20 授权加入过期时间，默认授权在代币定义的时长后失效。",
+      "url": "https://github.com/ethereum/ERCs/pull/1721",
+      "date": "2026-05-06",
+      "title_en": "Add ERC-8255: Expiring Token Approvals",
+      "note_en": "(moodysalem), submitted: adds an expiration to ERC-20 allowances, so default approvals lapse after a token defined duration.",
+      "topic_en": "Approval safety"
+    },
+    {
+      "topic": "其他动态",
+      "title": "VitalikButerin：很高兴看到预测市场开始转向既不中心化也不金融化的预言机，下一步是让 attester 投票私密",
+      "note": "11:46。",
+      "url": "https://x.com/VitalikButerin/status/2051886296528757241",
+      "date": "2026-05-06",
+      "title_en": "VitalikButerin: glad prediction markets are moving to oracles that are neither centralized nor financialized; next step is private attester voting",
+      "note_en": "11:46.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "fradamt：1000 万 ETH 质押只需约 12,500 个验证者，如果全部如此可在数秒内最终确认",
+      "note": "19:43。",
+      "url": "https://x.com/fradamt/status/2052006304860815391",
+      "date": "2026-05-06",
+      "title_en": "fradamt: 10M ETH of stake with only about 12,500 validators; if all stake looked like this, finality could take seconds",
+      "note_en": "19:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat_org：L2BEAT 的 Stages 框架扩展到 Validium 与 Optimium",
+      "note": "18:15。",
+      "url": "https://x.com/ethbeat_org/status/2051984164161827188",
+      "date": "2026-05-06",
+      "title_en": "ethbeat_org: L2BEAT Stages now cover Validiums and Optimiums",
+      "note_en": "18:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7688：Transaction 改为 progressive",
+      "note": "（etan-status）提交并合并；EIP-8025：移至 Draft（frisitano）提交；新增 EIP：Blob 流式传输（bharath-123）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11603",
+      "date": "2026-05-06",
+      "title_en": "EIP-7688: make Transaction progressive",
+      "note_en": "(etan-status), submitted and merged; EIP-8025: Move to Draft (frisitano), submitted; Add EIP: Blob Streaming (bharath-123), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8025：移至 Draft",
+      "note": "EIP-7688：Transaction 改为 progressive（etan-status）提交并合并；EIP-8025：移至 Draft（frisitano）提交；新增 EIP：Blob 流式传输（bharath-123）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11604",
+      "date": "2026-05-06",
+      "title_en": "EIP-8025: Move to Draft",
+      "note_en": "EIP-7688: make Transaction progressive (etan-status), submitted and merged; EIP-8025: Move to Draft (frisitano), submitted; Add EIP: Blob Streaming (bharath-123), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：Blob 流式传输",
+      "note": "EIP-7688：Transaction 改为 progressive（etan-status）提交并合并；EIP-8025：移至 Draft（frisitano）提交；新增 EIP：Blob 流式传输（bharath-123）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11610",
+      "date": "2026-05-06",
+      "title_en": "Add EIP: Blob Streaming",
+      "note_en": "EIP-7688: make Transaction progressive (etan-status), submitted and merged; EIP-8025: Move to Draft (frisitano), submitted; Add EIP: Blob Streaming (bharath-123), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：以太坊不是在 L1 与 L2 之间二选一，EF 的路线图是扩展 L1 并强化 L2",
+      "note": "21:19。",
+      "url": "https://x.com/binji_x/status/2052030382736806281",
+      "date": "2026-05-06",
+      "title_en": "binji_x: Ethereum is not choosing between L1 and L2; the EF roadmap is to scale L1 and strengthen L2s",
+      "note_en": "21:19.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8254-cap-deposit-requests-per-block/28453",
+    "credit": "Ethereum Magicians, EIP-8254: Cap deposit requests per block",
+    "local_path": "assets/2026-05-06.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8254: Cap deposit requests per block"
+  },
+  "keywords_en": [
+    "EIP-8141 disables the EIP-3607 check for frame transactions",
+    "Cryptographically Agile Transactions EIP merged",
+    "EIP-8130 create entry replay guards",
+    "EIP-8037 fixes from bal-devnet-6",
+    "EIP-8254 caps deposit requests per block",
+    "ERC-8255 expiring token approvals",
+    "Vitalik on prediction market oracles"
+  ],
+  "summary_en": "Two long running PRs merged: EIP-8141 disabling the EIP-3607 check for frame transactions, and shemnon's Cryptographically Agile Transactions (CATX) EIP, which separates the transaction body from signatures to ease post-quantum migration. pochenai tightened EIP-8130 create entry validation, and misilva73 fixed EIP-8037 issues surfaced by bal-devnet-6. moodysalem proposed ERC-20 approvals that expire automatically."
+}

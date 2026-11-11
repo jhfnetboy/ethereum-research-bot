@@ -1,0 +1,169 @@
+{
+  "date": "2026-04-20",
+  "keywords": [
+    "rsETH 事件余波",
+    "Barnabé 主张以太坊成为资产的发行地",
+    "EIP-8037 按维度检查区块 gas 上限合并",
+    "EIP-7708 转账日志纳入 CREATE 与 CREATE2",
+    "EIP-7928 访问列表索引改为 uint32",
+    "ACDT #78"
+  ],
+  "summary": "rsETH 跨链桥事件持续发酵：LefterisJP 指出 LayerZero 与 Kelp 互相指责、Aave 保持沉默；potuz 认为 Aave 的风险管理方才是该被追责的一方。barnabemonnot 表示对很多资产来说，目标应是让以太坊不仅是传输层，也是登记发行地。EIP-8037 两项状态 gas 规则合并。",
+  "items": [
+    {
+      "topic": "安全：rsETH 事件余波",
+      "title": "barnabemonnot：这类攻击提醒我们，对很多资产而言，目标应是让以太坊不仅是传输层，也是登记发行地；有效性证明与快速最终性是消除延迟、与更快的替代方案竞争的关键",
+      "note": "14:12。",
+      "url": "https://x.com/barnabemonnot/status/2046124822942359575",
+      "date": "2026-04-20",
+      "title_en": "barnabemonnot: hacks like these remind us that for many assets the goal should be to make Ethereum not only the transport layer but also the issuer of record; validity proofs and fast finality are essential to remove latency and compete with faster alternatives",
+      "note_en": "14:12.",
+      "topic_en": "Security: rsETH aftermath"
+    },
+    {
+      "topic": "安全：rsETH 事件余波",
+      "title": "LefterisJP：LayerZero 指责 Kelp，Kelp 指责 LayerZero，Aave 一言不发，三方似乎没有沟通",
+      "note": "22:34。",
+      "url": "https://x.com/LefterisJP/status/2046251265181544621",
+      "date": "2026-04-20",
+      "title_en": "LefterisJP: LayerZero blames Kelp, Kelp blames LayerZero, Aave is silent, and the three seem not to be communicating",
+      "note_en": "22:34.",
+      "topic_en": "Security: rsETH aftermath"
+    },
+    {
+      "topic": "安全：rsETH 事件余波",
+      "title": "potuz_eth：多数人关注攻击向量和 LayerZero 与 rsETH 的安全模型，但作为 Aave 的债权人，他最愤怒的是负责评估风险的管理方没有正确评估这一风险",
+      "note": "18:35。",
+      "url": "https://x.com/potuz_eth/status/2046191102802194828",
+      "date": "2026-04-20",
+      "title_en": "potuz_eth: most of CT focuses on the attack vector and the LayerZero and rsETH security model, but as an Aave creditor his anger is at the curators who failed to assess this risk",
+      "note_en": "18:35.",
+      "topic_en": "Security: rsETH aftermath"
+    },
+    {
+      "topic": "安全：rsETH 事件余波",
+      "title": "peter_szilagyi：技术方案当然应该研究和实施",
+      "note": "15:26。",
+      "url": "https://x.com/peter_szilagyi/status/2046143522957353354",
+      "date": "2026-04-20",
+      "title_en": "peter_szilagyi: technical solutions definitely should be investigated and implemented",
+      "note_en": "15:26.",
+      "topic_en": "Security: rsETH aftermath"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：按维度检查区块 gas 上限",
+      "note": "（misilva73）合并，该 PR 于 4 月 17 日提交；EIP-8037：SSTORE 恢复退款回滚语义（spencer-tb）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11536",
+      "date": "2026-04-20",
+      "title_en": "EIP-8037: per-dimension block gas limit check",
+      "note_en": "(misilva73), merged, submitted on April 17; EIP-8037: SSTORE restoration refund rollback semantics (spencer-tb), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：SSTORE 恢复退款回滚语义",
+      "note": "EIP-8037：按维度检查区块 gas 上限（misilva73）合并，该 PR 于 4 月 17 日提交；EIP-8037：SSTORE 恢复退款回滚语义（spencer-tb）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11548",
+      "date": "2026-04-20",
+      "title_en": "EIP-8037: SSTORE restoration refund rollback semantics",
+      "note_en": "EIP-8037: per-dimension block gas limit check (misilva73), merged, submitted on April 17; EIP-8037: SSTORE restoration refund rollback semantics (spencer-tb), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7708：把 CREATE 与 CREATE2 纳入转账日志列表",
+      "note": "（s1na）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11474",
+      "date": "2026-04-20",
+      "title_en": "EIP-7708: add CREATE and CREATE2 to the transfer log list",
+      "note_en": "(s1na), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7928：区块访问列表索引改为 uint32",
+      "note": "（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11550",
+      "date": "2026-04-20",
+      "title_en": "EIP-7928: change the block access list index to uint32",
+      "note_en": "(nerolation), submitted.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：用新的 N-VM 架构消除类似 Aave rsETH 事件的跨链桥攻击",
+      "note": "02:32。",
+      "url": "https://ethresear.ch/t/bridge-attacks-like-the-recent-aave-rseth-exploit-can-be-eliminated-by-a-new-n-vm-architecture/24690",
+      "date": "2026-04-20",
+      "title_en": "ethresear.ch: bridge attacks like the recent Aave rsETH exploit can be eliminated by a new N-VM architecture",
+      "note_en": "02:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #33 议程",
+      "note": "23:11；ERC-7796 移至 Review（forshtat）提交。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-33-april-21-2026/28291",
+      "date": "2026-04-20",
+      "title_en": "FOCIL Breakout #33 agenda",
+      "note_en": "23:11; ERC-7796: move to Review (forshtat), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7796 移至 Review",
+      "note": "FOCIL Breakout #33 议程 23:11；ERC-7796 移至 Review（forshtat）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1692",
+      "date": "2026-04-20",
+      "title_en": "ERC-7796: move to Review",
+      "note_en": "FOCIL Breakout #33 agenda, 23:11; ERC-7796: move to Review (forshtat), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "solidity_lang：Solidity 2025 开发者调查，70% 为智能合约开发者",
+      "note": "21:14。",
+      "url": "https://x.com/solidity_lang/status/2046231020090151072",
+      "date": "2026-04-20",
+      "title_en": "solidity_lang: Solidity Developer Survey 2025, 70% of respondents are smart contract developers",
+      "note_en": "21:14.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：这类事件的好处是市场可能重新重视密码朋克式的方法",
+      "note": "03:38。",
+      "url": "https://x.com/binji_x/status/2045965364018966819",
+      "date": "2026-04-20",
+      "title_en": "binji_x: the silver lining is the market may begin to value cypherpunk approaches again",
+      "note_en": "03:38.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：增加隐私反而可能让事情变糟的两种方式",
+      "note": "05:30。",
+      "url": "https://x.com/zooko/status/2045993492850331783",
+      "date": "2026-04-20",
+      "title_en": "zooko: two ways adding more privacy can make something worse",
+      "note_en": "05:30.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/bridge-attacks-like-the-recent-aave-rseth-exploit-can-be-eliminated-by-a-new-n-vm-architecture/24690",
+    "credit": "ethresear.ch, Bridge Attacks Like the Recent Aave rsETH Exploit",
+    "local_path": "assets/2026-04-20.jpg",
+    "credit_en": "ethresear.ch, Bridge Attacks Like the Recent Aave rsETH Exploit"
+  },
+  "keywords_en": [
+    "rsETH aftermath",
+    "Barnabé on making Ethereum the issuer of record",
+    "EIP-8037 per-dimension block gas limit check merged",
+    "EIP-7708 adds CREATE and CREATE2 to transfer logs",
+    "EIP-7928 BAL index moves to uint32",
+    "ACDT #78"
+  ],
+  "summary_en": "The rsETH bridge incident kept unfolding: LefterisJP noted LayerZero and Kelp blaming each other while Aave stayed silent, and potuz argued Aave's risk curators deserve the blame. barnabemonnot said that for many assets the goal should be making Ethereum not only the transport layer but also the issuer of record. Two EIP-8037 state gas rules were merged."
+}

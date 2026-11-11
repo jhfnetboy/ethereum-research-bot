@@ -1,0 +1,125 @@
+{
+  "date": "2026-04-12",
+  "keywords": [
+    "EIP-8224 反事实交易用 ZK 证明为新地址私密支付 gas",
+    "ECRECOVER 感知原生密钥",
+    "ERC-8226 受监管代理授权",
+    "比特币无需软分叉的量子安全交易"
+  ],
+  "summary": "周日。benaadams 提交 EIP-8224，新增 `0x08` 类型的“反事实交易”，用针对规范手续费票据合约的 ZK 证明为没有 ETH 的新 EOA 支付 gas，避免入金暴露关联。prestwich 提交 EIP-8164 的配套提案，让 ECRECOVER 预编译感知原生密钥委托。StarkWare 讨论无需软分叉的比特币量子安全交易。",
+  "items": [
+    {
+      "topic": "隐私与 gas：反事实交易",
+      "title": "新 EIP：Counterfactual Transaction（EIP-8224）",
+      "note": "（benaadams）提交：新增 EIP-2718 交易类型 `0x08`，利用针对规范手续费票据（fee-note）合约的 ZK 证明，在协议层为交易提供隐蔽的 gas 资金；Magicians 讨论帖 08:33。",
+      "url": "https://github.com/ethereum/EIPs/pull/11518",
+      "date": "2026-04-12",
+      "title_en": "New EIP: Counterfactual Transaction (EIP-8224)",
+      "note_en": "(benaadams), submitted: a new EIP-2718 transaction type `0x08` for protocol native shielded gas funding using ZK proofs against canonical fee note contracts; Magicians discussion, 08:33.",
+      "topic_en": "Privacy and gas: counterfactual transactions"
+    },
+    {
+      "topic": "隐私与 gas：反事实交易",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：Counterfactual Transaction（EIP-8224）（benaadams）提交：新增 EIP-2718 交易类型 `0x08`，利用针对规范手续费票据（fee-note）合约的 ZK 证明，在协议层为交易提供隐蔽的 gas 资金；Magicians 讨论帖 08:33。",
+      "url": "https://ethereum-magicians.org/t/eip-8224-counterfactual-transaction/28205",
+      "date": "2026-04-12",
+      "title_en": "Magicians discussion",
+      "note_en": "New EIP: Counterfactual Transaction (EIP-8224) (benaadams), submitted: a new EIP-2718 transaction type `0x08` for protocol native shielded gas funding using ZK proofs against canonical fee note contracts; Magicians discussion, 08:33.",
+      "topic_en": "Privacy and gas: counterfactual transactions"
+    },
+    {
+      "topic": "账户：原生密钥与 ECRECOVER",
+      "title": "新 EIP：ECRECOVER 感知原生密钥",
+      "note": "（prestwich）提交：作为 EIP-8164（EOA 原生密钥委托）的配套，修改地址 `0x01` 的 ECRECOVER 预编译；恢复出的地址若已有原生密钥委托（`0xef01` 加非零字节），则返回空，防止合约继续接受已弃用的 ECDSA 密钥签名。",
+      "url": "https://github.com/ethereum/EIPs/pull/11515",
+      "date": "2026-04-12",
+      "title_en": "New EIP: ECRECOVER native key awareness",
+      "note_en": "(prestwich), submitted: a companion to EIP-8164 (native key delegation for EOAs) that changes the ECRECOVER precompile at `0x01`; if the recovered address has a native key delegation (`0xef01` plus a nonzero byte) it returns empty, so contracts stop accepting signatures from the retired ECDSA key.",
+      "topic_en": "Accounts: native keys and ECRECOVER"
+    },
+    {
+      "topic": "后量子",
+      "title": "StarkWare：无需软分叉的量子安全比特币交易",
+      "note": "12:17。",
+      "url": "https://x.com/StarkWareLtd/status/2043196815097409917",
+      "date": "2026-04-12",
+      "title_en": "StarkWare: quantum safe Bitcoin transactions without softforks",
+      "note_en": "12:17.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "后量子",
+      "title": "EliBenSasson：这并不意味着比特币不需要升级到后量子安全，比特币绝对应该采取必要步骤",
+      "note": "14:43。",
+      "url": "https://x.com/EliBenSasson/status/2043233563487687017",
+      "date": "2026-04-12",
+      "title_en": "EliBenSasson: this does not mean Bitcoin doesn't need to become post-quantum secure; it absolutely should take the necessary steps",
+      "note_en": "14:43.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8226 受监管代理授权",
+      "note": "23:59（对应 ERC PR，thamerdridi 提交）。",
+      "url": "https://ethereum-magicians.org/t/erc-8226-regulated-agent-mandate/28208",
+      "date": "2026-04-12",
+      "title_en": "Magicians: ERC-8226 Regulated Agent Mandate",
+      "note_en": "23:59 (with an ERC PR submitted by thamerdridi).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8226 受监管代理授权 23:59（对应 ERC PR，thamerdridi 提交）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1679",
+      "date": "2026-04-12",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8226 Regulated Agent Mandate, 23:59 (with an ERC PR submitted by thamerdridi).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #235 议程",
+      "note": "00:18。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-235-april-23-2026/28203",
+      "date": "2026-04-12",
+      "title_en": "ACDE #235 agenda",
+      "note_en": "00:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8164：修正脚注代码块格式",
+      "note": "（prestwich）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11514",
+      "date": "2026-04-12",
+      "title_en": "EIP-8164: MD046 fix in a footnote code block",
+      "note_en": "(prestwich), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：ZK-STARK 通过证明完整性来带来扩容与隐私",
+      "note": "19:44。",
+      "url": "https://x.com/EliBenSasson/status/2043309271316599277",
+      "date": "2026-04-12",
+      "title_en": "EliBenSasson: ZK-STARKs deliver scale and privacy by proving integrity",
+      "note_en": "19:44.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8224-counterfactual-transaction/28205",
+    "credit": "Ethereum Magicians, EIP-8224: Counterfactual Transaction",
+    "local_path": "assets/2026-04-12.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8224: Counterfactual Transaction"
+  },
+  "keywords_en": [
+    "EIP-8224 counterfactual transactions fund gas privately with ZK proofs",
+    "native key aware ECRECOVER",
+    "ERC-8226 Regulated Agent Mandate",
+    "quantum safe Bitcoin transactions without softforks"
+  ],
+  "summary_en": "A Sunday. benaadams submitted EIP-8224, a `0x08` \"counterfactual transaction\" that uses ZK proofs against canonical fee note contracts to pay gas for a fresh EOA with no ETH, so funding it does not reveal a link. prestwich submitted a companion to EIP-8164 making the ECRECOVER precompile aware of native key delegation. StarkWare discussed quantum safe Bitcoin transactions without softforks."
+}

@@ -1,0 +1,148 @@
+{
+  "date": "2026-04-13",
+  "keywords": [
+    "EIP-8141 规范收紧",
+    "EIP-8037 状态 gas 记账澄清",
+    "ERC-8227 FHE 加密余额代币",
+    "主网再现大规模地址投毒",
+    "Log Index 加速钱包历史查询",
+    "ACDT #77"
+  ],
+  "summary": "benaadams 提交 EIP-8141（frame 交易）的规范收紧，把 frame 模式、批准语义、默认代码行为与公共内存池规则写得更明确。EIP-8037 两项状态 gas 记账澄清提交。Magicians 上出现 ERC-8227，提出余额经 FHE 加密、转账用 ZK 验证的同质化代币。growthepie 提示主网再次出现大规模地址投毒攻击。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 规范收紧",
+      "title": "EIP-8141：收紧规范",
+      "note": "（benaadams）提交：把打包的 frame `mode` 字段拆成 `mode` 与 `flags`，新增 `FRAMEPARAM` 并引入明确的 `resolved_target`，使 frame 模型、批准语义、默认代码行为和公共内存池规则更明确、内部一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/11521",
+      "date": "2026-04-13",
+      "title_en": "EIP-8141: tighten spec",
+      "note_en": "(benaadams), submitted: splits the packed frame `mode` field into `mode` and `flags`, adds `FRAMEPARAM` and an explicit `resolved_target`, making the frame model, approval semantics, default code behavior and public mempool rules more explicit and internally consistent.",
+      "topic_en": "Native AA: tightening EIP-8141"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 状态 gas 记账",
+      "title": "EIP-8037：澄清溢出的状态 gas 仍计入 execution_state_gas_used",
+      "note": "（qu0b）提交：状态 gas 超出 `state_gas_reservoir` 而从 `gas_left` 扣除时，仍全额计入状态 gas，计数按成本类型而非资金来源归类。",
+      "url": "https://github.com/ethereum/EIPs/pull/11522",
+      "date": "2026-04-13",
+      "title_en": "EIP-8037: clarify that spillover state gas still increments execution_state_gas_used",
+      "note_en": "(qu0b), submitted: when a state gas charge exceeds `state_gas_reservoir` and spills into `gas_left`, it still counts fully as state gas; counters are classified by cost type, not funding source.",
+      "topic_en": "Transactions and gas: EIP-8037 state gas accounting"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 状态 gas 记账",
+      "title": "EIP-8037：更多状态 gas 记账澄清",
+      "note": "（spencer-tb）提交，汇总 misilva73 状态 gas 记账审查中的几点。",
+      "url": "https://github.com/ethereum/EIPs/pull/11523",
+      "date": "2026-04-13",
+      "title_en": "EIP-8037: more clarifications for state gas accounting",
+      "note_en": "(spencer-tb), submitted, consolidating points from misilva73's state gas accounting review.",
+      "topic_en": "Transactions and gas: EIP-8037 state gas accounting"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "growthepie：主网似乎又出现大规模地址投毒攻击，前一天原生 ETH 转账达 280 万笔，比基线高 100%，请仔细核对收款地址",
+      "note": "19:49。",
+      "url": "https://x.com/growthepie_eth/status/2043672907952410668",
+      "date": "2026-04-13",
+      "title_en": "growthepie: another mass address poisoning attack appears to be underway on mainnet; native ETH transfers hit 2.8 million the day before, 100% above baseline, so double check recipient addresses",
+      "note_en": "19:49.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "Magicians：ERC-8227 加密代币",
+      "note": "11:50（Valisthea），余额以 FHE 密文返回、转账用 ZK 证明验证；同作者还提出 ERC-8229 FHE 计算验证 17:03。",
+      "url": "https://ethereum-magicians.org/t/erc-8227-encrypted-token/28214",
+      "date": "2026-04-13",
+      "title_en": "Magicians: ERC-8227 Encrypted Token",
+      "note_en": "11:50 (Valisthea), where balances return as FHE ciphertexts and transfers are verified with ZK proofs; the same author also proposed ERC-8229 FHE Computation Verification, 17:03.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "ERC-8229 FHE 计算验证",
+      "note": "Magicians：ERC-8227 加密代币 11:50（Valisthea），余额以 FHE 密文返回、转账用 ZK 证明验证；同作者还提出 ERC-8229 FHE 计算验证 17:03。",
+      "url": "https://ethereum-magicians.org/t/erc-8229-fhe-computation-verification/28217",
+      "date": "2026-04-13",
+      "title_en": "ERC-8229 FHE Computation Verification",
+      "note_en": "Magicians: ERC-8227 Encrypted Token, 11:50 (Valisthea), where balances return as FHE ciphertexts and transfers are verified with ZK proofs; the same author also proposed ERC-8229 FHE Computation Verification, 17:03.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "Nethermind：钱包靠扫描链上事件重建交易历史，链越长越慢；对比有无 Log Index 时的 eth_getLogs",
+      "note": "16:42。",
+      "url": "https://x.com/Nethermind/status/2043625747739222503",
+      "date": "2026-04-13",
+      "title_en": "Nethermind: wallets rebuild transaction history by scanning chain events, which slows as the chain grows; comparing eth_getLogs with and without Log Index",
+      "note_en": "16:42.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereum：生态过去几周交付的 22 件事，从隐私突破到 AI 代理与机构通道",
+      "note": "23:09。",
+      "url": "https://x.com/ethereum/status/2043723217647387039",
+      "date": "2026-04-13",
+      "title_en": "ethereum: 22 things the ecosystem delivered over the past few weeks, from privacy breakthroughs to AI agents and institutional rails",
+      "note_en": "23:09.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #6 议程",
+      "note": "14:47；EIP Editing Office Hour #97 议程 21:37。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-6-april-15-2026/28216",
+      "date": "2026-04-13",
+      "title_en": "Glamsterdam Repricings #6 agenda",
+      "note_en": "14:47; EIP Editing Office Hour #97 agenda, 21:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP Editing Office Hour #97 议程",
+      "note": "Glamsterdam Repricings #6 议程 14:47；EIP Editing Office Hour #97 议程 21:37。",
+      "url": "https://ethereum-magicians.org/t/eip-editing-office-hour-eip-erc-meeting-97-april-14-2026/28225",
+      "date": "2026-04-13",
+      "title_en": "EIP Editing Office Hour #97 agenda",
+      "note_en": "Glamsterdam Repricings #6 agenda, 14:47; EIP Editing Office Hour #97 agenda, 21:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：分享给 StarkWare 团队的信，公司正在调整战略",
+      "note": "17:25。",
+      "url": "https://x.com/EliBenSasson/status/2043636641747661271",
+      "date": "2026-04-13",
+      "title_en": "EliBenSasson: a message shared with the StarkWare team as the company adapts its strategy",
+      "note_en": "17:25.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：推荐朋友用 Uniswap 钱包收 USDC 后遇到的体验问题",
+      "note": "17:28。",
+      "url": "https://x.com/donnoh_eth/status/2043637477282361348",
+      "date": "2026-04-13",
+      "title_en": "donnoh_eth: UX problems after recommending the Uniswap wallet to a friend to receive USDC",
+      "note_en": "17:28.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11521",
+    "credit": "GitHub, ethereum/EIPs #11521 (benaadams)",
+    "credit_en": "GitHub, ethereum/EIPs #11521 (benaadams)"
+  },
+  "keywords_en": [
+    "EIP-8141 spec tightened",
+    "EIP-8037 state gas accounting clarified",
+    "ERC-8227 token with FHE encrypted balances",
+    "another mass address poisoning wave on mainnet",
+    "Log Index speeds up wallet history queries",
+    "ACDT #77"
+  ],
+  "summary_en": "benaadams submitted a tightening of the EIP-8141 (frame transaction) spec, making frame modes, approval semantics, default code behavior and public mempool rules more explicit. Two EIP-8037 state gas accounting clarifications were submitted. ERC-8227 appeared on Magicians, proposing a fungible token with FHE encrypted balances and ZK verified transfers. growthepie flagged another mass address poisoning attack on mainnet."
+}

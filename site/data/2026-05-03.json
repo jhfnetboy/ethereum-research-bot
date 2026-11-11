@@ -1,0 +1,77 @@
+{
+  "date": "2026-05-03",
+  "keywords": [
+    "EIP-8247 祖先索引 BAL",
+    "用固定存储押金与动态退款管理状态",
+    "DeFi 的气隙问题",
+    "TEE 作为 BitVM 式桥的验证者",
+    "多 VM 指针代币模式"
+  ],
+  "summary": "周日，X 上追踪账号没有相关帖子。nerolation 提交 EIP-8247（祖先索引 BAL），用跨区块引用避免在区块级访问列表中重复写地址与存储键。ethresear.ch 有人提议用固定 ETH 存储押金加动态退款来抑制状态增长。",
+  "items": [
+    {
+      "topic": "交易与 gas：BAL 与状态成本",
+      "title": "新增 EIP：祖先索引 BAL",
+      "note": "（nerolation）提交：EIP-8247 让 BAL 通过跨区块引用祖先区块，避免重复列出地址与存储键。",
+      "url": "https://github.com/ethereum/EIPs/pull/11595",
+      "date": "2026-05-03",
+      "title_en": "Add EIP: Ancestor-Indexed BALs",
+      "note_en": "(nerolation), submitted: EIP-8247 lets BALs reference ancestor blocks so addresses and storage keys are not listed again.",
+      "topic_en": "Transactions and gas: BALs and state cost"
+    },
+    {
+      "topic": "交易与 gas：BAL 与状态成本",
+      "title": "ethresear.ch：通过固定存储押金与动态退款进行经济化的状态管理",
+      "note": "16:59：新建状态需锁定固定 ETH 押金，以放弃的质押收益作为隐性租金；删除状态时由协议按需提供动态退款，作为“状态恒温器”。",
+      "url": "https://ethresear.ch/t/eip-xxxx-economic-state-management-via-fixed-storage-bonds-and-dynamic-refunds/24781",
+      "date": "2026-05-03",
+      "title_en": "ethresear.ch: Economic State Management via Fixed Storage Bonds and Dynamic Refunds",
+      "note_en": "16:59: creating new state locks a fixed ETH bond, with forgone staking yield acting as implicit rent; deleting state earns a dynamic protocol funded refund that works as a \"state thermostat\".",
+      "topic_en": "Transactions and gas: BALs and state cost"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：DeFi 的气隙问题，链无法验证链下现实，耐心且操作安全良好的攻击者能击败任何假名链上机制",
+      "note": "02:34。",
+      "url": "https://ethresear.ch/t/the-airgap-problem-in-defi/24774",
+      "date": "2026-05-03",
+      "title_en": "ethresear.ch: the airgap problem in DeFi: the chain cannot verify offchain reality, so a patient attacker with good opsec defeats any pseudonymous onchain mechanism",
+      "note_en": "02:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：TEE 作为 BitVM 式桥的验证者",
+      "note": "19:10。",
+      "url": "https://ethresear.ch/t/tee-as-verifier-for-bitvm-style-bridges-collapsing-the-canonical-label-distribution-problem/24783",
+      "date": "2026-05-03",
+      "title_en": "ethresear.ch: TEE as verifier for BitVM style bridges",
+      "note_en": "19:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：多 VM 指针代币模式",
+      "note": "（hilarl）重新提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11593",
+      "date": "2026-05-03",
+      "title_en": "Add EIP: Multi-VM Pointer-Token Pattern",
+      "note_en": "(hilarl), resubmitted.",
+      "topic_en": "Other updates"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/eip-xxxx-economic-state-management-via-fixed-storage-bonds-and-dynamic-refunds/24781",
+    "credit": "ethresear.ch, EIP-XXXX: Economic State Management via Fixed Storage Bonds and Dynamic Refunds",
+    "local_path": "assets/2026-05-03.jpg",
+    "credit_en": "ethresear.ch, EIP-XXXX: Economic State Management via Fixed Storage Bonds and Dynamic Refunds"
+  },
+  "keywords_en": [
+    "EIP-8247 Ancestor-Indexed BALs",
+    "state management with fixed storage bonds and dynamic refunds",
+    "the airgap problem in DeFi",
+    "TEE as verifier for BitVM style bridges",
+    "Multi-VM Pointer-Token Pattern"
+  ],
+  "summary_en": "A Sunday with no relevant posts from tracked accounts on X. nerolation submitted EIP-8247 (Ancestor-Indexed BALs), using cross block references so block level access lists do not repeat addresses and storage keys. An ethresear.ch post proposed fixed ETH storage bonds plus dynamic refunds to curb state growth."
+}

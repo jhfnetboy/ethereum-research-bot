@@ -1,0 +1,179 @@
+{
+  "date": "2026-04-11",
+  "keywords": [
+    "EIP-8223 合约付费交易",
+    "EIP-8164 原生密钥委托改用 ML-DSA-44",
+    "EIP-7932 公钥与签名分离合并",
+    "gakonst 批评“再来一个 AA EIP”",
+    "Base 将引入隐私",
+    "Tempo T3 访问密钥支出限额"
+  ],
+  "summary": "benaadams 提交 EIP-8223，新增一种由目标合约（`tx.to`）通过付费方注册表预部署合约支付 gas 的赞助交易类型。prestwich 把 EIP-8164 原生密钥委托的后量子签名方案从 Ed25519 换成 NIST 标准化的 ML-DSA-44，当天提交并合并。gakonst 认为不能再靠新增 AA EIP 解决钱包问题，生态需要为钱包用户做出决定并写进 EIP。jessepollak 宣布 Base 将引入隐私。",
+  "items": [
+    {
+      "topic": "账户：赞助交易与原生密钥",
+      "title": "新 EIP：Contract Payer Transaction（EIP-8223）",
+      "note": "（benaadams）提交：Core 类 EIP，引入一种赞助交易类型，gas 费由目标合约 `tx.to` 通过规范的付费方注册表预部署合约支付；Magicians 讨论帖 12:38。",
+      "url": "https://github.com/ethereum/EIPs/pull/11509",
+      "date": "2026-04-11",
+      "title_en": "New EIP: Contract Payer Transaction (EIP-8223)",
+      "note_en": "(benaadams), submitted: a Core EIP for a sponsored transaction type where gas fees are charged to the target contract `tx.to` via a canonical payer registry predeploy; Magicians discussion, 12:38.",
+      "topic_en": "Accounts: sponsored transactions and native keys"
+    },
+    {
+      "topic": "账户：赞助交易与原生密钥",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：Contract Payer Transaction（EIP-8223）（benaadams）提交：Core 类 EIP，引入一种赞助交易类型，gas 费由目标合约 `tx.to` 通过规范的付费方注册表预部署合约支付；Magicians 讨论帖 12:38。",
+      "url": "https://ethereum-magicians.org/t/eip-8223-contract-payer-transactions/28202",
+      "date": "2026-04-11",
+      "title_en": "Magicians discussion",
+      "note_en": "New EIP: Contract Payer Transaction (EIP-8223) (benaadams), submitted: a Core EIP for a sponsored transaction type where gas fees are charged to the target contract `tx.to` via a canonical payer registry predeploy; Magicians discussion, 12:38.",
+      "topic_en": "Accounts: sponsored transactions and native keys"
+    },
+    {
+      "topic": "账户：赞助交易与原生密钥",
+      "title": "EIP-8164：用 ML-DSA-44（FIPS 204）替换 Ed25519",
+      "note": "（prestwich）提交并合并：EOA 原生密钥委托的后量子签名方案改为 NIST 标准化方案，并相应更新密钥大小、签名大小与预编译 gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/11511",
+      "date": "2026-04-11",
+      "title_en": "EIP-8164: replace Ed25519 with ML-DSA-44 (FIPS 204)",
+      "note_en": "(prestwich), submitted and merged: native key delegation for EOAs now uses the NIST standardized post-quantum scheme, with key sizes, signature sizes and precompile gas updated to match.",
+      "topic_en": "Accounts: sponsored transactions and native keys"
+    },
+    {
+      "topic": "账户：赞助交易与原生密钥",
+      "title": "EIP-7932：支持公钥与签名分离",
+      "note": "（SirSpudlington）合并：secp256k1 的算法类型改为 `0x0`，限制大于 126 的算法类型，增加 `merge_detached_signature`，并修复与 secp256k1 的公钥冲突。",
+      "url": "https://github.com/ethereum/EIPs/pull/11357",
+      "date": "2026-04-11",
+      "title_en": "EIP-7932: add support for public key and signature separation",
+      "note_en": "(SirSpudlington), merged: secp256k1 moves to algorithm type `0x0`, types above 126 are restricted, `merge_detached_signature` is added and a public key collision with secp256k1 is fixed.",
+      "topic_en": "Accounts: sponsored transactions and native keys"
+    },
+    {
+      "topic": "账户抽象的方向",
+      "title": "gakonst：“再来一个 AA EIP 就能修好钱包”是行不通的，以太坊生态必须为钱包用户做出一些决定，写进 EIP 强制执行，而不是“无限花园，谁都能做任何东西”，然后做出真正好的 UX 与 DX",
+      "note": "02:24。",
+      "url": "https://x.com/gakonst/status/2042685087775625521",
+      "date": "2026-04-11",
+      "title_en": "gakonst: \"just one more AA EIP\" will not fix wallets; the Ethereum ecosystem must make some decisions for its wallet users, enforce them in an EIP instead of \"infinite garden, anyone can build anything\", and build actually good UX and DX",
+      "note_en": "02:24.",
+      "topic_en": "The direction of account abstraction"
+    },
+    {
+      "topic": "账户抽象的方向",
+      "title": "gakonst：Tempo T3 升级将解锁订阅等账户委托原语，升级访问密钥，支持原生支出限额与范围限定",
+      "note": "04:22。",
+      "url": "https://x.com/gakonst/status/2042714867711586430",
+      "date": "2026-04-11",
+      "title_en": "gakonst: the upcoming Tempo T3 upgrade unlocks subscriptions and other account delegation primitives, upgrading access keys with native spend limits and scoping",
+      "note_en": "04:22.",
+      "topic_en": "The direction of account abstraction"
+    },
+    {
+      "topic": "隐私",
+      "title": "jessepollak：我们要把隐私带到 Base",
+      "note": "21:36。",
+      "url": "https://x.com/jessepollak/status/2042975142113153450",
+      "date": "2026-04-11",
+      "title_en": "jessepollak: we are bringing privacy to Base",
+      "note_en": "21:36.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWare：别的方案里用户需要混币器、中继和祈祷才能获得隐私，而 STRK20 自带隐私",
+      "note": "21:21。",
+      "url": "https://x.com/StarkWareLtd/status/2042971301581607311",
+      "date": "2026-04-11",
+      "title_en": "StarkWare: elsewhere users need a mixer, a relayer and a prayer to get privacy; STRK20 ships with it",
+      "note_en": "21:21.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081 提议 EIP-8148 纳入 Hegotá",
+      "note": "Hegotá 提案：EIP-8081 提议 EIP-8148 纳入 Hegotá（gkoumout）提交；EIP-8081 将 EIP-7932 与 EIP-8030 列为提议纳入（SirSpudlington）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11508",
+      "date": "2026-04-11",
+      "title_en": "EIP-8081: propose EIP-8148 for inclusion in Hegotá",
+      "note_en": "Hegotá proposals: EIP-8081: propose EIP-8148 for inclusion in Hegotá (gkoumout), submitted; EIP-8081: PFI EIP-7932 and EIP-8030 (SirSpudlington), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081 将 EIP-7932 与 EIP-8030 列为提议纳入",
+      "note": "Hegotá 提案：EIP-8081 提议 EIP-8148 纳入 Hegotá（gkoumout）提交；EIP-8081 将 EIP-7932 与 EIP-8030 列为提议纳入（SirSpudlington）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11510",
+      "date": "2026-04-11",
+      "title_en": "EIP-8081: PFI EIP-7932 and EIP-8030",
+      "note_en": "Hegotá proposals: EIP-8081: propose EIP-8148 for inclusion in Hegotá (gkoumout), submitted; EIP-8081: PFI EIP-7932 and EIP-8030 (SirSpudlington), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：v1 与 v2 JSON schema 与注册表对齐",
+      "note": "（lcastillo-ledger）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1662",
+      "date": "2026-04-11",
+      "title_en": "ERC-7730: align v1 and v2 JSON schemas with the registry",
+      "note_en": "(lcastillo-ledger), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：DAS 中二维 Reed-Solomon 码的替代方案",
+      "note": "12:03。",
+      "url": "https://ethresear.ch/t/alternatives-to-2d-reed-solomon-codes-in-das/24639",
+      "date": "2026-04-11",
+      "title_en": "ethresear.ch: Alternatives to 2D Reed-Solomon Codes in DAS",
+      "note_en": "12:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #35 议程",
+      "note": "00:49。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-35-apr-15-2026/28199",
+      "date": "2026-04-11",
+      "title_en": "PQ Interop #35 agenda",
+      "note_en": "00:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano_：痛批某平台一边冻结正常用户、阻挠解冻，一边宣称“强力保护用户权利与隐私”",
+      "note": "01:28。",
+      "url": "https://x.com/tayvano_/status/2042671133053587945",
+      "date": "2026-04-11",
+      "title_en": "tayvano_: slammed a platform for claiming \"strong protections for user rights and privacy\" while freezing legitimate users and fighting their unfreezes",
+      "note_en": "01:28.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：SNARK 是 lean Ethereum 扩容路线的关键，但如果保护 rollup 的密码学有 bug 怎么办",
+      "note": "02:50。",
+      "url": "https://x.com/tcoratger/status/2042691625067946221",
+      "date": "2026-04-11",
+      "title_en": "tcoratger: SNARKs are critical for the lean Ethereum scaling roadmap, but what if the cryptography securing rollups has a bug?",
+      "note_en": "02:50.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8223-contract-payer-transactions/28202",
+    "credit": "Ethereum Magicians, EIP-8223: Contract payer transactions",
+    "local_path": "assets/2026-04-11.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8223: Contract payer transactions"
+  },
+  "keywords_en": [
+    "EIP-8223 contract payer transactions",
+    "EIP-8164 native key delegation moves to ML-DSA-44",
+    "EIP-7932 public key and signature separation merged",
+    "gakonst on \"just one more AA EIP\"",
+    "Base to add privacy",
+    "Tempo T3 access key spend limits"
+  ],
+  "summary_en": "benaadams submitted EIP-8223, a sponsored transaction type where gas is charged to the target contract (`tx.to`) through a payer registry predeploy. prestwich switched EIP-8164 native key delegation from Ed25519 to NIST standardized ML-DSA-44, submitted and merged the same day. gakonst argued that more AA EIPs will not fix wallets and the ecosystem must make decisions for wallet users and enforce them in an EIP. jessepollak announced that Base is bringing privacy."
+}

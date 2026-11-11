@@ -1,0 +1,159 @@
+{
+  "date": "2026-04-28",
+  "keywords": [
+    "EIP-8037 改为固定每状态字节成本并加入 frame 计费",
+    "EIP-7773 将 EIP-7979 与 EIP-8163 列为 PFI",
+    "Tempo access keys 上线",
+    "ERC-7930 与 ERC-7828 移至 Review",
+    "aave/kelp/layerzero 事件解读",
+    "复杂度即风险"
+  ],
+  "summary": "misilva73 提交 EIP-8037 修改，把动态的每状态字节成本改为固定常量 CPSB = 1174，并加入 frame 计费规则。nixorokish 提交并合并 EIP-7773 更新，将 EIP-7979 与 EIP-8163 列为提议纳入。gakonst 宣布 access keys 上线，用受协议限制的密钥委托替代托管合约。",
+  "items": [
+    {
+      "topic": "交易与 gas：EIP-8037 固定 CPSB",
+      "title": "EIP-8037：固定 CPSB 与 frame 计费",
+      "note": "（misilva73）提交：把动态量化的 cost_per_state_byte 替换为单一常量 CPSB = 1174，按 96M gas 参考上限下每年 100 GiB 状态增长目标推导；删除相关量化参数，新增存储写入、新账户、授权等字节数常量，并补充状态 gas 计费规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/11573",
+      "date": "2026-04-28",
+      "title_en": "EIP-8037: fixed CPSB plus frame accounting",
+      "note_en": "(misilva73), submitted: replaces the dynamic, quantized cost_per_state_byte with one constant CPSB = 1174, derived from a 100 GiB per year growth target at a 96M gas reference limit; removes the quantization parameters, adds byte count constants for storage sets, new accounts and authorizations, and adds state gas accounting rules.",
+      "topic_en": "Transactions and gas: fixed CPSB in EIP-8037"
+    },
+    {
+      "topic": "账户：access keys 与互操作地址",
+      "title": "gakonst：access keys 上线，本质是账户委托，与其把资产转入托管合约，不如给第三方一把权限受协议约束的账户密钥",
+      "note": "06:21；gakonst：这也解决了资产归集的麻烦，并让地址成为通用接口 06:22。",
+      "url": "https://x.com/gakonst/status/2048905316126101595",
+      "date": "2026-04-28",
+      "title_en": "gakonst: access keys are live; the primitive is account delegation, so rather than moving assets to an escrow, give a third party a key to your account with protocol enforced limits",
+      "note_en": "06:21; gakonst: this also removes sweeping and sets up the address as the universal interface, 06:22.",
+      "topic_en": "Accounts: access keys and interop addresses"
+    },
+    {
+      "topic": "账户：access keys 与互操作地址",
+      "title": "gakonst：这也解决了资产归集的麻烦，并让地址成为通用接口",
+      "note": "gakonst：access keys 上线，本质是账户委托，与其把资产转入托管合约，不如给第三方一把权限受协议约束的账户密钥 06:21；gakonst：这也解决了资产归集的麻烦，并让地址成为通用接口 06:22。",
+      "url": "https://x.com/gakonst/status/2048905777801576726",
+      "date": "2026-04-28",
+      "title_en": "gakonst: this also removes sweeping and sets up the address as the universal interface",
+      "note_en": "Gakonst: access keys are live; the primitive is account delegation, so rather than moving assets to an escrow, give a third party a key to your account with protocol enforced limits, 06:21; gakonst: this also removes sweeping and sets up the address as the universal interface, 06:22.",
+      "topic_en": "Accounts: access keys and interop addresses"
+    },
+    {
+      "topic": "账户：access keys 与互操作地址",
+      "title": "ERC-7930：移至 Review",
+      "note": "（0xrcinus）提交并合并；ERC-7828：移至 Review（0xrcinus）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1708",
+      "date": "2026-04-28",
+      "title_en": "ERC-7930: Move to Review",
+      "note_en": "(0xrcinus), submitted and merged; ERC-7828: Move to Review (0xrcinus), submitted and merged.",
+      "topic_en": "Accounts: access keys and interop addresses"
+    },
+    {
+      "topic": "账户：access keys 与互操作地址",
+      "title": "ERC-7828：移至 Review",
+      "note": "ERC-7930：移至 Review（0xrcinus）提交并合并；ERC-7828：移至 Review（0xrcinus）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1709",
+      "date": "2026-04-28",
+      "title_en": "ERC-7828: Move to Review",
+      "note_en": "ERC-7930: Move to Review (0xrcinus), submitted and merged; ERC-7828: Move to Review (0xrcinus), submitted and merged.",
+      "topic_en": "Accounts: access keys and interop addresses"
+    },
+    {
+      "topic": "升级与安全",
+      "title": "EIP-7773：提议纳入 EIP-7979 与 EIP-8163",
+      "note": "（nixorokish）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11574",
+      "date": "2026-04-28",
+      "title_en": "EIP-7773: PFI EIP-7979 and EIP-8163",
+      "note_en": "(nixorokish), submitted and merged.",
+      "topic_en": "Upgrades and security"
+    },
+    {
+      "topic": "升级与安全",
+      "title": "binji_x：为非 DeFi 圈用户解释 aave、kelp 与 layerzero 事件，从 rsETH 是什么讲起",
+      "note": "18:02。",
+      "url": "https://x.com/binji_x/status/2049081874098647364",
+      "date": "2026-04-28",
+      "title_en": "binji_x: explains the aave, kelp and layerzero situation for people outside DeFi, starting with what rsETH is",
+      "note_en": "18:02.",
+      "topic_en": "Upgrades and security"
+    },
+    {
+      "topic": "升级与安全",
+      "title": "pcaversaccio：大家痴迷于叠加更多工具和安全层，但每增加一样东西都在增加复杂度，而复杂度正是系统危险的根源",
+      "note": "19:26。",
+      "url": "https://x.com/pcaversaccio/status/2049102934085161140",
+      "date": "2026-04-28",
+      "title_en": "pcaversaccio: people are obsessed with adding more tools and security layers, but every addition adds complexity, and complexity is what makes systems dangerous",
+      "note_en": "19:26.",
+      "topic_en": "Upgrades and security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048：新增链上元数据合约引用扩展",
+      "note": "（nxt3d）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1710",
+      "date": "2026-04-28",
+      "title_en": "ERC-8048: add the Onchain Metadata Contract Reference extension",
+      "note_en": "(nxt3d), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Break This，一个最小化、与系统无关的验证原语",
+      "note": "01:02。",
+      "url": "https://ethresear.ch/t/break-this-a-minimal-system-independent-verification-primitive/24745",
+      "date": "2026-04-28",
+      "title_en": "ethresear.ch: Break This, a minimal, system independent verification primitive",
+      "note_en": "01:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWareLtd：5 月起推出行星级规模隐私",
+      "note": "14:56。",
+      "url": "https://x.com/StarkWareLtd/status/2049034939157381303",
+      "date": "2026-04-28",
+      "title_en": "StarkWareLtd: privacy at planetary scale arrives starting in May",
+      "note_en": "14:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：Unstoppable 是他当前日常使用的 Zcash 钱包",
+      "note": "02:19。",
+      "url": "https://x.com/zooko/status/2048844465474064850",
+      "date": "2026-04-28",
+      "title_en": "zooko: Unstoppable is his current daily driver Zcash wallet",
+      "note_en": "02:19.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：隐私最重要的权衡是体验，其次是可组合性，第三是什么",
+      "note": "21:48。",
+      "url": "https://x.com/EliBenSasson/status/2049138665163551167",
+      "date": "2026-04-28",
+      "title_en": "EliBenSasson: the most important privacy tradeoff is UX, the second is composability; what is the third?",
+      "note_en": "21:48.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/gakonst/status/2048905316126101595",
+    "credit": "X @gakonst",
+    "local_path": "assets/2026-04-28.jpg",
+    "credit_en": "X @gakonst"
+  },
+  "keywords_en": [
+    "EIP-8037 switches to a fixed cost per state byte and adds frame accounting",
+    "EIP-7773 lists EIP-7979 and EIP-8163 as PFI",
+    "Tempo access keys go live",
+    "ERC-7930 and ERC-7828 move to Review",
+    "explaining the aave/kelp/layerzero situation",
+    "complexity is risk"
+  ],
+  "summary_en": "misilva73 submitted an EIP-8037 change that replaces the dynamic cost per state byte with a fixed constant CPSB = 1174 and adds frame accounting rules. nixorokish submitted and merged an EIP-7773 update proposing EIP-7979 and EIP-8163 for inclusion. gakonst announced access keys, replacing escrow contracts with protocol limited key delegation."
+}

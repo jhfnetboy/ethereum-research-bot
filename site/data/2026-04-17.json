@@ -1,0 +1,189 @@
+{
+  "date": "2026-04-17",
+  "keywords": [
+    "Hegotá meta EIP 提议把 EIP-8141 列为 CFI",
+    "frame 加入 value 字段",
+    "EIP-8037 按维度检查区块 gas 上限",
+    "EIP-7954 合约代码上限提至 64KiB",
+    "Google 量子成果的 ZK 证明可被伪造",
+    "Tempo v1.6 周期性支出限额"
+  ],
+  "summary": "dionysuzx 提交 Hegotá meta EIP 更新，把 EIP-8141（frame 交易）列为考虑纳入（CFI），EIP-7716 与 EIP-8205 列为提议纳入，依据是此前 ACD 会议的决定。lightclient 为 frame 加入 `value` 字段，当天提交并合并。Trail of Bits 发现 Google 用来披露量子破解成果的 ZK 证明体系中，任何人都能伪造一个更强攻击的“证明”。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 走向 Hegotá",
+      "title": "EIP-8081：把 EIP-8141 加入 CFI，EIP-7716 与 EIP-8205 加入 PFI",
+      "note": "（dionysuzx）提交，依据是 ACDE #233 与 ACDC #177 上的决定。",
+      "url": "https://github.com/ethereum/EIPs/pull/11537",
+      "date": "2026-04-17",
+      "title_en": "EIP-8081: add EIP-8141 to CFI and EIP-7716 and EIP-8205 to PFI",
+      "note_en": "(dionysuzx), submitted, based on decisions at ACDE #233 and ACDC #177.",
+      "topic_en": "Native AA: EIP-8141 heads for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 走向 Hegotá",
+      "title": "EIP-8141：为 frame 加入 value 字段",
+      "note": "（lightclient）提交并合并：作者原本倾向让账户自己处理用户操作的执行，但现在的重点是让 frame 提供良好的开箱即用体验。",
+      "url": "https://github.com/ethereum/EIPs/pull/11534",
+      "date": "2026-04-17",
+      "title_en": "EIP-8141: add a value field to frames",
+      "note_en": "(lightclient), submitted and merged: the author had preferred leaving execution of the user's operation to the account, but the focus is now on frames giving a good out of the box experience.",
+      "topic_en": "Native AA: EIP-8141 heads for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 走向 Hegotá",
+      "title": "lightclient：nero_eth 说明 EIP-8141 frame 交易将如何减少对中继等中心化服务的依赖并改善隐私",
+      "note": "04:24；nero_eth：隐私协议的取款可以直接支付手续费，无需中继，内存池必须为隐私留出空间 12:24。",
+      "url": "https://x.com/lightclients/status/2044889767096254894",
+      "date": "2026-04-17",
+      "title_en": "lightclient: nero_eth outlines how EIP-8141 frame transactions will reduce reliance on centralized services like relayers and improve privacy",
+      "note_en": "04:24; nero_eth: privacy protocol withdrawals can pay fees directly with no relayers, and privacy must have room in our mempools, 12:24.",
+      "topic_en": "Native AA: EIP-8141 heads for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 走向 Hegotá",
+      "title": "nero_eth：隐私协议的取款可以直接支付手续费，无需中继，内存池必须为隐私留出空间",
+      "note": "lightclient：nero_eth 说明 EIP-8141 frame 交易将如何减少对中继等中心化服务的依赖并改善隐私 04:24；nero_eth：隐私协议的取款可以直接支付手续费，无需中继，内存池必须为隐私留出空间 12:24。",
+      "url": "https://x.com/nero_eth/status/2045010409560609147",
+      "date": "2026-04-17",
+      "title_en": "nero_eth: privacy protocol withdrawals can pay fees directly with no relayers, and privacy must have room in our mempools",
+      "note_en": "Lightclient: nero_eth outlines how EIP-8141 frame transactions will reduce reliance on centralized services like relayers and improve privacy, 04:24; nero_eth: privacy protocol withdrawals can pay fees directly with no relayers, and privacy must have room in our mempools, 12:24.",
+      "topic_en": "Native AA: EIP-8141 heads for Hegotá"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：按维度检查区块 gas 上限",
+      "note": "（misilva73）提交：规定执行前分别按常规 gas 与状态 gas 两个维度检查区块 gas 上限，并更新 `check_transaction` 伪代码。",
+      "url": "https://github.com/ethereum/EIPs/pull/11536",
+      "date": "2026-04-17",
+      "title_en": "EIP-8037: add a per-dimension block gas limit check",
+      "note_en": "(misilva73), submitted: block gas limits are enforced separately for regular and state gas before execution, with updated `check_transaction` pseudocode.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7954：把合约代码大小上限提到 64KiB",
+      "note": "（Giulio2002）提交，同时把 EIP-3860 的 initcode 上限从 48KiB 提到 128KiB。",
+      "url": "https://github.com/ethereum/EIPs/pull/11540",
+      "date": "2026-04-17",
+      "title_en": "EIP-7954: raise the contract code size limit to 64KiB",
+      "note_en": "(Giulio2002), submitted, also raising the EIP-3860 initcode limit from 48KiB to 128KiB.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：所有 frame 失败（包括顶层）时退还状态 gas",
+      "note": "（qu0b）合并；EIP-7928：区块访问索引由 uint16 改为 uint64（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11476",
+      "date": "2026-04-17",
+      "title_en": "EIP-8037: refund state gas on all frame failures including top level",
+      "note_en": "(qu0b), merged; EIP-7928: change the block access index from uint16 to uint64 (nerolation), submitted.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7928：区块访问索引由 uint16 改为 uint64",
+      "note": "EIP-8037：所有 frame 失败（包括顶层）时退还状态 gas（qu0b）合并；EIP-7928：区块访问索引由 uint16 改为 uint64（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11535",
+      "date": "2026-04-17",
+      "title_en": "EIP-7928: change the block access index from uint16 to uint64",
+      "note_en": "EIP-8037: refund state gas on all frame failures including top level (qu0b), merged; EIP-7928: change the block access index from uint16 to uint64 (nerolation), submitted.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "安全与后量子",
+      "title": "trailofbits：Google 用 ZK 证明披露一项把破解加密货币成本降低 20 倍的量子成果，而不公开电路；他们发现任何人都能伪造一个更强攻击的“证明”",
+      "note": "18:02。",
+      "url": "https://x.com/trailofbits/status/2045095428975104009",
+      "date": "2026-04-17",
+      "title_en": "trailofbits: Google used a ZK proof to disclose a quantum result that cuts the cost of breaking cryptocurrency by 20x without revealing the circuit, and they found anyone could forge a \"proof\" of an even stronger attack",
+      "note_en": "18:02.",
+      "topic_en": "Security and post-quantum"
+    },
+    {
+      "topic": "安全与后量子",
+      "title": "gakonst：Tempo v1.6 发布，4 月 21 日测试网、27 日主网，新增基于周期性支出限额的订阅与定期付款，以及基于虚拟地址的自动归集",
+      "note": "02:23。",
+      "url": "https://x.com/gakonst/status/2044859218277134375",
+      "date": "2026-04-17",
+      "title_en": "gakonst: Tempo v1.6 is cut, testnet April 21 and mainnet April 27, adding subscriptions and recurring payments via periodic spend limits plus autosweeping via virtual addresses",
+      "note_en": "02:23.",
+      "topic_en": "Security and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP：EVMification",
+      "note": "（kevaundray）合并；EIP-7732 增加 Nico Flaig 为共同作者（potuz）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11432",
+      "date": "2026-04-17",
+      "title_en": "EIP: EVMification",
+      "note_en": "(kevaundray), merged; EIP-7732: add Nico Flaig as coauthor (potuz), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7732 增加 Nico Flaig 为共同作者",
+      "note": "EIP：EVMification（kevaundray）合并；EIP-7732 增加 Nico Flaig 为共同作者（potuz）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11539",
+      "date": "2026-04-17",
+      "title_en": "EIP-7732: add Nico Flaig as coauthor",
+      "note_en": "EIP: EVMification (kevaundray), merged; EIP-7732: add Nico Flaig as coauthor (potuz), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "etheconomiczone：EEZ 不具强制性，可随时加入或退出",
+      "note": "19:54。",
+      "url": "https://x.com/etheconomiczone/status/2045123682155000291",
+      "date": "2026-04-17",
+      "title_en": "etheconomiczone: the EEZ is not coercive; it is opt in and you can leave anytime",
+      "note_en": "19:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie：Celo 提高基础 gas 费以增加收入，交易成本中位数已上升",
+      "note": "21:18。",
+      "url": "https://x.com/growthepie_eth/status/2045144975508193521",
+      "date": "2026-04-17",
+      "title_en": "growthepie: Celo is raising base gas fees to increase revenue, and median transaction costs are already rising",
+      "note_en": "21:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8352 跨链事件存档",
+      "note": "23:23；Ethereal news #19 发布。",
+      "url": "https://ethereum-magicians.org/t/erc-8352-cross-chain-event-archive/28271",
+      "date": "2026-04-17",
+      "title_en": "Magicians: ERC-8352 Cross-Chain Event Archive",
+      "note_en": "23:23; Ethereal news #19 was published.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：比特币不能放弃为量子做准备，最可能的情况是需要软分叉",
+      "note": "17:23。",
+      "url": "https://x.com/EliBenSasson/status/2045085817152926091",
+      "date": "2026-04-17",
+      "title_en": "EliBenSasson: Bitcoin cannot toss aside quantum readiness, and the most likely path requires a soft fork",
+      "note_en": "17:23.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/trailofbits/status/2045095428975104009",
+    "credit": "X, @trailofbits",
+    "local_path": "assets/2026-04-17.jpg",
+    "credit_en": "X, @trailofbits"
+  },
+  "keywords_en": [
+    "Hegotá meta EIP update puts EIP-8141 in CFI",
+    "a value field for frames",
+    "EIP-8037 checks block gas limits per dimension",
+    "EIP-7954 raises the contract code limit to 64KiB",
+    "ZK proof for Google's quantum result could be forged",
+    "Tempo v1.6 periodic spend limits"
+  ],
+  "summary_en": "dionysuzx submitted a Hegotá meta EIP update listing EIP-8141 (frame transactions) as Considered for Inclusion (CFI) and EIP-7716 and EIP-8205 as Proposed for Inclusion, based on earlier ACD call decisions. lightclient added a `value` field to frames, submitted and merged the same day. Trail of Bits found that in the ZK proof setup Google used to disclose its quantum breakthrough, anyone could forge a \"proof\" of an even stronger attack."
+}

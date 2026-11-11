@@ -1,0 +1,211 @@
+{
+  "date": "2026-04-30",
+  "keywords": [
+    "EIP-8141 在 Hegotá meta EIP 中列为 CFI",
+    "EIP-8141 加入二维 nonce 提案",
+    "EIP-8141 放宽内存池工厂限制合并",
+    "智能账户通用中继架构",
+    "EIP-2780 补齐 CREATE 转账日志成本",
+    "EPF 第 7 期",
+    "Canton 与 Prividium 隐私保证对比"
+  ],
+  "summary": "EIP-8081 合并更新，把 EIP-8141 正式列为 Hegotá 的 CFI，EIP-7716 与 EIP-8205 列为 PFI。nerolation 提交为 EIP-8141 加入二维 nonce 的修改，derekchiang 的放宽内存池工厂限制修改合并。seansing 提出智能账户通用中继架构，定义 relayer_* RPC 命名空间。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "EIP-8081：把 EIP-8141 列为 CFI，EIP-7716 与 EIP-8205 列为 PFI",
+      "note": "（dionysuzx）合并，决定分别来自 ACDE #233 与 ACDC #177。",
+      "url": "https://github.com/ethereum/EIPs/pull/11537",
+      "date": "2026-04-30",
+      "title_en": "EIP-8081: add EIP-8141 to CFI, EIP-7716 and EIP-8205 to PFI",
+      "note_en": "(dionysuzx), merged, recording decisions from ACDE #233 and ACDC #177.",
+      "topic_en": "Native AA: EIP-8141 becomes CFI for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "EIP-8141：放宽内存池规则，不再要求特定工厂",
+      "note": "（derekchiang）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11567",
+      "date": "2026-04-30",
+      "title_en": "EIP-8141: relax mempool rules to not require a specific factory",
+      "note_en": "(derekchiang), merged.",
+      "topic_en": "Native AA: EIP-8141 becomes CFI for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "EIP-8141：加入二维 nonce",
+      "note": "（nerolation）提交：新增 nonce_key，由 (nonce_key, nonce) 选择发送者的某条 nonce 序列，批准支付时递增对应序列，并按 SSTORE 定价收取 nonce_key 成本（0、5000 或 22100）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11584",
+      "date": "2026-04-30",
+      "title_en": "EIP-8141: add 2D nonces",
+      "note_en": "(nerolation), submitted: adds nonce_key so (nonce_key, nonce) selects one of the sender's nonce sequences, increments that sequence on payment approval and charges a nonce_key cost at SSTORE pricing (0, 5000 or 22100).",
+      "topic_en": "Native AA: EIP-8141 becomes CFI for Hegotá"
+    },
+    {
+      "topic": "交易与 gas：中继与计费",
+      "title": "新增 EIP：智能账户通用中继架构",
+      "note": "（seansing）提交：定义 relayer_* JSON-RPC 命名空间，覆盖费用发现、交易提交（含多链）与能力查询，支持无 gas 与代币付费交易；该 PR 后改到 ERC 仓库。",
+      "url": "https://github.com/ethereum/EIPs/pull/11583",
+      "date": "2026-04-30",
+      "title_en": "Add EIP: Generic Relayer Architecture for Smart Accounts",
+      "note_en": "(seansing), submitted: defines a relayer_* JSON-RPC namespace for fee discovery, transaction submission (including multichain) and capability queries, supporting gasless and token fee transactions; the PR later moved to the ERCs repo.",
+      "topic_en": "Transactions and gas: relaying and pricing"
+    },
+    {
+      "topic": "交易与 gas：中继与计费",
+      "title": "EIP-2780：补上带转账的 CREATE 缺失的 EIP-7708 日志成本",
+      "note": "（danceratopz）提交：顶层 CREATE 且 value > 0 时，在固有成本中额外加 TRANSFER_LOG_COST。",
+      "url": "https://github.com/ethereum/EIPs/pull/11586",
+      "date": "2026-04-30",
+      "title_en": "EIP-2780: add the missing EIP-7708 log cost for CREATE with endowment",
+      "note_en": "(danceratopz), submitted: a top level CREATE with value > 0 adds TRANSFER_LOG_COST to intrinsic gas.",
+      "topic_en": "Transactions and gas: relaying and pricing"
+    },
+    {
+      "topic": "交易与 gas：中继与计费",
+      "title": "EIP-7709：移至 Draft",
+      "note": "（jsign）提交：从 Stagnant 恢复为 Draft，删除过时的 Verkle 表述。",
+      "url": "https://github.com/ethereum/EIPs/pull/11587",
+      "date": "2026-04-30",
+      "title_en": "EIP-7709: move to Draft",
+      "note_en": "(jsign), submitted: revived from Stagnant with stale Verkle language removed.",
+      "topic_en": "Transactions and gas: relaying and pricing"
+    },
+    {
+      "topic": "隐私",
+      "title": "ethbeat_org：Canton 与 zksync 的 Prividium 都承诺隐私与合规，但技术保证不同，是信任机构还是信任数学",
+      "note": "21:19。",
+      "url": "https://x.com/ethbeat_org/status/2049856101466648608",
+      "date": "2026-04-30",
+      "title_en": "ethbeat_org: Canton and zksync's Prividium both promise privacy and compliance, but their technical guarantees differ: trust in institutions or trust in math",
+      "note_en": "21:19.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "zksecurityXYZ：如何发现并报告后量子格基零知识证明系统中的漏洞",
+      "note": "21:11。",
+      "url": "https://x.com/zksecurityXYZ/status/2049854197718204446",
+      "date": "2026-04-30",
+      "title_en": "zksecurityXYZ: how they broke and reported bugs in post-quantum lattice based zero knowledge proof systems",
+      "note_en": "21:11.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "binji_x：可从网站证明某个具体事实而不交出整个账户，例如租房时证明收入",
+      "note": "03:05。",
+      "url": "https://x.com/binji_x/status/2049580945678713305",
+      "date": "2026-04-30",
+      "title_en": "binji_x: proving one specific fact from a website without handing over the whole account, such as proving income to rent a house",
+      "note_en": "03:05.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "以太坊基金会博客：以太坊协议研究员计划（EPF）第 7 期",
+      "note": "",
+      "url": "https://blog.ethereum.org/en/2026/04/30/epf-7",
+      "date": "2026-04-30",
+      "title_en": "EF blog: Announcing Cohort 7 of the Ethereum Protocol Fellowship",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7723：新增 ACDE/C 主持人",
+      "note": "（timbeiko）提交并合并；EIP-8182 更新（RogerPodacter）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11585",
+      "date": "2026-04-30",
+      "title_en": "EIP-7723: add new ACDE/C facilitators",
+      "note_en": "(timbeiko), submitted and merged; EIP-8182 update (RogerPodacter), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8182 更新",
+      "note": "EIP-7723：新增 ACDE/C 主持人（timbeiko）提交并合并；EIP-8182 更新（RogerPodacter）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11581",
+      "date": "2026-04-30",
+      "title_en": "EIP-8182 update",
+      "note_en": "EIP-7723: add new ACDE/C facilitators (timbeiko), submitted and merged; EIP-8182 update (RogerPodacter), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：合约托管的应用 HTML",
+      "note": "（z0r0z）提交，合约通过 html() 视图接口提供自身前端；Magicians 讨论 18:53。",
+      "url": "https://github.com/ethereum/ERCs/pull/1712",
+      "date": "2026-04-30",
+      "title_en": "Add ERC: Contract-Hosted Application HTML",
+      "note_en": "(z0r0z), submitted, where a contract serves its own frontend through an html() view; Magicians discussion, 18:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians 讨论",
+      "note": "新增 ERC：合约托管的应用 HTML（z0r0z）提交，合约通过 html() 视图接口提供自身前端；Magicians 讨论 18:53。",
+      "url": "https://ethereum-magicians.org/t/erc-8244-contract-hosted-application-html/28407",
+      "date": "2026-04-30",
+      "title_en": "Magicians discussion",
+      "note_en": "Add ERC: Contract-Hosted Application HTML (z0r0z), submitted, where a contract serves its own frontend through an html() view; Magicians discussion, 18:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Apple Silicon 上 GPU 加速 WHIR 证明，M1 上最多比 CPU 快 2.03 倍",
+      "note": "23:10。",
+      "url": "https://ethresear.ch/t/gpu-accelerated-whir-proving-on-apple-silicon/24762",
+      "date": "2026-04-30",
+      "title_en": "ethresear.ch: GPU accelerated WHIR proving on Apple Silicon, up to 2.03x faster than CPU on M1",
+      "note_en": "23:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zengjiajun_eth：基于 ERC-4337 的 AI 代理钱包，带链上支出限额、2FA 与 CLI",
+      "note": "02:37。",
+      "url": "https://x.com/zengjiajun_eth/status/2049573833489674484",
+      "date": "2026-04-30",
+      "title_en": "zengjiajun_eth: an ERC-4337 AI agent wallet with onchain spending limits, 2FA and a CLI",
+      "note_en": "02:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "growthepie_eth：过去 7 天以太坊 L1 铭文产生超过 50 万美元 gas 费",
+      "note": "17:01。",
+      "url": "https://x.com/growthepie_eth/status/2049791303936872664",
+      "date": "2026-04-30",
+      "title_en": "growthepie_eth: inscriptions generated over $500,000 in gas fees on Ethereum L1 in the last 7 days",
+      "note_en": "17:01.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWareLtd：隐私兼具真正的护城河与不受市场周期影响的需求",
+      "note": "18:56。",
+      "url": "https://x.com/StarkWareLtd/status/2049820234299682955",
+      "date": "2026-04-30",
+      "title_en": "StarkWareLtd: privacy combines a real moat with demand regardless of market conditions",
+      "note_en": "18:56.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8244-contract-hosted-application-html/28407",
+    "credit": "Ethereum Magicians, ERC-8244: Contract-Hosted Application HTML",
+    "local_path": "assets/2026-04-30.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8244: Contract-Hosted Application HTML"
+  },
+  "keywords_en": [
+    "EIP-8141 listed as CFI in the Hegotá meta EIP",
+    "2D nonces proposed for EIP-8141",
+    "EIP-8141 mempool factory relaxation merged",
+    "generic relayer architecture for smart accounts",
+    "EIP-2780 adds the missing CREATE transfer log cost",
+    "EPF cohort 7",
+    "Canton vs Prividium privacy guarantees"
+  ],
+  "summary_en": "An EIP-8081 update merged, formally listing EIP-8141 as CFI for Hegotá and EIP-7716 and EIP-8205 as PFI. nerolation submitted a change adding 2D nonces to EIP-8141, and derekchiang's mempool factory relaxation merged. seansing proposed a generic relayer architecture for smart accounts with a relayer_* RPC namespace."
+}

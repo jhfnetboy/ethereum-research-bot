@@ -1,0 +1,231 @@
+{
+  "date": "2026-04-21",
+  "keywords": [
+    "Arbitrum 安全委员会冻结攻击者 ETH",
+    "受害者与“人为干预”之争",
+    "EIP-8182 私密转账更新合并",
+    "frame 交易规范验证器 ERC",
+    "按写入年龄分层状态 EIP 合并",
+    "原生 rollup 无需信任多签",
+    "Starknet 原生隐私"
+  ],
+  "summary": "围绕 KelpDAO 事件，Arbitrum 安全委员会冻结了攻击者的 ETH。samczsun 称这是受害者的大日子；dankrad 认为安全委员会出手阻止朝鲜是好事，关键是未来的边界在哪里；binji_x 则感慨只能靠可信的人为干预来阻止。RogerPodacter 两次更新 EIP-8182（私密 ETH 与 ERC-20 转账），均当天提交并合并。derekchiang 提交 frame 交易规范验证器 ERC。",
+  "items": [
+    {
+      "topic": "安全与治理：冻结攻击者资金",
+      "title": "Ethereal news #20",
+      "note": "据 Ethereal news #20，Arbitrum 安全委员会冻结了攻击者的 ETH。",
+      "url": "https://ethereal.news/ethereal-news-weekly-20/",
+      "date": "2026-04-21",
+      "title_en": "Ethereal news #20",
+      "note_en": "According to Ethereal news #20, the Arbitrum security council froze the exploiter's ETH.",
+      "topic_en": "Security and governance: freezing exploiter funds"
+    },
+    {
+      "topic": "安全与治理：冻结攻击者资金",
+      "title": "samczsun：对 KelpDAO 事件受害者是重要的一天，希望行业由此意识到可以在做有用产品的同时保护用户",
+      "note": "12:08。",
+      "url": "https://x.com/samczsun/status/2046455983082267096",
+      "date": "2026-04-21",
+      "title_en": "samczsun: a huge day for victims of the KelpDAO hack, and hopefully the day the industry realized it can build useful products while protecting users",
+      "note_en": "12:08.",
+      "topic_en": "Security and governance: freezing exploiter funds"
+    },
+    {
+      "topic": "安全与治理：冻结攻击者资金",
+      "title": "dankrad：安全委员会挺身而出阻止朝鲜很好，有意思的问题是未来的边界在哪里；他希望加密项目建立自己的管辖规则并明确决策方式",
+      "note": "15:23。",
+      "url": "https://x.com/dankrad/status/2046505104338047421",
+      "date": "2026-04-21",
+      "title_en": "dankrad: it is great the security council stepped up and stopped North Korea; the interesting question is where the line will be, and he would like crypto projects to establish their own jurisdictions and define how they decide",
+      "note_en": "15:23.",
+      "topic_en": "Security and governance: freezing exploiter funds"
+    },
+    {
+      "topic": "安全与治理：冻结攻击者资金",
+      "title": "binji_x：可以为朝鲜没拿到 7000 万美元制造核武器而高兴，也可以为只能靠可信的人为干预才阻止它而难过",
+      "note": "22:13。",
+      "url": "https://x.com/binji_x/status/2046608359072124952",
+      "date": "2026-04-21",
+      "title_en": "binji_x: you can be happy North Korea did not get $70m for nuclear weapons and sad that trusted human intervention was the only way to stop it",
+      "note_en": "22:13.",
+      "topic_en": "Security and governance: freezing exploiter funds"
+    },
+    {
+      "topic": "安全与治理：冻结攻击者资金",
+      "title": "ladislaus0x：原生 rollup 直接继承以太坊的安全，没有需要信任的多签、需要游说的委员会或可被俘获的治理，已有概念验证实现",
+      "note": "16:31；donnoh_eth：无论 DVN 如何配置，使用默认库的 OFT 都可能被 LayerZero Labs 单独控制的 3/5 多签卷走 23:54。",
+      "url": "https://x.com/ladislaus0x/status/2046522102853877829",
+      "date": "2026-04-21",
+      "title_en": "ladislaus0x: native rollups inherit Ethereum's security directly, with no multisig to trust, council to lobby or governance to capture, and PoC implementations exist",
+      "note_en": "16:31; donnoh_eth: regardless of DVN setup, an OFT using default libraries can be rugged by a 3/5 multisig controlled by LayerZero Labs alone, 23:54.",
+      "topic_en": "Security and governance: freezing exploiter funds"
+    },
+    {
+      "topic": "安全与治理：冻结攻击者资金",
+      "title": "donnoh_eth：无论 DVN 如何配置，使用默认库的 OFT 都可能被 LayerZero Labs 单独控制的 3/5 多签卷走",
+      "note": "ladislaus0x：原生 rollup 直接继承以太坊的安全，没有需要信任的多签、需要游说的委员会或可被俘获的治理，已有概念验证实现 16:31；donnoh_eth：无论 DVN 如何配置，使用默认库的 OFT 都可能被 LayerZero Labs 单独控制的 3/5 多签卷走 23:54。",
+      "url": "https://x.com/donnoh_eth/status/2046633638578586021",
+      "date": "2026-04-21",
+      "title_en": "donnoh_eth: regardless of DVN setup, an OFT using default libraries can be rugged by a 3/5 multisig controlled by LayerZero Labs alone",
+      "note_en": "Ladislaus0x: native rollups inherit Ethereum's security directly, with no multisig to trust, council to lobby or governance to capture, and PoC implementations exist, 16:31; donnoh_eth: regardless of DVN setup, an OFT using default libraries can be rugged by a 3/5 multisig controlled by LayerZero Labs alone, 23:54.",
+      "topic_en": "Security and governance: freezing exploiter funds"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "EIP-8182 更新",
+      "note": "（RogerPodacter）与再次更新均提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11551",
+      "date": "2026-04-21",
+      "title_en": "EIP-8182 update",
+      "note_en": "(RogerPodacter) and a second update, each submitted and merged.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "再次更新",
+      "note": "EIP-8182 更新（RogerPodacter）与再次更新均提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11552",
+      "date": "2026-04-21",
+      "title_en": "a second update",
+      "note_en": "EIP-8182 update (RogerPodacter) and a second update, each submitted and merged.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "ERC：frame 交易的规范验证器",
+      "note": "（derekchiang）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1695",
+      "date": "2026-04-21",
+      "title_en": "ERC: canonical verifiers for frame transactions",
+      "note_en": "(derekchiang), submitted.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "StarkWare：Starknet 现已支持原生隐私",
+      "note": "15:05；ethbeat_org：Aztec 上线，拥有 4000 多个无许可排序器并内置协议级隐私，在 L2 中属首次 15:41。",
+      "url": "https://x.com/StarkWareLtd/status/2046500492398723514",
+      "date": "2026-04-21",
+      "title_en": "StarkWare: native privacy is now possible on Starknet",
+      "note_en": "15:05; ethbeat_org: Aztec launched with 4000+ permissionless sequencers and protocol level privacy, a first among L2s, 15:41.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "ethbeat_org：Aztec 上线，拥有 4000 多个无许可排序器并内置协议级隐私，在 L2 中属首次",
+      "note": "StarkWare：Starknet 现已支持原生隐私 15:05；ethbeat_org：Aztec 上线，拥有 4000 多个无许可排序器并内置协议级隐私，在 L2 中属首次 15:41。",
+      "url": "https://x.com/ethbeat_org/status/2046509672102793525",
+      "date": "2026-04-21",
+      "title_en": "ethbeat_org: Aztec launched with 4000+ permissionless sequencers and protocol level privacy, a first among L2s",
+      "note_en": "StarkWare: native privacy is now possible on Starknet, 15:05; ethbeat_org: Aztec launched with 4000+ permissionless sequencers and protocol level privacy, a first among L2s, 15:41.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "状态与 gas",
+      "title": "新 EIP：按写入年龄分层状态",
+      "note": "（weiihann）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11390",
+      "date": "2026-04-21",
+      "title_en": "New EIP: State Tiering by Write Age",
+      "note_en": "(weiihann), merged.",
+      "topic_en": "State and gas"
+    },
+    {
+      "topic": "状态与 gas",
+      "title": "EIP-7928：区块访问列表索引改为 uint32",
+      "note": "（nerolation）合并；EIP-8159：空 BAL 响应改为 0x80 空字符串（nerolation）提交并合并；EIP-8142：BiB 模块化（jihoonsong）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11550",
+      "date": "2026-04-21",
+      "title_en": "EIP-7928: block access list index to uint32",
+      "note_en": "(nerolation), merged; EIP-8159: correct the empty BAL response to the 0x80 empty string (nerolation), submitted and merged; EIP-8142: make BiB modular (jihoonsong), merged.",
+      "topic_en": "State and gas"
+    },
+    {
+      "topic": "状态与 gas",
+      "title": "EIP-8159：空 BAL 响应改为 0x80 空字符串",
+      "note": "EIP-7928：区块访问列表索引改为 uint32（nerolation）合并；EIP-8159：空 BAL 响应改为 0x80 空字符串（nerolation）提交并合并；EIP-8142：BiB 模块化（jihoonsong）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11553",
+      "date": "2026-04-21",
+      "title_en": "EIP-8159: correct the empty BAL response to the 0x80 empty string",
+      "note_en": "EIP-7928: block access list index to uint32 (nerolation), merged; EIP-8159: correct the empty BAL response to the 0x80 empty string (nerolation), submitted and merged; EIP-8142: make BiB modular (jihoonsong), merged.",
+      "topic_en": "State and gas"
+    },
+    {
+      "topic": "状态与 gas",
+      "title": "EIP-8142：BiB 模块化",
+      "note": "EIP-7928：区块访问列表索引改为 uint32（nerolation）合并；EIP-8159：空 BAL 响应改为 0x80 空字符串（nerolation）提交并合并；EIP-8142：BiB 模块化（jihoonsong）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11530",
+      "date": "2026-04-21",
+      "title_en": "EIP-8142: make BiB modular",
+      "note_en": "EIP-7928: block access list index to uint32 (nerolation), merged; EIP-8159: correct the empty BAL response to the 0x80 empty string (nerolation), submitted and merged; EIP-8142: make BiB modular (jihoonsong), merged.",
+      "topic_en": "State and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "bkiepuszewski：rsETH 风波后的几点经验，以太坊上的 rsETH 与 L2 上的 rsETH 是不同的",
+      "note": "18:03；SEAL：LayerZero DVN 安全事件的初步结论 05:02。",
+      "url": "https://x.com/bkiepuszewski/status/2046545419765772756",
+      "date": "2026-04-21",
+      "title_en": "bkiepuszewski: lessons after the rsETH drama; rsETH on Ethereum and rsETH on L2s are different",
+      "note_en": "18:03; SEAL: initial takeaways from the LayerZero DVN security incident, 05:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "SEAL：LayerZero DVN 安全事件的初步结论",
+      "note": "bkiepuszewski：rsETH 风波后的几点经验，以太坊上的 rsETH 与 L2 上的 rsETH 是不同的 18:03；SEAL：LayerZero DVN 安全事件的初步结论 05:02。",
+      "url": "https://x.com/_SEAL_Org/status/2046348720799719801",
+      "date": "2026-04-21",
+      "title_en": "SEAL: initial takeaways from the LayerZero DVN security incident",
+      "note_en": "Bkiepuszewski: lessons after the rsETH drama; rsETH on Ethereum and rsETH on L2s are different, 18:03; SEAL: initial takeaways from the LayerZero DVN security incident, 05:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat_org：Arsia 升级后 Mantle 从 Validium 转为 ZK Rollup",
+      "note": "21:20。",
+      "url": "https://x.com/ethbeat_org/status/2046595028114366573",
+      "date": "2026-04-21",
+      "title_en": "ethbeat_org: after the Arsia upgrade Mantle moved from a Validium to a ZK Rollup",
+      "note_en": "21:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8236 延迟结算同质化代币",
+      "note": "05:47。",
+      "url": "https://ethereum-magicians.org/t/erc-8236-deferred-settlement-fungible-tokens/28295",
+      "date": "2026-04-21",
+      "title_en": "Magicians: ERC-8236 Deferred-Settlement Fungible Tokens",
+      "note_en": "05:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EFDevcon：抗审查、开源、隐私、安全是以太坊的核心价值",
+      "note": "21:12。",
+      "url": "https://x.com/EFDevcon/status/2046592909160423453",
+      "date": "2026-04-21",
+      "title_en": "EFDevcon: censorship resistance, open source, privacy and security are core Ethereum values",
+      "note_en": "21:12.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/dankrad/status/2046505104338047421",
+    "credit": "X, @dankrad",
+    "local_path": "assets/2026-04-21.jpg",
+    "credit_en": "X, @dankrad"
+  },
+  "keywords_en": [
+    "Arbitrum security council freezes exploiter ETH",
+    "victims versus \"human intervention\"",
+    "EIP-8182 private transfer updates merged",
+    "canonical verifiers ERC for frame transactions",
+    "state tiering by write age EIP merged",
+    "native rollups with no multisig",
+    "Starknet native privacy"
+  ],
+  "summary_en": "In the KelpDAO aftermath, the Arbitrum security council froze the exploiter's ETH. samczsun called it a huge day for victims; dankrad said it was great the council stopped North Korea and the question is where the line will be; binji_x lamented that trusted human intervention was the only way to stop it. RogerPodacter updated EIP-8182 (private ETH and ERC-20 transfers) twice, each submitted and merged the same day. derekchiang submitted an ERC for canonical frame transaction verifiers."
+}

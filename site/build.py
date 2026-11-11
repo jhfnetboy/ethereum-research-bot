@@ -90,6 +90,7 @@ STRINGS = {
         "back": "返回目录",
         "image_alt": "{date} 配图",
         "credit_label": "配图来源：",
+        "default_credit": "默认配图（当日无可用真实配图）",
         "credit_fallback": "配图来源",
         "untitled": "未命名条目",
         "other_topic": "其他",
@@ -159,6 +160,7 @@ STRINGS = {
         "back": "Back to all reports",
         "image_alt": "Image for {date}",
         "credit_label": "Image: ",
+        "default_credit": "Default image (no real image available for this day)",
         "credit_fallback": "Image source",
         "untitled": "Untitled item",
         "other_topic": "Other",
@@ -285,7 +287,12 @@ def item_groups(items: list, lang: str) -> list[tuple[str, list]]:
     return groups
 
 
+DEFAULT_IMAGE = "default.jpg"
+
+
 def image_name(day: dict) -> str:
+    if day.get("_default_image"):
+        return DEFAULT_IMAGE
     image = day.get("image")
     if not isinstance(image, dict):
         return ""
@@ -404,6 +411,8 @@ def media_block(c: Ctx, day: dict, img_exists: bool, eager: bool = False) -> tup
     image = day.get("image") if isinstance(day.get("image"), dict) else {}
     credit = (tr(image, "credit", c.lang) or "").strip()
     source_url = (image.get("source_url") or "").strip()
+    if day.get("_default_image"):
+        credit, source_url = c.s["default_credit"], ""
     alt = c.s["image_alt"].format(date=fmt_date(day["date"], c.lang))
     if name:
         loading = "eager" if eager else "lazy"
@@ -986,25 +995,34 @@ html[lang="en"] body { font-family: ui-sans-serif, system-ui, -apple-system, "Se
 
 
 def copy_images(days: list[dict], site_root: Path, dist_assets: Path) -> set[str]:
+    """Copy each day's image; a day with no usable image falls back to assets/default.jpg."""
     dist_assets.mkdir(parents=True, exist_ok=True)
     present: set[str] = set()
+    default_src = site_root / "assets" / DEFAULT_IMAGE
     for day in days:
-        image = day.get("image") if isinstance(day.get("image"), dict) else None
-        if not image:
-            continue
-        local = (image.get("local_path") or "").replace("\\", "/").lstrip("/")
-        if not local:
-            continue
-        src = site_root / local
-        if not src.is_file():
-            alt = site_root / "assets" / Path(local).name
-            src = alt if alt.is_file() else src
-        if not src.is_file():
-            print(f"warning: image not found for {day['date']}: {local}", file=sys.stderr)
-            continue
-        shutil.copyfile(src, dist_assets / src.name)
-        present.add(src.name)
+        if not _copy_day_image(day, site_root, dist_assets, present) and default_src.is_file():
+            day["_default_image"] = True
+    if any(d.get("_default_image") for d in days):
+        shutil.copyfile(default_src, dist_assets / DEFAULT_IMAGE)
+        present.add(DEFAULT_IMAGE)
     return present
+
+
+def _copy_day_image(day: dict, site_root: Path, dist_assets: Path, present: set[str]) -> bool:
+    image = day.get("image") if isinstance(day.get("image"), dict) else None
+    local = ((image or {}).get("local_path") or "").replace("\\", "/").lstrip("/")
+    if not local:
+        return False
+    src = site_root / local
+    if not src.is_file():
+        alt = site_root / "assets" / Path(local).name
+        src = alt if alt.is_file() else src
+    if not src.is_file():
+        print(f"warning: image not found for {day['date']}: {local}, using default", file=sys.stderr)
+        return False
+    shutil.copyfile(src, dist_assets / src.name)
+    present.add(src.name)
+    return True
 
 
 def write(path: Path, text: str) -> None:

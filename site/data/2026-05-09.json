@@ -1,0 +1,119 @@
+{
+  "date": "2026-05-09",
+  "keywords": [
+    "访问层隐私工具 Hermetic",
+    "Vitalik 谈实时证明与同步可组合 rollup",
+    "无信任桥的意愿几乎为零",
+    "STARK 抗量子",
+    "ERC-8259 AI 代理身份与威胁注册表",
+    "ERC-8183 澄清整数宽度"
+  ],
+  "summary": "周六。raulvk 发布访问层隐私实验工具 Hermetic，指出每次链上读写都会向 ISP、DNS、RPC、索引器、bundler 与链泄露元数据。etheconomiczone 发布 Vitalik 与 jbaylina 的访谈，讨论实时证明与同步可组合 rollup 如何解决 L2 碎片化。bkiepuszewski 批评社区缺乏建设真正无信任跨链桥的意愿。",
+  "items": [
+    {
+      "topic": "隐私：访问层元数据",
+      "title": "raulvk：隐私应是普遍默认而非极客选项，每次链上读写都会向 ISP、DNS、RPC、索引器、bundler 与链泄露元数据；Hermetic 是访问层隐私的模块化实验场，仍处 alpha 阶段",
+      "note": "00:53。",
+      "url": "https://x.com/raulvk/status/2052809187759931556",
+      "date": "2026-05-09",
+      "title_en": "raulvk: privacy should be the universal default, not a cypherpunk flag; every onchain read and write leaks metadata to the ISP, DNS, RPC, indexer, bundler and chain; Hermetic is a modular playground for access layer privacy, still very alpha",
+      "note_en": "00:53.",
+      "topic_en": "Privacy: access layer metadata"
+    },
+    {
+      "topic": "互操作与桥",
+      "title": "etheconomiczone：Vitalik 在 EthPrague 与 jbaylina 对谈 EEZ 技术原语，通过实时证明与同步可组合 rollup 框架扩展以太坊，解决 L2 碎片化",
+      "note": "18:29。",
+      "url": "https://x.com/etheconomiczone/status/2053074929835209111",
+      "date": "2026-05-09",
+      "title_en": "etheconomiczone: Vitalik and jbaylina at EthPrague on the EEZ primitives, extending Ethereum through a real time proving and synchronously composable rollup framework to solve L2 fragmentation",
+      "note_en": "18:29.",
+      "topic_en": "Interop and bridges"
+    },
+    {
+      "topic": "互操作与桥",
+      "title": "bkiepuszewski：社区建设真正无信任桥的意愿几乎为零，用户被告知改信厂商 B 而不是厂商 A，或者自建桥",
+      "note": "14:06。",
+      "url": "https://x.com/bkiepuszewski/status/2053008606971224087",
+      "date": "2026-05-09",
+      "title_en": "bkiepuszewski: the community's will to build truly trustless bridges is next to zero; users are told to trust Vendor B instead of Vendor A or build their own bridge",
+      "note_en": "14:06.",
+      "topic_en": "Interop and bridges"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWareLtd：量子计算机会攻破哪些密码学，不包括 ZK-STARK",
+      "note": "18:16。",
+      "url": "https://x.com/StarkWareLtd/status/2053071701831790855",
+      "date": "2026-05-09",
+      "title_en": "StarkWareLtd: what cryptography breaks under quantum computers; not ZK-STARKs",
+      "note_en": "18:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8259 AI 代理身份与威胁注册表",
+      "note": "06:37；ERC 构想：由地址派生的不可转让代币 20:20。",
+      "url": "https://ethereum-magicians.org/t/erc-8259-ai-agent-identity-threat-registry/28473",
+      "date": "2026-05-09",
+      "title_en": "Magicians: ERC-8259 AI Agent Identity and Threat Registry",
+      "note_en": "06:37; ERC idea: Address-Derived Non-Transferable Token, 20:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC 构想：由地址派生的不可转让代币",
+      "note": "Magicians：ERC-8259 AI 代理身份与威胁注册表 06:37；ERC 构想：由地址派生的不可转让代币 20:20。",
+      "url": "https://ethereum-magicians.org/t/erc-idea-address-derived-non-transferable-token-soulbound-token/28475",
+      "date": "2026-05-09",
+      "title_en": "ERC idea: Address-Derived Non-Transferable Token",
+      "note_en": "Magicians: ERC-8259 AI Agent Identity and Threat Registry, 06:37; ERC idea: Address-Derived Non-Transferable Token, 20:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8183：澄清整数宽度对外部 ABI 具规范性",
+      "note": "（mrocker）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1732",
+      "date": "2026-05-09",
+      "title_en": "ERC-8183: clarify that integer widths are normative for the external ABI",
+      "note_en": "(mrocker), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "sigp_io：给每位成员 250 美元自主捐给 Giveth 项目，公共物品资助不应由一人决定",
+      "note": "07:38。",
+      "url": "https://x.com/sigp_io/status/2052911160354312217",
+      "date": "2026-05-09",
+      "title_en": "sigp_io: gave every team member $250 to donate to any Giveth project; public goods funding should not be decided by one person",
+      "note_en": "07:38.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：旅行 24 小时后上线，发现团队已在无人监督下发布了 rotki 新版本",
+      "note": "19:31。",
+      "url": "https://x.com/LefterisJP/status/2053090467969995184",
+      "date": "2026-05-09",
+      "title_en": "LefterisJP: came online after 24 hours of travel to find the team had shipped a whole rotki release unsupervised",
+      "note_en": "19:31.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/raulvk/status/2052809187759931556",
+    "credit": "X @raulvk",
+    "local_path": "assets/2026-05-09.jpg",
+    "credit_en": "X @raulvk"
+  },
+  "keywords_en": [
+    "Hermetic access layer privacy tool",
+    "Vitalik on real time proving and synchronously composable rollups",
+    "almost no will to build trustless bridges",
+    "STARKs and quantum resistance",
+    "ERC-8259 AI Agent Identity and Threat Registry",
+    "ERC-8183 clarifies integer widths"
+  ],
+  "summary_en": "A Saturday. raulvk released Hermetic, an experimental access layer privacy tool, noting that every onchain read and write leaks metadata to the ISP, DNS, RPC, indexer, bundler and chain. etheconomiczone shared an interview with Vitalik and jbaylina on how real time proving and synchronously composable rollups address L2 fragmentation. bkiepuszewski criticized the lack of will to build truly trustless bridges."
+}
