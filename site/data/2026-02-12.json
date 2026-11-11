@@ -1,0 +1,211 @@
+{
+  "date": "2026-02-12",
+  "keywords": [
+    "ACDE #230 列出 Hegotá 执行层头号候选 LUCID",
+    "EIP-8141",
+    "EIP-8105 与 EIP-7807",
+    "bal-devnet-3 范围",
+    "eth/71 区块访问列表交换 EIP-8159",
+    "首次 L1 zkEVM 专场",
+    "以太坊为隐私而生"
+  ],
+  "summary": "ACDE #230 梳理 Hegotá 执行层头号候选：LUCID 加密交易池已介绍、2 月 18 日开专场，EIP-8141 frame 交易的执行规范实现与测试进行中，另有 EIP-8105 加密交易池与 EIP-7807 SSZ 执行区块；客户端团队需在下次 ACDE 前写出偏好，再下一次决定。bal-devnet-3 范围包括 EIP-8037 与 EIP-7954。首次 L1 zkEVM 专场举行。",
+  "items": [
+    {
+      "topic": "Hegotá 头号提案：AA 与加密内存池",
+      "title": "ACDE #230",
+      "note": "21:00，据 Ethereal news #11：执行层头号候选包括 LUCID 加密交易池（已介绍，2 月 18 日专场）、EIP-8141 frame 交易（执行规范实现与测试进行中）、EIP-8105 通用协议内加密内存池 与 EIP-7807 SSZ 执行区块；客户端团队在下次 ACDE 前写出偏好（含不设执行层头号的选项），再下一次 ACDE 决定。",
+      "url": "https://forkcast.org/calls/acde/230",
+      "date": "2026-02-12",
+      "title_en": "ACDE #230",
+      "note_en": "21:00, per Ethereal news #11: execution layer headliner candidates are the LUCID encrypted transaction pool (presented, breakout February 18), EIP-8141 frame transaction (execution spec implementation and tests in progress), EIP-8105 universal enshrined encrypted mempool and EIP-7807 SSZ execution blocks; client teams will write up preferences, including no execution layer headliner, for the next ACDE with a decision at the one after.",
+      "topic_en": "Hegotá headliners: AA and encrypted mempools"
+    },
+    {
+      "topic": "Hegotá 头号提案：AA 与加密内存池",
+      "title": "Ethereal news #11",
+      "note": "ACDE #230 21:00，据 Ethereal news #11：执行层头号候选包括 LUCID 加密交易池（已介绍，2 月 18 日专场）、EIP-8141 frame 交易（执行规范实现与测试进行中）、EIP-8105 通用协议内加密内存池 与 EIP-7807 SSZ 执行区块；客户端团队在下次 ACDE 前写出偏好（含不设执行层头号的选项），再下一次 ACDE 决定。",
+      "url": "https://ethereal.news/ethereal-news-weekly-11/",
+      "date": "2026-02-12",
+      "title_en": "Ethereal news #11",
+      "note_en": "ACDE #230, 21:00, per Ethereal news #11: execution layer headliner candidates are the LUCID encrypted transaction pool (presented, breakout February 18), EIP-8141 frame transaction (execution spec implementation and tests in progress), EIP-8105 universal enshrined encrypted mempool and EIP-7807 SSZ execution blocks; client teams will write up preferences, including no execution layer headliner, for the next ACDE with a decision at the one after.",
+      "topic_en": "Hegotá headliners: AA and encrypted mempools"
+    },
+    {
+      "topic": "Hegotá 头号提案：AA 与加密内存池",
+      "title": "LUCID 加密交易池",
+      "note": "ACDE #230 21:00，据 Ethereal news #11：执行层头号候选包括 LUCID 加密交易池（已介绍，2 月 18 日专场）、EIP-8141 frame 交易（执行规范实现与测试进行中）、EIP-8105 通用协议内加密内存池 与 EIP-7807 SSZ 执行区块；客户端团队在下次 ACDE 前写出偏好（含不设执行层头号的选项），再下一次 ACDE 决定。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-lucid-encrypted-mempool/27658",
+      "date": "2026-02-12",
+      "title_en": "LUCID encrypted transaction pool",
+      "note_en": "ACDE #230, 21:00, per Ethereal news #11: execution layer headliner candidates are the LUCID encrypted transaction pool (presented, breakout February 18), EIP-8141 frame transaction (execution spec implementation and tests in progress), EIP-8105 universal enshrined encrypted mempool and EIP-7807 SSZ execution blocks; client teams will write up preferences, including no execution layer headliner, for the next ACDE with a decision at the one after.",
+      "topic_en": "Hegotá headliners: AA and encrypted mempools"
+    },
+    {
+      "topic": "Hegotá 头号提案：AA 与加密内存池",
+      "title": "EIP-8141 frame 交易",
+      "note": "ACDE #230 21:00，据 Ethereal news #11：执行层头号候选包括 LUCID 加密交易池（已介绍，2 月 18 日专场）、EIP-8141 frame 交易（执行规范实现与测试进行中）、EIP-8105 通用协议内加密内存池 与 EIP-7807 SSZ 执行区块；客户端团队在下次 ACDE 前写出偏好（含不设执行层头号的选项），再下一次 ACDE 决定。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-frame-transaction/27618",
+      "date": "2026-02-12",
+      "title_en": "EIP-8141 frame transaction",
+      "note_en": "ACDE #230, 21:00, per Ethereal news #11: execution layer headliner candidates are the LUCID encrypted transaction pool (presented, breakout February 18), EIP-8141 frame transaction (execution spec implementation and tests in progress), EIP-8105 universal enshrined encrypted mempool and EIP-7807 SSZ execution blocks; client teams will write up preferences, including no execution layer headliner, for the next ACDE with a decision at the one after.",
+      "topic_en": "Hegotá headliners: AA and encrypted mempools"
+    },
+    {
+      "topic": "Hegotá 头号提案：AA 与加密内存池",
+      "title": "EIP-8105 通用协议内加密内存池",
+      "note": "ACDE #230 21:00，据 Ethereal news #11：执行层头号候选包括 LUCID 加密交易池（已介绍，2 月 18 日专场）、EIP-8141 frame 交易（执行规范实现与测试进行中）、EIP-8105 通用协议内加密内存池 与 EIP-7807 SSZ 执行区块；客户端团队在下次 ACDE 前写出偏好（含不设执行层头号的选项），再下一次 ACDE 决定。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-eip-8105-universal-enshrined-encrypted-mempool-eem/27448",
+      "date": "2026-02-12",
+      "title_en": "EIP-8105 universal enshrined encrypted mempool",
+      "note_en": "ACDE #230, 21:00, per Ethereal news #11: execution layer headliner candidates are the LUCID encrypted transaction pool (presented, breakout February 18), EIP-8141 frame transaction (execution spec implementation and tests in progress), EIP-8105 universal enshrined encrypted mempool and EIP-7807 SSZ execution blocks; client teams will write up preferences, including no execution layer headliner, for the next ACDE with a decision at the one after.",
+      "topic_en": "Hegotá headliners: AA and encrypted mempools"
+    },
+    {
+      "topic": "Hegotá 头号提案：AA 与加密内存池",
+      "title": "EIP-7807 SSZ 执行区块",
+      "note": "ACDE #230 21:00，据 Ethereal news #11：执行层头号候选包括 LUCID 加密交易池（已介绍，2 月 18 日专场）、EIP-8141 frame 交易（执行规范实现与测试进行中）、EIP-8105 通用协议内加密内存池 与 EIP-7807 SSZ 执行区块；客户端团队在下次 ACDE 前写出偏好（含不设执行层头号的选项），再下一次 ACDE 决定。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-ssz-execution-blocks/27619",
+      "date": "2026-02-12",
+      "title_en": "EIP-7807 SSZ execution blocks",
+      "note_en": "ACDE #230, 21:00, per Ethereal news #11: execution layer headliner candidates are the LUCID encrypted transaction pool (presented, breakout February 18), EIP-8141 frame transaction (execution spec implementation and tests in progress), EIP-8105 universal enshrined encrypted mempool and EIP-7807 SSZ execution blocks; client teams will write up preferences, including no execution layer headliner, for the next ACDE with a decision at the one after.",
+      "topic_en": "Hegotá headliners: AA and encrypted mempools"
+    },
+    {
+      "topic": "Glamsterdam 与网络",
+      "title": "EIP-8037",
+      "note": "ACDE #230 确定 bal-devnet-3 范围：eth_simulateV1、EIP-8037 状态创建成本、EIP-7954 合约大小与 EIP-7975 eth/70 部分区块收据列表（83M 以上 gas limit 所需）；eth/71 将加入后续 devnet。",
+      "url": "https://forkcast.org/eips/8037/",
+      "date": "2026-02-12",
+      "title_en": "EIP-8037",
+      "note_en": "ACDE #230 set bal-devnet-3 scope: eth_simulateV1, EIP-8037 state creation cost, EIP-7954 contract size and EIP-7975 eth/70 partial block receipt lists (needed for a gas limit above 83M); eth/71 joins a later devnet.",
+      "topic_en": "Glamsterdam and networking"
+    },
+    {
+      "topic": "Glamsterdam 与网络",
+      "title": "EIP-7954",
+      "note": "ACDE #230 确定 bal-devnet-3 范围：eth_simulateV1、EIP-8037 状态创建成本、EIP-7954 合约大小与 EIP-7975 eth/70 部分区块收据列表（83M 以上 gas limit 所需）；eth/71 将加入后续 devnet。",
+      "url": "https://forkcast.org/eips/7954/",
+      "date": "2026-02-12",
+      "title_en": "EIP-7954",
+      "note_en": "ACDE #230 set bal-devnet-3 scope: eth_simulateV1, EIP-8037 state creation cost, EIP-7954 contract size and EIP-7975 eth/70 partial block receipt lists (needed for a gas limit above 83M); eth/71 joins a later devnet.",
+      "topic_en": "Glamsterdam and networking"
+    },
+    {
+      "topic": "Glamsterdam 与网络",
+      "title": "新增 EIP：eth/71 区块访问列表交换",
+      "note": "（nerolation）提交，Magicians 讨论帖 EIP-8159 14:09；EIP-8024：改用无分支归一化并扩展 EXCHANGE（frangio）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11307",
+      "date": "2026-02-12",
+      "title_en": "Add EIP: eth/71 Block Access List Exchange",
+      "note_en": "(nerolation), submitted, with the Magicians thread EIP-8159, 14:09; EIP-8024: switch to branchless normalization and extend EXCHANGE (frangio), submitted.",
+      "topic_en": "Glamsterdam and networking"
+    },
+    {
+      "topic": "Glamsterdam 与网络",
+      "title": "Magicians 讨论帖 EIP-8159",
+      "note": "新增 EIP：eth/71 区块访问列表交换（nerolation）提交，Magicians 讨论帖 EIP-8159 14:09；EIP-8024：改用无分支归一化并扩展 EXCHANGE（frangio）提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8159-eth-71-block-access-list-exchange/27725",
+      "date": "2026-02-12",
+      "title_en": "Magicians thread EIP-8159",
+      "note_en": "Add EIP: eth/71 Block Access List Exchange (nerolation), submitted, with the Magicians thread EIP-8159, 14:09; EIP-8024: switch to branchless normalization and extend EXCHANGE (frangio), submitted.",
+      "topic_en": "Glamsterdam and networking"
+    },
+    {
+      "topic": "Glamsterdam 与网络",
+      "title": "EIP-8024：改用无分支归一化并扩展 EXCHANGE",
+      "note": "新增 EIP：eth/71 区块访问列表交换（nerolation）提交，Magicians 讨论帖 EIP-8159 14:09；EIP-8024：改用无分支归一化并扩展 EXCHANGE（frangio）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11306",
+      "date": "2026-02-12",
+      "title_en": "EIP-8024: switch to branchless normalization and extend EXCHANGE",
+      "note_en": "Add EIP: eth/71 Block Access List Exchange (nerolation), submitted, with the Magicians thread EIP-8159, 14:09; EIP-8024: switch to branchless normalization and extend EXCHANGE (frangio), submitted.",
+      "topic_en": "Glamsterdam and networking"
+    },
+    {
+      "topic": "Glamsterdam 与网络",
+      "title": "ladislaus0x：首次 L1 zkEVM 专场举行，八个工作流都有进展",
+      "note": "21:54。",
+      "url": "https://x.com/ladislaus0x/status/2021961042348163181",
+      "date": "2026-02-12",
+      "title_en": "ladislaus0x: the first L1-zkEVM breakout call happened, with progress across eight workstreams",
+      "note_en": "21:54.",
+      "topic_en": "Glamsterdam and networking"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：主 Agent 注册表",
+      "note": "（nxt3d）提交，ERC-8160 讨论帖 21:43；ERC-8155：内核编排的模块化合约 15:56。",
+      "url": "https://github.com/ethereum/ERCs/pull/1536",
+      "date": "2026-02-12",
+      "title_en": "Add ERC: Primary Agent Registry",
+      "note_en": "(nxt3d), submitted, with the ERC-8160 thread, 21:43; ERC-8155: Kernel-Orchestrated Modular Contracts, 15:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8160 讨论帖",
+      "note": "新增 ERC：主 Agent 注册表（nxt3d）提交，ERC-8160 讨论帖 21:43；ERC-8155：内核编排的模块化合约 15:56。",
+      "url": "https://ethereum-magicians.org/t/erc-8160-primary-agent-registry-address-to-agent-resolution/27727",
+      "date": "2026-02-12",
+      "title_en": "ERC-8160 thread",
+      "note_en": "Add ERC: Primary Agent Registry (nxt3d), submitted, with the ERC-8160 thread, 21:43; ERC-8155: Kernel-Orchestrated Modular Contracts, 15:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8155：内核编排的模块化合约",
+      "note": "新增 ERC：主 Agent 注册表（nxt3d）提交，ERC-8160 讨论帖 21:43；ERC-8155：内核编排的模块化合约 15:56。",
+      "url": "https://ethereum-magicians.org/t/erc-8155-kernel-orchestrated-modular-contracts/27726",
+      "date": "2026-02-12",
+      "title_en": "ERC-8155: Kernel-Orchestrated Modular Contracts",
+      "note_en": "Add ERC: Primary Agent Registry (nxt3d), submitted, with the ERC-8160 thread, 21:43; ERC-8155: Kernel-Orchestrated Modular Contracts, 15:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：以太坊为隐私而生",
+      "note": "00:38；fede_intern：以太坊社会层的巨变正在发生 23:41；trent_vanepps：与后量子工作一样，zkEVM 工作已进行很久，2026 年将有重大更新 19:01。",
+      "url": "https://x.com/ethereum/status/2021639960097698090",
+      "date": "2026-02-12",
+      "title_en": "ethereum: Ethereum is for privacy",
+      "note_en": "00:38; fede_intern: the seismic change in Ethereum's social layer is happening, 23:41; trent_vanepps: like post-quantum work, the zkEVM effort has run a long time, with major updates expected in 2026, 19:01.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：以太坊社会层的巨变正在发生",
+      "note": "ethereum：以太坊为隐私而生 00:38；fede_intern：以太坊社会层的巨变正在发生 23:41；trent_vanepps：与后量子工作一样，zkEVM 工作已进行很久，2026 年将有重大更新 19:01。",
+      "url": "https://x.com/fede_intern/status/2021987989610508651",
+      "date": "2026-02-12",
+      "title_en": "fede_intern: the seismic change in Ethereum's social layer is happening",
+      "note_en": "Ethereum: Ethereum is for privacy, 00:38; fede_intern: the seismic change in Ethereum's social layer is happening, 23:41; trent_vanepps: like post-quantum work, the zkEVM effort has run a long time, with major updates expected in 2026, 19:01.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trent_vanepps：与后量子工作一样，zkEVM 工作已进行很久，2026 年将有重大更新",
+      "note": "ethereum：以太坊为隐私而生 00:38；fede_intern：以太坊社会层的巨变正在发生 23:41；trent_vanepps：与后量子工作一样，zkEVM 工作已进行很久，2026 年将有重大更新 19:01。",
+      "url": "https://x.com/trent_vanepps/status/2021917585160221183",
+      "date": "2026-02-12",
+      "title_en": "trent_vanepps: like post-quantum work, the zkEVM effort has run a long time, with major updates expected in 2026",
+      "note_en": "Ethereum: Ethereum is for privacy, 00:38; fede_intern: the seismic change in Ethereum's social layer is happening, 23:41; trent_vanepps: like post-quantum work, the zkEVM effort has run a long time, with major updates expected in 2026, 19:01.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8159-eth-71-block-access-list-exchange/27725",
+    "credit": "Ethereum Magicians, EIP-8159: eth/71 - Block Access List Exchange",
+    "local_path": "assets/2026-02-12.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8159: eth/71 - Block Access List Exchange"
+  },
+  "keywords_en": [
+    "ACDE #230 lists Hegotá execution layer headliner candidates LUCID",
+    "EIP-8141",
+    "EIP-8105 and EIP-7807",
+    "bal-devnet-3 scope",
+    "eth/71 Block Access List Exchange EIP-8159",
+    "the first L1-zkEVM breakout",
+    "Ethereum is for privacy"
+  ],
+  "summary_en": "ACDE #230 reviewed Hegotá execution layer headliner candidates: LUCID's encrypted pool was presented with a breakout on February 18, EIP-8141 frame transaction spec implementation and tests are in progress, and EIP-8105 encrypted pool and EIP-7807 SSZ execution blocks are also in the running; client teams will write up preferences for the next ACDE, with a decision the call after. bal-devnet-3 scope includes EIP-8037 and EIP-7954. The first L1-zkEVM breakout took place."
+}

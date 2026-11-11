@@ -1,0 +1,107 @@
+{
+  "date": "2026-03-07",
+  "keywords": [
+    "最终性工具从 Casper FFG 换成 Minimmit",
+    "美国财政部称合法用户可用混币器保护隐私",
+    "EIP-8130 命名与 k1 行为",
+    "受检算术操作码 EIP-8219",
+    "单轮投票的担忧"
+  ],
+  "summary": "VitalikButerin 补充 strawmap 中把最终性工具从两轮的 Casper FFG 换成 Minimmit 的提议。AndyGuzmanEth 引用美国财政部表态：合法用户可借助混币器在公链上获得金融隐私。chunter-cb 澄清 EIP-8130 命名与 k1 行为，提交并合并。",
+  "items": [
+    {
+      "topic": "隐私：政策信号",
+      "title": "AndyGuzmanEth：美国财政部称数字资产的合法用户可借助混币器在公链交易时获得金融隐私，这是隐私开发者的重大胜利",
+      "note": "07:32。",
+      "url": "https://x.com/AndyGuzmanEth/status/2030079200099446891",
+      "date": "2026-03-07",
+      "title_en": "AndyGuzmanEth: the US Treasury says lawful users of digital assets may use mixers for financial privacy on public blockchains, a big win for privacy builders",
+      "note_en": "07:32.",
+      "topic_en": "Privacy: a policy signal"
+    },
+    {
+      "topic": "共识：Minimmit",
+      "title": "VitalikButerin：忘了提的重要技术项是把最终性工具从 Casper FFG 换成 Minimmit，FFG 需要每个见证者签名两次才能最终确定",
+      "note": "01:54；benjaminion_xyz：讨论快速最终性时，最令人担心的是改为单轮投票 02:22。",
+      "url": "https://x.com/VitalikButerin/status/2029994081582207235",
+      "date": "2026-03-07",
+      "title_en": "VitalikButerin: an important item I forgot is switching the finality gadget from Casper FFG to Minimmit; FFG needs each attester to sign twice to justify and then finalize",
+      "note_en": "01:54; benjaminion_xyz: in fast finality discussions the move to one voting round causes the most concern, 02:22.",
+      "topic_en": "Consensus: Minimmit"
+    },
+    {
+      "topic": "共识：Minimmit",
+      "title": "benjaminion_xyz：讨论快速最终性时，最令人担心的是改为单轮投票",
+      "note": "VitalikButerin：忘了提的重要技术项是把最终性工具从 Casper FFG 换成 Minimmit，FFG 需要每个见证者签名两次才能最终确定 01:54；benjaminion_xyz：讨论快速最终性时，最令人担心的是改为单轮投票 02:22。",
+      "url": "https://x.com/benjaminion_xyz/status/2030001133142303168",
+      "date": "2026-03-07",
+      "title_en": "benjaminion_xyz: in fast finality discussions the move to one voting round causes the most concern",
+      "note_en": "VitalikButerin: an important item I forgot is switching the finality gadget from Casper FFG to Minimmit; FFG needs each attester to sign twice to justify and then finalize, 01:54; benjaminion_xyz: in fast finality discussions the move to one voting round causes the most concern, 02:22.",
+      "topic_en": "Consensus: Minimmit"
+    },
+    {
+      "topic": "原生 AA",
+      "title": "EIP-8130：理清命名与 k1 行为",
+      "note": "（chunter-cb）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11382",
+      "date": "2026-03-07",
+      "title_en": "EIP-8130: clear up naming and k1 behaviour",
+      "note_en": "(chunter-cb), submitted and merged.",
+      "topic_en": "Native AA"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8219 受检算术操作码",
+      "note": "09:38；ERC-7786 进入 Final（Amxx）合并；ERC-6960 加入参考实现与测试（Aboudjem）合并。",
+      "url": "https://ethereum-magicians.org/t/eip-8219-checked-arithmetic-opcodes/27913",
+      "date": "2026-03-07",
+      "title_en": "Magicians: EIP-8219 Checked Arithmetic Opcodes",
+      "note_en": "09:38; ERC-7786: move to Final (Amxx), merged; ERC-6960: reference implementation and tests (Aboudjem), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7786 进入 Final",
+      "note": "Magicians：EIP-8219 受检算术操作码 09:38；ERC-7786 进入 Final（Amxx）合并；ERC-6960 加入参考实现与测试（Aboudjem）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1586",
+      "date": "2026-03-07",
+      "title_en": "ERC-7786: move to Final",
+      "note_en": "Magicians: EIP-8219 Checked Arithmetic Opcodes, 09:38; ERC-7786: move to Final (Amxx), merged; ERC-6960: reference implementation and tests (Aboudjem), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-6960 加入参考实现与测试",
+      "note": "Magicians：EIP-8219 受检算术操作码 09:38；ERC-7786 进入 Final（Amxx）合并；ERC-6960 加入参考实现与测试（Aboudjem）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1584",
+      "date": "2026-03-07",
+      "title_en": "ERC-6960: reference implementation and tests",
+      "note_en": "Magicians: EIP-8219 Checked Arithmetic Opcodes, 09:38; ERC-7786: move to Final (Amxx), merged; ERC-6960: reference implementation and tests (Aboudjem), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：又一轮 Zcash 协议规范致敬",
+      "note": "02:28。",
+      "url": "https://x.com/zooko/status/2030002625828245541",
+      "date": "2026-03-07",
+      "title_en": "zooko: another round of Zcash protocol spec appreciation",
+      "note_en": "02:28.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8219-checked-arithmetic-opcodes/27913",
+    "credit": "Ethereum Magicians, EIP-8219: Checked Arithmetic Opcodes",
+    "local_path": "assets/2026-03-07.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8219: Checked Arithmetic Opcodes"
+  },
+  "keywords_en": [
+    "Switching the finality gadget from Casper FFG to Minimmit",
+    "the US Treasury says lawful users may use mixers for privacy",
+    "EIP-8130 naming and k1 behavior",
+    "Checked Arithmetic Opcodes EIP-8219",
+    "concerns about single round voting"
+  ],
+  "summary_en": "VitalikButerin added the strawmap proposal to replace the two round Casper FFG finality gadget with Minimmit. AndyGuzmanEth cited the US Treasury saying lawful users may use mixers for financial privacy on public blockchains. chunter-cb clarified EIP-8130 naming and k1 behavior, submitted and merged."
+}

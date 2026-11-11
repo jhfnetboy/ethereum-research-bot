@@ -1,0 +1,139 @@
+{
+  "date": "2026-02-18",
+  "keywords": [
+    "EF 协议 2026 优先事项改为扩容",
+    "改进 UX 与加固 L1 三条主线",
+    "EOA 原生密钥委托 EIP 提交",
+    "多 Agent AI 的隐私支付通道 PrivateX402",
+    "Lean Ethereum 视频系列",
+    "Glamsterdam Repricings #2"
+  ],
+  "summary": "EF 协议团队发布 2026 年优先事项：在扩容 L1、扩容 blob 与改进 UX 的基础上，重组为扩容、改进 UX 与加固 L1 三条主线。prestwich 提交 EOA 原生密钥委托 EIP，让 EIP-7702 委托支持非 ECDSA 密钥。Nethermind 研究员提出 PrivateX402，为多 Agent AI 系统提供隐私支付通道。",
+  "items": [
+    {
+      "topic": "路线：EF 协议 2026 优先事项",
+      "title": "EF 博客：2026 协议优先事项更新",
+      "note": "（Protocol track leads）：2025 年 Pectra 上线 EIP-7702 让 EOA 可执行合约代码，实现批处理、gas 赞助与社交恢复，并使 blob 吞吐翻倍；2026 年设三条主线，扩容（Ansgar、Marius、Raúl）、改进 UX（Barnabé、Matt）与加固 L1（Fredrik、Pari、Thomas）。",
+      "url": "https://blog.ethereum.org/en/2026/02/18/protocol-priorities-update-2026",
+      "date": "2026-02-18",
+      "title_en": "EF blog: Protocol Priorities Update for 2026",
+      "note_en": "(Protocol track leads): in 2025 Pectra shipped EIP-7702, letting EOAs run contract code for batching, gas sponsorship and social recovery, and doubled blob throughput; 2026 has three tracks, Scale (Ansgar, Marius, Raúl), Improve UX (Barnabé, Matt) and Harden the L1 (Fredrik, Pari, Thomas).",
+      "topic_en": "Roadmap: EF Protocol priorities for 2026"
+    },
+    {
+      "topic": "账户：EOA 原生密钥委托",
+      "title": "新增 EIP：EOA 原生密钥委托",
+      "note": "（prestwich）提交：把 EIP-7702 委托扩展到非 ECDSA 密钥，新增同时支持原生密钥委托与签名的交易类型，首个类型为 ed25519。",
+      "url": "https://github.com/ethereum/EIPs/pull/11330",
+      "date": "2026-02-18",
+      "title_en": "Add EIP: Native Key Delegation for EOAs",
+      "note_en": "(prestwich), submitted: extends EIP-7702 delegation to non ECDSA keys with a new transaction type for native key delegation and signing, starting with ed25519.",
+      "topic_en": "Accounts: native key delegation for EOAs"
+    },
+    {
+      "topic": "账户：EOA 原生密钥委托",
+      "title": "EIP-2780：澄清与其他 EIP 的交互",
+      "note": "（gurukamath）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11332",
+      "date": "2026-02-18",
+      "title_en": "EIP-2780: clarify interactions with other EIPs",
+      "note_en": "(gurukamath), submitted.",
+      "topic_en": "Accounts: native key delegation for EOAs"
+    },
+    {
+      "topic": "隐私：Agent 支付",
+      "title": "ethresear.ch：PrivateX402，多 Agent AI 系统的隐私支付通道",
+      "note": "（Nethermind 的 Conor McMenamin 与 Artem Grigor）16:04：现有协议会暴露用户向哪些 Agent 付款及金额，泄露意图与行为模式，中心化中介能隐藏信息却带来单点风险。",
+      "url": "https://ethresear.ch/t/privatex402-privacy-preserving-payment-channels-for-multi-agent-ai-systems/24151",
+      "date": "2026-02-18",
+      "title_en": "ethresear.ch: PrivateX402, privacy preserving payment channels for multi agent AI systems",
+      "note_en": "(Conor McMenamin and Artem Grigor of Nethermind), 16:04: current protocols reveal which agents a user pays and how much, leaking intent and behavior, while a centralized facilitator can hide this but adds a single point of failure.",
+      "topic_en": "Privacy: agent payments"
+    },
+    {
+      "topic": "其他动态",
+      "title": "leanEthereum：zeroknowledgefm 六集 Lean Ethereum 视频系列，涵盖后量子签名与 SNARK 聚合",
+      "note": "23:23；Glamsterdam Repricings #2 议程 17:05；ACDT #71 议程 00:36。",
+      "url": "https://x.com/leanEthereum/status/2024157760133177735",
+      "date": "2026-02-18",
+      "title_en": "leanEthereum: a six part zeroknowledgefm video series on Lean Ethereum covering PQ signatures and SNARK aggregation",
+      "note_en": "23:23; Glamsterdam Repricings #2 agenda, 17:05; ACDT #71 agenda, 00:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #2 议程",
+      "note": "leanEthereum：zeroknowledgefm 六集 Lean Ethereum 视频系列，涵盖后量子签名与 SNARK 聚合 23:23；Glamsterdam Repricings #2 议程 17:05；ACDT #71 议程 00:36。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-2-feb-18-2026/27761",
+      "date": "2026-02-18",
+      "title_en": "Glamsterdam Repricings #2 agenda",
+      "note_en": "LeanEthereum: a six part zeroknowledgefm video series on Lean Ethereum covering PQ signatures and SNARK aggregation, 23:23; Glamsterdam Repricings #2 agenda, 17:05; ACDT #71 agenda, 00:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #71 议程",
+      "note": "leanEthereum：zeroknowledgefm 六集 Lean Ethereum 视频系列，涵盖后量子签名与 SNARK 聚合 23:23；Glamsterdam Repricings #2 议程 17:05；ACDT #71 议程 00:36。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-71-february-23-2026/27758",
+      "date": "2026-02-18",
+      "title_en": "ACDT #71 agenda",
+      "note_en": "LeanEthereum: a six part zeroknowledgefm video series on Lean Ethereum covering PQ signatures and SNARK aggregation, 23:23; Glamsterdam Repricings #2 agenda, 17:05; ACDT #71 agenda, 00:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：RLNC 优化",
+      "note": "08:42；EIP-8148：修正字节码中 MAX_REQUESTS_PER_BLOCK（GarmashAlex）提交。",
+      "url": "https://ethresear.ch/t/rlnc-optimizations/24149",
+      "date": "2026-02-18",
+      "title_en": "ethresear.ch: RLNC Optimizations",
+      "note_en": "08:42; EIP-8148: correct MAX_REQUESTS_PER_BLOCK in bytecode (GarmashAlex), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8148：修正字节码中 MAX_REQUESTS_PER_BLOCK",
+      "note": "ethresear.ch：RLNC 优化 08:42；EIP-8148：修正字节码中 MAX_REQUESTS_PER_BLOCK（GarmashAlex）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11331",
+      "date": "2026-02-18",
+      "title_en": "EIP-8148: correct MAX_REQUESTS_PER_BLOCK in bytecode",
+      "note_en": "Ethresear.ch: RLNC Optimizations, 08:42; EIP-8148: correct MAX_REQUESTS_PER_BLOCK in bytecode (GarmashAlex), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：推荐一篇关于伊朗监控影响的文章",
+      "note": "19:57；AndyGuzmanEth：在 Privacy Salon 分享的十个观点 09:33。",
+      "url": "https://x.com/VitalikButerin/status/2024106047460475063",
+      "date": "2026-02-18",
+      "title_en": "VitalikButerin: recommending a post on the impact of surveillance in Iran",
+      "note_en": "19:57; AndyGuzmanEth: ten hot takes from the Privacy Salon, 09:33.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：在 Privacy Salon 分享的十个观点",
+      "note": "VitalikButerin：推荐一篇关于伊朗监控影响的文章 19:57；AndyGuzmanEth：在 Privacy Salon 分享的十个观点 09:33。",
+      "url": "https://x.com/AndyGuzmanEth/status/2023948970599547155",
+      "date": "2026-02-18",
+      "title_en": "AndyGuzmanEth: ten hot takes from the Privacy Salon",
+      "note_en": "VitalikButerin: recommending a post on the impact of surveillance in Iran, 19:57; AndyGuzmanEth: ten hot takes from the Privacy Salon, 09:33.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/02/18/protocol-priorities-update-2026",
+    "credit": "Ethereum Foundation Blog, Protocol Priorities Update for 2026",
+    "local_path": "assets/2026-02-18.jpg",
+    "credit_en": "Ethereum Foundation Blog, Protocol Priorities Update for 2026"
+  },
+  "keywords_en": [
+    "EF Protocol's 2026 priorities become Scale",
+    "Improve UX and Harden the L1",
+    "Native Key Delegation for EOAs EIP submitted",
+    "PrivateX402 private payment channels for multi agent AI",
+    "a Lean Ethereum video series",
+    "Glamsterdam Repricings #2"
+  ],
+  "summary_en": "EF Protocol published its 2026 priorities, regrouping last year's Scale L1, Scale Blobs and Improve UX into three tracks: Scale, Improve UX and Harden the L1. prestwich submitted the Native Key Delegation for EOAs EIP, letting EIP-7702 delegation support non ECDSA keys. Nethermind researchers proposed PrivateX402, private payment channels for multi agent AI systems."
+}

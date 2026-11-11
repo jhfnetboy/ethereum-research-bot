@@ -1,0 +1,171 @@
+{
+  "date": "2026-02-17",
+  "keywords": [
+    "通用协议内加密内存池 EIP-8105 合并",
+    "区块访问列表 sidecar EIP 合并",
+    "EF 成立 Platform 团队",
+    "Ethereum Protocol Studies 2026",
+    "EIP-8037 储备机制澄清",
+    "预留 EXTENSION 操作码 EIP-8163",
+    "快速最终性讨论"
+  ],
+  "summary": "jannikluhn 的通用协议内加密内存池 EIP 合并（EIP-8105），这是 Hegotá 执行层头号候选之一。EF 宣布成立 Platform 团队，改善 L1 与 L2 的关系。spencer-tb 提交 EIP-8037 储备机制澄清。nerolation 的 BAL sidecar EIP 合并。",
+  "items": [
+    {
+      "topic": "交易隐私：EIP-8105",
+      "title": "新增 EIP：通用协议内加密内存池",
+      "note": "（jannikluhn）合并，即 Hegotá 头号候选 EIP-8105。",
+      "url": "https://github.com/ethereum/EIPs/pull/10943",
+      "date": "2026-02-17",
+      "title_en": "Add EIP: Universal Enshrined Encrypted Mempool",
+      "note_en": "(jannikluhn), merged; it is EIP-8105, a Hegotá headliner candidate.",
+      "topic_en": "Transaction privacy: EIP-8105"
+    },
+    {
+      "topic": "Gas 与执行",
+      "title": "EIP-8037：澄清储备机制",
+      "note": "（spencer-tb）提交：修正 EELS 实现中发现的小问题，说明 calldata 下限与退款的交互，明确 refund_counter 是单一不分维度的计数器，EIP-7702 授权退款计入状态 gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/11328",
+      "date": "2026-02-17",
+      "title_en": "EIP-8037: clarify reservoir mechanics",
+      "note_en": "(spencer-tb), submitted: fixes small issues found while implementing in EELS, documents how the calldata floor interacts with refunds, and clarifies that refund_counter is a single undimensioned counter with EIP-7702 authorization refunds going to state gas.",
+      "topic_en": "Gas and execution"
+    },
+    {
+      "topic": "Gas 与执行",
+      "title": "新增 EIP：预留 EXTENSION（0xae）操作码",
+      "note": "（pdobacz）提交，Magicians 讨论帖 EIP-8163 19:22；新增 EIP：区块访问列表 sidecar（nerolation）合并；EIP-7976：更新实证报告（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11327",
+      "date": "2026-02-17",
+      "title_en": "Add EIP: Reserve EXTENSION (0xae) opcode",
+      "note_en": "(pdobacz), submitted, with the Magicians thread EIP-8163, 19:22; Add EIP: Block Access List Sidecars (nerolation), merged; EIP-7976: update empirical report (nerolation), submitted and merged.",
+      "topic_en": "Gas and execution"
+    },
+    {
+      "topic": "Gas 与执行",
+      "title": "Magicians 讨论帖 EIP-8163",
+      "note": "新增 EIP：预留 EXTENSION（0xae）操作码（pdobacz）提交，Magicians 讨论帖 EIP-8163 19:22；新增 EIP：区块访问列表 sidecar（nerolation）合并；EIP-7976：更新实证报告（nerolation）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/eip-8163-reserve-extension-0xae-opcode/27756",
+      "date": "2026-02-17",
+      "title_en": "Magicians thread EIP-8163",
+      "note_en": "Add EIP: Reserve EXTENSION (0xae) opcode (pdobacz), submitted, with the Magicians thread EIP-8163, 19:22; Add EIP: Block Access List Sidecars (nerolation), merged; EIP-7976: update empirical report (nerolation), submitted and merged.",
+      "topic_en": "Gas and execution"
+    },
+    {
+      "topic": "Gas 与执行",
+      "title": "新增 EIP：区块访问列表 sidecar",
+      "note": "新增 EIP：预留 EXTENSION（0xae）操作码（pdobacz）提交，Magicians 讨论帖 EIP-8163 19:22；新增 EIP：区块访问列表 sidecar（nerolation）合并；EIP-7976：更新实证报告（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11254",
+      "date": "2026-02-17",
+      "title_en": "Add EIP: Block Access List Sidecars",
+      "note_en": "Add EIP: Reserve EXTENSION (0xae) opcode (pdobacz), submitted, with the Magicians thread EIP-8163, 19:22; Add EIP: Block Access List Sidecars (nerolation), merged; EIP-7976: update empirical report (nerolation), submitted and merged.",
+      "topic_en": "Gas and execution"
+    },
+    {
+      "topic": "Gas 与执行",
+      "title": "EIP-7976：更新实证报告",
+      "note": "新增 EIP：预留 EXTENSION（0xae）操作码（pdobacz）提交，Magicians 讨论帖 EIP-8163 19:22；新增 EIP：区块访问列表 sidecar（nerolation）合并；EIP-7976：更新实证报告（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11326",
+      "date": "2026-02-17",
+      "title_en": "EIP-7976: update empirical report",
+      "note_en": "Add EIP: Reserve EXTENSION (0xae) opcode (pdobacz), submitted, with the Magicians thread EIP-8163, 19:22; Add EIP: Block Access List Sidecars (nerolation), merged; EIP-7976: update empirical report (nerolation), submitted and merged.",
+      "topic_en": "Gas and execution"
+    },
+    {
+      "topic": "EF 与生态",
+      "title": "EF 博客：EF 成立 Platform 团队",
+      "note": "（Josh Rudolf）：目标是打造最强的以太坊平台，改善 L1 与 L2 关系，使各层相互强化；EF 博客：Ethereum Protocol Studies 2026：新增密码学、lean 共识与 zkEVM 课程及自学平台，2 月 23 日开课。",
+      "url": "https://blog.ethereum.org/en/2026/02/17/platform",
+      "date": "2026-02-17",
+      "title_en": "EF blog: Announcing the Platform Team at EF",
+      "note_en": "(Josh Rudolf): the goal is the strongest possible Ethereum platform, improving the L1 and L2 relationship so the layers reinforce each other; EF blog: Ethereum Protocol Studies 2026: new tracks in cryptography, lean consensus and zkEVM plus a self paced platform, starting February 23.",
+      "topic_en": "EF and ecosystem"
+    },
+    {
+      "topic": "EF 与生态",
+      "title": "EF 博客：Ethereum Protocol Studies 2026",
+      "note": "EF 博客：EF 成立 Platform 团队（Josh Rudolf）：目标是打造最强的以太坊平台，改善 L1 与 L2 关系，使各层相互强化；EF 博客：Ethereum Protocol Studies 2026：新增密码学、lean 共识与 zkEVM 课程及自学平台，2 月 23 日开课。",
+      "url": "https://blog.ethereum.org/en/2026/02/17/ethereum-protocol-studies-26",
+      "date": "2026-02-17",
+      "title_en": "EF blog: Ethereum Protocol Studies 2026",
+      "note_en": "EF blog: Announcing the Platform Team at EF (Josh Rudolf): the goal is the strongest possible Ethereum platform, improving the L1 and L2 relationship so the layers reinforce each other; EF blog: Ethereum Protocol Studies 2026: new tracks in cryptography, lean consensus and zkEVM plus a self paced platform, starting February 23.",
+      "topic_en": "EF and ecosystem"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #175 议程",
+      "note": "07:21；ACDE #231 议程 07:22；ERC-8162：Agent 订阅协议 01:19。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-175-feb-19-2026/27752",
+      "date": "2026-02-17",
+      "title_en": "ACDC #175 agenda",
+      "note_en": "07:21; ACDE #231 agenda, 07:22; ERC-8162: Agent Subscription Protocol, 01:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #231 议程",
+      "note": "ACDC #175 议程 07:21；ACDE #231 议程 07:22；ERC-8162：Agent 订阅协议 01:19。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-231-feb-26-2026/27753",
+      "date": "2026-02-17",
+      "title_en": "ACDE #231 agenda",
+      "note_en": "ACDC #175 agenda, 07:21; ACDE #231 agenda, 07:22; ERC-8162: Agent Subscription Protocol, 01:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8162：Agent 订阅协议",
+      "note": "ACDC #175 议程 07:21；ACDE #231 议程 07:22；ERC-8162：Agent 订阅协议 01:19。",
+      "url": "https://ethereum-magicians.org/t/erc-8162-agent-subscription-protocol/27751",
+      "date": "2026-02-17",
+      "title_en": "ERC-8162: Agent Subscription Protocol",
+      "note_en": "ACDC #175 agenda, 07:21; ACDE #231 agenda, 07:22; ERC-8162: Agent Subscription Protocol, 01:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "benjaminion_xyz：征集关心以太坊快速最终性的 L2、跨链桥、交易所与客户端团队交流",
+      "note": "22:09；StarkWareLtd：把 EY 的 ZK 隐私层 Nightfall 带到 Starknet，为机构提供保密支付 22:28；ladislaus0x：没有共享标准，每个 zkVM 都是孤岛 22:02。",
+      "url": "https://x.com/benjaminion_xyz/status/2023776842910462248",
+      "date": "2026-02-17",
+      "title_en": "benjaminion_xyz: inviting L2s, bridges, exchanges and client teams who care about fast finality on Ethereum to talk",
+      "note_en": "22:09; StarkWareLtd: bringing EY's ZK privacy layer Nightfall to Starknet for confidential institutional payments, 22:28; ladislaus0x: without shared standards every zkVM is an island, 22:02.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWareLtd：把 EY 的 ZK 隐私层 Nightfall 带到 Starknet，为机构提供保密支付",
+      "note": "benjaminion_xyz：征集关心以太坊快速最终性的 L2、跨链桥、交易所与客户端团队交流 22:09；StarkWareLtd：把 EY 的 ZK 隐私层 Nightfall 带到 Starknet，为机构提供保密支付 22:28；ladislaus0x：没有共享标准，每个 zkVM 都是孤岛 22:02。",
+      "url": "https://x.com/StarkWareLtd/status/2023781524382867469",
+      "date": "2026-02-17",
+      "title_en": "StarkWareLtd: bringing EY's ZK privacy layer Nightfall to Starknet for confidential institutional payments",
+      "note_en": "Benjaminion_xyz: inviting L2s, bridges, exchanges and client teams who care about fast finality on Ethereum to talk, 22:09; StarkWareLtd: bringing EY's ZK privacy layer Nightfall to Starknet for confidential institutional payments, 22:28; ladislaus0x: without shared standards every zkVM is an island, 22:02.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ladislaus0x：没有共享标准，每个 zkVM 都是孤岛",
+      "note": "benjaminion_xyz：征集关心以太坊快速最终性的 L2、跨链桥、交易所与客户端团队交流 22:09；StarkWareLtd：把 EY 的 ZK 隐私层 Nightfall 带到 Starknet，为机构提供保密支付 22:28；ladislaus0x：没有共享标准，每个 zkVM 都是孤岛 22:02。",
+      "url": "https://x.com/ladislaus0x/status/2023775122356621330",
+      "date": "2026-02-17",
+      "title_en": "ladislaus0x: without shared standards every zkVM is an island",
+      "note_en": "Benjaminion_xyz: inviting L2s, bridges, exchanges and client teams who care about fast finality on Ethereum to talk, 22:09; StarkWareLtd: bringing EY's ZK privacy layer Nightfall to Starknet for confidential institutional payments, 22:28; ladislaus0x: without shared standards every zkVM is an island, 22:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/02/17/platform",
+    "credit": "Ethereum Foundation Blog, Announcing the Platform Team at EF",
+    "local_path": "assets/2026-02-17.jpg",
+    "credit_en": "Ethereum Foundation Blog, Announcing the Platform Team at EF"
+  },
+  "keywords_en": [
+    "Universal Enshrined Encrypted Mempool EIP-8105 merged",
+    "Block Access List Sidecars EIP merged",
+    "the EF launches a Platform team",
+    "Ethereum Protocol Studies 2026",
+    "EIP-8037 reservoir clarified",
+    "EXTENSION opcode reservation EIP-8163",
+    "fast finality discussion"
+  ],
+  "summary_en": "jannikluhn's Universal Enshrined Encrypted Mempool EIP merged (EIP-8105), one of the Hegotá execution layer headliner candidates. The EF announced a new Platform team to strengthen the L1 and L2 relationship. spencer-tb submitted clarifications of EIP-8037's reservoir mechanics. nerolation's BAL sidecars EIP merged."
+}

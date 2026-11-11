@@ -1,0 +1,119 @@
+{
+  "date": "2026-02-25",
+  "keywords": [
+    "blob 流式传输扩展 DA 层",
+    "EIP-8024 无分支归一化合并",
+    "BPO3 硬分叉元 EIP 合并",
+    "给 Agent 一个钱包",
+    "最小 Agent 注册表 ERC 合并",
+    "PQTS Breakout #3"
+  ],
+  "summary": "QED、fradamt 与 Julian 提出 blob 流式传输，把持续的、可采样的 blob 预传播做成协议内一等机制。frangio 的 EIP-8024 无分支归一化与 EXCHANGE 扩展合并。BPO3 硬分叉元 EIP 合并。EF 直播 Agentic Tech Stack 第一集，讨论给 Agent 一个钱包。",
+  "items": [
+    {
+      "topic": "扩容：blob 流式传输",
+      "title": "ethresear.ch：用 blob 流式传输扩展 DA 层",
+      "note": "（QED、fradamt、Julian）21:30：在现有关键路径 blob 通道之外，把持续的、可采样的 blob 数据预传播作为协议内机制；预传播目前经 blobpool 进行，但保证较弱。",
+      "url": "https://ethresear.ch/t/scaling-the-da-layer-with-blob-streaming/24202",
+      "date": "2026-02-25",
+      "title_en": "ethresear.ch: Scaling the DA layer with Blob Streaming",
+      "note_en": "(QED, fradamt, Julian), 21:30: alongside the existing critical path blob lane, enshrine continuous, sampled pre propagation of blob data as a protocol mechanism; pre propagation already happens via the blobpool but with weak guarantees.",
+      "topic_en": "Scaling: blob streaming"
+    },
+    {
+      "topic": "EVM 与升级",
+      "title": "EIP-8024：改用无分支归一化并扩展 EXCHANGE",
+      "note": "（frangio）合并，2 月 12 日提交；EIP-8024：记录解码范围（frangio）提交并合并；新增 EIP：Hardfork Meta BPO3（poojaranjan）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11306",
+      "date": "2026-02-25",
+      "title_en": "EIP-8024: switch to branchless normalization and extend EXCHANGE",
+      "note_en": "(frangio), merged after submission on February 12; EIP-8024: document the decoding range (frangio), submitted and merged; Add EIP: Hardfork Meta BPO3 (poojaranjan), merged.",
+      "topic_en": "EVM and upgrades"
+    },
+    {
+      "topic": "EVM 与升级",
+      "title": "EIP-8024：记录解码范围",
+      "note": "EIP-8024：改用无分支归一化并扩展 EXCHANGE（frangio）合并，2 月 12 日提交；EIP-8024：记录解码范围（frangio）提交并合并；新增 EIP：Hardfork Meta BPO3（poojaranjan）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11351",
+      "date": "2026-02-25",
+      "title_en": "EIP-8024: document the decoding range",
+      "note_en": "EIP-8024: switch to branchless normalization and extend EXCHANGE (frangio), merged after submission on February 12; EIP-8024: document the decoding range (frangio), submitted and merged; Add EIP: Hardfork Meta BPO3 (poojaranjan), merged.",
+      "topic_en": "EVM and upgrades"
+    },
+    {
+      "topic": "EVM 与升级",
+      "title": "新增 EIP：Hardfork Meta BPO3",
+      "note": "EIP-8024：改用无分支归一化并扩展 EXCHANGE（frangio）合并，2 月 12 日提交；EIP-8024：记录解码范围（frangio）提交并合并；新增 EIP：Hardfork Meta BPO3（poojaranjan）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11182",
+      "date": "2026-02-25",
+      "title_en": "Add EIP: Hardfork Meta BPO3",
+      "note_en": "EIP-8024: switch to branchless normalization and extend EXCHANGE (frangio), merged after submission on February 12; EIP-8024: document the decoding range (frangio), submitted and merged; Add EIP: Hardfork Meta BPO3 (poojaranjan), merged.",
+      "topic_en": "EVM and upgrades"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereumfndn：Agentic Tech Stack 第一集直播，嘉宾来自 Base 与 SIWA 等",
+      "note": "00:06；新增 ERC：最小 Agent 注册表（nxt3d）合并；PQTS Breakout #3。",
+      "url": "https://x.com/ethereumfndn/status/2026343083202564098",
+      "date": "2026-02-25",
+      "title_en": "ethereumfndn: episode 1 of The Agentic Tech Stack is live with guests from Base, SIWA and others",
+      "note_en": "00:06; Add ERC: Minimal Agent Registry (nxt3d), merged; PQTS Breakout #3.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：最小 Agent 注册表",
+      "note": "ethereumfndn：Agentic Tech Stack 第一集直播，嘉宾来自 Base 与 SIWA 等 00:06；新增 ERC：最小 Agent 注册表（nxt3d）合并；PQTS Breakout #3。",
+      "url": "https://github.com/ethereum/ERCs/pull/1463",
+      "date": "2026-02-25",
+      "title_en": "Add ERC: Minimal Agent Registry",
+      "note_en": "Ethereumfndn: episode 1 of The Agentic Tech Stack is live with guests from Base, SIWA and others, 00:06; Add ERC: Minimal Agent Registry (nxt3d), merged; PQTS Breakout #3.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #3",
+      "note": "ethereumfndn：Agentic Tech Stack 第一集直播，嘉宾来自 Base 与 SIWA 等 00:06；新增 ERC：最小 Agent 注册表（nxt3d）合并；PQTS Breakout #3。",
+      "url": "https://github.com/ethereum/pm/issues/1949",
+      "date": "2026-02-25",
+      "title_en": "PQTS Breakout #3",
+      "note_en": "Ethereumfndn: episode 1 of The Agentic Tech Stack is live with guests from Base, SIWA and others, 00:06; Add ERC: Minimal Agent Registry (nxt3d), merged; PQTS Breakout #3.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：如今比几年前更喜欢私有产权",
+      "note": "02:17；binji_x：逐条解释 Vitalik 提出的核心原则为何重要 00:25。",
+      "url": "https://x.com/VitalikButerin/status/2026375833263419496",
+      "date": "2026-02-25",
+      "title_en": "VitalikButerin: I like private property more than I did a few years ago",
+      "note_en": "02:17; binji_x: why every core principle Vitalik named matters, 00:25.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：逐条解释 Vitalik 提出的核心原则为何重要",
+      "note": "VitalikButerin：如今比几年前更喜欢私有产权 02:17；binji_x：逐条解释 Vitalik 提出的核心原则为何重要 00:25。",
+      "url": "https://x.com/binji_x/status/2026347854458142872",
+      "date": "2026-02-25",
+      "title_en": "binji_x: why every core principle Vitalik named matters",
+      "note_en": "VitalikButerin: I like private property more than I did a few years ago, 02:17; binji_x: why every core principle Vitalik named matters, 00:25.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/scaling-the-da-layer-with-blob-streaming/24202",
+    "credit": "ethresear.ch, Scaling the DA layer with Blob Streaming",
+    "local_path": "assets/2026-02-25.jpg",
+    "credit_en": "ethresear.ch, Scaling the DA layer with Blob Streaming"
+  },
+  "keywords_en": [
+    "Blob streaming to scale the DA layer",
+    "EIP-8024 branchless normalization merged",
+    "BPO3 hardfork meta EIP merged",
+    "Give Your Agent a Wallet",
+    "Minimal Agent Registry ERC merged",
+    "PQTS Breakout #3"
+  ],
+  "summary_en": "QED, fradamt and Julian proposed blob streaming, enshrining continuous, sampled blob pre propagation as a first class protocol mechanism. frangio's EIP-8024 branchless normalization and EXCHANGE extension merged. The BPO3 hardfork meta EIP merged. The EF streamed episode 1 of The Agentic Tech Stack on giving agents a wallet."
+}

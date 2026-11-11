@@ -1,0 +1,139 @@
+{
+  "date": "2026-02-11",
+  "keywords": [
+    "ZK API 使用额度保护 LLM 调用隐私",
+    "ERC-8004 Agent 身份标准上线主网",
+    "EIP-8141 APPROVE 放宽合并",
+    "多 KZG 点求值预编译 EIP 合并",
+    "不变布局保护操作码 EIP-8158",
+    "reth 2.0"
+  ],
+  "summary": "dcrapis 与 VitalikButerin 发表 ZK API 使用额度方案，让用户为 LLM 等高频服务付费而不暴露身份、也不必每次上链。ERC-8004 Agent 身份、信誉与验证标准上线以太坊主网。lightclient 放宽 EIP-8141 APPROVE 要求的 PR 合并。",
+  "items": [
+    {
+      "topic": "隐私：ZK API 使用额度",
+      "title": "ethresear.ch：ZK API 使用额度，LLM 及更多",
+      "note": "（dcrapis 与 VitalikButerin）20:34：API 计量难以同时兼顾隐私、安全与效率；Web2 认证把每次请求与真实身份挂钩，每次请求都上链付费又慢又贵且难以隐藏交易图谱，方案用零知识证明的预付额度解决。",
+      "url": "https://ethresear.ch/t/zk-api-usage-credits-llms-and-beyond/24104",
+      "date": "2026-02-11",
+      "title_en": "ethresear.ch: ZK API Usage Credits, LLMs and Beyond",
+      "note_en": "(dcrapis and VitalikButerin), 20:34: API metering struggles to be private, secure and efficient at once; Web2 auth ties each request to a real identity, and paying onchain per request is slow, costly and exposes the transaction graph, so the design uses zero knowledge prepaid credits.",
+      "topic_en": "Privacy: ZK API usage credits"
+    },
+    {
+      "topic": "原生 AA 与 Agent",
+      "title": "EIP-8141：放宽 APPROVE 必须由顶层调用 frame 调用的要求",
+      "note": "（lightclient）合并，2 月 10 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11297",
+      "date": "2026-02-11",
+      "title_en": "EIP-8141: relax the requirement that APPROVE be called by the top level call frame",
+      "note_en": "(lightclient), merged after submission on February 10.",
+      "topic_en": "Native AA and agents"
+    },
+    {
+      "topic": "原生 AA 与 Agent",
+      "title": "ethereum：通用 AI Agent 身份、信誉与验证标准 ERC-8004 上线以太坊主网",
+      "note": "01:37；新增 ERC：AI Agent 注册与验证（Cybercentry）合并；VitalikButerin：这才是让以太坊成为 AI 家园的正确方式 21:39。",
+      "url": "https://x.com/ethereum/status/2021292399012741219",
+      "date": "2026-02-11",
+      "title_en": "ethereum: ERC-8004, the standard for universal AI agent identity, reputation and verification, is live on Ethereum mainnet",
+      "note_en": "01:37; Add ERC: AI Agent Registration and Verification (Cybercentry), merged; VitalikButerin: this is the right way to make Ethereum the home for AI, 21:39.",
+      "topic_en": "Native AA and agents"
+    },
+    {
+      "topic": "原生 AA 与 Agent",
+      "title": "新增 ERC：AI Agent 注册与验证",
+      "note": "ethereum：通用 AI Agent 身份、信誉与验证标准 ERC-8004 上线以太坊主网 01:37；新增 ERC：AI Agent 注册与验证（Cybercentry）合并；VitalikButerin：这才是让以太坊成为 AI 家园的正确方式 21:39。",
+      "url": "https://github.com/ethereum/ERCs/pull/1475",
+      "date": "2026-02-11",
+      "title_en": "Add ERC: AI Agent Registration and Verification",
+      "note_en": "Ethereum: ERC-8004, the standard for universal AI agent identity, reputation and verification, is live on Ethereum mainnet, 01:37; Add ERC: AI Agent Registration and Verification (Cybercentry), merged; VitalikButerin: this is the right way to make Ethereum the home for AI, 21:39.",
+      "topic_en": "Native AA and agents"
+    },
+    {
+      "topic": "原生 AA 与 Agent",
+      "title": "VitalikButerin：这才是让以太坊成为 AI 家园的正确方式",
+      "note": "ethereum：通用 AI Agent 身份、信誉与验证标准 ERC-8004 上线以太坊主网 01:37；新增 ERC：AI Agent 注册与验证（Cybercentry）合并；VitalikButerin：这才是让以太坊成为 AI 家园的正确方式 21:39。",
+      "url": "https://x.com/VitalikButerin/status/2021594878162157948",
+      "date": "2026-02-11",
+      "title_en": "VitalikButerin: this is the right way to make Ethereum the home for AI",
+      "note_en": "Ethereum: ERC-8004, the standard for universal AI agent identity, reputation and verification, is live on Ethereum mainnet, 01:37; Add ERC: AI Agent Registration and Verification (Cybercentry), merged; VitalikButerin: this is the right way to make Ethereum the home for AI, 21:39.",
+      "topic_en": "Native AA and agents"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：多 KZG 点求值预编译",
+      "note": "（protocolwhisper）合并；Magicians：EIP-8158 不变布局保护操作码 13:24；ERC-7730：代币格式化器加入可选 chain ID（paoun-ledger）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11266",
+      "date": "2026-02-11",
+      "title_en": "Add EIP: Multi KZG Point Evaluation Precompile",
+      "note_en": "(protocolwhisper), merged; Magicians: EIP-8158 Invariant Layout Guard Opcode, 13:24; ERC-7730: add optional chain ID for token formatters (paoun-ledger), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8158 不变布局保护操作码",
+      "note": "新增 EIP：多 KZG 点求值预编译（protocolwhisper）合并；Magicians：EIP-8158 不变布局保护操作码 13:24；ERC-7730：代币格式化器加入可选 chain ID（paoun-ledger）合并。",
+      "url": "https://ethereum-magicians.org/t/eip-8158-invariant-layout-guard-opcode/27714",
+      "date": "2026-02-11",
+      "title_en": "Magicians: EIP-8158 Invariant Layout Guard Opcode",
+      "note_en": "Add EIP: Multi KZG Point Evaluation Precompile (protocolwhisper), merged; Magicians: EIP-8158 Invariant Layout Guard Opcode, 13:24; ERC-7730: add optional chain ID for token formatters (paoun-ledger), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：代币格式化器加入可选 chain ID",
+      "note": "新增 EIP：多 KZG 点求值预编译（protocolwhisper）合并；Magicians：EIP-8158 不变布局保护操作码 13:24；ERC-7730：代币格式化器加入可选 chain ID（paoun-ledger）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1530",
+      "date": "2026-02-11",
+      "title_en": "ERC-7730: add optional chain ID for token formatters",
+      "note_en": "Add EIP: Multi KZG Point Evaluation Precompile (protocolwhisper), merged; Magicians: EIP-8158 Invariant Layout Guard Opcode, 13:24; ERC-7730: add optional chain ID for token formatters (paoun-ledger), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：reth 2.0 即将亮相，数据库更小、持久化更快、gas 每秒更高",
+      "note": "23:39；binji_x：什么是可信中立 22:21；colludingnode：聊天应用要求实名时正确回应是拒绝，而不是欢呼 ZK 用例 13:26。",
+      "url": "https://x.com/gakonst/status/2021625105567428755",
+      "date": "2026-02-11",
+      "title_en": "gakonst: reth 2.0 is coming with a smaller DB, faster persistence and higher gas per second",
+      "note_en": "23:39; binji_x: what credible neutrality means, 22:21; colludingnode: the right response to chat apps asking for ID is refusal, not cheering a ZK use case, 13:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：什么是可信中立",
+      "note": "gakonst：reth 2.0 即将亮相，数据库更小、持久化更快、gas 每秒更高 23:39；binji_x：什么是可信中立 22:21；colludingnode：聊天应用要求实名时正确回应是拒绝，而不是欢呼 ZK 用例 13:26。",
+      "url": "https://x.com/binji_x/status/2021605596236001625",
+      "date": "2026-02-11",
+      "title_en": "binji_x: what credible neutrality means",
+      "note_en": "Gakonst: reth 2.0 is coming with a smaller DB, faster persistence and higher gas per second, 23:39; binji_x: what credible neutrality means, 22:21; colludingnode: the right response to chat apps asking for ID is refusal, not cheering a ZK use case, 13:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：聊天应用要求实名时正确回应是拒绝，而不是欢呼 ZK 用例",
+      "note": "gakonst：reth 2.0 即将亮相，数据库更小、持久化更快、gas 每秒更高 23:39；binji_x：什么是可信中立 22:21；colludingnode：聊天应用要求实名时正确回应是拒绝，而不是欢呼 ZK 用例 13:26。",
+      "url": "https://x.com/colludingnode/status/2021470790739427472",
+      "date": "2026-02-11",
+      "title_en": "colludingnode: the right response to chat apps asking for ID is refusal, not cheering a ZK use case",
+      "note_en": "Gakonst: reth 2.0 is coming with a smaller DB, faster persistence and higher gas per second, 23:39; binji_x: what credible neutrality means, 22:21; colludingnode: the right response to chat apps asking for ID is refusal, not cheering a ZK use case, 13:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/zk-api-usage-credits-llms-and-beyond/24104",
+    "credit": "ethresear.ch, ZK API Usage Credits: LLMs and Beyond",
+    "local_path": "assets/2026-02-11.jpg",
+    "credit_en": "ethresear.ch, ZK API Usage Credits: LLMs and Beyond"
+  },
+  "keywords_en": [
+    "ZK API usage credits for private LLM calls",
+    "ERC-8004 agent identity live on mainnet",
+    "EIP-8141 APPROVE relaxation merged",
+    "multi KZG point evaluation precompile EIP merged",
+    "Invariant Layout Guard Opcode EIP-8158",
+    "reth 2.0"
+  ],
+  "summary_en": "dcrapis and VitalikButerin published ZK API usage credits, letting users pay for high frequency services such as LLMs without revealing identity or sending a transaction per request. The ERC-8004 agent identity, reputation and verification standard went live on Ethereum mainnet. lightclient's PR relaxing EIP-8141's APPROVE rule merged."
+}

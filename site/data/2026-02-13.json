@@ -1,0 +1,117 @@
+{
+  "date": "2026-02-13",
+  "keywords": [
+    "EF 领导层变动 Tomasz Stańczak 卸任联席执行董事",
+    "Bastian Aue 出任临时联席执行董事",
+    "Fluidkey 隐私收款",
+    "Aztec Ignition Chain 达 9 万区块",
+    "乐观 L2 引入 ZK 证明"
+  ],
+  "summary": "EF 董事会宣布 Tomasz Stańczak 卸任联席执行董事，任命 Bastian Aue 为临时联席执行董事，与 Hsiao-Wei 共同领导。Tomasz 在个人文章中说将于 2 月底离任。ethereum 账号介绍隐私收款应用 Fluidkey。协议规范层面较安静。",
+  "items": [
+    {
+      "topic": "EF 领导层变动",
+      "title": "EF 博客：执行领导层更新",
+      "note": "（EF Board）：Tomasz Stańczak 决定卸任联席执行董事，董事会任命 Bastian Aue 为临时联席执行董事，即日生效；EF 博客：来自 Tomasz 的更新：他将于 2026 年 2 月底卸任，Bastian Aue 与 Hsiao-Wei 共同担任联席执行董事。",
+      "url": "https://blog.ethereum.org/en/2026/02/13/leadership-update",
+      "date": "2026-02-13",
+      "title_en": "EF blog: Executive Leadership Update",
+      "note_en": "(EF Board): Tomasz Stańczak decided to step down as Co-Executive Director and the Board appointed Bastian Aue as interim Co-Executive Director, effective immediately; EF blog: An update from Tomasz: he steps down at the end of February 2026, with Bastian Aue serving as Co-ED alongside Hsiao-Wei.",
+      "topic_en": "EF leadership change"
+    },
+    {
+      "topic": "EF 领导层变动",
+      "title": "EF 博客：来自 Tomasz 的更新",
+      "note": "EF 博客：执行领导层更新（EF Board）：Tomasz Stańczak 决定卸任联席执行董事，董事会任命 Bastian Aue 为临时联席执行董事，即日生效；EF 博客：来自 Tomasz 的更新：他将于 2026 年 2 月底卸任，Bastian Aue 与 Hsiao-Wei 共同担任联席执行董事。",
+      "url": "https://blog.ethereum.org/en/2026/02/13/tomasz-update",
+      "date": "2026-02-13",
+      "title_en": "EF blog: An update from Tomasz",
+      "note_en": "EF blog: Executive Leadership Update (EF Board): Tomasz Stańczak decided to step down as Co-Executive Director and the Board appointed Bastian Aue as interim Co-Executive Director, effective immediately; EF blog: An update from Tomasz: he steps down at the end of February 2026, with Bastian Aue serving as Co-ED alongside Hsiao-Wei.",
+      "topic_en": "EF leadership change"
+    },
+    {
+      "topic": "EF 领导层变动",
+      "title": "VitalikButerin：感谢 Tomasz 的工作与他在 Nethermind 建立的组织",
+      "note": "21:34；VitalikButerin：欢迎 Bastian 21:39。",
+      "url": "https://x.com/VitalikButerin/status/2022318344288792618",
+      "date": "2026-02-13",
+      "title_en": "VitalikButerin: thanking Tomasz for his work and the organization he built at Nethermind",
+      "note_en": "21:34; VitalikButerin: Welcome Bastian, 21:39.",
+      "topic_en": "EF leadership change"
+    },
+    {
+      "topic": "EF 领导层变动",
+      "title": "VitalikButerin：欢迎 Bastian",
+      "note": "VitalikButerin：感谢 Tomasz 的工作与他在 Nethermind 建立的组织 21:34；VitalikButerin：欢迎 Bastian 21:39。",
+      "url": "https://x.com/VitalikButerin/status/2022319721274646579",
+      "date": "2026-02-13",
+      "title_en": "VitalikButerin: Welcome Bastian",
+      "note_en": "VitalikButerin: thanking Tomasz for his work and the organization he built at Nethermind, 21:34; VitalikButerin: Welcome Bastian, 21:39.",
+      "topic_en": "EF leadership change"
+    },
+    {
+      "topic": "隐私",
+      "title": "ethereum：Fluidkey 是基于以太坊的隐私应用，用户可在链上收款和管理资金而不公开关联身份",
+      "note": "05:28；aztecnetwork：Aztec Ignition Chain 达到 9 万个区块，3,500 个排序器分得 3,660 万 AZTEC 出块奖励 23:21。",
+      "url": "https://x.com/ethereum/status/2022075469353590929",
+      "date": "2026-02-13",
+      "title_en": "ethereum: Fluidkey is a privacy app on Ethereum that lets users receive and manage funds onchain without publicly linking them to their identity",
+      "note_en": "05:28; aztecnetwork: the Aztec Ignition Chain reached 90k blocks with 36.6M AZTEC rewards across 3.5k sequencers, 23:21.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "aztecnetwork：Aztec Ignition Chain 达到 9 万个区块，3,500 个排序器分得 3,660 万 AZTEC 出块奖励",
+      "note": "ethereum：Fluidkey 是基于以太坊的隐私应用，用户可在链上收款和管理资金而不公开关联身份 05:28；aztecnetwork：Aztec Ignition Chain 达到 9 万个区块，3,500 个排序器分得 3,660 万 AZTEC 出块奖励 23:21。",
+      "url": "https://x.com/aztecnetwork/status/2022345308957753360",
+      "date": "2026-02-13",
+      "title_en": "aztecnetwork: the Aztec Ignition Chain reached 90k blocks with 36.6M AZTEC rewards across 3.5k sequencers",
+      "note_en": "Ethereum: Fluidkey is a privacy app on Ethereum that lets users receive and manage funds onchain without publicly linking them to their identity, 05:28; aztecnetwork: the Aztec Ignition Chain reached 90k blocks with 36.6M AZTEC rewards across 3.5k sequencers, 23:21.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8141：修正指向 ERC-7562 的相对链接",
+      "note": "（marukai67）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11310",
+      "date": "2026-02-13",
+      "title_en": "EIP-8141: fix a broken relative link to ERC-7562",
+      "note_en": "(marukai67), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethbeat_org：ZK 证明进入乐观 L2 是重大转变",
+      "note": "01:09；EliBenSasson：设想十年后的区块链必须考虑量子准备 21:47。",
+      "url": "https://x.com/ethbeat_org/status/2022010169828544867",
+      "date": "2026-02-13",
+      "title_en": "ethbeat_org: ZK proofs coming to optimistic L2s is a big shift",
+      "note_en": "01:09; EliBenSasson: imagining blockchains in 10 years must account for quantum readiness, 21:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：设想十年后的区块链必须考虑量子准备",
+      "note": "ethbeat_org：ZK 证明进入乐观 L2 是重大转变 01:09；EliBenSasson：设想十年后的区块链必须考虑量子准备 21:47。",
+      "url": "https://x.com/EliBenSasson/status/2022321775493755337",
+      "date": "2026-02-13",
+      "title_en": "EliBenSasson: imagining blockchains in 10 years must account for quantum readiness",
+      "note_en": "Ethbeat_org: ZK proofs coming to optimistic L2s is a big shift, 01:09; EliBenSasson: imagining blockchains in 10 years must account for quantum readiness, 21:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/02/13/leadership-update",
+    "credit": "Ethereum Foundation Blog, Executive Leadership Update",
+    "local_path": "assets/2026-02-13.jpg",
+    "credit_en": "Ethereum Foundation Blog, Executive Leadership Update"
+  },
+  "keywords_en": [
+    "EF leadership change with Tomasz Stańczak stepping down as Co-Executive Director",
+    "Bastian Aue appointed interim Co-Executive Director",
+    "Fluidkey private payments",
+    "Aztec Ignition Chain reaches 90k blocks",
+    "ZK proofs come to optimistic L2s"
+  ],
+  "summary_en": "The EF Board announced that Tomasz Stańczak is stepping down as Co-Executive Director and appointed Bastian Aue as interim Co-Executive Director alongside Hsiao-Wei. Tomasz wrote that he leaves at the end of February. The ethereum account featured the private payments app Fluidkey. Protocol spec work was quiet."
+}

@@ -1,0 +1,151 @@
+{
+  "date": "2026-03-02",
+  "keywords": [
+    "ACDT #72 bal-devnet-3 等待客户端就绪",
+    "EIP-8130 修订",
+    "VitalikButerin 解读执行层改动与向量化数学预编译",
+    "在以太坊私密交易的操作负担",
+    "Agent 需要隐私",
+    "EIP-8141 专场 #1 议程",
+    "Engine API 二进制 SSZ 传输"
+  ],
+  "summary": "ACDT #72 显示 bal-devnet-3 仍在等待客户端就绪。VitalikButerin 继续解读 strawmap 的执行层部分，提出短期价值很高的向量化数学预编译。pcaversaccio 指出如今在以太坊私密交易的操作负担过重。EIP-8141 frame 交易首次头号提案专场议程发布。chunter-cb 提交 EIP-8130 修订。",
+  "items": [
+    {
+      "topic": "隐私：私密交易的门槛",
+      "title": "pcaversaccio：如今在以太坊私密交易，即无人能把链上行为关联到身份，需要太多操作负担，要懂行为画像、管理 VPN、混淆浏览器指纹等",
+      "note": "23:39；nero_eth：AI Agent 需要隐私，以太坊可以提供 17:14。",
+      "url": "https://x.com/pcaversaccio/status/2028510472631419104",
+      "date": "2026-03-02",
+      "title_en": "pcaversaccio: transacting privately on Ethereum, so nobody can link onchain activity to your identity, takes far too much operational overhead, from understanding behavioral profiling to managing VPNs and mixing browser fingerprints",
+      "note_en": "23:39; nero_eth: AI agents need privacy and Ethereum can provide it, 17:14.",
+      "topic_en": "Privacy: the bar for private transactions"
+    },
+    {
+      "topic": "隐私：私密交易的门槛",
+      "title": "nero_eth：AI Agent 需要隐私，以太坊可以提供",
+      "note": "pcaversaccio：如今在以太坊私密交易，即无人能把链上行为关联到身份，需要太多操作负担，要懂行为画像、管理 VPN、混淆浏览器指纹等 23:39；nero_eth：AI Agent 需要隐私，以太坊可以提供 17:14。",
+      "url": "https://x.com/nero_eth/status/2028413616660083112",
+      "date": "2026-03-02",
+      "title_en": "nero_eth: AI agents need privacy and Ethereum can provide it",
+      "note_en": "Pcaversaccio: transacting privately on Ethereum, so nobody can link onchain activity to your identity, takes far too much operational overhead, from understanding behavioral profiling to managing VPNs and mixing browser fingerprints, 23:39; nero_eth: AI agents need privacy and Ethereum can provide it, 17:14.",
+      "topic_en": "Privacy: the bar for private transactions"
+    },
+    {
+      "topic": "原生 AA",
+      "title": "EIP-8130：修订",
+      "note": "（chunter-cb）提交；EIP-8141 Frame Transaction 头号提案专场议程 21:01，3 月 5 日举行。",
+      "url": "https://github.com/ethereum/EIPs/pull/11367",
+      "date": "2026-03-02",
+      "title_en": "EIP-8130: revisions",
+      "note_en": "(chunter-cb), submitted; EIP-8141 Frame Transaction headliner breakout agenda, 21:01, for March 5.",
+      "topic_en": "Native AA"
+    },
+    {
+      "topic": "原生 AA",
+      "title": "EIP-8141 Frame Transaction 头号提案专场议程",
+      "note": "EIP-8130：修订（chunter-cb）提交；EIP-8141 Frame Transaction 头号提案专场议程 21:01，3 月 5 日举行。",
+      "url": "https://ethereum-magicians.org/t/headliner-breakout-eip-8141-frame-transaction-march-5-2026/27879",
+      "date": "2026-03-02",
+      "title_en": "EIP-8141 Frame Transaction headliner breakout agenda",
+      "note_en": "EIP-8130: revisions (chunter-cb), submitted; EIP-8141 Frame Transaction headliner breakout agenda, 21:01, for March 5.",
+      "topic_en": "Native AA"
+    },
+    {
+      "topic": "原生 AA",
+      "title": "VitalikButerin：执行层改动，已谈过 AA、多维 gas、BAL 与 zkEVM，另一个短期很有价值的 EVM 升级是向量化数学预编译",
+      "note": "00:22。",
+      "url": "https://x.com/VitalikButerin/status/2028158949720252574",
+      "date": "2026-03-02",
+      "title_en": "VitalikButerin: execution layer changes; beyond AA, multidimensional gas, BALs and zkEVMs, a very valuable short term EVM upgrade would be a vectorized math precompile",
+      "note_en": "00:22.",
+      "topic_en": "Native AA"
+    },
+    {
+      "topic": "Glamsterdam",
+      "title": "ACDT #72",
+      "note": "21:00，据 Ethereal news #14：bal-devnet-3 上线等待客户端就绪。",
+      "url": "https://forkcast.org/calls/acdt/072/",
+      "date": "2026-03-02",
+      "title_en": "ACDT #72",
+      "note_en": "21:00, per Ethereal news #14: the bal-devnet-3 launch is waiting on client readiness.",
+      "topic_en": "Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam",
+      "title": "Ethereal news #14",
+      "note": "ACDT #72 21:00，据 Ethereal news #14：bal-devnet-3 上线等待客户端就绪。",
+      "url": "https://ethereal.news/ethereal-news-weekly-14/",
+      "date": "2026-03-02",
+      "title_en": "Ethereal news #14",
+      "note_en": "ACDT #72, 21:00, per Ethereal news #14: the bal-devnet-3 launch is waiting on client readiness.",
+      "topic_en": "Glamsterdam"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：Engine API 二进制 SSZ 传输",
+      "note": "（Giulio2002）提交；ACDE #232 议程 21:34；ERC-8192：代币化金库的授权执行 18:28。",
+      "url": "https://github.com/ethereum/EIPs/pull/11365",
+      "date": "2026-03-02",
+      "title_en": "Add EIP: Binary SSZ Transport for the Engine API",
+      "note_en": "(Giulio2002), submitted; ACDE #232 agenda, 21:34; ERC-8192: Mandated Execution for Tokenized Vaults, 18:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #232 议程",
+      "note": "新增 EIP：Engine API 二进制 SSZ 传输（Giulio2002）提交；ACDE #232 议程 21:34；ERC-8192：代币化金库的授权执行 18:28。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-232-march-12-2026/27880",
+      "date": "2026-03-02",
+      "title_en": "ACDE #232 agenda",
+      "note_en": "Add EIP: Binary SSZ Transport for the Engine API (Giulio2002), submitted; ACDE #232 agenda, 21:34; ERC-8192: Mandated Execution for Tokenized Vaults, 18:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8192：代币化金库的授权执行",
+      "note": "新增 EIP：Engine API 二进制 SSZ 传输（Giulio2002）提交；ACDE #232 议程 21:34；ERC-8192：代币化金库的授权执行 18:28。",
+      "url": "https://ethereum-magicians.org/t/erc-8192-mandated-execution-for-tokenized-vaults/27877",
+      "date": "2026-03-02",
+      "title_en": "ERC-8192: Mandated Execution for Tokenized Vaults",
+      "note_en": "Add EIP: Binary SSZ Transport for the Engine API (Giulio2002), submitted; ACDE #232 agenda, 21:34; ERC-8192: Mandated Execution for Tokenized Vaults, 18:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：TLSNotary 是最重要的 AI 项目之一",
+      "note": "22:24；EliBenSasson：区块链需要后量子韧性、隐私与无限扩容 22:27。",
+      "url": "https://x.com/binji_x/status/2028491746209087649",
+      "date": "2026-03-02",
+      "title_en": "binji_x: TLSNotary is one of the most important AI projects",
+      "note_en": "22:24; EliBenSasson: a blockchain needs post-quantum resilience, privacy and limitless scale, 22:27.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：区块链需要后量子韧性、隐私与无限扩容",
+      "note": "binji_x：TLSNotary 是最重要的 AI 项目之一 22:24；EliBenSasson：区块链需要后量子韧性、隐私与无限扩容 22:27。",
+      "url": "https://x.com/EliBenSasson/status/2028492376403038680",
+      "date": "2026-03-02",
+      "title_en": "EliBenSasson: a blockchain needs post-quantum resilience, privacy and limitless scale",
+      "note_en": "Binji_x: TLSNotary is one of the most important AI projects, 22:24; EliBenSasson: a blockchain needs post-quantum resilience, privacy and limitless scale, 22:27.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/headliner-breakout-eip-8141-frame-transaction-march-5-2026/27879",
+    "credit": "Ethereum Magicians, Headliner Breakout: EIP-8141 Frame Transaction, March 5, 2026",
+    "local_path": "assets/2026-03-02.jpg",
+    "credit_en": "Ethereum Magicians, Headliner Breakout: EIP-8141 Frame Transaction, March 5, 2026"
+  },
+  "keywords_en": [
+    "ACDT #72 has bal-devnet-3 waiting on client readiness",
+    "EIP-8130 revisions",
+    "VitalikButerin on execution layer changes and a vectorized math precompile",
+    "the operational burden of private transactions",
+    "agents need privacy",
+    "EIP-8141 breakout #1 agenda",
+    "binary SSZ transport for the Engine API"
+  ],
+  "summary_en": "ACDT #72 showed bal-devnet-3 still waiting on client readiness. VitalikButerin continued with the strawmap's execution layer, proposing a vectorized math precompile as a valuable short term upgrade. pcaversaccio said transacting privately on Ethereum carries far too much operational overhead. The agenda for the first EIP-8141 frame transaction headliner breakout was posted. chunter-cb submitted EIP-8130 revisions."
+}

@@ -1,0 +1,149 @@
+{
+  "date": "2026-02-22",
+  "keywords": [
+    "隐私应是默认",
+    "以太坊路线转向终局思维",
+    "ACDC #176 议程",
+    "AI 原生 NFT ERC-8170",
+    "ERC-8004 延迟元数据更新扩展",
+    "AMM 设计的主要用户"
+  ],
+  "summary": "周日较安静。nero_eth 强调隐私应是以太坊默认属性而非奢侈功能。tcoratger 梳理 drakefjustin 所说以太坊路线从增量升级转向终局思维。Agent 相关 ERC 继续增加，包括 AI 原生 NFT 与 ERC-8004 延迟元数据更新扩展。",
+  "items": [
+    {
+      "topic": "隐私与路线",
+      "title": "nero_eth：以太坊需要隐私，不是奢侈功能而是默认，否则每笔交易都在喂养监控机器",
+      "note": "17:18；colludingnode：可以把相关能力改装到现有 Orchard 协议上 08:52。",
+      "url": "https://x.com/nero_eth/status/2025515557114507679",
+      "date": "2026-02-22",
+      "title_en": "nero_eth: Ethereum needs privacy, not as a luxury but as a default, or every transaction feeds the surveillance machinery",
+      "note_en": "17:18; colludingnode: these can be retrofitted onto the existing Orchard protocol, 08:52.",
+      "topic_en": "Privacy and roadmap"
+    },
+    {
+      "topic": "隐私与路线",
+      "title": "colludingnode：可以把相关能力改装到现有 Orchard 协议上",
+      "note": "nero_eth：以太坊需要隐私，不是奢侈功能而是默认，否则每笔交易都在喂养监控机器 17:18；colludingnode：可以把相关能力改装到现有 Orchard 协议上 08:52。",
+      "url": "https://x.com/colludingnode/status/2025388285397458976",
+      "date": "2026-02-22",
+      "title_en": "colludingnode: these can be retrofitted onto the existing Orchard protocol",
+      "note_en": "Nero_eth: Ethereum needs privacy, not as a luxury but as a default, or every transaction feeds the surveillance machinery, 17:18; colludingnode: these can be retrofitted onto the existing Orchard protocol, 08:52.",
+      "topic_en": "Privacy and roadmap"
+    },
+    {
+      "topic": "隐私与路线",
+      "title": "tcoratger：以太坊路线图从增量升级转向终局思维，梳理 drakefjustin 的访谈",
+      "note": "00:51。",
+      "url": "https://x.com/tcoratger/status/2025267101091418415",
+      "date": "2026-02-22",
+      "title_en": "tcoratger: Ethereum's roadmap is shifting from incremental upgrades to an endgame mindset, summarizing drakefjustin's interview",
+      "note_en": "00:51.",
+      "topic_en": "Privacy and roadmap"
+    },
+    {
+      "topic": "Agent 标准",
+      "title": "新增 ERC：AI 原生 NFT",
+      "note": "（nftprof）提交，ERC-8170 讨论帖 14:19；ERC-8004：延迟元数据更新扩展（Cyberpaisa）提交；新增 ERC：代币绑定账户 Agent 注册表（nftprof）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1558",
+      "date": "2026-02-22",
+      "title_en": "Add ERC: AI-Native NFT",
+      "note_en": "(nftprof), submitted, with the ERC-8170 thread, 14:19; ERC-8004: Delayed Metadata Update Extension (Cyberpaisa), submitted; Add ERC: Token Bound Account Agent Registry (nftprof), submitted.",
+      "topic_en": "Agent standards"
+    },
+    {
+      "topic": "Agent 标准",
+      "title": "ERC-8170 讨论帖",
+      "note": "新增 ERC：AI 原生 NFT（nftprof）提交，ERC-8170 讨论帖 14:19；ERC-8004：延迟元数据更新扩展（Cyberpaisa）提交；新增 ERC：代币绑定账户 Agent 注册表（nftprof）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8170-ai-native-nft/27801",
+      "date": "2026-02-22",
+      "title_en": "ERC-8170 thread",
+      "note_en": "Add ERC: AI-Native NFT (nftprof), submitted, with the ERC-8170 thread, 14:19; ERC-8004: Delayed Metadata Update Extension (Cyberpaisa), submitted; Add ERC: Token Bound Account Agent Registry (nftprof), submitted.",
+      "topic_en": "Agent standards"
+    },
+    {
+      "topic": "Agent 标准",
+      "title": "ERC-8004：延迟元数据更新扩展",
+      "note": "新增 ERC：AI 原生 NFT（nftprof）提交，ERC-8170 讨论帖 14:19；ERC-8004：延迟元数据更新扩展（Cyberpaisa）提交；新增 ERC：代币绑定账户 Agent 注册表（nftprof）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1560",
+      "date": "2026-02-22",
+      "title_en": "ERC-8004: Delayed Metadata Update Extension",
+      "note_en": "Add ERC: AI-Native NFT (nftprof), submitted, with the ERC-8170 thread, 14:19; ERC-8004: Delayed Metadata Update Extension (Cyberpaisa), submitted; Add ERC: Token Bound Account Agent Registry (nftprof), submitted.",
+      "topic_en": "Agent standards"
+    },
+    {
+      "topic": "Agent 标准",
+      "title": "新增 ERC：代币绑定账户 Agent 注册表",
+      "note": "新增 ERC：AI 原生 NFT（nftprof）提交，ERC-8170 讨论帖 14:19；ERC-8004：延迟元数据更新扩展（Cyberpaisa）提交；新增 ERC：代币绑定账户 Agent 注册表（nftprof）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1559",
+      "date": "2026-02-22",
+      "title_en": "Add ERC: Token Bound Account Agent Registry",
+      "note_en": "Add ERC: AI-Native NFT (nftprof), submitted, with the ERC-8170 thread, 14:19; ERC-8004: Delayed Metadata Update Extension (Cyberpaisa), submitted; Add ERC: Token Bound Account Agent Registry (nftprof), submitted.",
+      "topic_en": "Agent standards"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #176 议程",
+      "note": "12:56；Magicians：AMM 是否为错误的主要用户设计 12:34；EIP-2780 文字修正（clarenew）提交。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-176-mar-19-2026/27798",
+      "date": "2026-02-22",
+      "title_en": "ACDC #176 agenda",
+      "note_en": "12:56; Magicians: Are AMMs Being Designed for the Wrong Primary User?, 12:34; EIP-2780 text fixes (clarenew), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：AMM 是否为错误的主要用户设计",
+      "note": "ACDC #176 议程 12:56；Magicians：AMM 是否为错误的主要用户设计 12:34；EIP-2780 文字修正（clarenew）提交。",
+      "url": "https://ethereum-magicians.org/t/are-amms-being-designed-for-the-wrong-primary-user/27797",
+      "date": "2026-02-22",
+      "title_en": "Magicians: Are AMMs Being Designed for the Wrong Primary User?",
+      "note_en": "ACDC #176 agenda, 12:56; Magicians: Are AMMs Being Designed for the Wrong Primary User?, 12:34; EIP-2780 text fixes (clarenew), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-2780 文字修正",
+      "note": "ACDC #176 议程 12:56；Magicians：AMM 是否为错误的主要用户设计 12:34；EIP-2780 文字修正（clarenew）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11347",
+      "date": "2026-02-22",
+      "title_en": "EIP-2780 text fixes",
+      "note_en": "ACDC #176 agenda, 12:56; Magicians: Are AMMs Being Designed for the Wrong Primary User?, 12:34; EIP-2780 text fixes (clarenew), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：加密圈谈去中心化与账户抽象，普通人只想要快和便宜",
+      "note": "20:40；EliBenSasson：加密社区如何避免量子威胁 19:21。",
+      "url": "https://x.com/EliBenSasson/status/2025566378091008323",
+      "date": "2026-02-22",
+      "title_en": "EliBenSasson: crypto people talk decentralization and account abstraction, everyone else wants fast and cheap",
+      "note_en": "20:40; EliBenSasson: what the crypto community can do to avert the quantum threat, 19:21.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：加密社区如何避免量子威胁",
+      "note": "EliBenSasson：加密圈谈去中心化与账户抽象，普通人只想要快和便宜 20:40；EliBenSasson：加密社区如何避免量子威胁 19:21。",
+      "url": "https://x.com/EliBenSasson/status/2025546602371273012",
+      "date": "2026-02-22",
+      "title_en": "EliBenSasson: what the crypto community can do to avert the quantum threat",
+      "note_en": "EliBenSasson: crypto people talk decentralization and account abstraction, everyone else wants fast and cheap, 20:40; EliBenSasson: what the crypto community can do to avert the quantum threat, 19:21.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8170-ai-native-nft/27801",
+    "credit": "Ethereum Magicians, ERC-8170: AI-Native NFT",
+    "local_path": "assets/2026-02-22.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8170: AI-Native NFT"
+  },
+  "keywords_en": [
+    "Privacy should be the default",
+    "Ethereum's roadmap shifts to an endgame mindset",
+    "ACDC #176 agenda",
+    "AI-Native NFT ERC-8170",
+    "a delayed metadata update extension for ERC-8004",
+    "who AMMs are designed for"
+  ],
+  "summary_en": "A quiet Sunday. nero_eth stressed that privacy should be Ethereum's default rather than a luxury. tcoratger summarized drakefjustin's view that the roadmap is shifting from incremental upgrades to an endgame mindset. Agent ERCs kept coming, including an AI-Native NFT and a delayed metadata update extension for ERC-8004."
+}

@@ -1,0 +1,142 @@
+{
+  "date": "2026-03-09",
+  "keywords": [
+    "GhostPool 隐藏加密内存池准入中的身份元数据",
+    "EIP-8130 允许无许可 payer",
+    "ACDT #73",
+    "gas 重定价调查结果",
+    "智能账户的 ZK 证明验证 ERC-8039",
+    "Engine API 二进制 SSZ 基准",
+    "ZODL 融资 2",
+    "500 万美元"
+  ],
+  "summary": "ethresear.ch 提出 GhostPool：加密内存池虽隐藏交易内容，但准入路径仍暴露发送者与 nonce 等身份关键元数据，文章探讨如何隐藏。chunter-cb 提交让 EIP-8130 支持无许可 payer。ACDT #73 跟进 Glamsterdam devnet；同周 EF Protocol 的 gas 重定价调查显示 builder 担心 EIP-8037 多维 gas 与 EIP-8038 状态访问成本的复杂度。",
+  "items": [
+    {
+      "topic": "交易隐私：加密内存池的元数据",
+      "title": "ethresear.ch：GhostPool，在加密内存池准入中隐藏身份关键元数据",
+      "note": "（wonj1012）23:37：加密内存池在打包前隐藏交易内容，但多数设计的准入路径仍暴露发送者与 nonce，或起同样作用的公开信封签名者，因为动态内存池检查依赖这些字段。",
+      "url": "https://ethresear.ch/t/ghostpool-hiding-identity-critical-metadata-in-encrypted-mempool-admission/24327",
+      "date": "2026-03-09",
+      "title_en": "ethresear.ch: GhostPool, hiding identity critical metadata in encrypted mempool admission",
+      "note_en": "(wonj1012), 23:37: encrypted mempools hide contents before inclusion, but most designs still expose sender and nonce, or an equivalent public envelope signer, on admission because dynamic mempool checks rely on them.",
+      "topic_en": "Transaction privacy: encrypted mempool metadata"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "EIP-8130：允许无许可 payer",
+      "note": "（chunter-cb）提交；Magicians：ERC-8039 智能账户的 ZK 证明验证，用 ZK 电路编写账户逻辑 08:12。",
+      "url": "https://github.com/ethereum/EIPs/pull/11388",
+      "date": "2026-03-09",
+      "title_en": "EIP-8130: enable permissionless payer",
+      "note_en": "(chunter-cb), submitted; Magicians: ERC-8039 ZK proof verification for smart accounts, programming account logic with ZK circuits, 08:12.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "Magicians：ERC-8039 智能账户的 ZK 证明验证，用 ZK 电路编写账户逻辑",
+      "note": "EIP-8130：允许无许可 payer（chunter-cb）提交；Magicians：ERC-8039 智能账户的 ZK 证明验证，用 ZK 电路编写账户逻辑 08:12。",
+      "url": "https://ethereum-magicians.org/t/erc-8039-zk-proof-verification-for-smart-accounts-programming-smart-account-logic-with-zk-circuits/27919",
+      "date": "2026-03-09",
+      "title_en": "Magicians: ERC-8039 ZK proof verification for smart accounts, programming account logic with ZK circuits",
+      "note_en": "EIP-8130: enable permissionless payer (chunter-cb), submitted; Magicians: ERC-8039 ZK proof verification for smart accounts, programming account logic with ZK circuits, 08:12.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "ACDT #73",
+      "note": "21:00，据 Ethereal news #15：Glamsterdam devnet 为 bal-devnet-2 与 epbs-devnet-0；同周 gas 重定价调查结果 显示 builder 担心 EIP-8037 多维 gas 与 EIP-8038 状态访问成本的复杂度。",
+      "url": "https://forkcast.org/calls/acdt/073/",
+      "date": "2026-03-09",
+      "title_en": "ACDT #73",
+      "note_en": "21:00, per Ethereal news #15: Glamsterdam devnets are bal-devnet-2 and epbs-devnet-0; the same week's gas repricing survey results showed builder concerns about the complexity of EIP-8037 multidimensional gas and EIP-8038 state access costs.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "Ethereal news #15",
+      "note": "ACDT #73 21:00，据 Ethereal news #15：Glamsterdam devnet 为 bal-devnet-2 与 epbs-devnet-0；同周 gas 重定价调查结果 显示 builder 担心 EIP-8037 多维 gas 与 EIP-8038 状态访问成本的复杂度。",
+      "url": "https://ethereal.news/ethereal-news-weekly-15/",
+      "date": "2026-03-09",
+      "title_en": "Ethereal news #15",
+      "note_en": "ACDT #73, 21:00, per Ethereal news #15: Glamsterdam devnets are bal-devnet-2 and epbs-devnet-0; the same week's gas repricing survey results showed builder concerns about the complexity of EIP-8037 multidimensional gas and EIP-8038 state access costs.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "原生 AA 与 gas",
+      "title": "gas 重定价调查结果",
+      "note": "ACDT #73 21:00，据 Ethereal news #15：Glamsterdam devnet 为 bal-devnet-2 与 epbs-devnet-0；同周 gas 重定价调查结果 显示 builder 担心 EIP-8037 多维 gas 与 EIP-8038 状态访问成本的复杂度。",
+      "url": "https://x.com/EFprotocol/status/2031056150427242892",
+      "date": "2026-03-09",
+      "title_en": "gas repricing survey results",
+      "note_en": "ACDT #73, 21:00, per Ethereal news #15: Glamsterdam devnets are bal-devnet-2 and epbs-devnet-0; the same week's gas repricing survey results showed builder concerns about the complexity of EIP-8037 multidimensional gas and EIP-8038 state access costs.",
+      "topic_en": "Native AA and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Engine API 二进制 SSZ 传输在 Kurtosis 实网的初步基准",
+      "note": "19:45；EIP-8159：响应大小上限由 10MiB 改为 2MiB 软上限（nerolation）提交；FOCIL Breakout #30 议程 21:07。",
+      "url": "https://ethresear.ch/t/binary-ssz-transport-for-the-engine-api-an-initial-benchmark-on-a-live-network-with-kurtosis/24324",
+      "date": "2026-03-09",
+      "title_en": "ethresear.ch: binary SSZ transport for the Engine API, an initial benchmark on a live Kurtosis network",
+      "note_en": "19:45; EIP-8159: response size cap from 10MiB to a 2MiB soft cap (nerolation), submitted; FOCIL Breakout #30 agenda, 21:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8159：响应大小上限由 10MiB 改为 2MiB 软上限",
+      "note": "ethresear.ch：Engine API 二进制 SSZ 传输在 Kurtosis 实网的初步基准 19:45；EIP-8159：响应大小上限由 10MiB 改为 2MiB 软上限（nerolation）提交；FOCIL Breakout #30 议程 21:07。",
+      "url": "https://github.com/ethereum/EIPs/pull/11387",
+      "date": "2026-03-09",
+      "title_en": "EIP-8159: response size cap from 10MiB to a 2MiB soft cap",
+      "note_en": "Ethresear.ch: binary SSZ transport for the Engine API, an initial benchmark on a live Kurtosis network, 19:45; EIP-8159: response size cap from 10MiB to a 2MiB soft cap (nerolation), submitted; FOCIL Breakout #30 agenda, 21:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #30 议程",
+      "note": "ethresear.ch：Engine API 二进制 SSZ 传输在 Kurtosis 实网的初步基准 19:45；EIP-8159：响应大小上限由 10MiB 改为 2MiB 软上限（nerolation）提交；FOCIL Breakout #30 议程 21:07。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-30-march-10-2026/27923",
+      "date": "2026-03-09",
+      "title_en": "FOCIL Breakout #30 agenda",
+      "note_en": "Ethresear.ch: binary SSZ transport for the Engine API, an initial benchmark on a live Kurtosis network, 19:45; EIP-8159: response size cap from 10MiB to a 2MiB soft cap (nerolation), submitted; FOCIL Breakout #30 agenda, 21:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：前 Electric Coin Co 团队成立新公司 ZODL，融资 2,500 万美元",
+      "note": "21:14；VitalikButerin：值得重新思考何时以及如何构建民主化的东西 06:05。",
+      "url": "https://x.com/zooko/status/2031010706204557316",
+      "date": "2026-03-09",
+      "title_en": "zooko: the former Electric Coin Co team, now ZODL, raised $25M",
+      "note_en": "21:14; VitalikButerin: worth rethinking when and how to build democratic things, 06:05.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：值得重新思考何时以及如何构建民主化的东西",
+      "note": "zooko：前 Electric Coin Co 团队成立新公司 ZODL，融资 2,500 万美元 21:14；VitalikButerin：值得重新思考何时以及如何构建民主化的东西 06:05。",
+      "url": "https://x.com/VitalikButerin/status/2030781981706051769",
+      "date": "2026-03-09",
+      "title_en": "VitalikButerin: worth rethinking when and how to build democratic things",
+      "note_en": "Zooko: the former Electric Coin Co team, now ZODL, raised $25M, 21:14; VitalikButerin: worth rethinking when and how to build democratic things, 06:05.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/ghostpool-hiding-identity-critical-metadata-in-encrypted-mempool-admission/24327",
+    "credit": "ethresear.ch, GhostPool: Hiding Identity-Critical Metadata in Encrypted Mempool Admission",
+    "local_path": "assets/2026-03-09.jpg",
+    "credit_en": "ethresear.ch, GhostPool: Hiding Identity-Critical Metadata in Encrypted Mempool Admission"
+  },
+  "keywords_en": [
+    "GhostPool hides identity metadata in encrypted mempool admission",
+    "EIP-8130 enables permissionless payers",
+    "ACDT #73",
+    "gas repricing survey results",
+    "ZK proof verification for smart accounts ERC-8039",
+    "a binary SSZ Engine API benchmark",
+    "ZODL raises $25M"
+  ],
+  "summary_en": "An ethresear.ch post proposed GhostPool: encrypted mempools hide contents but the admission path still exposes identity critical metadata such as sender and nonce, and the post explores hiding it. chunter-cb submitted permissionless payers for EIP-8130. ACDT #73 followed up on Glamsterdam devnets, and the same week EF Protocol's gas repricing survey showed builders worried about the complexity of EIP-8037 multidimensional gas and EIP-8038 state access costs."
+}

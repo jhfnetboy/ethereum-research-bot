@@ -1,0 +1,163 @@
+{
+  "date": "2026-02-27",
+  "keywords": [
+    "VitalikButerin 解读抗量子路线",
+    "以太坊四处量子脆弱点",
+    "EIP-7932 公钥与签名分离",
+    "防止 EIP-7932 失败的加密敏捷讨论",
+    "EIP-8175 讨论帖",
+    "首批针对线上 ZK 电路的攻击",
+    "Poseidon 预编译之争",
+    "公共物品资金多元化"
+  ],
+  "summary": "VitalikButerin 继续解读 strawmap 的抗量子部分：共识层 BLS 签名、KZG 数据可用性、EOA 的 ECDSA 签名与应用层 ZK 证明四处量子脆弱，需逐步处理。SirSpudlington 提交 EIP-7932 公钥与签名分离，并在 Magicians 指出后量子交易迁移方案过多。zksecurityXYZ 报告首批针对线上 ZK 电路的攻击，源于 Groth16 验证器未完成可信设置。",
+  "items": [
+    {
+      "topic": "账户与后量子：签名迁移",
+      "title": "VitalikButerin：抗量子路线，以太坊目前四处量子脆弱，共识层 BLS 签名、数据可用性的 KZG 承诺与证明、EOA 的 ECDSA 签名与应用层 ZK 证明，可逐步处理",
+      "note": "00:35；tcoratger：共识层依赖 BLS 聚合，leanSig 等方案如何替代 02:41。",
+      "url": "https://x.com/VitalikButerin/status/2027075026378543132",
+      "date": "2026-02-27",
+      "title_en": "VitalikButerin: the quantum resistance roadmap; four parts of Ethereum are quantum vulnerable today, consensus BLS signatures, data availability KZG commitments and proofs, EOA ECDSA signatures and application ZK proofs, to be tackled step by step",
+      "note_en": "00:35; tcoratger: the consensus layer relies on BLS aggregation and how hash based replacements work, 02:41.",
+      "topic_en": "Accounts and post-quantum: signature migration"
+    },
+    {
+      "topic": "账户与后量子：签名迁移",
+      "title": "tcoratger：共识层依赖 BLS 聚合，leanSig 等方案如何替代",
+      "note": "VitalikButerin：抗量子路线，以太坊目前四处量子脆弱，共识层 BLS 签名、数据可用性的 KZG 承诺与证明、EOA 的 ECDSA 签名与应用层 ZK 证明，可逐步处理 00:35；tcoratger：共识层依赖 BLS 聚合，leanSig 等方案如何替代 02:41。",
+      "url": "https://x.com/tcoratger/status/2027106705767583886",
+      "date": "2026-02-27",
+      "title_en": "tcoratger: the consensus layer relies on BLS aggregation and how hash based replacements work",
+      "note_en": "VitalikButerin: the quantum resistance roadmap; four parts of Ethereum are quantum vulnerable today, consensus BLS signatures, data availability KZG commitments and proofs, EOA ECDSA signatures and application ZK proofs, to be tackled step by step, 00:35; tcoratger: the consensus layer relies on BLS aggregation and how hash based replacements work, 02:41.",
+      "topic_en": "Accounts and post-quantum: signature migration"
+    },
+    {
+      "topic": "账户与后量子：签名迁移",
+      "title": "EIP-7932：支持公钥与签名分离",
+      "note": "（SirSpudlington）提交：secp256k1 算法 ID 由 0xff 改为 0x0，限制算法类型不超过 126，新增 merge_detached_signature 并修复与 secp256k1 的公钥冲突；Magicians：后量子迁移、加密敏捷与如何防止 EIP-7932 失败（SirSpudlington）05:28，列举纯 ERC-4337、EIP-6404 SSZ 交易等多条做同一件事的路径。",
+      "url": "https://github.com/ethereum/EIPs/pull/11357",
+      "date": "2026-02-27",
+      "title_en": "EIP-7932: add support for public key and signature separation",
+      "note_en": "(SirSpudlington), submitted: moves secp256k1 to 0x0 from 0xff, restricts algorithm types above 126, adds merge_detached_signature and fixes a public key collision with secp256k1; Magicians: Post Quantum migrations, crypto agility and how to prevent EIP-7932 from failing (SirSpudlington), 05:28, listing many routes doing the same thing, from pure ERC-4337 to EIP-6404 SSZ transactions.",
+      "topic_en": "Accounts and post-quantum: signature migration"
+    },
+    {
+      "topic": "账户与后量子：签名迁移",
+      "title": "Magicians：后量子迁移、加密敏捷与如何防止 EIP-7932 失败",
+      "note": "EIP-7932：支持公钥与签名分离（SirSpudlington）提交：secp256k1 算法 ID 由 0xff 改为 0x0，限制算法类型不超过 126，新增 merge_detached_signature 并修复与 secp256k1 的公钥冲突；Magicians：后量子迁移、加密敏捷与如何防止 EIP-7932 失败（SirSpudlington）05:28，列举纯 ERC-4337、EIP-6404 SSZ 交易等多条做同一件事的路径。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-migrations-crypto-agility-and-how-to-prevent-eip-7932-from-failing/27836",
+      "date": "2026-02-27",
+      "title_en": "Magicians: Post Quantum migrations, crypto agility and how to prevent EIP-7932 from failing",
+      "note_en": "EIP-7932: add support for public key and signature separation (SirSpudlington), submitted: moves secp256k1 to 0x0 from 0xff, restricts algorithm types above 126, adds merge_detached_signature and fixes a public key collision with secp256k1; Magicians: Post Quantum migrations, crypto agility and how to prevent EIP-7932 from failing (SirSpudlington), 05:28, listing many routes doing the same thing, from pure ERC-4337 to EIP-6404 SSZ transactions.",
+      "topic_en": "Accounts and post-quantum: signature migration"
+    },
+    {
+      "topic": "账户与后量子：签名迁移",
+      "title": "Magicians：EIP-8175 可组合交易讨论帖",
+      "note": "23:50；Magicians：后量子以太坊真正的障碍不是数学而是聚合 07:06。",
+      "url": "https://ethereum-magicians.org/t/eip-8175-composable-transaction/27850",
+      "date": "2026-02-27",
+      "title_en": "Magicians: EIP-8175 Composable Transaction thread",
+      "note_en": "23:50; Magicians: the real blocker for post-quantum Ethereum is not the math but aggregation, 07:06.",
+      "topic_en": "Accounts and post-quantum: signature migration"
+    },
+    {
+      "topic": "账户与后量子：签名迁移",
+      "title": "Magicians：后量子以太坊真正的障碍不是数学而是聚合",
+      "note": "Magicians：EIP-8175 可组合交易讨论帖 23:50；Magicians：后量子以太坊真正的障碍不是数学而是聚合 07:06。",
+      "url": "https://ethereum-magicians.org/t/the-real-blocker-for-post-quantum-ethereum-isn-t-the-math-it-s-aggregation-and-we-don-t-have-it-yet/27839",
+      "date": "2026-02-27",
+      "title_en": "Magicians: the real blocker for post-quantum Ethereum is not the math but aggregation",
+      "note_en": "Magicians: EIP-8175 Composable Transaction thread, 23:50; Magicians: the real blocker for post-quantum Ethereum is not the math but aggregation, 07:06.",
+      "topic_en": "Accounts and post-quantum: signature migration"
+    },
+    {
+      "topic": "隐私与 ZK 安全",
+      "title": "zksecurityXYZ：首批针对线上 ZK 电路的攻击发生，原因是 Groth16 验证器未完成可信设置就部署，一起由白帽救回约 150 万美元，另一起被盗 5 ETH",
+      "note": "23:15；ameensol：大家写默认隐私路线却不实现 Poseidon 预编译，而 Solana、Starknet 与 Stellar 都有 14:08。",
+      "url": "https://x.com/zksecurityXYZ/status/2027417243059896544",
+      "date": "2026-02-27",
+      "title_en": "zksecurityXYZ: the first two known exploits of live ZK circuits came from Groth16 verifiers deployed without completing the trusted setup; one was white hat rescued for about $1.5M and the other drained for 5 ETH",
+      "note_en": "23:15; ameensol: people write privacy by default roadmaps but will not implement a Poseidon precompile, which Solana, Starknet and Stellar have, 14:08.",
+      "topic_en": "Privacy and ZK security"
+    },
+    {
+      "topic": "隐私与 ZK 安全",
+      "title": "ameensol：大家写默认隐私路线却不实现 Poseidon 预编译，而 Solana、Starknet 与 Stellar 都有",
+      "note": "zksecurityXYZ：首批针对线上 ZK 电路的攻击发生，原因是 Groth16 验证器未完成可信设置就部署，一起由白帽救回约 150 万美元，另一起被盗 5 ETH 23:15；ameensol：大家写默认隐私路线却不实现 Poseidon 预编译，而 Solana、Starknet 与 Stellar 都有 14:08。",
+      "url": "https://x.com/ameensol/status/2027279608056528982",
+      "date": "2026-02-27",
+      "title_en": "ameensol: people write privacy by default roadmaps but will not implement a Poseidon precompile, which Solana, Starknet and Stellar have",
+      "note_en": "ZksecurityXYZ: the first two known exploits of live ZK circuits came from Groth16 verifiers deployed without completing the trusted setup; one was white hat rescued for about $1.5M and the other drained for 5 ETH, 23:15; ameensol: people write privacy by default roadmaps but will not implement a Poseidon precompile, which Solana, Starknet and Stellar have, 14:08.",
+      "topic_en": "Privacy and ZK security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF 博客：This Is Fine (Until the Grant Runs Out)",
+      "note": "（Raul Romanutti，Funding Coordination Team），讨论为以太坊相关公共物品多元化资金，以 libp2p 资金告急为例。",
+      "url": "https://blog.ethereum.org/en/2026/02/27/project-odin",
+      "date": "2026-02-27",
+      "title_en": "EF blog: This Is Fine (Until the Grant Runs Out)",
+      "note_en": "(Raul Romanutti, Funding Coordination Team), on diversifying funding for Ethereum public goods, citing libp2p's funding shortfall.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：EVM 栈与内存使用统计报告",
+      "note": "02:11；PQ Interop #29 议程 21:03。",
+      "url": "https://ethresear.ch/t/evm-stack-and-memory-usage-statistics-report/24209",
+      "date": "2026-02-27",
+      "title_en": "ethresear.ch: EVM Stack and Memory Usage Statistics Report",
+      "note_en": "02:11; PQ Interop #29 agenda, 21:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #29 议程",
+      "note": "ethresear.ch：EVM 栈与内存使用统计报告 02:11；PQ Interop #29 议程 21:03。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-29-march-4-2026/27849",
+      "date": "2026-02-27",
+      "title_en": "PQ Interop #29 agenda",
+      "note_en": "Ethresear.ch: EVM Stack and Memory Usage Statistics Report, 02:11; PQ Interop #29 agenda, 21:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：扩容分短期与长期两类",
+      "note": "22:20；EliBenSasson：比特币缺乏隐私是真问题 12:01。",
+      "url": "https://x.com/VitalikButerin/status/2027403360484430122",
+      "date": "2026-02-27",
+      "title_en": "VitalikButerin: scaling comes in short term and long term buckets",
+      "note_en": "22:20; EliBenSasson: Bitcoin's lack of privacy is a real problem, 12:01.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：比特币缺乏隐私是真问题",
+      "note": "VitalikButerin：扩容分短期与长期两类 22:20；EliBenSasson：比特币缺乏隐私是真问题 12:01。",
+      "url": "https://x.com/EliBenSasson/status/2027247802141511909",
+      "date": "2026-02-27",
+      "title_en": "EliBenSasson: Bitcoin's lack of privacy is a real problem",
+      "note_en": "VitalikButerin: scaling comes in short term and long term buckets, 22:20; EliBenSasson: Bitcoin's lack of privacy is a real problem, 12:01.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/02/27/project-odin",
+    "credit": "Ethereum Foundation Blog, This Is Fine (Until the Grant Runs Out)",
+    "local_path": "assets/2026-02-27.jpg",
+    "credit_en": "Ethereum Foundation Blog, This Is Fine (Until the Grant Runs Out)"
+  },
+  "keywords_en": [
+    "VitalikButerin on the quantum resistance roadmap",
+    "four quantum vulnerable parts of Ethereum",
+    "EIP-7932 public key and signature separation",
+    "crypto agility and keeping EIP-7932 from failing",
+    "the EIP-8175 thread",
+    "the first exploits of live ZK circuits",
+    "the Poseidon precompile debate",
+    "diversifying public goods funding"
+  ],
+  "summary_en": "VitalikButerin continued through the strawmap's quantum section: consensus BLS signatures, KZG data availability, EOA ECDSA signatures and application ZK proofs are the four quantum vulnerable parts, to be handled step by step. SirSpudlington submitted EIP-7932 public key and signature separation and argued on Magicians that there are too many post-quantum transaction migration proposals. zksecurityXYZ reported the first exploits against live ZK circuits, caused by Groth16 verifiers deployed without completing the trusted setup."
+}

@@ -1,0 +1,169 @@
+{
+  "date": "2026-02-10",
+  "keywords": [
+    "EIP-8037 加入量化与状态 gas 储备模型",
+    "EIP-8141 放宽 APPROVE 须由顶层 frame 调用",
+    "Quick Slots 进 Hegotá 的理由",
+    "自定义验证者 sweep 阈值 EIP 合并",
+    "EIP-8142 基于 7732 重写",
+    "EF 资助 SEAL 研究员"
+  ],
+  "summary": "misilva73 的 EIP-8037 更新合并：为每字节状态成本加入量化方案，并用储备模型取代基于回滚的 TX_MAX_GAS_LIMIT 限制。lightclient 提交放宽 EIP-8141 中 APPROVE 必须由顶层 frame 调用的要求，方便现有智能账户采用。CarlBeek 在 Magicians 论证 Hegotá 引入 Quick Slots。",
+  "items": [
+    {
+      "topic": "Gas：EIP-8037 储备模型",
+      "title": "EIP-8037：加入量化、储备模型并细化 gas 记账",
+      "note": "（misilva73）合并，2 月 9 日提交：cost_per_state_byte 采用取最高 4 个有效位的量化方案，避免随 gas limit 波动频繁小幅变化；用储备模型取代基于回滚的 TX_MAX_GAS_LIMIT 限制，把执行 gas 拆为 gas_left 与 state_gas_reservoir；EIP-8007：加入 gas 成本摘要（misilva73）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11292",
+      "date": "2026-02-10",
+      "title_en": "EIP-8037: add quantization, a reservoir model and refined gas accounting",
+      "note_en": "(misilva73), merged after submission on February 9: cost_per_state_byte is quantized to its top 4 significant bits so it does not change in small steps as the gas limit moves, and revert based TX_MAX_GAS_LIMIT enforcement is replaced by a reservoir model splitting execution gas into gas_left and state_gas_reservoir; EIP-8007: add gas cost summaries (misilva73), submitted and merged.",
+      "topic_en": "Gas: the EIP-8037 reservoir model"
+    },
+    {
+      "topic": "Gas：EIP-8037 储备模型",
+      "title": "EIP-8007：加入 gas 成本摘要",
+      "note": "EIP-8037：加入量化、储备模型并细化 gas 记账（misilva73）合并，2 月 9 日提交：cost_per_state_byte 采用取最高 4 个有效位的量化方案，避免随 gas limit 波动频繁小幅变化；用储备模型取代基于回滚的 TX_MAX_GAS_LIMIT 限制，把执行 gas 拆为 gas_left 与 state_gas_reservoir；EIP-8007：加入 gas 成本摘要（misilva73）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11296",
+      "date": "2026-02-10",
+      "title_en": "EIP-8007: add gas cost summaries",
+      "note_en": "EIP-8037: add quantization, a reservoir model and refined gas accounting (misilva73), merged after submission on February 9: cost_per_state_byte is quantized to its top 4 significant bits so it does not change in small steps as the gas limit moves, and revert based TX_MAX_GAS_LIMIT enforcement is replaced by a reservoir model splitting execution gas into gas_left and state_gas_reservoir; EIP-8007: add gas cost summaries (misilva73), submitted and merged.",
+      "topic_en": "Gas: the EIP-8037 reservoir model"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 APPROVE",
+      "title": "EIP-8141：放宽 APPROVE 必须由顶层调用 frame 调用的要求",
+      "note": "（lightclient）提交：此前要求账户退出顶层 frame 时调用 APPROVE，但现有智能账户都不支持这个 8141 才有的操作码；放宽后，用代理部署的智能账户可以更换实现来采用 8141。",
+      "url": "https://github.com/ethereum/EIPs/pull/11297",
+      "date": "2026-02-10",
+      "title_en": "EIP-8141: relax the requirement that APPROVE be called by the top level call frame",
+      "note_en": "(lightclient), submitted: accounts previously had to exit the top level frame with APPROVE, which no current smart account supports since the opcode only exists with 8141; relaxing it lets proxy deployed smart accounts adopt 8141 by switching implementations.",
+      "topic_en": "Native AA: EIP-8141 APPROVE"
+    },
+    {
+      "topic": "共识与安全",
+      "title": "Magicians：Quick Slots 进入 Hegotá 的理由",
+      "note": "23:45；新增 EIP：自定义验证者 sweep 阈值（dgusakov）合并；EIP-8142：基于 7732 重写（nerolation）提交。",
+      "url": "https://ethereum-magicians.org/t/the-case-for-quick-slots-in-hegota/27708",
+      "date": "2026-02-10",
+      "title_en": "Magicians: The Case for Quick Slots in Hegota",
+      "note_en": "23:45; Add EIP: Custom sweep threshold for validators (dgusakov), merged; EIP-8142: rebase on top of 7732 (nerolation), submitted.",
+      "topic_en": "Consensus and security"
+    },
+    {
+      "topic": "共识与安全",
+      "title": "新增 EIP：自定义验证者 sweep 阈值",
+      "note": "Magicians：Quick Slots 进入 Hegotá 的理由 23:45；新增 EIP：自定义验证者 sweep 阈值（dgusakov）合并；EIP-8142：基于 7732 重写（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11265",
+      "date": "2026-02-10",
+      "title_en": "Add EIP: Custom sweep threshold for validators",
+      "note_en": "Magicians: The Case for Quick Slots in Hegota, 23:45; Add EIP: Custom sweep threshold for validators (dgusakov), merged; EIP-8142: rebase on top of 7732 (nerolation), submitted.",
+      "topic_en": "Consensus and security"
+    },
+    {
+      "topic": "共识与安全",
+      "title": "EIP-8142：基于 7732 重写",
+      "note": "Magicians：Quick Slots 进入 Hegotá 的理由 23:45；新增 EIP：自定义验证者 sweep 阈值（dgusakov）合并；EIP-8142：基于 7732 重写（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11295",
+      "date": "2026-02-10",
+      "title_en": "EIP-8142: rebase on top of 7732",
+      "note_en": "Magicians: The Case for Quick Slots in Hegota, 23:45; Add EIP: Custom sweep threshold for validators (dgusakov), merged; EIP-8142: rebase on top of 7732 (nerolation), submitted.",
+      "topic_en": "Consensus and security"
+    },
+    {
+      "topic": "共识与安全",
+      "title": "ethereumfndn：EF Trillion Dollar Security 计划资助一名安全研究员与 SEAL Intel 合作打击针对以太坊用户的 drainer",
+      "note": "05:21。",
+      "url": "https://x.com/ethereumfndn/status/2020986351936745514",
+      "date": "2026-02-10",
+      "title_en": "ethereumfndn: the EF Trillion Dollar Security effort is funding a security researcher to work with SEAL Intel against drainers targeting Ethereum users",
+      "note_en": "05:21.",
+      "topic_en": "Consensus and security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #230 议程",
+      "note": "22:28；ACDT #70 议程 21:30；FOCIL Breakout #28 议程 13:51；PQTS Breakout #2 08:43。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-230-feb-12-2026/27707",
+      "date": "2026-02-10",
+      "title_en": "ACDE #230 agenda",
+      "note_en": "22:28; ACDT #70 agenda, 21:30; FOCIL Breakout #28 agenda, 13:51; PQTS Breakout #2, 08:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #70 议程",
+      "note": "ACDE #230 议程 22:28；ACDT #70 议程 21:30；FOCIL Breakout #28 议程 13:51；PQTS Breakout #2 08:43。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-70-february-16-2026/27705",
+      "date": "2026-02-10",
+      "title_en": "ACDT #70 agenda",
+      "note_en": "ACDE #230 agenda, 22:28; ACDT #70 agenda, 21:30; FOCIL Breakout #28 agenda, 13:51; PQTS Breakout #2, 08:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #28 议程",
+      "note": "ACDE #230 议程 22:28；ACDT #70 议程 21:30；FOCIL Breakout #28 议程 13:51；PQTS Breakout #2 08:43。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-28-february-10-2026/27702",
+      "date": "2026-02-10",
+      "title_en": "FOCIL Breakout #28 agenda",
+      "note_en": "ACDE #230 agenda, 22:28; ACDT #70 agenda, 21:30; FOCIL Breakout #28 agenda, 13:51; PQTS Breakout #2, 08:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #2",
+      "note": "ACDE #230 议程 22:28；ACDT #70 议程 21:30；FOCIL Breakout #28 议程 13:51；PQTS Breakout #2 08:43。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-2/27699",
+      "date": "2026-02-10",
+      "title_en": "PQTS Breakout #2",
+      "note_en": "ACDE #230 agenda, 22:28; ACDT #70 agenda, 21:30; FOCIL Breakout #28 agenda, 13:51; PQTS Breakout #2, 08:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Agent 链上元数据",
+      "note": "（nxt3d）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1532",
+      "date": "2026-02-10",
+      "title_en": "Add ERC: Agent Onchain Metadata",
+      "note_en": "(nxt3d), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：两年前写过以太坊与 AI 的交叉方向，担心两者被从完全分离的哲学出发思考",
+      "note": "03:51；aztecnetwork：速度与新奇构不成持久护城河，隐私可以 21:00。",
+      "url": "https://x.com/VitalikButerin/status/2020963864175657102",
+      "date": "2026-02-10",
+      "title_en": "VitalikButerin: two years ago I wrote about Ethereum and AI intersections, and I worry we think about the two from separate philosophies",
+      "note_en": "03:51; aztecnetwork: speed and novelty do not create durable moats, privacy does, 21:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：速度与新奇构不成持久护城河，隐私可以",
+      "note": "VitalikButerin：两年前写过以太坊与 AI 的交叉方向，担心两者被从完全分离的哲学出发思考 03:51；aztecnetwork：速度与新奇构不成持久护城河，隐私可以 21:00。",
+      "url": "https://x.com/aztecnetwork/status/2021222668222201943",
+      "date": "2026-02-10",
+      "title_en": "aztecnetwork: speed and novelty do not create durable moats, privacy does",
+      "note_en": "VitalikButerin: two years ago I wrote about Ethereum and AI intersections, and I worry we think about the two from separate philosophies, 03:51; aztecnetwork: speed and novelty do not create durable moats, privacy does, 21:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/the-case-for-quick-slots-in-hegota/27708",
+    "credit": "Ethereum Magicians, The Case for Quick Slots in Hegota",
+    "local_path": "assets/2026-02-10.jpg",
+    "credit_en": "Ethereum Magicians, The Case for Quick Slots in Hegota"
+  },
+  "keywords_en": [
+    "EIP-8037 adds quantization and a state gas reservoir model",
+    "EIP-8141 relaxes the top level APPROVE rule",
+    "the case for Quick Slots in Hegotá",
+    "custom validator sweep threshold EIP merged",
+    "EIP-8142 rebased on 7732",
+    "EF funds a SEAL researcher"
+  ],
+  "summary_en": "misilva73's EIP-8037 update merged, adding a quantization scheme for the per byte state cost and replacing revert based TX_MAX_GAS_LIMIT enforcement with a reservoir model. lightclient submitted a change relaxing EIP-8141's rule that APPROVE must come from the top level frame, easing adoption by existing smart accounts. CarlBeek made the case on Magicians for Quick Slots in Hegotá."
+}

@@ -1,0 +1,139 @@
+{
+  "date": "2026-02-23",
+  "keywords": [
+    "ACDT #71 定 bal-devnet-3 与 epbs-devnet-0 为 3 月 4 日",
+    "VOSA 虚拟一次性子账户隐私原语",
+    "账户型区块链的匿名保密支付 Anonymous PGC",
+    "EIP-8037 最优聚合函数",
+    "VitalikButerin 谈安全即缩小意图与行为的偏差",
+    "EF 的 DeFi 立场"
+  ],
+  "summary": "ACDT #71 确认 bal-devnet-3 与 epbs-devnet-0 均计划 3 月 4 日上线，测试中 EIP-8037 暂按 1 亿 gas 硬编码。隐私方面，Magicians 提出 VOSA 一次性子账户模式，ethresear.ch 发表入选 EUROCRYPT 2026 的 Anonymous PGC。misilva73 给出 EIP-8037 的最优聚合函数。EF 博客阐述对 DeFi 的承诺。",
+  "items": [
+    {
+      "topic": "隐私：账户模型下的隐私支付",
+      "title": "Magicians：VOSA 虚拟一次性子账户，一种简化的 EVM 隐私原语",
+      "note": "（louisliu2048）09:57：以部分资金流隐私换取简单与合规，相当于无 Merkle 树的 UTXO，用 O(1) 的已花费标记加按 epoch 清理，地址只作为映射键存在、每个只用一次。",
+      "url": "https://ethereum-magicians.org/t/vosa-virtual-one-time-sub-account-a-simplified-privacy-primitive-for-evm/27809",
+      "date": "2026-02-23",
+      "title_en": "Magicians: VOSA, Virtual One-time Sub-Account, a simplified privacy primitive for EVM",
+      "note_en": "(louisliu2048), 09:57: trades some fund flow privacy for simplicity and compliance, essentially UTXO without Merkle trees using O(1) spent markers with epoch cleanup, where addresses exist only as mapping keys and are used once.",
+      "topic_en": "Privacy: private payments in the account model"
+    },
+    {
+      "topic": "隐私：账户模型下的隐私支付",
+      "title": "ethresear.ch：Anonymous PGC，账户型区块链的实用匿名保密支付",
+      "note": "（yuchen1024）16:26，论文入选 EUROCRYPT 2026，延续 2019 年用 Twisted ElGamal 实现保密转账的 PGC，其核心设计后被 Solana 采用。",
+      "url": "https://ethresear.ch/t/anonymous-pgc-practical-anonymous-confidential-payment-for-account-based-blockchains/24185",
+      "date": "2026-02-23",
+      "title_en": "ethresear.ch: Anonymous PGC, practical anonymous and confidential payment for account based blockchains",
+      "note_en": "(yuchen1024), 16:26, accepted at EUROCRYPT 2026 and extending the 2019 PGC design that used Twisted ElGamal for confidential transfers, later adopted by Solana.",
+      "topic_en": "Privacy: private payments in the account model"
+    },
+    {
+      "topic": "Gas 与 Glamsterdam",
+      "title": "ACDT #71",
+      "note": "21:00，据 Ethereal news #13：bal-devnet-3 计划 3 月 4 日，因测试框架难以实现动态成本，EIP-8037 按 1 亿 gas 硬编码；epbs-devnet-0 也计划 3 月 4 日。",
+      "url": "https://forkcast.org/calls/acdt/071/",
+      "date": "2026-02-23",
+      "title_en": "ACDT #71",
+      "note_en": "21:00, per Ethereal news #13: bal-devnet-3 is planned for March 4 with EIP-8037 hardcoded for 100M gas because dynamic cost is hard to implement in the testing framework; epbs-devnet-0 is also planned for March 4.",
+      "topic_en": "Gas and Glamsterdam"
+    },
+    {
+      "topic": "Gas 与 Glamsterdam",
+      "title": "Ethereal news #13",
+      "note": "ACDT #71 21:00，据 Ethereal news #13：bal-devnet-3 计划 3 月 4 日，因测试框架难以实现动态成本，EIP-8037 按 1 亿 gas 硬编码；epbs-devnet-0 也计划 3 月 4 日。",
+      "url": "https://ethereal.news/ethereal-news-weekly-13/",
+      "date": "2026-02-23",
+      "title_en": "Ethereal news #13",
+      "note_en": "ACDT #71, 21:00, per Ethereal news #13: bal-devnet-3 is planned for March 4 with EIP-8037 hardcoded for 100M gas because dynamic cost is hard to implement in the testing framework; epbs-devnet-0 is also planned for March 4.",
+      "topic_en": "Gas and Glamsterdam"
+    },
+    {
+      "topic": "Gas 与 Glamsterdam",
+      "title": "ethresear.ch：基于实证弹性的 EIP-8037 最优聚合函数",
+      "note": "（misilva73）15:32，结合吞吐与状态增长的权衡和实测价格弹性，求出最优聚合函数与重定价乘数。",
+      "url": "https://ethresear.ch/t/optimal-aggregation-functions-for-eip-8037-under-empirical-elasticities/24184",
+      "date": "2026-02-23",
+      "title_en": "ethresear.ch: Optimal Aggregation Functions for EIP-8037 Under Empirical Elasticities",
+      "note_en": "(misilva73), 15:32, combining the throughput versus state growth trade off with measured price elasticities to find the optimal aggregation function and repricing multiplier.",
+      "topic_en": "Gas and Glamsterdam"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF 博客：EF 对 DeFi 的承诺",
+      "note": "（Charles St. Louis 与 App Relations Team）：EF 希望 DeFi 无许可、抗审查、隐私优先、自托管且开源。",
+      "url": "https://blog.ethereum.org/en/2026/02/23/commitment-to-defi",
+      "date": "2026-02-23",
+      "title_en": "EF blog: the EF's commitment to DeFi",
+      "note_en": "(Charles St. Louis and the App Relations Team): the EF wants DeFi to be permissionless, censorship resistant, privacy first, self custodial and open source.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Encrypt The Mempool #1 议程",
+      "note": "22:58；EIP-7928 Breakout #13 议程 21:11；RPC Standards #21 13:20。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-1-march-4-2026/27813",
+      "date": "2026-02-23",
+      "title_en": "Encrypt The Mempool #1 agenda",
+      "note_en": "22:58; EIP-7928 Breakout #13 agenda, 21:11; RPC Standards #21, 13:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928 Breakout #13 议程",
+      "note": "Encrypt The Mempool #1 议程 22:58；EIP-7928 Breakout #13 议程 21:11；RPC Standards #21 13:20。",
+      "url": "https://ethereum-magicians.org/t/eip-7928-breakout-13-feb-25-2026/27812",
+      "date": "2026-02-23",
+      "title_en": "EIP-7928 Breakout #13 agenda",
+      "note_en": "Encrypt The Mempool #1 agenda, 22:58; EIP-7928 Breakout #13 agenda, 21:11; RPC Standards #21, 13:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #21",
+      "note": "Encrypt The Mempool #1 议程 22:58；EIP-7928 Breakout #13 议程 21:11；RPC Standards #21 13:20。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-21-feb-23-2026/27811",
+      "date": "2026-02-23",
+      "title_en": "RPC Standards #21",
+      "note_en": "Encrypt The Mempool #1 agenda, 22:58; EIP-7928 Breakout #13 agenda, 21:11; RPC Standards #21, 13:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：安全的目标是缩小用户意图与系统实际行为的偏差，用户体验也可以这样定义",
+      "note": "02:24；nero_eth：Glamsterdam 要来了，准备好扩容 21:58。",
+      "url": "https://x.com/VitalikButerin/status/2025653045414273438",
+      "date": "2026-02-23",
+      "title_en": "VitalikButerin: security means minimizing the gap between user intent and actual system behavior, and user experience can be defined the same way",
+      "note_en": "02:24; nero_eth: Glamsterdam is coming, be ready for scaling, 21:58.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "nero_eth：Glamsterdam 要来了，准备好扩容",
+      "note": "VitalikButerin：安全的目标是缩小用户意图与系统实际行为的偏差，用户体验也可以这样定义 02:24；nero_eth：Glamsterdam 要来了，准备好扩容 21:58。",
+      "url": "https://x.com/nero_eth/status/2025948432578318348",
+      "date": "2026-02-23",
+      "title_en": "nero_eth: Glamsterdam is coming, be ready for scaling",
+      "note_en": "VitalikButerin: security means minimizing the gap between user intent and actual system behavior, and user experience can be defined the same way, 02:24; nero_eth: Glamsterdam is coming, be ready for scaling, 21:58.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/anonymous-pgc-practical-anonymous-confidential-payment-for-account-based-blockchains/24185",
+    "credit": "ethresear.ch, Anonymous PGC: Practical Anonymous & Confidential Payment for Account-based Blockchains",
+    "local_path": "assets/2026-02-23.jpg",
+    "credit_en": "ethresear.ch, Anonymous PGC: Practical Anonymous & Confidential Payment for Account-based Blockchains"
+  },
+  "keywords_en": [
+    "ACDT #71 sets bal-devnet-3 and epbs-devnet-0 for March 4",
+    "VOSA virtual one time sub accounts as a privacy primitive",
+    "Anonymous PGC for account based chains",
+    "optimal aggregation functions for EIP-8037",
+    "VitalikButerin on security as minimizing the gap between intent and behavior",
+    "the EF's DeFi stance"
+  ],
+  "summary_en": "ACDT #71 set both bal-devnet-3 and epbs-devnet-0 for March 4, with EIP-8037 hardcoded at 100M gas for testing. On privacy, a Magicians post proposed the VOSA one time sub account pattern and ethresear.ch published Anonymous PGC, accepted at EUROCRYPT 2026. misilva73 derived optimal aggregation functions for EIP-8037. The EF blog set out its commitment to DeFi."
+}

@@ -1,0 +1,161 @@
+{
+  "date": "2026-03-11",
+  "keywords": [
+    "EIP-8141 原子批处理提交",
+    "链上定期支付 ERC-8191",
+    "签名凭证支付通道 ERC",
+    "snap/2 讨论帖 EIP-8189",
+    "EIP-8159 响应上限 2MiB 合并",
+    "OAuth With Ethereum",
+    "去中心化证明"
+  ],
+  "summary": "derekchiang 提交 EIP-8141 原子批处理：新增 SENDER_ATOMIC 模式，连续的此类 frame 一起回滚，并要求 SENDER 类 frame 只能在发送者与付款方都已批准后执行。支付类 ERC 集中出现，包括链上定期支付与签名凭证支付通道。nerolation 的 EIP-8159 响应上限改为 2MiB 合并。",
+  "items": [
+    {
+      "topic": "原生 AA：原子批处理",
+      "title": "EIP-8141：支持原子批处理",
+      "note": "（derekchiang）提交：新增 SENDER_ATOMIC 模式，连续的 SENDER_ATOMIC frame 一起回滚；并明确 SENDER 与 SENDER_ATOMIC frame 只有在 sender_approved 与 payer_approved 都为 true 后才能执行。",
+      "url": "https://github.com/ethereum/EIPs/pull/11395",
+      "date": "2026-03-11",
+      "title_en": "EIP-8141: add support for atomic batching",
+      "note_en": "(derekchiang), submitted: a SENDER_ATOMIC mode where consecutive SENDER_ATOMIC frames revert together, and an explicit rule that SENDER and SENDER_ATOMIC frames run only once sender_approved and payer_approved are both true.",
+      "topic_en": "Native AA: atomic batching"
+    },
+    {
+      "topic": "支付与账户 ERC",
+      "title": "新增 ERC：链上定期支付",
+      "note": "（chasseurmic）提交，ERC-8191 讨论帖 04:35；新增 ERC：签名凭证支付通道（kimbo128）提交；ERC-8111：明确合约必须拒绝 v=28（wjmelements）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1595",
+      "date": "2026-03-11",
+      "title_en": "Add ERC: Onchain Recurring Payments",
+      "note_en": "(chasseurmic), submitted, with the ERC-8191 thread, 04:35; Add ERC: Payment Channels with Signed Vouchers (kimbo128), submitted; ERC-8111: clarify that contracts must reject v=28 (wjmelements), submitted and merged.",
+      "topic_en": "Payment and account ERCs"
+    },
+    {
+      "topic": "支付与账户 ERC",
+      "title": "ERC-8191 讨论帖",
+      "note": "新增 ERC：链上定期支付（chasseurmic）提交，ERC-8191 讨论帖 04:35；新增 ERC：签名凭证支付通道（kimbo128）提交；ERC-8111：明确合约必须拒绝 v=28（wjmelements）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8191-onchain-recurring-payments/27946",
+      "date": "2026-03-11",
+      "title_en": "ERC-8191 thread",
+      "note_en": "Add ERC: Onchain Recurring Payments (chasseurmic), submitted, with the ERC-8191 thread, 04:35; Add ERC: Payment Channels with Signed Vouchers (kimbo128), submitted; ERC-8111: clarify that contracts must reject v=28 (wjmelements), submitted and merged.",
+      "topic_en": "Payment and account ERCs"
+    },
+    {
+      "topic": "支付与账户 ERC",
+      "title": "新增 ERC：签名凭证支付通道",
+      "note": "新增 ERC：链上定期支付（chasseurmic）提交，ERC-8191 讨论帖 04:35；新增 ERC：签名凭证支付通道（kimbo128）提交；ERC-8111：明确合约必须拒绝 v=28（wjmelements）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1592",
+      "date": "2026-03-11",
+      "title_en": "Add ERC: Payment Channels with Signed Vouchers",
+      "note_en": "Add ERC: Onchain Recurring Payments (chasseurmic), submitted, with the ERC-8191 thread, 04:35; Add ERC: Payment Channels with Signed Vouchers (kimbo128), submitted; ERC-8111: clarify that contracts must reject v=28 (wjmelements), submitted and merged.",
+      "topic_en": "Payment and account ERCs"
+    },
+    {
+      "topic": "支付与账户 ERC",
+      "title": "ERC-8111：明确合约必须拒绝 v=28",
+      "note": "新增 ERC：链上定期支付（chasseurmic）提交，ERC-8191 讨论帖 04:35；新增 ERC：签名凭证支付通道（kimbo128）提交；ERC-8111：明确合约必须拒绝 v=28（wjmelements）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1594",
+      "date": "2026-03-11",
+      "title_en": "ERC-8111: clarify that contracts must reject v=28",
+      "note_en": "Add ERC: Onchain Recurring Payments (chasseurmic), submitted, with the ERC-8191 thread, 04:35; Add ERC: Payment Channels with Signed Vouchers (kimbo128), submitted; ERC-8111: clarify that contracts must reject v=28 (wjmelements), submitted and merged.",
+      "topic_en": "Payment and account ERCs"
+    },
+    {
+      "topic": "支付与账户 ERC",
+      "title": "Magicians：ERC OAWE，OAuth With Ethereum",
+      "note": "23:58；Pre-ERC：Agent 链下条件结算接口 13:36。",
+      "url": "https://ethereum-magicians.org/t/erc-oawe-oauth-with-ethereum/27963",
+      "date": "2026-03-11",
+      "title_en": "Magicians: ERC OAWE, OAuth With Ethereum",
+      "note_en": "23:58; Pre-ERC: Agent Off-Chain Conditional Settlement Interface, 13:36.",
+      "topic_en": "Payment and account ERCs"
+    },
+    {
+      "topic": "支付与账户 ERC",
+      "title": "Pre-ERC：Agent 链下条件结算接口",
+      "note": "Magicians：ERC OAWE，OAuth With Ethereum 23:58；Pre-ERC：Agent 链下条件结算接口 13:36。",
+      "url": "https://ethereum-magicians.org/t/pre-erc-agent-off-chain-conditional-settlement-interface/27949",
+      "date": "2026-03-11",
+      "title_en": "Pre-ERC: Agent Off-Chain Conditional Settlement Interface",
+      "note_en": "Magicians: ERC OAWE, OAuth With Ethereum, 23:58; Pre-ERC: Agent Off-Chain Conditional Settlement Interface, 13:36.",
+      "topic_en": "Payment and account ERCs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8159：响应大小上限改为 2MiB 软上限",
+      "note": "（nerolation）合并；Magicians：EIP-8189 snap/2 讨论帖 14:47；ethresear.ch：Curvy 去中心化证明 20:58；FCR #5 议程 18:28。",
+      "url": "https://github.com/ethereum/EIPs/pull/11387",
+      "date": "2026-03-11",
+      "title_en": "EIP-8159: response size cap to a 2MiB soft cap",
+      "note_en": "(nerolation), merged; Magicians: EIP-8189 snap/2 thread, 14:47; ethresear.ch: Curvy Decentralized Proving, 20:58; FCR #5 agenda, 18:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8189 snap/2 讨论帖",
+      "note": "EIP-8159：响应大小上限改为 2MiB 软上限（nerolation）合并；Magicians：EIP-8189 snap/2 讨论帖 14:47；ethresear.ch：Curvy 去中心化证明 20:58；FCR #5 议程 18:28。",
+      "url": "https://ethereum-magicians.org/t/eip-8189-snap-2-bal-based-state-healing/27953",
+      "date": "2026-03-11",
+      "title_en": "Magicians: EIP-8189 snap/2 thread",
+      "note_en": "EIP-8159: response size cap to a 2MiB soft cap (nerolation), merged; Magicians: EIP-8189 snap/2 thread, 14:47; ethresear.ch: Curvy Decentralized Proving, 20:58; FCR #5 agenda, 18:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Curvy 去中心化证明",
+      "note": "EIP-8159：响应大小上限改为 2MiB 软上限（nerolation）合并；Magicians：EIP-8189 snap/2 讨论帖 14:47；ethresear.ch：Curvy 去中心化证明 20:58；FCR #5 议程 18:28。",
+      "url": "https://ethresear.ch/t/curvy-decentralized-proving/24352",
+      "date": "2026-03-11",
+      "title_en": "ethresear.ch: Curvy Decentralized Proving",
+      "note_en": "EIP-8159: response size cap to a 2MiB soft cap (nerolation), merged; Magicians: EIP-8189 snap/2 thread, 14:47; ethresear.ch: Curvy Decentralized Proving, 20:58; FCR #5 agenda, 18:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #5 议程",
+      "note": "EIP-8159：响应大小上限改为 2MiB 软上限（nerolation）合并；Magicians：EIP-8189 snap/2 讨论帖 14:47；ethresear.ch：Curvy 去中心化证明 20:58；FCR #5 议程 18:28。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-5-march-17-2026/27958",
+      "date": "2026-03-11",
+      "title_en": "FCR #5 agenda",
+      "note_en": "EIP-8159: response size cap to a 2MiB soft cap (nerolation), merged; Magicians: EIP-8189 snap/2 thread, 14:47; ethresear.ch: Curvy Decentralized Proving, 20:58; FCR #5 agenda, 18:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：Deep funding 完成了一轮重要分配",
+      "note": "12:02；aztecnetwork：Aztec 由全球 3,900 多个排序器与证明者运行 00:20。",
+      "url": "https://x.com/VitalikButerin/status/2031596611152085283",
+      "date": "2026-03-11",
+      "title_en": "VitalikButerin: deep funding finished a major round",
+      "note_en": "12:02; aztecnetwork: Aztec is run by over 3,900 sequencers and provers worldwide, 00:20.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Aztec 由全球 3,900 多个排序器与证明者运行",
+      "note": "VitalikButerin：Deep funding 完成了一轮重要分配 12:02；aztecnetwork：Aztec 由全球 3,900 多个排序器与证明者运行 00:20。",
+      "url": "https://x.com/aztecnetwork/status/2031419923529085306",
+      "date": "2026-03-11",
+      "title_en": "aztecnetwork: Aztec is run by over 3,900 sequencers and provers worldwide",
+      "note_en": "VitalikButerin: deep funding finished a major round, 12:02; aztecnetwork: Aztec is run by over 3,900 sequencers and provers worldwide, 00:20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8191-onchain-recurring-payments/27946",
+    "credit": "Ethereum Magicians, ERC-8191: Onchain Recurring Payments",
+    "local_path": "assets/2026-03-11.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8191: Onchain Recurring Payments"
+  },
+  "keywords_en": [
+    "EIP-8141 atomic batching submitted",
+    "Onchain Recurring Payments ERC-8191",
+    "a payment channels with signed vouchers ERC",
+    "the snap/2 thread EIP-8189",
+    "EIP-8159 2MiB response cap merged",
+    "OAuth With Ethereum",
+    "decentralized proving"
+  ],
+  "summary_en": "derekchiang submitted EIP-8141 atomic batching: a SENDER_ATOMIC mode where consecutive such frames revert together, and a rule that SENDER frames run only after both sender and payer approve. Payment ERCs clustered, including onchain recurring payments and payment channels with signed vouchers. nerolation's EIP-8159 2MiB response cap merged."
+}

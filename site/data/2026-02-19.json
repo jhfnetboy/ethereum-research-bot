@@ -1,0 +1,167 @@
+{
+  "date": "2026-02-19",
+  "keywords": [
+    "ACDC #175 选定 FOCIL 为 Hegotá 共识层头号功能",
+    "FOCIL 与 EIP-8141 原生 AA 的协同",
+    "Solidity 0.8.34 修复 IR 高危漏洞",
+    "原生密钥委托讨论帖 EIP-8164",
+    "Agent L2 共享排序器 ERC-8166"
+  ],
+  "summary": "ACDC #175 选定 EIP-7805 FOCIL 为 Hegotá 共识层头号功能。VitalikButerin 指出 FOCIL 与 EIP-8141 的协同：8141 让智能账户与隐私协议都成为一等公民，FOCIL 再为它们提供抗审查保障。Solidity 0.8.34 修复 0.8.28 至 0.8.33 版 IR 管线的高危漏洞。",
+  "items": [
+    {
+      "topic": "Hegotá：FOCIL 成为头号功能",
+      "title": "ACDC #175",
+      "note": "21:00，据 Ethereal news #12：Hegotá 共识层头号功能选定 EIP-7805 分叉选择强制包含列表（FOCIL）；soispoke：FOCIL 刚被列为 SFI，成为 Hegotá 共识层头号，以太坊选择优先提升抗审查与包含保证 21:14。",
+      "url": "https://forkcast.org/calls/acdc/175",
+      "date": "2026-02-19",
+      "title_en": "ACDC #175",
+      "note_en": "21:00, per Ethereal news #12: Hegotá's consensus layer headliner is EIP-7805 fork choice enforced inclusion lists (FOCIL); soispoke: FOCIL was just SFI'd as the Hegotá CL headliner, so Ethereum is prioritizing censorship resistance and inclusion guarantees, 21:14.",
+      "topic_en": "Hegotá: FOCIL is the headliner"
+    },
+    {
+      "topic": "Hegotá：FOCIL 成为头号功能",
+      "title": "Ethereal news #12",
+      "note": "ACDC #175 21:00，据 Ethereal news #12：Hegotá 共识层头号功能选定 EIP-7805 分叉选择强制包含列表（FOCIL）；soispoke：FOCIL 刚被列为 SFI，成为 Hegotá 共识层头号，以太坊选择优先提升抗审查与包含保证 21:14。",
+      "url": "https://ethereal.news/ethereal-news-weekly-12/",
+      "date": "2026-02-19",
+      "title_en": "Ethereal news #12",
+      "note_en": "ACDC #175, 21:00, per Ethereal news #12: Hegotá's consensus layer headliner is EIP-7805 fork choice enforced inclusion lists (FOCIL); soispoke: FOCIL was just SFI'd as the Hegotá CL headliner, so Ethereum is prioritizing censorship resistance and inclusion guarantees, 21:14.",
+      "topic_en": "Hegotá: FOCIL is the headliner"
+    },
+    {
+      "topic": "Hegotá：FOCIL 成为头号功能",
+      "title": "EIP-7805",
+      "note": "ACDC #175 21:00，据 Ethereal news #12：Hegotá 共识层头号功能选定 EIP-7805 分叉选择强制包含列表（FOCIL）；soispoke：FOCIL 刚被列为 SFI，成为 Hegotá 共识层头号，以太坊选择优先提升抗审查与包含保证 21:14。",
+      "url": "https://forkcast.org/eips/7805/",
+      "date": "2026-02-19",
+      "title_en": "EIP-7805",
+      "note_en": "ACDC #175, 21:00, per Ethereal news #12: Hegotá's consensus layer headliner is EIP-7805 fork choice enforced inclusion lists (FOCIL); soispoke: FOCIL was just SFI'd as the Hegotá CL headliner, so Ethereum is prioritizing censorship resistance and inclusion guarantees, 21:14.",
+      "topic_en": "Hegotá: FOCIL is the headliner"
+    },
+    {
+      "topic": "Hegotá：FOCIL 成为头号功能",
+      "title": "soispoke：FOCIL 刚被列为 SFI，成为 Hegotá 共识层头号，以太坊选择优先提升抗审查与包含保证",
+      "note": "ACDC #175 21:00，据 Ethereal news #12：Hegotá 共识层头号功能选定 EIP-7805 分叉选择强制包含列表（FOCIL）；soispoke：FOCIL 刚被列为 SFI，成为 Hegotá 共识层头号，以太坊选择优先提升抗审查与包含保证 21:14。",
+      "url": "https://x.com/soispoke/status/2024487767871299767",
+      "date": "2026-02-19",
+      "title_en": "soispoke: FOCIL was just SFI'd as the Hegotá CL headliner, so Ethereum is prioritizing censorship resistance and inclusion guarantees",
+      "note_en": "ACDC #175, 21:00, per Ethereal news #12: Hegotá's consensus layer headliner is EIP-7805 fork choice enforced inclusion lists (FOCIL); soispoke: FOCIL was just SFI'd as the Hegotá CL headliner, so Ethereum is prioritizing censorship resistance and inclusion guarantees, 21:14.",
+      "topic_en": "Hegotá: FOCIL is the headliner"
+    },
+    {
+      "topic": "Hegotá：FOCIL 成为头号功能",
+      "title": "VitalikButerin：FOCIL 与基于 7701 的 AA 提案 EIP-8141 有重要协同，8141 不仅让智能账户（多签、抗量子签名、换密钥、gas 赞助）成为一等公民，也能让隐私协议如此",
+      "note": "23:38。",
+      "url": "https://x.com/VitalikButerin/status/2024523896360464791",
+      "date": "2026-02-19",
+      "title_en": "VitalikButerin: there is an important synergy between FOCIL and AA (EIP-8141, based on 7701); 8141 makes smart accounts, including multisig, quantum resistant signatures, key changes and gas sponsorship, first class citizens, and can do the same for privacy protocols",
+      "note_en": "23:38.",
+      "topic_en": "Hegotá: FOCIL is the headliner"
+    },
+    {
+      "topic": "账户与安全",
+      "title": "Magicians：EIP-8164 原生密钥委托讨论帖",
+      "note": "10:48，对应前一日提交的 EOA 原生密钥委托 EIP。",
+      "url": "https://ethereum-magicians.org/t/eip-8164-native-key-delegation/27770",
+      "date": "2026-02-19",
+      "title_en": "Magicians: EIP-8164 Native Key Delegation thread",
+      "note_en": "10:48, for the Native Key Delegation for EOAs EIP submitted the day before.",
+      "topic_en": "Accounts and security"
+    },
+    {
+      "topic": "账户与安全",
+      "title": "solidity_lang：Solidity v0.8.34 修复 IR 管线高危漏洞，影响 0.8.28 至 0.8.33 版在启用 via-ir 时对瞬时状态变量使用 delete 的合约",
+      "note": "00:58。",
+      "url": "https://x.com/solidity_lang/status/2024181650155065848",
+      "date": "2026-02-19",
+      "title_en": "solidity_lang: Solidity v0.8.34 fixes a high severity IR pipeline bug in 0.8.28 to 0.8.33 affecting contracts using delete on transient state variables with via-ir",
+      "note_en": "00:58.",
+      "topic_en": "Accounts and security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Agent 链上操作",
+      "note": "（qinwang-git）提交；ERC-8166：Agent L2 共享排序器接口 11:13；EIP-7928：简化 BAL 上限方式（nerolation）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1549",
+      "date": "2026-02-19",
+      "title_en": "Add ERC: Agentic Onchain Operations",
+      "note_en": "(qinwang-git), submitted; ERC-8166: Shared Sequencer Interface for Agent L2s, 11:13; EIP-7928: simplify BAL capping (nerolation), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8166：Agent L2 共享排序器接口",
+      "note": "新增 ERC：Agent 链上操作（qinwang-git）提交；ERC-8166：Agent L2 共享排序器接口 11:13；EIP-7928：简化 BAL 上限方式（nerolation）合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8166-shared-sequencer-interface-for-agent-l2s/27772",
+      "date": "2026-02-19",
+      "title_en": "ERC-8166: Shared Sequencer Interface for Agent L2s",
+      "note_en": "Add ERC: Agentic Onchain Operations (qinwang-git), submitted; ERC-8166: Shared Sequencer Interface for Agent L2s, 11:13; EIP-7928: simplify BAL capping (nerolation), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：简化 BAL 上限方式",
+      "note": "新增 ERC：Agent 链上操作（qinwang-git）提交；ERC-8166：Agent L2 共享排序器接口 11:13；EIP-7928：简化 BAL 上限方式（nerolation）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11323",
+      "date": "2026-02-19",
+      "title_en": "EIP-7928: simplify BAL capping",
+      "note_en": "Add ERC: Agentic Onchain Operations (qinwang-git), submitted; ERC-8166: Shared Sequencer Interface for Agent L2s, 11:13; EIP-7928: simplify BAL capping (nerolation), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #28 议程",
+      "note": "06:14；FCR #4 议程 08:23。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-28-february-25-2026/27768",
+      "date": "2026-02-19",
+      "title_en": "PQ Interop #28 agenda",
+      "note_en": "06:14; FCR #4 agenda, 08:23.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #4 议程",
+      "note": "PQ Interop #28 议程 06:14；FCR #4 议程 08:23。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-4-march-3-2026/27769",
+      "date": "2026-02-19",
+      "title_en": "FCR #4 agenda",
+      "note_en": "PQ Interop #28 agenda, 06:14; FCR #4 agenda, 08:23.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：Paradigm 与 Tempo 的工作出现在 OpenAI 关于 Agent 与 EVM 合约安全的研究论文中",
+      "note": "01:57；pcaversaccio：关于 Ledger Nano X 侧载应用的未公开情况 01:39。",
+      "url": "https://x.com/gakonst/status/2024196679495537122",
+      "date": "2026-02-19",
+      "title_en": "gakonst: Paradigm and Tempo work appears in an OpenAI research paper on agents and EVM contract security",
+      "note_en": "01:57; pcaversaccio: on what is not public about sideloading apps on the Ledger Nano X, 01:39.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：关于 Ledger Nano X 侧载应用的未公开情况",
+      "note": "gakonst：Paradigm 与 Tempo 的工作出现在 OpenAI 关于 Agent 与 EVM 合约安全的研究论文中 01:57；pcaversaccio：关于 Ledger Nano X 侧载应用的未公开情况 01:39。",
+      "url": "https://x.com/pcaversaccio/status/2024191975289999672",
+      "date": "2026-02-19",
+      "title_en": "pcaversaccio: on what is not public about sideloading apps on the Ledger Nano X",
+      "note_en": "Gakonst: Paradigm and Tempo work appears in an OpenAI research paper on agents and EVM contract security, 01:57; pcaversaccio: on what is not public about sideloading apps on the Ledger Nano X, 01:39.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://forkcast.org/eips/7805/",
+    "credit": "Forkcast, EIP-7805 Fork-choice enforced Inclusion Lists (FOCIL)",
+    "local_path": "assets/2026-02-19.jpg",
+    "credit_en": "Forkcast, EIP-7805 Fork-choice enforced Inclusion Lists (FOCIL)"
+  },
+  "keywords_en": [
+    "ACDC #175 picks FOCIL as the Hegotá consensus layer headliner",
+    "the FOCIL and EIP-8141 native AA synergy",
+    "Solidity 0.8.34 fixes a high severity IR bug",
+    "Native Key Delegation thread EIP-8164",
+    "Shared Sequencer Interface for Agent L2s ERC-8166"
+  ],
+  "summary_en": "ACDC #175 picked EIP-7805 FOCIL as the Hegotá consensus layer headliner. VitalikButerin highlighted the synergy with EIP-8141: 8141 makes smart accounts and privacy protocols first class citizens, and FOCIL then gives them censorship resistance. Solidity 0.8.34 fixed a high severity IR pipeline bug affecting 0.8.28 to 0.8.33."
+}

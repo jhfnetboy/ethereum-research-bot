@@ -1,0 +1,139 @@
+{
+  "date": "2026-03-06",
+  "keywords": [
+    "EIP-8130 简化为初版",
+    "EIP-8037 储备机制澄清合并",
+    "Agentic Commerce ERC 合并",
+    "ERC-7730 完整性校验 ERC-8176",
+    "合规门控隐私代币 VOSA-RWA",
+    "生态 25 项进展"
+  ],
+  "summary": "chunter-cb 把 EIP-8130 简化为初版，目标是高性能且能安全运行内存池的 AA 模型，提交并合并。spencer-tb 的 EIP-8037 储备机制澄清合并。dcrapis 的 Agentic Commerce ERC 合并。Magicians 提出为 ERC-7730 明文签名描述加入完整性校验。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8130 初版",
+      "title": "EIP-8130：为初版简化",
+      "note": "（chunter-cb）提交并合并：目标是高性能、能安全运行内存池的 AA 模型，内存池所需存储限于世界状态、可信验证器与标准地址的合约代码以及账户配置合约状态；EIP-8130：slot 推导留给最终合约（chunter-cb）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11380",
+      "date": "2026-03-06",
+      "title_en": "EIP-8130: simplify for the initial EIP",
+      "note_en": "(chunter-cb), submitted and merged: an AA model that is performant and can run a mempool safely, with mempool storage limited to world state, contract code for trusted verifiers and canonical addresses, and account config contract state; EIP-8130: slot derivations left to the final contract (chunter-cb), merged.",
+      "topic_en": "Native AA: the initial EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8130 初版",
+      "title": "EIP-8130：slot 推导留给最终合约",
+      "note": "EIP-8130：为初版简化（chunter-cb）提交并合并：目标是高性能、能安全运行内存池的 AA 模型，内存池所需存储限于世界状态、可信验证器与标准地址的合约代码以及账户配置合约状态；EIP-8130：slot 推导留给最终合约（chunter-cb）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11378",
+      "date": "2026-03-06",
+      "title_en": "EIP-8130: slot derivations left to the final contract",
+      "note_en": "EIP-8130: simplify for the initial EIP (chunter-cb), submitted and merged: an AA model that is performant and can run a mempool safely, with mempool storage limited to world state, contract code for trusted verifiers and canonical addresses, and account config contract state; EIP-8130: slot derivations left to the final contract (chunter-cb), merged.",
+      "topic_en": "Native AA: the initial EIP-8130"
+    },
+    {
+      "topic": "Gas 与交易",
+      "title": "EIP-8037：澄清储备机制",
+      "note": "（spencer-tb）合并，2 月 17 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11328",
+      "date": "2026-03-06",
+      "title_en": "EIP-8037: clarify reservoir mechanics",
+      "note_en": "(spencer-tb), merged after submission on February 17.",
+      "topic_en": "Gas and transactions"
+    },
+    {
+      "topic": "Gas 与交易",
+      "title": "Magicians：ERC-8176，ERC-7730 的完整性校验",
+      "note": "15:01。",
+      "url": "https://ethereum-magicians.org/t/erc-8176-integrity-verification-for-erc-7730/27911",
+      "date": "2026-03-06",
+      "title_en": "Magicians: ERC-8176, Integrity Verification for ERC-7730",
+      "note_en": "15:01.",
+      "topic_en": "Gas and transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Agentic Commerce",
+      "note": "（dcrapis）合并；新增 ERC：Token Puller（gnarvaja）提交；草案 ERC VOSA-RWA，合规门控的现实资产隐私代币 14:31。",
+      "url": "https://github.com/ethereum/ERCs/pull/1581",
+      "date": "2026-03-06",
+      "title_en": "Add ERC: Agentic Commerce",
+      "note_en": "(dcrapis), merged; Add ERC: Token Puller (gnarvaja), submitted; Draft ERC VOSA-RWA, a compliance gated privacy token for real world assets, 14:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Token Puller",
+      "note": "新增 ERC：Agentic Commerce（dcrapis）合并；新增 ERC：Token Puller（gnarvaja）提交；草案 ERC VOSA-RWA，合规门控的现实资产隐私代币 14:31。",
+      "url": "https://github.com/ethereum/ERCs/pull/1587",
+      "date": "2026-03-06",
+      "title_en": "Add ERC: Token Puller",
+      "note_en": "Add ERC: Agentic Commerce (dcrapis), merged; Add ERC: Token Puller (gnarvaja), submitted; Draft ERC VOSA-RWA, a compliance gated privacy token for real world assets, 14:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "草案 ERC VOSA-RWA，合规门控的现实资产隐私代币",
+      "note": "新增 ERC：Agentic Commerce（dcrapis）合并；新增 ERC：Token Puller（gnarvaja）提交；草案 ERC VOSA-RWA，合规门控的现实资产隐私代币 14:31。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-vosa-rwa-compliance-gated-privacy-token-for-real-world-assets/27908",
+      "date": "2026-03-06",
+      "title_en": "Draft ERC VOSA-RWA, a compliance gated privacy token for real world assets",
+      "note_en": "Add ERC: Agentic Commerce (dcrapis), merged; Add ERC: Token Puller (gnarvaja), submitted; Draft ERC VOSA-RWA, a compliance gated privacy token for real world assets, 14:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #30 议程",
+      "note": "01:03；ERC-7786 进入 Final（Amxx）提交。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-30-march-11-2026/27907",
+      "date": "2026-03-06",
+      "title_en": "PQ Interop #30 agenda",
+      "note_en": "01:03; ERC-7786: move to Final (Amxx), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7786 进入 Final",
+      "note": "PQ Interop #30 议程 01:03；ERC-7786 进入 Final（Amxx）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1586",
+      "date": "2026-03-06",
+      "title_en": "ERC-7786: move to Final",
+      "note_en": "PQ Interop #30 agenda, 01:03; ERC-7786: move to Final (Amxx), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：从隐私支付到代币化基金与 AI 标准，生态的 25 项进展",
+      "note": "03:17；VitalikButerin：以太坊世界应有更大胆开放的心态 03:58。",
+      "url": "https://x.com/ethereum/status/2029652487515558048",
+      "date": "2026-03-06",
+      "title_en": "ethereum: from private payments to tokenized funds and AI standards, 25 things the ecosystem shipped",
+      "note_en": "03:17; VitalikButerin: the Ethereum world should have a bolder, more open mindset, 03:58.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：以太坊世界应有更大胆开放的心态",
+      "note": "ethereum：从隐私支付到代币化基金与 AI 标准，生态的 25 项进展 03:17；VitalikButerin：以太坊世界应有更大胆开放的心态 03:58。",
+      "url": "https://x.com/VitalikButerin/status/2029662920318275935",
+      "date": "2026-03-06",
+      "title_en": "VitalikButerin: the Ethereum world should have a bolder, more open mindset",
+      "note_en": "Ethereum: from private payments to tokenized funds and AI standards, 25 things the ecosystem shipped, 03:17; VitalikButerin: the Ethereum world should have a bolder, more open mindset, 03:58.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8176-integrity-verification-for-erc-7730/27911",
+    "credit": "Ethereum Magicians, ERC-8176: Integrity Verification for ERC-7730",
+    "local_path": "assets/2026-03-06.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8176: Integrity Verification for ERC-7730"
+  },
+  "keywords_en": [
+    "EIP-8130 simplified for its initial version",
+    "EIP-8037 reservoir clarification merged",
+    "Agentic Commerce ERC merged",
+    "ERC-7730 integrity verification ERC-8176",
+    "compliance gated private token VOSA-RWA",
+    "25 ecosystem updates"
+  ],
+  "summary_en": "chunter-cb simplified EIP-8130 to its initial version, an AA model built to be performant and to run a mempool safely, submitted and merged. spencer-tb's EIP-8037 reservoir clarification merged. dcrapis's Agentic Commerce ERC merged. A Magicians post proposed integrity verification for ERC-7730 clear signing descriptors."
+}

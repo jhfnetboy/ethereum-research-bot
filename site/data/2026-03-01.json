@@ -1,0 +1,139 @@
+{
+  "date": "2026-03-01",
+  "keywords": [
+    "Blob 空间分段 ERC-8179",
+    "Blob 认证消息 ERC-8180",
+    "合约意图规范 ERC-8174",
+    "Engine API 通信通道 EIP",
+    "原生 AA 与 AA 的区别",
+    "钱包不应泄露信息"
+  ],
+  "summary": "周日较安静。skeletor-spaceman 提交 Blob 空间分段与 Blob 认证消息两个 ERC，让多个应用共享一个 blob。Giulio2002 提交 Engine API 通信通道 EIP。EliBenSasson 解释原生 AA 与 AA 的区别。",
+  "items": [
+    {
+      "topic": "Blob 与交易",
+      "title": "新增 ERC：Blob 空间分段",
+      "note": "（skeletor-spaceman）提交，ERC-8179 讨论帖 22:59；新增 ERC：Blob 认证消息（skeletor-spaceman）提交，ERC-8180 讨论帖 23:01。",
+      "url": "https://github.com/ethereum/ERCs/pull/1577",
+      "date": "2026-03-01",
+      "title_en": "Add ERC: Blob Space Segments",
+      "note_en": "(skeletor-spaceman), submitted, with the ERC-8179 thread, 22:59; Add ERC: Blob Authenticated Messaging (skeletor-spaceman), submitted, with the ERC-8180 thread, 23:01.",
+      "topic_en": "Blobs and transactions"
+    },
+    {
+      "topic": "Blob 与交易",
+      "title": "ERC-8179 讨论帖",
+      "note": "新增 ERC：Blob 空间分段（skeletor-spaceman）提交，ERC-8179 讨论帖 22:59；新增 ERC：Blob 认证消息（skeletor-spaceman）提交，ERC-8180 讨论帖 23:01。",
+      "url": "https://ethereum-magicians.org/t/erc-8179-blob-space-segments-bss/27867",
+      "date": "2026-03-01",
+      "title_en": "ERC-8179 thread",
+      "note_en": "Add ERC: Blob Space Segments (skeletor-spaceman), submitted, with the ERC-8179 thread, 22:59; Add ERC: Blob Authenticated Messaging (skeletor-spaceman), submitted, with the ERC-8180 thread, 23:01.",
+      "topic_en": "Blobs and transactions"
+    },
+    {
+      "topic": "Blob 与交易",
+      "title": "新增 ERC：Blob 认证消息",
+      "note": "新增 ERC：Blob 空间分段（skeletor-spaceman）提交，ERC-8179 讨论帖 22:59；新增 ERC：Blob 认证消息（skeletor-spaceman）提交，ERC-8180 讨论帖 23:01。",
+      "url": "https://github.com/ethereum/ERCs/pull/1578",
+      "date": "2026-03-01",
+      "title_en": "Add ERC: Blob Authenticated Messaging",
+      "note_en": "Add ERC: Blob Space Segments (skeletor-spaceman), submitted, with the ERC-8179 thread, 22:59; Add ERC: Blob Authenticated Messaging (skeletor-spaceman), submitted, with the ERC-8180 thread, 23:01.",
+      "topic_en": "Blobs and transactions"
+    },
+    {
+      "topic": "Blob 与交易",
+      "title": "ERC-8180 讨论帖",
+      "note": "新增 ERC：Blob 空间分段（skeletor-spaceman）提交，ERC-8179 讨论帖 22:59；新增 ERC：Blob 认证消息（skeletor-spaceman）提交，ERC-8180 讨论帖 23:01。",
+      "url": "https://ethereum-magicians.org/t/erc-8180-blob-authenticated-messaging-bam/27868",
+      "date": "2026-03-01",
+      "title_en": "ERC-8180 thread",
+      "note_en": "Add ERC: Blob Space Segments (skeletor-spaceman), submitted, with the ERC-8179 thread, 22:59; Add ERC: Blob Authenticated Messaging (skeletor-spaceman), submitted, with the ERC-8180 thread, 23:01.",
+      "topic_en": "Blobs and transactions"
+    },
+    {
+      "topic": "账户",
+      "title": "EliBenSasson：原生账户抽象意味着开发者只需考虑一种账户，即智能账户",
+      "note": "21:53；kassandraETH：理想的钱包永远不泄露这些信息 19:35。",
+      "url": "https://x.com/EliBenSasson/status/2028121563673825563",
+      "date": "2026-03-01",
+      "title_en": "EliBenSasson: native account abstraction means developers deal with one kind of account, smart accounts",
+      "note_en": "21:53; kassandraETH: ideally the wallet never leaks any of this, 19:35.",
+      "topic_en": "Accounts"
+    },
+    {
+      "topic": "账户",
+      "title": "kassandraETH：理想的钱包永远不泄露这些信息",
+      "note": "EliBenSasson：原生账户抽象意味着开发者只需考虑一种账户，即智能账户 21:53；kassandraETH：理想的钱包永远不泄露这些信息 19:35。",
+      "url": "https://x.com/kassandraETH/status/2028086702267371638",
+      "date": "2026-03-01",
+      "title_en": "kassandraETH: ideally the wallet never leaks any of this",
+      "note_en": "EliBenSasson: native account abstraction means developers deal with one kind of account, smart accounts, 21:53; kassandraETH: ideally the wallet never leaks any of this, 19:35.",
+      "topic_en": "Accounts"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：Engine API 通信通道",
+      "note": "（Giulio2002）提交；ERC-8174：合约意图规范 23:31；EIP-7956 被标记为 stagnant（eth-bot）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11360",
+      "date": "2026-03-01",
+      "title_en": "Add EIP: Engine API Communication Channels",
+      "note_en": "(Giulio2002), submitted; ERC-8174: Intent spec for contracts, 23:31; EIP-7956 marked stagnant (eth-bot), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8174：合约意图规范",
+      "note": "新增 EIP：Engine API 通信通道（Giulio2002）提交；ERC-8174：合约意图规范 23:31；EIP-7956 被标记为 stagnant（eth-bot）合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8174-intent-spec-for-contracts/27869",
+      "date": "2026-03-01",
+      "title_en": "ERC-8174: Intent spec for contracts",
+      "note_en": "Add EIP: Engine API Communication Channels (Giulio2002), submitted; ERC-8174: Intent spec for contracts, 23:31; EIP-7956 marked stagnant (eth-bot), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7956 被标记为 stagnant",
+      "note": "新增 EIP：Engine API 通信通道（Giulio2002）提交；ERC-8174：合约意图规范 23:31；EIP-7956 被标记为 stagnant（eth-bot）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11317",
+      "date": "2026-03-01",
+      "title_en": "EIP-7956 marked stagnant",
+      "note_en": "Add EIP: Engine API Communication Channels (Giulio2002), submitted; ERC-8174: Intent spec for contracts, 23:31; EIP-7956 marked stagnant (eth-bot), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "nero_eth：等 Glamsterdam",
+      "note": "15:39；EliBenSasson：AI 草率还是我草率 20:09。",
+      "url": "https://x.com/nero_eth/status/2028027216538263628",
+      "date": "2026-03-01",
+      "title_en": "nero_eth: wait for Glamsterdam",
+      "note_en": "15:39; EliBenSasson: either AI is sloppy or I am, 20:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：AI 草率还是我草率",
+      "note": "nero_eth：等 Glamsterdam 15:39；EliBenSasson：AI 草率还是我草率 20:09。",
+      "url": "https://x.com/EliBenSasson/status/2028095246307893543",
+      "date": "2026-03-01",
+      "title_en": "EliBenSasson: either AI is sloppy or I am",
+      "note_en": "Nero_eth: wait for Glamsterdam, 15:39; EliBenSasson: either AI is sloppy or I am, 20:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8179-blob-space-segments-bss/27867",
+    "credit": "Ethereum Magicians, ERC-8179: Blob Space Segments (BSS)",
+    "local_path": "assets/2026-03-01.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8179: Blob Space Segments (BSS)"
+  },
+  "keywords_en": [
+    "Blob Space Segments ERC-8179",
+    "Blob Authenticated Messaging ERC-8180",
+    "Intent spec for contracts ERC-8174",
+    "an Engine API communication channels EIP",
+    "native AA versus AA",
+    "wallets should leak nothing"
+  ],
+  "summary_en": "A quiet Sunday. skeletor-spaceman submitted two ERCs, Blob Space Segments and Blob Authenticated Messaging, letting several apps share one blob. Giulio2002 submitted an Engine API Communication Channels EIP. EliBenSasson explained native AA versus AA."
+}

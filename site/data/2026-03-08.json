@@ -1,0 +1,97 @@
+{
+  "date": "2026-03-08",
+  "keywords": [
+    "AI Agent 隐私比加密隐私更受关注",
+    "形式化验证与 AI",
+    "BN254 包装的精确性修复",
+    "EIP-8013 被标记 stagnant",
+    "加密隐私是有保证的隐私"
+  ],
+  "summary": "周日较安静。zengjiajun_eth 观察到很少人关心加密隐私，但几乎每个人都关心自己 AI Agent 的隐私与安全。ethresear.ch 有两篇 BN254 相关密码学讨论。",
+  "items": [
+    {
+      "topic": "隐私",
+      "title": "zengjiajun_eth：很少人关心加密隐私，但每个人都关心自己 AI Agent 的隐私与安全",
+      "note": "11:12；binji_x：加密隐私就是有保证的隐私，而不是“相信我”式的政策 19:26。",
+      "url": "https://x.com/zengjiajun_eth/status/2030496738176381333",
+      "date": "2026-03-08",
+      "title_en": "zengjiajun_eth: few people care about crypto privacy, but everyone cares about their AI agent's privacy and safety",
+      "note_en": "11:12; binji_x: crypto privacy is privacy with guarantees instead of trust me policy, 19:26.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "binji_x：加密隐私就是有保证的隐私，而不是“相信我”式的政策",
+      "note": "zengjiajun_eth：很少人关心加密隐私，但每个人都关心自己 AI Agent 的隐私与安全 11:12；binji_x：加密隐私就是有保证的隐私，而不是“相信我”式的政策 19:26。",
+      "url": "https://x.com/binji_x/status/2030621241116176536",
+      "date": "2026-03-08",
+      "title_en": "binji_x: crypto privacy is privacy with guarantees instead of trust me policy",
+      "note_en": "Zengjiajun_eth: few people care about crypto privacy, but everyone cares about their AI agent's privacy and safety, 11:12; binji_x: crypto privacy is privacy with guarantees instead of trust me policy, 19:26.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "密码学",
+      "title": "ethresear.ch：当 L = D + pQ 不够时，BN254 包装的精确性修复",
+      "note": "21:44；ethresear.ch：在 altbn128 上实现无故障多项式时间 Miller 逆 20:17。",
+      "url": "https://ethresear.ch/t/when-l-d-pq-is-not-enough-exactness-repair-for-bn254-wrappers/24313",
+      "date": "2026-03-08",
+      "title_en": "ethresear.ch: When L = D + pQ Is Not Enough, exactness repair for BN254 wrappers",
+      "note_en": "21:44; ethresear.ch: no fault polynomial time Miller inversion implemented for altbn128, 20:17.",
+      "topic_en": "Cryptography"
+    },
+    {
+      "topic": "密码学",
+      "title": "ethresear.ch：在 altbn128 上实现无故障多项式时间 Miller 逆",
+      "note": "ethresear.ch：当 L = D + pQ 不够时，BN254 包装的精确性修复 21:44；ethresear.ch：在 altbn128 上实现无故障多项式时间 Miller 逆 20:17。",
+      "url": "https://ethresear.ch/t/no-fault-polynomial-time-miller-s-inversion-implemented-for-altbn128-but-can-it-be-made-usefull-against-eip197/24311",
+      "date": "2026-03-08",
+      "title_en": "ethresear.ch: no fault polynomial time Miller inversion implemented for altbn128",
+      "note_en": "Ethresear.ch: When L = D + pQ Is Not Enough, exactness repair for BN254 wrappers, 21:44; ethresear.ch: no fault polynomial time Miller inversion implemented for altbn128, 20:17.",
+      "topic_en": "Cryptography"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8013 被标记为 stagnant",
+      "note": "（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11384",
+      "date": "2026-03-08",
+      "title_en": "EIP-8013 flagged stagnant",
+      "note_en": "(eth-bot), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：形式化验证与 AI 将把成千上万工程师变成数学家",
+      "note": "21:33；EliBenSasson：后量子安全很重要 22:18。",
+      "url": "https://x.com/fede_intern/status/2030653019528778137",
+      "date": "2026-03-08",
+      "title_en": "fede_intern: formal verification and AI will turn thousands of engineers into mathematicians",
+      "note_en": "21:33; EliBenSasson: post-quantum security matters, 22:18.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：后量子安全很重要",
+      "note": "fede_intern：形式化验证与 AI 将把成千上万工程师变成数学家 21:33；EliBenSasson：后量子安全很重要 22:18。",
+      "url": "https://x.com/EliBenSasson/status/2030664402089709890",
+      "date": "2026-03-08",
+      "title_en": "EliBenSasson: post-quantum security matters",
+      "note_en": "Fede_intern: formal verification and AI will turn thousands of engineers into mathematicians, 21:33; EliBenSasson: post-quantum security matters, 22:18.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/when-l-d-pq-is-not-enough-exactness-repair-for-bn254-wrappers/24313",
+    "credit": "ethresear.ch, When L = D + pQ Is Not Enough: Exactness Repair for BN254 Wrappers",
+    "local_path": "assets/2026-03-08.jpg",
+    "credit_en": "ethresear.ch, When L = D + pQ Is Not Enough: Exactness Repair for BN254 Wrappers"
+  },
+  "keywords_en": [
+    "AI agent privacy draws more interest than crypto privacy",
+    "formal verification and AI",
+    "exactness repair for BN254 wrappers",
+    "EIP-8013 flagged stagnant",
+    "crypto privacy is privacy with guarantees"
+  ],
+  "summary_en": "A quiet Sunday. zengjiajun_eth observed that few care about crypto privacy but nearly everyone cares about their AI agent's privacy and safety. ethresear.ch had two BN254 cryptography posts."
+}

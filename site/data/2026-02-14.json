@@ -1,0 +1,107 @@
+{
+  "date": "2026-02-14",
+  "keywords": [
+    "EIP-7708 加入 ETH 销毁日志",
+    "EIP-8142 基于 7732 重写合并",
+    "VitalikButerin 担忧预测市场现状",
+    "corcoranwill 协调后量子安全交付",
+    "OWASP 智能合约十大风险"
+  ],
+  "summary": "周六较安静。raxhvl 为 EIP-7708 加入 ETH 销毁日志并统一规范，提交并合并。nerolation 的 EIP-8142 基于 ePBS（EIP-7732）重写合并。tkstanczak 介绍 corcoranwill 将协调以太坊后量子安全交付。",
+  "items": [
+    {
+      "topic": "交易：ETH 流动日志",
+      "title": "EIP-7708：加入 ETH 销毁日志并改进规范一致性",
+      "note": "（raxhvl）提交并合并：ETH 可被铸造、转账与销毁，流通量或所有权的变化都应记录日志，重点是记录什么变了而非如何变；此前只有转账被正确记录。",
+      "url": "https://github.com/ethereum/EIPs/pull/11311",
+      "date": "2026-02-14",
+      "title_en": "EIP-7708: add ETH burn logs and improve spec consistency",
+      "note_en": "(raxhvl), submitted and merged: ETH can be minted, transferred and burned, and every change in circulation or ownership should be logged, focusing on what changed rather than how; previously only transfers were logged correctly.",
+      "topic_en": "Transactions: logging ETH flows"
+    },
+    {
+      "topic": "协议与后量子",
+      "title": "EIP-8142：基于 7732 重写",
+      "note": "（nerolation）合并，2 月 10 日提交；tkstanczak：corcoranwill 将协调后量子安全交付 01:57；tkstanczak：以太坊的后量子安全 22:57。",
+      "url": "https://github.com/ethereum/EIPs/pull/11295",
+      "date": "2026-02-14",
+      "title_en": "EIP-8142: rebase on top of 7732",
+      "note_en": "(nerolation), merged after submission on February 10; tkstanczak: corcoranwill will coordinate the post-quantum security deliveries, 01:57; tkstanczak: post-quantum security of Ethereum, 22:57.",
+      "topic_en": "Protocol and post-quantum"
+    },
+    {
+      "topic": "协议与后量子",
+      "title": "tkstanczak：corcoranwill 将协调后量子安全交付",
+      "note": "EIP-8142：基于 7732 重写（nerolation）合并，2 月 10 日提交；tkstanczak：corcoranwill 将协调后量子安全交付 01:57；tkstanczak：以太坊的后量子安全 22:57。",
+      "url": "https://x.com/tkstanczak/status/2022384732827455591",
+      "date": "2026-02-14",
+      "title_en": "tkstanczak: corcoranwill will coordinate the post-quantum security deliveries",
+      "note_en": "EIP-8142: rebase on top of 7732 (nerolation), merged after submission on February 10; tkstanczak: corcoranwill will coordinate the post-quantum security deliveries, 01:57; tkstanczak: post-quantum security of Ethereum, 22:57.",
+      "topic_en": "Protocol and post-quantum"
+    },
+    {
+      "topic": "协议与后量子",
+      "title": "tkstanczak：以太坊的后量子安全",
+      "note": "EIP-8142：基于 7732 重写（nerolation）合并，2 月 10 日提交；tkstanczak：corcoranwill 将协调后量子安全交付 01:57；tkstanczak：以太坊的后量子安全 22:57。",
+      "url": "https://x.com/tkstanczak/status/2022701623538053357",
+      "date": "2026-02-14",
+      "title_en": "tkstanczak: post-quantum security of Ethereum",
+      "note_en": "EIP-8142: rebase on top of 7732 (nerolation), merged after submission on February 10; tkstanczak: corcoranwill will coordinate the post-quantum security deliveries, 01:57; tkstanczak: post-quantum security of Ethereum, 22:57.",
+      "topic_en": "Protocol and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereumfndn：CredShield 在万亿美元安全计划支持下发布年度 OWASP 智能合约十大风险",
+      "note": "03:09；Trustless Log Index Breakout #3 议程 22:56。",
+      "url": "https://x.com/ethereumfndn/status/2022402796814041471",
+      "date": "2026-02-14",
+      "title_en": "ethereumfndn: CredShield, supported by the Trillion Dollar Security initiative, released the annual OWASP Smart Contract Top 10",
+      "note_en": "03:09; Trustless Log Index Breakout #3 agenda, 22:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trustless Log Index Breakout #3 议程",
+      "note": "ethereumfndn：CredShield 在万亿美元安全计划支持下发布年度 OWASP 智能合约十大风险 03:09；Trustless Log Index Breakout #3 议程 22:56。",
+      "url": "https://ethereum-magicians.org/t/trustless-log-index-breakout-3-feb-17-2026/27738",
+      "date": "2026-02-14",
+      "title_en": "Trustless Log Index Breakout #3 agenda",
+      "note_en": "Ethereumfndn: CredShield, supported by the Trillion Dollar Security initiative, released the annual OWASP Smart Contract Top 10, 03:09; Trustless Log Index Breakout #3 agenda, 22:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：开始担忧预测市场的现状",
+      "note": "20:49；AndyGuzmanEth：开发新客户端的成本大幅下降 08:02。",
+      "url": "https://x.com/VitalikButerin/status/2022669570788487542",
+      "date": "2026-02-14",
+      "title_en": "VitalikButerin: starting to worry about the state of prediction markets",
+      "note_en": "20:49; AndyGuzmanEth: the cost of building new clients has dropped dramatically, 08:02.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：开发新客户端的成本大幅下降",
+      "note": "VitalikButerin：开始担忧预测市场的现状 20:49；AndyGuzmanEth：开发新客户端的成本大幅下降 08:02。",
+      "url": "https://x.com/AndyGuzmanEth/status/2022476435013742817",
+      "date": "2026-02-14",
+      "title_en": "AndyGuzmanEth: the cost of building new clients has dropped dramatically",
+      "note_en": "VitalikButerin: starting to worry about the state of prediction markets, 20:49; AndyGuzmanEth: the cost of building new clients has dropped dramatically, 08:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/trustless-log-index-breakout-3-feb-17-2026/27738",
+    "credit": "Ethereum Magicians, Trustless Log Index Breakout #3, Feb 17, 2026",
+    "local_path": "assets/2026-02-14.jpg",
+    "credit_en": "Ethereum Magicians, Trustless Log Index Breakout #3, Feb 17, 2026"
+  },
+  "keywords_en": [
+    "EIP-7708 adds ETH burn logs",
+    "EIP-8142 rebased on 7732 merged",
+    "VitalikButerin worries about prediction markets",
+    "corcoranwill to coordinate post-quantum security deliveries",
+    "OWASP Smart Contract Top 10"
+  ],
+  "summary_en": "A quiet Saturday. raxhvl added ETH burn logs to EIP-7708 and tidied the spec, submitted and merged. nerolation's EIP-8142 rebase onto ePBS (EIP-7732) merged. tkstanczak said corcoranwill will coordinate Ethereum's post-quantum security deliveries."
+}

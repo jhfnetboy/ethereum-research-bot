@@ -1,0 +1,139 @@
+{
+  "date": "2026-03-03",
+  "keywords": [
+    "EIP-8141 修正 APPROVE 描述合并",
+    "预留 EXTENSION 操作码 EIP 合并",
+    "pERC-20 原生隐私代币草案",
+    "VitalikButerin 谈 ePBS 后的出块管线",
+    "加密内存池应服务具体场景",
+    "EIP-8134 进入 Review"
+  ],
+  "summary": "derekchiang 修正 EIP-8141 APPROVE 描述的 PR 合并。pdobacz 预留 EXTENSION（0xae）操作码的 EIP 合并。Magicians 出现原生隐私 ERC-20 草案 pERC-20。VitalikButerin 解读 strawmap 的出块管线：ePBS 让提议者外包给无许可的 builder 市场，但 builder 层的审查与 MEV 问题仍在。",
+  "items": [
+    {
+      "topic": "原生 AA 与交易",
+      "title": "EIP-8141：修正若干问题",
+      "note": "（derekchiang）合并，2 月 21 日提交，删除 APPROVE 要求 CALLER 等于 frame.target 的错误表述。",
+      "url": "https://github.com/ethereum/EIPs/pull/11344",
+      "date": "2026-03-03",
+      "title_en": "EIP-8141: fix some issues",
+      "note_en": "(derekchiang), merged after submission on February 21, removing the incorrect claim that APPROVE requires CALLER == frame.target.",
+      "topic_en": "Native AA and transactions"
+    },
+    {
+      "topic": "原生 AA 与交易",
+      "title": "VitalikButerin：出块管线，Glamsterdam 的 ePBS 让提议者外包给自由无许可的 builder 市场，防止 builder 集中蔓延为质押集中",
+      "note": "00:33；_julianma：L1 应为具体场景做有主见的设计，Hegotá 候选中的加密内存池正是如此 21:54。",
+      "url": "https://x.com/VitalikButerin/status/2028524112868708616",
+      "date": "2026-03-03",
+      "title_en": "VitalikButerin: the block building pipeline; Glamsterdam's ePBS lets proposers outsource to a free permissionless builder market so builder centralization does not become staking centralization",
+      "note_en": "00:33; _julianma: L1s should build with opinion for specific uses, as encrypted mempools proposed for Hegotá do, 21:54.",
+      "topic_en": "Native AA and transactions"
+    },
+    {
+      "topic": "原生 AA 与交易",
+      "title": "_julianma：L1 应为具体场景做有主见的设计，Hegotá 候选中的加密内存池正是如此",
+      "note": "VitalikButerin：出块管线，Glamsterdam 的 ePBS 让提议者外包给自由无许可的 builder 市场，防止 builder 集中蔓延为质押集中 00:33；_julianma：L1 应为具体场景做有主见的设计，Hegotá 候选中的加密内存池正是如此 21:54。",
+      "url": "https://x.com/_julianma/status/2028846494351085765",
+      "date": "2026-03-03",
+      "title_en": "_julianma: L1s should build with opinion for specific uses, as encrypted mempools proposed for Hegotá do",
+      "note_en": "VitalikButerin: the block building pipeline; Glamsterdam's ePBS lets proposers outsource to a free permissionless builder market so builder centralization does not become staking centralization, 00:33; _julianma: L1s should build with opinion for specific uses, as encrypted mempools proposed for Hegotá do, 21:54.",
+      "topic_en": "Native AA and transactions"
+    },
+    {
+      "topic": "隐私代币",
+      "title": "Magicians：草案 ERC pERC-20，隐私保护的原生 ERC-20 标准",
+      "note": "16:33；ameensol：给关心 ZK 投票的人 01:27。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-perc-20-privacy-preserving-native-erc-20-token-standard/27882",
+      "date": "2026-03-03",
+      "title_en": "Magicians: Draft ERC pERC-20, a privacy preserving native ERC-20 standard",
+      "note_en": "16:33; ameensol: for those who care about ZK voting, 01:27.",
+      "topic_en": "Private tokens"
+    },
+    {
+      "topic": "隐私代币",
+      "title": "ameensol：给关心 ZK 投票的人",
+      "note": "Magicians：草案 ERC pERC-20，隐私保护的原生 ERC-20 标准 16:33；ameensol：给关心 ZK 投票的人 01:27。",
+      "url": "https://x.com/ameensol/status/2028537645023068551",
+      "date": "2026-03-03",
+      "title_en": "ameensol: for those who care about ZK voting",
+      "note_en": "Magicians: Draft ERC pERC-20, a privacy preserving native ERC-20 standard, 16:33; ameensol: for those who care about ZK voting, 01:27.",
+      "topic_en": "Private tokens"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：预留 EXTENSION（0xae）操作码",
+      "note": "（pdobacz）合并；EIP-8134 进入 Review（poojaranjan）提交并合并；ERC-8034 进入 Final（richard-620）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11327",
+      "date": "2026-03-03",
+      "title_en": "Add EIP: Reserve EXTENSION (0xae) opcode",
+      "note_en": "(pdobacz), merged; EIP-8134: move to Review (poojaranjan), submitted and merged; ERC-8034: move to Final (richard-620), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8134 进入 Review",
+      "note": "新增 EIP：预留 EXTENSION（0xae）操作码（pdobacz）合并；EIP-8134 进入 Review（poojaranjan）提交并合并；ERC-8034 进入 Final（richard-620）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11369",
+      "date": "2026-03-03",
+      "title_en": "EIP-8134: move to Review",
+      "note_en": "Add EIP: Reserve EXTENSION (0xae) opcode (pdobacz), merged; EIP-8134: move to Review (poojaranjan), submitted and merged; ERC-8034: move to Final (richard-620), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8034 进入 Final",
+      "note": "新增 EIP：预留 EXTENSION（0xae）操作码（pdobacz）合并；EIP-8134 进入 Review（poojaranjan）提交并合并；ERC-8034 进入 Final（richard-620）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1511",
+      "date": "2026-03-03",
+      "title_en": "ERC-8034: move to Final",
+      "note_en": "Add EIP: Reserve EXTENSION (0xae) opcode (pdobacz), merged; EIP-8134: move to Review (poojaranjan), submitted and merged; ERC-8034: move to Final (richard-620), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #73 议程",
+      "note": "16:50。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-73-march-9-2026/27883",
+      "date": "2026-03-03",
+      "title_en": "ACDT #73 agenda",
+      "note_en": "16:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：对抗性信息论的一个被低估的事实，尽力而为的隐私为何不够",
+      "note": "08:22；zengjiajun_eth：用一条提示为 Agent 创建以太坊智能钱包 11:37。",
+      "url": "https://x.com/zooko/status/2028642259433148542",
+      "date": "2026-03-03",
+      "title_en": "zooko: an underrated truth of adversarial information theory and why best effort privacy falls short",
+      "note_en": "08:22; zengjiajun_eth: create an Ethereum smart wallet for your agent with one prompt, 11:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：用一条提示为 Agent 创建以太坊智能钱包",
+      "note": "zooko：对抗性信息论的一个被低估的事实，尽力而为的隐私为何不够 08:22；zengjiajun_eth：用一条提示为 Agent 创建以太坊智能钱包 11:37。",
+      "url": "https://x.com/zengjiajun_eth/status/2028691092804100503",
+      "date": "2026-03-03",
+      "title_en": "zengjiajun_eth: create an Ethereum smart wallet for your agent with one prompt",
+      "note_en": "Zooko: an underrated truth of adversarial information theory and why best effort privacy falls short, 08:22; zengjiajun_eth: create an Ethereum smart wallet for your agent with one prompt, 11:37.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/draft-erc-perc-20-privacy-preserving-native-erc-20-token-standard/27882",
+    "credit": "Ethereum Magicians, Draft ERC: pERC-20 Privacy-Preserving Native ERC-20 Token Standard",
+    "local_path": "assets/2026-03-03.jpg",
+    "credit_en": "Ethereum Magicians, Draft ERC: pERC-20 Privacy-Preserving Native ERC-20 Token Standard"
+  },
+  "keywords_en": [
+    "EIP-8141 APPROVE wording fix merged",
+    "EXTENSION opcode reservation EIP merged",
+    "the pERC-20 native private token draft",
+    "VitalikButerin on the block building pipeline after ePBS",
+    "encrypted mempools should serve specific uses",
+    "EIP-8134 to Review"
+  ],
+  "summary_en": "derekchiang's EIP-8141 APPROVE wording fix merged. pdobacz's EIP reserving the EXTENSION (0xae) opcode merged. A pERC-20 native private ERC-20 draft appeared on Magicians. VitalikButerin covered the strawmap's block building pipeline: ePBS lets proposers outsource to a permissionless builder market, though censorship and MEV at the builder layer remain."
+}

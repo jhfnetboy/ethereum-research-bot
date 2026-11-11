@@ -1,0 +1,181 @@
+{
+  "date": "2026-02-26",
+  "keywords": [
+    "EF 协议发布 strawmap 路线草图",
+    "ACDE #231 执行层头号候选收窄为 EIP-8141 或不设",
+    "EIP-8105 撤回后 LUCID 成唯一加密交易池提案",
+    "可组合交易 EIP-8175 提交",
+    "slot 按根号 2 逐步缩短",
+    "VOSA-20 隐私包装代币",
+    "Payy 隐私稳定币链"
+  ],
+  "summary": "drakefjustin 发布 EF 协议的 strawmap 路线草图，VitalikButerin 随后逐项解读，先谈快速 slot 与快速最终性，倾向按根号 2 逐步缩短 slot。ACDE #231 把执行层头号候选收窄为 EIP-8141 或不设头号，下次 ACDE 决定；EIP-8105 撤回后，LUCID 是唯一的加密交易池提案。rakita 提交可组合交易 EIP，作为 EIP-8141 的更简单替代。",
+  "items": [
+    {
+      "topic": "原生 AA：Hegotá 头号之争与替代方案",
+      "title": "ACDE #231",
+      "note": "21:00，据 Ethereal news #13：执行层头号下次 ACDE 决定，领先选项是 EIP-8141 frame 交易或不设头号，Geth、Erigon、Besu 与 Nimbus 已提交偏好；加密交易池方面，EIP-8105 撤回后 LUCID 是唯一提案；EraE 执行层历史归档格式取代 Era1。",
+      "url": "https://forkcast.org/calls/acde/231",
+      "date": "2026-02-26",
+      "title_en": "ACDE #231",
+      "note_en": "21:00, per Ethereal news #13: the execution layer headliner will be decided next ACDE, with EIP-8141 frame transactions or no headliner leading and Geth, Erigon, Besu and Nimbus having posted preferences; for encrypted pools, LUCID is the sole proposal after EIP-8105 was withdrawn; the EraE execution history archive format supersedes Era1.",
+      "topic_en": "Native AA: the Hegotá headliner race and alternatives"
+    },
+    {
+      "topic": "原生 AA：Hegotá 头号之争与替代方案",
+      "title": "Ethereal news #13",
+      "note": "ACDE #231 21:00，据 Ethereal news #13：执行层头号下次 ACDE 决定，领先选项是 EIP-8141 frame 交易或不设头号，Geth、Erigon、Besu 与 Nimbus 已提交偏好；加密交易池方面，EIP-8105 撤回后 LUCID 是唯一提案；EraE 执行层历史归档格式取代 Era1。",
+      "url": "https://ethereal.news/ethereal-news-weekly-13/",
+      "date": "2026-02-26",
+      "title_en": "Ethereal news #13",
+      "note_en": "ACDE #231, 21:00, per Ethereal news #13: the execution layer headliner will be decided next ACDE, with EIP-8141 frame transactions or no headliner leading and Geth, Erigon, Besu and Nimbus having posted preferences; for encrypted pools, LUCID is the sole proposal after EIP-8105 was withdrawn; the EraE execution history archive format supersedes Era1.",
+      "topic_en": "Native AA: the Hegotá headliner race and alternatives"
+    },
+    {
+      "topic": "原生 AA：Hegotá 头号之争与替代方案",
+      "title": "EIP-8141",
+      "note": "ACDE #231 21:00，据 Ethereal news #13：执行层头号下次 ACDE 决定，领先选项是 EIP-8141 frame 交易或不设头号，Geth、Erigon、Besu 与 Nimbus 已提交偏好；加密交易池方面，EIP-8105 撤回后 LUCID 是唯一提案；EraE 执行层历史归档格式取代 Era1。",
+      "url": "https://forkcast.org/eips/8141/",
+      "date": "2026-02-26",
+      "title_en": "EIP-8141",
+      "note_en": "ACDE #231, 21:00, per Ethereal news #13: the execution layer headliner will be decided next ACDE, with EIP-8141 frame transactions or no headliner leading and Geth, Erigon, Besu and Nimbus having posted preferences; for encrypted pools, LUCID is the sole proposal after EIP-8105 was withdrawn; the EraE execution history archive format supersedes Era1.",
+      "topic_en": "Native AA: the Hegotá headliner race and alternatives"
+    },
+    {
+      "topic": "原生 AA：Hegotá 头号之争与替代方案",
+      "title": "EIP-8105",
+      "note": "ACDE #231 21:00，据 Ethereal news #13：执行层头号下次 ACDE 决定，领先选项是 EIP-8141 frame 交易或不设头号，Geth、Erigon、Besu 与 Nimbus 已提交偏好；加密交易池方面，EIP-8105 撤回后 LUCID 是唯一提案；EraE 执行层历史归档格式取代 Era1。",
+      "url": "https://forkcast.org/eips/8105/",
+      "date": "2026-02-26",
+      "title_en": "EIP-8105",
+      "note_en": "ACDE #231, 21:00, per Ethereal news #13: the execution layer headliner will be decided next ACDE, with EIP-8141 frame transactions or no headliner leading and Geth, Erigon, Besu and Nimbus having posted preferences; for encrypted pools, LUCID is the sole proposal after EIP-8105 was withdrawn; the EraE execution history archive format supersedes Era1.",
+      "topic_en": "Native AA: the Hegotá headliner race and alternatives"
+    },
+    {
+      "topic": "原生 AA：Hegotá 头号之争与替代方案",
+      "title": "新增 EIP：Composable Transaction",
+      "note": "（rakita）提交：新的 EIP-2718 交易类型，带可扩展的能力式签名与原生交易赞助，作为 EIP-8141 的更简单替代，不引入新操作码、执行 frame 或按 frame 的 gas 记账，由付款方共同签名并承担 gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/11355",
+      "date": "2026-02-26",
+      "title_en": "Add EIP: Composable Transaction",
+      "note_en": "(rakita), submitted: a new EIP-2718 transaction type with extensible capability based signatures and native sponsorship, a simpler alternative to EIP-8141 with no new opcodes, execution frames or per frame gas accounting, where the payer co signs and is charged for gas.",
+      "topic_en": "Native AA: the Hegotá headliner race and alternatives"
+    },
+    {
+      "topic": "路线：strawmap",
+      "title": "drakefjustin：发布 EF 协议的路线草图 strawmap",
+      "note": "03:27，面向研究人员等高阶读者的密集技术文档；VitalikButerin：逐项解读，先谈快速 slot 与快速最终性，倾向按根号 2 逐步缩短 slot，如 12、8、6、4 秒 05:01；barnabemonnot：更快的 slot，更快的最终性 05:08。",
+      "url": "https://x.com/drakefjustin/status/2026755969540108659",
+      "date": "2026-02-26",
+      "title_en": "drakefjustin: introducing strawmap, a strawman roadmap by EF Protocol",
+      "note_en": "03:27, a dense technical document for advanced readers such as researchers; VitalikButerin: walking through it goal by goal, starting with fast slots and fast finality and favoring sqrt 2 steps such as 12, 8, 6, 4 seconds, 05:01; barnabemonnot: quicker slots, faster finality, 05:08.",
+      "topic_en": "Roadmap: the strawmap"
+    },
+    {
+      "topic": "路线：strawmap",
+      "title": "VitalikButerin：逐项解读，先谈快速 slot 与快速最终性，倾向按根号 2 逐步缩短 slot，如 12、8、6、4 秒",
+      "note": "drakefjustin：发布 EF 协议的路线草图 strawmap 03:27，面向研究人员等高阶读者的密集技术文档；VitalikButerin：逐项解读，先谈快速 slot 与快速最终性，倾向按根号 2 逐步缩短 slot，如 12、8、6、4 秒 05:01；barnabemonnot：更快的 slot，更快的最终性 05:08。",
+      "url": "https://x.com/VitalikButerin/status/2026779557479723418",
+      "date": "2026-02-26",
+      "title_en": "VitalikButerin: walking through it goal by goal, starting with fast slots and fast finality and favoring sqrt 2 steps such as 12, 8, 6, 4 seconds",
+      "note_en": "Drakefjustin: introducing strawmap, a strawman roadmap by EF Protocol, 03:27, a dense technical document for advanced readers such as researchers; VitalikButerin: walking through it goal by goal, starting with fast slots and fast finality and favoring sqrt 2 steps such as 12, 8, 6, 4 seconds, 05:01; barnabemonnot: quicker slots, faster finality, 05:08.",
+      "topic_en": "Roadmap: the strawmap"
+    },
+    {
+      "topic": "路线：strawmap",
+      "title": "barnabemonnot：更快的 slot，更快的最终性",
+      "note": "drakefjustin：发布 EF 协议的路线草图 strawmap 03:27，面向研究人员等高阶读者的密集技术文档；VitalikButerin：逐项解读，先谈快速 slot 与快速最终性，倾向按根号 2 逐步缩短 slot，如 12、8、6、4 秒 05:01；barnabemonnot：更快的 slot，更快的最终性 05:08。",
+      "url": "https://x.com/barnabemonnot/status/2026781275361554811",
+      "date": "2026-02-26",
+      "title_en": "barnabemonnot: quicker slots, faster finality",
+      "note_en": "Drakefjustin: introducing strawmap, a strawman roadmap by EF Protocol, 03:27, a dense technical document for advanced readers such as researchers; VitalikButerin: walking through it goal by goal, starting with fast slots and fast finality and favoring sqrt 2 steps such as 12, 8, 6, 4 seconds, 05:01; barnabemonnot: quicker slots, faster finality, 05:08.",
+      "topic_en": "Roadmap: the strawmap"
+    },
+    {
+      "topic": "隐私",
+      "title": "Magicians：草案 ERC VOSA-20，隐私保护的包装 ERC-20 标准",
+      "note": "09:22，依赖 ERC-20、EIP-712 与 ERC-5564，隐藏转账金额与余额；ethereum：Payy 是基于以太坊的隐私优先稳定币链 01:08。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-vosa-20-privacy-preserving-wrapped-erc-20-token-standard/27832",
+      "date": "2026-02-26",
+      "title_en": "Magicians: Draft ERC VOSA-20, a privacy preserving wrapped ERC-20 standard",
+      "note_en": "09:22, requiring ERC-20, EIP-712 and ERC-5564 and hiding transfer amounts and balances; ethereum: Payy is a privacy first stablecoin chain built on Ethereum, 01:08.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "ethereum：Payy 是基于以太坊的隐私优先稳定币链",
+      "note": "Magicians：草案 ERC VOSA-20，隐私保护的包装 ERC-20 标准 09:22，依赖 ERC-20、EIP-712 与 ERC-5564，隐藏转账金额与余额；ethereum：Payy 是基于以太坊的隐私优先稳定币链 01:08。",
+      "url": "https://x.com/ethereum/status/2026720854718165344",
+      "date": "2026-02-26",
+      "title_en": "ethereum: Payy is a privacy first stablecoin chain built on Ethereum",
+      "note_en": "Magicians: Draft ERC VOSA-20, a privacy preserving wrapped ERC-20 standard, 09:22, requiring ERC-20, EIP-712 and ERC-5564 and hiding transfer amounts and balances; ethereum: Payy is a privacy first stablecoin chain built on Ethereum, 01:08.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：EVM 控制流基础",
+      "note": "（gcolvin）提交；EIP-7870：更现实的最低硬件要求（barnabasbusa）提交；新增 ERC：ERC-7730 描述符证明（llbartekll）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11353",
+      "date": "2026-02-26",
+      "title_en": "Add EIP: Foundations of EVM Control Flow",
+      "note_en": "(gcolvin), submitted; EIP-7870: realistic minimum numbers (barnabasbusa), submitted; Add ERC: Descriptor Attestations for ERC-7730 (llbartekll), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7870：更现实的最低硬件要求",
+      "note": "新增 EIP：EVM 控制流基础（gcolvin）提交；EIP-7870：更现实的最低硬件要求（barnabasbusa）提交；新增 ERC：ERC-7730 描述符证明（llbartekll）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11356",
+      "date": "2026-02-26",
+      "title_en": "EIP-7870: realistic minimum numbers",
+      "note_en": "Add EIP: Foundations of EVM Control Flow (gcolvin), submitted; EIP-7870: realistic minimum numbers (barnabasbusa), submitted; Add ERC: Descriptor Attestations for ERC-7730 (llbartekll), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：ERC-7730 描述符证明",
+      "note": "新增 EIP：EVM 控制流基础（gcolvin）提交；EIP-7870：更现实的最低硬件要求（barnabasbusa）提交；新增 ERC：ERC-7730 描述符证明（llbartekll）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1576",
+      "date": "2026-02-26",
+      "title_en": "Add ERC: Descriptor Attestations for ERC-7730",
+      "note_en": "Add EIP: Foundations of EVM Control Flow (gcolvin), submitted; EIP-7870: realistic minimum numbers (barnabasbusa), submitted; Add ERC: Descriptor Attestations for ERC-7730 (llbartekll), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "notnotstorm：我的以太坊路线优先级，后量子与快速 L1 最高，隐私居中",
+      "note": "22:18；raulvk：扩展有约 100 万验证者的万节点 P2P 网络是完全不同的问题 08:22。",
+      "url": "https://x.com/notnotstorm/status/2027040543868670438",
+      "date": "2026-02-26",
+      "title_en": "notnotstorm: my roadmap priorities, post-quantum and fast L1 high, privacy medium",
+      "note_en": "22:18; raulvk: scaling a 10k node P2P network with about 1M validators is a very different problem, 08:22.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "raulvk：扩展有约 100 万验证者的万节点 P2P 网络是完全不同的问题",
+      "note": "notnotstorm：我的以太坊路线优先级，后量子与快速 L1 最高，隐私居中 22:18；raulvk：扩展有约 100 万验证者的万节点 P2P 网络是完全不同的问题 08:22。",
+      "url": "https://x.com/raulvk/status/2026830249510486424",
+      "date": "2026-02-26",
+      "title_en": "raulvk: scaling a 10k node P2P network with about 1M validators is a very different problem",
+      "note_en": "Notnotstorm: my roadmap priorities, post-quantum and fast L1 high, privacy medium, 22:18; raulvk: scaling a 10k node P2P network with about 1M validators is a very different problem, 08:22.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://strawmap.org/",
+    "credit": "EF Protocol, strawmap",
+    "local_path": "assets/2026-02-26.jpg",
+    "credit_en": "EF Protocol, strawmap"
+  },
+  "keywords_en": [
+    "EF Protocol publishes the strawmap",
+    "ACDE #231 narrows the execution layer headliner to EIP-8141 or none",
+    "LUCID is the sole encrypted pool proposal after EIP-8105 is withdrawn",
+    "Composable Transaction EIP-8175 submitted",
+    "slots shortened by sqrt 2 steps",
+    "VOSA-20 private wrapped tokens",
+    "the Payy private stablecoin chain"
+  ],
+  "summary_en": "drakefjustin published EF Protocol's strawmap, and VitalikButerin walked through it goal by goal, starting with fast slots and fast finality and favoring cutting slot time by sqrt 2 steps. ACDE #231 narrowed the execution layer headliner to EIP-8141 or no headliner, to be decided next ACDE; with EIP-8105 withdrawn, LUCID is the only encrypted pool proposal. rakita submitted the Composable Transaction EIP as a simpler alternative to EIP-8141."
+}

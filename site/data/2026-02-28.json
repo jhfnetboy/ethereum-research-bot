@@ -1,0 +1,109 @@
+{
+  "date": "2026-02-28",
+  "keywords": [
+    "账户配置式账户抽象 EIP-8130 合并",
+    "感知私钥停用的 ecRecover EIP-8151 合并",
+    "EIP-7851 回到 Draft 合并",
+    "VitalikButerin 解读 AA 路线与 EIP-8141",
+    "单元级增量 EIP 合并",
+    "停止用预编译扩展 EVM"
+  ],
+  "summary": "chunter-cb 的账户配置式账户抽象 EIP（EIP-8130）合并为草案，账户为签名密钥配置链上验证器合约。colinlyguo 的 EIP-8151 合并，让 ecRecover 感知 EOA 私钥已停用，同时 EIP-7851 回到 Draft。VitalikButerin 解读 strawmap 的 AA 部分：自 2016 年 EIP-86 起讨论至今，EIP-8141 是解决剩余问题的综合方案。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8130 与 EIP-8141",
+      "title": "新增 EIP：账户配置式账户抽象",
+      "note": "（chunter-cb）合并：账户为签名密钥配置账户指定的验证器，即定义签名算法的链上合约，由协议执行验证。",
+      "url": "https://github.com/ethereum/EIPs/pull/11186",
+      "date": "2026-02-28",
+      "title_en": "Add EIP: Account Abstraction by Account Configuration",
+      "note_en": "(chunter-cb), merged: accounts configure signing keys with account specified verifiers, onchain contracts defining signature algorithms, validated by the protocol.",
+      "topic_en": "Native AA: EIP-8130 and EIP-8141"
+    },
+    {
+      "topic": "原生 AA：EIP-8130 与 EIP-8141",
+      "title": "VitalikButerin：账户抽象自 2016 年初的 EIP-86 就在讨论，如今 EIP-8141 作为综合方案解决 AA 剩余的所有问题",
+      "note": "22:53。",
+      "url": "https://x.com/VitalikButerin/status/2027774090627715377",
+      "date": "2026-02-28",
+      "title_en": "VitalikButerin: account abstraction has been discussed since EIP-86 in early 2016, and EIP-8141 is the omnibus that solves every remaining AA problem",
+      "note_en": "22:53.",
+      "topic_en": "Native AA: EIP-8130 and EIP-8141"
+    },
+    {
+      "topic": "账户：EOA 私钥停用",
+      "title": "新增 EIP：感知私钥停用的 ecRecover",
+      "note": "（colinlyguo）合并：DAI 等实现 ERC-2612 permit 的不可变 ERC-20 合约依赖 ecRecover 预编译，EOA 停用私钥后仍可能被旧签名授权，需要 ecRecover 感知停用状态；EIP-7851：移回 Draft（colinlyguo）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11288",
+      "date": "2026-02-28",
+      "title_en": "Add EIP: Private Key Deactivation Aware ecRecover",
+      "note_en": "(colinlyguo), merged: immutable ERC-20s with ERC-2612 permit such as DAI rely on the ecRecover precompile, so a deactivated EOA key could still authorize via old signatures unless ecRecover knows about deactivation; EIP-7851: move to Draft (colinlyguo), merged.",
+      "topic_en": "Accounts: EOA key deactivation"
+    },
+    {
+      "topic": "账户：EOA 私钥停用",
+      "title": "EIP-7851：移回 Draft",
+      "note": "新增 EIP：感知私钥停用的 ecRecover（colinlyguo）合并：DAI 等实现 ERC-2612 permit 的不可变 ERC-20 合约依赖 ecRecover 预编译，EOA 停用私钥后仍可能被旧签名授权，需要 ecRecover 感知停用状态；EIP-7851：移回 Draft（colinlyguo）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11316",
+      "date": "2026-02-28",
+      "title_en": "EIP-7851: move to Draft",
+      "note_en": "Add EIP: Private Key Deactivation Aware ecRecover (colinlyguo), merged: immutable ERC-20s with ERC-2612 permit such as DAI rely on the ecRecover precompile, so a deactivated EOA key could still authorize via old signatures unless ecRecover knows about deactivation; EIP-7851: move to Draft (colinlyguo), merged.",
+      "topic_en": "Accounts: EOA key deactivation"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：数据列广播的单元级增量",
+      "note": "（MarcoPolo）合并；Magicians：Meta，停止用预编译扩展 EVM，改用操作码 00:49；Magicians：EIP-8173 EVM 控制流基础 13:01。",
+      "url": "https://github.com/ethereum/EIPs/pull/11176",
+      "date": "2026-02-28",
+      "title_en": "Add EIP: Cell-Level Deltas for Data Column Broadcast",
+      "note_en": "(MarcoPolo), merged; Magicians: Meta, stop extending the EVM with precompiles, use opcodes, 00:49; Magicians: EIP-8173 Foundations of EVM Control Flow, 13:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：Meta，停止用预编译扩展 EVM，改用操作码",
+      "note": "新增 EIP：数据列广播的单元级增量（MarcoPolo）合并；Magicians：Meta，停止用预编译扩展 EVM，改用操作码 00:49；Magicians：EIP-8173 EVM 控制流基础 13:01。",
+      "url": "https://ethereum-magicians.org/t/meta-stop-extending-the-evm-with-precompiles-use-opcodes/27851",
+      "date": "2026-02-28",
+      "title_en": "Magicians: Meta, stop extending the EVM with precompiles, use opcodes",
+      "note_en": "Add EIP: Cell-Level Deltas for Data Column Broadcast (MarcoPolo), merged; Magicians: Meta, stop extending the EVM with precompiles, use opcodes, 00:49; Magicians: EIP-8173 Foundations of EVM Control Flow, 13:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8173 EVM 控制流基础",
+      "note": "新增 EIP：数据列广播的单元级增量（MarcoPolo）合并；Magicians：Meta，停止用预编译扩展 EVM，改用操作码 00:49；Magicians：EIP-8173 EVM 控制流基础 13:01。",
+      "url": "https://ethereum-magicians.org/t/eip-8173-foundations-of-evm-control-flow/27855",
+      "date": "2026-02-28",
+      "title_en": "Magicians: EIP-8173 Foundations of EVM Control Flow",
+      "note_en": "Add EIP: Cell-Level Deltas for Data Column Broadcast (MarcoPolo), merged; Magicians: Meta, stop extending the EVM with precompiles, use opcodes, 00:49; Magicians: EIP-8173 Foundations of EVM Control Flow, 13:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：有人在几周内用 AI 把整个 2030 路线图写成代码，实验令人印象深刻",
+      "note": "23:21。",
+      "url": "https://x.com/VitalikButerin/status/2027781104288317837",
+      "date": "2026-02-28",
+      "title_en": "VitalikButerin: an impressive experiment vibe coding the entire 2030 roadmap within weeks",
+      "note_en": "23:21.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/meta-stop-extending-the-evm-with-precompiles-use-opcodes/27851",
+    "credit": "Ethereum Magicians, Meta: Stop extending the EVM with Precompiles, Use Opcodes",
+    "local_path": "assets/2026-02-28.jpg",
+    "credit_en": "Ethereum Magicians, Meta: Stop extending the EVM with Precompiles, Use Opcodes"
+  },
+  "keywords_en": [
+    "Account Abstraction by Account Configuration EIP-8130 merged",
+    "Private Key Deactivation Aware ecRecover EIP-8151 merged",
+    "EIP-7851 back to Draft merged",
+    "VitalikButerin on the AA roadmap and EIP-8141",
+    "Cell-Level Deltas EIP merged",
+    "stop extending the EVM with precompiles"
+  ],
+  "summary_en": "chunter-cb's Account Abstraction by Account Configuration EIP (EIP-8130) merged as a draft, letting accounts configure onchain verifier contracts for their signing keys. colinlyguo's EIP-8151 merged, making ecRecover aware of deactivated EOA keys, while EIP-7851 returned to Draft. VitalikButerin covered the strawmap's AA section: discussed since EIP-86 in 2016, with EIP-8141 the omnibus that resolves the remaining problems."
+}

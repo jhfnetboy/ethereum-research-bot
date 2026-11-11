@@ -1,0 +1,159 @@
+{
+  "date": "2026-03-05",
+  "keywords": [
+    "EIP-8141 加入 EOA 支持",
+    "EIP-8141 首次头号提案专场",
+    "Agentic Commerce ERC-8183",
+    "EIP-8130 验证器 gas 更新合并",
+    "身份账户 ERC-8186",
+    "starkzap 会话密钥与 gas 赞助"
+  ],
+  "summary": "derekchiang 与 lightclient 讨论后提交 EIP-8141 的 EOA 支持：VERIFY frame 的目标没有代码时，直接按 ECDSA 签名验证，EOA 无需部署合约即可使用 frame 交易。EIP-8141 首次头号提案专场举行。dcrapis 提交 Agentic Commerce ERC，定义基于任务的托管支付。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 支持 EOA",
+      "title": "EIP-8141：加入 EOA 支持",
+      "note": "（derekchiang）提交：若 frame 处于 VERIFY 模式且 frame.target 没有代码，把 frame.data 读作 (scope, v, r, s) 并验证其为有效签名。",
+      "url": "https://github.com/ethereum/EIPs/pull/11379",
+      "date": "2026-03-05",
+      "title_en": "EIP-8141: add EOA support",
+      "note_en": "(derekchiang), submitted: if a frame is in VERIFY mode and frame.target has no code, frame.data is read as (scope, v, r, s) and checked as a valid signature.",
+      "topic_en": "Native AA: EIP-8141 supports EOAs"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 支持 EOA",
+      "title": "EIP-8141 Frame Transaction 头号提案专场 #1",
+      "note": "举行，议程见 Magicians。",
+      "url": "https://forkcast.org/calls/one-off-1954/001/",
+      "date": "2026-03-05",
+      "title_en": "EIP-8141 Frame Transaction headliner breakout #1",
+      "note_en": "Met; agenda on Magicians.",
+      "topic_en": "Native AA: EIP-8141 supports EOAs"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 支持 EOA",
+      "title": "Magicians",
+      "note": "EIP-8141 Frame Transaction 头号提案专场 #1 举行，议程见 Magicians。",
+      "url": "https://ethereum-magicians.org/t/headliner-breakout-eip-8141-frame-transaction-march-5-2026/27879",
+      "date": "2026-03-05",
+      "title_en": "Magicians",
+      "note_en": "EIP-8141 Frame Transaction headliner breakout #1 met; agenda on Magicians.",
+      "topic_en": "Native AA: EIP-8141 supports EOAs"
+    },
+    {
+      "topic": "Agent 支付与账户",
+      "title": "新增 ERC：Agentic Commerce",
+      "note": "（dcrapis）提交；Magicians 讨论帖 ERC-8183 04:49：基于任务的托管，客户方为任务注资，服务方提交成果，单一评估方确认完成或拒绝，可选钩子与 ERC-8004 信誉和 ERC-2771 无 gas 流程组合。",
+      "url": "https://github.com/ethereum/ERCs/pull/1581",
+      "date": "2026-03-05",
+      "title_en": "Add ERC: Agentic Commerce",
+      "note_en": "(dcrapis), submitted; Magicians thread ERC-8183, 04:49: job based escrow where a client funds a job, a provider submits work and a single evaluator attests completion or rejection, with optional hooks composing with ERC-8004 reputation and ERC-2771 gasless flows.",
+      "topic_en": "Agent payments and accounts"
+    },
+    {
+      "topic": "Agent 支付与账户",
+      "title": "Magicians 讨论帖 ERC-8183",
+      "note": "新增 ERC：Agentic Commerce（dcrapis）提交；Magicians 讨论帖 ERC-8183 04:49：基于任务的托管，客户方为任务注资，服务方提交成果，单一评估方确认完成或拒绝，可选钩子与 ERC-8004 信誉和 ERC-2771 无 gas 流程组合。",
+      "url": "https://ethereum-magicians.org/t/erc-8183-agentic-commerce/27902",
+      "date": "2026-03-05",
+      "title_en": "Magicians thread ERC-8183",
+      "note_en": "Add ERC: Agentic Commerce (dcrapis), submitted; Magicians thread ERC-8183, 04:49: job based escrow where a client funds a job, a provider submits work and a single evaluator attests completion or rejection, with optional hooks composing with ERC-8004 reputation and ERC-2771 gasless flows.",
+      "topic_en": "Agent payments and accounts"
+    },
+    {
+      "topic": "Agent 支付与账户",
+      "title": "EIP-8130：验证器 gas 与跨链签名更新",
+      "note": "（chunter-cb）合并；EIP-8130：slot 推导留给最终合约（chunter-cb）提交；ERC-8186：身份账户 16:15。",
+      "url": "https://github.com/ethereum/EIPs/pull/11374",
+      "date": "2026-03-05",
+      "title_en": "EIP-8130: verifier gas and cross chain signatures update",
+      "note_en": "(chunter-cb), merged; EIP-8130: slot derivations left to the final contract (chunter-cb), submitted; ERC-8186: Identity Account, 16:15.",
+      "topic_en": "Agent payments and accounts"
+    },
+    {
+      "topic": "Agent 支付与账户",
+      "title": "EIP-8130：slot 推导留给最终合约",
+      "note": "EIP-8130：验证器 gas 与跨链签名更新（chunter-cb）合并；EIP-8130：slot 推导留给最终合约（chunter-cb）提交；ERC-8186：身份账户 16:15。",
+      "url": "https://github.com/ethereum/EIPs/pull/11378",
+      "date": "2026-03-05",
+      "title_en": "EIP-8130: slot derivations left to the final contract",
+      "note_en": "EIP-8130: verifier gas and cross chain signatures update (chunter-cb), merged; EIP-8130: slot derivations left to the final contract (chunter-cb), submitted; ERC-8186: Identity Account, 16:15.",
+      "topic_en": "Agent payments and accounts"
+    },
+    {
+      "topic": "Agent 支付与账户",
+      "title": "ERC-8186：身份账户",
+      "note": "EIP-8130：验证器 gas 与跨链签名更新（chunter-cb）合并；EIP-8130：slot 推导留给最终合约（chunter-cb）提交；ERC-8186：身份账户 16:15。",
+      "url": "https://ethereum-magicians.org/t/erc-8186-identity-account/27905",
+      "date": "2026-03-05",
+      "title_en": "ERC-8186: Identity Account",
+      "note_en": "EIP-8130: verifier gas and cross chain signatures update (chunter-cb), merged; EIP-8130: slot derivations left to the final contract (chunter-cb), submitted; ERC-8186: Identity Account, 16:15.",
+      "topic_en": "Agent payments and accounts"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWareLtd：starkzap 一条命令提供隐形钱包、gas 赞助与会话密钥",
+      "note": "17:47；ERC-8185：链下实体注册表 02:51；ethresear.ch：EL 与 CL 监控面板，以 Nimbus 为例 00:21。",
+      "url": "https://x.com/StarkWareLtd/status/2029509199839846583",
+      "date": "2026-03-05",
+      "title_en": "StarkWareLtd: starkzap gives invisible wallets, gas sponsorship and session keys in one command",
+      "note_en": "17:47; ERC-8185: Off-Chain Entity Registry, 02:51; ethresear.ch: EL-CL monitoring dashboards, a study with Nimbus, 00:21.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8185：链下实体注册表",
+      "note": "StarkWareLtd：starkzap 一条命令提供隐形钱包、gas 赞助与会话密钥 17:47；ERC-8185：链下实体注册表 02:51；ethresear.ch：EL 与 CL 监控面板，以 Nimbus 为例 00:21。",
+      "url": "https://ethereum-magicians.org/t/erc-8185-off-chain-entity-registry/27899",
+      "date": "2026-03-05",
+      "title_en": "ERC-8185: Off-Chain Entity Registry",
+      "note_en": "StarkWareLtd: starkzap gives invisible wallets, gas sponsorship and session keys in one command, 17:47; ERC-8185: Off-Chain Entity Registry, 02:51; ethresear.ch: EL-CL monitoring dashboards, a study with Nimbus, 00:21.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：EL 与 CL 监控面板，以 Nimbus 为例",
+      "note": "StarkWareLtd：starkzap 一条命令提供隐形钱包、gas 赞助与会话密钥 17:47；ERC-8185：链下实体注册表 02:51；ethresear.ch：EL 与 CL 监控面板，以 Nimbus 为例 00:21。",
+      "url": "https://ethresear.ch/t/el-cl-monitoring-dashboards-a-study-with-nimbus/24282",
+      "date": "2026-03-05",
+      "title_en": "ethresear.ch: EL-CL monitoring dashboards, a study with Nimbus",
+      "note_en": "StarkWareLtd: starkzap gives invisible wallets, gas sponsorship and session keys in one command, 17:47; ERC-8185: Off-Chain Entity Registry, 02:51; ethresear.ch: EL-CL monitoring dashboards, a study with Nimbus, 00:21.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trailofbits：Aave 的安全做法是 DeFi 的标杆",
+      "note": "06:19；aztecnetwork：直播讲解产品路线图 22:09。",
+      "url": "https://x.com/trailofbits/status/2029336023810097391",
+      "date": "2026-03-05",
+      "title_en": "trailofbits: Aave's approach to security is a benchmark for DeFi",
+      "note_en": "06:19; aztecnetwork: walking through the product roadmap live, 22:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：直播讲解产品路线图",
+      "note": "trailofbits：Aave 的安全做法是 DeFi 的标杆 06:19；aztecnetwork：直播讲解产品路线图 22:09。",
+      "url": "https://x.com/aztecnetwork/status/2029575133619437911",
+      "date": "2026-03-05",
+      "title_en": "aztecnetwork: walking through the product roadmap live",
+      "note_en": "Trailofbits: Aave's approach to security is a benchmark for DeFi, 06:19; aztecnetwork: walking through the product roadmap live, 22:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8183-agentic-commerce/27902",
+    "credit": "Ethereum Magicians, ERC-8183: Agentic Commerce",
+    "local_path": "assets/2026-03-05.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8183: Agentic Commerce"
+  },
+  "keywords_en": [
+    "EIP-8141 adds EOA support",
+    "the first EIP-8141 headliner breakout",
+    "Agentic Commerce ERC-8183",
+    "EIP-8130 verifier gas update merged",
+    "Identity Account ERC-8186",
+    "starkzap session keys and gas sponsorship"
+  ],
+  "summary_en": "After discussion with lightclient, derekchiang submitted EOA support for EIP-8141: when a VERIFY frame's target has no code, its data is verified as an ECDSA signature, so EOAs can use frame transactions without deploying a contract. The first EIP-8141 headliner breakout took place. dcrapis submitted the Agentic Commerce ERC, defining job based escrow."
+}

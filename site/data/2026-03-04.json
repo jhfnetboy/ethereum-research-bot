@@ -1,0 +1,179 @@
+{
+  "date": "2026-03-04",
+  "keywords": [
+    "协议内私密 ETH 与 ERC-20 转账 EIP-8182 提交",
+    "LUCID 加密内存池 EIP 提交",
+    "临时密钥加账户抽象实现量子安全",
+    "EIP-8130 验证器 gas 与跨链签名",
+    "私密 ERC-1155 草案",
+    "Aztec 产品路线图"
+  ],
+  "summary": "RogerPodacter 提交协议内私密 ETH 与 ERC-20 转账 EIP（EIP-8182），定义固定地址、仅硬分叉可升级的隐私池系统合约。anderselowsson 提交 LUCID 加密内存池 EIP。mvicari 提出借助账户抽象让每把 ECDSA 密钥只用一次，以实现无需改协议的量子安全。chunter-cb 更新 EIP-8130 的验证器 gas 与跨链签名。",
+  "items": [
+    {
+      "topic": "隐私：协议内隐私池",
+      "title": "新增 EIP：私密 ETH 与 ERC-20 转账",
+      "note": "（RogerPodacter）提交：协议内隐私池系统合约，为 ETH 与 ERC-20 私密转账定义标准有效性层，公开存取；固定地址、仅能硬分叉升级、无管理员或代理密钥，共享票据树；Magicians 讨论帖 EIP-8182 03:15。",
+      "url": "https://github.com/ethereum/EIPs/pull/11373",
+      "date": "2026-03-04",
+      "title_en": "Add EIP: Private ETH and ERC-20 Transfers",
+      "note_en": "(RogerPodacter), submitted: a protocol enshrined privacy pool system contract defining a canonical validity layer for private ETH and ERC-20 transfers with public deposits and withdrawals, a fixed address, hard fork only upgrades, no admin or proxy keys and a shared note tree; Magicians thread EIP-8182, 03:15.",
+      "topic_en": "Privacy: an enshrined privacy pool"
+    },
+    {
+      "topic": "隐私：协议内隐私池",
+      "title": "Magicians 讨论帖 EIP-8182",
+      "note": "新增 EIP：私密 ETH 与 ERC-20 转账（RogerPodacter）提交：协议内隐私池系统合约，为 ETH 与 ERC-20 私密转账定义标准有效性层，公开存取；固定地址、仅能硬分叉升级、无管理员或代理密钥，共享票据树；Magicians 讨论帖 EIP-8182 03:15。",
+      "url": "https://ethereum-magicians.org/t/eip-8182-private-eth-and-erc-20-transfers/27889",
+      "date": "2026-03-04",
+      "title_en": "Magicians thread EIP-8182",
+      "note_en": "Add EIP: Private ETH and ERC-20 Transfers (RogerPodacter), submitted: a protocol enshrined privacy pool system contract defining a canonical validity layer for private ETH and ERC-20 transfers with public deposits and withdrawals, a fixed address, hard fork only upgrades, no admin or proxy keys and a shared note tree; Magicians thread EIP-8182, 03:15.",
+      "topic_en": "Privacy: an enshrined privacy pool"
+    },
+    {
+      "topic": "隐私：协议内隐私池",
+      "title": "Magicians：私密 ERC-1155 草案",
+      "note": "17:59；aztecnetwork：Aztec 产品路线图更新，在以太坊上构建隐私合约的代码已全部完成 23:18。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-private-erc-1155-privacy-preserving-multi-token-standard/27894",
+      "date": "2026-03-04",
+      "title_en": "Magicians: Draft ERC Private ERC-1155",
+      "note_en": "17:59; aztecnetwork: the updated Aztec product roadmap, with all code complete to build privacy preserving contracts on Ethereum, 23:18.",
+      "topic_en": "Privacy: an enshrined privacy pool"
+    },
+    {
+      "topic": "隐私：协议内隐私池",
+      "title": "aztecnetwork：Aztec 产品路线图更新，在以太坊上构建隐私合约的代码已全部完成",
+      "note": "Magicians：私密 ERC-1155 草案 17:59；aztecnetwork：Aztec 产品路线图更新，在以太坊上构建隐私合约的代码已全部完成 23:18。",
+      "url": "https://x.com/aztecnetwork/status/2029229991188443353",
+      "date": "2026-03-04",
+      "title_en": "aztecnetwork: the updated Aztec product roadmap, with all code complete to build privacy preserving contracts on Ethereum",
+      "note_en": "Magicians: Draft ERC Private ERC-1155, 17:59; aztecnetwork: the updated Aztec product roadmap, with all code complete to build privacy preserving contracts on Ethereum, 23:18.",
+      "topic_en": "Privacy: an enshrined privacy pool"
+    },
+    {
+      "topic": "交易隐私：LUCID",
+      "title": "新增 EIP：LUCID 加密内存池",
+      "note": "（anderselowsson）提交，2 月 26 日 ACDE #231 后 LUCID 已是唯一的加密交易池头号提案。",
+      "url": "https://github.com/ethereum/EIPs/pull/11376",
+      "date": "2026-03-04",
+      "title_en": "Add EIP: LUCID encrypted mempool",
+      "note_en": "(anderselowsson), submitted; since ACDE #231 on February 26 LUCID has been the only encrypted pool headliner proposal.",
+      "topic_en": "Transaction privacy: LUCID"
+    },
+    {
+      "topic": "账户与后量子",
+      "title": "ethresear.ch：通过临时密钥对与账户抽象实现量子安全",
+      "note": "（mvicari）17:24：无需改签名方案或协议规则，借助账户抽象让每把 ECDSA 密钥只用一次，每笔交易轮换签名者，而智能合约钱包地址不变。",
+      "url": "https://ethresear.ch/t/achieving-quantum-safety-through-ephemeral-key-pairs-and-account-abstraction/24273",
+      "date": "2026-03-04",
+      "title_en": "ethresear.ch: Achieving Quantum Safety Through Ephemeral Key Pairs and Account Abstraction",
+      "note_en": "(mvicari), 17:24: with no change to signature schemes or protocol rules, account abstraction makes each ECDSA key single use, rotating the signer every transaction while the smart wallet address stays constant.",
+      "topic_en": "Accounts and post-quantum"
+    },
+    {
+      "topic": "账户与后量子",
+      "title": "EIP-8130：更新验证器 gas 与跨链签名",
+      "note": "（chunter-cb）提交；EIP-8130：修订（chunter-cb）合并；EIP-8130：更新动机（chunter-cb）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11374",
+      "date": "2026-03-04",
+      "title_en": "EIP-8130: update verifier gas and cross chain sigs",
+      "note_en": "(chunter-cb), submitted; EIP-8130: revisions (chunter-cb), merged; EIP-8130: update motivation (chunter-cb), submitted and merged.",
+      "topic_en": "Accounts and post-quantum"
+    },
+    {
+      "topic": "账户与后量子",
+      "title": "EIP-8130：修订",
+      "note": "EIP-8130：更新验证器 gas 与跨链签名（chunter-cb）提交；EIP-8130：修订（chunter-cb）合并；EIP-8130：更新动机（chunter-cb）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11367",
+      "date": "2026-03-04",
+      "title_en": "EIP-8130: revisions",
+      "note_en": "EIP-8130: update verifier gas and cross chain sigs (chunter-cb), submitted; EIP-8130: revisions (chunter-cb), merged; EIP-8130: update motivation (chunter-cb), submitted and merged.",
+      "topic_en": "Accounts and post-quantum"
+    },
+    {
+      "topic": "账户与后量子",
+      "title": "EIP-8130：更新动机",
+      "note": "EIP-8130：更新验证器 gas 与跨链签名（chunter-cb）提交；EIP-8130：修订（chunter-cb）合并；EIP-8130：更新动机（chunter-cb）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11372",
+      "date": "2026-03-04",
+      "title_en": "EIP-8130: update motivation",
+      "note_en": "EIP-8130: update verifier gas and cross chain sigs (chunter-cb), submitted; EIP-8130: revisions (chunter-cb), merged; EIP-8130: update motivation (chunter-cb), submitted and merged.",
+      "topic_en": "Accounts and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #3 议程",
+      "note": "14:51；EIP-8178：SSZ-REST Engine API 传输 05:55；ERC-8187：代币拉取接口 19:54；L1-zkEVM breakout #02 议程 19:32。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-3-mar-4-2026/27893",
+      "date": "2026-03-04",
+      "title_en": "Glamsterdam Repricings #3 agenda",
+      "note_en": "14:51; EIP-8178: SSZ-REST Engine API Transport, 05:55; ERC-8187: Token Puller Interface, 19:54; L1-zkEVM breakout #02 agenda, 19:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8178：SSZ-REST Engine API 传输",
+      "note": "Glamsterdam Repricings #3 议程 14:51；EIP-8178：SSZ-REST Engine API 传输 05:55；ERC-8187：代币拉取接口 19:54；L1-zkEVM breakout #02 议程 19:32。",
+      "url": "https://ethereum-magicians.org/t/eip-8178-ssz-rest-engine-api-transport/27891",
+      "date": "2026-03-04",
+      "title_en": "EIP-8178: SSZ-REST Engine API Transport",
+      "note_en": "Glamsterdam Repricings #3 agenda, 14:51; EIP-8178: SSZ-REST Engine API Transport, 05:55; ERC-8187: Token Puller Interface, 19:54; L1-zkEVM breakout #02 agenda, 19:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8187：代币拉取接口",
+      "note": "Glamsterdam Repricings #3 议程 14:51；EIP-8178：SSZ-REST Engine API 传输 05:55；ERC-8187：代币拉取接口 19:54；L1-zkEVM breakout #02 议程 19:32。",
+      "url": "https://ethereum-magicians.org/t/erc-8187-token-puller-interface/27896",
+      "date": "2026-03-04",
+      "title_en": "ERC-8187: Token Puller Interface",
+      "note_en": "Glamsterdam Repricings #3 agenda, 14:51; EIP-8178: SSZ-REST Engine API Transport, 05:55; ERC-8187: Token Puller Interface, 19:54; L1-zkEVM breakout #02 agenda, 19:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L1-zkEVM breakout #02 议程",
+      "note": "Glamsterdam Repricings #3 议程 14:51；EIP-8178：SSZ-REST Engine API 传输 05:55；ERC-8187：代币拉取接口 19:54；L1-zkEVM breakout #02 议程 19:32。",
+      "url": "https://ethereum-magicians.org/t/l1-zkevm-breakout-02-march-11-2026/27895",
+      "date": "2026-03-04",
+      "title_en": "L1-zkEVM breakout #02 agenda",
+      "note_en": "Glamsterdam Repricings #3 agenda, 14:51; EIP-8178: SSZ-REST Engine API Transport, 05:55; ERC-8187: Token Puller Interface, 19:54; L1-zkEVM breakout #02 agenda, 19:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：过去一年许多人担心世界的走向",
+      "note": "02:21；chain_security：发布 Aave V4 安全评估 22:57。",
+      "url": "https://x.com/VitalikButerin/status/2028913738057957433",
+      "date": "2026-03-04",
+      "title_en": "VitalikButerin: over the past year many have worried about the direction of the world",
+      "note_en": "02:21; chain_security: published its security assessment of Aave V4, 22:57.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "chain_security：发布 Aave V4 安全评估",
+      "note": "VitalikButerin：过去一年许多人担心世界的走向 02:21；chain_security：发布 Aave V4 安全评估 22:57。",
+      "url": "https://x.com/chain_security/status/2029224702334402807",
+      "date": "2026-03-04",
+      "title_en": "chain_security: published its security assessment of Aave V4",
+      "note_en": "VitalikButerin: over the past year many have worried about the direction of the world, 02:21; chain_security: published its security assessment of Aave V4, 22:57.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8182-private-eth-and-erc-20-transfers/27889",
+    "credit": "Ethereum Magicians, EIP-8182: Private ETH and ERC-20 Transfers",
+    "local_path": "assets/2026-03-04.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8182: Private ETH and ERC-20 Transfers"
+  },
+  "keywords_en": [
+    "Enshrined private ETH and ERC-20 transfers EIP-8182 submitted",
+    "LUCID encrypted mempool EIP submitted",
+    "quantum safety through ephemeral keys and account abstraction",
+    "EIP-8130 verifier gas and cross chain signatures",
+    "a private ERC-1155 draft",
+    "the Aztec product roadmap"
+  ],
+  "summary_en": "RogerPodacter submitted the enshrined private ETH and ERC-20 transfers EIP (EIP-8182), defining a fixed address privacy pool system contract upgradable only by hard fork. anderselowsson submitted the LUCID encrypted mempool EIP. mvicari proposed using account abstraction to make each ECDSA key single use for quantum safety without protocol changes. chunter-cb updated EIP-8130 verifier gas and cross chain signatures."
+}

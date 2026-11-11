@@ -1,0 +1,107 @@
+{
+  "date": "2026-02-20",
+  "keywords": [
+    "EIP-7805 FOCIL 更新 Engine API 改动合并",
+    "BAL 条目须唯一",
+    "EIP-7981 对齐 EIP-7976",
+    "ralexstokes 谈 2026 L1 研究",
+    "Perplexity Comet 提示注入测试"
+  ],
+  "summary": "FOCIL 被选为 Hegotá 头号后，jihoonsong 的 EIP-7805 Engine API 改动合并。nerolation 明确 BAL 条目必须唯一，提交并合并，并提交 EIP-7981 对齐 EIP-7976。VitalikButerin 推荐 ralexstokes 关于 2026 年 L1 研究的文章。",
+  "items": [
+    {
+      "topic": "交易包含：FOCIL 规范推进",
+      "title": "EIP-7805：更新 Engine API 改动",
+      "note": "（jihoonsong）合并；sassal0x：多年支持 FOCIL，很高兴它将在 Hegotá 上线 05:41。",
+      "url": "https://github.com/ethereum/EIPs/pull/11241",
+      "date": "2026-02-20",
+      "title_en": "EIP-7805: update Engine API changes",
+      "note_en": "(jihoonsong), merged; sassal0x: after years of supporting FOCIL, happy it will go live in Hegotá, 05:41.",
+      "topic_en": "Inclusion: FOCIL spec progress"
+    },
+    {
+      "topic": "交易包含：FOCIL 规范推进",
+      "title": "sassal0x：多年支持 FOCIL，很高兴它将在 Hegotá 上线",
+      "note": "EIP-7805：更新 Engine API 改动（jihoonsong）合并；sassal0x：多年支持 FOCIL，很高兴它将在 Hegotá 上线 05:41。",
+      "url": "https://x.com/sassal0x/status/2024615406280007959",
+      "date": "2026-02-20",
+      "title_en": "sassal0x: after years of supporting FOCIL, happy it will go live in Hegotá",
+      "note_en": "EIP-7805: update Engine API changes (jihoonsong), merged; sassal0x: after years of supporting FOCIL, happy it will go live in Hegotá, 05:41.",
+      "topic_en": "Inclusion: FOCIL spec progress"
+    },
+    {
+      "topic": "Gas 与 BAL",
+      "title": "EIP-7928：明确 BAL 条目必须唯一",
+      "note": "（nerolation）提交并合并；EIP-7981：对齐 EIP-7976 更新（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11338",
+      "date": "2026-02-20",
+      "title_en": "EIP-7928: clarify BAL items must be unique",
+      "note_en": "(nerolation), submitted and merged; EIP-7981: align with EIP-7976 updates (nerolation), submitted.",
+      "topic_en": "Gas and BALs"
+    },
+    {
+      "topic": "Gas 与 BAL",
+      "title": "EIP-7981：对齐 EIP-7976 更新",
+      "note": "EIP-7928：明确 BAL 条目必须唯一（nerolation）提交并合并；EIP-7981：对齐 EIP-7976 更新（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11340",
+      "date": "2026-02-20",
+      "title_en": "EIP-7981: align with EIP-7976 updates",
+      "note_en": "EIP-7928: clarify BAL items must be unique (nerolation), submitted and merged; EIP-7981: align with EIP-7976 updates (nerolation), submitted.",
+      "topic_en": "Gas and BALs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "VitalikButerin：以太坊 L1 协议研究在 2026 年大步前进，推荐 ralexstokes 的文章，主线为扩容、改进 UX 与加固",
+      "note": "01:59；ERC-7888 视图更新（godzillaba）提交并合并。",
+      "url": "https://x.com/VitalikButerin/status/2024559481804472437",
+      "date": "2026-02-20",
+      "title_en": "VitalikButerin: Ethereum L1 research is leaping forward in 2026, recommending ralexstokes's post on Scale, Improve UX and Harden",
+      "note_en": "01:59; ERC-7888 view update (godzillaba), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7888 视图更新",
+      "note": "VitalikButerin：以太坊 L1 协议研究在 2026 年大步前进，推荐 ralexstokes 的文章，主线为扩容、改进 UX 与加固 01:59；ERC-7888 视图更新（godzillaba）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1552",
+      "date": "2026-02-20",
+      "title_en": "ERC-7888 view update",
+      "note_en": "VitalikButerin: Ethereum L1 research is leaping forward in 2026, recommending ralexstokes's post on Scale, Improve UX and Harden, 01:59; ERC-7888 view update (godzillaba), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trailofbits：上线前为 Perplexity 测试 AI 浏览器 Comet，演示了四种提示注入",
+      "note": "23:26；EliBenSasson：最好的隐私方案将来自加密领域 21:18。",
+      "url": "https://x.com/trailofbits/status/2024883282605953039",
+      "date": "2026-02-20",
+      "title_en": "trailofbits: before launch they tested Perplexity's AI browser Comet and demonstrated four prompt injections",
+      "note_en": "23:26; EliBenSasson: the best privacy solutions will come from crypto, 21:18.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：最好的隐私方案将来自加密领域",
+      "note": "trailofbits：上线前为 Perplexity 测试 AI 浏览器 Comet，演示了四种提示注入 23:26；EliBenSasson：最好的隐私方案将来自加密领域 21:18。",
+      "url": "https://x.com/EliBenSasson/status/2024851094329823630",
+      "date": "2026-02-20",
+      "title_en": "EliBenSasson: the best privacy solutions will come from crypto",
+      "note_en": "Trailofbits: before launch they tested Perplexity's AI browser Comet and demonstrated four prompt injections, 23:26; EliBenSasson: the best privacy solutions will come from crypto, 21:18.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-4-march-3-2026/27769",
+    "credit": "Ethereum Magicians, Fast Confirmation Rule (FCR) #4, March 3, 2026",
+    "local_path": "assets/2026-02-20.jpg",
+    "credit_en": "Ethereum Magicians, Fast Confirmation Rule (FCR) #4, March 3, 2026"
+  },
+  "keywords_en": [
+    "EIP-7805 FOCIL Engine API changes merged",
+    "BAL items must be unique",
+    "EIP-7981 aligned with EIP-7976",
+    "ralexstokes on L1 research in 2026",
+    "prompt injection tests on Perplexity Comet"
+  ],
+  "summary_en": "After FOCIL was picked as the Hegotá headliner, jihoonsong's EIP-7805 Engine API changes merged. nerolation clarified that BAL items must be unique, submitted and merged, and submitted EIP-7981 alignment with EIP-7976. VitalikButerin recommended ralexstokes's post on L1 research in 2026."
+}

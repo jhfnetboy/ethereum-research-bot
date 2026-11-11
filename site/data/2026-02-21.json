@@ -1,0 +1,149 @@
+{
+  "date": "2026-02-21",
+  "keywords": [
+    "EIP-8081 把 FOCIL 列为 SFI",
+    "EIP-8141 APPROVE 调用者描述修正",
+    "EIP-8130 的 Payer Service ERC",
+    "模块化分派代理 ERC-8167",
+    "AA 运维原语",
+    "状态资源价格弹性实证"
+  ],
+  "summary": "ralexstokes 把 FOCIL 在 Hegotá 元 EIP 中改为 SFI，提交并合并。derekchiang 提交 EIP-8141 修正，去掉 APPROVE 要求 CALLER 等于 frame.target 的错误表述。chunter-cb 提交 Payer Service Capability ERC，为 EIP-8130 交易定义钱包协商 gas 赞助与代币付费的 JSON-RPC 接口。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8141：修正若干问题",
+      "note": "（derekchiang）提交：删除多处 APPROVE 要求 CALLER 等于 frame.target 的表述，因为典型 VERIFY frame 中 CALLER 是 ENTRY_POINT，frame.target 是 tx.sender。",
+      "url": "https://github.com/ethereum/EIPs/pull/11344",
+      "date": "2026-02-21",
+      "title_en": "EIP-8141: fix some issues",
+      "note_en": "(derekchiang), submitted: removes several statements that APPROVE requires CALLER == frame.target, since in a typical VERIFY frame CALLER is ENTRY_POINT and frame.target is tx.sender.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "新增 ERC：Payer Service Capability",
+      "note": "（chunter-cb）提交：定义钱包在构造 EIP-8130 原生 AA 交易时协商 gas 赞助与代币付 gas 的 payer_* JSON-RPC 接口，扩展现有 paymaster 能力。",
+      "url": "https://github.com/ethereum/ERCs/pull/1555",
+      "date": "2026-02-21",
+      "title_en": "Add ERC: Payer Service Capability",
+      "note_en": "(chunter-cb), submitted: a payer_* JSON-RPC interface wallets use to negotiate gas sponsorship and token gas payment when building EIP-8130 native AA transactions, extending the existing paymaster capability.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "Magicians：AA 运维原语，通道分离、固定执行阶段与版本化升级",
+      "note": "19:32，提出模块化 ERC-4337 风格智能账户的设计与参考实现。",
+      "url": "https://ethereum-magicians.org/t/operational-primitives-for-aa-lane-separation-fixed-execution-phases-and-versioned-upgrades/27789",
+      "date": "2026-02-21",
+      "title_en": "Magicians: Operational primitives for AA, lane separation, fixed execution phases and versioned upgrades",
+      "note_en": "19:32, a design and reference implementation for modular ERC-4337 style smart accounts.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "Hegotá 与研究",
+      "title": "EIP-8081：把 FOCIL 列为 SFI",
+      "note": "（ralexstokes）提交并合并；ethresear.ch：以太坊状态与突发资源的价格弹性实证分析 00:11。",
+      "url": "https://github.com/ethereum/EIPs/pull/11341",
+      "date": "2026-02-21",
+      "title_en": "EIP-8081: move FOCIL to SFI",
+      "note_en": "(ralexstokes), submitted and merged; ethresear.ch: Empirical Analysis of Price Elasticities for Ethereum State and Burst Resources, 00:11.",
+      "topic_en": "Hegotá and research"
+    },
+    {
+      "topic": "Hegotá 与研究",
+      "title": "ethresear.ch：以太坊状态与突发资源的价格弹性实证分析",
+      "note": "EIP-8081：把 FOCIL 列为 SFI（ralexstokes）提交并合并；ethresear.ch：以太坊状态与突发资源的价格弹性实证分析 00:11。",
+      "url": "https://ethresear.ch/t/empirical-analysis-of-price-elasticities-for-ethereum-state-and-burst-resources/24166",
+      "date": "2026-02-21",
+      "title_en": "ethresear.ch: Empirical Analysis of Price Elasticities for Ethereum State and Burst Resources",
+      "note_en": "EIP-8081: move FOCIL to SFI (ralexstokes), submitted and merged; ethresear.ch: Empirical Analysis of Price Elasticities for Ethereum State and Burst Resources, 00:11.",
+      "topic_en": "Hegotá and research"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：模块化分派代理",
+      "note": "（wjmelements）提交，ERC-8167 讨论帖 04:57；EIP-7928：澄清无 BAL 时的状态转换（nerolation）合并；ethresear.ch：用于预测市场的 ETH 质押预言机 06:55。",
+      "url": "https://github.com/ethereum/ERCs/pull/1554",
+      "date": "2026-02-21",
+      "title_en": "Add ERC: Modular Dispatch Proxies",
+      "note_en": "(wjmelements), submitted, with the ERC-8167 thread, 04:57; EIP-7928: clarify the STF without BAL (nerolation), merged; ethresear.ch: ETH-Staked Oracle for Prediction Markets, 06:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8167 讨论帖",
+      "note": "新增 ERC：模块化分派代理（wjmelements）提交，ERC-8167 讨论帖 04:57；EIP-7928：澄清无 BAL 时的状态转换（nerolation）合并；ethresear.ch：用于预测市场的 ETH 质押预言机 06:55。",
+      "url": "https://ethereum-magicians.org/t/erc-8167-modular-dispatch-proxies/27781",
+      "date": "2026-02-21",
+      "title_en": "ERC-8167 thread",
+      "note_en": "Add ERC: Modular Dispatch Proxies (wjmelements), submitted, with the ERC-8167 thread, 04:57; EIP-7928: clarify the STF without BAL (nerolation), merged; ethresear.ch: ETH-Staked Oracle for Prediction Markets, 06:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：澄清无 BAL 时的状态转换",
+      "note": "新增 ERC：模块化分派代理（wjmelements）提交，ERC-8167 讨论帖 04:57；EIP-7928：澄清无 BAL 时的状态转换（nerolation）合并；ethresear.ch：用于预测市场的 ETH 质押预言机 06:55。",
+      "url": "https://github.com/ethereum/EIPs/pull/11227",
+      "date": "2026-02-21",
+      "title_en": "EIP-7928: clarify the STF without BAL",
+      "note_en": "Add ERC: Modular Dispatch Proxies (wjmelements), submitted, with the ERC-8167 thread, 04:57; EIP-7928: clarify the STF without BAL (nerolation), merged; ethresear.ch: ETH-Staked Oracle for Prediction Markets, 06:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：用于预测市场的 ETH 质押预言机",
+      "note": "新增 ERC：模块化分派代理（wjmelements）提交，ERC-8167 讨论帖 04:57；EIP-7928：澄清无 BAL 时的状态转换（nerolation）合并；ethresear.ch：用于预测市场的 ETH 质押预言机 06:55。",
+      "url": "https://ethresear.ch/t/eth-staked-oracle-for-prediction-markets/24169",
+      "date": "2026-02-21",
+      "title_en": "ethresear.ch: ETH-Staked Oracle for Prediction Markets",
+      "note_en": "Add ERC: Modular Dispatch Proxies (wjmelements), submitted, with the ERC-8167 thread, 04:57; EIP-7928: clarify the STF without BAL (nerolation), merged; ethresear.ch: ETH-Staked Oracle for Prediction Markets, 06:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：AI 成为政府是反乌托邦",
+      "note": "22:05；ethereumfndn：payy_link 介绍其转型为专注隐私的以太坊 L2 00:25；ameensol：应批判性看待所谓的密码朋克 23:26。",
+      "url": "https://x.com/VitalikButerin/status/2025225247088402581",
+      "date": "2026-02-21",
+      "title_en": "VitalikButerin: AI becomes the government is dystopian",
+      "note_en": "22:05; ethereumfndn: payy_link on becoming a privacy focused Ethereum L2, 00:25; ameensol: we should be critical of the so called cypherpunks, 23:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereumfndn：payy_link 介绍其转型为专注隐私的以太坊 L2",
+      "note": "VitalikButerin：AI 成为政府是反乌托邦 22:05；ethereumfndn：payy_link 介绍其转型为专注隐私的以太坊 L2 00:25；ameensol：应批判性看待所谓的密码朋克 23:26。",
+      "url": "https://x.com/ethereumfndn/status/2024898319399760075",
+      "date": "2026-02-21",
+      "title_en": "ethereumfndn: payy_link on becoming a privacy focused Ethereum L2",
+      "note_en": "VitalikButerin: AI becomes the government is dystopian, 22:05; ethereumfndn: payy_link on becoming a privacy focused Ethereum L2, 00:25; ameensol: we should be critical of the so called cypherpunks, 23:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：应批判性看待所谓的密码朋克",
+      "note": "VitalikButerin：AI 成为政府是反乌托邦 22:05；ethereumfndn：payy_link 介绍其转型为专注隐私的以太坊 L2 00:25；ameensol：应批判性看待所谓的密码朋克 23:26。",
+      "url": "https://x.com/ameensol/status/2025245825107103920",
+      "date": "2026-02-21",
+      "title_en": "ameensol: we should be critical of the so called cypherpunks",
+      "note_en": "VitalikButerin: AI becomes the government is dystopian, 22:05; ethereumfndn: payy_link on becoming a privacy focused Ethereum L2, 00:25; ameensol: we should be critical of the so called cypherpunks, 23:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8167-modular-dispatch-proxies/27781",
+    "credit": "Ethereum Magicians, ERC-8167: Modular Dispatch Proxies",
+    "local_path": "assets/2026-02-21.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8167: Modular Dispatch Proxies"
+  },
+  "keywords_en": [
+    "EIP-8081 moves FOCIL to SFI",
+    "EIP-8141 APPROVE caller fixes",
+    "a Payer Service ERC for EIP-8130",
+    "Modular Dispatch Proxies ERC-8167",
+    "operational primitives for AA",
+    "empirical price elasticities for state resources"
+  ],
+  "summary_en": "ralexstokes moved FOCIL to SFI in the Hegotá meta EIP, submitted and merged. derekchiang submitted EIP-8141 fixes removing the incorrect statement that APPROVE requires CALLER to equal frame.target. chunter-cb submitted the Payer Service Capability ERC, a JSON-RPC interface for wallets to negotiate gas sponsorship and token gas payment for EIP-8130 transactions."
+}

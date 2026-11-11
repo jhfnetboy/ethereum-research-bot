@@ -1,0 +1,174 @@
+{
+  "date": "2026-03-10",
+  "keywords": [
+    "EIP-8141 EOA 支持合并",
+    "可组合交易 EIP-8175 合并",
+    "EIP-8130 无许可 payer 合并",
+    "EF 用 DVT-lite 质押 7.2 万 ETH",
+    "snap/2 用 BAL 修复状态",
+    "按写入时间的状态分层 EIP",
+    "付费门控交易中继 ERC-8194",
+    "原生 Rollup 概念验证"
+  ],
+  "summary": "原生 AA 三条路线同日推进：derekchiang 的 EIP-8141 EOA 支持合并，rakita 的可组合交易 EIP（EIP-8175）合并，chunter-cb 的 EIP-8130 无许可 payer 合并。VitalikButerin 介绍 EF 用 DVT-lite 质押 72,000 ETH，希望机构一键做分布式质押。nerolation 提交 snap/2 以 BAL 修复状态的 EIP。",
+  "items": [
+    {
+      "topic": "原生 AA：三条路线",
+      "title": "EIP-8141：加入 EOA 支持",
+      "note": "（derekchiang）合并，3 月 5 日提交；新增 EIP：Composable Transaction（rakita）合并，2 月 26 日提交；EIP-8130：允许无许可 payer（chunter-cb）合并，3 月 9 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11379",
+      "date": "2026-03-10",
+      "title_en": "EIP-8141: add EOA support",
+      "note_en": "(derekchiang), merged after submission on March 5; Add EIP: Composable Transaction (rakita), merged after submission on February 26; EIP-8130: enable permissionless payer (chunter-cb), merged after submission on March 9.",
+      "topic_en": "Native AA: three tracks"
+    },
+    {
+      "topic": "原生 AA：三条路线",
+      "title": "新增 EIP：Composable Transaction",
+      "note": "EIP-8141：加入 EOA 支持（derekchiang）合并，3 月 5 日提交；新增 EIP：Composable Transaction（rakita）合并，2 月 26 日提交；EIP-8130：允许无许可 payer（chunter-cb）合并，3 月 9 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11355",
+      "date": "2026-03-10",
+      "title_en": "Add EIP: Composable Transaction",
+      "note_en": "EIP-8141: add EOA support (derekchiang), merged after submission on March 5; Add EIP: Composable Transaction (rakita), merged after submission on February 26; EIP-8130: enable permissionless payer (chunter-cb), merged after submission on March 9.",
+      "topic_en": "Native AA: three tracks"
+    },
+    {
+      "topic": "原生 AA：三条路线",
+      "title": "EIP-8130：允许无许可 payer",
+      "note": "EIP-8141：加入 EOA 支持（derekchiang）合并，3 月 5 日提交；新增 EIP：Composable Transaction（rakita）合并，2 月 26 日提交；EIP-8130：允许无许可 payer（chunter-cb）合并，3 月 9 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11388",
+      "date": "2026-03-10",
+      "title_en": "EIP-8130: enable permissionless payer",
+      "note_en": "EIP-8141: add EOA support (derekchiang), merged after submission on March 5; Add EIP: Composable Transaction (rakita), merged after submission on February 26; EIP-8130: enable permissionless payer (chunter-cb), merged after submission on March 9.",
+      "topic_en": "Native AA: three tracks"
+    },
+    {
+      "topic": "交易与 Agent",
+      "title": "Magicians：ERC-8194 付费门控交易中继",
+      "note": "12:22：为人、AI Agent、IoT 设备或合约转发链上交易，授权凭证是链上付款收据而非签名，转发器接受 X402 式付款；ERC-8195：任务市场协议 12:34。",
+      "url": "https://ethereum-magicians.org/t/erc-8194-payment-gated-transaction-relay/27934",
+      "date": "2026-03-10",
+      "title_en": "Magicians: ERC-8194 Payment Gated Transaction Relay",
+      "note_en": "12:22: forwarding onchain transactions for humans, AI agents, IoT devices or contracts where authorization is an onchain payment receipt rather than a signature, with forwarders accepting X402 style payments; ERC-8195: Task Market Protocol, 12:34.",
+      "topic_en": "Transactions and agents"
+    },
+    {
+      "topic": "交易与 Agent",
+      "title": "ERC-8195：任务市场协议",
+      "note": "Magicians：ERC-8194 付费门控交易中继 12:22：为人、AI Agent、IoT 设备或合约转发链上交易，授权凭证是链上付款收据而非签名，转发器接受 X402 式付款；ERC-8195：任务市场协议 12:34。",
+      "url": "https://ethereum-magicians.org/t/erc-8195-task-market-protocol/27935",
+      "date": "2026-03-10",
+      "title_en": "ERC-8195: Task Market Protocol",
+      "note_en": "Magicians: ERC-8194 Payment Gated Transaction Relay, 12:22: forwarding onchain transactions for humans, AI agents, IoT devices or contracts where authorization is an onchain payment receipt rather than a signature, with forwarders accepting X402 style payments; ERC-8195: Task Market Protocol, 12:34.",
+      "topic_en": "Transactions and agents"
+    },
+    {
+      "topic": "质押与状态",
+      "title": "VitalikButerin：EF 正用 DVT-lite 质押 72,000 ETH，希望借此让机构一键完成分布式质押",
+      "note": "06:15。",
+      "url": "https://x.com/VitalikButerin/status/2031147002889719907",
+      "date": "2026-03-10",
+      "title_en": "VitalikButerin: the EF is using DVT-lite to stake 72,000 ETH, hoping to make distributed staking one click for institutions",
+      "note_en": "06:15.",
+      "topic_en": "Staking and state"
+    },
+    {
+      "topic": "质押与状态",
+      "title": "新增 EIP：snap/2 基于 BAL 的状态修复",
+      "note": "（nerolation）提交，ethresear.ch：Snap v2 用 BAL 取代 trie 修复 16:43；新增 EIP：按写入时间的状态分层（weiihann）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11391",
+      "date": "2026-03-10",
+      "title_en": "Add EIP: snap/2 BAL based state healing",
+      "note_en": "(nerolation), submitted, with ethresear.ch: Snap v2, replacing trie healing with BALs, 16:43; Add EIP: State Tiering by Write Age (weiihann), submitted.",
+      "topic_en": "Staking and state"
+    },
+    {
+      "topic": "质押与状态",
+      "title": "ethresear.ch：Snap v2 用 BAL 取代 trie 修复",
+      "note": "新增 EIP：snap/2 基于 BAL 的状态修复（nerolation）提交，ethresear.ch：Snap v2 用 BAL 取代 trie 修复 16:43；新增 EIP：按写入时间的状态分层（weiihann）提交。",
+      "url": "https://ethresear.ch/t/snap-v2-replacing-trie-healing-with-bals/24333",
+      "date": "2026-03-10",
+      "title_en": "ethresear.ch: Snap v2, replacing trie healing with BALs",
+      "note_en": "Add EIP: snap/2 BAL based state healing (nerolation), submitted, with ethresear.ch: Snap v2, replacing trie healing with BALs, 16:43; Add EIP: State Tiering by Write Age (weiihann), submitted.",
+      "topic_en": "Staking and state"
+    },
+    {
+      "topic": "质押与状态",
+      "title": "新增 EIP：按写入时间的状态分层",
+      "note": "新增 EIP：snap/2 基于 BAL 的状态修复（nerolation）提交，ethresear.ch：Snap v2 用 BAL 取代 trie 修复 16:43；新增 EIP：按写入时间的状态分层（weiihann）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11390",
+      "date": "2026-03-10",
+      "title_en": "Add EIP: State Tiering by Write Age",
+      "note_en": "Add EIP: snap/2 BAL based state healing (nerolation), submitted, with ethresear.ch: Snap v2, replacing trie healing with BALs, 16:43; Add EIP: State Tiering by Write Age (weiihann), submitted.",
+      "topic_en": "Staking and state"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：Engine API 二进制 SSZ 传输",
+      "note": "（Giulio2002）合并；新增 ERC：模块化分派代理（wjmelements）合并；ethresear.ch：可罚没的条件密钥释放，见证加密的加密经济近似 17:43。",
+      "url": "https://github.com/ethereum/EIPs/pull/11365",
+      "date": "2026-03-10",
+      "title_en": "Add EIP: Binary SSZ Transport for the Engine API",
+      "note_en": "(Giulio2002), merged; Add ERC: Modular Dispatch Proxies (wjmelements), merged; ethresear.ch: Slashable Conditional Key Release, a crypto economic approximation of witness encryption, 17:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：模块化分派代理",
+      "note": "新增 EIP：Engine API 二进制 SSZ 传输（Giulio2002）合并；新增 ERC：模块化分派代理（wjmelements）合并；ethresear.ch：可罚没的条件密钥释放，见证加密的加密经济近似 17:43。",
+      "url": "https://github.com/ethereum/ERCs/pull/1554",
+      "date": "2026-03-10",
+      "title_en": "Add ERC: Modular Dispatch Proxies",
+      "note_en": "Add EIP: Binary SSZ Transport for the Engine API (Giulio2002), merged; Add ERC: Modular Dispatch Proxies (wjmelements), merged; ethresear.ch: Slashable Conditional Key Release, a crypto economic approximation of witness encryption, 17:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：可罚没的条件密钥释放，见证加密的加密经济近似",
+      "note": "新增 EIP：Engine API 二进制 SSZ 传输（Giulio2002）合并；新增 ERC：模块化分派代理（wjmelements）合并；ethresear.ch：可罚没的条件密钥释放，见证加密的加密经济近似 17:43。",
+      "url": "https://ethresear.ch/t/slashable-conditional-key-release-a-deployable-crypto-economic-approximation-of-witness-encryption/24336",
+      "date": "2026-03-10",
+      "title_en": "ethresear.ch: Slashable Conditional Key Release, a crypto economic approximation of witness encryption",
+      "note_en": "Add EIP: Binary SSZ Transport for the Engine API (Giulio2002), merged; Add ERC: Modular Dispatch Proxies (wjmelements), merged; ethresear.ch: Slashable Conditional Key Release, a crypto economic approximation of witness encryption, 17:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethrex_client：与 EF 和 L2BEAT 合作实现 EIP-8079 原生 Rollup 概念验证，复用以太坊自身执行来验证 L2 状态转换",
+      "note": "20:07；EliBenSasson：私密稳定币不可或缺 19:02。",
+      "url": "https://x.com/ethrex_client/status/2031356365961122164",
+      "date": "2026-03-10",
+      "title_en": "ethrex_client: a proof of concept of EIP-8079 native rollups with the EF and L2BEAT, reusing Ethereum's own execution to verify L2 state transitions",
+      "note_en": "20:07; EliBenSasson: private stablecoins are essential, 19:02.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：私密稳定币不可或缺",
+      "note": "ethrex_client：与 EF 和 L2BEAT 合作实现 EIP-8079 原生 Rollup 概念验证，复用以太坊自身执行来验证 L2 状态转换 20:07；EliBenSasson：私密稳定币不可或缺 19:02。",
+      "url": "https://x.com/EliBenSasson/status/2031340001955389553",
+      "date": "2026-03-10",
+      "title_en": "EliBenSasson: private stablecoins are essential",
+      "note_en": "Ethrex_client: a proof of concept of EIP-8079 native rollups with the EF and L2BEAT, reusing Ethereum's own execution to verify L2 state transitions, 20:07; EliBenSasson: private stablecoins are essential, 19:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/snap-v2-replacing-trie-healing-with-bals/24333",
+    "credit": "ethresear.ch, Snap v2: Replacing Trie Healing with BALs",
+    "local_path": "assets/2026-03-10.jpg",
+    "credit_en": "ethresear.ch, Snap v2: Replacing Trie Healing with BALs"
+  },
+  "keywords_en": [
+    "EIP-8141 EOA support merged",
+    "Composable Transaction EIP-8175 merged",
+    "EIP-8130 permissionless payer merged",
+    "the EF stakes 72",
+    "000 ETH with DVT-lite",
+    "snap/2 heals state with BALs",
+    "a State Tiering by Write Age EIP",
+    "Payment Gated Transaction Relay ERC-8194",
+    "a native rollup proof of concept"
+  ],
+  "summary_en": "All three native AA tracks moved the same day: derekchiang's EIP-8141 EOA support merged, rakita's Composable Transaction EIP (EIP-8175) merged, and chunter-cb's EIP-8130 permissionless payer merged. VitalikButerin said the EF is staking 72,000 ETH with DVT-lite, hoping to make distributed staking one click for institutions. nerolation submitted the snap/2 BAL based state healing EIP."
+}
