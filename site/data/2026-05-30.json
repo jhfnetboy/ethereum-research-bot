@@ -1,0 +1,95 @@
+{
+  "date": "2026-05-30",
+  "keywords": [
+    "EIP-7002 提款交易的单位不一致",
+    "SI-RVP 乐观 rollup 争议解决",
+    "Lean Ethereum 进展",
+    "ERC 双模同质化代币合并"
+  ],
+  "summary": "周末较平静。pcaversaccio 在验证一笔 EIP-7002 提款或退出交易时，再次注意到其中的计量单位不一致。ethresear.ch 上有团队提出 SI-RVP，把乐观 rollup 争议的二分过程移到链下，用单条指令的 Groth16 证明替代链上 MIPS 叶子执行。fede_intern 称 Lean Ethereum 在推进。",
+  "items": [
+    {
+      "topic": "交易：EIP-7002 的单位细节",
+      "title": "pcaversaccio：昨天验证一笔 EIP-7002 交易（从执行层触发提款或退出）时，再次想起其中的计量单位不一致问题",
+      "note": "18:42。",
+      "url": "https://x.com/pcaversaccio/status/2060688309630726598",
+      "date": "2026-05-30",
+      "title_en": "pcaversaccio: while verifying an EIP-7002 transaction (triggering withdrawals or exits from the execution layer) yesterday, he was again reminded of the denomination mismatch inside it",
+      "note_en": "18:42.",
+      "topic_en": "Transactions: unit details in EIP-7002"
+    },
+    {
+      "topic": "争议证明",
+      "title": "ethresear.ch：SI-RVP，链下二分加单指令 Groth16 证明的乐观 rollup 争议解决",
+      "note": "15:07（cd4761），保留 Cannon 的 1-of-N 无许可信任模型，并在 Sepolia 上做了概念验证。",
+      "url": "https://ethresear.ch/t/si-rvp-off-chain-bisection-a-single-instruction-groth16-proof-for-optimistic-rollup-dispute-resolution/25005",
+      "date": "2026-05-30",
+      "title_en": "ethresear.ch: SI-RVP, offchain bisection plus a single instruction Groth16 proof for optimistic rollup dispute resolution",
+      "note_en": "15:07 (cd4761), keeping Cannon's 1-of-N permissionless trust model, with a proof of concept on Sepolia.",
+      "topic_en": "Dispute proofs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "fede_intern：Lean Ethereum 在推进，class_lambda 的 ethlambda_lean 成果令人满意",
+      "note": "16:37。",
+      "url": "https://x.com/fede_intern/status/2060656795387920590",
+      "date": "2026-05-30",
+      "title_en": "fede_intern: Lean Ethereum is moving forward, and he is happy with what class_lambda achieved with ethlambda_lean",
+      "note_en": "16:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：Dual-Mode Fungible Tokens",
+      "note": "ERC 合并：ERC：Dual-Mode Fungible Tokens（0xRowan）、ERC：ESG Tokenization Protocol（agronetlabs）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1359",
+      "date": "2026-05-30",
+      "title_en": "ERC: Dual-Mode Fungible Tokens",
+      "note_en": "ERCs merged: ERC: Dual-Mode Fungible Tokens (0xRowan) and ERC: ESG Tokenization Protocol (agronetlabs).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：ESG Tokenization Protocol",
+      "note": "ERC 合并：ERC：Dual-Mode Fungible Tokens（0xRowan）、ERC：ESG Tokenization Protocol（agronetlabs）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1246",
+      "date": "2026-05-30",
+      "title_en": "ERC: ESG Tokenization Protocol",
+      "note_en": "ERCs merged: ERC: Dual-Mode Fungible Tokens (0xRowan) and ERC: ESG Tokenization Protocol (agronetlabs).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：注册为 DOI 发布者",
+      "note": "01:23。",
+      "url": "https://ethereum-magicians.org/t/register-as-a-doi-publisher/28664",
+      "date": "2026-05-30",
+      "title_en": "Magicians: register as a DOI publisher",
+      "note_en": "01:23.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：用 Brave 浏览器自带的 AI 助手 Leo 求助编程问题",
+      "note": "07:08。",
+      "url": "https://x.com/zooko/status/2060513690332569863",
+      "date": "2026-05-30",
+      "title_en": "zooko: asking Leo, the AI that comes with the Brave browser, for coding help",
+      "note_en": "07:08.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/si-rvp-off-chain-bisection-a-single-instruction-groth16-proof-for-optimistic-rollup-dispute-resolution/25005",
+    "credit": "ethresear.ch, SI-RVP (cd4761)",
+    "local_path": "assets/2026-05-30.jpg",
+    "credit_en": "ethresear.ch, SI-RVP (cd4761)"
+  },
+  "keywords_en": [
+    "unit mismatch in EIP-7002 withdrawal transactions",
+    "SI-RVP optimistic rollup dispute resolution",
+    "Lean Ethereum progress",
+    "Dual-Mode Fungible Tokens ERC merged"
+  ],
+  "summary_en": "A quiet weekend. While verifying an EIP-7002 withdrawal or exit transaction, pcaversaccio was reminded of a unit mismatch inside it. On ethresear.ch a team proposed SI-RVP, moving optimistic rollup dispute bisection offchain and replacing onchain MIPS leaf execution with a single instruction Groth16 proof. fede_intern said Lean Ethereum is moving forward."
+}

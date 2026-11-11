@@ -1,0 +1,199 @@
+{
+  "date": "2026-06-02",
+  "keywords": [
+    "ERC-4337 合并移至 Final",
+    "后量子公钥注册表设计空间",
+    "Aztec 选择性披露的密钥控制",
+    "CROPS 稳定币",
+    "EIP-8148 移除 0x03 提款凭证",
+    "量子新闻争议"
+  ],
+  "summary": "yoavw 在 5 月 26 日提交的 ERC-4337 移至 Final 于今天合并，合约层账户抽象标准正式定稿。tcoratger、Justin Drake 等人发布验证者后量子公钥注册表的设计空间研究，作为告别 BLS 签名的第一步。Aztec 指出多个隐私网络的选择性披露控制权在运营方手中。",
+  "items": [
+    {
+      "topic": "账户抽象：ERC-4337 进入 Final",
+      "title": "ERC-4337：移至 Final",
+      "note": "（yoavw）合并，该 PR 于 5 月 26 日提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1773",
+      "date": "2026-06-02",
+      "title_en": "ERC-4337: move to Final",
+      "note_en": "(yoavw), merged; the PR was submitted on May 26.",
+      "topic_en": "Account abstraction: ERC-4337 reaches Final"
+    },
+    {
+      "topic": "账户抽象：ERC-4337 进入 Final",
+      "title": "ERC-8126：移至 Final",
+      "note": "（Cybercentry）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1769",
+      "date": "2026-06-02",
+      "title_en": "ERC-8126: move to Final",
+      "note_en": "(Cybercentry), merged.",
+      "topic_en": "Account abstraction: ERC-4337 reaches Final"
+    },
+    {
+      "topic": "后量子：验证者公钥注册表",
+      "title": "ethresear.ch：探索以太坊验证者后量子公钥注册表的设计空间",
+      "note": "02:01（Thomas Coratger、Tom Wambsgans、Ladislaus、Thomas Thiery、Justin Drake）。",
+      "url": "https://ethresear.ch/t/exploring-the-design-space-for-a-post-quantum-public-key-registry-for-ethereum-validators/25040",
+      "date": "2026-06-02",
+      "title_en": "ethresear.ch: Exploring the Design Space for a Post-Quantum Public Key Registry for Ethereum Validators",
+      "note_en": "02:01 (Thomas Coratger, Tom Wambsgans, Ladislaus, Thomas Thiery, Justin Drake).",
+      "topic_en": "Post-quantum: a validator public key registry"
+    },
+    {
+      "topic": "后量子：验证者公钥注册表",
+      "title": "tcoratger：告别 BLS 签名从专门的后量子公钥注册表开始，帖子深入介绍设计空间与 XMSS",
+      "note": "16:54。",
+      "url": "https://x.com/tcoratger/status/2061748291335774427",
+      "date": "2026-06-02",
+      "title_en": "tcoratger: the transition away from BLS signatures starts with a dedicated post-quantum public key registry; a deep dive into the design space and XMSS",
+      "note_en": "16:54.",
+      "topic_en": "Post-quantum: a validator public key registry"
+    },
+    {
+      "topic": "后量子：验证者公钥注册表",
+      "title": "drakefjustin：Google Quantum AI 3 月发布的 Shor 算法椭圆曲线结果之后，量子故事今天又有新进展",
+      "note": "19:55；EliBenSasson 则认为“改进 Google 破解比特币量子电路”的新报道没有实质意义 22:20。",
+      "url": "https://x.com/drakefjustin/status/2061793725299224676",
+      "date": "2026-06-02",
+      "title_en": "drakefjustin: after Google Quantum AI's March result on Shor's algorithm for elliptic curves, the quantum story got wilder today",
+      "note_en": "19:55; EliBenSasson called the new \"we improved on Google's Bitcoin breaking quantum circuit\" story a nothingburger, 22:20.",
+      "topic_en": "Post-quantum: a validator public key registry"
+    },
+    {
+      "topic": "后量子：验证者公钥注册表",
+      "title": "EliBenSasson 则认为“改进 Google 破解比特币量子电路”的新报道没有实质意义",
+      "note": "drakefjustin：Google Quantum AI 3 月发布的 Shor 算法椭圆曲线结果之后，量子故事今天又有新进展 19:55；EliBenSasson 则认为“改进 Google 破解比特币量子电路”的新报道没有实质意义 22:20。",
+      "url": "https://x.com/EliBenSasson/status/2061830227404239124",
+      "date": "2026-06-02",
+      "title_en": "EliBenSasson called the new \"we improved on Google's Bitcoin breaking quantum circuit\" story a nothingburger",
+      "note_en": "Drakefjustin: after Google Quantum AI's March result on Shor's algorithm for elliptic curves, the quantum story got wilder today, 19:55; EliBenSasson called the new \"we improved on Google's Bitcoin breaking quantum circuit\" story a nothingburger, 22:20.",
+      "topic_en": "Post-quantum: a validator public key registry"
+    },
+    {
+      "topic": "隐私",
+      "title": "aztecnetwork：每个隐私网络都声称支持选择性披露，但没说谁持有密钥；Canton、Tempo、zkSync 与 Starknet 都把控制权交给运营方、节点或常设密钥，而在 Aztec 控制权留在用户手中",
+      "note": "23:13。",
+      "url": "https://x.com/aztecnetwork/status/2061843589462913103",
+      "date": "2026-06-02",
+      "title_en": "aztecnetwork: every privacy network claims selective disclosure but does not say who holds the keys; Canton, Tempo, zkSync and Starknet put control with an operator, a node or a standing key, while on Aztec control stays with the user",
+      "note_en": "23:13.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "AndyGuzmanEth：我们真的需要 CROPS 稳定币，只有合规代币加隐私协议还不够，合规不等于抗审查",
+      "note": "01:19。",
+      "url": "https://x.com/AndyGuzmanEth/status/2061512854927257960",
+      "date": "2026-06-02",
+      "title_en": "AndyGuzmanEth: we really need CROPS stablecoins; compliant tokens plus privacy protocols are not enough, and compliance is not censorship resistance",
+      "note_en": "01:19.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "pcaversaccio：Circle 解除对 Zama 的拉黑，此前 Zama 升级了 cUSDC 的实现合约",
+      "note": "04:55。",
+      "url": "https://x.com/pcaversaccio/status/2061567394716528959",
+      "date": "2026-06-02",
+      "title_en": "pcaversaccio: Circle unblocklisted Zama after Zama upgraded the cUSDC implementation contract",
+      "note_en": "04:55.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8148：移除 0x03 提款凭证并添加规范链接",
+      "note": "（dgusakov）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11755",
+      "date": "2026-06-02",
+      "title_en": "EIP-8148: remove the 0x03 withdrawal credential and link the spec",
+      "note_en": "(dgusakov), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：加入 EIP-8219 检查算术操作码",
+      "note": "（ritzdorf）提交；EIP-8133：移至 Review（poojaranjan）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11753",
+      "date": "2026-06-02",
+      "title_en": "EIP-8081: add EIP-8219 checked arithmetic opcodes",
+      "note_en": "(ritzdorf), submitted; EIP-8133: move to Review (poojaranjan), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8133：移至 Review",
+      "note": "EIP-8081：加入 EIP-8219 检查算术操作码（ritzdorf）提交；EIP-8133：移至 Review（poojaranjan）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11756",
+      "date": "2026-06-02",
+      "title_en": "EIP-8133: move to Review",
+      "note_en": "EIP-8081: add EIP-8219 checked arithmetic opcodes (ritzdorf), submitted; EIP-8133: move to Review (poojaranjan), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：如果要做合成稳定币，它到底应该相对什么保持稳定？与前一天的期权思路相关",
+      "note": "21:53。",
+      "url": "https://x.com/VitalikButerin/status/2061823457499701544",
+      "date": "2026-06-02",
+      "title_en": "Vitalik: if we make a synthetic stable, what should it really be stable with respect to? Related to the previous day's options ideas",
+      "note_en": "21:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8309 CCIP-Read 网关网格同步协议",
+      "note": "19:01；ACDT #82 议程 20:09。",
+      "url": "https://ethereum-magicians.org/t/erc-8309-gateway-mesh-sync-protocol-for-ccip-read/28680",
+      "date": "2026-06-02",
+      "title_en": "Magicians: ERC-8309 Gateway Mesh Sync Protocol for CCIP-Read",
+      "note_en": "19:01; ACDT #82 agenda, 20:09.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #82 议程",
+      "note": "Magicians：ERC-8309 CCIP-Read 网关网格同步协议 19:01；ACDT #82 议程 20:09。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-82-june-8-2026/28681",
+      "date": "2026-06-02",
+      "title_en": "ACDT #82 agenda",
+      "note_en": "Magicians: ERC-8309 Gateway Mesh Sync Protocol for CCIP-Read, 19:01; ACDT #82 agenda, 20:09.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethbeat_org：KelpDAO 事件后许多项目从 LayerZero 迁移到 Chainlink CCIP，团队研究这是否真的是显著的安全升级",
+      "note": "19:28。",
+      "url": "https://x.com/ethbeat_org/status/2061787014979084369",
+      "date": "2026-06-02",
+      "title_en": "ethbeat_org: after the KelpDAO hack many projects moved from LayerZero to Chainlink CCIP, and the team studied whether that is a significant security upgrade",
+      "note_en": "19:28.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：本月 Starknet 社区批准 strkBTC 桥架构及初始签名者集",
+      "note": "22:27。",
+      "url": "https://x.com/StarkWareLtd/status/2061832053352452466",
+      "date": "2026-06-02",
+      "title_en": "StarkWare: this month the Starknet community approved the strkBTC bridge architecture and its initial signer set",
+      "note_en": "22:27.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/exploring-the-design-space-for-a-post-quantum-public-key-registry-for-ethereum-validators/25040",
+    "credit": "ethresear.ch, Exploring the Design Space for a Post-Quantum Public Key Registry for Ethereum Validators (tcoratger)",
+    "local_path": "assets/2026-06-02.jpg",
+    "credit_en": "ethresear.ch, Exploring the Design Space for a Post-Quantum Public Key Registry for Ethereum Validators (tcoratger)"
+  },
+  "keywords_en": [
+    "ERC-4337 merged as Final",
+    "design space for a post-quantum public key registry",
+    "who holds the keys in Aztec's selective disclosure comparison",
+    "CROPS stablecoins",
+    "EIP-8148 removes the 0x03 withdrawal credential",
+    "quantum news debate"
+  ],
+  "summary_en": "The ERC-4337 move to Final that yoavw submitted on May 26 was merged today, finalizing the contract level account abstraction standard. tcoratger, Justin Drake and others published a design space study for a validator post-quantum public key registry, the first step away from BLS signatures. Aztec pointed out that on several privacy networks control of selective disclosure sits with an operator."
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-05-25",
+  "keywords": [
+    "EIP-8272 frame 交易的 recent roots 提交",
+    "用 Lean 4 形式化 FOCIL",
+    "EIP-8243 源头批量证明",
+    "CROPS 中的安全",
+    "STRK20 六月全面上线"
+  ],
+  "summary": "soispoke 提交 EIP-8272，让 frame 交易在验证时引用最近的根而无需读取可变存储，为隐私交易证明“对某个近期承诺树成立”提供协议支持。ethresear.ch 用 Lean 4 形式化 FOCIL 的“N 选 1 诚实”包含保证。vdWijden 强调 CROPS 里最重要的是安全。",
+  "items": [
+    {
+      "topic": "隐私原语：EIP-8272",
+      "title": "新 EIP：frame 交易的 recent roots",
+      "note": "（soispoke）提交，即 EIP-8272。",
+      "url": "https://github.com/ethereum/EIPs/pull/11726",
+      "date": "2026-05-25",
+      "title_en": "New EIP: Recent Roots for Frame Transactions",
+      "note_en": "(soispoke), submitted as EIP-8272.",
+      "topic_en": "Privacy primitives: EIP-8272"
+    },
+    {
+      "topic": "抗审查与共识",
+      "title": "ethresear.ch：用 Lean 4 形式化 FOCIL",
+      "note": "21:56（rahul）：FOCIL（EIP-7805）是 Hegotá 的抗审查头条功能，常说的卖点是“包含列表委员会中只要一个不作恶的成员列出某笔交易，就能强制其进入规范区块”，文章在 Lean 4 中检验这一说法。",
+      "url": "https://ethresear.ch/t/formalizing-focil-in-lean-4/24950",
+      "date": "2026-05-25",
+      "title_en": "ethresear.ch: Formalizing FOCIL in Lean 4",
+      "note_en": "21:56 (rahul). FOCIL (EIP-7805) is the censorship resistance headliner for Hegotá, and its selling point is \"1-out-of-N honesty among IL committee members\": one non-equivocating member listing a transaction is enough to force its inclusion; the post examines that claim in Lean 4.",
+      "topic_en": "Censorship resistance and consensus"
+    },
+    {
+      "topic": "抗审查与共识",
+      "title": "EIP-8243：源头批量证明讨论帖",
+      "note": "21:17（raul），让在同一时隙委员会中运行多个验证者的运营方发布一个预聚合证明，代替 N 个单独证明。",
+      "url": "https://ethereum-magicians.org/t/eip-8243-batching-attestations-at-source/28606",
+      "date": "2026-05-25",
+      "title_en": "EIP-8243: Batching Attestations at Source discussion thread",
+      "note_en": "21:17 (raul), letting operators running several validators in the same slot committee publish one pre-aggregated attestation instead of N.",
+      "topic_en": "Censorship resistance and consensus"
+    },
+    {
+      "topic": "其他动态",
+      "title": "vdWijden：人们谈 CROPS 时关注抗审查、开源和隐私，但安全才是最重要的，没有安全的 L1 其余都没有意义",
+      "note": "04:04。",
+      "url": "https://x.com/vdWijden/status/2058655368700371052",
+      "date": "2026-05-25",
+      "title_en": "vdWijden: people focus on the CR, OS and privacy parts of CROPS, but security matters most; without a secure L1 none of it makes sense",
+      "note_en": "04:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：STRK20 将于六月全面上线",
+      "note": "18:57。",
+      "url": "https://x.com/StarkWareLtd/status/2058880048438890912",
+      "date": "2026-05-25",
+      "title_en": "StarkWare: STRK20s launch fully in June",
+      "note_en": "18:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7930：为零长度地址定义“链标识符”术语",
+      "note": "合并；ERC-8126：移至 Final 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1761",
+      "date": "2026-05-25",
+      "title_en": "ERC-7930: define the \"Chain Identifier\" term for zero-length-address IAs",
+      "note_en": "Merged; ERC-8126: move to Final, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8126：移至 Final",
+      "note": "ERC-7930：为零长度地址定义“链标识符”术语 合并；ERC-8126：移至 Final 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1769",
+      "date": "2026-05-25",
+      "title_en": "ERC-8126: move to Final",
+      "note_en": "ERC-7930: define the \"Chain Identifier\" term for zero-length-address IAs, merged; ERC-8126: move to Final, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：隐私之后的下一个周期是后量子安全",
+      "note": "21:25。",
+      "url": "https://x.com/EliBenSasson/status/2058917293409567199",
+      "date": "2026-05-25",
+      "title_en": "Eli Ben-Sasson: the next season after privacy will be post-quantum security",
+      "note_en": "21:25.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trent_vanepps：EF 只是参与交付协议功能的众多组织之一，当前模型让部分工作变快，但核心协议改动仍需时间",
+      "note": "21:10。",
+      "url": "https://x.com/trent_vanepps/status/2058913603755901264",
+      "date": "2026-05-25",
+      "title_en": "trent_vanepps: the EF is one of many orgs shipping protocol features; current models speed up some work, but core protocol changes still take time",
+      "note_en": "21:10.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/formalizing-focil-in-lean-4/24950",
+    "credit": "ethresear.ch, Formalizing FOCIL in Lean 4 (rahul)",
+    "local_path": "assets/2026-05-25.jpg",
+    "credit_en": "ethresear.ch, Formalizing FOCIL in Lean 4 (rahul)"
+  },
+  "keywords_en": [
+    "EIP-8272 recent roots for frame transactions submitted",
+    "formalizing FOCIL in Lean 4",
+    "EIP-8243 batching attestations at source",
+    "security in CROPS",
+    "STRK20 fully launching in June"
+  ],
+  "summary_en": "soispoke submitted EIP-8272, letting frame transactions reference recent roots during validation without reading mutable storage, giving protocol support for private transactions that must prove against a recent commitment tree. ethresear.ch formalized FOCIL's \"1-out-of-N honesty\" inclusion guarantee in Lean 4. vdWijden stressed that security is the most important part of CROPS."
+}

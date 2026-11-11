@@ -1,0 +1,157 @@
+{
+  "date": "2026-05-15",
+  "keywords": [
+    "EIP-8141 交易过期 frame 合并",
+    "EIP-8182 私密转账更新",
+    "EIP-7851 措辞调整",
+    "Ethereal news #23",
+    "ethlambda 后量子共识客户端"
+  ],
+  "summary": "nerolation 的 EIP-8141 EXPIRY_VERIFIER frame 合并，交易可以通过指向过期验证器的 VERIFY frame 设定过期时间。RogerPodacter 更新 EIP-8182 私密 ETH 与 ERC-20 转账并合并。EIP-7851 根据论坛讨论调整措辞。Ethereal news #23 发布。",
+  "items": [
+    {
+      "topic": "原生 AA：交易过期",
+      "title": "EIP-8141：加入用于交易过期的 EXPIRY_VERIFIER frame",
+      "note": "（nerolation）合并：通过指向 `EXPIRY_VERIFIER` 的 `VERIFY` frame 设定过期，并放宽 `VERIFY`，在回滚时使交易无效。",
+      "url": "https://github.com/ethereum/EIPs/pull/11662",
+      "date": "2026-05-15",
+      "title_en": "EIP-8141: add an EXPIRY_VERIFIER frame for tx expiry",
+      "note_en": "(nerolation), merged: expiry is set through a `VERIFY` frame targeting `EXPIRY_VERIFIER`, and `VERIFY` is relaxed to invalidate the transaction on revert.",
+      "topic_en": "Native AA: transaction expiry"
+    },
+    {
+      "topic": "原生 AA：交易过期",
+      "title": "EIP-7851：根据论坛讨论调整措辞",
+      "note": "（colinlyguo）提交并合并，澄清 frame 内执行语义和交易有效性。",
+      "url": "https://github.com/ethereum/EIPs/pull/11672",
+      "date": "2026-05-15",
+      "title_en": "EIP-7851: tweak wording based on forum discussions",
+      "note_en": "(colinlyguo), submitted and merged, clarifying frame-local execution semantics and transaction validity.",
+      "topic_en": "Native AA: transaction expiry"
+    },
+    {
+      "topic": "隐私：EIP-8182",
+      "title": "EIP-8182：更新",
+      "note": "（RogerPodacter）提交并合并。EIP-8182 定义协议层的私密 ETH 与 ERC-20 转账。",
+      "url": "https://github.com/ethereum/EIPs/pull/11671",
+      "date": "2026-05-15",
+      "title_en": "EIP-8182: update",
+      "note_en": "(RogerPodacter), submitted and merged. EIP-8182 defines protocol level private ETH and ERC-20 transfers.",
+      "topic_en": "Privacy: EIP-8182"
+    },
+    {
+      "topic": "隐私：EIP-8182",
+      "title": "aztecnetwork：用 UltraHonk 证明系统验证 AI 证明",
+      "note": "23:04。",
+      "url": "https://x.com/aztecnetwork/status/2055318449564573987",
+      "date": "2026-05-15",
+      "title_en": "aztecnetwork: AI proofs verified using the UltraHonk proving scheme",
+      "note_en": "23:04.",
+      "topic_en": "Privacy: EIP-8182"
+    },
+    {
+      "topic": "隐私：EIP-8182",
+      "title": "Eli Ben-Sasson：缺乏隐私和笨拙体验、有限扩展性一样，是大规模采用的真实障碍",
+      "note": "18:43。",
+      "url": "https://x.com/EliBenSasson/status/2055252632579490052",
+      "date": "2026-05-15",
+      "title_en": "Eli Ben-Sasson: the lack of privacy is a real barrier to mass adoption, like clunky UX or limited scalability",
+      "note_en": "18:43.",
+      "topic_en": "Privacy: EIP-8182"
+    },
+    {
+      "topic": "后量子与共识",
+      "title": "class_lambda：ethlambda 是一个后量子以太坊共识客户端，Lean 代码少于 1 万行",
+      "note": "04:48。",
+      "url": "https://x.com/class_lambda/status/2055042522431275483",
+      "date": "2026-05-15",
+      "title_en": "class_lambda: ethlambda is a post-quantum Ethereum consensus client in less than 10k lines of Lean code",
+      "note_en": "04:48.",
+      "topic_en": "Post-quantum and consensus"
+    },
+    {
+      "topic": "后量子与共识",
+      "title": "StarkWare：量子计算会破解今天的大多数密码系统，那时你会希望在基于 STARK 的系统上",
+      "note": "14:31。",
+      "url": "https://x.com/StarkWareLtd/status/2055189281891656092",
+      "date": "2026-05-15",
+      "title_en": "StarkWare: quantum computing will break most of today's crypto systems, and then you will want to be on a STARK-based system",
+      "note_en": "14:31.",
+      "topic_en": "Post-quantum and consensus"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EtherealnewsHQ：Ethereal news weekly #23，EF 清晰签名、CLARITY Act 通过参议院银行委员会、benjaminion 快速终局计划",
+      "note": "21:16。",
+      "url": "https://x.com/EtherealnewsHQ/status/2055291352603365668",
+      "date": "2026-05-15",
+      "title_en": "EtherealnewsHQ: Ethereal news weekly #23, with EF clear signing, the CLARITY Act advancing out of Senate Banking and benjaminion's fast finality plan",
+      "note_en": "21:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8246：加入测试用例",
+      "note": "合并；EIP-8148：说明清扫阈值须为 EFFECTIVE_BALANCE_INCREMENT 的倍数 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11631",
+      "date": "2026-05-15",
+      "title_en": "EIP-8246: add test cases",
+      "note_en": "Merged; EIP-8148: note that the sweep threshold is a multiple of EFFECTIVE_BALANCE_INCREMENT, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8148：说明清扫阈值须为 EFFECTIVE_BALANCE_INCREMENT 的倍数",
+      "note": "EIP-8246：加入测试用例 合并；EIP-8148：说明清扫阈值须为 EFFECTIVE_BALANCE_INCREMENT 的倍数 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11677",
+      "date": "2026-05-15",
+      "title_en": "EIP-8148: note that the sweep threshold is a multiple of EFFECTIVE_BALANCE_INCREMENT",
+      "note_en": "EIP-8246: add test cases, merged; EIP-8148: note that the sweep threshold is a multiple of EFFECTIVE_BALANCE_INCREMENT, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "barnabemonnot：strawmap 主要是供给侧工作，但五个目标中有两个可能通过提升服务质量增加需求",
+      "note": "14:16。",
+      "url": "https://x.com/barnabemonnot/status/2055185422238593041",
+      "date": "2026-05-15",
+      "title_en": "barnabemonnot: the strawmap is mostly supply side, but two of its five objectives could raise demand through better service quality",
+      "note_en": "14:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：THORChain 运行的 tss-lib 落后约三年和两个以上的重大安全版本",
+      "note": "21:22。",
+      "url": "https://x.com/tayvano_/status/2055292850557063604",
+      "date": "2026-05-15",
+      "title_en": "tayvano: THORChain was running a tss-lib about three years and two major security releases behind",
+      "note_en": "21:22.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：以太坊约有 90 万个验证者条目，但其中不少来自少数大型运营方",
+      "note": "19:45。",
+      "url": "https://x.com/binji_x/status/2055268385160642960",
+      "date": "2026-05-15",
+      "title_en": "binji: Ethereum has about 900k validator entries, but many come from a few large operators",
+      "note_en": "19:45.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereal.news/ethereal-news-weekly-23/",
+    "credit": "Ethereal news, Ethereal news weekly #23",
+    "local_path": "assets/2026-05-15.jpg",
+    "credit_en": "Ethereal news, Ethereal news weekly #23"
+  },
+  "keywords_en": [
+    "EIP-8141 transaction expiry frame merged",
+    "EIP-8182 private transfers update",
+    "EIP-7851 wording tweaks",
+    "Ethereal news #23",
+    "ethlambda post-quantum consensus client"
+  ],
+  "summary_en": "nerolation's EIP-8141 EXPIRY_VERIFIER frame was merged, so a transaction can set an expiry through a VERIFY frame targeting the expiry verifier. RogerPodacter updated EIP-8182, private ETH and ERC-20 transfers, and it was merged. EIP-7851 wording was tweaked based on forum discussion. Ethereal news #23 was published."
+}

@@ -1,0 +1,179 @@
+{
+  "date": "2026-05-20",
+  "keywords": [
+    "Vitalik 列出原生隐私的短期路线",
+    "Hegotá 主打硬度",
+    "EIP-8266 过期 nonce 讨论帖",
+    "EIP-8037 calldata 底价记账",
+    "RANDAO 的后量子 VRF",
+    "lean 共识 devnet5"
+  ],
+  "summary": "Vitalik 列出推动以太坊走向原生隐私的短期工作：AA 加 FOCIL 让隐私协议交易成为有强包含保证的一等公民，keyed nonce，以及 Kohaku、私密读取等访问层工作。soispoke 把 Hegotá 概括为“硬度”：FOCIL 抗审查，frame 交易加 keyed nonce 带来原生无需信任的隐私。ethresear.ch 提出 L* 退役 BLS 后 RANDAO 的后量子 VRF。",
+  "items": [
+    {
+      "topic": "原生隐私的短期路线",
+      "title": "Vitalik：推动以太坊走向原生隐私的短期工作，AA 加 FOCIL 让隐私协议交易等成为有强包含保证的一等公民、keyed nonce、访问层工作（Kohaku、私密读取等）",
+      "note": "13:55。",
+      "url": "https://x.com/VitalikButerin/status/2056992175318073477",
+      "date": "2026-05-20",
+      "title_en": "Vitalik: short-term things being done to shift Ethereum toward native privacy: AA plus FOCIL (making privacy protocol txs, among others, first class with strong inclusion guarantees), keyed nonces, and access layer work (Kohaku, private reads)",
+      "note_en": "13:55.",
+      "topic_en": "The short-term path to native privacy"
+    },
+    {
+      "topic": "原生隐私的短期路线",
+      "title": "soispoke：Hegota 主打硬度，FOCIL 带来抗审查，frame 交易和 keyed nonce 带来原生无需信任的隐私",
+      "note": "16:07。",
+      "url": "https://x.com/soispoke/status/2057025495003250859",
+      "date": "2026-05-20",
+      "title_en": "soispoke: Hegota is for hardness, with censorship resistance from FOCIL and native, trustless privacy from frame transactions and keyed nonces",
+      "note_en": "16:07.",
+      "topic_en": "The short-term path to native privacy"
+    },
+    {
+      "topic": "原生隐私的短期路线",
+      "title": "EIP-8266：frame 交易的过期 nonce 讨论帖",
+      "note": "12:56。",
+      "url": "https://ethereum-magicians.org/t/eip-8266-expiring-nonces-for-frame-transactions/28575",
+      "date": "2026-05-20",
+      "title_en": "EIP-8266: Expiring Nonces for Frame Transactions discussion thread",
+      "note_en": "12:56.",
+      "topic_en": "The short-term path to native privacy"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：calldata 底价记账对齐与调用帧补充说明",
+      "note": "（misilva73）提交：在交易层面应用 EIP-7623 的 calldata 底价，统一区块与交易层面的 gas 记账，澄清底价与退款的交互和收据记账，并新增与 EIP-7778 的集成小节。",
+      "url": "https://github.com/ethereum/EIPs/pull/11706",
+      "date": "2026-05-20",
+      "title_en": "EIP-8037: calldata floor accounting alignment and call-frame refill clarification",
+      "note_en": "(misilva73), submitted: the EIP-7623 calldata floor is applied at the transaction level to align block and transaction gas accounting, the floor and refund interaction and receipt accounting are clarified, and an \"Integration with EIP-7778\" subsection is added.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "nero_eth：Glamsterdam 将上线 EIP-7928 区块级访问列表，为 EVM 带来并行执行",
+      "note": "16:16。",
+      "url": "https://x.com/nero_eth/status/2057027628788269457",
+      "date": "2026-05-20",
+      "title_en": "nero_eth: Glamsterdam ships EIP-7928 block-level access lists, bringing parallelization to the EVM",
+      "note_en": "16:16.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "growthepie：昨天以太坊 L1 触发智能钱包升级的地址数，超过一些链的活跃地址数",
+      "note": "19:39。",
+      "url": "https://x.com/growthepie_eth/status/2057078639020101792",
+      "date": "2026-05-20",
+      "title_en": "growthepie: yesterday more addresses on Ethereum L1 triggered smart wallet upgrades than some chains have active",
+      "note_en": "19:39.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "后量子",
+      "title": "ethresear.ch：RANDAO 在 L* 失效，一个后量子 VRF",
+      "note": "13:02（arianaraghi）：L* 里程碑退役 BLS 密钥后，现有 `randao_reveal` 机制将完全失效，提议从 leanSig 种子派生基于哈希的 PRF 承诺 VRF，用独立的 WHIR 证明放入区块，并在 I* 激活。",
+      "url": "https://ethresear.ch/t/randao-breaks-at-l-a-post-quantum-vrf-for-ethereum/24906",
+      "date": "2026-05-20",
+      "title_en": "ethresear.ch: RANDAO Breaks at L*, a post-quantum VRF for Ethereum",
+      "note_en": "13:02 (arianaraghi): once BLS keys are retired at the L* milestone the current `randao_reveal` mechanism fails entirely; the post proposes a hash-based PRF-commitment VRF derived from the leanSig seed, proved with a standalone WHIR proof in the block and activated at I*.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "后量子",
+      "title": "zeamETH：devnet5 规范合并，区块只带一个聚合签名证明，让 leanEthereum 的共识后量子技术栈完整闭环",
+      "note": "15:57。",
+      "url": "https://x.com/zeamETH/status/2057022915938545744",
+      "date": "2026-05-20",
+      "title_en": "zeamETH: devnet5 spec merged, a block with just a single aggregated signature proof, bringing leanEthereum full circle on the consensus PQ stack",
+      "note_en": "15:57.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "后量子",
+      "title": "StarkWare：Starknet 的量子护城河分层，底层是 STARK 证明，边缘是智能合约账户",
+      "note": "21:02。",
+      "url": "https://x.com/StarkWareLtd/status/2057099578235605184",
+      "date": "2026-05-20",
+      "title_en": "StarkWare: Starknet's quantum moat has layers, STARK proofs at the base and smart contract accounts at the edge",
+      "note_en": "21:02.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Devcon 8 孟买门票开售",
+      "note": "23:35。",
+      "url": "https://x.com/ethereum/status/2057138142558445629",
+      "date": "2026-05-20",
+      "title_en": "Devcon 8 Mumbai tickets open",
+      "note_en": "23:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8263：AI 代理的链上证明层",
+      "note": "21:02。",
+      "url": "https://ethereum-magicians.org/t/erc-8263-onchain-proof-layer-for-ai-agents/28577",
+      "date": "2026-05-20",
+      "title_en": "ERC-8263: Onchain Proof Layer for AI Agents",
+      "note_en": "21:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8070：更新",
+      "note": "合并；ERC-8255：为兼容旧代币更新 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11444",
+      "date": "2026-05-20",
+      "title_en": "EIP-8070: update",
+      "note_en": "Merged; ERC-8255: updates for legacy compatibility, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8255：为兼容旧代币更新",
+      "note": "EIP-8070：更新 合并；ERC-8255：为兼容旧代币更新 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1758",
+      "date": "2026-05-20",
+      "title_en": "ERC-8255: updates for legacy compatibility",
+      "note_en": "EIP-8070: update, merged; ERC-8255: updates for legacy compatibility, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #40 议程",
+      "note": "19:08。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-40-may-20-2026/28576",
+      "date": "2026-05-20",
+      "title_en": "PQ Interop #40 agenda",
+      "note_en": "19:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：为什么 StarkWare 没有从“用 ZK 做隐私”起步",
+      "note": "21:49。",
+      "url": "https://x.com/EliBenSasson/status/2057111527241490781",
+      "date": "2026-05-20",
+      "title_en": "Eli Ben-Sasson: why StarkWare didn't start with ZK for privacy",
+      "note_en": "21:49.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/randao-breaks-at-l-a-post-quantum-vrf-for-ethereum/24906",
+    "credit": "ethresear.ch, RANDAO Breaks at L*: A Post-Quantum VRF for Ethereum (arianaraghi)",
+    "local_path": "assets/2026-05-20.jpg",
+    "credit_en": "ethresear.ch, RANDAO Breaks at L*: A Post-Quantum VRF for Ethereum (arianaraghi)"
+  },
+  "keywords_en": [
+    "Vitalik lists the short-term path to native privacy",
+    "Hegotá is for hardness",
+    "EIP-8266 expiring nonces thread",
+    "EIP-8037 calldata floor accounting",
+    "a post-quantum VRF for RANDAO",
+    "lean consensus devnet5"
+  ],
+  "summary_en": "Vitalik listed short-term work shifting Ethereum toward native privacy: AA plus FOCIL to make privacy protocol transactions first class with strong inclusion guarantees, keyed nonces, and access layer work such as Kohaku and private reads. soispoke summed up Hegotá as hardness: censorship resistance with FOCIL, and native trustless privacy with frame transactions and keyed nonces. ethresear.ch proposed a post-quantum VRF for RANDAO once BLS is retired at L*."
+}

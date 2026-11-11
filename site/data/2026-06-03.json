@@ -1,0 +1,209 @@
+{
+  "date": "2026-06-03",
+  "keywords": [
+    "EIP-7701 合并移至 Withdrawn",
+    "EIP-8130 常量与 gas 计费清理",
+    "Builder Execution Requests",
+    "链上 Clear Signing 描述符注册表",
+    "跨域状态同步的机器证明",
+    "密码学与 AI 生成内容"
+  ],
+  "summary": "forshtat 把 EIP-7701（原生账户抽象）移至 Withdrawn 的 PR 今天合并。chunter-cb 为 EIP-8130 填入交易类型常量与预编译地址并清理 gas 计费，当天提交并合并，同日还合并了此前的免 nonce 重放标识定义。wemeetagain 提交新 EIP，为 ePBS 构建者提供独立的执行层请求合约。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-7701 撤回与 EIP-8130 收尾",
+      "title": "EIP-7701：移至 Withdrawn 并补充撤回原因",
+      "note": "（forshtat）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11528",
+      "date": "2026-06-03",
+      "title_en": "EIP-7701: move to Withdrawn with a withdrawal reason",
+      "note_en": "(forshtat), merged.",
+      "topic_en": "Native AA: EIP-7701 withdrawn, EIP-8130 tightened"
+    },
+    {
+      "topic": "原生 AA：EIP-7701 撤回与 EIP-8130 收尾",
+      "title": "EIP-8130：解决常量、gas 计费与接口清理",
+      "note": "（chunter-cb）提交并合并：填入 `AA_TX_TYPE`（`0x7B`）与 `AA_PAYER_TYPE`（`0x7C`），设定 nonce 管理与交易上下文预编译地址，并声明全部引用的 EIP。",
+      "url": "https://github.com/ethereum/EIPs/pull/11757",
+      "date": "2026-06-03",
+      "title_en": "EIP-8130: resolve constants, gas accounting and interface cleanups",
+      "note_en": "(chunter-cb), submitted and merged: sets `AA_TX_TYPE` (`0x7B`) and `AA_PAYER_TYPE` (`0x7C`), the nonce manager and transaction context precompile addresses, and declares every referenced EIP.",
+      "topic_en": "Native AA: EIP-7701 withdrawn, EIP-8130 tightened"
+    },
+    {
+      "topic": "原生 AA：EIP-7701 撤回与 EIP-8130 收尾",
+      "title": "EIP-8130：定义与签名无关的免 nonce 重放标识",
+      "note": "（chunter-cb）合并；EIP-8130：create 条目增加已存在账户与代码大小检查（pochenai）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11752",
+      "date": "2026-06-03",
+      "title_en": "EIP-8130: define a signature invariant, nonce free replay identifier",
+      "note_en": "(chunter-cb), merged; EIP-8130: add existing account and code size guards to create entries (pochenai), merged.",
+      "topic_en": "Native AA: EIP-7701 withdrawn, EIP-8130 tightened"
+    },
+    {
+      "topic": "原生 AA：EIP-7701 撤回与 EIP-8130 收尾",
+      "title": "EIP-8130：create 条目增加已存在账户与代码大小检查",
+      "note": "EIP-8130：定义与签名无关的免 nonce 重放标识（chunter-cb）合并；EIP-8130：create 条目增加已存在账户与代码大小检查（pochenai）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11609",
+      "date": "2026-06-03",
+      "title_en": "EIP-8130: add existing account and code size guards to create entries",
+      "note_en": "EIP-8130: define a signature invariant, nonce free replay identifier (chunter-cb), merged; EIP-8130: add existing account and code size guards to create entries (pochenai), merged.",
+      "topic_en": "Native AA: EIP-7701 withdrawn, EIP-8130 tightened"
+    },
+    {
+      "topic": "原生 AA：EIP-7701 撤回与 EIP-8130 收尾",
+      "title": "EIP-8130：把交易上下文预编译缩减为只提供身份信息",
+      "note": "（chunter-cb）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11758",
+      "date": "2026-06-03",
+      "title_en": "EIP-8130: minimize the Transaction Context precompile to identity",
+      "note_en": "(chunter-cb), submitted.",
+      "topic_en": "Native AA: EIP-7701 withdrawn, EIP-8130 tightened"
+    },
+    {
+      "topic": "钱包签名安全",
+      "title": "ERC：链上 Clear Signing 描述符注册表",
+      "note": "（forshtat）提交：ERC-7730 描述符太大无法直接上链，注册表合约改为存储 IPFS 标识与 EAS 证明，不再依赖 GitHub 作为注册表。",
+      "url": "https://github.com/ethereum/ERCs/pull/1789",
+      "date": "2026-06-03",
+      "title_en": "ERC: Clear Signing On-Chain Descriptors Registry",
+      "note_en": "(forshtat), submitted: ERC-7730 descriptors are too big to store onchain, so the registry contract stores IPFS identifiers and EAS attestations instead of relying on GitHub as the registry.",
+      "topic_en": "Wallet signing safety"
+    },
+    {
+      "topic": "钱包签名安全",
+      "title": "ERC-7796：移至 Review",
+      "note": "（forshtat）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1692",
+      "date": "2026-06-03",
+      "title_en": "ERC-7796: move to Review",
+      "note_en": "(forshtat), merged.",
+      "topic_en": "Wallet signing safety"
+    },
+    {
+      "topic": "钱包签名安全",
+      "title": "ERC：钱包范围内的代币拉取执行",
+      "note": "（wenzhenxiang）提交，对应 ERC-8284 讨论帖 16:22。",
+      "url": "https://github.com/ethereum/ERCs/pull/1790",
+      "date": "2026-06-03",
+      "title_en": "ERC: Wallet-Scoped Token Pull Execution",
+      "note_en": "(wenzhenxiang), submitted, with the ERC-8284 discussion, 16:22.",
+      "topic_en": "Wallet signing safety"
+    },
+    {
+      "topic": "钱包签名安全",
+      "title": "ERC-8284 讨论帖",
+      "note": "ERC：钱包范围内的代币拉取执行（wenzhenxiang）提交，对应 ERC-8284 讨论帖 16:22。",
+      "url": "https://ethereum-magicians.org/t/erc-8284-wallet-scoped-token-pull-execution/28691",
+      "date": "2026-06-03",
+      "title_en": "ERC-8284 discussion",
+      "note_en": "ERC: Wallet-Scoped Token Pull Execution (wenzhenxiang), submitted, with the ERC-8284 discussion, 16:22.",
+      "topic_en": "Wallet signing safety"
+    },
+    {
+      "topic": "交易与构建",
+      "title": "新 EIP：Builder Execution Requests",
+      "note": "（wemeetagain）提交：为 EIP-7732（ePBS）构建者在 EIP-7685 请求总线上设立专门的存款和退出请求合约，不再借用验证者流程。",
+      "url": "https://github.com/ethereum/EIPs/pull/11760",
+      "date": "2026-06-03",
+      "title_en": "New EIP: Builder Execution Requests",
+      "note_en": "(wemeetagain), submitted: gives EIP-7732 (ePBS) builders dedicated deposit and exit request contracts on the EIP-7685 request bus instead of routing through validator flows.",
+      "topic_en": "Transactions and building"
+    },
+    {
+      "topic": "交易与构建",
+      "title": "EIP-8037：移除账户创建场景中的 callcode",
+      "note": "（rjl493456442）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11759",
+      "date": "2026-06-03",
+      "title_en": "EIP-8037: remove callcode from account creation cases",
+      "note_en": "(rjl493456442), submitted.",
+      "topic_en": "Transactions and building"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：原子跨域状态同步的机器证明",
+      "note": "01:05；ethresear.ch：以太坊密码学与 AI 生成的低质内容 03:32，呼吁认真讨论抗量子方案而不是仓促推提案。",
+      "url": "https://ethresear.ch/t/mechanized-proofs-for-atomic-cross-domain-state-synchronization/25065",
+      "date": "2026-06-03",
+      "title_en": "ethresear.ch: Mechanized Proofs for Atomic Cross-Domain State Synchronization",
+      "note_en": "01:05; ethresear.ch: Ethereum Cryptography and AI slop, 03:32, calling for serious discussion of quantum resistant options instead of rushed proposals.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊密码学与 AI 生成的低质内容",
+      "note": "ethresear.ch：原子跨域状态同步的机器证明 01:05；ethresear.ch：以太坊密码学与 AI 生成的低质内容 03:32，呼吁认真讨论抗量子方案而不是仓促推提案。",
+      "url": "https://ethresear.ch/t/ethereum-cryptography-and-ai-slop/25067",
+      "date": "2026-06-03",
+      "title_en": "ethresear.ch: Ethereum Cryptography and AI slop",
+      "note_en": "Ethresear.ch: Mechanized Proofs for Atomic Cross-Domain State Synchronization, 01:05; ethresear.ch: Ethereum Cryptography and AI slop, 03:32, calling for serious discussion of quantum resistant options instead of rushed proposals.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：Sigil，用护照为地址生成唯一 nullifier 的地址验证",
+      "note": "12:31。",
+      "url": "https://ethereum-magicians.org/t/sigil-address-verification-with-passport-good-or-bad-idea/28689",
+      "date": "2026-06-03",
+      "title_en": "Magicians: Sigil, address verification that derives a unique nullifier per passport",
+      "note_en": "12:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #42 议程",
+      "note": "17:16。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-42-june-3-2026/28694",
+      "date": "2026-06-03",
+      "title_en": "PQ Interop #42 agenda",
+      "note_en": "17:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8133：移至 Review",
+      "note": "（poojaranjan）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11756",
+      "date": "2026-06-03",
+      "title_en": "EIP-8133: move to Review",
+      "note_en": "(poojaranjan), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：没有隐私的 DeFi 还没准备好承接大资金，隐私是基础设施而不是功能",
+      "note": "22:03。",
+      "url": "https://x.com/EliBenSasson/status/2062188343358521451",
+      "date": "2026-06-03",
+      "title_en": "EliBenSasson: DeFi without privacy is not ready for serious capital; privacy is infrastructure, not a feature",
+      "note_en": "22:03.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "class_lambda：成为 Miden 首批 Guardian 运营方之一",
+      "note": "00:10。",
+      "url": "https://x.com/class_lambda/status/2061858092682244554",
+      "date": "2026-06-03",
+      "title_en": "class_lambda: part of the first batch of Guardian operators on Miden",
+      "note_en": "00:10.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/mechanized-proofs-for-atomic-cross-domain-state-synchronization/25065",
+    "credit": "ethresear.ch, Mechanized Proofs for Atomic Cross-Domain State Synchronization",
+    "local_path": "assets/2026-06-03.jpg",
+    "credit_en": "ethresear.ch, Mechanized Proofs for Atomic Cross-Domain State Synchronization"
+  },
+  "keywords_en": [
+    "EIP-7701 merged as Withdrawn",
+    "EIP-8130 constants and gas accounting cleanup",
+    "Builder Execution Requests",
+    "onchain Clear Signing descriptors registry",
+    "mechanized proofs for cross domain state sync",
+    "cryptography and AI slop"
+  ],
+  "summary_en": "forshtat's PR moving EIP-7701 (native account abstraction) to Withdrawn was merged today. chunter-cb filled in transaction type constants and precompile addresses for EIP-8130 and cleaned up its gas accounting, submitted and merged the same day, and the earlier nonce free replay identifier definition was merged too. wemeetagain submitted a new EIP giving ePBS builders their own execution layer request contracts."
+}

@@ -1,0 +1,211 @@
+{
+  "date": "2026-06-01",
+  "keywords": [
+    "EIP-8250 改为 nonce key 集合",
+    "EIP-8130 委托账户创建与免 nonce 重放标识",
+    "Vitalik 用期权而非债务构建指数资产",
+    "EIP-7997 内置确定性工厂",
+    "Gnosis Pay delay module 被攻击",
+    "隐私池使用习惯",
+    "ACDT #81"
+  ],
+  "summary": "soispoke 把 EIP-8250 从单个 keyed nonce 扩展为有界的 nonce key 集合，当天提交并合并。chunter-cb 为 EIP-8130 提交委托账户创建草案，并定义与签名无关的免 nonce 重放标识。Vitalik 发文探讨以期权而非 CDP 和清算为基础构建指数跟踪资产。koeppelmann 披露 Gnosis Pay 与 delay module 相关的攻击，Gnosis 将承担全部用户损失。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8250 与 EIP-8130",
+      "title": "EIP-8250：支持 nonce key 集合",
+      "note": "（soispoke）提交并合并：从单个 keyed nonce `(nonce_key, nonce_seq)` 改为有界的 key 集合 `(nonce_keys, nonce_seq)`。",
+      "url": "https://github.com/ethereum/EIPs/pull/11749",
+      "date": "2026-06-01",
+      "title_en": "EIP-8250: add support for nonce key sets",
+      "note_en": "(soispoke), submitted and merged: moves from a single keyed nonce `(nonce_key, nonce_seq)` to a bounded key set `(nonce_keys, nonce_seq)`.",
+      "topic_en": "Native AA: EIP-8250 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8250 与 EIP-8130",
+      "title": "EIP-8130：委托账户创建",
+      "note": "（chunter-cb）提交，作为讨论草案：create 条目除了放置字节码，还可以直接创建 EIP-7702 委托账户，不新增条目类型。",
+      "url": "https://github.com/ethereum/EIPs/pull/11751",
+      "date": "2026-06-01",
+      "title_en": "EIP-8130: add delegated account creation",
+      "note_en": "(chunter-cb), submitted as a discussion draft: the create entry can produce an EIP-7702 delegated account in addition to placed bytecode, without a new entry type.",
+      "topic_en": "Native AA: EIP-8250 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8250 与 EIP-8130",
+      "title": "EIP-8130：定义与签名无关的免 nonce 重放标识",
+      "note": "（chunter-cb）提交：规范原先只写“按交易哈希去重”，而标准交易哈希会承诺 `sender_auth` 与 `payer_auth`，无法实现每个窗口只有一笔逻辑交易的目标。",
+      "url": "https://github.com/ethereum/EIPs/pull/11752",
+      "date": "2026-06-01",
+      "title_en": "EIP-8130: define a signature invariant, nonce free replay identifier",
+      "note_en": "(chunter-cb), submitted: the spec only said \"deduplicate by transaction hash\", but the standard transaction hash commits to `sender_auth` and `payer_auth`, which does not achieve one logical transaction per window.",
+      "topic_en": "Native AA: EIP-8250 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8250 与 EIP-8130",
+      "title": "nero_eth：以太坊是否需要内置确定性工厂（EIP-7997）？",
+      "note": "23:01，目前 Arachnid、ERC-2470、CreateX 等工厂依靠 Nick 方法的预签名交易在各链部署到相同地址。",
+      "url": "https://x.com/nero_eth/status/2061478161578127473",
+      "date": "2026-06-01",
+      "title_en": "nero_eth: does Ethereum need an enshrined deterministic factory (EIP-7997)?",
+      "note_en": "23:01; factories such as Arachnid, ERC-2470 and CreateX sit at the same address across chains today thanks to Nick's method of a presigned transaction.",
+      "topic_en": "Native AA: EIP-8250 and EIP-8130"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：calldata 下限计费对齐与调用帧退款说明",
+      "note": "（misilva73）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11706",
+      "date": "2026-06-01",
+      "title_en": "EIP-8037: calldata floor accounting alignment and call frame refill clarification",
+      "note_en": "(misilva73), merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-7928：禁止存储槽出现空变更集",
+      "note": "（raxhvl）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11750",
+      "date": "2026-06-01",
+      "title_en": "EIP-7928: disallow empty change sets for storage slots",
+      "note_en": "(raxhvl), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "隐私与安全",
+      "title": "ethbeat_org：上线隐私页面，支持三个主要隐私池；这些协议虽然把存款与取款解耦，但如果不遵守基本的使用习惯，活动仍可能被关联",
+      "note": "21:43。",
+      "url": "https://x.com/ethbeat_org/status/2061458720912011419",
+      "date": "2026-06-01",
+      "title_en": "ethbeat_org: launched a Privacy page supporting three major privacy pools; while they decouple deposits from withdrawals, activity can still be linked without basic privacy pool hygiene",
+      "note_en": "21:43.",
+      "topic_en": "Privacy and security"
+    },
+    {
+      "topic": "隐私与安全",
+      "title": "koeppelmann：发生了与 Gnosis Pay 和 delay module 相关的攻击，团队正在控制损失，Gnosis 将承担全部用户损失",
+      "note": "15:20。",
+      "url": "https://x.com/koeppelmann/status/2061362219984568719",
+      "date": "2026-06-01",
+      "title_en": "koeppelmann: there is a hack related to Gnosis Pay and the \"delay module\"; the team is containing the damage and Gnosis will cover all user losses",
+      "note_en": "15:20.",
+      "topic_en": "Privacy and security"
+    },
+    {
+      "topic": "隐私与安全",
+      "title": "Vitalik：自主身份、数据和资金（由你而不是第三方掌控账户），以及 CROPS AI",
+      "note": "20:13；并重申仅靠 ZK 不足以让“身份验证”有利于自由 21:08。",
+      "url": "https://x.com/VitalikButerin/status/2061435858897572032",
+      "date": "2026-06-01",
+      "title_en": "Vitalik: self sovereign identity, data and money (so you control your account, not a third party) and CROPS AI",
+      "note_en": "20:13; and his earlier point that ZK alone is not enough to make \"identity verification\" pro freedom, 21:08.",
+      "topic_en": "Privacy and security"
+    },
+    {
+      "topic": "隐私与安全",
+      "title": "并重申仅靠 ZK 不足以让“身份验证”有利于自由",
+      "note": "Vitalik：自主身份、数据和资金（由你而不是第三方掌控账户），以及 CROPS AI 20:13；并重申仅靠 ZK 不足以让“身份验证”有利于自由 21:08。",
+      "url": "https://x.com/VitalikButerin/status/2061449694761320809",
+      "date": "2026-06-01",
+      "title_en": "and his earlier point that ZK alone is not enough to make \"identity verification\" pro freedom",
+      "note_en": "Vitalik: self sovereign identity, data and money (so you control your account, not a third party) and CROPS AI, 20:13; and his earlier point that ZK alone is not enough to make \"identity verification\" pro freedom, 21:08.",
+      "topic_en": "Privacy and security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：用期权而非债务构建指数跟踪资产",
+      "note": "22:22（vbuterin），让剧烈价格波动不再触发全局性的清算。",
+      "url": "https://ethresear.ch/t/building-index-tracking-assets-on-top-of-options-instead-of-debt/25036",
+      "date": "2026-06-01",
+      "title_en": "ethresear.ch: Building index tracking assets on top of options instead of debt",
+      "note_en": "22:22 (vbuterin), so that extreme price moves no longer trigger global liquidations.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：权限注册表草案，为代理提供按函数限定、无需托管的委托",
+      "note": "12:36；ERC-8294：ERC-8004 的验证网络接口 04:26。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-permission-registry-function-scoped-delegation-for-agents-without-custody/28670",
+      "date": "2026-06-01",
+      "title_en": "Magicians: draft Permission Registry ERC, function scoped delegation for agents without custody",
+      "note_en": "12:36; ERC-8294: Validation Network Interface for ERC-8004, 04:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8294：ERC-8004 的验证网络接口",
+      "note": "Magicians：权限注册表草案，为代理提供按函数限定、无需托管的委托 12:36；ERC-8294：ERC-8004 的验证网络接口 04:26。",
+      "url": "https://ethereum-magicians.org/t/erc-8294-validation-network-interface-for-erc-8004/28669",
+      "date": "2026-06-01",
+      "title_en": "ERC-8294: Validation Network Interface for ERC-8004",
+      "note_en": "Magicians: draft Permission Registry ERC, function scoped delegation for agents without custody, 12:36; ERC-8294: Validation Network Interface for ERC-8004, 04:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "为危险合约引入 alert 字段",
+      "note": "ERC-7730（Clear Signing）一组更新由 forshtat 提交，例如 为危险合约引入 alert 字段。",
+      "url": "https://github.com/ethereum/ERCs/pull/1781",
+      "date": "2026-06-01",
+      "title_en": "an alert field for dangerous contracts",
+      "note_en": "A set of ERC-7730 (Clear Signing) updates submitted by forshtat, such as an alert field for dangerous contracts.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #35 议程",
+      "note": "13:35；RPC Standards #27 议程 21:11。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-35-june-2-2026/28673",
+      "date": "2026-06-01",
+      "title_en": "FOCIL Breakout #35 agenda",
+      "note_en": "13:35; RPC Standards #27 agenda, 21:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #27 议程",
+      "note": "FOCIL Breakout #35 议程 13:35；RPC Standards #27 议程 21:11。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-27-june-1-2026/28676",
+      "date": "2026-06-01",
+      "title_en": "RPC Standards #27 agenda",
+      "note_en": "FOCIL Breakout #35 agenda, 13:35; RPC Standards #27 agenda, 21:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "asanso：回应称几天内用 Falcon 解决后量子签名问题的说法，并追问共识层如何替换 BLS",
+      "note": "12:51。",
+      "url": "https://x.com/asanso/status/2061324690136690931",
+      "date": "2026-06-01",
+      "title_en": "asanso: pushed back on a claim that post-quantum signatures were solved in a few days with Falcon, asking how BLS would be replaced in consensus",
+      "note_en": "12:51.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：机构不需要加密 UX，它们需要隐私、规模与安全",
+      "note": "18:57。",
+      "url": "https://x.com/EliBenSasson/status/2061416740429476276",
+      "date": "2026-06-01",
+      "title_en": "EliBenSasson: institutions don't need crypto UX; they need privacy, scale and security",
+      "note_en": "18:57.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/building-index-tracking-assets-on-top-of-options-instead-of-debt/25036",
+    "credit": "ethresear.ch, Building index-tracking assets on top of options instead of debt (vbuterin)",
+    "local_path": "assets/2026-06-01.jpg",
+    "credit_en": "ethresear.ch, Building index-tracking assets on top of options instead of debt (vbuterin)"
+  },
+  "keywords_en": [
+    "EIP-8250 moves to nonce key sets",
+    "EIP-8130 delegated account creation and a nonce free replay identifier",
+    "Vitalik on index assets built on options instead of debt",
+    "EIP-7997 enshrined deterministic factory",
+    "Gnosis Pay delay module hack",
+    "privacy pool hygiene",
+    "ACDT #81"
+  ],
+  "summary_en": "soispoke extended EIP-8250 from a single keyed nonce to a bounded set of nonce keys, submitted and merged the same day. chunter-cb submitted a delegated account creation draft for EIP-8130 and defined a signature invariant replay identifier for nonce free transactions. Vitalik wrote about building index tracking assets on options rather than CDPs and liquidations. koeppelmann disclosed a hack related to Gnosis Pay and the delay module, with Gnosis covering all user losses."
+}

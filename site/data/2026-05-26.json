@@ -1,0 +1,269 @@
+{
+  "date": "2026-05-26",
+  "keywords": [
+    "ERC-4337 提交移至 Final",
+    "Hegotá 四件套带来原生隐私交易",
+    "EIP-8272 recent roots 讨论帖",
+    "Kohaku 访问层安全与隐私",
+    "L2BEAT 隐私页面上线",
+    "无许可 TEE"
+  ],
+  "summary": "yoavw 提交把 ERC-4337 移至 Final 的 PR。soispoke 提出：如果 Hegotá 上线 FOCIL（EIP-7805）、frame 交易（EIP-8141）、keyed nonce（EIP-8250）和 recent roots（EIP-8272），明年以太坊就有原生、无需信任、抗审查的私密交易。Vitalik 介绍 Kohaku 在访问层实现安全与读写隐私的目标。L2BEAT 发布隐私页面。",
+  "items": [
+    {
+      "topic": "账户抽象：ERC-4337 定稿与原生 AA 的隐私组合",
+      "title": "ERC-4337：移至 Final",
+      "note": "（yoavw）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1773",
+      "date": "2026-05-26",
+      "title_en": "ERC-4337: move to Final",
+      "note_en": "(yoavw), submitted.",
+      "topic_en": "Account abstraction: ERC-4337 goes final and native AA's privacy combination"
+    },
+    {
+      "topic": "账户抽象：ERC-4337 定稿与原生 AA 的隐私组合",
+      "title": "soispoke：如果 Hegota 上线 FOCIL（EIP-7805）、frame 交易（EIP-8141）、keyed nonce（EIP-8250）和 recent roots（EIP-8272），明年以太坊就会有原生、无需信任、抗审查的私密交易",
+      "note": "20:43。",
+      "url": "https://x.com/soispoke/status/2059269087381852618",
+      "date": "2026-05-26",
+      "title_en": "soispoke: if we ship FOCIL (EIP-7805), Frame Transactions (EIP-8141), Keyed Nonces (EIP-8250) and Recent Roots (EIP-8272) in Hegota, we get native, trustless, censorship resistant private transactions on Ethereum next year",
+      "note_en": "20:43.",
+      "topic_en": "Account abstraction: ERC-4337 goes final and native AA's privacy combination"
+    },
+    {
+      "topic": "账户抽象：ERC-4337 定稿与原生 AA 的隐私组合",
+      "title": "soispoke：新 EIP-8272，frame 交易的 recent roots，由 soispoke、nero_eth 与 Vitalik 撰写",
+      "note": "20:27；EIP-8272 讨论帖 20:15：根来源把根写入系统合约，按 `(source_id, slot)` 索引，frame 交易验证时无需读取可变存储即可引用。",
+      "url": "https://x.com/soispoke/status/2059265180459004391",
+      "date": "2026-05-26",
+      "title_en": "soispoke: new EIP-8272, Recent Roots for Frame Transactions, by soispoke, nero_eth and Vitalik",
+      "note_en": "20:27; EIP-8272 discussion thread, 20:15: a root source writes roots to a system contract keyed by `(source_id, slot)`, and frame transactions reference them during validation without reading mutable storage.",
+      "topic_en": "Account abstraction: ERC-4337 goes final and native AA's privacy combination"
+    },
+    {
+      "topic": "账户抽象：ERC-4337 定稿与原生 AA 的隐私组合",
+      "title": "EIP-8272 讨论帖",
+      "note": "soispoke：新 EIP-8272，frame 交易的 recent roots，由 soispoke、nero_eth 与 Vitalik 撰写 20:27；EIP-8272 讨论帖 20:15：根来源把根写入系统合约，按 `(source_id, slot)` 索引，frame 交易验证时无需读取可变存储即可引用。",
+      "url": "https://ethereum-magicians.org/t/eip-8272-recent-roots-for-frame-transactions/28621",
+      "date": "2026-05-26",
+      "title_en": "EIP-8272 discussion thread",
+      "note_en": "Soispoke: new EIP-8272, Recent Roots for Frame Transactions, by soispoke, nero_eth and Vitalik, 20:27; EIP-8272 discussion thread, 20:15: a root source writes roots to a system contract keyed by `(source_id, slot)`, and frame transactions reference them during validation without reading mutable storage.",
+      "topic_en": "Account abstraction: ERC-4337 goes final and native AA's privacy combination"
+    },
+    {
+      "topic": "账户抽象：ERC-4337 定稿与原生 AA 的隐私组合",
+      "title": "binji：通往原生隐私的支付以太坊，Hegota 可能包含四项改变格局的功能",
+      "note": "21:58。",
+      "url": "https://x.com/binji_x/status/2059287972806025720",
+      "date": "2026-05-26",
+      "title_en": "binji: getting to a natively private Ethereum for payments, with four Hegota features that could change the game",
+      "note_en": "21:58.",
+      "topic_en": "Account abstraction: ERC-4337 goes final and native AA's privacy combination"
+    },
+    {
+      "topic": "隐私：钱包层与评估",
+      "title": "Vitalik：kassandraETH、ncsgy 等人为 Kohaku 工作了近一年，目标是在访问层实现安全（无需信任）与隐私（读和写）",
+      "note": "18:43；binji：ncsgy 在以太坊 L1 测试网上用 Kohaku 完成一笔抗量子交易，成本约 0.07 美元 20:16。",
+      "url": "https://x.com/VitalikButerin/status/2059239031133634783",
+      "date": "2026-05-26",
+      "title_en": "Vitalik: kassandraETH, ncsgy and others have worked for nearly a year on Kohaku, whose goal is security (and trustlessness) plus privacy (read and write) at the access layer",
+      "note_en": "18:43; binji: ncsgy made a quantum resistant transaction on an Ethereum L1 testnet with Kohaku for about $0.07, 20:16.",
+      "topic_en": "Privacy: wallets and reviews"
+    },
+    {
+      "topic": "隐私：钱包层与评估",
+      "title": "binji：ncsgy 在以太坊 L1 测试网上用 Kohaku 完成一笔抗量子交易，成本约 0.07 美元",
+      "note": "Vitalik：kassandraETH、ncsgy 等人为 Kohaku 工作了近一年，目标是在访问层实现安全（无需信任）与隐私（读和写） 18:43；binji：ncsgy 在以太坊 L1 测试网上用 Kohaku 完成一笔抗量子交易，成本约 0.07 美元 20:16。",
+      "url": "https://x.com/binji_x/status/2059262367356125555",
+      "date": "2026-05-26",
+      "title_en": "binji: ncsgy made a quantum resistant transaction on an Ethereum L1 testnet with Kohaku for about $0.07",
+      "note_en": "Vitalik: kassandraETH, ncsgy and others have worked for nearly a year on Kohaku, whose goal is security (and trustlessness) plus privacy (read and write) at the access layer, 18:43; binji: ncsgy made a quantum resistant transaction on an Ethereum L1 testnet with Kohaku for about $0.07, 20:16.",
+      "topic_en": "Privacy: wallets and reviews"
+    },
+    {
+      "topic": "隐私：钱包层与评估",
+      "title": "ethbeat：L2BEAT 发布隐私页面，审视以太坊隐私协议的 CROPS 属性",
+      "note": "21:11。",
+      "url": "https://x.com/ethbeat_org/status/2059276126522904764",
+      "date": "2026-05-26",
+      "title_en": "ethbeat: L2BEAT releases its Privacy page, scrutinizing the CROPS properties of Ethereum's privacy protocols",
+      "note_en": "21:11.",
+      "topic_en": "Privacy: wallets and reviews"
+    },
+    {
+      "topic": "隐私：钱包层与评估",
+      "title": "donnoh_eth：推荐 sekubalias 的文章，只使用隐私协议并不足以保护隐私",
+      "note": "21:51。",
+      "url": "https://x.com/donnoh_eth/status/2059286218416755013",
+      "date": "2026-05-26",
+      "title_en": "donnoh_eth: recommending sekubalias's piece on why just using a privacy protocol is not enough to protect your privacy",
+      "note_en": "21:51.",
+      "topic_en": "Privacy: wallets and reviews"
+    },
+    {
+      "topic": "隐私：钱包层与评估",
+      "title": "aztecnetwork：以太坊上的隐私已经到来，没有密码学背景的开发者也能在 Aztec 上构建私密合约",
+      "note": "22:02；Nethermind：为 Aztec 在测试网上发布多资产费用支付合约 21:18。",
+      "url": "https://x.com/aztecnetwork/status/2059289183655711213",
+      "date": "2026-05-26",
+      "title_en": "aztecnetwork: privacy on Ethereum is already here, and developers without a cryptography background can build private contracts on Aztec",
+      "note_en": "22:02; Nethermind: shipped a multi-asset fee payment contract for Aztec to testnet, 21:18.",
+      "topic_en": "Privacy: wallets and reviews"
+    },
+    {
+      "topic": "隐私：钱包层与评估",
+      "title": "Nethermind：为 Aztec 在测试网上发布多资产费用支付合约",
+      "note": "aztecnetwork：以太坊上的隐私已经到来，没有密码学背景的开发者也能在 Aztec 上构建私密合约 22:02；Nethermind：为 Aztec 在测试网上发布多资产费用支付合约 21:18。",
+      "url": "https://x.com/Nethermind/status/2059277899157340307",
+      "date": "2026-05-26",
+      "title_en": "Nethermind: shipped a multi-asset fee payment contract for Aztec to testnet",
+      "note_en": "Aztecnetwork: privacy on Ethereum is already here, and developers without a cryptography background can build private contracts on Aztec, 22:02; Nethermind: shipped a multi-asset fee payment contract for Aztec to testnet, 21:18.",
+      "topic_en": "Privacy: wallets and reviews"
+    },
+    {
+      "topic": "其他研究",
+      "title": "ethresear.ch：物理完整性、证明与无许可 TEE 的现状",
+      "note": "16:08（fnerdman）。",
+      "url": "https://ethresear.ch/t/physical-integrity-attestation-and-the-state-of-permissionless-tees/24964",
+      "date": "2026-05-26",
+      "title_en": "ethresear.ch: Physical integrity, attestation, and the state of permissionless TEEs",
+      "note_en": "16:08 (fnerdman).",
+      "topic_en": "Other research"
+    },
+    {
+      "topic": "其他研究",
+      "title": "ethresear.ch：提取是守恒的，从 MEV 到 GEV",
+      "note": "01:47。",
+      "url": "https://ethresear.ch/t/extraction-is-conserved-from-mev-to-gev/24953",
+      "date": "2026-05-26",
+      "title_en": "ethresear.ch: Extraction Is Conserved, from MEV to GEV",
+      "note_en": "01:47.",
+      "topic_en": "Other research"
+    },
+    {
+      "topic": "其他动态",
+      "title": "加入 EIP-7709 与 EIP-8025",
+      "note": "EIP-8081 Hegotá 元 EIP：加入 EIP-7709 与 EIP-8025 与 加入 EIP-8253 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11720",
+      "date": "2026-05-26",
+      "title_en": "add EIP-7709 and EIP-8025",
+      "note_en": "EIP-8081 Hegotá meta EIP: add EIP-7709 and EIP-8025 and add EIP-8253, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "加入 EIP-8253",
+      "note": "EIP-8081 Hegotá 元 EIP：加入 EIP-7709 与 EIP-8025 与 加入 EIP-8253 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11721",
+      "date": "2026-05-26",
+      "title_en": "add EIP-8253",
+      "note_en": "EIP-8081 Hegotá meta EIP: add EIP-7709 and EIP-8025 and add EIP-8253, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：更好的校验规范与 rationale",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11727",
+      "date": "2026-05-26",
+      "title_en": "EIP-7979: better validation spec and rationale",
+      "note_en": "Submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8275：代理服务发现与托管付款",
+      "note": "20:23；ERC-8273：基于证明的代理操作 13:51；新 ERC：零知识证明元数据 合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8275-agent-service-discovery-and-escrow-payments/28622",
+      "date": "2026-05-26",
+      "title_en": "ERC-8275: Agent Service Discovery and Escrow Payments",
+      "note_en": "20:23; ERC-8273: Attestation-Gated Agentic Actions, 13:51; New ERC: Zero-knowledge proof metadata, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8273：基于证明的代理操作",
+      "note": "ERC-8275：代理服务发现与托管付款 20:23；ERC-8273：基于证明的代理操作 13:51；新 ERC：零知识证明元数据 合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8273-attestation-gated-agentic-actions/28617",
+      "date": "2026-05-26",
+      "title_en": "ERC-8273: Attestation-Gated Agentic Actions",
+      "note_en": "ERC-8275: Agent Service Discovery and Escrow Payments, 20:23; ERC-8273: Attestation-Gated Agentic Actions, 13:51; New ERC: Zero-knowledge proof metadata, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：零知识证明元数据",
+      "note": "ERC-8275：代理服务发现与托管付款 20:23；ERC-8273：基于证明的代理操作 13:51；新 ERC：零知识证明元数据 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1344",
+      "date": "2026-05-26",
+      "title_en": "New ERC: Zero-knowledge proof metadata",
+      "note_en": "ERC-8275: Agent Service Discovery and Escrow Payments, 20:23; ERC-8273: Attestation-Gated Agentic Actions, 13:51; New ERC: Zero-knowledge proof metadata, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS #9 议程",
+      "note": "14:30；FCR #9 议程 19:52；EIP Editing Office Hour #100 议程 20:37。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-9/28618",
+      "date": "2026-05-26",
+      "title_en": "PQTS #9 agenda",
+      "note_en": "14:30; FCR #9 agenda, 19:52; EIP Editing Office Hour #100 agenda, 20:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #9 议程",
+      "note": "PQTS #9 议程 14:30；FCR #9 议程 19:52；EIP Editing Office Hour #100 议程 20:37。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-9-june-23-2026/28619",
+      "date": "2026-05-26",
+      "title_en": "FCR #9 agenda",
+      "note_en": "PQTS #9 agenda, 14:30; FCR #9 agenda, 19:52; EIP Editing Office Hour #100 agenda, 20:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP Editing Office Hour #100 议程",
+      "note": "PQTS #9 议程 14:30；FCR #9 议程 19:52；EIP Editing Office Hour #100 议程 20:37。",
+      "url": "https://ethereum-magicians.org/t/eip-editing-office-hour-eip-erc-meeting-100-june-02-2026/28623",
+      "date": "2026-05-26",
+      "title_en": "EIP Editing Office Hour #100 agenda",
+      "note_en": "PQTS #9 agenda, 14:30; FCR #9 agenda, 19:52; EIP Editing Office Hour #100 agenda, 20:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：最该尽快实现的隐私场景是新银行卡用户，现在很容易看出别人往卡里放了多少钱",
+      "note": "17:35。",
+      "url": "https://x.com/binji_x/status/2059221908030468106",
+      "date": "2026-05-26",
+      "title_en": "binji: the privacy use case to ship ASAP is neobank card users, whose card top-ups are easy to see today",
+      "note_en": "17:35.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：“隐私币”是错误的框架，真正的问题是私有状态能否组合",
+      "note": "01:50。",
+      "url": "https://x.com/EliBenSasson/status/2058983953453699090",
+      "date": "2026-05-26",
+      "title_en": "Eli Ben-Sasson: \"privacy coins\" is the wrong frame; the real question is whether private state can compose",
+      "note_en": "01:50.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8272-recent-roots-for-frame-transactions/28621",
+    "credit": "Ethereum Magicians, EIP-8272: Recent Roots for Frame Transactions (soispoke)",
+    "local_path": "assets/2026-05-26.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8272: Recent Roots for Frame Transactions (soispoke)"
+  },
+  "keywords_en": [
+    "ERC-4337 move to Final submitted",
+    "a Hegotá set of four for native private transactions",
+    "EIP-8272 recent roots thread",
+    "Kohaku access layer security and privacy",
+    "L2BEAT privacy page launches",
+    "permissionless TEEs"
+  ],
+  "summary_en": "yoavw submitted the PR moving ERC-4337 to Final. soispoke argued that if Hegotá ships FOCIL (EIP-7805), frame transactions (EIP-8141), keyed nonces (EIP-8250) and recent roots (EIP-8272), Ethereum gets native, trustless, censorship resistant private transactions next year. Vitalik described Kohaku's goal of security and read and write privacy at the access layer. L2BEAT released its privacy page."
+}

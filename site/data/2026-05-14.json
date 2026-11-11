@@ -1,0 +1,177 @@
+{
+  "date": "2026-05-14",
+  "keywords": [
+    "快速终局计划第一期",
+    "EIP-7851 改为由代码控制的委托",
+    "执行层重组状态保留窗口",
+    "隐私支付到邮箱和社交账号",
+    "ACDC #178"
+  ],
+  "summary": "benjaminion 在新的 EF Protocol 共识网站发布“升级终局性”第一期，目标是把终局时间从约 1000 秒缩短到约 10 秒。colinlyguo 把 EIP-7851 从 7702 授权标记路径改为由委托钱包代码决定，并合并。nerolation 的执行层重组状态保留窗口 EIP 合并。ethresear.ch 讨论向邮箱、手机号和社交账号进行隐私支付。当晚召开 ACDC #178。",
+  "items": [
+    {
+      "topic": "账户：EIP-7851 改为由代码控制",
+      "title": "EIP-7851：改用由代码控制的委托",
+      "note": "（colinlyguo）提交并合并。PR 说明：一旦控制权转到委托的钱包代码，再要求原 EOA 密钥来停用残留的 ECDSA 权限，不符合“让代码决定”的模型，因为委托之后钱包可能根本不再使用旧密钥。",
+      "url": "https://github.com/ethereum/EIPs/pull/11668",
+      "date": "2026-05-14",
+      "title_en": "EIP-7851: use code-controlled delegation",
+      "note_en": "(colinlyguo), submitted and merged. The PR explains that once control has moved into delegated wallet code, requiring the original EOA key again to disable residual ECDSA authority does not fit the \"let the code decide\" model, since after delegation the wallet may no longer use the old key at all.",
+      "topic_en": "Accounts: EIP-7851 becomes code-controlled"
+    },
+    {
+      "topic": "账户：EIP-7851 改为由代码控制",
+      "title": "EIP-7928：修正合约创建的措辞",
+      "note": "（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11667",
+      "date": "2026-05-14",
+      "title_en": "EIP-7928: fix contract creation wording",
+      "note_en": "(nerolation), submitted and merged.",
+      "topic_en": "Accounts: EIP-7851 becomes code-controlled"
+    },
+    {
+      "topic": "隐私：支付到身份而不是地址",
+      "title": "ethresear.ch：补上加密货币最后的体验缺口，向邮箱、手机号和社交账号而不是钱包地址进行隐私支付",
+      "note": "11:58（0xjasonw），指出今天转账仍要索取 42 位地址、确认网络、准备 gas 代币。",
+      "url": "https://ethresear.ch/t/closing-the-last-ux-gap-in-crypto-privacy-preserving-payments-to-email-phone-and-social-handles-rather-than-a-wallet-address/24874",
+      "date": "2026-05-14",
+      "title_en": "ethresear.ch: Closing the Last UX Gap in Crypto, privacy-preserving payments to email, phone and social handles rather than a wallet address",
+      "note_en": "11:58 (0xjasonw), noting that sending still means asking for a 42-character address, checking the network and acquiring a gas token.",
+      "topic_en": "Privacy: paying identities instead of addresses"
+    },
+    {
+      "topic": "隐私：支付到身份而不是地址",
+      "title": "Eli Ben-Sasson：为什么 strk20 的隐私比 Zcash 更好，虽然整体隐私更少",
+      "note": "20:06，Zcash 只有双方知道交易内容，但难以做隐私 DeFi。",
+      "url": "https://x.com/EliBenSasson/status/2054911162802659508",
+      "date": "2026-05-14",
+      "title_en": "Eli Ben-Sasson: why strk20 gives better privacy than Zcash even with less privacy overall",
+      "note_en": "20:06; with Zcash only the two parties see a transaction, but shielded DeFi is hard.",
+      "topic_en": "Privacy: paying identities instead of addresses"
+    },
+    {
+      "topic": "共识：快速终局",
+      "title": "benjaminion：升级终局性第一期，发布在新的 EF Protocol 共识网站",
+      "note": "01:45；binji：以太坊的目标是在不牺牲安全的情况下把终局提速 100 倍，从 1000 秒到 10 秒 18:09。",
+      "url": "https://x.com/benjaminion_xyz/status/2054634095523623099",
+      "date": "2026-05-14",
+      "title_en": "benjaminion: Upgrading Finality, Edition 1, on the new EF Protocol consensus website",
+      "note_en": "01:45; binji: Ethereum aims to make finality 100x faster, from 1000s to 10s, without compromising security, 18:09.",
+      "topic_en": "Consensus: fast finality"
+    },
+    {
+      "topic": "共识：快速终局",
+      "title": "binji：以太坊的目标是在不牺牲安全的情况下把终局提速 100 倍，从 1000 秒到 10 秒",
+      "note": "benjaminion：升级终局性第一期，发布在新的 EF Protocol 共识网站 01:45；binji：以太坊的目标是在不牺牲安全的情况下把终局提速 100 倍，从 1000 秒到 10 秒 18:09。",
+      "url": "https://x.com/binji_x/status/2054881832722690117",
+      "date": "2026-05-14",
+      "title_en": "binji: Ethereum aims to make finality 100x faster, from 1000s to 10s, without compromising security",
+      "note_en": "Benjaminion: Upgrading Finality, Edition 1, on the new EF Protocol consensus website, 01:45; binji: Ethereum aims to make finality 100x faster, from 1000s to 10s, without compromising security, 18:09.",
+      "topic_en": "Consensus: fast finality"
+    },
+    {
+      "topic": "共识：快速终局",
+      "title": "新 EIP：执行层重组状态保留窗口",
+      "note": "（nerolation）合并，设定 262,144 个区块（约 36.4 天）的状态保留下限，让执行层客户端可以本地处理任何重组而无需重新同步。",
+      "url": "https://github.com/ethereum/EIPs/pull/11601",
+      "date": "2026-05-14",
+      "title_en": "New EIP: Execution-Layer Reorg State Retention Window",
+      "note_en": "(nerolation), merged, setting a state retention floor of 262,144 blocks (about 36.4 days) so execution clients can process any reorg locally without resyncing.",
+      "topic_en": "Consensus: fast finality"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8457：通过 EIP-2537 批量进行 KZG 点求值",
+      "note": "19:07。",
+      "url": "https://ethereum-magicians.org/t/eip-8457-batched-kzg-point-evaluation-via-eip-2537/28534",
+      "date": "2026-05-14",
+      "title_en": "EIP-8457: Batched KZG Point Evaluation via EIP-2537",
+      "note_en": "19:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：为异步 4626 金库的提款申请发行代币化凭证",
+      "note": "08:51。",
+      "url": "https://ethereum-magicians.org/t/erc-tokenizing-withdrawal-claims-for-async-4626-vaults/28529",
+      "date": "2026-05-14",
+      "title_en": "ERC: Tokenizing Withdrawal Claims for Async 4626 Vaults",
+      "note_en": "08:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：CuEVM，在 GPU 上实现每秒数百万笔交易用于模糊测试",
+      "note": "09:26。",
+      "url": "https://ethresear.ch/t/cuevm-achieving-millions-of-tps-on-gpus-for-fuzzing-and-beyond/24873",
+      "date": "2026-05-14",
+      "title_en": "ethresear.ch: CuEVM, millions of TPS on GPUs for fuzzing and beyond",
+      "note_en": "09:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8255：补充安全注意事项",
+      "note": "与 ERC-6357：修正 delegatecall 提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1742",
+      "date": "2026-05-14",
+      "title_en": "ERC-8255: add to the security considerations",
+      "note_en": "And ERC-6357: fix delegatecall, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-6357：修正 delegatecall",
+      "note": "ERC-8255：补充安全注意事项 与 ERC-6357：修正 delegatecall 提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1743",
+      "date": "2026-05-14",
+      "title_en": "ERC-6357: fix delegatecall",
+      "note_en": "ERC-8255: add to the security considerations and ERC-6357: fix delegatecall, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereumfndn：Ethereum Security QF 资助轮即将结束",
+      "note": "23:57。",
+      "url": "https://x.com/ethereumfndn/status/2054969464387436576",
+      "date": "2026-05-14",
+      "title_en": "ethereumfndn: the Ethereum Security QF round is closing soon",
+      "note_en": "23:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：罗马一周的密码学见闻，从 Lean 4 形式化验证到量子计算的加速",
+      "note": "22:26。",
+      "url": "https://x.com/tcoratger/status/2054946539965985115",
+      "date": "2026-05-14",
+      "title_en": "tcoratger: a cryptography-focused week in Rome, from Lean 4 formal verification to the acceleration of quantum computing",
+      "note_en": "22:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：量子偏爱整洁的数学结构，STARK 建立在基于哈希的一侧",
+      "note": "14:30。",
+      "url": "https://x.com/StarkWareLtd/status/2054826547836751941",
+      "date": "2026-05-14",
+      "title_en": "StarkWare: quantum likes clean mathematical structure, and STARKs sit on the hash-based side",
+      "note_en": "14:30.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/closing-the-last-ux-gap-in-crypto-privacy-preserving-payments-to-email-phone-and-social-handles-rather-than-a-wallet-address/24874",
+    "credit": "ethresear.ch, Closing the Last UX Gap in Crypto (0xjasonw)",
+    "local_path": "assets/2026-05-14.jpg",
+    "credit_en": "ethresear.ch, Closing the Last UX Gap in Crypto (0xjasonw)"
+  },
+  "keywords_en": [
+    "fast finality plan edition 1",
+    "EIP-7851 moves to code-controlled delegation",
+    "execution layer reorg state retention window",
+    "private payments to email and social handles",
+    "ACDC #178"
+  ],
+  "summary_en": "benjaminion published Upgrading Finality, Edition 1 on the new EF Protocol consensus website, aiming to cut time to finality from about 1000 seconds to about 10. colinlyguo moved EIP-7851 away from the 7702 authorization marker path so that the delegated wallet code decides, and it was merged. nerolation's execution layer reorg state retention window EIP was merged. ethresear.ch discussed private payments to email addresses, phone numbers and social handles. ACDC #178 was held in the evening."
+}

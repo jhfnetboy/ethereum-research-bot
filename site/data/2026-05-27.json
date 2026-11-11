@@ -1,0 +1,209 @@
+{
+  "date": "2026-05-27",
+  "keywords": [
+    "Vitalik 呼吁软硬件附“信任营养标签”",
+    "EIP-2780 预编译目标与账户预热收费",
+    "EIP-8250 keyed nonce 改进讨论",
+    "多方区块构建",
+    "Sepolia 替换与退役",
+    "ZKPassport 加入 Aztec Labs"
+  ],
+  "summary": "Vitalik 提出理想情况下所有软硬件都应附“营养标签”，列出系统依赖的数学和哪些参与方的诚实行为。rakita 提交 EIP-2780 修改，把预编译作为交易目标时也按普通账户计量。Magicians 上有人结合 EVVM 的异步 nonce 经验提议改进 EIP-8250。parithosh 讨论替换并退役 Sepolia 测试网。",
+  "items": [
+    {
+      "topic": "交易与 gas：EIP-2780",
+      "title": "EIP-2780：预编译目标与账户预热收费调整",
+      "note": "（rakita）提交：作为 `tx.to` 的预编译与其他账户一样计量，取消“交易开始即预热、收费为零”的特殊规则等预编译例外。",
+      "url": "https://github.com/ethereum/EIPs/pull/11735",
+      "date": "2026-05-27",
+      "title_en": "EIP-2780: precompile target and account-warming charge changes",
+      "note_en": "(rakita), submitted: a precompile as `tx.to` is metered like any other account, removing carve-outs such as the \"warm at tx start, charged zero\" rule.",
+      "topic_en": "Transactions and gas: EIP-2780"
+    },
+    {
+      "topic": "交易与 gas：EIP-2780",
+      "title": "EIP-8146：更新 BAL sidecar 规范并与 ePBS 对齐",
+      "note": "（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11736",
+      "date": "2026-05-27",
+      "title_en": "EIP-8146: update the BAL sidecar spec and align with ePBS",
+      "note_en": "(nerolation), submitted and merged.",
+      "topic_en": "Transactions and gas: EIP-2780"
+    },
+    {
+      "topic": "账户：keyed nonce 与签名",
+      "title": "Magicians：借鉴 EVVM 异步 nonce 的经验改进 EIP-8250 keyed nonce",
+      "note": "23:35（ariutokintumi）。",
+      "url": "https://ethereum-magicians.org/t/async-nonces-on-evvm-experience-to-improve-eip-8250-keyed-nonces/28642",
+      "date": "2026-05-27",
+      "title_en": "Magicians: Async Nonces on EVVM, experience to improve EIP-8250 Keyed Nonces",
+      "note_en": "23:35 (ariutokintumi).",
+      "topic_en": "Accounts: keyed nonces and signatures"
+    },
+    {
+      "topic": "账户：keyed nonce 与签名",
+      "title": "ERC-7964：收紧签名编码规范",
+      "note": "（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1775",
+      "date": "2026-05-27",
+      "title_en": "ERC-7964: tight signature encoding spec",
+      "note_en": "(ernestognw), submitted and merged.",
+      "topic_en": "Accounts: keyed nonces and signatures"
+    },
+    {
+      "topic": "账户：keyed nonce 与签名",
+      "title": "StarkWare：在 Starknet 上从普通钱包升级到后量子安全钱包只需一键",
+      "note": "06:05。",
+      "url": "https://x.com/StarkWareLtd/status/2059410518331289957",
+      "date": "2026-05-27",
+      "title_en": "StarkWare: on Starknet, upgrading from a regular wallet to a post-quantum safe one will take one click",
+      "note_en": "06:05.",
+      "topic_en": "Accounts: keyed nonces and signatures"
+    },
+    {
+      "topic": "信任与隐私",
+      "title": "Vitalik：理想情况下所有软硬件都应附“营养标签”，完整列出信任依赖，即系统依赖哪些数学、哪些参与方在什么时间尺度上的诚实行为",
+      "note": "20:08。",
+      "url": "https://x.com/VitalikButerin/status/2059622765364207619",
+      "date": "2026-05-27",
+      "title_en": "Vitalik: ideally all software and hardware would have \"nutrition labels\" giving a full list of trust dependencies: what math and which actors' honest behavior, on what time scale, the system relies on",
+      "note_en": "20:08.",
+      "topic_en": "Trust and privacy"
+    },
+    {
+      "topic": "信任与隐私",
+      "title": "aztecnetwork：ZKPassport 加入 Aztec Labs，覆盖 130 多个国家，不上传也不存储数据",
+      "note": "23:44。",
+      "url": "https://x.com/aztecnetwork/status/2059677199012401300",
+      "date": "2026-05-27",
+      "title_en": "aztecnetwork: ZKPassport is joining Aztec Labs, covering 130+ countries with zero data uploaded or stored",
+      "note_en": "23:44.",
+      "topic_en": "Trust and privacy"
+    },
+    {
+      "topic": "信任与隐私",
+      "title": "ethresear.ch：迈向多方区块构建",
+      "note": "19:06（remosm 等）。",
+      "url": "https://ethresear.ch/t/building-towards-multi-party-block-construction/24975",
+      "date": "2026-05-27",
+      "title_en": "ethresear.ch: Building towards Multi-Party Block Construction",
+      "note_en": "19:06 (remosm and others).",
+      "topic_en": "Trust and privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：Sepolia 测试网替换与退役",
+      "note": "15:11（parithosh），预计明年年中 Sepolia 状态会大到难以低成本运行，计划启动一条经历所有阶段、到 2027 年第一季度追上最新分叉的新网络。",
+      "url": "https://ethereum-magicians.org/t/sepolia-testnet-replacement-sunsetting/28647",
+      "date": "2026-05-27",
+      "title_en": "Magicians: Sepolia testnet replacement and sunsetting",
+      "note_en": "15:11 (parithosh); Sepolia state is expected to become too big to run cheaply around mid next year, so a new network would go through every phase and reach the latest fork by Q1 2027.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：提议 EIP-8243 纳入 Hegotá",
+      "note": "（raulk）提交，将在 ACDC #179 介绍。",
+      "url": "https://github.com/ethereum/EIPs/pull/11734",
+      "date": "2026-05-27",
+      "title_en": "EIP-8081: propose EIP-8243 for inclusion in Hegotá",
+      "note_en": "(raulk), submitted, to be presented at ACDC #179.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：PeerDAS 提速 30%，内存降为四分之一",
+      "note": "22:47。",
+      "url": "https://ethresear.ch/t/peerdas-30-acceleration-for-4x-less-memory-usage/24978",
+      "date": "2026-05-27",
+      "title_en": "ethresear.ch: PeerDAS, 30% acceleration for 4x less memory usage",
+      "note_en": "22:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #81 议程",
+      "note": "23:50；Glamsterdam Repricings #8 议程 20:05；PQ Interop #41 议程 16:50。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-81-june-1-2026/28643",
+      "date": "2026-05-27",
+      "title_en": "ACDT #81 agenda",
+      "note_en": "23:50; Glamsterdam Repricings #8 agenda, 20:05; PQ Interop #41 agenda, 16:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #8 议程",
+      "note": "ACDT #81 议程 23:50；Glamsterdam Repricings #8 议程 20:05；PQ Interop #41 议程 16:50。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-8-may-27-2026/28640",
+      "date": "2026-05-27",
+      "title_en": "Glamsterdam Repricings #8 agenda",
+      "note_en": "ACDT #81 agenda, 23:50; Glamsterdam Repricings #8 agenda, 20:05; PQ Interop #41 agenda, 16:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #41 议程",
+      "note": "ACDT #81 议程 23:50；Glamsterdam Repricings #8 议程 20:05；PQ Interop #41 议程 16:50。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-41-may-27-2026/28635",
+      "date": "2026-05-27",
+      "title_en": "PQ Interop #41 agenda",
+      "note_en": "ACDT #81 agenda, 23:50; Glamsterdam Repricings #8 agenda, 20:05; PQ Interop #41 agenda, 16:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8277：持久身份代币",
+      "note": "23:35；EIP-8173 一组更新提交并合并，例如 更新引用。",
+      "url": "https://ethereum-magicians.org/t/erc-8277-persistent-identity-token-pip/28641",
+      "date": "2026-05-27",
+      "title_en": "ERC-8277: Persistent Identity Token",
+      "note_en": "23:35; a set of EIP-8173 updates, submitted and merged, such as updated references.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "更新引用",
+      "note": "ERC-8277：持久身份代币 23:35；EIP-8173 一组更新提交并合并，例如 更新引用。",
+      "url": "https://github.com/ethereum/EIPs/pull/11730",
+      "date": "2026-05-27",
+      "title_en": "updated references",
+      "note_en": "ERC-8277: Persistent Identity Token, 23:35; a set of EIP-8173 updates, submitted and merged, such as updated references.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：最近 DeFi 被攻击几乎每天都有，但大多数源于私钥泄露等操作安全失误",
+      "note": "19:08。",
+      "url": "https://x.com/LefterisJP/status/2059607711189233720",
+      "date": "2026-05-27",
+      "title_en": "LefterisJP: DeFi exploits are almost daily lately, but most stem from compromised keys and other opsec failures",
+      "note_en": "19:08.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：Zcash 动态手续费，改善体验并加强安全预算",
+      "note": "23:09。",
+      "url": "https://x.com/zooko/status/2059668411534454905",
+      "date": "2026-05-27",
+      "title_en": "zooko: Zcash dynamic fees, for better UX and a stronger security budget",
+      "note_en": "23:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/building-towards-multi-party-block-construction/24975",
+    "credit": "ethresear.ch, Building towards Multi-Party Block Construction (remosm)",
+    "local_path": "assets/2026-05-27.jpg",
+    "credit_en": "ethresear.ch, Building towards Multi-Party Block Construction (remosm)"
+  },
+  "keywords_en": [
+    "Vitalik calls for trust \"nutrition labels\" on software and hardware",
+    "EIP-2780 precompile target and account warming charges",
+    "improving EIP-8250 keyed nonces",
+    "multi-party block construction",
+    "Sepolia replacement and sunsetting",
+    "ZKPassport joins Aztec Labs"
+  ],
+  "summary_en": "Vitalik suggested that ideally all software and hardware would carry \"nutrition labels\" listing the math and the actors' honest behavior a system relies on. rakita submitted an EIP-2780 change that meters precompiles as transaction targets like any other account. A Magicians thread drew on EVVM's async nonce experience to propose improvements to EIP-8250. parithosh discussed replacing and sunsetting the Sepolia testnet."
+}

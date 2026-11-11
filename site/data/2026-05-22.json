@@ -1,0 +1,147 @@
+{
+  "date": "2026-05-22",
+  "keywords": [
+    "EIP-8141 外层交易加入签名列表",
+    "ERC-8211 智能批处理与 ERC-7683",
+    "glamsterdam-devnet-4 上线",
+    "Nym 混合网络",
+    "Ethereal news #24"
+  ],
+  "summary": "lightclient 为 EIP-8141 外层交易加入 signatures 字段并合并，目的是兼容未来的签名聚合，尤其是体积很大的后量子签名。barnabemonnot 阐述 ERC-8211 智能批处理与 ERC-7683 可编程 solver 如何分工。terencechain 宣布 glamsterdam-devnet-4 上线，包含更新后的 EIP-8037 状态创建 gas 参数。Ethereal news #24 发布。",
+  "items": [
+    {
+      "topic": "原生 AA：签名列表",
+      "title": "EIP-8141：外层交易加入签名列表",
+      "note": "（lightclient）合并。PR 说明：EIP-8141 的一个重要目标是向前兼容签名聚合，尤其是后量子签名；这类签名很大，用户开始迁移后聚合会变得非常重要，因此在外层交易对象中新增 `signatures` 字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/11481",
+      "date": "2026-05-22",
+      "title_en": "EIP-8141: add a signatures list to the outer tx",
+      "note_en": "(lightclient), merged. The PR explains that an important goal of 8141 is forward compatibility with signature aggregation, especially for PQ signatures; those signatures are large and aggregation may become very important as users migrate, so a `signatures` field is added to the outer transaction object.",
+      "topic_en": "Native AA: a signatures list"
+    },
+    {
+      "topic": "账户交易：智能批处理与 intent",
+      "title": "barnabemonnot：谈 ERC-8211 智能批处理与 ERC-7683 可编程 solver 的关系，一边是用户控制的执行，一边是 solver 控制的步骤，二者在基于 intent 的流动性转移中汇合",
+      "note": "19:30。",
+      "url": "https://x.com/barnabemonnot/status/2057801212011921529",
+      "date": "2026-05-22",
+      "title_en": "barnabemonnot: on ERC-8211 smart batching and ERC-7683 programmable solvers, user-controlled execution on one side and solver-controlled steps on the other, meeting in the middle for intent-based liquidity transfers",
+      "note_en": "19:30.",
+      "topic_en": "Account transactions: smart batching and intents"
+    },
+    {
+      "topic": "账户交易：智能批处理与 intent",
+      "title": "ERC-7930：为零长度地址定义“链标识符”术语",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1761",
+      "date": "2026-05-22",
+      "title_en": "ERC-7930: define the \"Chain Identifier\" term for zero-length-address IAs",
+      "note_en": "Submitted.",
+      "topic_en": "Account transactions: smart batching and intents"
+    },
+    {
+      "topic": "测试网与隐私网络",
+      "title": "terencechain：glamsterdam-devnet-4 上线，结合共识规范 alpha-8、bal-devnet-7 执行层功能和新的 Engine API targetGasLimit 路径，并包含更新后的 EIP-8037 状态创建 gas 参数",
+      "note": "21:20。",
+      "url": "https://x.com/terencechain/status/2057828882703917129",
+      "date": "2026-05-22",
+      "title_en": "terencechain: glamsterdam-devnet-4 is out, combining consensus-specs alpha-8, bal-devnet-7 EL features and the new Engine API targetGasLimit path, with the updated EIP-8037 state creation gas parameters",
+      "note_en": "21:20.",
+      "topic_en": "Devnets and privacy networks"
+    },
+    {
+      "topic": "测试网与隐私网络",
+      "title": "EIP-8163：移至 Review",
+      "note": "与 EIP-8246：移至 Review 合并；EIP-8081：加入 EIP-4758 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11569",
+      "date": "2026-05-22",
+      "title_en": "EIP-8163: move to Review",
+      "note_en": "And EIP-8246: move to Review, merged; EIP-8081: add EIP-4758, submitted.",
+      "topic_en": "Devnets and privacy networks"
+    },
+    {
+      "topic": "测试网与隐私网络",
+      "title": "EIP-8246：移至 Review",
+      "note": "EIP-8163：移至 Review 与 EIP-8246：移至 Review 合并；EIP-8081：加入 EIP-4758 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11626",
+      "date": "2026-05-22",
+      "title_en": "EIP-8246: move to Review",
+      "note_en": "EIP-8163: move to Review and EIP-8246: move to Review, merged; EIP-8081: add EIP-4758, submitted.",
+      "topic_en": "Devnets and privacy networks"
+    },
+    {
+      "topic": "测试网与隐私网络",
+      "title": "EIP-8081：加入 EIP-4758",
+      "note": "EIP-8163：移至 Review 与 EIP-8246：移至 Review 合并；EIP-8081：加入 EIP-4758 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11724",
+      "date": "2026-05-22",
+      "title_en": "EIP-8081: add EIP-4758",
+      "note_en": "EIP-8163: move to Review and EIP-8246: move to Review, merged; EIP-8081: add EIP-4758, submitted.",
+      "topic_en": "Devnets and privacy networks"
+    },
+    {
+      "topic": "测试网与隐私网络",
+      "title": "zooko：看好 Nym，混合网络是互联网的基础安全升级，Shielded Labs 已让 Crosslink 原型在 Nym 上部分跑通",
+      "note": "02:03。",
+      "url": "https://x.com/zooko/status/2057537694109184395",
+      "date": "2026-05-22",
+      "title_en": "zooko: excited about Nym; mixnets are a fundamental security upgrade for the internet, and Shielded Labs got the Crosslink prototype semi-working over Nym",
+      "note_en": "02:03.",
+      "topic_en": "Devnets and privacy networks"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EtherealnewsHQ：Ethereal news weekly #24，Devcon 8 早鸟票、ApeWorX collective、glamsterdam-devnet-4 上线",
+      "note": "20:17。",
+      "url": "https://x.com/EtherealnewsHQ/status/2057813185730920829",
+      "date": "2026-05-22",
+      "title_en": "EtherealnewsHQ: Ethereal news weekly #24, with Devcon 8 early bird tickets, the ApeWorX collective and glamsterdam-devnet-4",
+      "note_en": "20:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet 将在 2029 年之前实现端到端后量子安全，大部分工作已完成",
+      "note": "20:06。",
+      "url": "https://x.com/StarkWareLtd/status/2057810346966909170",
+      "date": "2026-05-22",
+      "title_en": "StarkWare: Starknet will be end-to-end post-quantum secure well before 2029, with most of the work already done",
+      "note_en": "20:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-EMBER：从闭源到开源软件的资助合约标准",
+      "note": "06:22。",
+      "url": "https://ethereum-magicians.org/t/erc-ember-a-funding-contract-standard-for-close-source-to-open-source-software/28592",
+      "date": "2026-05-22",
+      "title_en": "ERC-EMBER: a funding contract standard for closed source to open source software",
+      "note_en": "06:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EtherealnewsHQ：#23 点击最多的链接，pcaversaccio 的压缩包仓库攻击居首",
+      "note": "06:04。",
+      "url": "https://x.com/EtherealnewsHQ/status/2057598314787549314",
+      "date": "2026-05-22",
+      "title_en": "EtherealnewsHQ: top links clicked in #23, led by pcaversaccio's zipped repo attack",
+      "note_en": "06:04.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/barnabemonnot/status/2057801212011921529",
+    "credit": "X, barnabemonnot",
+    "local_path": "assets/2026-05-22.jpg",
+    "credit_en": "X, barnabemonnot"
+  },
+  "keywords_en": [
+    "EIP-8141 adds a signatures list to the outer tx",
+    "ERC-8211 smart batching and ERC-7683",
+    "glamsterdam-devnet-4 launches",
+    "Nym mixnets",
+    "Ethereal news #24"
+  ],
+  "summary_en": "lightclient added a signatures field to the EIP-8141 outer transaction, merged, to stay compatible with future signature aggregation, especially for large post-quantum signatures. barnabemonnot laid out how ERC-8211 smart batching and ERC-7683 programmable solvers divide the work. terencechain announced glamsterdam-devnet-4, which includes the updated EIP-8037 state creation gas parameters. Ethereal news #24 was published."
+}

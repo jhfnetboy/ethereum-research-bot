@@ -1,0 +1,187 @@
+{
+  "date": "2026-05-23",
+  "keywords": [
+    "EIP-8261 gas limit 排期合并",
+    "EIP-8266 过期 nonce 合并",
+    "EIP-8268 存储根合并",
+    "限制每区块存款请求数",
+    "AetherWeave 质押支持的节点发现"
+  ],
+  "summary": "周六 EIPs 仓库集中合并：EIP-8261 gas limit 排期、EIP-8266 frame 交易的过期 nonce、EIP-8268 区块访问列表中的存储根，以及把每个执行层区块的存款请求上限设为 8192 的新 EIP。ethresear.ch 提出 AetherWeave，用质押绑定网络身份来抵御日蚀和 Sybil 攻击。",
+  "items": [
+    {
+      "topic": "账户与交易",
+      "title": "新 EIP：frame 交易的过期 nonce",
+      "note": "（nerolation）合并，即 EIP-8266。",
+      "url": "https://github.com/ethereum/EIPs/pull/11692",
+      "date": "2026-05-23",
+      "title_en": "New EIP: Expiring Nonces for Frame Transactions",
+      "note_en": "(nerolation), merged as EIP-8266.",
+      "topic_en": "Accounts and transactions"
+    },
+    {
+      "topic": "账户与交易",
+      "title": "新 EIP：Gas Limit Schedule",
+      "note": "（barnabasbusa）合并，即 EIP-8261。",
+      "url": "https://github.com/ethereum/EIPs/pull/11644",
+      "date": "2026-05-23",
+      "title_en": "New EIP: Gas Limit Schedule",
+      "note_en": "(barnabasbusa), merged as EIP-8261.",
+      "topic_en": "Accounts and transactions"
+    },
+    {
+      "topic": "账户与交易",
+      "title": "EIP-7928：EXTCODECOPY 加入 GAS_COPY",
+      "note": "合并；EIP-8038：加入 state_access_gas_reservoir 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11718",
+      "date": "2026-05-23",
+      "title_en": "EIP-7928: add GAS_COPY to EXTCODECOPY",
+      "note_en": "Merged; EIP-8038: add state_access_gas_reservoir, submitted.",
+      "topic_en": "Accounts and transactions"
+    },
+    {
+      "topic": "账户与交易",
+      "title": "EIP-8038：加入 state_access_gas_reservoir",
+      "note": "EIP-7928：EXTCODECOPY 加入 GAS_COPY 合并；EIP-8038：加入 state_access_gas_reservoir 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11725",
+      "date": "2026-05-23",
+      "title_en": "EIP-8038: add state_access_gas_reservoir",
+      "note_en": "EIP-7928: add GAS_COPY to EXTCODECOPY, merged; EIP-8038: add state_access_gas_reservoir, submitted.",
+      "topic_en": "Accounts and transactions"
+    },
+    {
+      "topic": "状态与共识",
+      "title": "新 EIP：区块访问列表中的存储根",
+      "note": "（CPerezz）合并，即 EIP-8268。",
+      "url": "https://github.com/ethereum/EIPs/pull/11716",
+      "date": "2026-05-23",
+      "title_en": "New EIP: Storage Roots in Block Access Lists",
+      "note_en": "(CPerezz), merged as EIP-8268.",
+      "topic_en": "State and consensus"
+    },
+    {
+      "topic": "状态与共识",
+      "title": "新 EIP：限制每区块存款请求数",
+      "note": "（barnabasbusa）合并，上限 `MAX_DEPOSIT_REQUESTS_PER_BLOCK = 8192`，与共识层 SSZ 上限一致，第 8193 个请求会让共识层解码失败，实测约在 1.93 亿 gas 时触发。",
+      "url": "https://github.com/ethereum/EIPs/pull/11607",
+      "date": "2026-05-23",
+      "title_en": "New EIP: Cap Deposit Requests Per Block",
+      "note_en": "(barnabasbusa), merged, with `MAX_DEPOSIT_REQUESTS_PER_BLOCK = 8192` matching the consensus layer SSZ bound; an 8193rd request breaks CL decoding, observed empirically at about 193M gas.",
+      "topic_en": "State and consensus"
+    },
+    {
+      "topic": "状态与共识",
+      "title": "加入 EIP-8188",
+      "note": "EIP-8081 Hegotá 元 EIP：加入 EIP-8188 与 加入 EIP-4758 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11722",
+      "date": "2026-05-23",
+      "title_en": "add EIP-8188",
+      "note_en": "EIP-8081 Hegotá meta EIP: add EIP-8188 and add EIP-4758, merged.",
+      "topic_en": "State and consensus"
+    },
+    {
+      "topic": "状态与共识",
+      "title": "加入 EIP-4758",
+      "note": "EIP-8081 Hegotá 元 EIP：加入 EIP-8188 与 加入 EIP-4758 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11724",
+      "date": "2026-05-23",
+      "title_en": "add EIP-4758",
+      "note_en": "EIP-8081 Hegotá meta EIP: add EIP-8188 and add EIP-4758, merged.",
+      "topic_en": "State and consensus"
+    },
+    {
+      "topic": "网络层",
+      "title": "ethresear.ch：AetherWeave，以太坊的质押支持节点发现",
+      "note": "01:12（Kaya Alpturer、Constantine Doumanidis、Aviv Zohar）：共识层让身份昂贵，节点发现层却仍视网络身份为廉价，节点在共识开始前就暴露于日蚀和 Sybil 攻击。",
+      "url": "https://ethresear.ch/t/aetherweave-stake-backed-peer-discovery-for-ethereum/24927",
+      "date": "2026-05-23",
+      "title_en": "ethresear.ch: AetherWeave, stake-backed peer discovery for Ethereum",
+      "note_en": "01:12 (Kaya Alpturer, Constantine Doumanidis, Aviv Zohar): the consensus layer makes identities expensive, but peer discovery still treats network identities as cheap, leaving nodes exposed to eclipse and Sybil attacks before consensus even begins.",
+      "topic_en": "Networking"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：Stateful Fungible Token",
+      "note": "提交；ERC-8270：Canonical Validator Wrapper 22:34，对应 ERCs #1766 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1762",
+      "date": "2026-05-23",
+      "title_en": "New ERC: Stateful Fungible Token",
+      "note_en": "Submitted; ERC-8270: Canonical Validator Wrapper, 22:34, with ERCs #1766 submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8270：Canonical Validator Wrapper",
+      "note": "新 ERC：Stateful Fungible Token 提交；ERC-8270：Canonical Validator Wrapper 22:34，对应 ERCs #1766 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8270-canonical-validator-wrapper/28599",
+      "date": "2026-05-23",
+      "title_en": "ERC-8270: Canonical Validator Wrapper",
+      "note_en": "New ERC: Stateful Fungible Token, submitted; ERC-8270: Canonical Validator Wrapper, 22:34, with ERCs #1766 submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs #1766",
+      "note": "新 ERC：Stateful Fungible Token 提交；ERC-8270：Canonical Validator Wrapper 22:34，对应 ERCs #1766 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1766",
+      "date": "2026-05-23",
+      "title_en": "ERCs #1766",
+      "note_en": "New ERC: Stateful Fungible Token, submitted; ERC-8270: Canonical Validator Wrapper, 22:34, with ERCs #1766 submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-5516：更新",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1764",
+      "date": "2026-05-23",
+      "title_en": "ERC-5516: update",
+      "note_en": "Submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #238 议程",
+      "note": "03:42。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-238-june-4-2026/28596",
+      "date": "2026-05-23",
+      "title_en": "ACDE #238 agenda",
+      "note_en": "03:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zooko：Zcash 第 7 次网络升级的候选测试网上线",
+      "note": "08:29。",
+      "url": "https://x.com/zooko/status/2057997292968550686",
+      "date": "2026-05-23",
+      "title_en": "zooko: an upgrade candidate testnet for Zcash Network Upgrade 7",
+      "note_en": "08:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：正在用抗量子基础设施加密市场",
+      "note": "19:02。",
+      "url": "https://x.com/StarkWareLtd/status/2058156541954441721",
+      "date": "2026-05-23",
+      "title_en": "StarkWare: encrypting markets with quantum-resistant infrastructure",
+      "note_en": "19:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/aetherweave-stake-backed-peer-discovery-for-ethereum/24927",
+    "credit": "ethresear.ch, AetherWeave: stake-backed peer discovery for Ethereum (kalpturer)",
+    "local_path": "assets/2026-05-23.jpg",
+    "credit_en": "ethresear.ch, AetherWeave: stake-backed peer discovery for Ethereum (kalpturer)"
+  },
+  "keywords_en": [
+    "EIP-8261 gas limit schedule merged",
+    "EIP-8266 expiring nonces merged",
+    "EIP-8268 storage roots merged",
+    "capping deposit requests per block",
+    "AetherWeave stake-backed peer discovery"
+  ],
+  "summary_en": "A Saturday of merges in the EIPs repo: EIP-8261 gas limit schedule, EIP-8266 expiring nonces for frame transactions, EIP-8268 storage roots in block access lists, and a new EIP capping deposit requests per execution layer block at 8192. ethresear.ch proposed AetherWeave, which ties network identity to stake to resist eclipse and Sybil attacks."
+}

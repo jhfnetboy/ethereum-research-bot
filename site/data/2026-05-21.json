@@ -1,0 +1,227 @@
+{
+  "date": "2026-05-21",
+  "keywords": [
+    "ACDE #237 提议 EIP-8182 私密转账进入 Hegotá",
+    "EIP-8037 改进 7702 授权的 gas 记账",
+    "EIP-8268 区块访问列表附带存储根",
+    "EIP-7954 合约上限 64KiB 合并",
+    "PSE 客户端私密支付设计"
+  ],
+  "summary": "ACDE #237 上，EIP-8182 私密 ETH 与 ERC-20 转账、EIP-8188 按写入时间分层状态、EIP-4758 停用 SELFDESTRUCT 被提议作为 Hegotá 非头条功能。rjl493456442 提交 EIP-8037 修改，让 7702 授权的状态 gas 按净状态变化收取。CPerezz 提交 EIP-8268，在区块访问列表里附带存储根。EIP-7954 把合约代码上限提高到 64KiB 并合并。",
+  "items": [
+    {
+      "topic": "ACDE #237 与 Hegotá",
+      "title": "EIP-8081：把上次 ACDE 和 ACDC 介绍过的 EIP-7709、EIP-8025 列为提议纳入",
+      "note": "（jsign）提交；加入 EIP-8253 与 加入 EIP-8188 提交。EIP-8081 是 Hegotá 的硬分叉元 EIP。",
+      "url": "https://github.com/ethereum/EIPs/pull/11720",
+      "date": "2026-05-21",
+      "title_en": "EIP-8081: add EIP-7709 and EIP-8025 as proposed for inclusion, after they were presented at the last ACDE and ACDC",
+      "note_en": "(jsign), submitted; add EIP-8253 and add EIP-8188, submitted. EIP-8081 is the Hegotá hardfork meta EIP.",
+      "topic_en": "ACDE #237 and Hegotá"
+    },
+    {
+      "topic": "ACDE #237 与 Hegotá",
+      "title": "加入 EIP-8253",
+      "note": "EIP-8081：把上次 ACDE 和 ACDC 介绍过的 EIP-7709、EIP-8025 列为提议纳入（jsign）提交；加入 EIP-8253 与 加入 EIP-8188 提交。EIP-8081 是 Hegotá 的硬分叉元 EIP。",
+      "url": "https://github.com/ethereum/EIPs/pull/11721",
+      "date": "2026-05-21",
+      "title_en": "add EIP-8253",
+      "note_en": "EIP-8081: add EIP-7709 and EIP-8025 as proposed for inclusion, after they were presented at the last ACDE and ACDC (jsign), submitted; add EIP-8253 and add EIP-8188, submitted. EIP-8081 is the Hegotá hardfork meta EIP.",
+      "topic_en": "ACDE #237 and Hegotá"
+    },
+    {
+      "topic": "ACDE #237 与 Hegotá",
+      "title": "加入 EIP-8188",
+      "note": "EIP-8081：把上次 ACDE 和 ACDC 介绍过的 EIP-7709、EIP-8025 列为提议纳入（jsign）提交；加入 EIP-8253 与 加入 EIP-8188 提交。EIP-8081 是 Hegotá 的硬分叉元 EIP。",
+      "url": "https://github.com/ethereum/EIPs/pull/11722",
+      "date": "2026-05-21",
+      "title_en": "add EIP-8188",
+      "note_en": "EIP-8081: add EIP-7709 and EIP-8025 as proposed for inclusion, after they were presented at the last ACDE and ACDC (jsign), submitted; add EIP-8253 and add EIP-8188, submitted. EIP-8081 is the Hegotá hardfork meta EIP.",
+      "topic_en": "ACDE #237 and Hegotá"
+    },
+    {
+      "topic": "ACDE #237 与 Hegotá",
+      "title": "EIP-7773：把 PFI 移到 DFI 之上",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11712",
+      "date": "2026-05-21",
+      "title_en": "EIP-7773: move PFI above DFI",
+      "note_en": "Submitted and merged.",
+      "topic_en": "ACDE #237 and Hegotá"
+    },
+    {
+      "topic": "交易与 gas：7702 授权与合约大小",
+      "title": "EIP-8037：改进 EIP-7702 授权的 gas 记账",
+      "note": "（rjl493456442）提交，覆盖同一交易内取消授权等边缘情况，状态 gas 按授权带来的净状态变化收取，清除已有授权的情况有意不退款。",
+      "url": "https://github.com/ethereum/EIPs/pull/11715",
+      "date": "2026-05-21",
+      "title_en": "EIP-8037: improve EIP-7702 authorization gas accounting",
+      "note_en": "(rjl493456442), submitted, covering corner cases such as cancelling an authorization within the same transaction; state gas follows the net state change introduced by authorizations, except that clearing a pre-existing authorization is intentionally not refunded.",
+      "topic_en": "Transactions and gas: 7702 authorizations and contract size"
+    },
+    {
+      "topic": "交易与 gas：7702 授权与合约大小",
+      "title": "EIP-7954：把合约代码上限提高到 64KiB",
+      "note": "（Giulio2002）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11540",
+      "date": "2026-05-21",
+      "title_en": "EIP-7954: raise contract code size to 64KiB",
+      "note_en": "(Giulio2002), merged.",
+      "topic_en": "Transactions and gas: 7702 authorizations and contract size"
+    },
+    {
+      "topic": "交易与 gas：7702 授权与合约大小",
+      "title": "新 EIP：升级 Spurious Dragon 之前的账户",
+      "note": "（jochem-brouwer）合并，作为 EIP-7610 的替代，把这类账户转换为如同在 Spurious Dragon 之后创建的账户；EIP-8253：修改标题 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11605",
+      "date": "2026-05-21",
+      "title_en": "New EIP: Upgrade pre-Spurious-Dragon accounts",
+      "note_en": "(jochem-brouwer), merged, an alternative to EIP-7610 that converts such accounts as if they had been created after Spurious Dragon; EIP-8253: edit title, submitted and merged.",
+      "topic_en": "Transactions and gas: 7702 authorizations and contract size"
+    },
+    {
+      "topic": "交易与 gas：7702 授权与合约大小",
+      "title": "EIP-8253：修改标题",
+      "note": "新 EIP：升级 Spurious Dragon 之前的账户（jochem-brouwer）合并，作为 EIP-7610 的替代，把这类账户转换为如同在 Spurious Dragon 之后创建的账户；EIP-8253：修改标题 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11713",
+      "date": "2026-05-21",
+      "title_en": "EIP-8253: edit title",
+      "note_en": "New EIP: Upgrade pre-Spurious-Dragon accounts (jochem-brouwer), merged, an alternative to EIP-7610 that converts such accounts as if they had been created after Spurious Dragon; EIP-8253: edit title, submitted and merged.",
+      "topic_en": "Transactions and gas: 7702 authorizations and contract size"
+    },
+    {
+      "topic": "交易与 gas：7702 授权与合约大小",
+      "title": "EIP-7928：澄清 CREATE 的记录与存储空操作的处理",
+      "note": "提交并合并；EIP-7928：澄清 7702 gas 不足的边缘情况 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11717",
+      "date": "2026-05-21",
+      "title_en": "EIP-7928: clarify CREATE inclusion and storage no-op handling",
+      "note_en": "Submitted and merged; EIP-7928: clarify the 7702 insufficient gas edge case, merged.",
+      "topic_en": "Transactions and gas: 7702 authorizations and contract size"
+    },
+    {
+      "topic": "交易与 gas：7702 授权与合约大小",
+      "title": "EIP-7928：澄清 7702 gas 不足的边缘情况",
+      "note": "EIP-7928：澄清 CREATE 的记录与存储空操作的处理 提交并合并；EIP-7928：澄清 7702 gas 不足的边缘情况 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11699",
+      "date": "2026-05-21",
+      "title_en": "EIP-7928: clarify the 7702 insufficient gas edge case",
+      "note_en": "EIP-7928: clarify CREATE inclusion and storage no-op handling, submitted and merged; EIP-7928: clarify the 7702 insufficient gas edge case, merged.",
+      "topic_en": "Transactions and gas: 7702 authorizations and contract size"
+    },
+    {
+      "topic": "状态与数据",
+      "title": "新 EIP：区块访问列表中的存储根",
+      "note": "（CPerezz）提交，即 EIP-8268；讨论帖 15:29：在每个记录状态修改的 BAL 条目附上区块后的存储树根，部分状态节点不保存完整存储树也能验证状态根。",
+      "url": "https://github.com/ethereum/EIPs/pull/11716",
+      "date": "2026-05-21",
+      "title_en": "New EIP: Storage Roots in Block Access Lists",
+      "note_en": "(CPerezz), submitted as EIP-8268; discussion thread, 15:29: every BAL entry that records state modifications carries the post-block storage trie root, so partially stateful nodes can verify the state root without holding full storage tries.",
+      "topic_en": "State and data"
+    },
+    {
+      "topic": "状态与数据",
+      "title": "讨论帖",
+      "note": "新 EIP：区块访问列表中的存储根（CPerezz）提交，即 EIP-8268；讨论帖 15:29：在每个记录状态修改的 BAL 条目附上区块后的存储树根，部分状态节点不保存完整存储树也能验证状态根。",
+      "url": "https://ethereum-magicians.org/t/eip-8268-storage-roots-in-block-access-lists/28585",
+      "date": "2026-05-21",
+      "title_en": "discussion thread",
+      "note_en": "New EIP: Storage Roots in Block Access Lists (CPerezz), submitted as EIP-8268; discussion thread, 15:29: every BAL entry that records state modifications carries the post-block storage trie root, so partially stateful nodes can verify the state root without holding full storage tries.",
+      "topic_en": "State and data"
+    },
+    {
+      "topic": "状态与数据",
+      "title": "EIP-8256：blob 流式传输",
+      "note": "20:36，固化限速的 blob 数据预传播。",
+      "url": "https://ethereum-magicians.org/t/eip-8256-blob-streaming/28586",
+      "date": "2026-05-21",
+      "title_en": "EIP-8256: Blob streaming",
+      "note_en": "20:36, enshrining rate-limited blob data pre-propagation.",
+      "topic_en": "State and data"
+    },
+    {
+      "topic": "其他动态",
+      "title": "AndyGuzmanEth：PSE 上周的进展，新的客户端私密支付设计、zkVM 探索、Proxy TLS、ERC-8004 的隐私层 ACTA",
+      "note": "04:28。",
+      "url": "https://x.com/AndyGuzmanEth/status/2057211975793623324",
+      "date": "2026-05-21",
+      "title_en": "AndyGuzmanEth: last week at PSE, a new client-side private payment design, zkVM exploration, Proxy TLS and ACTA, a privacy layer for ERC-8004",
+      "note_en": "04:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zooko：金融隐私基金会发布透明度更新",
+      "note": "20:13。",
+      "url": "https://x.com/zooko/status/2057449628224848246",
+      "date": "2026-05-21",
+      "title_en": "zooko: a transparency update from the Financial Privacy Foundation",
+      "note_en": "20:13.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EtherealnewsHQ：EIP-8261 gas limit 排期",
+      "note": "07:17。",
+      "url": "https://x.com/EtherealnewsHQ/status/2057254321830699323",
+      "date": "2026-05-21",
+      "title_en": "EtherealnewsHQ: EIP-8261 gas limit schedule",
+      "note_en": "07:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：Agent Tool Registry",
+      "note": "合并；ERC-8264：AI 代理记忆访问权限 14:30。",
+      "url": "https://github.com/ethereum/ERCs/pull/1723",
+      "date": "2026-05-21",
+      "title_en": "New ERC: Agent Tool Registry",
+      "note_en": "Merged; ERC-8264: AI Agent Memory Access Rights, 14:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8264：AI 代理记忆访问权限",
+      "note": "新 ERC：Agent Tool Registry 合并；ERC-8264：AI 代理记忆访问权限 14:30。",
+      "url": "https://ethereum-magicians.org/t/erc-8264-ai-agent-memory-access-rights/28584",
+      "date": "2026-05-21",
+      "title_en": "ERC-8264: AI Agent Memory Access Rights",
+      "note_en": "New ERC: Agent Tool Registry, merged; ERC-8264: AI Agent Memory Access Rights, 14:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "potuz：对 EF 人员流失的看法，认为这波离开令人担忧",
+      "note": "02:15。",
+      "url": "https://x.com/potuz_eth/status/2057178524545413581",
+      "date": "2026-05-21",
+      "title_en": "potuz: his view on the situation at the EF, finding the exodus alarming",
+      "note_en": "02:15.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：构建后量子安全方案很重要，那么如何保证能轻松迁移过去",
+      "note": "21:45。",
+      "url": "https://x.com/EliBenSasson/status/2057472839926641039",
+      "date": "2026-05-21",
+      "title_en": "Eli Ben-Sasson: building post-quantum secure solutions matters, but what about an easy way to migrate to them",
+      "note_en": "21:45.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8268-storage-roots-in-block-access-lists/28585",
+    "credit": "Ethereum Magicians, EIP-8268: Storage roots in Block Access Lists (CPerezz)",
+    "local_path": "assets/2026-05-21.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8268: Storage roots in Block Access Lists (CPerezz)"
+  },
+  "keywords_en": [
+    "ACDE #237 proposes EIP-8182 private transfers for Hegotá",
+    "EIP-8037 improves gas accounting for 7702 authorizations",
+    "EIP-8268 storage roots in block access lists",
+    "EIP-7954 64KiB contract limit merged",
+    "PSE client-side private payment design"
+  ],
+  "summary_en": "On ACDE #237, EIP-8182 private ETH and ERC-20 transfers, EIP-8188 state tiering by write age and EIP-4758 deactivate SELFDESTRUCT were proposed as Hegotá non-headliners. rjl493456442 submitted an EIP-8037 change that charges 7702 authorization state gas by net state change. CPerezz submitted EIP-8268, attaching storage roots to block access lists. EIP-7954 raised the contract code limit to 64KiB, and it was merged."
+}

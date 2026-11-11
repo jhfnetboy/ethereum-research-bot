@@ -1,0 +1,113 @@
+{
+  "date": "2026-05-16",
+  "keywords": [
+    "ERC-8262 零知识合规预言机",
+    "Q-Day 时间线提前",
+    "FOCIL Breakout #34"
+  ],
+  "summary": "周六较安静。ERC-8262 零知识合规预言机提交，用户在交易时用零知识证明满足特定司法辖区的合规要求，而不暴露身份。tcoratger 解读 Justin Drake 关于量子威胁的报告，认为 2032 年前出现可破解密码的量子计算机的概率明显上升。",
+  "items": [
+    {
+      "topic": "隐私与合规",
+      "title": "ERC-8262：零知识合规预言机",
+      "note": "07:32（Hydepwns），对应 ERCs #1747 提交：用户在交易时用证明表明符合特定司法辖区的要求，不暴露身份、不依赖 TEE 或可信第三方，监管方只检查证明，看不到交易本身。",
+      "url": "https://ethereum-magicians.org/t/erc-8262-zero-knowledge-compliance-oracle/28543",
+      "date": "2026-05-16",
+      "title_en": "ERC-8262: Zero-Knowledge Compliance Oracle",
+      "note_en": "07:32 (Hydepwns), with ERCs #1747 submitted: users prove at transaction time that they meet a jurisdiction's requirements, with no identity revealed, no TEE and no trusted third party; a regulator checks the proof and never sees the trade.",
+      "topic_en": "Privacy and compliance"
+    },
+    {
+      "topic": "隐私与合规",
+      "title": "ERCs #1747",
+      "note": "ERC-8262：零知识合规预言机 07:32（Hydepwns），对应 ERCs #1747 提交：用户在交易时用证明表明符合特定司法辖区的要求，不暴露身份、不依赖 TEE 或可信第三方，监管方只检查证明，看不到交易本身。",
+      "url": "https://github.com/ethereum/ERCs/pull/1747",
+      "date": "2026-05-16",
+      "title_en": "ERCs #1747",
+      "note_en": "ERC-8262: Zero-Knowledge Compliance Oracle, 07:32 (Hydepwns), with ERCs #1747 submitted: users prove at transaction time that they meet a jurisdiction's requirements, with no identity revealed, no TEE and no trusted third party; a regulator checks the proof and never sees the trade.",
+      "topic_en": "Privacy and compliance"
+    },
+    {
+      "topic": "隐私与合规",
+      "title": "colludingnode：建造量子安全的透明池是浪费开发者时间，应该逐步淘汰，专注于屏蔽池",
+      "note": "23:43。",
+      "url": "https://x.com/colludingnode/status/2055690572132745694",
+      "date": "2026-05-16",
+      "title_en": "colludingnode: building a quantum-safe transparent pool is a waste of devs' time; sunset it and focus on the shielded pool",
+      "note_en": "23:43.",
+      "topic_en": "Privacy and compliance"
+    },
+    {
+      "topic": "后量子",
+      "title": "tcoratger：Q-Day 时间线正在提前，2032 年前出现能破解区块链密码的量子计算机的概率大幅上升，并解读 drakefjustin 在 zkproof 上的报告",
+      "note": "05:47。",
+      "url": "https://x.com/tcoratger/status/2055419743675253020",
+      "date": "2026-05-16",
+      "title_en": "tcoratger: the Q-Day timeline is accelerating, and the probability of a quantum computer breaking blockchain cryptography by 2032 has shot up, with a breakdown of drakefjustin's zkproof presentation",
+      "note_en": "05:47.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8173：加入名称与机制示例",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11679",
+      "date": "2026-05-16",
+      "title_en": "EIP-8173: examples of names and mechanisms",
+      "note_en": "Submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：AI 代理的链上证明层",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1748",
+      "date": "2026-05-16",
+      "title_en": "New ERC: Onchain Proof Layer for AI Agents",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #34 议程",
+      "note": "15:14。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-34-may-19-2026/28544",
+      "date": "2026-05-16",
+      "title_en": "FOCIL Breakout #34 agenda",
+      "note_en": "15:14.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EFDevcon：Devcon 11 月在孟买，开源、隐私、安全、抗审查、抗捕获",
+      "note": "21:00。",
+      "url": "https://x.com/EFDevcon/status/2055649469203390691",
+      "date": "2026-05-16",
+      "title_en": "EFDevcon: Devcon in Mumbai this November, for open source, privacy, security, censorship resistance and capture resistance",
+      "note_en": "21:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trent_vanepps：DAO 没有死，只是名字不好，需要成熟",
+      "note": "02:47。",
+      "url": "https://x.com/trent_vanepps/status/2055374578461905010",
+      "date": "2026-05-16",
+      "title_en": "trent_vanepps: DAOs are not dead, just poorly named and in need of maturation",
+      "note_en": "02:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8262-zero-knowledge-compliance-oracle/28543",
+    "credit": "Ethereum Magicians, ERC-8262: Zero-Knowledge Compliance Oracle (Hydepwns)",
+    "local_path": "assets/2026-05-16.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8262: Zero-Knowledge Compliance Oracle (Hydepwns)"
+  },
+  "keywords_en": [
+    "ERC-8262 zero-knowledge compliance oracle",
+    "Q-Day timeline accelerating",
+    "FOCIL Breakout #34"
+  ],
+  "summary_en": "A quiet Saturday. ERC-8262, a zero-knowledge compliance oracle, was submitted: users prove at transaction time that they meet a jurisdiction's compliance rules without revealing identity. tcoratger broke down Justin Drake's presentation on the quantum threat, arguing the probability of a cryptographically relevant quantum computer before 2032 has risen sharply."
+}

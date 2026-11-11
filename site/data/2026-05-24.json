@@ -1,0 +1,105 @@
+{
+  "date": "2026-05-24",
+  "keywords": [
+    "Vitalik 谈 EF 的方向",
+    "Zcash 与 Starknet 隐私对比",
+    "隐私协议缺少 L2BEAT 式评估",
+    "后量子迁移路径"
+  ],
+  "summary": "周日安静。Vitalik 发长文谈他对以太坊基金会走向的个人看法，强调董事会不只他一人，转型主要由 aerugoettinea 执行。Eli Ben-Sasson 对比 Zcash 与 Starknet 的隐私取舍。donnoh_eth 感叹隐私领域还缺一个像 L2BEAT 那样的评估平台，两天后 L2BEAT 上线了隐私页面。",
+  "items": [
+    {
+      "topic": "以太坊基金会",
+      "title": "Vitalik：对 EF 走向的一些个人看法，董事会不只他一人，他没有其他董事没有的特殊权力，转型主要由 aerugoettinea 执行",
+      "note": "23:19。",
+      "url": "https://x.com/VitalikButerin/status/2058583593102844111",
+      "date": "2026-05-24",
+      "title_en": "Vitalik: some of his perspective on where the EF is going; the board is not just him, he has no special powers other board members lack, and aerugoettinea is executing much of the transition",
+      "note_en": "23:19.",
+      "topic_en": "The Ethereum Foundation"
+    },
+    {
+      "topic": "隐私",
+      "title": "Eli Ben-Sasson：Zcash 与 Starknet 的隐私对比，他联合创办了这两个项目，各自提供不同的东西",
+      "note": "19:09。",
+      "url": "https://x.com/EliBenSasson/status/2058520683013922816",
+      "date": "2026-05-24",
+      "title_en": "Eli Ben-Sasson: a privacy comparison of Zcash and Starknet, two ZK projects he co-founded, each offering something different",
+      "note_en": "19:09.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "donnoh_eth：真希望有一个隐私领域的 L2BEAT",
+      "note": "16:31。",
+      "url": "https://x.com/donnoh_eth/status/2058480906386526260",
+      "date": "2026-05-24",
+      "title_en": "donnoh_eth: wishing there was an L2BEAT for privacy",
+      "note_en": "16:31.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "Eli Ben-Sasson：最好的隐私方案会来自 DeFi，缺乏隐私是 DeFi 普及的障碍",
+      "note": "21:08。",
+      "url": "https://x.com/EliBenSasson/status/2058550697373671713",
+      "date": "2026-05-24",
+      "title_en": "Eli Ben-Sasson: the best privacy solutions will come from DeFi, because DeFi's lack of privacy blocks adoption",
+      "note_en": "21:08.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "后量子",
+      "title": "Eli Ben-Sasson：问题不只是要不要迁移到后量子版本，还有如何迁移，为演进而设计的系统迁移时扰动最小",
+      "note": "12:17。",
+      "url": "https://x.com/EliBenSasson/status/2058417139543921112",
+      "date": "2026-05-24",
+      "title_en": "Eli Ben-Sasson: the question is not only whether to migrate to post-quantum versions but how, and systems built to evolve migrate with minimal disruption",
+      "note_en": "12:17.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：Non-Fungible Multi-Token ownerOf",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1767",
+      "date": "2026-05-24",
+      "title_en": "New ERC: Non-Fungible Multi-Token ownerOf",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：协调会自我挫败，多样性加权拜占庭容错的结构性证明",
+      "note": "14:32。",
+      "url": "https://ethresear.ch/t/coordination-is-self-defeating-a-structural-proof-for-diversity-weighted-byzantine-fault-tolerance/24935",
+      "date": "2026-05-24",
+      "title_en": "ethresear.ch: Coordination is Self-Defeating, a structural proof for diversity-weighted Byzantine fault tolerance",
+      "note_en": "14:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：rotki 提醒他还有卡在 Optimism 桥队列里的代币，完成后兑换成欧元转入银行",
+      "note": "18:13。",
+      "url": "https://x.com/LefterisJP/status/2058506570267271457",
+      "date": "2026-05-24",
+      "title_en": "LefterisJP: rotki reminded him of tokens stuck in an Optimism bridge queue, which he finalized, swapped to EUR and sent to his bank",
+      "note_en": "18:13.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/VitalikButerin/status/2058583593102844111",
+    "credit": "X, VitalikButerin",
+    "local_path": "assets/2026-05-24.jpg",
+    "credit_en": "X, VitalikButerin"
+  },
+  "keywords_en": [
+    "Vitalik on where the EF is going",
+    "Zcash vs Starknet privacy",
+    "privacy protocols lack an L2BEAT-style review",
+    "post-quantum migration paths"
+  ],
+  "summary_en": "A quiet Sunday. Vitalik posted a long personal view on where the Ethereum Foundation is going, stressing that the board is not just him and that aerugoettinea is executing much of the transition. Eli Ben-Sasson compared the privacy trade-offs of Zcash and Starknet. donnoh_eth wished there were an L2BEAT for privacy; two days later L2BEAT launched its privacy page."
+}

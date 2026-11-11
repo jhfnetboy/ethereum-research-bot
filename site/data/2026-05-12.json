@@ -1,0 +1,249 @@
+{
+  "date": "2026-05-12",
+  "keywords": [
+    "EIP-8250 keyed nonce 合并",
+    "EIP-8141 frames 整理",
+    "EIP-8130 验证器集合与 owner 调用策略",
+    "清晰签名上线",
+    "strkBTC 上线",
+    "Aztec 加入 Protocol Guild 1% 承诺"
+  ],
+  "summary": "soispoke 的 keyed nonce（EIP-8250）合并，让一个 EIP-8141 发送方并行运行多条 nonce 序列，为无需信任的隐私协议解锁并发交易。lightclient 整理 EIP-8141 规范并合并。EIP-8130 加入规范验证器集合，并提交 owner 调用策略。EF 宣布清晰签名上线，目标是终结盲签。strkBTC 在 Starknet 主网上线。",
+  "items": [
+    {
+      "topic": "原生账户抽象：EIP-8141、EIP-8250、EIP-8130",
+      "title": "新 EIP：frame 交易的 keyed nonce",
+      "note": "（soispoke）合并，即 EIP-8250：一个 EIP-8141 发送方可以运行多条相互独立的 nonce 序列，而不是单一线性队列，从而支持无需信任的隐私协议并发发送交易。",
+      "url": "https://github.com/ethereum/EIPs/pull/11598",
+      "date": "2026-05-12",
+      "title_en": "New EIP: Keyed Nonces for Frame Transactions",
+      "note_en": "(soispoke), merged as EIP-8250: one EIP-8141 sender can run multiple independent nonce sequences instead of a single linear queue, so trustless privacy protocols can send transactions concurrently.",
+      "topic_en": "Native account abstraction: EIP-8141, EIP-8250, EIP-8130"
+    },
+    {
+      "topic": "原生账户抽象：EIP-8141、EIP-8250、EIP-8130",
+      "title": "EIP-8141：frames 整理",
+      "note": "（lightclient）合并，过去两个月规范改动频繁，这次在不大改功能的前提下提升可读性，并为批处理中被跳过的 frame 在收据里引入 `skipped` 状态 `0x3`。",
+      "url": "https://github.com/ethereum/EIPs/pull/11621",
+      "date": "2026-05-12",
+      "title_en": "EIP-8141: frames cleanup",
+      "note_en": "(lightclient), merged. After two months of rapid spec changes, it improves readability without changing much functionality, and introduces a `skipped` receipt status `0x3` for frames skipped within a batch.",
+      "topic_en": "Native account abstraction: EIP-8141, EIP-8250, EIP-8130"
+    },
+    {
+      "topic": "原生账户抽象：EIP-8141、EIP-8250、EIP-8130",
+      "title": "from 改名为 sender",
+      "note": "EIP-8130：from 改名为 sender 合并；加入规范验证器集合 与 收紧验证器白名单措辞（chunter-cb）提交并合并；加入 owner 调用策略 提交，通过 `policyType` 和 `policyTarget` 由协议强制约束 owner 的调用。",
+      "url": "https://github.com/ethereum/EIPs/pull/11526",
+      "date": "2026-05-12",
+      "title_en": "move from to sender",
+      "note_en": "EIP-8130: move from to sender, merged; add canonical verifier set and tighten verifier allowlist language (chunter-cb), submitted and merged; add owner call policies, submitted, using `policyType` and `policyTarget` to have the protocol enforce limits on owner calls.",
+      "topic_en": "Native account abstraction: EIP-8141, EIP-8250, EIP-8130"
+    },
+    {
+      "topic": "原生账户抽象：EIP-8141、EIP-8250、EIP-8130",
+      "title": "加入规范验证器集合",
+      "note": "EIP-8130：from 改名为 sender 合并；加入规范验证器集合 与 收紧验证器白名单措辞（chunter-cb）提交并合并；加入 owner 调用策略 提交，通过 `policyType` 和 `policyTarget` 由协议强制约束 owner 的调用。",
+      "url": "https://github.com/ethereum/EIPs/pull/11647",
+      "date": "2026-05-12",
+      "title_en": "add canonical verifier set",
+      "note_en": "EIP-8130: move from to sender, merged; add canonical verifier set and tighten verifier allowlist language (chunter-cb), submitted and merged; add owner call policies, submitted, using `policyType` and `policyTarget` to have the protocol enforce limits on owner calls.",
+      "topic_en": "Native account abstraction: EIP-8141, EIP-8250, EIP-8130"
+    },
+    {
+      "topic": "原生账户抽象：EIP-8141、EIP-8250、EIP-8130",
+      "title": "收紧验证器白名单措辞",
+      "note": "EIP-8130：from 改名为 sender 合并；加入规范验证器集合 与 收紧验证器白名单措辞（chunter-cb）提交并合并；加入 owner 调用策略 提交，通过 `policyType` 和 `policyTarget` 由协议强制约束 owner 的调用。",
+      "url": "https://github.com/ethereum/EIPs/pull/11651",
+      "date": "2026-05-12",
+      "title_en": "tighten verifier allowlist language",
+      "note_en": "EIP-8130: move from to sender, merged; add canonical verifier set and tighten verifier allowlist language (chunter-cb), submitted and merged; add owner call policies, submitted, using `policyType` and `policyTarget` to have the protocol enforce limits on owner calls.",
+      "topic_en": "Native account abstraction: EIP-8141, EIP-8250, EIP-8130"
+    },
+    {
+      "topic": "原生账户抽象：EIP-8141、EIP-8250、EIP-8130",
+      "title": "加入 owner 调用策略",
+      "note": "EIP-8130：from 改名为 sender 合并；加入规范验证器集合 与 收紧验证器白名单措辞（chunter-cb）提交并合并；加入 owner 调用策略 提交，通过 `policyType` 和 `policyTarget` 由协议强制约束 owner 的调用。",
+      "url": "https://github.com/ethereum/EIPs/pull/11648",
+      "date": "2026-05-12",
+      "title_en": "add owner call policies",
+      "note_en": "EIP-8130: move from to sender, merged; add canonical verifier set and tighten verifier allowlist language (chunter-cb), submitted and merged; add owner call policies, submitted, using `policyType` and `policyTarget` to have the protocol enforce limits on owner calls.",
+      "topic_en": "Native account abstraction: EIP-8141, EIP-8250, EIP-8130"
+    },
+    {
+      "topic": "原生账户抽象：EIP-8141、EIP-8250、EIP-8130",
+      "title": "EIP-8253：给零 nonce 且有存储的账户提升 nonce",
+      "note": "16:20（jochem-brouwer），作为 EIP-7610 的替代方案，把主网上有存储、零 nonce、无代码、余额非零的账户 nonce 提升，从而去掉 EIP-7610 的检查。",
+      "url": "https://ethereum-magicians.org/t/eip-8253-bump-nonce-of-zero-nonce-storage-accounts/28505",
+      "date": "2026-05-12",
+      "title_en": "EIP-8253: Bump nonce of zero-nonce storage accounts",
+      "note_en": "16:20 (jochem-brouwer), an alternative to EIP-7610 that bumps the nonce of mainnet accounts with non-empty storage, zero nonce, no code and nonzero balance, removing the need for the EIP-7610 check.",
+      "topic_en": "Native account abstraction: EIP-8141, EIP-8250, EIP-8130"
+    },
+    {
+      "topic": "钱包安全：清晰签名",
+      "title": "ethereumfndn：清晰签名上线，一个终结盲签的开放标准，让人类可读的交易成为默认",
+      "note": "23:11；EF 博客：清晰签名公告。",
+      "url": "https://x.com/ethereumfndn/status/2054232916763263148",
+      "date": "2026-05-12",
+      "title_en": "ethereumfndn: clear signing is now live, an open standard to end blind signing and make human-readable transactions the default",
+      "note_en": "23:11; EF blog: clear signing announcement.",
+      "topic_en": "Wallet security: clear signing"
+    },
+    {
+      "topic": "钱包安全：清晰签名",
+      "title": "EF 博客：清晰签名公告",
+      "note": "ethereumfndn：清晰签名上线，一个终结盲签的开放标准，让人类可读的交易成为默认 23:11；EF 博客：清晰签名公告。",
+      "url": "https://blog.ethereum.org/en/2026/05/12/clear-signing-announcement",
+      "date": "2026-05-12",
+      "title_en": "EF blog: clear signing announcement",
+      "note_en": "Ethereumfndn: clear signing is now live, an open standard to end blind signing and make human-readable transactions the default, 23:11; EF blog: clear signing announcement.",
+      "topic_en": "Wallet security: clear signing"
+    },
+    {
+      "topic": "钱包安全：清晰签名",
+      "title": "ERC-8255：在向后兼容部分加入打破无限授权的说明",
+      "note": "（moodysalem）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1739",
+      "date": "2026-05-12",
+      "title_en": "ERC-8255: add a backwards compatibility section on breaking max approvals",
+      "note_en": "(moodysalem), submitted and merged.",
+      "topic_en": "Wallet security: clear signing"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWare：首个内置隐私的比特币支持资产在 Starknet 主网正式上线",
+      "note": "19:07；StarkWare：STRK20 的第一阶段随 strkBTC 启动 17:48。",
+      "url": "https://x.com/StarkWareLtd/status/2054171550018842744",
+      "date": "2026-05-12",
+      "title_en": "StarkWare: the first Bitcoin-backed asset with built-in privacy is live on Starknet mainnet",
+      "note_en": "19:07; StarkWare: the first phase of STRK20s launches today with strkBTC, 17:48.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWare：STRK20 的第一阶段随 strkBTC 启动",
+      "note": "StarkWare：首个内置隐私的比特币支持资产在 Starknet 主网正式上线 19:07；StarkWare：STRK20 的第一阶段随 strkBTC 启动 17:48。",
+      "url": "https://x.com/StarkWareLtd/status/2054151637325709346",
+      "date": "2026-05-12",
+      "title_en": "StarkWare: the first phase of STRK20s launches today with strkBTC",
+      "note_en": "StarkWare: the first Bitcoin-backed asset with built-in privacy is live on Starknet mainnet, 19:07; StarkWare: the first phase of STRK20s launches today with strkBTC, 17:48.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "ProtocolGuild：Aztec Foundation 加入 1% 承诺，1% 的 AZTEC 供应存入 4 年归属合约，支持 187 名核心贡献者",
+      "note": "20:23。",
+      "url": "https://x.com/ProtocolGuild/status/2054190784061091896",
+      "date": "2026-05-12",
+      "title_en": "ProtocolGuild: the Aztec Foundation takes the 1% Pledge, depositing 1% of the AZTEC supply into a 4-year vesting contract for 187 core contributors",
+      "note_en": "20:23.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "barnabemonnot：EF Protocol 团队的新阶段，他与 Tim Beiko、ralexstokes 把接力棒交给同事",
+      "note": "02:05。",
+      "url": "https://x.com/barnabemonnot/status/2053914533211558331",
+      "date": "2026-05-12",
+      "title_en": "barnabemonnot: a new phase for the EF Protocol teams, as he, Tim Beiko and ralexstokes pass the torch to colleagues",
+      "note_en": "02:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "raulvk：路线图的很多部分依赖 P2P 网络，他离开 EF 从外部继续推进这一层",
+      "note": "04:27。",
+      "url": "https://x.com/raulvk/status/2053950140164247871",
+      "date": "2026-05-12",
+      "title_en": "raulvk: much of the roadmap hinges on P2P networking, and he has left the EF to keep advancing that layer from outside",
+      "note_en": "04:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "pcaversaccio：DPRK 的 Contagious Interview 攻击升级，只需解压文件并执行 git 操作就会中招",
+      "note": "17:43。",
+      "url": "https://x.com/pcaversaccio/status/2054150512635953505",
+      "date": "2026-05-12",
+      "title_en": "pcaversaccio: DPRK's Contagious Interview attacks have advanced to the point where unzipping a file and running a git operation is enough",
+      "note_en": "17:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #8 议程",
+      "note": "13:56；P2P Networking #1 议程 11:04；FCR #8 议程 21:23；L1-zkEVM breakout #04 议程 21:31。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-8/28504",
+      "date": "2026-05-12",
+      "title_en": "PQTS Breakout #8 agenda",
+      "note_en": "13:56; P2P Networking #1 agenda, 11:04; FCR #8 agenda, 21:23; L1-zkEVM breakout #04 agenda, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "P2P Networking #1 议程",
+      "note": "PQTS Breakout #8 议程 13:56；P2P Networking #1 议程 11:04；FCR #8 议程 21:23；L1-zkEVM breakout #04 议程 21:31。",
+      "url": "https://ethereum-magicians.org/t/p2p-networking-1-may-20-2026/28500",
+      "date": "2026-05-12",
+      "title_en": "P2P Networking #1 agenda",
+      "note_en": "PQTS Breakout #8 agenda, 13:56; P2P Networking #1 agenda, 11:04; FCR #8 agenda, 21:23; L1-zkEVM breakout #04 agenda, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #8 议程",
+      "note": "PQTS Breakout #8 议程 13:56；P2P Networking #1 议程 11:04；FCR #8 议程 21:23；L1-zkEVM breakout #04 议程 21:31。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-8-may-26-2026/28508",
+      "date": "2026-05-12",
+      "title_en": "FCR #8 agenda",
+      "note_en": "PQTS Breakout #8 agenda, 13:56; P2P Networking #1 agenda, 11:04; FCR #8 agenda, 21:23; L1-zkEVM breakout #04 agenda, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L1-zkEVM breakout #04 议程",
+      "note": "PQTS Breakout #8 议程 13:56；P2P Networking #1 议程 11:04；FCR #8 议程 21:23；L1-zkEVM breakout #04 议程 21:31。",
+      "url": "https://ethereum-magicians.org/t/l1-zkevm-breakout-04-may-13-2026/28509",
+      "date": "2026-05-12",
+      "title_en": "L1-zkEVM breakout #04 agenda",
+      "note_en": "PQTS Breakout #8 agenda, 13:56; P2P Networking #1 agenda, 11:04; FCR #8 agenda, 21:23; L1-zkEVM breakout #04 agenda, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：再向动物福利基金捐出 64 ETH",
+      "note": "14:45。",
+      "url": "https://x.com/VitalikButerin/status/2054105653988270113",
+      "date": "2026-05-12",
+      "title_en": "Vitalik: sent another 64 ETH to the Animal Welfare Fund",
+      "note_en": "14:45.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：今天在 Starknet 上已经可以获得没有后门的隐私",
+      "note": "01:02。",
+      "url": "https://x.com/ameensol/status/2053898455010185485",
+      "date": "2026-05-12",
+      "title_en": "ameensol: you can already get non-backdoored privacy on Starknet today",
+      "note_en": "01:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/05/12/clear-signing-announcement",
+    "credit": "Ethereum Foundation Blog, clear-signing-announcement",
+    "local_path": "assets/2026-05-12.jpg",
+    "credit_en": "Ethereum Foundation Blog, clear-signing-announcement"
+  },
+  "keywords_en": [
+    "EIP-8250 keyed nonces merged",
+    "EIP-8141 frames cleanup",
+    "EIP-8130 verifier set and owner call policies",
+    "clear signing goes live",
+    "strkBTC launch",
+    "Aztec joins the Protocol Guild 1% Pledge"
+  ],
+  "summary_en": "soispoke's keyed nonces (EIP-8250) were merged, letting one EIP-8141 sender run multiple nonce sequences in parallel and unlocking concurrent transactions for trustless privacy protocols. lightclient cleaned up the EIP-8141 spec, and it was merged. EIP-8130 added a canonical verifier set, and owner call policies were submitted. The EF announced that clear signing is live, aiming to end blind signing. strkBTC went live on Starknet mainnet."
+}

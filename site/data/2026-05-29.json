@@ -1,0 +1,169 @@
+{
+  "date": "2026-05-29",
+  "keywords": [
+    "Fast Confirmation Rule 一年回测 96% 区块单 slot 快速确认",
+    "zeam 后量子共识栈 devnet5 互通",
+    "EIP-8279 Block Access List 字节下限讨论",
+    "MEV 拍卖中的不完全承诺",
+    "ERC-8313 协议交互清单",
+    "Ethereal news #25"
+  ],
+  "summary": "barnabemonnot 公布 Fast Confirmation Rule 一年回测，96% 的历史区块可在单个 slot 内快速确认，意味着从以太坊到 L2 或交易所的存款可在约 12 秒可用。zeam 宣布后量子共识栈实现 devnet5 互通。EIP-8279 开设讨论帖。Ethereal news #25 发布。",
+  "items": [
+    {
+      "topic": "交易确认：Fast Confirmation Rule",
+      "title": "barnabemonnot：Fast Confirmation Rule 一年回测显示 96% 的历史区块可在单个 slot 内快速确认，从以太坊到 L2 或交易所的存款可在约 12 秒内可用，其余 4% 通常也很快确认",
+      "note": "12:26。",
+      "url": "https://x.com/barnabemonnot/status/2060231270622167369",
+      "date": "2026-05-29",
+      "title_en": "barnabemonnot: a year of backtesting shows 96% of past blocks would have been fast confirmed in a single slot, so deposits from Ethereum to L2s or exchanges could be available in about 12 seconds; the other 4% are usually confirmed fast too",
+      "note_en": "12:26.",
+      "topic_en": "Transaction confirmation: the Fast Confirmation Rule"
+    },
+    {
+      "topic": "交易与 gas：EIP-8279",
+      "title": "Magicians：EIP-8279 Block Access List 字节下限讨论帖",
+      "note": "17:26（Nerolation），对应前一天提交的 PR #11739。",
+      "url": "https://ethereum-magicians.org/t/eip-8279-block-access-list-byte-floor/28662",
+      "date": "2026-05-29",
+      "title_en": "Magicians: EIP-8279 Block Access List Byte Floor discussion",
+      "note_en": "17:26 (Nerolation), for PR #11739 submitted the day before.",
+      "topic_en": "Transactions and gas: EIP-8279"
+    },
+    {
+      "topic": "交易与 gas：EIP-8279",
+      "title": "PR #11739",
+      "note": "Magicians：EIP-8279 Block Access List 字节下限讨论帖 17:26（Nerolation），对应前一天提交的 PR #11739。",
+      "url": "https://github.com/ethereum/EIPs/pull/11739",
+      "date": "2026-05-29",
+      "title_en": "PR #11739",
+      "note_en": "Magicians: EIP-8279 Block Access List Byte Floor discussion, 17:26 (Nerolation), for PR #11739 submitted the day before.",
+      "topic_en": "Transactions and gas: EIP-8279"
+    },
+    {
+      "topic": "交易与 gas：EIP-8279",
+      "title": "ethresear.ch：MEV 拍卖中的不完全承诺",
+      "note": "21:50（nuconstruct），研究构建者在看到出价与载荷后背离诚实拍卖的问题。",
+      "url": "https://ethresear.ch/t/imperfect-commitment-in-maximal-extractable-value-auctions/25001",
+      "date": "2026-05-29",
+      "title_en": "ethresear.ch: Imperfect Commitment in Maximal Extractable Value Auctions",
+      "note_en": "21:50 (nuconstruct), studying builders who defect from an honest auction after seeing bids and payloads.",
+      "topic_en": "Transactions and gas: EIP-8279"
+    },
+    {
+      "topic": "后量子",
+      "title": "zeamETH：实现 devnet5 互通，这是其为以太坊主网构建与迭代的后量子共识栈的阶段成果",
+      "note": "19:57。",
+      "url": "https://x.com/zeamETH/status/2060344683319177565",
+      "date": "2026-05-29",
+      "title_en": "zeamETH: now at devnet5 interop, the culmination of the post-quantum consensus stack it has been building for Ethereum mainnet",
+      "note_en": "19:57.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "后量子",
+      "title": "StarkWare：2018 年的 STARK 论文标题已写明“后量子安全”，STARK 早已避免可信设置和基于曲线的证明假设",
+      "note": "14:07。",
+      "url": "https://x.com/StarkWareLtd/status/2060256649839813114",
+      "date": "2026-05-29",
+      "title_en": "StarkWare: the 2018 STARK paper was already titled \"post-quantum secure\"; STARKs avoided trusted setups and curve based proof assumptions early",
+      "note_en": "14:07.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #25",
+      "note": "发布。",
+      "url": "https://ethereal.news/ethereal-news-weekly-25/",
+      "date": "2026-05-29",
+      "title_en": "Ethereal news #25",
+      "note_en": "Was published.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8313 协议交互清单",
+      "note": "21:45（cointrol-wallet），把协议交互知识以可移植、机器可读的格式放在链上。",
+      "url": "https://ethereum-magicians.org/t/erc-8313-protocol-interaction-manifest/28663",
+      "date": "2026-05-29",
+      "title_en": "Magicians: ERC-8313 Protocol Interaction Manifest",
+      "note_en": "21:45 (cointrol-wallet), putting protocol interaction knowledge onchain in a portable, machine readable format.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8278：Service Objects",
+      "note": "06:51；ERC-8318：uFund 基金元数据与生命周期接口 11:57。",
+      "url": "https://ethereum-magicians.org/t/erc-8278-service-objects/28659",
+      "date": "2026-05-29",
+      "title_en": "ERC-8278: Service Objects",
+      "note_en": "06:51; ERC-8318: uFund fund metadata and lifecycle interface, 11:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8318：uFund 基金元数据与生命周期接口",
+      "note": "ERC-8278：Service Objects 06:51；ERC-8318：uFund 基金元数据与生命周期接口 11:57。",
+      "url": "https://ethereum-magicians.org/t/erc-8318-ufund-standardized-fund-metadata-lifecycle-interface/28660",
+      "date": "2026-05-29",
+      "title_en": "ERC-8318: uFund fund metadata and lifecycle interface",
+      "note_en": "ERC-8278: Service Objects, 06:51; ERC-8318: uFund fund metadata and lifecycle interface, 11:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：链上验证与零散修正",
+      "note": "（gcolvin）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11741",
+      "date": "2026-05-29",
+      "title_en": "EIP-7979: onchain validation and scattered nits",
+      "note_en": "(gcolvin), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "etheconomiczone：Ethereum Economic Zone 恢复跨 rollup 可组合性，可在同一区块内调用另一条链的合约并得到响应",
+      "note": "18:24。",
+      "url": "https://x.com/etheconomiczone/status/2060321386636128758",
+      "date": "2026-05-29",
+      "title_en": "etheconomiczone: Ethereum Economic Zone restores composability across rollups, letting a contract on another chain be called with a response in the same block",
+      "note_en": "18:24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：Vyper 开发者持续做出令人印象深刻的成果，建议大家（和他们的机器人）重新看看这门语言",
+      "note": "23:57。",
+      "url": "https://x.com/VitalikButerin/status/2060405185759871259",
+      "date": "2026-05-29",
+      "title_en": "Vitalik: Vyper devs continue doing impressive things; he encourages people (and their bots) to take another look at the language",
+      "note_en": "23:57.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EFDevcon：隐私、安全、开源、抗审查、抗俘获是塑造以太坊的原则",
+      "note": "05:00。",
+      "url": "https://x.com/EFDevcon/status/2060119009559773241",
+      "date": "2026-05-29",
+      "title_en": "EFDevcon: privacy, security, open source, censorship resistance and capture resistance are the principles shaping Ethereum",
+      "note_en": "05:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/imperfect-commitment-in-maximal-extractable-value-auctions/25001",
+    "credit": "ethresear.ch, Imperfect Commitment in Maximal Extractable Value Auctions (nuconstruct)",
+    "local_path": "assets/2026-05-29.jpg",
+    "credit_en": "ethresear.ch, Imperfect Commitment in Maximal Extractable Value Auctions (nuconstruct)"
+  },
+  "keywords_en": [
+    "a year of Fast Confirmation Rule backtesting shows 96% of blocks fast confirmed in one slot",
+    "zeam post-quantum consensus stack reaches devnet5 interop",
+    "EIP-8279 Block Access List Byte Floor discussion",
+    "imperfect commitment in MEV auctions",
+    "ERC-8313 Protocol Interaction Manifest",
+    "Ethereal news #25"
+  ],
+  "summary_en": "barnabemonnot shared a year of Fast Confirmation Rule backtesting: 96% of past blocks would have been fast confirmed in a single slot, meaning deposits from Ethereum to L2s or exchanges could be available in about 12 seconds. zeam announced devnet5 interop for its post-quantum consensus stack. A discussion thread opened for EIP-8279. Ethereal news #25 was published."
+}

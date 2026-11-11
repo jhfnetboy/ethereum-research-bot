@@ -1,0 +1,161 @@
+{
+  "date": "2026-05-28",
+  "keywords": [
+    "Vitalik 推荐 Interfold",
+    "Aztec 每个账户都是智能合约",
+    "统一异构隐私系统的匿名集",
+    "EIP-8131 改写为统一交易内容下限",
+    "Block Access List 字节下限",
+    "ERC-8299 WYRIWE",
+    "ACDC #179"
+  ],
+  "summary": "Vitalik 称 Interfold 正是他近十年来呼吁基于 MACI 思路去构建的东西，作者 auryn_macmillan 解释其起因是 MACI 依赖诚实协调者。Aztec 强调网络上每个账户都是智能合约。nerolation 提交两项定价提案：把 EIP-8131 改写为统一交易内容下限，并新增 Block Access List 字节下限。ACDC #179 讨论 Glamsterdam devnet 与 CL EIP 取舍。",
+  "items": [
+    {
+      "topic": "隐私：Interfold 与匿名集",
+      "title": "Vitalik：更多人应该了解 Interfold，这基本就是他近十年来呼吁大家用 MACI 思路构建的东西，现在以通用形式实现了，是一个为投票等场景优化的隐私协议",
+      "note": "18:38。",
+      "url": "https://x.com/VitalikButerin/status/2059962457297215563",
+      "date": "2026-05-28",
+      "title_en": "Vitalik: more people should know about the Interfold; it is basically what he has been urging people to build with the MACI ideas for almost a decade, now in a generalized form, a privacy protocol optimized for things like voting",
+      "note_en": "18:38.",
+      "topic_en": "Privacy: the Interfold and anonymity sets"
+    },
+    {
+      "topic": "隐私：Interfold 与匿名集",
+      "title": "auryn_macmillan：Interfold 的想法源于他多次担任 clrfund 轮次 MACI 协调者时的不安，MACI 的隐私保证依赖诚实协调者假设",
+      "note": "21:17。",
+      "url": "https://x.com/auryn_macmillan/status/2060002604051005574",
+      "date": "2026-05-28",
+      "title_en": "auryn_macmillan: the idea for the Interfold came from his unease at being the MACI coordinator for several clrfund rounds; MACI's privacy relies on an honest coordinator assumption",
+      "note_en": "21:17.",
+      "topic_en": "Privacy: the Interfold and anonymity sets"
+    },
+    {
+      "topic": "隐私：Interfold 与匿名集",
+      "title": "AndyGuzmanEth：有人在做统一异构系统的匿名集吗，例如统一 Tornado Cash、Railgun、Privacy Pools 的匿名集",
+      "note": "05:59。",
+      "url": "https://x.com/AndyGuzmanEth/status/2059771512865874251",
+      "date": "2026-05-28",
+      "title_en": "AndyGuzmanEth: is anyone working on unifying anonymity sets in heterogeneous systems, such as Tornado Cash, Railgun and Privacy Pools?",
+      "note_en": "05:59.",
+      "topic_en": "Privacy: the Interfold and anonymity sets"
+    },
+    {
+      "topic": "隐私：Interfold 与匿名集",
+      "title": "EliBenSasson：隐私技术往往不被细致理解，更好的隐私不一定意味着“更私密”",
+      "note": "18:55。",
+      "url": "https://x.com/EliBenSasson/status/2059966718408020462",
+      "date": "2026-05-28",
+      "title_en": "EliBenSasson: privacy tech is often not understood in its nuances; better privacy does not necessarily mean \"more private\"",
+      "note_en": "18:55.",
+      "topic_en": "Privacy: the Interfold and anonymity sets"
+    },
+    {
+      "topic": "交易与 gas：数据下限定价",
+      "title": "EIP-8131：改写为统一交易内容下限（Unified Transaction Content Floor）",
+      "note": "（nerolation）提交：为 Hegotá 做准备，纳入 blob versioned hashes，把对象泛化为用户控制的字节，并更新影响分析。",
+      "url": "https://github.com/ethereum/EIPs/pull/11738",
+      "date": "2026-05-28",
+      "title_en": "EIP-8131: rewritten as a Unified Transaction Content Floor",
+      "note_en": "(nerolation), submitted: prepared for Hegotá, it adds blob versioned hashes, generalizes the target to user controlled bytes and updates the impact analysis.",
+      "topic_en": "Transactions and gas: data floor pricing"
+    },
+    {
+      "topic": "交易与 gas：数据下限定价",
+      "title": "新 EIP：Block Access List 字节下限",
+      "note": "（nerolation）提交：把 BAL 数据计入 EIP-7623 的 calldata 下限定价，以较小的用户影响降低最坏情况下的区块大小。",
+      "url": "https://github.com/ethereum/EIPs/pull/11739",
+      "date": "2026-05-28",
+      "title_en": "New EIP: Block Access List Byte Floor",
+      "note_en": "(nerolation), submitted: adds BAL data to the EIP-7623 calldata floor pricing to cut worst case block size with minimal impact on users.",
+      "topic_en": "Transactions and gas: data floor pricing"
+    },
+    {
+      "topic": "账户：Aztec 原生 AA",
+      "title": "aztecnetwork：Aztec 上每个账户都是智能合约，没有 EOA，也没有外挂的抽象层；认证在用户设备上完成，排序器只验证固定大小的证明，所以多签与单签成本相同",
+      "note": "06:30。",
+      "url": "https://x.com/aztecnetwork/status/2059779182142595098",
+      "date": "2026-05-28",
+      "title_en": "aztecnetwork: every account on Aztec is a smart contract, with no EOAs and no bolt-on abstraction layers; authentication runs on the device and the sequencer only verifies a fixed size proof, so a multisig costs the same as a single signature",
+      "note_en": "06:30.",
+      "topic_en": "Accounts: native AA on Aztec"
+    },
+    {
+      "topic": "账户：Aztec 原生 AA",
+      "title": "Magicians：ERC-8299 WYRIWE（What You Read Is What You Execute）",
+      "note": "18:06（TMerlini），为 AI 推理输入来源定义三重哈希承诺与 EIP-712 证明格式。",
+      "url": "https://ethereum-magicians.org/t/erc-8299-wyriwe-what-you-read-is-what-you-execute/28655",
+      "date": "2026-05-28",
+      "title_en": "Magicians: ERC-8299 WYRIWE (What You Read Is What You Execute)",
+      "note_en": "18:06 (TMerlini), defining a triple hash commitment and an EIP-712 attestation profile for AI inference input provenance.",
+      "topic_en": "Accounts: native AA on Aztec"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：Service Objects",
+      "note": "（MeltedMindz）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1777",
+      "date": "2026-05-28",
+      "title_en": "ERC: Service Objects",
+      "note_en": "(MeltedMindz), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8276：非同质化多代币 ownerOf",
+      "note": "09:29；EIPIP Meeting #127 议程 01:40。",
+      "url": "https://ethereum-magicians.org/t/erc-8276-non-fungible-multi-token-ownerof-erc-1155f-erc-6909f/28646",
+      "date": "2026-05-28",
+      "title_en": "ERC-8276: Non-Fungible Multi-Token ownerOf",
+      "note_en": "09:29; EIPIP Meeting #127 agenda, 01:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPIP Meeting #127 议程",
+      "note": "ERC-8276：非同质化多代币 ownerOf 09:29；EIPIP Meeting #127 议程 01:40。",
+      "url": "https://ethereum-magicians.org/t/eipip-meeting-127-june-03-2026/28644",
+      "date": "2026-05-28",
+      "title_en": "EIPIP Meeting #127 agenda",
+      "note_en": "ERC-8276: Non-Fungible Multi-Token ownerOf, 09:29; EIPIP Meeting #127 agenda, 01:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：观察 12 年，ZK 的产品市场契合只有一种模式",
+      "note": "22:19。",
+      "url": "https://x.com/EliBenSasson/status/2060018079178891646",
+      "date": "2026-05-28",
+      "title_en": "EliBenSasson: after 12 years of looking, he sees only one product market fit pattern for ZK",
+      "note_en": "22:19.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：Wintermute 通过 thedaofund 追加资金保护以太坊安全",
+      "note": "05:58。",
+      "url": "https://x.com/binji_x/status/2059771265083179226",
+      "date": "2026-05-28",
+      "title_en": "binji_x: Wintermute added funds to protect Ethereum security via thedaofund",
+      "note_en": "05:58.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8299-wyriwe-what-you-read-is-what-you-execute/28655",
+    "credit": "Ethereum Magicians, ERC-8299: WYRIWE (TMerlini)",
+    "local_path": "assets/2026-05-28.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8299: WYRIWE (TMerlini)"
+  },
+  "keywords_en": [
+    "Vitalik recommends the Interfold",
+    "every Aztec account is a smart contract",
+    "unifying anonymity sets across privacy systems",
+    "EIP-8131 rewritten as a Unified Transaction Content Floor",
+    "Block Access List Byte Floor",
+    "ERC-8299 WYRIWE",
+    "ACDC #179"
+  ],
+  "summary_en": "Vitalik said the Interfold is what he has urged people to build with MACI ideas for almost a decade, and its author auryn_macmillan explained it grew out of MACI's reliance on an honest coordinator. Aztec stressed that every account on its network is a smart contract. nerolation submitted two pricing proposals: rewriting EIP-8131 as a Unified Transaction Content Floor and a new Block Access List Byte Floor. ACDC #179 covered Glamsterdam devnets and choices among CL EIPs."
+}

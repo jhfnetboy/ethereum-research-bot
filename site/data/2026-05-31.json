@@ -1,0 +1,115 @@
+{
+  "date": "2026-05-31",
+  "keywords": [
+    "passkey 是否等于手机里的硬件钱包",
+    "Tempo 的 WebAuthn 与密钥授权见证",
+    "Linked Accounts 结合隐身地址与原生智能账户",
+    "PoS 与 PoW 是抗女巫机制"
+  ],
+  "summary": "dankrad 指出 passkey 并不像内置在手机里的硬件钱包，但适合快速创建热钱包。gakonst 回应称 passkey 仍是目前在体验、上手和免托管之间最平衡的方案，并介绍 Tempo 的密钥授权见证，以及 Linked Accounts 与隐身地址、原生智能账户结合可能带来较好的 L1 隐私。",
+  "items": [
+    {
+      "topic": "账户：passkey 与密钥授权",
+      "title": "dankrad：passkey 真的像手机里内置的硬件钱包吗？恐怕不是，但它们用于快速创建热钱包仍很有用",
+      "note": "18:30。",
+      "url": "https://x.com/dankrad/status/2061047552363917436",
+      "date": "2026-05-31",
+      "title_en": "dankrad: are passkeys actually like a hardware wallet built into your phone? He is afraid not, though they are still useful for quickly creating hot wallets",
+      "note_en": "18:30.",
+      "topic_en": "Accounts: passkeys and key authorizations"
+    },
+    {
+      "topic": "账户：passkey 与密钥授权",
+      "title": "gakonst：大致同意，但仍认为 passkey 是目前在体验、上手和不依赖第三方托管或复杂多方密钥之间最平衡的方案",
+      "note": "19:35。",
+      "url": "https://x.com/gakonst/status/2061063926368866420",
+      "date": "2026-05-31",
+      "title_en": "gakonst: roughly agrees, but still thinks the passkey is the best we have for balancing UX, onboarding and no dependency on third party custody or complex multi party key setups",
+      "note_en": "19:35.",
+      "topic_en": "Accounts: passkeys and key authorizations"
+    },
+    {
+      "topic": "账户：passkey 与密钥授权",
+      "title": "gakonst：Tempo 的密钥授权见证（Witnesses in Key Authorizations）让用户登录应用时只需一次 passkey 提示，同时充当认证挑战签名和访问密钥授权",
+      "note": "19:45。",
+      "url": "https://x.com/gakonst/status/2061066529672683962",
+      "date": "2026-05-31",
+      "title_en": "gakonst: Witnesses in Key Authorizations on Tempo let a user log in to an app with one passkey prompt that doubles as an auth challenge signature and an access key authorization",
+      "note_en": "19:45.",
+      "topic_en": "Accounts: passkeys and key authorizations"
+    },
+    {
+      "topic": "隐私：Linked Accounts",
+      "title": "gakonst：Linked Accounts 是更激进的想法，与隐身地址和原生智能账户结合，可能带来真正好的 L1 隐私，并优雅解决隐身地址的资金归集问题",
+      "note": "19:56。",
+      "url": "https://x.com/gakonst/status/2061069380323016887",
+      "date": "2026-05-31",
+      "title_en": "gakonst: Linked Accounts is the more radical idea that may give good L1 privacy when combined with stealth addresses and native smart accounts, solving the stealth address sweep problem elegantly",
+      "note_en": "19:56.",
+      "topic_en": "Privacy: Linked Accounts"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：OCP 与以太坊 CROPS 方向",
+      "note": "11:52（DamonZwicker）。",
+      "url": "https://ethresear.ch/t/evidential-survivability-ocp-and-ethereums-crops-direction/25012",
+      "date": "2026-05-31",
+      "title_en": "ethresear.ch: OCP and Ethereum's CROPS direction",
+      "note_en": "11:52 (DamonZwicker).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8173 修订",
+      "note": "EIP-8173 与 EIP-7979 的一组更新：EIP-8173 修订（gcolvin）提交并合并，EIP-7979 验证算法上链（gcolvin）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11746",
+      "date": "2026-05-31",
+      "title_en": "EIP-8173 revision",
+      "note_en": "A set of EIP-8173 and EIP-7979 updates: EIP-8173 revision (gcolvin), submitted and merged, and EIP-7979 validation onchain (gcolvin), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979 验证算法上链",
+      "note": "EIP-8173 与 EIP-7979 的一组更新：EIP-8173 修订（gcolvin）提交并合并，EIP-7979 验证算法上链（gcolvin）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11745",
+      "date": "2026-05-31",
+      "title_en": "EIP-7979 validation onchain",
+      "note_en": "A set of EIP-8173 and EIP-7979 updates: EIP-8173 revision (gcolvin), submitted and merged, and EIP-7979 validation onchain (gcolvin), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：PoS、PoW 或 DAG 本身不是共识协议，而是抗女巫机制与出块者选择器",
+      "note": "16:47。",
+      "url": "https://x.com/pcaversaccio/status/2061021707717255673",
+      "date": "2026-05-31",
+      "title_en": "pcaversaccio: PoS, PoW or DAGs are not consensus protocols by themselves but Sybil resistance mechanisms and block author selectors",
+      "note_en": "16:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：十年后的加密生态不会是今天的样子",
+      "note": "00:36。",
+      "url": "https://x.com/EliBenSasson/status/2060777311511724292",
+      "date": "2026-05-31",
+      "title_en": "EliBenSasson: ten years from now the crypto ecosystem will not look like it does today",
+      "note_en": "00:36.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/dankrad/status/2061047552363917436",
+    "credit": "X, @dankrad",
+    "local_path": "assets/2026-05-31.jpg",
+    "credit_en": "X, @dankrad"
+  },
+  "keywords_en": [
+    "are passkeys a hardware wallet in your phone",
+    "Tempo WebAuthn and witnesses in key authorizations",
+    "Linked Accounts with stealth addresses and native smart accounts",
+    "PoS and PoW as Sybil resistance mechanisms"
+  ],
+  "summary_en": "dankrad argued passkeys are not like a hardware wallet built into a phone, though they are useful for quickly creating hot wallets. gakonst replied that passkeys are still the best balance today of UX, onboarding and no third party custody, and described Tempo's witnesses in key authorizations and how Linked Accounts combined with stealth addresses and native smart accounts might bring good L1 privacy."
+}

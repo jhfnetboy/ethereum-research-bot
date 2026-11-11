@@ -1,0 +1,207 @@
+{
+  "date": "2026-05-11",
+  "keywords": [
+    "EIP-2780 按资源拆分 21000",
+    "EIP-8261 gas limit 改由硬分叉排期",
+    "EIP-8141 扩展特性集",
+    "智能钱包升级新高",
+    "strkBTC 隐私上线预告"
+  ],
+  "summary": "misilva73 提交 EIP-2780 重写，把 21,000 的基础成本拆成按资源计价的原语。barnabasbusa 提交 EIP-8261，让区块 gas limit 只能在硬分叉时调整，取消验证者配置和 EIP-1559 的弹性调整。pedrouid 提交 EIP-8141 扩展特性集，想把 frame 交易扩成完整的原生 AA 升级。EF 博客发布 Protocol 团队五月更新。",
+  "items": [
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-2780：改写为按资源计价的交易内在 gas",
+      "note": "（misilva73）提交。总数不变，标准转账的 21,000 由 `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST` 组成，每一项对应交易实际消耗的资源。",
+      "url": "https://github.com/ethereum/EIPs/pull/11645",
+      "date": "2026-05-11",
+      "title_en": "EIP-2780: rework as resource-based intrinsic transaction gas",
+      "note_en": "(misilva73), submitted. The total is unchanged: a standard transfer's 21,000 is `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST`, each priced to the resource the transaction actually consumes.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "新 EIP：Gas Limit Schedule",
+      "note": "（barnabasbusa）提交，即 EIP-8261；EIP-8261 讨论帖 22:02。区块 gas_limit 变成由硬分叉排期、共识强制的参数，取消客户端参数和验证者偏好设置，也取消 EIP-1559 的 ±1/1024 弹性规则；仿照 EIP-7892 的 BPO 分叉引入只改 gas 参数的 gpo 分叉。",
+      "url": "https://github.com/ethereum/EIPs/pull/11644",
+      "date": "2026-05-11",
+      "title_en": "New EIP: Gas Limit Schedule",
+      "note_en": "(barnabasbusa), submitted as EIP-8261; EIP-8261 discussion thread, 22:02. The block gas_limit becomes a hard-fork-scheduled, consensus-enforced parameter, removing client flags and validator preferences as well as the EIP-1559 ±1/1024 elasticity rule; \"gas parameter only\" (gpo) forks are modeled on the BPO forks of EIP-7892.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8261 讨论帖",
+      "note": "新 EIP：Gas Limit Schedule（barnabasbusa）提交，即 EIP-8261；EIP-8261 讨论帖 22:02。区块 gas_limit 变成由硬分叉排期、共识强制的参数，取消客户端参数和验证者偏好设置，也取消 EIP-1559 的 ±1/1024 弹性规则；仿照 EIP-7892 的 BPO 分叉引入只改 gas 参数的 gpo 分叉。",
+      "url": "https://ethereum-magicians.org/t/eip-8261-gas-limit-schedule/28494",
+      "date": "2026-05-11",
+      "title_en": "EIP-8261 discussion thread",
+      "note_en": "New EIP: Gas Limit Schedule (barnabasbusa), submitted as EIP-8261; EIP-8261 discussion thread, 22:02. The block gas_limit becomes a hard-fork-scheduled, consensus-enforced parameter, removing client flags and validator preferences as well as the EIP-1559 ±1/1024 elasticity rule; \"gas parameter only\" (gpo) forks are modeled on the BPO forks of EIP-7892.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "账户抽象",
+      "title": "EIP-8141：扩展特性集",
+      "note": "（pedrouid）提交，提议把 guarantor（让发送方验证可能失败的交易也能进入公共内存池的付款方原语，可安全支持 ERC-20 paymaster 还款）、灵活 nonce 等下游功能并入，把 EIP-8141 从一个新交易类型扩展成完整的原生 AA 升级。",
+      "url": "https://github.com/ethereum/EIPs/pull/11643",
+      "date": "2026-05-11",
+      "title_en": "EIP-8141: extended feature set",
+      "note_en": "(pedrouid), submitted, proposing to fold in downstream features such as guarantors (a payer primitive that makes transactions admissible to the public mempool even when sender validation may fail, enabling safe ERC-20 paymaster repayment) and flexible nonces, turning EIP-8141 from a new transaction type into a complete native AA upgrade.",
+      "topic_en": "Account abstraction"
+    },
+    {
+      "topic": "账户抽象",
+      "title": "growthepie：以太坊智能钱包升级数量创新高",
+      "note": "21:08。",
+      "url": "https://x.com/growthepie_eth/status/2053839543032291696",
+      "date": "2026-05-11",
+      "title_en": "growthepie: Ethereum smart wallet upgrades reach new highs",
+      "note_en": "21:08.",
+      "topic_en": "Account abstraction"
+    },
+    {
+      "topic": "账户抽象",
+      "title": "ERC-7730：加入 intent 可变性规范",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1738",
+      "date": "2026-05-11",
+      "title_en": "ERC-7730: add intent mutability specification",
+      "note_en": "Submitted.",
+      "topic_en": "Account abstraction"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWare：strkBTC 明天上线，Starknet 上比特币的隐私篇章开始",
+      "note": "20:57。",
+      "url": "https://x.com/StarkWareLtd/status/2053836858409267434",
+      "date": "2026-05-11",
+      "title_en": "StarkWare: strkBTC goes live tomorrow, and Bitcoin's privacy chapter begins on Starknet",
+      "note_en": "20:57.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "Eli Ben-Sasson：后量子钱包已经在 Starknet 上线",
+      "note": "19:25。",
+      "url": "https://x.com/EliBenSasson/status/2053813687358455842",
+      "date": "2026-05-11",
+      "title_en": "Eli Ben-Sasson: post-quantum wallets are already live on Starknet",
+      "note_en": "19:25.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "ameensol：还没有人做出 VPN 加隐私钱包的组合，每次付款前更换 IP 仍然很麻烦",
+      "note": "09:19。",
+      "url": "https://x.com/ameensol/status/2053661187540386054",
+      "date": "2026-05-11",
+      "title_en": "ameensol: no one has built a VPN plus privacy wallet combo, and changing your IP before each payment is still annoying",
+      "note_en": "09:19.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF 博客：Protocol 五月更新",
+      "note": "",
+      "url": "https://blog.ethereum.org/en/2026/05/11/protocol-update-may-26",
+      "date": "2026-05-11",
+      "title_en": "EF blog: Protocol update, May 2026",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：越来越看好直接用 Lean 去 vibe-code 重要的东西",
+      "note": "23:01。",
+      "url": "https://x.com/VitalikButerin/status/2053868202443100265",
+      "date": "2026-05-11",
+      "title_en": "Vitalik: increasingly bullish on vibe-coding the important things in Lean",
+      "note_en": "23:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：Amsterdam 的 SFI 8 项执行层 EIP",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11399",
+      "date": "2026-05-11",
+      "title_en": "EIP-7773: SFI 8 EL Amsterdam EIPs",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：迈向可移植的以太坊验证边界",
+      "note": "04:20。",
+      "url": "https://ethresear.ch/t/toward-a-portable-verification-boundary-for-ethereum/24847",
+      "date": "2026-05-11",
+      "title_en": "ethresear.ch: Toward a Portable Verification Boundary for Ethereum",
+      "note_en": "04:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #237 议程",
+      "note": "00:01；Glamsterdam Repricings #7 议程 22:27；ACDT #80 议程 22:31。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-237-may-21-2026/28485",
+      "date": "2026-05-11",
+      "title_en": "ACDE #237 agenda",
+      "note_en": "00:01; Glamsterdam Repricings #7 agenda, 22:27; ACDT #80 agenda, 22:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #7 议程",
+      "note": "ACDE #237 议程 00:01；Glamsterdam Repricings #7 议程 22:27；ACDT #80 议程 22:31。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-7-may-13-2026/28497",
+      "date": "2026-05-11",
+      "title_en": "Glamsterdam Repricings #7 agenda",
+      "note_en": "ACDE #237 agenda, 00:01; Glamsterdam Repricings #7 agenda, 22:27; ACDT #80 agenda, 22:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #80 议程",
+      "note": "ACDE #237 议程 00:01；Glamsterdam Repricings #7 议程 22:27；ACDT #80 议程 22:31。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-80-may-18-2026/28498",
+      "date": "2026-05-11",
+      "title_en": "ACDT #80 agenda",
+      "note_en": "ACDE #237 agenda, 00:01; Glamsterdam Repricings #7 agenda, 22:27; ACDT #80 agenda, 22:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：隐私是人们在任何市场环境下都需要的产品",
+      "note": "21:21。",
+      "url": "https://x.com/EliBenSasson/status/2053843024069701758",
+      "date": "2026-05-11",
+      "title_en": "Eli Ben-Sasson: privacy is a product people always need, regardless of market conditions",
+      "note_en": "21:21.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dcbuilder：Telegram 账号被盗，正在私信诈骗，请勿互动",
+      "note": "19:36。",
+      "url": "https://x.com/dcbuilder/status/2053816610373157200",
+      "date": "2026-05-11",
+      "title_en": "dcbuilder: my compromised Telegram account is DMing people, do not interact",
+      "note_en": "19:36.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8261-gas-limit-schedule/28494",
+    "credit": "Ethereum Magicians, EIP-8261: Gas limit schedule (bbusa)",
+    "local_path": "assets/2026-05-11.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8261: Gas limit schedule (bbusa)"
+  },
+  "keywords_en": [
+    "EIP-2780 splits 21000 by resource",
+    "EIP-8261 gas limit scheduled by hard forks",
+    "EIP-8141 extended feature set",
+    "smart wallet upgrades at a new high",
+    "strkBTC privacy launch preview"
+  ],
+  "summary_en": "misilva73 submitted an EIP-2780 rewrite that rebuilds the 21,000 base cost from primitives priced by resource. barnabasbusa submitted EIP-8261, which lets the block gas limit change only at hard forks and removes validator configuration and EIP-1559 elasticity. pedrouid submitted an extended feature set for EIP-8141 that aims to turn frame transactions into a complete native AA upgrade. The EF blog published the Protocol team's May update."
+}

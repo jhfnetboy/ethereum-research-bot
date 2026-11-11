@@ -1,0 +1,247 @@
+{
+  "date": "2026-05-13",
+  "keywords": [
+    "EIP-7851 改为基于 EIP-7702 的极简密钥停用",
+    "EIP-8141 任意 frame 原子批处理",
+    "EIP-8141 交易过期 frame",
+    "EIP-8130 gas 与验证器校验",
+    "EIP-8037 状态 gas 参数重新校准"
+  ],
+  "summary": "colinlyguo 把 EIP-7851 简化为基于 EIP-7702 的极简改动，去掉 7 天宽限期，用保留的 DEACTIVATE_ADDRESS 停用委托账户的 ECDSA 权限，并合并。EIP-8141 支持任意 frame 的原子批处理并合并，nerolation 提交交易过期 frame。EIP-8130 调整 gas 与验证器校验。EIP-8037 按 150M gas limit 和每年 120 GiB 状态增长重新校准参数。",
+  "items": [
+    {
+      "topic": "EOA 密钥停用：EIP-7851 与 EIP-8151",
+      "title": "EIP-7851：简化 ECDSA 权限停用",
+      "note": "（colinlyguo）提交并合并。根据论坛和核心开发者讨论，去掉 7 天宽限期，改为基于 EIP-7702 的极简协议改动：在现有 7702 授权流程中使用保留的 `DEACTIVATE_ADDRESS`，把有效委托从 `0xef0100 || delegate_address` 变为 `0xef0101 || delegate_address`。",
+      "url": "https://github.com/ethereum/EIPs/pull/11656",
+      "date": "2026-05-13",
+      "title_en": "EIP-7851: simplify ECDSA authority deactivation",
+      "note_en": "(colinlyguo), submitted and merged. Based on forum and core dev feedback, it removes the 7-day grace period and becomes a minimal EIP-7702 based protocol change: a reserved `DEACTIVATE_ADDRESS` in the existing 7702 authorization flow changes an active delegation from `0xef0100 || delegate_address` to `0xef0101 || delegate_address`.",
+      "topic_en": "EOA key deactivation: EIP-7851 and EIP-8151"
+    },
+    {
+      "topic": "EOA 密钥停用：EIP-7851 与 EIP-8151",
+      "title": "EIP-8151：让 ecRecover 与 EIP-7851 对齐",
+      "note": "（colinlyguo）提交并合并；EIP-7851 与 EIP-8151 的若干调整（lightclient）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11657",
+      "date": "2026-05-13",
+      "title_en": "EIP-8151: align ecRecover with EIP-7851",
+      "note_en": "(colinlyguo), submitted and merged; EIP-7851: a few tweaks to 7851 and 8151 (lightclient), submitted and merged.",
+      "topic_en": "EOA key deactivation: EIP-7851 and EIP-8151"
+    },
+    {
+      "topic": "EOA 密钥停用：EIP-7851 与 EIP-8151",
+      "title": "EIP-7851 与 EIP-8151 的若干调整",
+      "note": "EIP-8151：让 ecRecover 与 EIP-7851 对齐（colinlyguo）提交并合并；EIP-7851 与 EIP-8151 的若干调整（lightclient）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11661",
+      "date": "2026-05-13",
+      "title_en": "EIP-7851: a few tweaks to 7851 and 8151",
+      "note_en": "EIP-8151: align ecRecover with EIP-7851 (colinlyguo), submitted and merged; EIP-7851: a few tweaks to 7851 and 8151 (lightclient), submitted and merged.",
+      "topic_en": "EOA key deactivation: EIP-7851 and EIP-8151"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8141：支持任意 frame 的原子批处理",
+      "note": "（derekchiang）提交并合并，同时禁止公共内存池交易在验证前缀中使用批处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/11652",
+      "date": "2026-05-13",
+      "title_en": "EIP-8141: support atomic batching with any frames",
+      "note_en": "(derekchiang), submitted and merged, while disallowing batching in validation prefixes for public mempool transactions.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8141：加入用于交易过期的 EXPIRY_VERIFIER frame",
+      "note": "（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11662",
+      "date": "2026-05-13",
+      "title_en": "EIP-8141: add an EXPIRY_VERIFIER frame for tx expiry",
+      "note_en": "(nerolation), submitted.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8130：更新 gas 与验证器校验",
+      "note": "（chunter-cb）提交并合并：发送方认证和内在成本纳入签名的 `gas_limit`，限制付款方承担的风险；付款方认证单独计量 `payer_auth_cost`，付款方选择的验证器不会减少可用于调用的 gas。EIP-8130：加入 metadata sink 提交，仅供讨论。",
+      "url": "https://github.com/ethereum/EIPs/pull/11654",
+      "date": "2026-05-13",
+      "title_en": "EIP-8130: update gas and verifier validation",
+      "note_en": "(chunter-cb), submitted and merged: sender authentication and intrinsic costs move under the signed `gas_limit`, bounding payer exposure; payer authentication is metered separately as `payer_auth_cost`, so the payer's verifier choice cannot reduce gas available to calls. EIP-8130: add metadata sink, submitted for discussion only.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与 EIP-8130",
+      "title": "EIP-8130：加入 metadata sink",
+      "note": "EIP-8130：更新 gas 与验证器校验（chunter-cb）提交并合并：发送方认证和内在成本纳入签名的 `gas_limit`，限制付款方承担的风险；付款方认证单独计量 `payer_auth_cost`，付款方选择的验证器不会减少可用于调用的 gas。EIP-8130：加入 metadata sink 提交，仅供讨论。",
+      "url": "https://github.com/ethereum/EIPs/pull/11655",
+      "date": "2026-05-13",
+      "title_en": "EIP-8130: add metadata sink",
+      "note_en": "EIP-8130: update gas and verifier validation (chunter-cb), submitted and merged: sender authentication and intrinsic costs move under the signed `gas_limit`, bounding payer exposure; payer authentication is metered separately as `payer_auth_cost`, so the payer's verifier choice cannot reduce gas available to calls. EIP-8130: add metadata sink, submitted for discussion only.",
+      "topic_en": "Native AA: EIP-8141 and EIP-8130"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 和 EIP-8038",
+      "title": "EIP-8037：更新参数与 rationale",
+      "note": "（misilva73）合并：按 150M 参考区块 gas limit 与每年 120 GiB 状态增长目标重新校准，`CPSB` 从 1174 提高到 1530；`STATE_BYTES_PER_STORAGE_SET` 从 32 改为 64，`STATE_BYTES_PER_NEW_ACCOUNT` 从 112 改为 120，计入叶子的 key。",
+      "url": "https://github.com/ethereum/EIPs/pull/11616",
+      "date": "2026-05-13",
+      "title_en": "EIP-8037: update parameters and rationale",
+      "note_en": "(misilva73), merged: recalibrated to a 150M reference block gas limit and a 120 GiB per year state growth target, raising `CPSB` from 1174 to 1530; `STATE_BYTES_PER_STORAGE_SET` goes from 32 to 64 and `STATE_BYTES_PER_NEW_ACCOUNT` from 112 to 120 to include the leaf key.",
+      "topic_en": "Transactions and gas: EIP-8037 and EIP-8038"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 和 EIP-8038",
+      "title": "EIP-8037：修复 bal-devnet-6 暴露的问题",
+      "note": "合并，包括合约创建交易回滚时对新账户状态 gas 的退还规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/11611",
+      "date": "2026-05-13",
+      "title_en": "EIP-8037: fix bugs from bal-devnet-6",
+      "note_en": "Merged, including a refund rule for new-account state gas when a contract creation transaction reverts.",
+      "topic_en": "Transactions and gas: EIP-8037 and EIP-8038"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 和 EIP-8038",
+      "title": "EIP-8038：与 EIP-8037 对齐",
+      "note": "合并；EIP-8038：快速修复 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11623",
+      "date": "2026-05-13",
+      "title_en": "EIP-8038: align with 8037",
+      "note_en": "Merged; EIP-8038: quick fixes, submitted and merged.",
+      "topic_en": "Transactions and gas: EIP-8037 and EIP-8038"
+    },
+    {
+      "topic": "交易与 gas：EIP-8037 和 EIP-8038",
+      "title": "EIP-8038：快速修复",
+      "note": "EIP-8038：与 EIP-8037 对齐 合并；EIP-8038：快速修复 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11663",
+      "date": "2026-05-13",
+      "title_en": "EIP-8038: quick fixes",
+      "note_en": "EIP-8038: align with 8037, merged; EIP-8038: quick fixes, submitted and merged.",
+      "topic_en": "Transactions and gas: EIP-8037 and EIP-8038"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7683：围绕 resolver 重新设计",
+      "note": "（frangio）提交并合并；新 ERC：Regulated Agent Mandate 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1741",
+      "date": "2026-05-13",
+      "title_en": "ERC-7683: redesign around resolvers",
+      "note_en": "(frangio), submitted and merged; New ERC: Regulated Agent Mandate, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：Regulated Agent Mandate",
+      "note": "ERC-7683：围绕 resolver 重新设计（frangio）提交并合并；新 ERC：Regulated Agent Mandate 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1679",
+      "date": "2026-05-13",
+      "title_en": "New ERC: Regulated Agent Mandate",
+      "note_en": "ERC-7683: redesign around resolvers (frangio), submitted and merged; New ERC: Regulated Agent Mandate, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereum：过去一个月生态发布的 22 件事，以太坊月交易数创 7,280 万的新高",
+      "note": "00:58。",
+      "url": "https://x.com/ethereum/status/2054259905918362092",
+      "date": "2026-05-13",
+      "title_en": "ethereum: 22 things the ecosystem shipped over the past month, with monthly transactions at a record 72.8 million",
+      "note_en": "00:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Encrypt The Mempool #4 议程",
+      "note": "01:48；PQ Interop #39 议程 12:46；RPC Standards #26 议程 19:25。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-4-may-13-2026/28510",
+      "date": "2026-15-00",
+      "title_en": "Encrypt The Mempool #4 agenda",
+      "note_en": "01:48; PQ Interop #39 agenda, 12:46; RPC Standards #26 agenda, 19:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #39 议程",
+      "note": "Encrypt The Mempool #4 议程 01:48；PQ Interop #39 议程 12:46；RPC Standards #26 议程 19:25。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-39-may-13-2026/28517",
+      "date": "2026-15-00",
+      "title_en": "PQ Interop #39 agenda",
+      "note_en": "Encrypt The Mempool #4 agenda, 01:48; PQ Interop #39 agenda, 12:46; RPC Standards #26 agenda, 19:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #26 议程",
+      "note": "Encrypt The Mempool #4 议程 01:48；PQ Interop #39 议程 12:46；RPC Standards #26 议程 19:25。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-26-may-18-2026-15-00-utc/28522",
+      "date": "2026-15-00",
+      "title_en": "RPC Standards #26 agenda",
+      "note_en": "Encrypt The Mempool #4 agenda, 01:48; PQ Interop #39 agenda, 12:46; RPC Standards #26 agenda, 19:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8259：AI 代理身份、声誉与威胁登记（草案 v2）",
+      "note": "17:26。",
+      "url": "https://ethereum-magicians.org/t/erc-8259-ai-agent-identity-reputation-threat-registry-draft-v2-request-for-feedback/28521",
+      "date": "2026-05-13",
+      "title_en": "ERC-8259: AI Agent Identity, Reputation and Threat Registry (draft v2)",
+      "note_en": "17:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：为什么同构执行比碎片化扩容更好",
+      "note": "03:38。",
+      "url": "https://ethresear.ch/t/why-homogenizing-the-execution-of-the-world-computer-beats-scaling-through-fragmentation/24860",
+      "date": "2026-05-13",
+      "title_en": "ethresear.ch: Why Homogenizing the Execution of the World Computer Beats Scaling Through Fragmentation",
+      "note_en": "03:38.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：STRK20 带来隐私、良好体验和可组合性",
+      "note": "20:15。",
+      "url": "https://x.com/EliBenSasson/status/2054551228059701563",
+      "date": "2026-05-13",
+      "title_en": "Eli Ben-Sasson: STRK20 brings privacy, good UX and composability",
+      "note_en": "20:15.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：所有维护中的仓库只安装发布满 7 天的 npm 包版本，包括传递依赖",
+      "note": "20:02。",
+      "url": "https://x.com/pcaversaccio/status/2054547817650368918",
+      "date": "2026-05-13",
+      "title_en": "pcaversaccio: all actively maintained repos now only install npm package versions published at least 7 days ago, including transitive deps",
+      "note_en": "20:02.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dcbuilder：Telegram 账号已删除，将改用 Signal 和 X 私信",
+      "note": "13:39。",
+      "url": "https://x.com/dcbuilder/status/2054451376244109793",
+      "date": "2026-05-13",
+      "title_en": "dcbuilder: Telegram account deleted, moving to Signal and X DMs",
+      "note_en": "13:39.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11656",
+    "credit": "GitHub, ethereum/EIPs #11656 (colinlyguo)",
+    "local_path": "assets/2026-05-13.jpg",
+    "credit_en": "GitHub, ethereum/EIPs #11656 (colinlyguo)"
+  },
+  "keywords_en": [
+    "EIP-7851 becomes a minimal EIP-7702 based key deactivation",
+    "EIP-8141 atomic batching with any frames",
+    "EIP-8141 transaction expiry frame",
+    "EIP-8130 gas and verifier validation",
+    "EIP-8037 state gas recalibrated"
+  ],
+  "summary_en": "colinlyguo simplified EIP-7851 into a minimal EIP-7702 based change, removing the 7-day grace period and using a reserved DEACTIVATE_ADDRESS to deactivate the ECDSA authority of delegated accounts, and it was merged. EIP-8141 gained atomic batching with any frames, merged, and nerolation submitted a transaction expiry frame. EIP-8130 updated gas and verifier validation. EIP-8037 recalibrated its parameters to a 150M gas limit and 120 GiB per year of state growth."
+}
