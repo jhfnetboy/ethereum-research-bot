@@ -35,7 +35,7 @@
     {
       "topic": "原生 AA 与授权计费",
       "title": "新增 EIP：授权数据计入 EIP-7623 下限",
-      "note": "（nerolation）合并，1 月 22 日提交。",
+      "note": "（nerolation）1 月 22 日提交后合并。",
       "url": "https://github.com/ethereum/EIPs/pull/11148",
       "date": "2026-02-06",
       "title_en": "Add EIP: Add Auth Data to EIP-7623 Floor",
@@ -65,7 +65,7 @@
     {
       "topic": "协议与安全",
       "title": "新增 EIP：Block-in-Blobs（BiB）",
-      "note": "（kevaundray）合并，1 月 30 日提交；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
+      "note": "（kevaundray）1 月 30 日提交后合并；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
       "url": "https://github.com/ethereum/EIPs/pull/11212",
       "date": "2026-02-06",
       "title_en": "Add EIP: Block-in-Blobs (BiB)",
@@ -75,7 +75,7 @@
     {
       "topic": "协议与安全",
       "title": "新增 EIP：硬分叉元 EIP BPO1",
-      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）合并，1 月 30 日提交；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
+      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）1 月 30 日提交后合并；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
       "url": "https://github.com/ethereum/EIPs/pull/11164",
       "date": "2026-02-06",
       "title_en": "Add EIP: Hardfork Meta BPO1",
@@ -85,7 +85,7 @@
     {
       "topic": "协议与安全",
       "title": "Magicians：EIP-8148 验证者自定义提款阈值",
-      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）合并，1 月 30 日提交；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
+      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）1 月 30 日提交后合并；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
       "url": "https://ethereum-magicians.org/t/eip-8148-custom-sweep-threshold-for-validators/27669",
       "date": "2026-02-06",
       "title_en": "Magicians: EIP-8148 custom sweep threshold for validators",

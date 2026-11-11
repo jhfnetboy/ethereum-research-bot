@@ -54,7 +54,7 @@
     {
       "topic": "升级范围",
       "title": "nixorokish：以太坊博客发布 Checkpoint #8，回顾 Fusaka 与 BPO、Glamsterdam 进展与 Hegotá 功能遴选",
-      "note": "21:49；EIP-7773：依 ACDE #228 更新 CFI/DFI（joshdavislight）合并，1 月 15 日提交：EIP-7954 列为 CFI，EIP-7793、5920、8051、7971、8032、7907、7903 列为 DFI。",
+      "note": "21:49；EIP-7773：依 ACDE #228 更新 CFI/DFI（joshdavislight）1 月 15 日提交后合并：EIP-7954 列为 CFI，EIP-7793、5920、8051、7971、8032、7907、7903 列为 DFI。",
       "url": "https://x.com/nixorokish/status/2013625022133477768",
       "date": "2026-01-20",
       "title_en": "nixorokish: Checkpoint #8 is on the Ethereum blog, covering the Fusaka and BPO recap, Glamsterdam progress and Hegotá feature selection",
@@ -64,7 +64,7 @@
     {
       "topic": "升级范围",
       "title": "EIP-7773：依 ACDE #228 更新 CFI/DFI",
-      "note": "nixorokish：以太坊博客发布 Checkpoint #8，回顾 Fusaka 与 BPO、Glamsterdam 进展与 Hegotá 功能遴选 21:49；EIP-7773：依 ACDE #228 更新 CFI/DFI（joshdavislight）合并，1 月 15 日提交：EIP-7954 列为 CFI，EIP-7793、5920、8051、7971、8032、7907、7903 列为 DFI。",
+      "note": "nixorokish：以太坊博客发布 Checkpoint #8，回顾 Fusaka 与 BPO、Glamsterdam 进展与 Hegotá 功能遴选 21:49；EIP-7773：依 ACDE #228 更新 CFI/DFI（joshdavislight）1 月 15 日提交后合并：EIP-7954 列为 CFI，EIP-7793、5920、8051、7971、8032、7907、7903 列为 DFI。",
       "url": "https://github.com/ethereum/EIPs/pull/11092",
       "date": "2026-01-20",
       "title_en": "EIP-7773: CFI and DFI per ACDE #228",

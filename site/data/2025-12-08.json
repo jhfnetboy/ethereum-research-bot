@@ -1,0 +1,129 @@
+{
+  "date": "2025-12-08",
+  "keywords": [
+    "ACDT #63 blob 包含分析与 BAL Kurtosis 测试网",
+    "在屏蔽池中追踪不良资金",
+    "BPO1 次日上线",
+    "ERC-7930 互操作地址更新",
+    "量子威胁时间表分析",
+    "ethereum.org 应披露所有权与司法辖区"
+  ],
+  "summary": "ACDT #63：EF P2P 团队发布 blob 包含分析，BAL 的 Kurtosis 测试网以 4 个客户端运行了 13 个 epoch。MichaelConnor 提出在尽量保持隐私的前提下追踪进入屏蔽池的不良资金。raulvk 称 Fusaka 后 blob 需求激增，BPO1 将于 12 月 9 日上线。",
+  "items": [
+    {
+      "topic": "会议：ACDT #63",
+      "title": "ACDT #63",
+      "note": "21:00，据 Ethereal news #2：EF P2P 网络团队发布 blob 包含分析；Glamsterdam 的 BAL 在 Kurtosis 测试网以 4 个客户端运行了 13 个 epoch。",
+      "url": "https://forkcast.org/calls/acdt/063",
+      "date": "2025-12-08",
+      "title_en": "ACDT #63",
+      "note_en": "21:00, per Ethereal news #2: the EF P2P networking team shared a blob inclusion analysis; Glamsterdam's BAL ran 13 epochs on a Kurtosis testnet with 4 clients.",
+      "topic_en": "Calls: ACDT #63"
+    },
+    {
+      "topic": "会议：ACDT #63",
+      "title": "Ethereal news #2",
+      "note": "ACDT #63 21:00，据 Ethereal news #2：EF P2P 网络团队发布 blob 包含分析；Glamsterdam 的 BAL 在 Kurtosis 测试网以 4 个客户端运行了 13 个 epoch。",
+      "url": "https://ethereal.news/ethereal-news-weekly-2/",
+      "date": "2025-12-08",
+      "title_en": "Ethereal news #2",
+      "note_en": "ACDT #63, 21:00, per Ethereal news #2: the EF P2P networking team shared a blob inclusion analysis; Glamsterdam's BAL ran 13 epochs on a Kurtosis testnet with 4 clients.",
+      "topic_en": "Calls: ACDT #63"
+    },
+    {
+      "topic": "会议：ACDT #63",
+      "title": "blob 包含分析",
+      "note": "ACDT #63 21:00，据 Ethereal news #2：EF P2P 网络团队发布 blob 包含分析；Glamsterdam 的 BAL 在 Kurtosis 测试网以 4 个客户端运行了 13 个 epoch。",
+      "url": "https://ethp2p.github.io/notebooks/20251208/01-blob-inclusion.html",
+      "date": "2025-12-08",
+      "title_en": "blob inclusion analysis",
+      "note_en": "ACDT #63, 21:00, per Ethereal news #2: the EF P2P networking team shared a blob inclusion analysis; Glamsterdam's BAL ran 13 epochs on a Kurtosis testnet with 4 clients.",
+      "topic_en": "Calls: ACDT #63"
+    },
+    {
+      "topic": "隐私：屏蔽池中的资金追踪",
+      "title": "ethresear.ch：在屏蔽池中追踪不良资金",
+      "note": "（MichaelConnor）22:11：设想被盗资金进入隐私协议且一段时间未被发现，探讨如何在尽量保持其他用户隐私的前提下追踪这部分资金。",
+      "url": "https://ethresear.ch/t/tracing-bad-funds-through-shielded-pools/23624",
+      "date": "2025-12-08",
+      "title_en": "ethresear.ch: Tracing bad funds through shielded pools",
+      "note_en": "(MichaelConnor), 22:11: imagines stolen funds entering a privacy protocol unnoticed for a while, and explores tracing them while keeping other users as private as possible.",
+      "topic_en": "Privacy: tracing funds in shielded pools"
+    },
+    {
+      "topic": "Gas 与 blob",
+      "title": "raulvk：Fusaka 后 blob 需求激增，BPO1 将于 12 月 9 日把目标从 6 提到 10",
+      "note": "18:11。",
+      "url": "https://x.com/raulvk/status/1997987368427471133",
+      "date": "2025-12-08",
+      "title_en": "raulvk: blob demand surged after Fusaka, and BPO1 on December 9 lifts the target from 6 to 10",
+      "note_en": "18:11.",
+      "topic_en": "Gas and blobs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7930：与 clowestab 协作后的更新",
+      "note": "（0xteddybear）12 月 5 日提交后合并；Magicians：ethereum.org 应披露其所有权与司法辖区 12:38；ACDE #226 议程，12 月 18 日 23:22。",
+      "url": "https://github.com/ethereum/ERCs/pull/1395",
+      "date": "2025-12-08",
+      "title_en": "ERC-7930: changes after collaborating with clowestab",
+      "note_en": "(0xteddybear), merged after submission on December 5; Magicians: ethereum.org should disclose its ownership and jurisdiction, 12:38; ACDE #226 agenda, Dec 18, 23:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ethereum.org 应披露其所有权与司法辖区",
+      "note": "ERC-7930：与 clowestab 协作后的更新（0xteddybear）12 月 5 日提交后合并；Magicians：ethereum.org 应披露其所有权与司法辖区 12:38；ACDE #226 议程，12 月 18 日 23:22。",
+      "url": "https://ethereum-magicians.org/t/ethereum-org-should-disclose-its-ownership-and-jurisdiction/27001",
+      "date": "2025-12-08",
+      "title_en": "Magicians: ethereum.org should disclose its ownership and jurisdiction",
+      "note_en": "ERC-7930: changes after collaborating with clowestab (0xteddybear), merged after submission on December 5; Magicians: ethereum.org should disclose its ownership and jurisdiction, 12:38; ACDE #226 agenda, Dec 18, 23:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #226 议程，12 月 18 日",
+      "note": "ERC-7930：与 clowestab 协作后的更新（0xteddybear）12 月 5 日提交后合并；Magicians：ethereum.org 应披露其所有权与司法辖区 12:38；ACDE #226 议程，12 月 18 日 23:22。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-226-dec-18-2025/27004",
+      "date": "2025-12-08",
+      "title_en": "ACDE #226 agenda, Dec 18",
+      "note_en": "ERC-7930: changes after collaborating with clowestab (0xteddybear), merged after submission on December 5; Magicians: ethereum.org should disclose its ownership and jurisdiction, 12:38; ACDE #226 agenda, Dec 18, 23:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：量子计算时间表不确定，关键是让紧迫程度与实际威胁匹配",
+      "note": "02:11；fede_intern：谈以太坊路线图之争与 ePBS 04:24。",
+      "url": "https://x.com/tcoratger/status/1997745725619491177",
+      "date": "2025-12-08",
+      "title_en": "tcoratger: quantum timelines are uncertain, so match urgency to real threats",
+      "note_en": "02:11; fede_intern: on the Ethereum roadmap debate and ePBS, 04:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：谈以太坊路线图之争与 ePBS",
+      "note": "tcoratger：量子计算时间表不确定，关键是让紧迫程度与实际威胁匹配 02:11；fede_intern：谈以太坊路线图之争与 ePBS 04:24。",
+      "url": "https://x.com/fede_intern/status/1997779214561579076",
+      "date": "2025-12-08",
+      "title_en": "fede_intern: on the Ethereum roadmap debate and ePBS",
+      "note_en": "Tcoratger: quantum timelines are uncertain, so match urgency to real threats, 02:11; fede_intern: on the Ethereum roadmap debate and ePBS, 04:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/tracing-bad-funds-through-shielded-pools/23624",
+    "credit": "ethresear.ch, Tracing bad funds through shielded pools",
+    "local_path": "assets/2025-12-08.jpg",
+    "credit_en": "ethresear.ch, Tracing bad funds through shielded pools"
+  },
+  "keywords_en": [
+    "ACDT #63 blob inclusion analysis and a BAL Kurtosis testnet",
+    "tracing bad funds through shielded pools",
+    "BPO1 lands the next day",
+    "ERC-7930 interoperable address update",
+    "a quantum threat timeline analysis",
+    "ethereum.org should disclose ownership and jurisdiction"
+  ],
+  "summary_en": "ACDT #63: the EF P2P team shared a blob inclusion analysis, and a BAL Kurtosis testnet ran 13 epochs with 4 clients. MichaelConnor proposed tracing bad funds that entered a shielded pool while keeping as much private as possible. raulvk said blob demand surged after Fusaka and BPO1 lands on December 9."
+}

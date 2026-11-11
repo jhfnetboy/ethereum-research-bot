@@ -1,0 +1,121 @@
+{
+  "date": "2025-11-18",
+  "keywords": [
+    "BAL 改变以太坊扩容路径",
+    "SEAL 发布运营安全成熟度 RFC",
+    "ERC-7780 新增模块类型提交",
+    "ERC-7730 支持互操作地址",
+    "Anoma 协议适配器上线",
+    "合约事件订阅 EIP",
+    "Kohaku 用户隐私路线"
+  ],
+  "summary": "protolambda 称 EIP-7928 BAL 将改变以太坊扩容路径，让更简单的验证基础设施重新可行。SEAL 发布 RFC，为协议提供标准化的运营安全成熟度证明。leekt 提交 ERC-7780 新增模块类型。Anoma 协议适配器部署到以太坊主网。",
+  "items": [
+    {
+      "topic": "Gas：BAL",
+      "title": "protolambda：EIP-7928 BAL 将改变以太坊扩容轨迹，让非 Rust 客户端、简单状态库与静态 MEV 重新可行",
+      "note": "01:14。",
+      "url": "https://x.com/protolambda/status/1990483672542425213",
+      "date": "2025-11-18",
+      "title_en": "protolambda: EIP-7928 BAL changes Ethereum's scaling trajectory, reviving non-Rust clients, simple state DBs and static MEV",
+      "note_en": "01:14.",
+      "topic_en": "Gas: BAL"
+    },
+    {
+      "topic": "账户与交易安全",
+      "title": "ERC-7780：新增模块类型 8、9、10",
+      "note": "（leekt）提交；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；_SEAL_Org：发布 RFC，为协议提供标准化的运营安全成熟度证明 23:01。",
+      "url": "https://github.com/ethereum/ERCs/pull/1355",
+      "date": "2025-11-18",
+      "title_en": "ERC-7780: add module types 8, 9 and 10",
+      "note_en": "(leekt), submitted; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; _SEAL_Org: an RFC giving protocols a standard way to show operational security maturity, 23:01.",
+      "topic_en": "Account and transaction safety"
+    },
+    {
+      "topic": "账户与交易安全",
+      "title": "ERC-7730：支持 ERC-7930 互操作地址格式",
+      "note": "ERC-7780：新增模块类型 8、9、10（leekt）提交；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；_SEAL_Org：发布 RFC，为协议提供标准化的运营安全成熟度证明 23:01。",
+      "url": "https://github.com/ethereum/ERCs/pull/1357",
+      "date": "2025-11-18",
+      "title_en": "ERC-7730: add the ERC-7930 interoperable address format",
+      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), submitted; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; _SEAL_Org: an RFC giving protocols a standard way to show operational security maturity, 23:01.",
+      "topic_en": "Account and transaction safety"
+    },
+    {
+      "topic": "账户与交易安全",
+      "title": "_SEAL_Org：发布 RFC，为协议提供标准化的运营安全成熟度证明",
+      "note": "ERC-7780：新增模块类型 8、9、10（leekt）提交；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；_SEAL_Org：发布 RFC，为协议提供标准化的运营安全成熟度证明 23:01。",
+      "url": "https://x.com/_SEAL_Org/status/1990812661064344033",
+      "date": "2025-11-18",
+      "title_en": "_SEAL_Org: an RFC giving protocols a standard way to show operational security maturity",
+      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), submitted; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; _SEAL_Org: an RFC giving protocols a standard way to show operational security maturity, 23:01.",
+      "topic_en": "Account and transaction safety"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Anoma 协议适配器已在以太坊上线",
+      "note": "（cwgoes）21:45；新增 EIP：合约事件订阅（bitcoinbrisbane）提交；ERC-7866 进入 Review（anistark）提交。",
+      "url": "https://ethresear.ch/t/the-anoma-protocol-adapter-is-live-on-ethereum/23466",
+      "date": "2025-11-18",
+      "title_en": "ethresear.ch: The Anoma protocol adapter is live on Ethereum",
+      "note_en": "(cwgoes), 21:45; Add EIP: Contract Event Subscription (bitcoinbrisbane), submitted; ERC-7866: move to Review (anistark), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：合约事件订阅",
+      "note": "ethresear.ch：Anoma 协议适配器已在以太坊上线（cwgoes）21:45；新增 EIP：合约事件订阅（bitcoinbrisbane）提交；ERC-7866 进入 Review（anistark）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10807",
+      "date": "2025-11-18",
+      "title_en": "Add EIP: Contract Event Subscription",
+      "note_en": "Ethresear.ch: The Anoma protocol adapter is live on Ethereum (cwgoes), 21:45; Add EIP: Contract Event Subscription (bitcoinbrisbane), submitted; ERC-7866: move to Review (anistark), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7866 进入 Review",
+      "note": "ethresear.ch：Anoma 协议适配器已在以太坊上线（cwgoes）21:45；新增 EIP：合约事件订阅（bitcoinbrisbane）提交；ERC-7866 进入 Review（anistark）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1358",
+      "date": "2025-11-18",
+      "title_en": "ERC-7866: move to Review",
+      "note_en": "Ethresear.ch: The Anoma protocol adapter is live on Ethereum (cwgoes), 21:45; Add EIP: Contract Event Subscription (bitcoinbrisbane), submitted; ERC-7866: move to Review (anistark), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：与 kassandraETH 讨论保护用户隐私与 Kohaku 路线图",
+      "note": "01:46；tcoratger：解读 Lean Ethereum，从执行转向验证 23:39。",
+      "url": "https://x.com/ameensol/status/1990491862319444300",
+      "date": "2025-11-18",
+      "title_en": "ameensol: met kassandraETH on protecting user privacy and the Kohaku roadmap",
+      "note_en": "01:46; tcoratger: Lean Ethereum, from execution to verification, 23:39.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：解读 Lean Ethereum，从执行转向验证",
+      "note": "ameensol：与 kassandraETH 讨论保护用户隐私与 Kohaku 路线图 01:46；tcoratger：解读 Lean Ethereum，从执行转向验证 23:39。",
+      "url": "https://x.com/tcoratger/status/1990822161192202418",
+      "date": "2025-11-18",
+      "title_en": "tcoratger: Lean Ethereum, from execution to verification",
+      "note_en": "Ameensol: met kassandraETH on protecting user privacy and the Kohaku roadmap, 01:46; tcoratger: Lean Ethereum, from execution to verification, 23:39.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/the-anoma-protocol-adapter-is-live-on-ethereum/23466",
+    "credit": "ethresear.ch, The Anoma protocol adapter is live on Ethereum",
+    "local_path": "assets/2025-11-18.jpg",
+    "credit_en": "ethresear.ch, The Anoma protocol adapter is live on Ethereum"
+  },
+  "keywords_en": [
+    "BAL changes Ethereum's scaling path",
+    "SEAL issues an operational security maturity RFC",
+    "ERC-7780 module types submitted",
+    "ERC-7730 supports interoperable addresses",
+    "the Anoma protocol adapter goes live",
+    "a contract event subscription EIP",
+    "the Kohaku user privacy roadmap"
+  ],
+  "summary_en": "protolambda said EIP-7928 BAL will change Ethereum's scaling path and make simpler verifier infrastructure viable again. SEAL issued an RFC giving protocols a standard way to show operational security maturity. leekt submitted new ERC-7780 module types. The Anoma protocol adapter deployed to Ethereum mainnet."
+}

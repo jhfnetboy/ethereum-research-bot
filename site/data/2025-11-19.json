@@ -1,0 +1,121 @@
+{
+  "date": "2025-11-19",
+  "keywords": [
+    "ERC-8086 隐私代币",
+    "ePBS 动态罚金",
+    "状态增长情景与重定价影响",
+    "公共物品资助三大问题",
+    "合规屏蔽池即将到来",
+    "基于 ERC-4337 的下一代账户演示",
+    "ACDC #170 议程"
+  ],
+  "summary": "0xRowan 提出 ERC-8086 隐私代币，为以太坊上的隐私代币定义最小接口。misilva73 分析提高 gas 上限下的状态增长情景及重定价的影响。jcschlegel 提出 ePBS 动态罚金。ameensol 宣布可以继续资助隐私开发者，合规屏蔽池即将推出。",
+  "items": [
+    {
+      "topic": "隐私：隐私代币标准",
+      "title": "Magicians：ERC-8086 隐私代币",
+      "note": "（zero）15:23：为以太坊上的隐私代币定义最小接口；新增 ERC：双模同质化代币（0xRowan）提交；ameensol：合规屏蔽池即将推出 02:03。",
+      "url": "https://ethereum-magicians.org/t/erc-8086-privacy-token/26623",
+      "date": "2025-11-19",
+      "title_en": "Magicians: ERC-8086 Privacy Token",
+      "note_en": "(zero), 15:23: a minimal interface for privacy tokens on Ethereum; Add ERC: Dual-Mode Fungible Tokens (0xRowan), submitted; ameensol: compliant shielded pools soon, 02:03.",
+      "topic_en": "Privacy: a privacy token standard"
+    },
+    {
+      "topic": "隐私：隐私代币标准",
+      "title": "新增 ERC：双模同质化代币",
+      "note": "Magicians：ERC-8086 隐私代币（zero）15:23：为以太坊上的隐私代币定义最小接口；新增 ERC：双模同质化代币（0xRowan）提交；ameensol：合规屏蔽池即将推出 02:03。",
+      "url": "https://github.com/ethereum/ERCs/pull/1359",
+      "date": "2025-11-19",
+      "title_en": "Add ERC: Dual-Mode Fungible Tokens",
+      "note_en": "Magicians: ERC-8086 Privacy Token (zero), 15:23: a minimal interface for privacy tokens on Ethereum; Add ERC: Dual-Mode Fungible Tokens (0xRowan), submitted; ameensol: compliant shielded pools soon, 02:03.",
+      "topic_en": "Privacy: a privacy token standard"
+    },
+    {
+      "topic": "隐私：隐私代币标准",
+      "title": "ameensol：合规屏蔽池即将推出",
+      "note": "Magicians：ERC-8086 隐私代币（zero）15:23：为以太坊上的隐私代币定义最小接口；新增 ERC：双模同质化代币（0xRowan）提交；ameensol：合规屏蔽池即将推出 02:03。",
+      "url": "https://x.com/ameensol/status/1990858470518895072",
+      "date": "2025-11-19",
+      "title_en": "ameensol: compliant shielded pools soon",
+      "note_en": "Magicians: ERC-8086 Privacy Token (zero), 15:23: a minimal interface for privacy tokens on Ethereum; Add ERC: Dual-Mode Fungible Tokens (0xRowan), submitted; ameensol: compliant shielded pools soon, 02:03.",
+      "topic_en": "Privacy: a privacy token standard"
+    },
+    {
+      "topic": "Gas：状态增长",
+      "title": "ethresear.ch：状态增长情景与重定价的影响",
+      "note": "（misilva73）23:29：分析 gas 上限提高后每个全节点的数据库规模如何演变，以及调整状态字节有效 gas 成本的作用。",
+      "url": "https://ethresear.ch/t/state-growth-scenarios-and-the-impact-of-repricings/23476",
+      "date": "2025-11-19",
+      "title_en": "ethresear.ch: State growth scenarios and the impact of repricings",
+      "note_en": "(misilva73), 23:29: how full node database size evolves under higher gas limits and what repricing state bytes does.",
+      "topic_en": "Gas: state growth"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：ePBS 的动态罚金",
+      "note": "（jcschlegel）17:30；ethresear.ch：以太坊公共物品资助的三大问题 17:47；ACDC #170 议程，11 月 27 日 08:28。",
+      "url": "https://ethresear.ch/t/dynamic-penalties-for-epbs/23472",
+      "date": "2025-11-19",
+      "title_en": "ethresear.ch: Dynamic penalties for ePBS",
+      "note_en": "(jcschlegel), 17:30; ethresear.ch: Three fundamental problems in Ethereum public goods funding, 17:47; ACDC #170 agenda, Nov 27, 08:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊公共物品资助的三大问题",
+      "note": "ethresear.ch：ePBS 的动态罚金（jcschlegel）17:30；ethresear.ch：以太坊公共物品资助的三大问题 17:47；ACDC #170 议程，11 月 27 日 08:28。",
+      "url": "https://ethresear.ch/t/three-fundamental-problems-in-ethereum-public-goods-funding-a-research-agenda/23474",
+      "date": "2025-11-19",
+      "title_en": "ethresear.ch: Three fundamental problems in Ethereum public goods funding",
+      "note_en": "Ethresear.ch: Dynamic penalties for ePBS (jcschlegel), 17:30; ethresear.ch: Three fundamental problems in Ethereum public goods funding, 17:47; ACDC #170 agenda, Nov 27, 08:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #170 议程，11 月 27 日",
+      "note": "ethresear.ch：ePBS 的动态罚金（jcschlegel）17:30；ethresear.ch：以太坊公共物品资助的三大问题 17:47；ACDC #170 议程，11 月 27 日 08:28。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-170-november-27-2025/26620",
+      "date": "2025-11-19",
+      "title_en": "ACDC #170 agenda, Nov 27",
+      "note_en": "Ethresear.ch: Dynamic penalties for ePBS (jcschlegel), 17:30; ethresear.ch: Three fundamental problems in Ethereum public goods funding, 17:47; ACDC #170 agenda, Nov 27, 08:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：演示基于 ERC-4337 的下一代以太坊账户，在不牺牲自托管的前提下大幅改善体验",
+      "note": "06:15；ethereum：以太坊为隐私而生 23:40。",
+      "url": "https://x.com/zengjiajun_eth/status/1990921814885679401",
+      "date": "2025-11-19",
+      "title_en": "zengjiajun_eth: demo of a next generation ERC-4337 account that greatly improves UX without giving up self custody",
+      "note_en": "06:15; ethereum: Ethereum is for privacy, 23:40.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：以太坊为隐私而生",
+      "note": "zengjiajun_eth：演示基于 ERC-4337 的下一代以太坊账户，在不牺牲自托管的前提下大幅改善体验 06:15；ethereum：以太坊为隐私而生 23:40。",
+      "url": "https://x.com/ethereum/status/1991184712304320566",
+      "date": "2025-11-19",
+      "title_en": "ethereum: Ethereum is for privacy",
+      "note_en": "Zengjiajun_eth: demo of a next generation ERC-4337 account that greatly improves UX without giving up self custody, 06:15; ethereum: Ethereum is for privacy, 23:40.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8086-privacy-token/26623",
+    "credit": "Ethereum Magicians, ERC-8086 Privacy Token",
+    "local_path": "assets/2025-11-19.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8086 Privacy Token"
+  },
+  "keywords_en": [
+    "ERC-8086 privacy token",
+    "dynamic penalties for ePBS",
+    "state growth scenarios and repricing impact",
+    "three problems in public goods funding",
+    "compliant shielded pools coming",
+    "a next generation ERC-4337 account demo",
+    "the ACDC #170 agenda"
+  ],
+  "summary_en": "0xRowan proposed ERC-8086, a minimal interface for privacy tokens on Ethereum. misilva73 analyzed state growth under higher gas limits and the impact of repricing. jcschlegel proposed dynamic penalties for ePBS. ameensol said they can keep funding privacy developers, with compliant shielded pools coming."
+}

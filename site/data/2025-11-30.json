@@ -1,0 +1,87 @@
+{
+  "date": "2025-11-30",
+  "keywords": [
+    "Web3Privacy Now 隐私项目浏览器征求反馈",
+    "Vitalik 希望 Zcash 抵制代币投票",
+    "按当前 gas 价以太坊一年销毁量等于一天发行量",
+    "ethlambda 共识客户端",
+    "Lantern 达到 devnet1"
+  ],
+  "summary": "Web3PrivacyNow 发布隐私项目浏览器，为各类隐私项目打分并征求社区反馈。koeppelmann 指出按当前 gas 价，以太坊一年的销毁量只相当于一天的发行量，提高需求比扩容更重要。周日动态较少。",
+  "items": [
+    {
+      "topic": "隐私：项目浏览器",
+      "title": "Magicians：征求反馈，Web3Privacy Now 浏览器",
+      "note": "（WanderingHandmaiden）10:00：为各类隐私项目提供评分指标的仪表板。",
+      "url": "https://ethereum-magicians.org/t/feedback-requested-web3privacy-now-explorer/26777",
+      "date": "2025-11-30",
+      "title_en": "Magicians: feedback requested, Web3Privacy Now Explorer",
+      "note_en": "(WanderingHandmaiden), 10:00: a dashboard with scoring metrics for all kinds of privacy projects.",
+      "topic_en": "Privacy: a project explorer"
+    },
+    {
+      "topic": "Gas：费用与供给",
+      "title": "koeppelmann：按当前 gas 价，以太坊一年销毁量等于一天发行量，提高需求比扩容更重要",
+      "note": "22:03；fede_intern：以太坊若持续提高 gas 上限并在 L1 加入隐私就赢了 08:22。",
+      "url": "https://x.com/koeppelmann/status/1995146580148854824",
+      "date": "2025-11-30",
+      "title_en": "koeppelmann: at current gas prices Ethereum burns in a year what it issues in a day, so demand matters even more than scaling",
+      "note_en": "22:03; fede_intern: if Ethereum keeps raising the gas limit and adds L1 privacy, it is game over, 08:22.",
+      "topic_en": "Gas: fees and supply"
+    },
+    {
+      "topic": "Gas：费用与供给",
+      "title": "fede_intern：以太坊若持续提高 gas 上限并在 L1 加入隐私就赢了",
+      "note": "koeppelmann：按当前 gas 价，以太坊一年销毁量等于一天发行量，提高需求比扩容更重要 22:03；fede_intern：以太坊若持续提高 gas 上限并在 L1 加入隐私就赢了 08:22。",
+      "url": "https://x.com/fede_intern/status/1994940077991235653",
+      "date": "2025-11-30",
+      "title_en": "fede_intern: if Ethereum keeps raising the gas limit and adds L1 privacy, it is game over",
+      "note_en": "Koeppelmann: at current gas prices Ethereum burns in a year what it issues in a day, so demand matters even more than scaling, 22:03; fede_intern: if Ethereum keeps raising the gas limit and adds L1 privacy, it is game over, 08:22.",
+      "topic_en": "Gas: fees and supply"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：希望 Zcash 抵制代币投票",
+      "note": "16:31；fede_intern：class_lambda 推出新的 leanEthereum 共识客户端 01:58；zeamETH：PierTwo 的 Lantern 达到 devnet1 14:11。",
+      "url": "https://x.com/VitalikButerin/status/1995063062165135675",
+      "date": "2025-11-30",
+      "title_en": "VitalikButerin: hopes Zcash resists token voting",
+      "note_en": "16:31; fede_intern: class_lambda's new leanEthereum consensus client, 01:58; zeamETH: PierTwo's Lantern reaches devnet1, 14:11.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：class_lambda 推出新的 leanEthereum 共识客户端",
+      "note": "VitalikButerin：希望 Zcash 抵制代币投票 16:31；fede_intern：class_lambda 推出新的 leanEthereum 共识客户端 01:58；zeamETH：PierTwo 的 Lantern 达到 devnet1 14:11。",
+      "url": "https://x.com/fede_intern/status/1994843420880203867",
+      "date": "2025-11-30",
+      "title_en": "fede_intern: class_lambda's new leanEthereum consensus client",
+      "note_en": "VitalikButerin: hopes Zcash resists token voting, 16:31; fede_intern: class_lambda's new leanEthereum consensus client, 01:58; zeamETH: PierTwo's Lantern reaches devnet1, 14:11.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zeamETH：PierTwo 的 Lantern 达到 devnet1",
+      "note": "VitalikButerin：希望 Zcash 抵制代币投票 16:31；fede_intern：class_lambda 推出新的 leanEthereum 共识客户端 01:58；zeamETH：PierTwo 的 Lantern 达到 devnet1 14:11。",
+      "url": "https://x.com/zeamETH/status/1995027970457833549",
+      "date": "2025-11-30",
+      "title_en": "zeamETH: PierTwo's Lantern reaches devnet1",
+      "note_en": "VitalikButerin: hopes Zcash resists token voting, 16:31; fede_intern: class_lambda's new leanEthereum consensus client, 01:58; zeamETH: PierTwo's Lantern reaches devnet1, 14:11.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/feedback-requested-web3privacy-now-explorer/26777",
+    "credit": "Ethereum Magicians, Web3Privacy Now Explorer",
+    "local_path": "assets/2025-11-30.jpg",
+    "credit_en": "Ethereum Magicians, Web3Privacy Now Explorer"
+  },
+  "keywords_en": [
+    "Web3Privacy Now's privacy project explorer seeks feedback",
+    "Vitalik hopes Zcash resists token voting",
+    "at current gas prices Ethereum burns in a year what it issues in a day",
+    "the ethlambda consensus client",
+    "Lantern reaches devnet1"
+  ],
+  "summary_en": "Web3PrivacyNow released a privacy project explorer that scores privacy projects and asked for feedback. koeppelmann noted that at current gas prices Ethereum burns in a year what it issues in a day, so demand matters even more than scaling. A quiet Sunday."
+}

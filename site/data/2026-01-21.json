@@ -13,7 +13,7 @@
     {
       "topic": "Gas：EIP-8037 进入 CFI",
       "title": "EIP-7773：EIP-8037 列为 CFI",
-      "note": "（nixorokish）合并，1 月 20 日提交；EIP-7778：明确用户 gas 计算保持不变（yperbasis）提交并合并，恢复在 PR 11099 中被删除的用户 gas 计算一节。",
+      "note": "（nixorokish）1 月 20 日提交后合并；EIP-7778：明确用户 gas 计算保持不变（yperbasis）提交并合并，恢复在 PR 11099 中被删除的用户 gas 计算一节。",
       "url": "https://github.com/ethereum/EIPs/pull/11117",
       "date": "2026-01-21",
       "title_en": "EIP-7773: CFI EIP-8037",
@@ -23,7 +23,7 @@
     {
       "topic": "Gas：EIP-8037 进入 CFI",
       "title": "EIP-7778：明确用户 gas 计算保持不变",
-      "note": "EIP-7773：EIP-8037 列为 CFI（nixorokish）合并，1 月 20 日提交；EIP-7778：明确用户 gas 计算保持不变（yperbasis）提交并合并，恢复在 PR 11099 中被删除的用户 gas 计算一节。",
+      "note": "EIP-7773：EIP-8037 列为 CFI（nixorokish）1 月 20 日提交后合并；EIP-7778：明确用户 gas 计算保持不变（yperbasis）提交并合并，恢复在 PR 11099 中被删除的用户 gas 计算一节。",
       "url": "https://github.com/ethereum/EIPs/pull/11138",
       "date": "2026-01-21",
       "title_en": "EIP-7778: clarify that user gas accounting remains unchanged",

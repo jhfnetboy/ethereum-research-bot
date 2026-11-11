@@ -1,0 +1,88 @@
+{
+  "date": "2025-11-15",
+  "keywords": [
+    "Devcon 开幕",
+    "Fusaka 12 月 3 日上线",
+    "Glamsterdam 次要功能挑选中",
+    "OMaps 加 coSNARKs 实现完全隐私链",
+    "ERC-7730 合并改动提交",
+    "ethrex 客户端进展"
+  ],
+  "summary": "nixorokish 的治理更新：Devcon 开幕，Fusaka 将于 12 月 3 日上线（UTC），Glamsterdam 正在挑选次要功能。recmo 称 OMaps 加 coSNARKs 即可在账户模型下实现完全隐私的区块链，无需 nullifier 与 note。",
+  "items": [
+    {
+      "topic": "隐私：无 note 的隐私执行",
+      "title": "recmo：OMaps 加 coSNARKs 即可实现完全隐私的区块链，沿用熟悉的账户模型，能做 Solidity 能做的一切",
+      "note": "22:12。",
+      "url": "https://x.com/recmo/status/1989713040866988509",
+      "date": "2025-11-15",
+      "title_en": "recmo: OMaps plus coSNARKs are all you need for a fully private blockchain in the familiar account model, doing anything Solidity can",
+      "note_en": "22:12.",
+      "topic_en": "Privacy: private execution without notes"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nixorokish：治理更新，Devcon 开幕，Fusaka 12 月 3 日上线，Glamsterdam 正在挑选次要功能",
+      "note": "17:43；ERC-7730：合并改动（lcastillo-ledger）提交；EIP-4762：修复存储辅助函数调用（Doryu001）提交。",
+      "url": "https://x.com/nixorokish/status/1989645371300061688",
+      "date": "2025-11-15",
+      "title_en": "nixorokish: governance update, Devcon opens, Fusaka live Dec 3, Glamsterdam minor features being picked",
+      "note_en": "17:43; ERC-7730: combined changes (lcastillo-ledger), submitted; EIP-4762: fix storage helper invocation (Doryu001), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：合并改动",
+      "note": "nixorokish：治理更新，Devcon 开幕，Fusaka 12 月 3 日上线，Glamsterdam 正在挑选次要功能 17:43；ERC-7730：合并改动（lcastillo-ledger）提交；EIP-4762：修复存储辅助函数调用（Doryu001）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1350",
+      "date": "2025-11-15",
+      "title_en": "ERC-7730: combined changes",
+      "note_en": "Nixorokish: governance update, Devcon opens, Fusaka live Dec 3, Glamsterdam minor features being picked, 17:43; ERC-7730: combined changes (lcastillo-ledger), submitted; EIP-4762: fix storage helper invocation (Doryu001), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-4762：修复存储辅助函数调用",
+      "note": "nixorokish：治理更新，Devcon 开幕，Fusaka 12 月 3 日上线，Glamsterdam 正在挑选次要功能 17:43；ERC-7730：合并改动（lcastillo-ledger）提交；EIP-4762：修复存储辅助函数调用（Doryu001）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10798",
+      "date": "2025-11-15",
+      "title_en": "EIP-4762: fix storage helper invocation",
+      "note_en": "Nixorokish: governance update, Devcon opens, Fusaka live Dec 3, Glamsterdam minor features being picked, 17:43; ERC-7730: combined changes (lcastillo-ledger), submitted; EIP-4762: fix storage helper invocation (Doryu001), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：class_lambda 的 ethrex 客户端 L1 部分约 6 万行代码",
+      "note": "21:42；potuz_eth：推荐 sina_mahmoodi 作为 EIP 推动者 07:29。",
+      "url": "https://x.com/fede_intern/status/1989705688424062993",
+      "date": "2025-11-15",
+      "title_en": "fede_intern: class_lambda's ethrex client has about 60k lines for the L1",
+      "note_en": "21:42; potuz_eth: recommends sina_mahmoodi as an EIP champion, 07:29.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "potuz_eth：推荐 sina_mahmoodi 作为 EIP 推动者",
+      "note": "fede_intern：class_lambda 的 ethrex 客户端 L1 部分约 6 万行代码 21:42；potuz_eth：推荐 sina_mahmoodi 作为 EIP 推动者 07:29。",
+      "url": "https://x.com/potuz_eth/status/1989490938008236099",
+      "date": "2025-11-15",
+      "title_en": "potuz_eth: recommends sina_mahmoodi as an EIP champion",
+      "note_en": "Fede_intern: class_lambda's ethrex client has about 60k lines for the L1, 21:42; potuz_eth: recommends sina_mahmoodi as an EIP champion, 07:29.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/ERCs/pull/1350",
+    "credit": "GitHub, ethereum/ERCs PR 1350",
+    "credit_en": "GitHub, ethereum/ERCs PR 1350"
+  },
+  "keywords_en": [
+    "Devcon opens",
+    "Fusaka goes live Dec 3",
+    "Glamsterdam minor features being picked",
+    "OMaps plus coSNARKs for a fully private chain",
+    "ERC-7730 combined changes submitted",
+    "ethrex client progress"
+  ],
+  "summary_en": "nixorokish's governance update: Devcon opened, Fusaka goes live Dec 3 (UTC), and minor Glamsterdam features are being chosen. recmo said OMaps plus coSNARKs can build a fully private chain in the account model without nullifiers or notes."
+}

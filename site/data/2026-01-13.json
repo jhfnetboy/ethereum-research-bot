@@ -78,7 +78,7 @@
       "url": "https://github.com/ethereum/ERCs/pull/1459",
       "date": "2026-01-13",
       "title_en": "ERC-7888: generalize to multiple state commitment schemes",
-      "note_en": "(luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 23, 2025.",
+      "note_en": "(luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 2, 20253, 2025.",
       "topic_en": "Other updates"
     },
     {
@@ -88,7 +88,7 @@
       "url": "https://github.com/ethereum/ERCs/pull/1412",
       "date": "2026-01-13",
       "title_en": "Add ERC: ENS Trust Registry for Agent Coordination",
-      "note_en": "ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 23, 2025.",
+      "note_en": "ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 2, 20253, 2025.",
       "topic_en": "Other updates"
     },
     {
@@ -98,7 +98,7 @@
       "url": "https://github.com/ethereum/ERCs/pull/1223",
       "date": "2026-01-13",
       "title_en": "ERC-7893: move to Review",
-      "note_en": "ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 23, 2025.",
+      "note_en": "ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 2, 20253, 2025.",
       "topic_en": "Other updates"
     },
     {

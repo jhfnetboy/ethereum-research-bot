@@ -1,0 +1,157 @@
+{
+  "date": "2025-12-04",
+  "keywords": [
+    "Fusaka 主网上线并最终确定",
+    "PeerDAS 即分片",
+    "Prysm 主网问题",
+    "ACDE #225 EIP-7708",
+    "7778",
+    "7843",
+    "8024 与 8070 列为 CFI",
+    "EIP-7819 SETDELEGATE",
+    "EIP-7932 与 EIP-8030 P256 交易被拒",
+    "下一升级元 EIP 合并"
+  ],
+  "summary": "Fusaka 于 04:49 在 epoch 411392 激活并最终确定，PeerDAS 上线；VitalikButerin 称这就是分片。Prysm 客户端随后出现主网问题。ACDE #225：EIP-7708、EIP-7778、EIP-7843、EIP-8024 与 EIP-8070 列为 Glamsterdam CFI；EIP-7819 SETDELEGATE、EIP-7932 次级签名算法与 EIP-8030 P256 交易被拒。",
+  "items": [
+    {
+      "topic": "升级：Fusaka 上线",
+      "title": "VitalikButerin：fusaka",
+      "note": "04:49；TimBeiko：Fusaka 已最终确定 05:07；VitalikButerin：Fusaka 的 PeerDAS 就是分片，节点无需看到全部数据即可就区块达成共识 05:15；raulvk：Fusaka 在 epoch 411392 激活，128 个列子网开始分发数据 07:02。",
+      "url": "https://x.com/VitalikButerin/status/1996335948137926695",
+      "date": "2025-12-04",
+      "title_en": "VitalikButerin: fusaka",
+      "note_en": "04:49; TimBeiko: Fusaka has finalized, 05:07; VitalikButerin: PeerDAS in Fusaka is sharding, with consensus on blocks without any node seeing all the data, 05:15; raulvk: Fusaka kicked in at epoch 411392 and all 128 column subnets are distributing data, 07:02.",
+      "topic_en": "Upgrades: Fusaka goes live"
+    },
+    {
+      "topic": "升级：Fusaka 上线",
+      "title": "TimBeiko：Fusaka 已最终确定",
+      "note": "VitalikButerin：fusaka 04:49；TimBeiko：Fusaka 已最终确定 05:07；VitalikButerin：Fusaka 的 PeerDAS 就是分片，节点无需看到全部数据即可就区块达成共识 05:15；raulvk：Fusaka 在 epoch 411392 激活，128 个列子网开始分发数据 07:02。",
+      "url": "https://x.com/TimBeiko/status/1996340447116194012",
+      "date": "2025-12-04",
+      "title_en": "TimBeiko: Fusaka has finalized",
+      "note_en": "VitalikButerin: fusaka, 04:49; TimBeiko: Fusaka has finalized, 05:07; VitalikButerin: PeerDAS in Fusaka is sharding, with consensus on blocks without any node seeing all the data, 05:15; raulvk: Fusaka kicked in at epoch 411392 and all 128 column subnets are distributing data, 07:02.",
+      "topic_en": "Upgrades: Fusaka goes live"
+    },
+    {
+      "topic": "升级：Fusaka 上线",
+      "title": "VitalikButerin：Fusaka 的 PeerDAS 就是分片，节点无需看到全部数据即可就区块达成共识",
+      "note": "VitalikButerin：fusaka 04:49；TimBeiko：Fusaka 已最终确定 05:07；VitalikButerin：Fusaka 的 PeerDAS 就是分片，节点无需看到全部数据即可就区块达成共识 05:15；raulvk：Fusaka 在 epoch 411392 激活，128 个列子网开始分发数据 07:02。",
+      "url": "https://x.com/VitalikButerin/status/1996342458234605895",
+      "date": "2025-12-04",
+      "title_en": "VitalikButerin: PeerDAS in Fusaka is sharding, with consensus on blocks without any node seeing all the data",
+      "note_en": "VitalikButerin: fusaka, 04:49; TimBeiko: Fusaka has finalized, 05:07; VitalikButerin: PeerDAS in Fusaka is sharding, with consensus on blocks without any node seeing all the data, 05:15; raulvk: Fusaka kicked in at epoch 411392 and all 128 column subnets are distributing data, 07:02.",
+      "topic_en": "Upgrades: Fusaka goes live"
+    },
+    {
+      "topic": "升级：Fusaka 上线",
+      "title": "raulvk：Fusaka 在 epoch 411392 激活，128 个列子网开始分发数据",
+      "note": "VitalikButerin：fusaka 04:49；TimBeiko：Fusaka 已最终确定 05:07；VitalikButerin：Fusaka 的 PeerDAS 就是分片，节点无需看到全部数据即可就区块达成共识 05:15；raulvk：Fusaka 在 epoch 411392 激活，128 个列子网开始分发数据 07:02。",
+      "url": "https://x.com/raulvk/status/1996369557494128903",
+      "date": "2025-12-04",
+      "title_en": "raulvk: Fusaka kicked in at epoch 411392 and all 128 column subnets are distributing data",
+      "note_en": "VitalikButerin: fusaka, 04:49; TimBeiko: Fusaka has finalized, 05:07; VitalikButerin: PeerDAS in Fusaka is sharding, with consensus on blocks without any node seeing all the data, 05:15; raulvk: Fusaka kicked in at epoch 411392 and all 128 column subnets are distributing data, 07:02.",
+      "topic_en": "Upgrades: Fusaka goes live"
+    },
+    {
+      "topic": "升级：Fusaka 上线",
+      "title": "ethereumfndn：Prysm 共识客户端在主网出现问题，运行 Prysm 需重新配置",
+      "note": "13:30。",
+      "url": "https://x.com/ethereumfndn/status/1996467022482591877",
+      "date": "2025-12-04",
+      "title_en": "ethereumfndn: an ongoing issue with the Prysm consensus client on mainnet, and Prysm operators must reconfigure",
+      "note_en": "13:30.",
+      "topic_en": "Upgrades: Fusaka goes live"
+    },
+    {
+      "topic": "会议：ACDE #225",
+      "title": "ACDE #225",
+      "note": "21:00，据 Ethereal news #1：Prysm 将发布修复并在下周给出事后分析；Glamsterdam 中 EIP-7708 ETH 转账日志、EIP-7778 无退款区块 gas 计算、EIP-7843 SLOTNUM、EIP-8024 SWAPN 等与 EIP-8070 稀疏 blob 池列为 CFI；EIP-7819 SETDELEGATE、EIP-7932 次级签名算法、EIP-8030 P256 交易、EIP-7619 Falcon512、EIP-6404 与 EIP-6466 等被拒；FOCIL 是否预先列为 SFI 交由 ACDC 决定。",
+      "url": "https://forkcast.org/calls/acde/225",
+      "date": "2025-12-04",
+      "title_en": "ACDE #225",
+      "note_en": "21:00, per Ethereal news #1: Prysm will ship a fix and a post mortem next week; for Glamsterdam, EIP-7708 ETH transfer logs, EIP-7778 block gas accounting without refunds, EIP-7843 SLOTNUM, EIP-8024 SWAPN and friends and EIP-8070 sparse blobpool are CFI; EIP-7819 SETDELEGATE, EIP-7932 secondary signature algorithms, EIP-8030 P256 transactions, EIP-7619 Falcon512, EIP-6404 and EIP-6466 are declined; ACDC will decide whether FOCIL is set SFI early.",
+      "topic_en": "Calls: ACDE #225"
+    },
+    {
+      "topic": "会议：ACDE #225",
+      "title": "Ethereal news #1",
+      "note": "ACDE #225 21:00，据 Ethereal news #1：Prysm 将发布修复并在下周给出事后分析；Glamsterdam 中 EIP-7708 ETH 转账日志、EIP-7778 无退款区块 gas 计算、EIP-7843 SLOTNUM、EIP-8024 SWAPN 等与 EIP-8070 稀疏 blob 池列为 CFI；EIP-7819 SETDELEGATE、EIP-7932 次级签名算法、EIP-8030 P256 交易、EIP-7619 Falcon512、EIP-6404 与 EIP-6466 等被拒；FOCIL 是否预先列为 SFI 交由 ACDC 决定。",
+      "url": "https://ethereal.news/ethereal-news-weekly-1/",
+      "date": "2025-12-04",
+      "title_en": "Ethereal news #1",
+      "note_en": "ACDE #225, 21:00, per Ethereal news #1: Prysm will ship a fix and a post mortem next week; for Glamsterdam, EIP-7708 ETH transfer logs, EIP-7778 block gas accounting without refunds, EIP-7843 SLOTNUM, EIP-8024 SWAPN and friends and EIP-8070 sparse blobpool are CFI; EIP-7819 SETDELEGATE, EIP-7932 secondary signature algorithms, EIP-8030 P256 transactions, EIP-7619 Falcon512, EIP-6404 and EIP-6466 are declined; ACDC will decide whether FOCIL is set SFI early.",
+      "topic_en": "Calls: ACDE #225"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：硬分叉元 EIP，Glamsterdam 之后的升级",
+      "note": "（ralexstokes）2025 年 11 月 12 日提交后合并；EIP-7773：更新 Glamsterdam 范围（ralexstokes）12 月 2 日提交后合并；EIP-7819 更新（Amxx）提交并合并；Magicians：EIP-8081 下一升级元讨论帖 00:07。",
+      "url": "https://github.com/ethereum/EIPs/pull/10772",
+      "date": "2025-12-04",
+      "title_en": "Add EIP: Hardfork Meta for the upgrade after Glamsterdam",
+      "note_en": "(ralexstokes), merged after submission on November 12, 2025; EIP-7773: update Glamsterdam scope (ralexstokes), merged after submission on December 2; EIP-7819 update (Amxx), submitted and merged; Magicians: EIP-8081 meta thread for the next upgrade, 00:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：更新 Glamsterdam 范围",
+      "note": "新增 EIP：硬分叉元 EIP，Glamsterdam 之后的升级（ralexstokes）2025 年 11 月 12 日提交后合并；EIP-7773：更新 Glamsterdam 范围（ralexstokes）12 月 2 日提交后合并；EIP-7819 更新（Amxx）提交并合并；Magicians：EIP-8081 下一升级元讨论帖 00:07。",
+      "url": "https://github.com/ethereum/EIPs/pull/10861",
+      "date": "2025-12-04",
+      "title_en": "EIP-7773: update Glamsterdam scope",
+      "note_en": "Add EIP: Hardfork Meta for the upgrade after Glamsterdam (ralexstokes), merged after submission on November 12, 2025; EIP-7773: update Glamsterdam scope (ralexstokes), merged after submission on December 2; EIP-7819 update (Amxx), submitted and merged; Magicians: EIP-8081 meta thread for the next upgrade, 00:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7819 更新",
+      "note": "新增 EIP：硬分叉元 EIP，Glamsterdam 之后的升级（ralexstokes）2025 年 11 月 12 日提交后合并；EIP-7773：更新 Glamsterdam 范围（ralexstokes）12 月 2 日提交后合并；EIP-7819 更新（Amxx）提交并合并；Magicians：EIP-8081 下一升级元讨论帖 00:07。",
+      "url": "https://github.com/ethereum/EIPs/pull/10869",
+      "date": "2025-12-04",
+      "title_en": "EIP-7819 update",
+      "note_en": "Add EIP: Hardfork Meta for the upgrade after Glamsterdam (ralexstokes), merged after submission on November 12, 2025; EIP-7773: update Glamsterdam scope (ralexstokes), merged after submission on December 2; EIP-7819 update (Amxx), submitted and merged; Magicians: EIP-8081 meta thread for the next upgrade, 00:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8081 下一升级元讨论帖",
+      "note": "新增 EIP：硬分叉元 EIP，Glamsterdam 之后的升级（ralexstokes）2025 年 11 月 12 日提交后合并；EIP-7773：更新 Glamsterdam 范围（ralexstokes）12 月 2 日提交后合并；EIP-7819 更新（Amxx）提交并合并；Magicians：EIP-8081 下一升级元讨论帖 00:07。",
+      "url": "https://ethereum-magicians.org/t/eip-8081-hegota-network-upgrade-meta-thread/26876",
+      "date": "2025-12-04",
+      "title_en": "Magicians: EIP-8081 meta thread for the next upgrade",
+      "note_en": "Add EIP: Hardfork Meta for the upgrade after Glamsterdam (ralexstokes), merged after submission on November 12, 2025; EIP-7773: update Glamsterdam scope (ralexstokes), merged after submission on December 2; EIP-7819 update (Amxx), submitted and merged; Magicians: EIP-8081 meta thread for the next upgrade, 00:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：乐见人们重视增加硬性不变量、提升协议安全的改动",
+      "note": "06:29。",
+      "url": "https://x.com/VitalikButerin/status/1996361287748538652",
+      "date": "2025-12-04",
+      "title_en": "VitalikButerin: glad people value protocol changes that add hard invariants and improve security",
+      "note_en": "06:29.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8081-hegota-network-upgrade-meta-thread/26876",
+    "credit": "Ethereum Magicians, EIP-8081 Hegotá Network Upgrade Meta Thread",
+    "local_path": "assets/2025-12-04.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8081 Hegotá Network Upgrade Meta Thread"
+  },
+  "keywords_en": [
+    "Fusaka live and finalized on mainnet",
+    "PeerDAS is sharding",
+    "a Prysm mainnet issue",
+    "ACDE #225 lists EIP-7708",
+    "7778",
+    "7843",
+    "8024 and 8070 as CFI",
+    "EIP-7819 SETDELEGATE",
+    "EIP-7932 and EIP-8030 P256 transactions declined",
+    "the next upgrade meta EIP merged"
+  ],
+  "summary_en": "Fusaka activated at epoch 411392 at 04:49 and finalized, bringing PeerDAS; VitalikButerin called it sharding. Prysm then hit a mainnet issue. ACDE #225: EIP-7708, EIP-7778, EIP-7843, EIP-8024 and EIP-8070 are CFI for Glamsterdam; EIP-7819 SETDELEGATE, EIP-7932 secondary signature algorithms and EIP-8030 P256 transactions are declined."
+}

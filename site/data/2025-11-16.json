@@ -1,0 +1,77 @@
+{
+  "date": "2025-11-16",
+  "keywords": [
+    "ERC-7730 合并改动",
+    "EIP-8082 合约事件订阅",
+    "伊朗交易所开发者撰写隐私 EIP 引发讨论",
+    "量子风险",
+    "EIP-5593 iframe 拦截规则修正"
+  ],
+  "summary": "Ledger 的 ERC-7730 合并改动合并，完善钱包对交易与签名的清晰展示。bitcoinbrisbane 提出 EIP-8082，让合约以有 gas 上限的方式订阅并响应其他合约的事件。ameensol 提到一份隐私 EIP 出自伊朗最大交易所的开发者。",
+  "items": [
+    {
+      "topic": "交易：签名清晰展示",
+      "title": "ERC-7730：合并改动",
+      "note": "（lcastillo-ledger）2025 年 11 月 15 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1350",
+      "date": "2025-11-16",
+      "title_en": "ERC-7730: combined changes",
+      "note_en": "(lcastillo-ledger), merged after submission on November 15, 2025.",
+      "topic_en": "Transactions: clear signing"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8082 合约事件订阅",
+      "note": "（bitcoinbrisbane）06:32；EIP-5593：修正第三方 iframe 拦截的 MUST 与 SHOULD 矛盾（forkfury）提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8082-contract-event-subscription/26575",
+      "date": "2025-11-16",
+      "title_en": "Magicians: EIP-8082 Contract Event Subscription",
+      "note_en": "(bitcoinbrisbane), 06:32; EIP-5593: resolve the MUST and SHOULD contradiction for third party iframe blocking (forkfury), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-5593：修正第三方 iframe 拦截的 MUST 与 SHOULD 矛盾",
+      "note": "Magicians：EIP-8082 合约事件订阅（bitcoinbrisbane）06:32；EIP-5593：修正第三方 iframe 拦截的 MUST 与 SHOULD 矛盾（forkfury）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10801",
+      "date": "2025-11-16",
+      "title_en": "EIP-5593: resolve the MUST and SHOULD contradiction for third party iframe blocking",
+      "note_en": "Magicians: EIP-8082 Contract Event Subscription (bitcoinbrisbane), 06:32; EIP-5593: resolve the MUST and SHOULD contradiction for third party iframe blocking (forkfury), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：伊朗最大交易所的开发者撰写了一份以太坊隐私 EIP",
+      "note": "09:45；binji_x：量子风险是真实的，公链必须积极应对 02:16。",
+      "url": "https://x.com/ameensol/status/1989887572999639394",
+      "date": "2025-11-16",
+      "title_en": "ameensol: developers from Iran's largest exchange wrote an Ethereum privacy EIP",
+      "note_en": "09:45; binji_x: quantum risk is real and chains must actively mitigate it, 02:16.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：量子风险是真实的，公链必须积极应对",
+      "note": "ameensol：伊朗最大交易所的开发者撰写了一份以太坊隐私 EIP 09:45；binji_x：量子风险是真实的，公链必须积极应对 02:16。",
+      "url": "https://x.com/binji_x/status/1989774613119905896",
+      "date": "2025-11-16",
+      "title_en": "binji_x: quantum risk is real and chains must actively mitigate it",
+      "note_en": "Ameensol: developers from Iran's largest exchange wrote an Ethereum privacy EIP, 09:45; binji_x: quantum risk is real and chains must actively mitigate it, 02:16.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8082-contract-event-subscription/26575",
+    "credit": "Ethereum Magicians, EIP-8082 Contract Event Subscription",
+    "local_path": "assets/2025-11-16.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8082 Contract Event Subscription"
+  },
+  "keywords_en": [
+    "ERC-7730 combined changes merged",
+    "EIP-8082 contract event subscription",
+    "a privacy EIP by Iranian exchange developers sparks debate",
+    "quantum risk",
+    "EIP-5593 iframe blocking rule fix"
+  ],
+  "summary_en": "Ledger's combined ERC-7730 changes merged, improving clear display of transactions and signatures in wallets. bitcoinbrisbane proposed EIP-8082, letting contracts subscribe to and react to other contracts' events with gas-bounded execution. ameensol noted a privacy EIP was written by developers from Iran's largest exchange."
+}

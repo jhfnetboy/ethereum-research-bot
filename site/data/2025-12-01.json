@@ -1,0 +1,160 @@
+{
+  "date": "2025-12-01",
+  "keywords": [
+    "ACDT #62 下一安全 gas 上限 75M",
+    "EIP-7975 后可到 100M",
+    "EIP-7872 本地 builder 最大 blob 参数",
+    "EIP-8099 MEVless 反 MEV 协议",
+    "6 秒出块已完成规范与原型",
+    "SIWE 钱包托管自动登录 ERC 合并",
+    "X Chat 加密密钥只靠 4 位密码保护"
+  ],
+  "summary": "ACDT #62：下一个安全的 gas 上限是 75M，约 83M 时区块收据可能超过消息大小上限；EIP-7975 部分区块收据列表上线后可到 100M。Lawliet-Chan 提交 EIP-8099 MEVless，让矿工排序时看不到交易内容。nero_eth 称 6 秒出块已完成规范并在 Geth 与 Prysm 中实现原型。",
+  "items": [
+    {
+      "topic": "会议：ACDT #62",
+      "title": "ACDT #62",
+      "note": "21:00，据 Ethereal news #1：下一个安全 gas 上限是 75M，约 83M 时区块收据可能超过消息大小上限；EIP-7975 eth/70 部分区块收据列表上线后可到 100M，可能在 1 月底或 2 月；EIP-7872 本地 builder 最大 blob 参数最好在下一阶段 BPO 前加入；Engine API 改用 SSZ 的提案需要基准测试。",
+      "url": "https://forkcast.org/calls/acdt/062",
+      "date": "2025-12-01",
+      "title_en": "ACDT #62",
+      "note_en": "21:00, per Ethereal news #1: the next safe gas limit is 75M, as block receipts may exceed the message cap near 83M; 100M becomes possible after EIP-7975 eth/70 partial block receipt lists, maybe in late January or February; EIP-7872, a max blob flag for local builders, should land before the next BPO phase; switching the Engine API to SSZ needs benchmarks.",
+      "topic_en": "Calls: ACDT #62"
+    },
+    {
+      "topic": "会议：ACDT #62",
+      "title": "Ethereal news #1",
+      "note": "ACDT #62 21:00，据 Ethereal news #1：下一个安全 gas 上限是 75M，约 83M 时区块收据可能超过消息大小上限；EIP-7975 eth/70 部分区块收据列表上线后可到 100M，可能在 1 月底或 2 月；EIP-7872 本地 builder 最大 blob 参数最好在下一阶段 BPO 前加入；Engine API 改用 SSZ 的提案需要基准测试。",
+      "url": "https://ethereal.news/ethereal-news-weekly-1/",
+      "date": "2025-12-01",
+      "title_en": "Ethereal news #1",
+      "note_en": "ACDT #62, 21:00, per Ethereal news #1: the next safe gas limit is 75M, as block receipts may exceed the message cap near 83M; 100M becomes possible after EIP-7975 eth/70 partial block receipt lists, maybe in late January or February; EIP-7872, a max blob flag for local builders, should land before the next BPO phase; switching the Engine API to SSZ needs benchmarks.",
+      "topic_en": "Calls: ACDT #62"
+    },
+    {
+      "topic": "会议：ACDT #62",
+      "title": "EIP-7975",
+      "note": "ACDT #62 21:00，据 Ethereal news #1：下一个安全 gas 上限是 75M，约 83M 时区块收据可能超过消息大小上限；EIP-7975 eth/70 部分区块收据列表上线后可到 100M，可能在 1 月底或 2 月；EIP-7872 本地 builder 最大 blob 参数最好在下一阶段 BPO 前加入；Engine API 改用 SSZ 的提案需要基准测试。",
+      "url": "https://eips.ethereum.org/EIPS/eip-7975",
+      "date": "2025-12-01",
+      "title_en": "EIP-7975",
+      "note_en": "ACDT #62, 21:00, per Ethereal news #1: the next safe gas limit is 75M, as block receipts may exceed the message cap near 83M; 100M becomes possible after EIP-7975 eth/70 partial block receipt lists, maybe in late January or February; EIP-7872, a max blob flag for local builders, should land before the next BPO phase; switching the Engine API to SSZ needs benchmarks.",
+      "topic_en": "Calls: ACDT #62"
+    },
+    {
+      "topic": "会议：ACDT #62",
+      "title": "EIP-7872",
+      "note": "ACDT #62 21:00，据 Ethereal news #1：下一个安全 gas 上限是 75M，约 83M 时区块收据可能超过消息大小上限；EIP-7975 eth/70 部分区块收据列表上线后可到 100M，可能在 1 月底或 2 月；EIP-7872 本地 builder 最大 blob 参数最好在下一阶段 BPO 前加入；Engine API 改用 SSZ 的提案需要基准测试。",
+      "url": "https://eips.ethereum.org/EIPS/eip-7872",
+      "date": "2025-12-01",
+      "title_en": "EIP-7872",
+      "note_en": "ACDT #62, 21:00, per Ethereal news #1: the next safe gas limit is 75M, as block receipts may exceed the message cap near 83M; 100M becomes possible after EIP-7975 eth/70 partial block receipt lists, maybe in late January or February; EIP-7872, a max blob flag for local builders, should land before the next BPO phase; switching the Engine API to SSZ needs benchmarks.",
+      "topic_en": "Calls: ACDT #62"
+    },
+    {
+      "topic": "交易：反 MEV",
+      "title": "新增 EIP：MEVless 协议",
+      "note": "（Lawliet-Chan）提交，Magicians：EIP-8099 MEVless 13:09：针对三明治与抢跑攻击，约束排序行为，让出块者在排序时看不到具体交易内容。",
+      "url": "https://github.com/ethereum/EIPs/pull/10855",
+      "date": "2025-12-01",
+      "title_en": "Add EIP: MEVless Protocol",
+      "note_en": "(Lawliet-Chan), submitted, with Magicians: EIP-8099 MEVless, 13:09: targets sandwich and frontrunning attacks by constraining ordering so producers cannot see transaction contents while ordering.",
+      "topic_en": "Transactions: anti MEV"
+    },
+    {
+      "topic": "交易：反 MEV",
+      "title": "Magicians：EIP-8099 MEVless",
+      "note": "新增 EIP：MEVless 协议（Lawliet-Chan）提交，Magicians：EIP-8099 MEVless 13:09：针对三明治与抢跑攻击，约束排序行为，让出块者在排序时看不到具体交易内容。",
+      "url": "https://ethereum-magicians.org/t/eip-8099-mevless-an-anti-mev-protocol/26800",
+      "date": "2025-12-01",
+      "title_en": "Magicians: EIP-8099 MEVless",
+      "note_en": "Add EIP: MEVless Protocol (Lawliet-Chan), submitted, with Magicians: EIP-8099 MEVless, 13:09: targets sandwich and frontrunning attacks by constraining ordering so producers cannot see transaction contents while ordering.",
+      "topic_en": "Transactions: anti MEV"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：钱包托管的 SIWE 极简自动登录",
+      "note": "（Ivshti）2025 年 9 月 3 日提交后合并；nero_eth：6 秒出块已完成规范，并在 Geth 与 Prysm 中实现原型 20:09；ethresear.ch：ZK 秘密圣诞老人协议 21:57；ACDC #171 议程，12 月 11 日 03:35。",
+      "url": "https://github.com/ethereum/ERCs/pull/1198",
+      "date": "2025-12-01",
+      "title_en": "Add ERC: Minimal Wallet-Managed Auto-Login for SIWE",
+      "note_en": "(Ivshti), merged after submission on September 3, 2025; nero_eth: 6 second slots are spec'd and prototyped in Geth and Prysm, 20:09; ethresear.ch: ZK Secret Santa protocol, 21:57; ACDC #171 agenda, Dec 11, 03:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nero_eth：6 秒出块已完成规范，并在 Geth 与 Prysm 中实现原型",
+      "note": "新增 ERC：钱包托管的 SIWE 极简自动登录（Ivshti）2025 年 9 月 3 日提交后合并；nero_eth：6 秒出块已完成规范，并在 Geth 与 Prysm 中实现原型 20:09；ethresear.ch：ZK 秘密圣诞老人协议 21:57；ACDC #171 议程，12 月 11 日 03:35。",
+      "url": "https://x.com/nero_eth/status/1995480367050920265",
+      "date": "2025-12-01",
+      "title_en": "nero_eth: 6 second slots are spec'd and prototyped in Geth and Prysm",
+      "note_en": "Add ERC: Minimal Wallet-Managed Auto-Login for SIWE (Ivshti), merged after submission on September 3, 2025; nero_eth: 6 second slots are spec'd and prototyped in Geth and Prysm, 20:09; ethresear.ch: ZK Secret Santa protocol, 21:57; ACDC #171 agenda, Dec 11, 03:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：ZK 秘密圣诞老人协议",
+      "note": "新增 ERC：钱包托管的 SIWE 极简自动登录（Ivshti）2025 年 9 月 3 日提交后合并；nero_eth：6 秒出块已完成规范，并在 Geth 与 Prysm 中实现原型 20:09；ethresear.ch：ZK 秘密圣诞老人协议 21:57；ACDC #171 议程，12 月 11 日 03:35。",
+      "url": "https://ethresear.ch/t/zk-secret-santa-protocol/23582",
+      "date": "2025-12-01",
+      "title_en": "ethresear.ch: ZK Secret Santa protocol",
+      "note_en": "Add ERC: Minimal Wallet-Managed Auto-Login for SIWE (Ivshti), merged after submission on September 3, 2025; nero_eth: 6 second slots are spec'd and prototyped in Geth and Prysm, 20:09; ethresear.ch: ZK Secret Santa protocol, 21:57; ACDC #171 agenda, Dec 11, 03:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #171 议程，12 月 11 日",
+      "note": "新增 ERC：钱包托管的 SIWE 极简自动登录（Ivshti）2025 年 9 月 3 日提交后合并；nero_eth：6 秒出块已完成规范，并在 Geth 与 Prysm 中实现原型 20:09；ethresear.ch：ZK 秘密圣诞老人协议 21:57；ACDC #171 议程，12 月 11 日 03:35。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-171-dec-11-2025/26782",
+      "date": "2025-12-01",
+      "title_en": "ACDC #171 agenda, Dec 11",
+      "note_en": "Add ERC: Minimal Wallet-Managed Auto-Login for SIWE (Ivshti), merged after submission on September 3, 2025; nero_eth: 6 second slots are spec'd and prototyped in Geth and Prysm, 20:09; ethresear.ch: ZK Secret Santa protocol, 21:57; ACDC #171 agenda, Dec 11, 03:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "adietrichs：所谓端到端加密的 X Chat 把密钥存在服务器上，只靠 4 位密码保护，约 13 位安全性",
+      "note": "07:52；VitalikButerin：你可以直接在 L1 上构建 02:14；trent_vanepps：信标链上线五周年 22:07。",
+      "url": "https://x.com/adietrichs/status/1995294806613111282",
+      "date": "2025-12-01",
+      "title_en": "adietrichs: the \"e2e encrypted\" X Chat stores keys on servers behind a 4 digit passcode, about 13 bits of security",
+      "note_en": "07:52; VitalikButerin: you can just build on L1, 02:14; trent_vanepps: the beacon chain turned five, 22:07.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：你可以直接在 L1 上构建",
+      "note": "adietrichs：所谓端到端加密的 X Chat 把密钥存在服务器上，只靠 4 位密码保护，约 13 位安全性 07:52；VitalikButerin：你可以直接在 L1 上构建 02:14；trent_vanepps：信标链上线五周年 22:07。",
+      "url": "https://x.com/VitalikButerin/status/1995209899182375024",
+      "date": "2025-12-01",
+      "title_en": "VitalikButerin: you can just build on L1",
+      "note_en": "Adietrichs: the \"e2e encrypted\" X Chat stores keys on servers behind a 4 digit passcode, about 13 bits of security, 07:52; VitalikButerin: you can just build on L1, 02:14; trent_vanepps: the beacon chain turned five, 22:07.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trent_vanepps：信标链上线五周年",
+      "note": "adietrichs：所谓端到端加密的 X Chat 把密钥存在服务器上，只靠 4 位密码保护，约 13 位安全性 07:52；VitalikButerin：你可以直接在 L1 上构建 02:14；trent_vanepps：信标链上线五周年 22:07。",
+      "url": "https://x.com/trent_vanepps/status/1995509968041378074",
+      "date": "2025-12-01",
+      "title_en": "trent_vanepps: the beacon chain turned five",
+      "note_en": "Adietrichs: the \"e2e encrypted\" X Chat stores keys on servers behind a 4 digit passcode, about 13 bits of security, 07:52; VitalikButerin: you can just build on L1, 02:14; trent_vanepps: the beacon chain turned five, 22:07.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8099-mevless-an-anti-mev-protocol/26800",
+    "credit": "Ethereum Magicians, EIP-8099 MEVless",
+    "local_path": "assets/2025-12-01.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8099 MEVless"
+  },
+  "keywords_en": [
+    "ACDT #62 puts the next safe gas limit at 75M and 100M after EIP-7975",
+    "the EIP-7872 max blob flag for local builders",
+    "EIP-8099 MEVless anti MEV protocol",
+    "6 second slots spec'd and prototyped",
+    "a wallet managed SIWE auto login ERC merged",
+    "X Chat keys guarded by a 4 digit passcode"
+  ],
+  "summary_en": "ACDT #62: the next safe gas limit is 75M, since block receipts may exceed the message cap near 83M; 100M is possible after EIP-7975 partial block receipt lists. Lawliet-Chan submitted EIP-8099 MEVless, hiding transaction contents from block producers during ordering. nero_eth said 6 second slots are spec'd and prototyped in Geth and Prysm."
+}

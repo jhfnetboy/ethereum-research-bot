@@ -1,0 +1,87 @@
+{
+  "date": "2025-12-06",
+  "keywords": [
+    "Vitalik 呼吁无需信任的链上 gas 期货市场",
+    "ERC-8100 可表示的合约状态",
+    "修订 ERC-2535 Diamonds 术语",
+    "Aave 未来的使用体验演示",
+    "ethrex 在 Fusaka 主网稳定运行"
+  ],
+  "summary": "VitalikButerin 呼吁建立无需信任的链上 gas 期货市场，类似对 BASEFEE 的预测市场，让用户对冲两年后的手续费风险。cfries 提交 ERC-8100 可表示的合约状态。mudgen 发起修订 ERC-2535 Diamonds 的讨论。",
+  "items": [
+    {
+      "topic": "Gas：链上期货",
+      "title": "VitalikButerin：需要一个好的无需信任链上 gas 期货市场，类似对 BASEFEE 的预测市场；有人问今天费用低，两年后呢",
+      "note": "19:19。",
+      "url": "https://x.com/VitalikButerin/status/1997279838252531823",
+      "date": "2025-12-06",
+      "title_en": "VitalikButerin: we need a good trustless onchain gas futures market, like a prediction market on BASEFEE, since people ask whether fees stay low in two years",
+      "note_en": "19:19.",
+      "topic_en": "Gas: onchain futures"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：可表示的合约状态",
+      "note": "（cfries）提交，Magicians：ERC-8100 07:53；Magicians：修订 ERC-2535 Diamonds 以简化术语 07:04。",
+      "url": "https://github.com/ethereum/ERCs/pull/1396",
+      "date": "2025-12-06",
+      "title_en": "Add ERC: Representable Contract State",
+      "note_en": "(cfries), submitted, with Magicians: ERC-8100, 07:53; Magicians: Revising ERC-2535 Diamonds to simplify terminology, 07:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8100",
+      "note": "新增 ERC：可表示的合约状态（cfries）提交，Magicians：ERC-8100 07:53；Magicians：修订 ERC-2535 Diamonds 以简化术语 07:04。",
+      "url": "https://ethereum-magicians.org/t/erc-8100-representable-contract-state/26974",
+      "date": "2025-12-06",
+      "title_en": "Magicians: ERC-8100",
+      "note_en": "Add ERC: Representable Contract State (cfries), submitted, with Magicians: ERC-8100, 07:53; Magicians: Revising ERC-2535 Diamonds to simplify terminology, 07:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：修订 ERC-2535 Diamonds 以简化术语",
+      "note": "新增 ERC：可表示的合约状态（cfries）提交，Magicians：ERC-8100 07:53；Magicians：修订 ERC-2535 Diamonds 以简化术语 07:04。",
+      "url": "https://ethereum-magicians.org/t/revising-erc-2535-diamonds-to-simplify-and-improve-the-terminology/26973",
+      "date": "2025-12-06",
+      "title_en": "Magicians: Revising ERC-2535 Diamonds to simplify terminology",
+      "note_en": "Add ERC: Representable Contract State (cfries), submitted, with Magicians: ERC-8100, 07:53; Magicians: Revising ERC-2535 Diamonds to simplify terminology, 07:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：演示未来使用 Aave 等以太坊应用的体验",
+      "note": "03:44；fede_intern：ethrex 在 Fusaka 主网上运行稳定 06:17。",
+      "url": "https://x.com/zengjiajun_eth/status/1997044363600294024",
+      "date": "2025-12-06",
+      "title_en": "zengjiajun_eth: demo of using Ethereum apps such as Aave in the future",
+      "note_en": "03:44; fede_intern: ethrex runs stable on Fusaka mainnet, 06:17.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：ethrex 在 Fusaka 主网上运行稳定",
+      "note": "zengjiajun_eth：演示未来使用 Aave 等以太坊应用的体验 03:44；fede_intern：ethrex 在 Fusaka 主网上运行稳定 06:17。",
+      "url": "https://x.com/fede_intern/status/1997082899343089754",
+      "date": "2025-12-06",
+      "title_en": "fede_intern: ethrex runs stable on Fusaka mainnet",
+      "note_en": "Zengjiajun_eth: demo of using Ethereum apps such as Aave in the future, 03:44; fede_intern: ethrex runs stable on Fusaka mainnet, 06:17.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8100-representable-contract-state/26974",
+    "credit": "Ethereum Magicians, ERC-8100 Representable Contract State",
+    "local_path": "assets/2025-12-06.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8100 Representable Contract State"
+  },
+  "keywords_en": [
+    "Vitalik calls for a trustless onchain gas futures market",
+    "ERC-8100 representable contract state",
+    "revising ERC-2535 Diamonds terminology",
+    "a demo of future Aave UX",
+    "ethrex stable on Fusaka mainnet"
+  ],
+  "summary_en": "VitalikButerin called for a trustless onchain gas futures market, like a prediction market on BASEFEE, so users can hedge fees two years out. cfries submitted ERC-8100 representable contract state. mudgen started revising ERC-2535 Diamonds."
+}

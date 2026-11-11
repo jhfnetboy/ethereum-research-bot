@@ -1,0 +1,151 @@
+{
+  "date": "2025-11-12",
+  "keywords": [
+    "ralexstokes 谈 Glamsterdam 收尾与 2026",
+    "FOCIL 是否进入 Glamsterdam 之争",
+    "ERC-8084 零知识证明元数据",
+    "EIP-8078 GETDEPLOYER 操作码",
+    "Heka/Bogotá 硬分叉元 EIP",
+    "ERC-7730 信任假设章节合并",
+    "zeam 合并 XMSS 签名"
+  ],
+  "summary": "ralexstokes 发文主张谨慎控制 Glamsterdam 范围，为 2026 打好基础。nero_eth 认为 Glamsterdam 已有 ePBS 与 BAL，再加 FOCIL 会过于复杂；donnoh_eth 建议把抗审查作为下一分叉主题。ERC-7730 增加信任假设章节，合并。zeam 合并 XMSS 后量子签名。",
+  "items": [
+    {
+      "topic": "交易：FOCIL 与分叉范围",
+      "title": "Magicians：交付有影响力的 2026",
+      "note": "（ralexstokes）07:41：Fusaka 即将上线，主张慢慢增加范围，以平稳换取速度；nero_eth：Glamsterdam 已有 ePBS 与 BAL，现在加入 FOCIL 可能难以安全按时交付 14:18；donnoh_eth：Glamsterdam 保持 L1 扩容主题，下一分叉以抗审查为主题 09:46。",
+      "url": "https://ethereum-magicians.org/t/delivering-an-impactful-2026/26532",
+      "date": "2025-11-12",
+      "title_en": "Magicians: Delivering an impactful 2026",
+      "note_en": "(ralexstokes), 07:41: with Fusaka imminent, add scope slowly, trading haste for smoothness; nero_eth: Glamsterdam already has ePBS and BAL, so adding FOCIL now risks safe and timely delivery, 14:18; donnoh_eth: keep L1 scaling as Glamsterdam's theme and make the next fork about censorship resistance, 09:46.",
+      "topic_en": "Transactions: FOCIL and fork scope"
+    },
+    {
+      "topic": "交易：FOCIL 与分叉范围",
+      "title": "nero_eth：Glamsterdam 已有 ePBS 与 BAL，现在加入 FOCIL 可能难以安全按时交付",
+      "note": "Magicians：交付有影响力的 2026（ralexstokes）07:41：Fusaka 即将上线，主张慢慢增加范围，以平稳换取速度；nero_eth：Glamsterdam 已有 ePBS 与 BAL，现在加入 FOCIL 可能难以安全按时交付 14:18；donnoh_eth：Glamsterdam 保持 L1 扩容主题，下一分叉以抗审查为主题 09:46。",
+      "url": "https://x.com/nero_eth/status/1988506622533030319",
+      "date": "2025-11-12",
+      "title_en": "nero_eth: Glamsterdam already has ePBS and BAL, so adding FOCIL now risks safe and timely delivery",
+      "note_en": "Magicians: Delivering an impactful 2026 (ralexstokes), 07:41: with Fusaka imminent, add scope slowly, trading haste for smoothness; nero_eth: Glamsterdam already has ePBS and BAL, so adding FOCIL now risks safe and timely delivery, 14:18; donnoh_eth: keep L1 scaling as Glamsterdam's theme and make the next fork about censorship resistance, 09:46.",
+      "topic_en": "Transactions: FOCIL and fork scope"
+    },
+    {
+      "topic": "交易：FOCIL 与分叉范围",
+      "title": "donnoh_eth：Glamsterdam 保持 L1 扩容主题，下一分叉以抗审查为主题",
+      "note": "Magicians：交付有影响力的 2026（ralexstokes）07:41：Fusaka 即将上线，主张慢慢增加范围，以平稳换取速度；nero_eth：Glamsterdam 已有 ePBS 与 BAL，现在加入 FOCIL 可能难以安全按时交付 14:18；donnoh_eth：Glamsterdam 保持 L1 扩容主题，下一分叉以抗审查为主题 09:46。",
+      "url": "https://x.com/donnoh_eth/status/1988438109411856643",
+      "date": "2025-11-12",
+      "title_en": "donnoh_eth: keep L1 scaling as Glamsterdam's theme and make the next fork about censorship resistance",
+      "note_en": "Magicians: Delivering an impactful 2026 (ralexstokes), 07:41: with Fusaka imminent, add scope slowly, trading haste for smoothness; nero_eth: Glamsterdam already has ePBS and BAL, so adding FOCIL now risks safe and timely delivery, 14:18; donnoh_eth: keep L1 scaling as Glamsterdam's theme and make the next fork about censorship resistance, 09:46.",
+      "topic_en": "Transactions: FOCIL and fork scope"
+    },
+    {
+      "topic": "账户与签名",
+      "title": "ERC-7730：增加信任假设章节",
+      "note": "（arikg）2025 年 10 月 27 日提交后合并；zeamETH：合并 XMSS 签名，迈向 Lean Ethereum 后量子世界的第一步 15:25。",
+      "url": "https://github.com/ethereum/ERCs/pull/1316",
+      "date": "2025-11-12",
+      "title_en": "ERC-7730: add a trust assumptions section",
+      "note_en": "(arikg), merged after submission on October 27, 2025; zeamETH: merged XMSS signatures, a first step to a post-quantum Lean Ethereum, 15:25.",
+      "topic_en": "Accounts and signatures"
+    },
+    {
+      "topic": "账户与签名",
+      "title": "zeamETH：合并 XMSS 签名，迈向 Lean Ethereum 后量子世界的第一步",
+      "note": "ERC-7730：增加信任假设章节（arikg）2025 年 10 月 27 日提交后合并；zeamETH：合并 XMSS 签名，迈向 Lean Ethereum 后量子世界的第一步 15:25。",
+      "url": "https://x.com/zeamETH/status/1988523572298645755",
+      "date": "2025-11-12",
+      "title_en": "zeamETH: merged XMSS signatures, a first step to a post-quantum Lean Ethereum",
+      "note_en": "ERC-7730: add a trust assumptions section (arikg), merged after submission on October 27, 2025; zeamETH: merged XMSS signatures, a first step to a post-quantum Lean Ethereum, 15:25.",
+      "topic_en": "Accounts and signatures"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：零知识证明元数据",
+      "note": "（zwowo1997）提交；新增 EIP-8078：GETDEPLOYER 操作码（maldiohead）提交；新增 EIP：硬分叉元 Heka/Bogotá（ralexstokes）提交；EIP-8068 大幅修订（anderselowsson）提交并合并；ERC-8042 进入 Review（mudgen）2025 年 11 月 11 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1344",
+      "date": "2025-11-12",
+      "title_en": "Add ERC: Zero knowledge proof metadata",
+      "note_en": "(zwowo1997), submitted; Add EIP-8078: GETDEPLOYER opcode (maldiohead), submitted; Add EIP: Hardfork Meta Heka/Bogotá (ralexstokes), submitted; EIP-8068: major revision (anderselowsson), submitted and merged; ERC-8042: move to Review (mudgen), merged after submission on November 11, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP-8078：GETDEPLOYER 操作码",
+      "note": "新增 ERC：零知识证明元数据（zwowo1997）提交；新增 EIP-8078：GETDEPLOYER 操作码（maldiohead）提交；新增 EIP：硬分叉元 Heka/Bogotá（ralexstokes）提交；EIP-8068 大幅修订（anderselowsson）提交并合并；ERC-8042 进入 Review（mudgen）2025 年 11 月 11 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10780",
+      "date": "2025-11-12",
+      "title_en": "Add EIP-8078: GETDEPLOYER opcode",
+      "note_en": "Add ERC: Zero knowledge proof metadata (zwowo1997), submitted; Add EIP-8078: GETDEPLOYER opcode (maldiohead), submitted; Add EIP: Hardfork Meta Heka/Bogotá (ralexstokes), submitted; EIP-8068: major revision (anderselowsson), submitted and merged; ERC-8042: move to Review (mudgen), merged after submission on November 11, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：硬分叉元 Heka/Bogotá",
+      "note": "新增 ERC：零知识证明元数据（zwowo1997）提交；新增 EIP-8078：GETDEPLOYER 操作码（maldiohead）提交；新增 EIP：硬分叉元 Heka/Bogotá（ralexstokes）提交；EIP-8068 大幅修订（anderselowsson）提交并合并；ERC-8042 进入 Review（mudgen）2025 年 11 月 11 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10772",
+      "date": "2025-11-12",
+      "title_en": "Add EIP: Hardfork Meta Heka/Bogotá",
+      "note_en": "Add ERC: Zero knowledge proof metadata (zwowo1997), submitted; Add EIP-8078: GETDEPLOYER opcode (maldiohead), submitted; Add EIP: Hardfork Meta Heka/Bogotá (ralexstokes), submitted; EIP-8068: major revision (anderselowsson), submitted and merged; ERC-8042: move to Review (mudgen), merged after submission on November 11, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8068 大幅修订",
+      "note": "新增 ERC：零知识证明元数据（zwowo1997）提交；新增 EIP-8078：GETDEPLOYER 操作码（maldiohead）提交；新增 EIP：硬分叉元 Heka/Bogotá（ralexstokes）提交；EIP-8068 大幅修订（anderselowsson）提交并合并；ERC-8042 进入 Review（mudgen）2025 年 11 月 11 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10777",
+      "date": "2025-11-12",
+      "title_en": "EIP-8068: major revision",
+      "note_en": "Add ERC: Zero knowledge proof metadata (zwowo1997), submitted; Add EIP-8078: GETDEPLOYER opcode (maldiohead), submitted; Add EIP: Hardfork Meta Heka/Bogotá (ralexstokes), submitted; EIP-8068: major revision (anderselowsson), submitted and merged; ERC-8042: move to Review (mudgen), merged after submission on November 11, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8042 进入 Review",
+      "note": "新增 ERC：零知识证明元数据（zwowo1997）提交；新增 EIP-8078：GETDEPLOYER 操作码（maldiohead）提交；新增 EIP：硬分叉元 Heka/Bogotá（ralexstokes）提交；EIP-8068 大幅修订（anderselowsson）提交并合并；ERC-8042 进入 Review（mudgen）2025 年 11 月 11 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1343",
+      "date": "2025-11-12",
+      "title_en": "ERC-8042: move to Review",
+      "note_en": "Add ERC: Zero knowledge proof metadata (zwowo1997), submitted; Add EIP-8078: GETDEPLOYER opcode (maldiohead), submitted; Add EIP: Hardfork Meta Heka/Bogotá (ralexstokes), submitted; EIP-8068: major revision (anderselowsson), submitted and merged; ERC-8042: move to Review (mudgen), merged after submission on November 11, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "drakefjustin：Lean Ethereum 365 天进展",
+      "note": "22:14；ameensol：仍认为 FOCIL 没有意义 21:06。",
+      "url": "https://x.com/drakefjustin/status/1988626347552288957",
+      "date": "2025-11-12",
+      "title_en": "drakefjustin: 365 days of Lean Ethereum progress",
+      "note_en": "22:14; ameensol: still thinks FOCIL is pointless, 21:06.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：仍认为 FOCIL 没有意义",
+      "note": "drakefjustin：Lean Ethereum 365 天进展 22:14；ameensol：仍认为 FOCIL 没有意义 21:06。",
+      "url": "https://x.com/ameensol/status/1988609361183453229",
+      "date": "2025-11-12",
+      "title_en": "ameensol: still thinks FOCIL is pointless",
+      "note_en": "Drakefjustin: 365 days of Lean Ethereum progress, 22:14; ameensol: still thinks FOCIL is pointless, 21:06.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/delivering-an-impactful-2026/26532",
+    "credit": "Ethereum Magicians, Delivering an impactful 2026",
+    "local_path": "assets/2025-11-12.jpg",
+    "credit_en": "Ethereum Magicians, Delivering an impactful 2026"
+  },
+  "keywords_en": [
+    "ralexstokes on finishing Glamsterdam and 2026",
+    "the debate over FOCIL in Glamsterdam",
+    "ERC-8084 zero knowledge proof metadata",
+    "EIP-8078 GETDEPLOYER opcode",
+    "a Heka/Bogotá hardfork meta EIP",
+    "ERC-7730 trust assumptions merged",
+    "zeam merges XMSS signatures"
+  ],
+  "summary_en": "ralexstokes argued for careful Glamsterdam scoping to set up 2026. nero_eth said Glamsterdam already has ePBS and BAL so adding FOCIL is too complex; donnoh_eth suggested censorship resistance as the next fork's theme. ERC-7730 gained a trust assumptions section, merged. zeam merged XMSS post-quantum signatures."
+}

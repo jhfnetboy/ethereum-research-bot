@@ -1,0 +1,119 @@
+{
+  "date": "2025-11-22",
+  "keywords": [
+    "机密同质化代币 ERC 合并",
+    "极简头像智能钱包 ERC 合并",
+    "BAL 让以太坊告别单车道执行",
+    "ZK 质押",
+    "ethrex 生产就绪",
+    "Aztec 销售"
+  ],
+  "summary": "arr00 的机密同质化代币 ERC 合并，余额与转账金额加密。MostafaS 的极简头像智能钱包（MASW）ERC 合并。nero_eth 解释 EIP-7928 BAL 让区块携带精确的访问映射，使并行执行成为可能。ethStaker 展示 ZK 质押节点收到 3/3 执行证明。",
+  "items": [
+    {
+      "topic": "隐私与账户",
+      "title": "新增 ERC：机密同质化代币",
+      "note": "（arr00）2025 年 7 月 4 日提交后合并；新增 ERC：极简头像智能钱包（MASW）（MostafaS）2025 年 7 月 9 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1113",
+      "date": "2025-11-22",
+      "title_en": "Add ERC: Confidential Fungible Token",
+      "note_en": "(arr00), merged after submission on July 4, 2025; Add ERC: Minimal Avatar Smart Wallet (MASW) (MostafaS), merged after submission on July 9, 2025.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "新增 ERC：极简头像智能钱包（MASW）",
+      "note": "新增 ERC：机密同质化代币（arr00）2025 年 7 月 4 日提交后合并；新增 ERC：极简头像智能钱包（MASW）（MostafaS）2025 年 7 月 9 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1118",
+      "date": "2025-11-22",
+      "title_en": "Add ERC: Minimal Avatar Smart Wallet (MASW)",
+      "note_en": "Add ERC: Confidential Fungible Token (arr00), merged after submission on July 4, 2025; Add ERC: Minimal Avatar Smart Wallet (MASW) (MostafaS), merged after submission on July 9, 2025.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "Gas：并行执行",
+      "title": "nero_eth：以太坊一直是单车道执行，BAL 让每个区块携带完整访问映射，从而可以并行验证",
+      "note": "02:10；ethStaker：ZK 质押即将到来，节点已收到 3/3 执行证明 21:10。",
+      "url": "https://x.com/nero_eth/status/1991947238042431859",
+      "date": "2025-11-22",
+      "title_en": "nero_eth: Ethereum has run single lane, and BAL gives each block a full access map so validation can run in parallel",
+      "note_en": "02:10; ethStaker: ZK staking is coming, with a node receiving 3/3 execution proofs, 21:10.",
+      "topic_en": "Gas: parallel execution"
+    },
+    {
+      "topic": "Gas：并行执行",
+      "title": "ethStaker：ZK 质押即将到来，节点已收到 3/3 执行证明",
+      "note": "nero_eth：以太坊一直是单车道执行，BAL 让每个区块携带完整访问映射，从而可以并行验证 02:10；ethStaker：ZK 质押即将到来，节点已收到 3/3 执行证明 21:10。",
+      "url": "https://x.com/ethStaker/status/1992234340043063320",
+      "date": "2025-11-22",
+      "title_en": "ethStaker: ZK staking is coming, with a node receiving 3/3 execution proofs",
+      "note_en": "Nero_eth: Ethereum has run single lane, and BAL gives each block a full access map so validation can run in parallel, 02:10; ethStaker: ZK staking is coming, with a node receiving 3/3 execution proofs, 21:10.",
+      "topic_en": "Gas: parallel execution"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：Uniswap V4 外围的中继保护免 gas 兑换",
+      "note": "（wyc-dev）提交；EIP-8079 格式修正（frangio）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10822",
+      "date": "2025-11-22",
+      "title_en": "Add EIP: Relayer-Protected Gasless Swaps for Uniswap V4 Periphery",
+      "note_en": "(wyc-dev), submitted; EIP-8079: fix formatting (frangio), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8079 格式修正",
+      "note": "新增 EIP：Uniswap V4 外围的中继保护免 gas 兑换（wyc-dev）提交；EIP-8079 格式修正（frangio）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10819",
+      "date": "2025-11-22",
+      "title_en": "EIP-8079: fix formatting",
+      "note_en": "Add EIP: Relayer-Protected Gasless Swaps for Uniswap V4 Periphery (wyc-dev), submitted; EIP-8079: fix formatting (frangio), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：ethrex 已可用于生产，审计进行中",
+      "note": "23:51；dcbuilder：参与了 Aztec 销售，期待隐私成为常态 20:31；aztecnetwork：隐私将吞噬世界 00:36。",
+      "url": "https://x.com/fede_intern/status/1992274697275240486",
+      "date": "2025-11-22",
+      "title_en": "fede_intern: ethrex is production ready with audits under way",
+      "note_en": "23:51; dcbuilder: bid in the Aztec sale and hopes privacy becomes the norm, 20:31; aztecnetwork: privacy will eat the world, 00:36.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dcbuilder：参与了 Aztec 销售，期待隐私成为常态",
+      "note": "fede_intern：ethrex 已可用于生产，审计进行中 23:51；dcbuilder：参与了 Aztec 销售，期待隐私成为常态 20:31；aztecnetwork：隐私将吞噬世界 00:36。",
+      "url": "https://x.com/dcbuilder/status/1992224540379021435",
+      "date": "2025-11-22",
+      "title_en": "dcbuilder: bid in the Aztec sale and hopes privacy becomes the norm",
+      "note_en": "Fede_intern: ethrex is production ready with audits under way, 23:51; dcbuilder: bid in the Aztec sale and hopes privacy becomes the norm, 20:31; aztecnetwork: privacy will eat the world, 00:36.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：隐私将吞噬世界",
+      "note": "fede_intern：ethrex 已可用于生产，审计进行中 23:51；dcbuilder：参与了 Aztec 销售，期待隐私成为常态 20:31；aztecnetwork：隐私将吞噬世界 00:36。",
+      "url": "https://x.com/aztecnetwork/status/1991923651239907785",
+      "date": "2025-11-22",
+      "title_en": "aztecnetwork: privacy will eat the world",
+      "note_en": "Fede_intern: ethrex is production ready with audits under way, 23:51; dcbuilder: bid in the Aztec sale and hopes privacy becomes the norm, 20:31; aztecnetwork: privacy will eat the world, 00:36.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/ERCs/pull/1113",
+    "credit": "GitHub, ethereum/ERCs PR 1113",
+    "local_path": "assets/2025-11-22.jpg",
+    "credit_en": "GitHub, ethereum/ERCs PR 1113"
+  },
+  "keywords_en": [
+    "A Confidential Fungible Token ERC merged",
+    "a Minimal Avatar Smart Wallet ERC merged",
+    "BAL ends Ethereum's single lane execution",
+    "ZK staking",
+    "ethrex production ready",
+    "the Aztec sale"
+  ],
+  "summary_en": "arr00's Confidential Fungible Token ERC merged, with encrypted balances and amounts. MostafaS's Minimal Avatar Smart Wallet (MASW) ERC merged. nero_eth explained that EIP-7928 BAL gives each block a precise access map, enabling parallel execution. ethStaker showed a ZK staking node receiving 3/3 execution proofs."
+}

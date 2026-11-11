@@ -1,0 +1,107 @@
+{
+  "date": "2025-11-23",
+  "keywords": [
+    "客户端默认 gas 上限改为 60M",
+    "隐私方案与 Safe 等智能账户不兼容",
+    "多项 EOF 相关 EIP 转为 Stagnant",
+    "中继保护的免 gas 兑换 ERC",
+    "ERC-8088 跨链追踪"
+  ],
+  "summary": "nixorokish 称以太坊客户端默认 gas 上限已改为 60M。koeppelmann 指出现有隐私方案不支持 Safe 等智能合约账户，缺少多签与恢复，bermudabayzk 将改变这一点。eth-bot 把 EIP-663、EIP-7069 等多项 EOF 相关 EIP 转为 Stagnant。",
+  "items": [
+    {
+      "topic": "账户与隐私",
+      "title": "koeppelmann：现有隐私方案不兼容 Safe 等智能合约账户，缺少多签与恢复，bermudabayzk 将改变这一点",
+      "note": "01:23。",
+      "url": "https://x.com/koeppelmann/status/1992297922558394626",
+      "date": "2025-11-23",
+      "title_en": "koeppelmann: existing privacy tools do not work with smart accounts like Safe, missing multisig and recovery, and bermudabayzk will change that",
+      "note_en": "01:23.",
+      "topic_en": "Accounts and privacy"
+    },
+    {
+      "topic": "Gas 与规范",
+      "title": "nixorokish：客户端默认 gas 上限已改为 60M",
+      "note": "01:33；EIP-663 转为 Stagnant（eth-bot）2025 年 11 月 2 日提交后合并；EIP-7069 转为 Stagnant（eth-bot）2025 年 11 月 2 日提交后合并。",
+      "url": "https://x.com/nixorokish/status/1992300433625543063",
+      "date": "2025-11-23",
+      "title_en": "nixorokish: client default gas limit is now 60M",
+      "note_en": "01:33; EIP-663: move to Stagnant (eth-bot), merged after submission on November 2, 2025; EIP-7069: move to Stagnant (eth-bot), merged after submission on November 2, 2025.",
+      "topic_en": "Gas and specs"
+    },
+    {
+      "topic": "Gas 与规范",
+      "title": "EIP-663 转为 Stagnant",
+      "note": "nixorokish：客户端默认 gas 上限已改为 60M 01:33；EIP-663 转为 Stagnant（eth-bot）2025 年 11 月 2 日提交后合并；EIP-7069 转为 Stagnant（eth-bot）2025 年 11 月 2 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10675",
+      "date": "2025-11-23",
+      "title_en": "EIP-663: move to Stagnant",
+      "note_en": "Nixorokish: client default gas limit is now 60M, 01:33; EIP-663: move to Stagnant (eth-bot), merged after submission on November 2, 2025; EIP-7069: move to Stagnant (eth-bot), merged after submission on November 2, 2025.",
+      "topic_en": "Gas and specs"
+    },
+    {
+      "topic": "Gas 与规范",
+      "title": "EIP-7069 转为 Stagnant",
+      "note": "nixorokish：客户端默认 gas 上限已改为 60M 01:33；EIP-663 转为 Stagnant（eth-bot）2025 年 11 月 2 日提交后合并；EIP-7069 转为 Stagnant（eth-bot）2025 年 11 月 2 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10676",
+      "date": "2025-11-23",
+      "title_en": "EIP-7069: move to Stagnant",
+      "note_en": "Nixorokish: client default gas limit is now 60M, 01:33; EIP-663: move to Stagnant (eth-bot), merged after submission on November 2, 2025; EIP-7069: move to Stagnant (eth-bot), merged after submission on November 2, 2025.",
+      "topic_en": "Gas and specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：中继保护的免 gas 兑换",
+      "note": "（wyc-dev）提交；Magicians：ERC-8088 跨链追踪标准 05:37。",
+      "url": "https://github.com/ethereum/ERCs/pull/1371",
+      "date": "2025-11-23",
+      "title_en": "Add ERC: Relayer-Protected Gasless Swaps",
+      "note_en": "(wyc-dev), submitted; Magicians: ERC-8088 Cross-Chain Tracking Standard, 05:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8088 跨链追踪标准",
+      "note": "新增 ERC：中继保护的免 gas 兑换（wyc-dev）提交；Magicians：ERC-8088 跨链追踪标准 05:37。",
+      "url": "https://ethereum-magicians.org/t/erc-8088-cross-chain-tracking-standard/26677",
+      "date": "2025-11-23",
+      "title_en": "Magicians: ERC-8088 Cross-Chain Tracking Standard",
+      "note_en": "Add ERC: Relayer-Protected Gasless Swaps (wyc-dev), submitted; Magicians: ERC-8088 Cross-Chain Tracking Standard, 05:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：若有人攻破所有私有 GitHub 仓库会怎样",
+      "note": "18:55；AndyGuzmanEth：人们还在怀疑是否需要私密支付 08:52。",
+      "url": "https://x.com/pcaversaccio/status/1992562585661555031",
+      "date": "2025-11-23",
+      "title_en": "pcaversaccio: what if someone breached every private GitHub repo",
+      "note_en": "18:55; AndyGuzmanEth: and people still wonder if we need private payments, 08:52.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：人们还在怀疑是否需要私密支付",
+      "note": "pcaversaccio：若有人攻破所有私有 GitHub 仓库会怎样 18:55；AndyGuzmanEth：人们还在怀疑是否需要私密支付 08:52。",
+      "url": "https://x.com/AndyGuzmanEth/status/1992410849395486910",
+      "date": "2025-11-23",
+      "title_en": "AndyGuzmanEth: and people still wonder if we need private payments",
+      "note_en": "Pcaversaccio: what if someone breached every private GitHub repo, 18:55; AndyGuzmanEth: and people still wonder if we need private payments, 08:52.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8088-cross-chain-tracking-standard/26677",
+    "credit": "Ethereum Magicians, ERC-8088 Cross-Chain Tracking Standard",
+    "local_path": "assets/2025-11-23.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8088 Cross-Chain Tracking Standard"
+  },
+  "keywords_en": [
+    "Client default gas limit set to 60M",
+    "privacy tools not working with smart accounts like Safe",
+    "several EOF related EIPs moved to Stagnant",
+    "relayer protected gasless swap ERCs",
+    "ERC-8088 cross chain tracking"
+  ],
+  "summary_en": "nixorokish said client default gas limits are now 60M. koeppelmann noted privacy tools do not work with smart accounts like Safe, missing multisig and recovery, which bermudabayzk aims to fix. eth-bot moved several EOF related EIPs such as EIP-663 and EIP-7069 to Stagnant."
+}

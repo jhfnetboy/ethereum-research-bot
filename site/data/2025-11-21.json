@@ -1,0 +1,99 @@
+{
+  "date": "2025-11-21",
+  "keywords": [
+    "两张 5090 即可实时证明每个 L1 区块",
+    "Offchain Labs 主张 WASM 优于 RISC-V",
+    "状态锁作为提议者承诺",
+    "ZKPassport 不是 KYC",
+    "以太坊称隐私是常态",
+    "EIP-7928 存储键值类型更新"
+  ],
+  "summary": "drakefjustin 称 zkSync Airbender 团队用两张 RTX 5090 证明每个 L1 EVM 区块，功耗约 1kW。Offchain Labs 撰文认为 RISC-V 不适合作为 L1 交付指令集，WASM 更好。OnticNexus 提出把状态锁作为提议者承诺，为预确认提供更强保证。",
+  "items": [
+    {
+      "topic": "Gas 与扩容：实时证明",
+      "title": "drakefjustin：两张 5090 即可证明每个 L1 EVM 区块，约 1kW",
+      "note": "18:48；ethresear.ch：RISC-V 为何不适合作为 L1 交付指令集，WASM 为何更好（edfelten）09:17，代表 Offchain Labs 观点。",
+      "url": "https://x.com/drakefjustin/status/1991836045076263380",
+      "date": "2025-11-21",
+      "title_en": "drakefjustin: two 5090s now prove every L1 EVM block at about 1kW",
+      "note_en": "18:48; ethresear.ch: Why RISC-V is not a good L1 delivery ISA and WASM is better (edfelten), 09:17, Offchain Labs' view.",
+      "topic_en": "Gas and scaling: real time proving"
+    },
+    {
+      "topic": "Gas 与扩容：实时证明",
+      "title": "ethresear.ch：RISC-V 为何不适合作为 L1 交付指令集，WASM 为何更好",
+      "note": "drakefjustin：两张 5090 即可证明每个 L1 EVM 区块，约 1kW 18:48；ethresear.ch：RISC-V 为何不适合作为 L1 交付指令集，WASM 为何更好（edfelten）09:17，代表 Offchain Labs 观点。",
+      "url": "https://ethresear.ch/t/why-risc-v-is-not-a-good-choice-for-an-l1-delivery-isa-and-why-wasm-is-a-better-one/23491",
+      "date": "2025-11-21",
+      "title_en": "ethresear.ch: Why RISC-V is not a good L1 delivery ISA and WASM is better",
+      "note_en": "Drakefjustin: two 5090s now prove every L1 EVM block at about 1kW, 18:48; ethresear.ch: Why RISC-V is not a good L1 delivery ISA and WASM is better (edfelten), 09:17, Offchain Labs' view.",
+      "topic_en": "Gas and scaling: real time proving"
+    },
+    {
+      "topic": "交易：预确认",
+      "title": "ethresear.ch：状态锁作为提议者承诺",
+      "note": "（OnticNexus）05:32：Nethermind 研究实习成果，提议者对特定状态加锁并作出承诺。",
+      "url": "https://ethresear.ch/t/state-locks-as-proposer-commitments/23489",
+      "date": "2025-11-21",
+      "title_en": "ethresear.ch: State locks as proposer commitments",
+      "note_en": "(OnticNexus), 05:32: from a Nethermind research internship, proposers lock specific state and commit to it.",
+      "topic_en": "Transactions: preconfirmations"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：更新 StorageKey 与 StorageValue 类型定义",
+      "note": "（bhartnett）提交；EIP-7594 小修（fradamt）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10817",
+      "date": "2025-11-21",
+      "title_en": "EIP-7928: update StorageKey and StorageValue types",
+      "note_en": "(bhartnett), submitted; EIP-7594: minor fix (fradamt), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7594 小修",
+      "note": "EIP-7928：更新 StorageKey 与 StorageValue 类型定义（bhartnett）提交；EIP-7594 小修（fradamt）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10815",
+      "date": "2025-11-21",
+      "title_en": "EIP-7594: minor fix",
+      "note_en": "EIP-7928: update StorageKey and StorageValue types (bhartnett), submitted; EIP-7594: minor fix (fradamt), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：隐私是常态",
+      "note": "21:43；aztecnetwork：ZKPassport 不是 KYC，只是保护隐私的资格检查 20:54。",
+      "url": "https://x.com/ethereum/status/1991880094462431602",
+      "date": "2025-11-21",
+      "title_en": "ethereum: privacy is normal",
+      "note_en": "21:43; aztecnetwork: ZKPassport is not KYC, just a privacy preserving eligibility check, 20:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：ZKPassport 不是 KYC，只是保护隐私的资格检查",
+      "note": "ethereum：隐私是常态 21:43；aztecnetwork：ZKPassport 不是 KYC，只是保护隐私的资格检查 20:54。",
+      "url": "https://x.com/aztecnetwork/status/1991867851393953889",
+      "date": "2025-11-21",
+      "title_en": "aztecnetwork: ZKPassport is not KYC, just a privacy preserving eligibility check",
+      "note_en": "Ethereum: privacy is normal, 21:43; aztecnetwork: ZKPassport is not KYC, just a privacy preserving eligibility check, 20:54.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/why-risc-v-is-not-a-good-choice-for-an-l1-delivery-isa-and-why-wasm-is-a-better-one/23491",
+    "credit": "ethresear.ch, Why RISC-V Is Not a Good Choice for an L1 Delivery ISA",
+    "local_path": "assets/2025-11-21.jpg",
+    "credit_en": "ethresear.ch, Why RISC-V Is Not a Good Choice for an L1 Delivery ISA"
+  },
+  "keywords_en": [
+    "Two 5090s prove every L1 block",
+    "Offchain Labs argues WASM beats RISC-V",
+    "state locks as proposer commitments",
+    "ZKPassport is not KYC",
+    "Ethereum says privacy is normal",
+    "EIP-7928 storage key and value type update"
+  ],
+  "summary_en": "drakefjustin said the zkSync Airbender team proves every L1 EVM block on two RTX 5090s at about 1kW. Offchain Labs argued RISC-V is a poor L1 delivery ISA and WASM is better. OnticNexus proposed state locks as proposer commitments for stronger preconfirmation guarantees."
+}

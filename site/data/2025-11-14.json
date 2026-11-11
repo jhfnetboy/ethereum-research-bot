@@ -1,0 +1,109 @@
+{
+  "date": "2025-11-14",
+  "keywords": [
+    "屏蔽池隐私采用现状与改进方向",
+    "FOCIL 进入 Glamsterdam 的客户端意向",
+    "PeerDAS 使预签名 EIP-4844 交易无法传播",
+    "原生 Rollup EIP-8079",
+    "ERC-7730 可见性条件",
+    "EIP-7773 将 EIP-8080 列为 PFI"
+  ],
+  "summary": "DamianStraszak 总结 EVM 生态屏蔽池采用缓慢的技术原因并提出改进方向。soispoke 汇报上次 ACD：社区希望 FOCIL 进入 Glamsterdam，5 个共识客户端中 3 个支持 SFI。pcaversaccio 指出 PeerDAS 引入 cell KZG 证明后，预签名的旧式 EIP-4844 交易自 Osaka 起无法传播。",
+  "items": [
+    {
+      "topic": "隐私：屏蔽池为何普及慢",
+      "title": "Magicians：通过屏蔽池推动隐私采用的思考",
+      "note": "（DamianStraszak）04:44：总结 EVM 生态类 Zcash 屏蔽池的采用现状，分析主要技术障碍并提出改进方向。",
+      "url": "https://ethereum-magicians.org/t/thoughts-on-privacy-adoption-via-shielded-pools/26559",
+      "date": "2025-11-14",
+      "title_en": "Magicians: Thoughts on privacy adoption via shielded pools",
+      "note_en": "(DamianStraszak), 04:44: the state of Zcash style shielded pools in the EVM, the main technical blockers, and directions to improve.",
+      "topic_en": "Privacy: why shielded pools are slow to spread"
+    },
+    {
+      "topic": "交易：FOCIL 与 blob 交易",
+      "title": "soispoke：上次 ACD 的 FOCIL 进展，社区希望其进入 Glamsterdam，5 个客户端团队中 3 个支持 SFI",
+      "note": "00:32；pcaversaccio：PeerDAS 的 cell KZG 证明使预签名的旧式 EIP-4844 交易自 Osaka 起无法传播 19:20。",
+      "url": "https://x.com/soispoke/status/1989023520240574555",
+      "date": "2025-11-14",
+      "title_en": "soispoke: FOCIL update from the last ACD, the community wants it in Glamsterdam and 3 of 5 client teams back SFI",
+      "note_en": "00:32; pcaversaccio: PeerDAS cell KZG proofs mean presigned old style EIP-4844 txs no longer propagate after Osaka, 19:20.",
+      "topic_en": "Transactions: FOCIL and blob transactions"
+    },
+    {
+      "topic": "交易：FOCIL 与 blob 交易",
+      "title": "pcaversaccio：PeerDAS 的 cell KZG 证明使预签名的旧式 EIP-4844 交易自 Osaka 起无法传播",
+      "note": "soispoke：上次 ACD 的 FOCIL 进展，社区希望其进入 Glamsterdam，5 个客户端团队中 3 个支持 SFI 00:32；pcaversaccio：PeerDAS 的 cell KZG 证明使预签名的旧式 EIP-4844 交易自 Osaka 起无法传播 19:20。",
+      "url": "https://x.com/pcaversaccio/status/1989307532393795596",
+      "date": "2025-11-14",
+      "title_en": "pcaversaccio: PeerDAS cell KZG proofs mean presigned old style EIP-4844 txs no longer propagate after Osaka",
+      "note_en": "Soispoke: FOCIL update from the last ACD, the community wants it in Glamsterdam and 3 of 5 client teams back SFI, 00:32; pcaversaccio: PeerDAS cell KZG proofs mean presigned old style EIP-4844 txs no longer propagate after Osaka, 19:20.",
+      "topic_en": "Transactions: FOCIL and blob transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8079 原生 Rollup",
+      "note": "20:10；ERC-7730：以可见性条件取代 required 与 excluded 字段（lcastillo-ledger）提交；EIP-7773：将 EIP-8080 列为 PFI（fradamt）提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8079-native-rollups/26565",
+      "date": "2025-11-14",
+      "title_en": "Magicians: EIP-8079 Native rollups",
+      "note_en": "20:10; ERC-7730: visibility conditions replace required and excluded fields (lcastillo-ledger), submitted; EIP-7773: PFI EIP-8080 (fradamt), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：以可见性条件取代 required 与 excluded 字段",
+      "note": "Magicians：EIP-8079 原生 Rollup 20:10；ERC-7730：以可见性条件取代 required 与 excluded 字段（lcastillo-ledger）提交；EIP-7773：将 EIP-8080 列为 PFI（fradamt）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1349",
+      "date": "2025-11-14",
+      "title_en": "ERC-7730: visibility conditions replace required and excluded fields",
+      "note_en": "Magicians: EIP-8079 Native rollups, 20:10; ERC-7730: visibility conditions replace required and excluded fields (lcastillo-ledger), submitted; EIP-7773: PFI EIP-8080 (fradamt), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：将 EIP-8080 列为 PFI",
+      "note": "Magicians：EIP-8079 原生 Rollup 20:10；ERC-7730：以可见性条件取代 required 与 excluded 字段（lcastillo-ledger）提交；EIP-7773：将 EIP-8080 列为 PFI（fradamt）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10796",
+      "date": "2025-11-14",
+      "title_en": "EIP-7773: PFI EIP-8080",
+      "note_en": "Magicians: EIP-8079 Native rollups, 20:10; ERC-7730: visibility conditions replace required and excluded fields (lcastillo-ledger), submitted; EIP-7773: PFI EIP-8080 (fradamt), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "lightclients：PoW 共识是计算史上最优美简洁的技术之一",
+      "note": "21:39；AndyGuzmanEth：欢迎 nillion 回归以太坊，推动隐私 23:54。",
+      "url": "https://x.com/lightclients/status/1989342524092416163",
+      "date": "2025-11-14",
+      "title_en": "lightclients: PoW consensus is one of the most beautiful and simple technologies in computing",
+      "note_en": "21:39; AndyGuzmanEth: welcomes nillion home to Ethereum to push privacy, 23:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：欢迎 nillion 回归以太坊，推动隐私",
+      "note": "lightclients：PoW 共识是计算史上最优美简洁的技术之一 21:39；AndyGuzmanEth：欢迎 nillion 回归以太坊，推动隐私 23:54。",
+      "url": "https://x.com/AndyGuzmanEth/status/1989376341729497106",
+      "date": "2025-11-14",
+      "title_en": "AndyGuzmanEth: welcomes nillion home to Ethereum to push privacy",
+      "note_en": "Lightclients: PoW consensus is one of the most beautiful and simple technologies in computing, 21:39; AndyGuzmanEth: welcomes nillion home to Ethereum to push privacy, 23:54.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/thoughts-on-privacy-adoption-via-shielded-pools/26559",
+    "credit": "Ethereum Magicians, Thoughts on Privacy Adoption via Shielded Pools",
+    "local_path": "assets/2025-11-14.jpg",
+    "credit_en": "Ethereum Magicians, Thoughts on Privacy Adoption via Shielded Pools"
+  },
+  "keywords_en": [
+    "Shielded pool privacy adoption and how to improve it",
+    "client views on FOCIL for Glamsterdam",
+    "PeerDAS stops presigned EIP-4844 txs from propagating",
+    "native rollups EIP-8079",
+    "ERC-7730 visibility conditions",
+    "EIP-7773 lists EIP-8080 as PFI"
+  ],
+  "summary_en": "DamianStraszak summarized why shielded pools have been slow to catch on in the EVM and proposed fixes. soispoke reported the last ACD: the community wants FOCIL in Glamsterdam, and 3 of 5 consensus clients back SFI. pcaversaccio noted that with PeerDAS cell KZG proofs, presigned old style EIP-4844 txs stop propagating after Osaka."
+}

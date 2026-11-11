@@ -1,0 +1,193 @@
+{
+  "date": "2025-11-27",
+  "keywords": [
+    "ACDC #170 FOCIL 移出 Glamsterdam 并列为下一升级 SFI",
+    "EIP-8045 列为 CFI",
+    "Fusaka 主网计划",
+    "带链上追溯匿名控制的屏蔽池",
+    "CREATE2 防止初始存款泄露",
+    "私密 ERC-20 EIP",
+    "EIP-6404 迁移到 EIP-7932 注册表",
+    "Vitalik 向 Session 与 SimpleX 各捐 128 ETH"
+  ],
+  "summary": "ACDC #170：FOCIL 不进 Glamsterdam，转为下一升级 CFI，soispoke 随后宣布 FOCIL 列为 SFI；EIP-8045 列为 CFI。DamianStraszak 提出带链上追溯匿名控制的屏蔽池，pememoni 说明 CREATE2 如何防止隐私系统泄露初始存款。VitalikButerin 呼吁加密通讯支持无需许可注册与元数据隐私。",
+  "items": [
+    {
+      "topic": "会议：ACDC #170",
+      "title": "ACDC #170",
+      "note": "21:00，据 Ethereal news #0：Fusaka 12 月 3 日 21:49 UTC 上线，主网升级与事故响应计划就绪；ePBS devnet 预计 12 月底或 1 月；EIP-8045 排除被罚没验证者出块列为 CFI；FOCIL、EIP-8071 与 EIP-8062 不进 Glamsterdam，FOCIL 转为下一升级 CFI；soispoke：FOCIL 已列为 SFI 21:47。",
+      "url": "https://forkcast.org/calls/acdc/170",
+      "date": "2025-11-27",
+      "title_en": "ACDC #170",
+      "note_en": "21:00, per Ethereal news #0: Fusaka ships December 3 at 21:49 UTC with a mainnet upgrade and incident response plan; an ePBS devnet is due late December or January; EIP-8045, excluding slashed validators from proposing, is CFI; FOCIL, EIP-8071 and EIP-8062 are out of Glamsterdam, with FOCIL CFI for the next upgrade; soispoke: FOCIL is SFI, 21:47.",
+      "topic_en": "Calls: ACDC #170"
+    },
+    {
+      "topic": "会议：ACDC #170",
+      "title": "Ethereal news #0",
+      "note": "ACDC #170 21:00，据 Ethereal news #0：Fusaka 12 月 3 日 21:49 UTC 上线，主网升级与事故响应计划就绪；ePBS devnet 预计 12 月底或 1 月；EIP-8045 排除被罚没验证者出块列为 CFI；FOCIL、EIP-8071 与 EIP-8062 不进 Glamsterdam，FOCIL 转为下一升级 CFI；soispoke：FOCIL 已列为 SFI 21:47。",
+      "url": "https://ethereal.news/ethereal-news-weekly-0/",
+      "date": "2025-11-27",
+      "title_en": "Ethereal news #0",
+      "note_en": "ACDC #170, 21:00, per Ethereal news #0: Fusaka ships December 3 at 21:49 UTC with a mainnet upgrade and incident response plan; an ePBS devnet is due late December or January; EIP-8045, excluding slashed validators from proposing, is CFI; FOCIL, EIP-8071 and EIP-8062 are out of Glamsterdam, with FOCIL CFI for the next upgrade; soispoke: FOCIL is SFI, 21:47.",
+      "topic_en": "Calls: ACDC #170"
+    },
+    {
+      "topic": "会议：ACDC #170",
+      "title": "主网升级与事故响应计划",
+      "note": "ACDC #170 21:00，据 Ethereal news #0：Fusaka 12 月 3 日 21:49 UTC 上线，主网升级与事故响应计划就绪；ePBS devnet 预计 12 月底或 1 月；EIP-8045 排除被罚没验证者出块列为 CFI；FOCIL、EIP-8071 与 EIP-8062 不进 Glamsterdam，FOCIL 转为下一升级 CFI；soispoke：FOCIL 已列为 SFI 21:47。",
+      "url": "https://github.com/ethereum/pm/blob/master/Fusaka/fusaka-mainnet-plan.md",
+      "date": "2025-11-27",
+      "title_en": "mainnet upgrade and incident response plan",
+      "note_en": "ACDC #170, 21:00, per Ethereal news #0: Fusaka ships December 3 at 21:49 UTC with a mainnet upgrade and incident response plan; an ePBS devnet is due late December or January; EIP-8045, excluding slashed validators from proposing, is CFI; FOCIL, EIP-8071 and EIP-8062 are out of Glamsterdam, with FOCIL CFI for the next upgrade; soispoke: FOCIL is SFI, 21:47.",
+      "topic_en": "Calls: ACDC #170"
+    },
+    {
+      "topic": "会议：ACDC #170",
+      "title": "soispoke：FOCIL 已列为 SFI",
+      "note": "ACDC #170 21:00，据 Ethereal news #0：Fusaka 12 月 3 日 21:49 UTC 上线，主网升级与事故响应计划就绪；ePBS devnet 预计 12 月底或 1 月；EIP-8045 排除被罚没验证者出块列为 CFI；FOCIL、EIP-8071 与 EIP-8062 不进 Glamsterdam，FOCIL 转为下一升级 CFI；soispoke：FOCIL 已列为 SFI 21:47。",
+      "url": "https://x.com/soispoke/status/1994055548937924681",
+      "date": "2025-11-27",
+      "title_en": "soispoke: FOCIL is SFI",
+      "note_en": "ACDC #170, 21:00, per Ethereal news #0: Fusaka ships December 3 at 21:49 UTC with a mainnet upgrade and incident response plan; an ePBS devnet is due late December or January; EIP-8045, excluding slashed validators from proposing, is CFI; FOCIL, EIP-8071 and EIP-8062 are out of Glamsterdam, with FOCIL CFI for the next upgrade; soispoke: FOCIL is SFI, 21:47.",
+      "topic_en": "Calls: ACDC #170"
+    },
+    {
+      "topic": "隐私：屏蔽池设计",
+      "title": "Magicians：带链上追溯匿名控制的屏蔽池",
+      "note": "（DamianStraszak）12:17：防止不良行为者滥用屏蔽池的新机制；ethresear.ch：CREATE2 如何防止隐私系统中的初始存款泄露（pememoni）02:04；新增 EIP：私密 ERC-20（jakeolo）提交。",
+      "url": "https://ethereum-magicians.org/t/shielded-pools-with-on-chain-retroactive-anonymity-control/26735",
+      "date": "2025-11-27",
+      "title_en": "Magicians: Shielded pools with onchain retroactive anonymity control",
+      "note_en": "(DamianStraszak), 12:17: a new mechanism to stop bad actors abusing shielded pools; ethresear.ch: How CREATE2 prevents initial deposit leakage in privacy systems (pememoni), 02:04; Add EIP: Private ERC-20 (jakeolo), submitted.",
+      "topic_en": "Privacy: shielded pool design"
+    },
+    {
+      "topic": "隐私：屏蔽池设计",
+      "title": "ethresear.ch：CREATE2 如何防止隐私系统中的初始存款泄露",
+      "note": "Magicians：带链上追溯匿名控制的屏蔽池（DamianStraszak）12:17：防止不良行为者滥用屏蔽池的新机制；ethresear.ch：CREATE2 如何防止隐私系统中的初始存款泄露（pememoni）02:04；新增 EIP：私密 ERC-20（jakeolo）提交。",
+      "url": "https://ethresear.ch/t/how-create2-prevents-initial-deposit-leakage-in-privacy-systems/23545",
+      "date": "2025-11-27",
+      "title_en": "ethresear.ch: How CREATE2 prevents initial deposit leakage in privacy systems",
+      "note_en": "Magicians: Shielded pools with onchain retroactive anonymity control (DamianStraszak), 12:17: a new mechanism to stop bad actors abusing shielded pools; ethresear.ch: How CREATE2 prevents initial deposit leakage in privacy systems (pememoni), 02:04; Add EIP: Private ERC-20 (jakeolo), submitted.",
+      "topic_en": "Privacy: shielded pool design"
+    },
+    {
+      "topic": "隐私：屏蔽池设计",
+      "title": "新增 EIP：私密 ERC-20",
+      "note": "Magicians：带链上追溯匿名控制的屏蔽池（DamianStraszak）12:17：防止不良行为者滥用屏蔽池的新机制；ethresear.ch：CREATE2 如何防止隐私系统中的初始存款泄露（pememoni）02:04；新增 EIP：私密 ERC-20（jakeolo）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10842",
+      "date": "2025-11-27",
+      "title_en": "Add EIP: Private ERC-20",
+      "note_en": "Magicians: Shielded pools with onchain retroactive anonymity control (DamianStraszak), 12:17: a new mechanism to stop bad actors abusing shielded pools; ethresear.ch: How CREATE2 prevents initial deposit leakage in privacy systems (pememoni), 02:04; Add EIP: Private ERC-20 (jakeolo), submitted.",
+      "topic_en": "Privacy: shielded pool design"
+    },
+    {
+      "topic": "签名与规范",
+      "title": "EIP-6404：迁移到 EIP-7932 注册表",
+      "note": "（SirSpudlington）2025 年 11 月 8 日提交后合并；EIP-7773：EIP-8068 列为 DFI（ralexstokes）提交并合并；EIP-7688 进入 Review（etan-status）提交；新增 ERC：关联账户（stevieraykatz）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10755",
+      "date": "2025-11-27",
+      "title_en": "EIP-6404: migrate to the EIP-7932 registry",
+      "note_en": "(SirSpudlington), merged after submission on November 8, 2025; EIP-7773: EIP-8068 to DFI (ralexstokes), submitted and merged; EIP-7688: move to Review (etan-status), submitted; Add ERC: Associated Accounts (stevieraykatz), submitted.",
+      "topic_en": "Signatures and specs"
+    },
+    {
+      "topic": "签名与规范",
+      "title": "EIP-7773：EIP-8068 列为 DFI",
+      "note": "EIP-6404：迁移到 EIP-7932 注册表（SirSpudlington）2025 年 11 月 8 日提交后合并；EIP-7773：EIP-8068 列为 DFI（ralexstokes）提交并合并；EIP-7688 进入 Review（etan-status）提交；新增 ERC：关联账户（stevieraykatz）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10841",
+      "date": "2025-11-27",
+      "title_en": "EIP-7773: EIP-8068 to DFI",
+      "note_en": "EIP-6404: migrate to the EIP-7932 registry (SirSpudlington), merged after submission on November 8, 2025; EIP-7773: EIP-8068 to DFI (ralexstokes), submitted and merged; EIP-7688: move to Review (etan-status), submitted; Add ERC: Associated Accounts (stevieraykatz), submitted.",
+      "topic_en": "Signatures and specs"
+    },
+    {
+      "topic": "签名与规范",
+      "title": "EIP-7688 进入 Review",
+      "note": "EIP-6404：迁移到 EIP-7932 注册表（SirSpudlington）2025 年 11 月 8 日提交后合并；EIP-7773：EIP-8068 列为 DFI（ralexstokes）提交并合并；EIP-7688 进入 Review（etan-status）提交；新增 ERC：关联账户（stevieraykatz）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10839",
+      "date": "2025-11-27",
+      "title_en": "EIP-7688: move to Review",
+      "note_en": "EIP-6404: migrate to the EIP-7932 registry (SirSpudlington), merged after submission on November 8, 2025; EIP-7773: EIP-8068 to DFI (ralexstokes), submitted and merged; EIP-7688: move to Review (etan-status), submitted; Add ERC: Associated Accounts (stevieraykatz), submitted.",
+      "topic_en": "Signatures and specs"
+    },
+    {
+      "topic": "签名与规范",
+      "title": "新增 ERC：关联账户",
+      "note": "EIP-6404：迁移到 EIP-7932 注册表（SirSpudlington）2025 年 11 月 8 日提交后合并；EIP-7773：EIP-8068 列为 DFI（ralexstokes）提交并合并；EIP-7688 进入 Review（etan-status）提交；新增 ERC：关联账户（stevieraykatz）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1377",
+      "date": "2025-11-27",
+      "title_en": "Add ERC: Associated Accounts",
+      "note_en": "EIP-6404: migrate to the EIP-7932 registry (SirSpudlington), merged after submission on November 8, 2025; EIP-7773: EIP-8068 to DFI (ralexstokes), submitted and merged; EIP-7688: move to Review (etan-status), submitted; Add ERC: Associated Accounts (stevieraykatz), submitted.",
+      "topic_en": "Signatures and specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：把 EIP-6404 加入 EIP-7773",
+      "note": "（nixorokish）2025 年 11 月 6 日提交后合并；EIP-7773：EIP-8080 列为 PFI（fradamt）2025 年 11 月 14 日提交后合并；ACDT #62 议程，12 月 1 日 21:03。",
+      "url": "https://github.com/ethereum/EIPs/pull/10727",
+      "date": "2025-11-27",
+      "title_en": "EIP-7773: add EIP-6404",
+      "note_en": "(nixorokish), merged after submission on November 6, 2025; EIP-7773: EIP-8080 to PFI (fradamt), merged after submission on November 14, 2025; ACDT #62 agenda, Dec 1, 21:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：EIP-8080 列为 PFI",
+      "note": "EIP-7773：把 EIP-6404 加入 EIP-7773（nixorokish）2025 年 11 月 6 日提交后合并；EIP-7773：EIP-8080 列为 PFI（fradamt）2025 年 11 月 14 日提交后合并；ACDT #62 议程，12 月 1 日 21:03。",
+      "url": "https://github.com/ethereum/EIPs/pull/10796",
+      "date": "2025-11-27",
+      "title_en": "EIP-7773: EIP-8080 to PFI",
+      "note_en": "EIP-7773: add EIP-6404 (nixorokish), merged after submission on November 6, 2025; EIP-7773: EIP-8080 to PFI (fradamt), merged after submission on November 14, 2025; ACDT #62 agenda, Dec 1, 21:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #62 议程，12 月 1 日",
+      "note": "EIP-7773：把 EIP-6404 加入 EIP-7773（nixorokish）2025 年 11 月 6 日提交后合并；EIP-7773：EIP-8080 列为 PFI（fradamt）2025 年 11 月 14 日提交后合并；ACDT #62 议程，12 月 1 日 21:03。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-62-december-1-2025/26739",
+      "date": "2025-11-27",
+      "title_en": "ACDT #62 agenda, Dec 1",
+      "note_en": "EIP-7773: add EIP-6404 (nixorokish), merged after submission on November 6, 2025; EIP-7773: EIP-8080 to PFI (fradamt), merged after submission on November 14, 2025; ACDT #62 agenda, Dec 1, 21:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：加密通讯的下一步是无需许可注册与元数据隐私，Session 与 SimpleX 在推进",
+      "note": "05:06；binji_x：以太坊上有值得关注的隐私项目 05:24。",
+      "url": "https://x.com/VitalikButerin/status/1993803663026860125",
+      "date": "2025-11-27",
+      "title_en": "VitalikButerin: next steps for encrypted messaging are permissionless signup and metadata privacy, pushed by Session and SimpleX",
+      "note_en": "05:06; binji_x: privacy projects on Ethereum worth watching, 05:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：以太坊上有值得关注的隐私项目",
+      "note": "VitalikButerin：加密通讯的下一步是无需许可注册与元数据隐私，Session 与 SimpleX 在推进 05:06；binji_x：以太坊上有值得关注的隐私项目 05:24。",
+      "url": "https://x.com/binji_x/status/1993808219270205561",
+      "date": "2025-11-27",
+      "title_en": "binji_x: privacy projects on Ethereum worth watching",
+      "note_en": "VitalikButerin: next steps for encrypted messaging are permissionless signup and metadata privacy, pushed by Session and SimpleX, 05:06; binji_x: privacy projects on Ethereum worth watching, 05:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/shielded-pools-with-on-chain-retroactive-anonymity-control/26735",
+    "credit": "Ethereum Magicians, Shielded Pools with on-chain Retroactive Anonymity Control",
+    "local_path": "assets/2025-11-27.jpg",
+    "credit_en": "Ethereum Magicians, Shielded Pools with on-chain Retroactive Anonymity Control"
+  },
+  "keywords_en": [
+    "ACDC #170 moves FOCIL out of Glamsterdam and SFI for the next upgrade",
+    "EIP-8045 CFI",
+    "the Fusaka mainnet plan",
+    "shielded pools with onchain retroactive anonymity control",
+    "CREATE2 against initial deposit leakage",
+    "a Private ERC-20 EIP",
+    "EIP-6404 moves to the EIP-7932 registry",
+    "Vitalik gives 128 ETH each to Session and SimpleX"
+  ],
+  "summary_en": "ACDC #170: FOCIL is out of Glamsterdam and CFI for the next upgrade, and soispoke then announced FOCIL is SFI; EIP-8045 is CFI. DamianStraszak proposed shielded pools with onchain retroactive anonymity control, and pememoni showed how CREATE2 stops privacy systems leaking initial deposits. VitalikButerin called for permissionless signup and metadata privacy in encrypted messaging."
+}

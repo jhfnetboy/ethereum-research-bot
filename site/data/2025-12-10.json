@@ -1,0 +1,141 @@
+{
+  "date": "2025-12-10",
+  "keywords": [
+    "BPO1 将 blob 上限提到 15",
+    "EIP-7918 blob 拥堵定价生效",
+    "EIP-7918 提交进入 Final",
+    "BAL 加并行执行实现 10 GigaGas/s",
+    "60M gas 下的 BAL 大小分析",
+    "ERC-7780 无状态验证器",
+    "一次性授权的缺陷"
+  ],
+  "summary": "donnoh_eth 观察到有人开始刷 blob，拥堵定价立即响应，说明 EIP-7918 生效；anderselowsson 提交 EIP-7918 进入 Final。Po 与 Qi Zhou 分析借助 BAL 与并行执行实现 10 GigaGas/s EVM 执行。ethereumfndn 称 BPO1 已把 blob 容量提到每区块 15 个。",
+  "items": [
+    {
+      "topic": "Gas 与 blob：拥堵定价",
+      "title": "donnoh_eth：有人开始刷 blob，拥堵定价立即响应，EIP-7918 似乎在发挥作用",
+      "note": "15:51；EIP-7918 进入 Final（anderselowsson）提交；ethereumfndn：BPO1 昨日激活，blob 容量提到每区块 15 个 22:47。",
+      "url": "https://x.com/donnoh_eth/status/1998676839913357556",
+      "date": "2025-12-10",
+      "title_en": "donnoh_eth: someone started spamming blobs and congestion pricing caught it at once, so EIP-7918 seems to work",
+      "note_en": "15:51; EIP-7918: move to Final (anderselowsson), submitted; ethereumfndn: BPO1 activated yesterday, raising blob capacity to 15 per block, 22:47.",
+      "topic_en": "Gas and blobs: congestion pricing"
+    },
+    {
+      "topic": "Gas 与 blob：拥堵定价",
+      "title": "EIP-7918 进入 Final",
+      "note": "donnoh_eth：有人开始刷 blob，拥堵定价立即响应，EIP-7918 似乎在发挥作用 15:51；EIP-7918 进入 Final（anderselowsson）提交；ethereumfndn：BPO1 昨日激活，blob 容量提到每区块 15 个 22:47。",
+      "url": "https://github.com/ethereum/EIPs/pull/10891",
+      "date": "2025-12-10",
+      "title_en": "EIP-7918: move to Final",
+      "note_en": "Donnoh_eth: someone started spamming blobs and congestion pricing caught it at once, so EIP-7918 seems to work, 15:51; EIP-7918: move to Final (anderselowsson), submitted; ethereumfndn: BPO1 activated yesterday, raising blob capacity to 15 per block, 22:47.",
+      "topic_en": "Gas and blobs: congestion pricing"
+    },
+    {
+      "topic": "Gas 与 blob：拥堵定价",
+      "title": "ethereumfndn：BPO1 昨日激活，blob 容量提到每区块 15 个",
+      "note": "donnoh_eth：有人开始刷 blob，拥堵定价立即响应，EIP-7918 似乎在发挥作用 15:51；EIP-7918 进入 Final（anderselowsson）提交；ethereumfndn：BPO1 昨日激活，blob 容量提到每区块 15 个 22:47。",
+      "url": "https://x.com/ethereumfndn/status/1998781751468941746",
+      "date": "2025-12-10",
+      "title_en": "ethereumfndn: BPO1 activated yesterday, raising blob capacity to 15 per block",
+      "note_en": "Donnoh_eth: someone started spamming blobs and congestion pricing caught it at once, so EIP-7918 seems to work, 15:51; EIP-7918: move to Final (anderselowsson), submitted; ethereumfndn: BPO1 activated yesterday, raising blob capacity to 15 per block, 22:47.",
+      "topic_en": "Gas and blobs: congestion pricing"
+    },
+    {
+      "topic": "Gas：执行扩容",
+      "title": "ethresear.ch：借助 BAL 与并行执行实现 10 GigaGas/s EVM 执行",
+      "note": "（Po）16:37：大幅提高 gas 上限会撞上磁盘 I/O 与 CPU 执行速度瓶颈，文章分析 BAL 与并行执行如何突破；EIP-7928：加入 60M gas 下的 BAL 大小分析（nerolation）提交并合并。",
+      "url": "https://ethresear.ch/t/achieving-10gigagas-s-evm-execution-with-bal-and-parallel-execution/23632",
+      "date": "2025-12-10",
+      "title_en": "ethresear.ch: Achieving 10 GigaGas/s EVM execution with BAL and parallel execution",
+      "note_en": "(Po), 16:37: large gas limit increases hit disk I/O and CPU limits, and the post shows how BAL and parallel execution get past them; EIP-7928: add BAL size analysis for 60M gas (nerolation), submitted and merged.",
+      "topic_en": "Gas: scaling execution"
+    },
+    {
+      "topic": "Gas：执行扩容",
+      "title": "EIP-7928：加入 60M gas 下的 BAL 大小分析",
+      "note": "ethresear.ch：借助 BAL 与并行执行实现 10 GigaGas/s EVM 执行（Po）16:37：大幅提高 gas 上限会撞上磁盘 I/O 与 CPU 执行速度瓶颈，文章分析 BAL 与并行执行如何突破；EIP-7928：加入 60M gas 下的 BAL 大小分析（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10887",
+      "date": "2025-12-10",
+      "title_en": "EIP-7928: add BAL size analysis for 60M gas",
+      "note_en": "Ethresear.ch: Achieving 10 GigaGas/s EVM execution with BAL and parallel execution (Po), 16:37: large gas limit increases hit disk I/O and CPU limits, and the post shows how BAL and parallel execution get past them; EIP-7928: add BAL size analysis for 60M gas (nerolation), submitted and merged.",
+      "topic_en": "Gas: scaling execution"
+    },
+    {
+      "topic": "账户：验证器与授权",
+      "title": "ERC-7780：提升无状态验证器规范的清晰度",
+      "note": "（Coriolan-dev）提交；Magicians：数字价值系统中一次性授权的缺陷（recurmj）06:22。",
+      "url": "https://github.com/ethereum/ERCs/pull/1398",
+      "date": "2025-12-10",
+      "title_en": "ERC-7780: improve clarity of the stateless validators spec",
+      "note_en": "(Coriolan-dev), submitted; Magicians: The one shot authorization flaw in digital value systems (recurmj), 06:22.",
+      "topic_en": "Accounts: validators and authorization"
+    },
+    {
+      "topic": "账户：验证器与授权",
+      "title": "Magicians：数字价值系统中一次性授权的缺陷",
+      "note": "ERC-7780：提升无状态验证器规范的清晰度（Coriolan-dev）提交；Magicians：数字价值系统中一次性授权的缺陷（recurmj）06:22。",
+      "url": "https://ethereum-magicians.org/t/recur-rip-000-the-one-shot-authorization-flaw-in-digital-value-systems/27042",
+      "date": "2025-12-10",
+      "title_en": "Magicians: The one shot authorization flaw in digital value systems",
+      "note_en": "ERC-7780: improve clarity of the stateless validators spec (Coriolan-dev), submitted; Magicians: The one shot authorization flaw in digital value systems (recurmj), 06:22.",
+      "topic_en": "Accounts: validators and authorization"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7496：加入自定义错误",
+      "note": "（ryanio）提交并合并；EIP-7966：接收等待语义与参考实现对齐（kurahin）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1400",
+      "date": "2025-12-10",
+      "title_en": "ERC-7496: add custom errors",
+      "note_en": "(ryanio), submitted and merged; EIP-7966: align receipt waiting semantics with the reference implementation (kurahin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7966：接收等待语义与参考实现对齐",
+      "note": "ERC-7496：加入自定义错误（ryanio）提交并合并；EIP-7966：接收等待语义与参考实现对齐（kurahin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10892",
+      "date": "2025-12-10",
+      "title_en": "EIP-7966: align receipt waiting semantics with the reference implementation",
+      "note_en": "ERC-7496: add custom errors (ryanio), submitted and merged; EIP-7966: align receipt waiting semantics with the reference implementation (kurahin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：祝贺 Tempo 测试网上线，但指出其 README 说法有问题",
+      "note": "09:07；zooko：使用透明地址的 Zcash 用户并非想要隐私却失败了 22:09。",
+      "url": "https://x.com/fede_intern/status/1998575143296094212",
+      "date": "2025-12-10",
+      "title_en": "fede_intern: congrats on the Tempo testnet, but a README claim is wrong",
+      "note_en": "09:07; zooko: Zcash users on transparent addresses are not failing at privacy, 22:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：使用透明地址的 Zcash 用户并非想要隐私却失败了",
+      "note": "fede_intern：祝贺 Tempo 测试网上线，但指出其 README 说法有问题 09:07；zooko：使用透明地址的 Zcash 用户并非想要隐私却失败了 22:09。",
+      "url": "https://x.com/zooko/status/1998772012505059517",
+      "date": "2025-12-10",
+      "title_en": "zooko: Zcash users on transparent addresses are not failing at privacy",
+      "note_en": "Fede_intern: congrats on the Tempo testnet, but a README claim is wrong, 09:07; zooko: Zcash users on transparent addresses are not failing at privacy, 22:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/achieving-10gigagas-s-evm-execution-with-bal-and-parallel-execution/23632",
+    "credit": "ethresear.ch, Achieving 10GigaGas/s EVM Execution with BAL and Parallel Execution",
+    "local_path": "assets/2025-12-10.jpg",
+    "credit_en": "ethresear.ch, Achieving 10GigaGas/s EVM Execution with BAL and Parallel Execution"
+  },
+  "keywords_en": [
+    "BPO1 lifts blob max to 15",
+    "EIP-7918 blob congestion pricing at work",
+    "EIP-7918 submitted to Final",
+    "10 GigaGas/s with BAL and parallel execution",
+    "BAL size analysis at 60M gas",
+    "ERC-7780 stateless validators",
+    "the flaw of one shot authorization"
+  ],
+  "summary_en": "donnoh_eth saw someone spamming blobs and congestion pricing reacting at once, showing EIP-7918 works; anderselowsson submitted EIP-7918 for Final. Po and Qi Zhou analyzed 10 GigaGas/s EVM execution with BAL and parallel execution. ethereumfndn said BPO1 raised blob capacity to 15 per block."
+}

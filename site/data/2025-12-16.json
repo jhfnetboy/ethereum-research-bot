@@ -18,7 +18,7 @@
       "url": "https://github.com/ethereum/ERCs/pull/1213",
       "date": "2025-12-16",
       "title_en": "ERC-7913: move to Final",
-      "note_en": "(Amxx), merged after submission on September 16, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
+      "note_en": "(Amxx), merged after submission on September 1, 20256, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
       "topic_en": "Account signatures: ERC-7913 and EIP-7932"
     },
     {
@@ -28,7 +28,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10927",
       "date": "2025-12-16",
       "title_en": "EIP-7932: migrate to the new registry",
-      "note_en": "ERC-7913: move to Final (Amxx), merged after submission on September 16, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
+      "note_en": "ERC-7913: move to Final (Amxx), merged after submission on September 1, 20256, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
       "topic_en": "Account signatures: ERC-7913 and EIP-7932"
     },
     {
@@ -38,7 +38,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10926",
       "date": "2025-12-16",
       "title_en": "EIP-6404: move to the EIP-7932 registry",
-      "note_en": "ERC-7913: move to Final (Amxx), merged after submission on September 16, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
+      "note_en": "ERC-7913: move to Final (Amxx), merged after submission on September 1, 20256, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
       "topic_en": "Account signatures: ERC-7913 and EIP-7932"
     },
     {
@@ -54,51 +54,51 @@
     {
       "topic": "其他动态",
       "title": "EIP-7917 进入 Final",
-      "note": "（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "note": "（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）2025 年 11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
       "url": "https://github.com/ethereum/EIPs/pull/10915",
       "date": "2025-12-16",
       "title_en": "EIP-7917: move to Final",
-      "note_en": "(linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "note_en": "(linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28, 2025; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
       "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EIP-1：Jochem 成为编辑",
-      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）2025 年 11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
       "url": "https://github.com/ethereum/EIPs/pull/10863",
       "date": "2025-12-16",
       "title_en": "EIP-1: add Jochem as editor",
-      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28, 2025; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
       "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ERC-8001 进入 Final",
-      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）2025 年 11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
       "url": "https://github.com/ethereum/ERCs/pull/1408",
       "date": "2025-12-16",
       "title_en": "ERC-8001: move to Final",
-      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28, 2025; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
       "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ERC-7627 进入 Final",
-      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）2025 年 11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
       "url": "https://github.com/ethereum/ERCs/pull/1378",
       "date": "2025-12-16",
       "title_en": "ERC-7627: move to Final",
-      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28, 2025; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
       "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EIP-7745：加入证明格式与线协议规范",
-      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）2025 年 11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
       "url": "https://github.com/ethereum/EIPs/pull/10934",
       "date": "2025-12-16",
       "title_en": "EIP-7745: add proof format and wire protocol specs",
-      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28, 2025; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
       "topic_en": "Other updates"
     },
     {

@@ -55,7 +55,7 @@
     {
       "topic": "Gas：状态成本与计算重定价",
       "title": "EIP-7904：新方法与初步数字",
-      "note": "（misilva73）合并，2 月 3 日提交：由“通用重定价”改名“计算 gas 成本上调”，只上调 13 个低于 60 Mgas/s 的计算操作与预编译。",
+      "note": "（misilva73）2 月 3 日提交后合并：由“通用重定价”改名“计算 gas 成本上调”，只上调 13 个低于 60 Mgas/s 的计算操作与预编译。",
       "url": "https://github.com/ethereum/EIPs/pull/11244",
       "date": "2026-02-09",
       "title_en": "EIP-7904: new methodology and preliminary numbers",

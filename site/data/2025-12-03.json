@@ -1,0 +1,131 @@
+{
+  "date": "2025-12-03",
+  "keywords": [
+    "Fusaka 上线前夜",
+    "EIP-7932 移除 RLP 交易包装并定义注册表",
+    "EIP-6404 移除注册表副本",
+    "ERC-8092 关联账户",
+    "EIP-7928 澄清 BAL 的 gas 计算顺序",
+    "Agent 委员会预言机 ERC 合并",
+    "隐私协议中由用户共同治理"
+  ],
+  "summary": "TimBeiko 宣布 Fusaka 将在 slot 13,164,544 上线。SirSpudlington 移除 EIP-7932 的 RLP 交易包装并以 Python 定义注册表，合并。katzman 提出 ERC-8092，用密码学方式声明、证明与撤销跨链跨平台的账户关联。ameensol 设想隐私协议中管理员无法事后破坏隐私，但其他用户可以共同决定。",
+  "items": [
+    {
+      "topic": "签名：EIP-7932 注册表",
+      "title": "EIP-7932：移除 RLP 交易包装并以 Python 定义注册表",
+      "note": "（SirSpudlington）2025 年 11 月 8 日提交后合并；EIP-6404：移除 EIP-7932 算法注册表的副本（SirSpudlington）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10754",
+      "date": "2025-12-03",
+      "title_en": "EIP-7932: remove the RLP transaction wrapper and add a pythonic registry definition",
+      "note_en": "(SirSpudlington), merged after submission on November 8, 2025; EIP-6404: remove the copy of the EIP-7932 algorithm registry (SirSpudlington), submitted.",
+      "topic_en": "Signatures: the EIP-7932 registry"
+    },
+    {
+      "topic": "签名：EIP-7932 注册表",
+      "title": "EIP-6404：移除 EIP-7932 算法注册表的副本",
+      "note": "EIP-7932：移除 RLP 交易包装并以 Python 定义注册表（SirSpudlington）2025 年 11 月 8 日提交后合并；EIP-6404：移除 EIP-7932 算法注册表的副本（SirSpudlington）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10865",
+      "date": "2025-12-03",
+      "title_en": "EIP-6404: remove the copy of the EIP-7932 algorithm registry",
+      "note_en": "EIP-7932: remove the RLP transaction wrapper and add a pythonic registry definition (SirSpudlington), merged after submission on November 8, 2025; EIP-6404: remove the copy of the EIP-7932 algorithm registry (SirSpudlington), submitted.",
+      "topic_en": "Signatures: the EIP-7932 registry"
+    },
+    {
+      "topic": "账户：关联账户",
+      "title": "Magicians：ERC-8092 关联账户",
+      "note": "（katzman）00:51：让两个地址公开声明、证明并撤销彼此关系的标准方法，适用于跨链与跨平台。",
+      "url": "https://ethereum-magicians.org/t/erc-8092-associated-accounts/26858",
+      "date": "2025-12-03",
+      "title_en": "Magicians: ERC-8092 Associated Accounts",
+      "note_en": "(katzman), 00:51: a standard way for two addresses to publicly declare, prove and revoke a relationship, across chains and platforms.",
+      "topic_en": "Accounts: associated accounts"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：澄清 BAL 的 gas 计算顺序",
+      "note": "（nerolation）提交并合并；新增 ERC：Agent 委员会预言机（phiraml）2025 年 9 月 29 日提交后合并；Magicians：EIP-8096 提高点评估预编译 gas 成本 15:32；ethresear.ch：AltDA 安全集成框架 01:31。",
+      "url": "https://github.com/ethereum/EIPs/pull/10866",
+      "date": "2025-12-03",
+      "title_en": "EIP-7928: clarify the gas accounting sequence for BALs",
+      "note_en": "(nerolation), submitted and merged; Add ERC: Agent Council Oracles (phiraml), merged after submission on September 2, 20259, 2025; Magicians: EIP-8096 point evaluation precompile gas cost increase, 15:32; ethresear.ch: a framework for secure AltDA integration, 01:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Agent 委员会预言机",
+      "note": "EIP-7928：澄清 BAL 的 gas 计算顺序（nerolation）提交并合并；新增 ERC：Agent 委员会预言机（phiraml）2025 年 9 月 29 日提交后合并；Magicians：EIP-8096 提高点评估预编译 gas 成本 15:32；ethresear.ch：AltDA 安全集成框架 01:31。",
+      "url": "https://github.com/ethereum/ERCs/pull/1226",
+      "date": "2025-12-03",
+      "title_en": "Add ERC: Agent Council Oracles",
+      "note_en": "EIP-7928: clarify the gas accounting sequence for BALs (nerolation), submitted and merged; Add ERC: Agent Council Oracles (phiraml), merged after submission on September 2, 20259, 2025; Magicians: EIP-8096 point evaluation precompile gas cost increase, 15:32; ethresear.ch: a framework for secure AltDA integration, 01:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8096 提高点评估预编译 gas 成本",
+      "note": "EIP-7928：澄清 BAL 的 gas 计算顺序（nerolation）提交并合并；新增 ERC：Agent 委员会预言机（phiraml）2025 年 9 月 29 日提交后合并；Magicians：EIP-8096 提高点评估预编译 gas 成本 15:32；ethresear.ch：AltDA 安全集成框架 01:31。",
+      "url": "https://ethereum-magicians.org/t/eip-8096-point-evaluation-precompile-gas-cost-increase/26867",
+      "date": "2025-12-03",
+      "title_en": "Magicians: EIP-8096 point evaluation precompile gas cost increase",
+      "note_en": "EIP-7928: clarify the gas accounting sequence for BALs (nerolation), submitted and merged; Add ERC: Agent Council Oracles (phiraml), merged after submission on September 2, 20259, 2025; Magicians: EIP-8096 point evaluation precompile gas cost increase, 15:32; ethresear.ch: a framework for secure AltDA integration, 01:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：AltDA 安全集成框架",
+      "note": "EIP-7928：澄清 BAL 的 gas 计算顺序（nerolation）提交并合并；新增 ERC：Agent 委员会预言机（phiraml）2025 年 9 月 29 日提交后合并；Magicians：EIP-8096 提高点评估预编译 gas 成本 15:32；ethresear.ch：AltDA 安全集成框架 01:31。",
+      "url": "https://ethresear.ch/t/framework-for-altda-secure-integration-on-ethereum/23591",
+      "date": "2025-12-03",
+      "title_en": "ethresear.ch: a framework for secure AltDA integration",
+      "note_en": "EIP-7928: clarify the gas accounting sequence for BALs (nerolation), submitted and merged; Add ERC: Agent Council Oracles (phiraml), merged after submission on September 2, 20259, 2025; Magicians: EIP-8096 point evaluation precompile gas cost increase, 15:32; ethresear.ch: a framework for secure AltDA integration, 01:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "TimBeiko：Fusaka 明天上线，slot 13,164,544",
+      "note": "03:00；ameensol：隐私协议或可设计成管理员无法事后破坏隐私，但其他用户可共同决定 12:28；tcoratger：快速最终性正成为重要研究方向 06:30。",
+      "url": "https://x.com/TimBeiko/status/1995946188332478858",
+      "date": "2025-12-03",
+      "title_en": "TimBeiko: Fusaka goes live tomorrow at slot 13,164,544",
+      "note_en": "03:00; ameensol: privacy protocols where admins cannot rug privacy but other users jointly can, 12:28; tcoratger: fast finality is becoming a compelling research direction, 06:30.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：隐私协议或可设计成管理员无法事后破坏隐私，但其他用户可共同决定",
+      "note": "TimBeiko：Fusaka 明天上线，slot 13,164,544 03:00；ameensol：隐私协议或可设计成管理员无法事后破坏隐私，但其他用户可共同决定 12:28；tcoratger：快速最终性正成为重要研究方向 06:30。",
+      "url": "https://x.com/ameensol/status/1996089104811847831",
+      "date": "2025-12-03",
+      "title_en": "ameensol: privacy protocols where admins cannot rug privacy but other users jointly can",
+      "note_en": "TimBeiko: Fusaka goes live tomorrow at slot 13,164,544, 03:00; ameensol: privacy protocols where admins cannot rug privacy but other users jointly can, 12:28; tcoratger: fast finality is becoming a compelling research direction, 06:30.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：快速最终性正成为重要研究方向",
+      "note": "TimBeiko：Fusaka 明天上线，slot 13,164,544 03:00；ameensol：隐私协议或可设计成管理员无法事后破坏隐私，但其他用户可共同决定 12:28；tcoratger：快速最终性正成为重要研究方向 06:30。",
+      "url": "https://x.com/tcoratger/status/1995999073501888559",
+      "date": "2025-12-03",
+      "title_en": "tcoratger: fast finality is becoming a compelling research direction",
+      "note_en": "TimBeiko: Fusaka goes live tomorrow at slot 13,164,544, 03:00; ameensol: privacy protocols where admins cannot rug privacy but other users jointly can, 12:28; tcoratger: fast finality is becoming a compelling research direction, 06:30.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8092-associated-accounts/26858",
+    "credit": "Ethereum Magicians, ERC-8092 Associated Accounts",
+    "local_path": "assets/2025-12-03.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8092 Associated Accounts"
+  },
+  "keywords_en": [
+    "The eve of Fusaka",
+    "EIP-7932 drops the RLP transaction wrapper and defines its registry",
+    "EIP-6404 removes its registry copy",
+    "ERC-8092 associated accounts",
+    "EIP-7928 clarifies BAL gas accounting order",
+    "an agent council oracles ERC merged",
+    "user governed privacy protocols"
+  ],
+  "summary_en": "TimBeiko announced Fusaka at slot 13,164,544. SirSpudlington removed the RLP transaction wrapper from EIP-7932 and defined its registry in Python, merged. katzman proposed ERC-8092 to declare, prove and revoke account associations across chains and platforms cryptographically. ameensol mused about privacy protocols where admins cannot rug privacy afterwards but other users jointly can."
+}

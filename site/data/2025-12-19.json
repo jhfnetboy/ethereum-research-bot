@@ -28,7 +28,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10660",
       "date": "2025-12-19",
       "title_en": "EIP-7773: add PQC precompiles to Glamsterdam",
-      "note_en": "(shemnon), merged after submission on October 31, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
+      "note_en": "(shemnon), merged after submission on October 3, 20251, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
       "topic_en": "Account signatures: post-quantum precompiles"
     },
     {
@@ -38,7 +38,7 @@
       "url": "https://github.com/ethereum/EIPs/pull/10952",
       "date": "2025-12-19",
       "title_en": "EIP-7773: EIP-7619 to DFI",
-      "note_en": "EIP-7773: add PQC precompiles to Glamsterdam (shemnon), merged after submission on October 31, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
+      "note_en": "EIP-7773: add PQC precompiles to Glamsterdam (shemnon), merged after submission on October 3, 20251, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
       "topic_en": "Account signatures: post-quantum precompiles"
     },
     {
@@ -48,7 +48,7 @@
       "url": "https://github.com/ethereum/ERCs/pull/1415",
       "date": "2025-12-19",
       "title_en": "ERC-7964: add signature encoding",
-      "note_en": "EIP-7773: add PQC precompiles to Glamsterdam (shemnon), merged after submission on October 31, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
+      "note_en": "EIP-7773: add PQC precompiles to Glamsterdam (shemnon), merged after submission on October 3, 20251, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
       "topic_en": "Account signatures: post-quantum precompiles"
     },
     {

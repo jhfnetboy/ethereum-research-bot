@@ -1,0 +1,151 @@
+{
+  "date": "2025-11-13",
+  "keywords": [
+    "AA 团队与 Vitalik 发布无需信任宣言并上链",
+    "EIL 信任最小化跨 L2 互操作",
+    "2026 将是以太坊隐私黄金年",
+    "EBSI 上的隐私池",
+    "基于压缩的状态过期",
+    "退出使用合并队列 EIP-8080",
+    "EIP-7773 稀疏 blob 池 PFI 合并"
+  ],
+  "summary": "EF 账户抽象团队与 Vitalik 发布无需信任宣言并存放在链上，Vitalik 签署。yoavw 发表 EIL，基于 ERC-4337 账户实现信任最小化的跨 L2 互操作。以太坊官方账号转发 pbrody 观点：2026 将是以太坊隐私的黄金年，尤其对企业。EugeRe 研究在 EBSI 上实现隐私池。ACDC #169 讨论 FOCIL 进入 Glamsterdam。",
+  "items": [
+    {
+      "topic": "账户抽象：EIL 与无需信任宣言",
+      "title": "ethresear.ch：EIL 信任最小化跨 L2 互操作",
+      "note": "（yoavw）08:31：rollup 带来扩容却割裂体验，EIL 让钱包通过账户直接在多条 L2 上执行，无需信任中继或桥；ethereumfndn：AA 团队与 Vitalik 发布无需信任宣言，存放于 trustlessmanifesto.eth 09:32；VitalikButerin：已签署无需信任宣言 07:23。",
+      "url": "https://ethresear.ch/t/eil-trust-minimized-cross-l2-interop/23437",
+      "date": "2025-11-13",
+      "title_en": "ethresear.ch: EIL, trust minimized cross-L2 interop",
+      "note_en": "(yoavw), 08:31: rollups scaled but fragmented UX, and EIL lets wallets execute across L2s through the account without trusted relayers or bridges; ethereumfndn: the AA team and Vitalik publish the Trustless Manifesto at trustlessmanifesto.eth, 09:32; VitalikButerin: signed the Trustless Manifesto, 07:23.",
+      "topic_en": "Account abstraction: EIL and the Trustless Manifesto"
+    },
+    {
+      "topic": "账户抽象：EIL 与无需信任宣言",
+      "title": "ethereumfndn：AA 团队与 Vitalik 发布无需信任宣言，存放于 trustlessmanifesto.eth",
+      "note": "ethresear.ch：EIL 信任最小化跨 L2 互操作（yoavw）08:31：rollup 带来扩容却割裂体验，EIL 让钱包通过账户直接在多条 L2 上执行，无需信任中继或桥；ethereumfndn：AA 团队与 Vitalik 发布无需信任宣言，存放于 trustlessmanifesto.eth 09:32；VitalikButerin：已签署无需信任宣言 07:23。",
+      "url": "https://x.com/ethereumfndn/status/1988796996401131742",
+      "date": "2025-11-13",
+      "title_en": "ethereumfndn: the AA team and Vitalik publish the Trustless Manifesto at trustlessmanifesto.eth",
+      "note_en": "Ethresear.ch: EIL, trust minimized cross-L2 interop (yoavw), 08:31: rollups scaled but fragmented UX, and EIL lets wallets execute across L2s through the account without trusted relayers or bridges; ethereumfndn: the AA team and Vitalik publish the Trustless Manifesto at trustlessmanifesto.eth, 09:32; VitalikButerin: signed the Trustless Manifesto, 07:23.",
+      "topic_en": "Account abstraction: EIL and the Trustless Manifesto"
+    },
+    {
+      "topic": "账户抽象：EIL 与无需信任宣言",
+      "title": "VitalikButerin：已签署无需信任宣言",
+      "note": "ethresear.ch：EIL 信任最小化跨 L2 互操作（yoavw）08:31：rollup 带来扩容却割裂体验，EIL 让钱包通过账户直接在多条 L2 上执行，无需信任中继或桥；ethereumfndn：AA 团队与 Vitalik 发布无需信任宣言，存放于 trustlessmanifesto.eth 09:32；VitalikButerin：已签署无需信任宣言 07:23。",
+      "url": "https://x.com/VitalikButerin/status/1988764537034616903",
+      "date": "2025-11-13",
+      "title_en": "VitalikButerin: signed the Trustless Manifesto",
+      "note_en": "Ethresear.ch: EIL, trust minimized cross-L2 interop (yoavw), 08:31: rollups scaled but fragmented UX, and EIL lets wallets execute across L2s through the account without trusted relayers or bridges; ethereumfndn: the AA team and Vitalik publish the Trustless Manifesto at trustlessmanifesto.eth, 09:32; VitalikButerin: signed the Trustless Manifesto, 07:23.",
+      "topic_en": "Account abstraction: EIL and the Trustless Manifesto"
+    },
+    {
+      "topic": "隐私：企业与机构",
+      "title": "ethereum：pbrody 撰文称 2026 将是以太坊隐私的黄金年，尤其对企业",
+      "note": "22:26；ethresear.ch：在 EBSI 上实现隐私池，用于机构可编程隐私与合规（EugeRe）18:29：只有存款属于获批关联集合的用户才能提款，研究其能否与机构身份框架配合。",
+      "url": "https://x.com/ethereum/status/1988991966223511746",
+      "date": "2025-11-13",
+      "title_en": "ethereum: pbrody writes that 2026 will be the golden year of Ethereum privacy, especially for enterprises",
+      "note_en": "22:26; ethresear.ch: privacy pools on EBSI for institutional programmable privacy and compliance (EugeRe), 18:29: users withdraw only if their deposit is in an approved association set, tested with an institutional identity framework.",
+      "topic_en": "Privacy: enterprises and institutions"
+    },
+    {
+      "topic": "隐私：企业与机构",
+      "title": "ethresear.ch：在 EBSI 上实现隐私池，用于机构可编程隐私与合规",
+      "note": "ethereum：pbrody 撰文称 2026 将是以太坊隐私的黄金年，尤其对企业 22:26；ethresear.ch：在 EBSI 上实现隐私池，用于机构可编程隐私与合规（EugeRe）18:29：只有存款属于获批关联集合的用户才能提款，研究其能否与机构身份框架配合。",
+      "url": "https://ethresear.ch/t/implementing-privacy-pools-on-ebsi-for-institutional-programmable-privacy-compliance/23442",
+      "date": "2025-11-13",
+      "title_en": "ethresear.ch: privacy pools on EBSI for institutional programmable privacy and compliance",
+      "note_en": "Ethereum: pbrody writes that 2026 will be the golden year of Ethereum privacy, especially for enterprises, 22:26; ethresear.ch: privacy pools on EBSI for institutional programmable privacy and compliance (EugeRe), 18:29: users withdraw only if their deposit is in an approved association set, tested with an institutional identity framework.",
+      "topic_en": "Privacy: enterprises and institutions"
+    },
+    {
+      "topic": "Gas 与状态",
+      "title": "ethresear.ch：基于压缩的状态过期",
+      "note": "（gballet）21:01：以往状态过期提案因用户体验复杂而搁浅，本文尝试以压缩方式降低复杂度；EIP-7773：稀疏 blob 池列为 Glamsterdam PFI（raulk）2025 年 10 月 30 日提交后合并。",
+      "url": "https://ethresear.ch/t/compression-based-state-expiry/23443",
+      "date": "2025-11-13",
+      "title_en": "ethresear.ch: Compression based state expiry",
+      "note_en": "(gballet), 21:01: earlier state expiry proposals stalled on UX complexity, and this one uses compression to reduce it; EIP-7773: PFI sparse blobpool in Glamsterdam (raulk), merged after submission on October 30, 2025.",
+      "topic_en": "Gas and state"
+    },
+    {
+      "topic": "Gas 与状态",
+      "title": "EIP-7773：稀疏 blob 池列为 Glamsterdam PFI",
+      "note": "ethresear.ch：基于压缩的状态过期（gballet）21:01：以往状态过期提案因用户体验复杂而搁浅，本文尝试以压缩方式降低复杂度；EIP-7773：稀疏 blob 池列为 Glamsterdam PFI（raulk）2025 年 10 月 30 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10651",
+      "date": "2025-11-13",
+      "title_en": "EIP-7773: PFI sparse blobpool in Glamsterdam",
+      "note_en": "Ethresear.ch: Compression based state expiry (gballet), 21:01: earlier state expiry proposals stalled on UX complexity, and this one uses compression to reduce it; EIP-7773: PFI sparse blobpool in Glamsterdam (raulk), merged after submission on October 30, 2025.",
+      "topic_en": "Gas and state"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：退出使用合并队列",
+      "note": "（fradamt）提交；EIP-7773：将 EIP-8013 加入列表（gcolvin）2025 年 11 月 2 日提交后合并；ERC-7730：按最新规范更新示例（aalimsahin）2025 年 11 月 12 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10790",
+      "date": "2025-11-13",
+      "title_en": "Add EIP: Let exits use the consolidation queue",
+      "note_en": "(fradamt), submitted; EIP-7773: add EIP-8013 to the list (gcolvin), merged after submission on November 2, 2025; ERC-7730: update examples to the latest spec (aalimsahin), merged after submission on November 12, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：将 EIP-8013 加入列表",
+      "note": "新增 EIP：退出使用合并队列（fradamt）提交；EIP-7773：将 EIP-8013 加入列表（gcolvin）2025 年 11 月 2 日提交后合并；ERC-7730：按最新规范更新示例（aalimsahin）2025 年 11 月 12 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10669",
+      "date": "2025-11-13",
+      "title_en": "EIP-7773: add EIP-8013 to the list",
+      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), submitted; EIP-7773: add EIP-8013 to the list (gcolvin), merged after submission on November 2, 2025; ERC-7730: update examples to the latest spec (aalimsahin), merged after submission on November 12, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：按最新规范更新示例",
+      "note": "新增 EIP：退出使用合并队列（fradamt）提交；EIP-7773：将 EIP-8013 加入列表（gcolvin）2025 年 11 月 2 日提交后合并；ERC-7730：按最新规范更新示例（aalimsahin）2025 年 11 月 12 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1345",
+      "date": "2025-11-13",
+      "title_en": "ERC-7730: update examples to the latest spec",
+      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), submitted; EIP-7773: add EIP-8013 to the list (gcolvin), merged after submission on November 2, 2025; ERC-7730: update examples to the latest spec (aalimsahin), merged after submission on November 12, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：稳定币发行方决定以太坊分叉选择",
+      "note": "12:12；leanEthereum：lean in 19:54。",
+      "url": "https://x.com/ameensol/status/1988837279821967440",
+      "date": "2025-11-13",
+      "title_en": "ameensol: stablecoin issuers determine Ethereum fork choice",
+      "note_en": "12:12; leanEthereum: lean in, 19:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "leanEthereum：lean in",
+      "note": "ameensol：稳定币发行方决定以太坊分叉选择 12:12；leanEthereum：lean in 19:54。",
+      "url": "https://x.com/leanEthereum/status/1988953529026072767",
+      "date": "2025-11-13",
+      "title_en": "leanEthereum: lean in",
+      "note_en": "Ameensol: stablecoin issuers determine Ethereum fork choice, 12:12; leanEthereum: lean in, 19:54.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/eil-trust-minimized-cross-l2-interop/23437",
+    "credit": "ethresear.ch, EIL: Trust minimized cross-L2 interop",
+    "local_path": "assets/2025-11-13.jpg",
+    "credit_en": "ethresear.ch, EIL: Trust minimized cross-L2 interop"
+  },
+  "keywords_en": [
+    "The AA team and Vitalik publish the Trustless Manifesto onchain",
+    "EIL trust minimized cross-L2 interop",
+    "2026 as the golden year of Ethereum privacy",
+    "privacy pools on EBSI",
+    "compression based state expiry",
+    "EIP-8080 lets exits use the consolidation queue",
+    "EIP-7773 sparse blobpool PFI merged"
+  ],
+  "summary_en": "The EF Account Abstraction team and Vitalik published the Trustless Manifesto onchain, and Vitalik signed it. yoavw published EIL, trust minimized cross-L2 interop built on ERC-4337 accounts. The Ethereum account shared pbrody's view that 2026 will be the golden year of Ethereum privacy, especially for enterprises. EugeRe studied privacy pools on EBSI. ACDC #169 discussed FOCIL for Glamsterdam."
+}

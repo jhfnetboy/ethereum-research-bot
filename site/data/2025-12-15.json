@@ -34,31 +34,31 @@
     {
       "topic": "账户：模块与委托",
       "title": "ERC-7780：新增模块类型 8、9、10",
-      "note": "（leekt）11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
+      "note": "（leekt）2025 年 11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
       "url": "https://github.com/ethereum/ERCs/pull/1355",
       "date": "2025-12-15",
       "title_en": "ERC-7780: add module types 8, 9 and 10",
-      "note_en": "(leekt), merged after submission on November 18; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
+      "note_en": "(leekt), merged after submission on November 18, 2025; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
       "topic_en": "Accounts: modules and delegation"
     },
     {
       "topic": "账户：模块与委托",
       "title": "EIP-7819：修正 SETDELEGATE 操作码命名不一致",
-      "note": "ERC-7780：新增模块类型 8、9、10（leekt）11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
+      "note": "ERC-7780：新增模块类型 8、9、10（leekt）2025 年 11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
       "url": "https://github.com/ethereum/EIPs/pull/10922",
       "date": "2025-12-15",
       "title_en": "EIP-7819: fix inconsistent SETDELEGATE opcode naming",
-      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), merged after submission on November 18; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
+      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), merged after submission on November 18, 2025; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
       "topic_en": "Accounts: modules and delegation"
     },
     {
       "topic": "账户：模块与委托",
       "title": "ERC-7674 进入 Review",
-      "note": "ERC-7780：新增模块类型 8、9、10（leekt）11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
+      "note": "ERC-7780：新增模块类型 8、9、10（leekt）2025 年 11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
       "url": "https://github.com/ethereum/ERCs/pull/1404",
       "date": "2025-12-15",
       "title_en": "ERC-7674: move to Review",
-      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), merged after submission on November 18; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
+      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), merged after submission on November 18, 2025; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
       "topic_en": "Accounts: modules and delegation"
     },
     {

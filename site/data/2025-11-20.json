@@ -1,0 +1,121 @@
+{
+  "date": "2025-11-20",
+  "keywords": [
+    "Falcon 预编译 EIP 合并",
+    "原生 Rollup EIP 合并",
+    "非委托 EOA 的 Operator 合约 ERC 合并",
+    "向核心开发者提问 EIP-7932 范围",
+    "简化支付验证网关 ERC",
+    "加密参数调用 ERC 提交",
+    "Vitalik 呼吁站在用户一边的对抗式 UI"
+  ],
+  "summary": "simonmasson 的 Falcon 验签预编译 EIP 合并；lucadonnoh 的原生 Rollup EIP 合并。SirSpudlington 向核心开发者提问：若 EIP-6404 原生对接 EIP-7932，是否应把 EIP-7932 缩为注册表加预编译，以便 AA 高效验证各种签名。marcelomorgado 的非委托 EOA Operator 合约 ERC 合并。",
+  "items": [
+    {
+      "topic": "账户签名：Falcon 与 EIP-7932",
+      "title": "新增 EIP：Falcon 支持预编译",
+      "note": "（simonmasson）2025 年 10 月 17 日提交后合并；Magicians：向核心开发者提问 EIP-7932（SirSpudlington）05:38：若 EIP-6404 原生对接 EIP-7932，是否应把它缩为注册表加预编译，让 AA 能高效验证所有算法的签名。",
+      "url": "https://github.com/ethereum/EIPs/pull/10560",
+      "date": "2025-11-20",
+      "title_en": "Add EIP: Precompile for Falcon support",
+      "note_en": "(simonmasson), merged after submission on October 1, 20257, 2025; Magicians: Open question to core devs about EIP-7932 (SirSpudlington), 05:38: if EIP-6404 interoperates with EIP-7932, should it become a registry plus precompile so AA can verify signatures for every algorithm efficiently.",
+      "topic_en": "Account signatures: Falcon and EIP-7932"
+    },
+    {
+      "topic": "账户签名：Falcon 与 EIP-7932",
+      "title": "Magicians：向核心开发者提问 EIP-7932",
+      "note": "新增 EIP：Falcon 支持预编译（simonmasson）2025 年 10 月 17 日提交后合并；Magicians：向核心开发者提问 EIP-7932（SirSpudlington）05:38：若 EIP-6404 原生对接 EIP-7932，是否应把它缩为注册表加预编译，让 AA 能高效验证所有算法的签名。",
+      "url": "https://ethereum-magicians.org/t/open-question-to-the-core-devs-about-eip-7932/26636",
+      "date": "2025-11-20",
+      "title_en": "Magicians: Open question to core devs about EIP-7932",
+      "note_en": "Add EIP: Precompile for Falcon support (simonmasson), merged after submission on October 1, 20257, 2025; Magicians: Open question to core devs about EIP-7932 (SirSpudlington), 05:38: if EIP-6404 interoperates with EIP-7932, should it become a registry plus precompile so AA can verify signatures for every algorithm efficiently.",
+      "topic_en": "Account signatures: Falcon and EIP-7932"
+    },
+    {
+      "topic": "账户：EOA 与原生 Rollup",
+      "title": "新增 ERC：非委托 EOA 的 Operator 合约",
+      "note": "（marcelomorgado）2025 年 8 月 5 日提交后合并；新增 EIP：原生 Rollup（lucadonnoh）2025 年 11 月 14 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1148",
+      "date": "2025-11-20",
+      "title_en": "Add ERC: Operator contract for non delegated EOAs",
+      "note_en": "(marcelomorgado), merged after submission on August 5, 2025; Add EIP: Native rollups (lucadonnoh), merged after submission on November 14, 2025.",
+      "topic_en": "Accounts: EOAs and native rollups"
+    },
+    {
+      "topic": "账户：EOA 与原生 Rollup",
+      "title": "新增 EIP：原生 Rollup",
+      "note": "新增 ERC：非委托 EOA 的 Operator 合约（marcelomorgado）2025 年 8 月 5 日提交后合并；新增 EIP：原生 Rollup（lucadonnoh）2025 年 11 月 14 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10794",
+      "date": "2025-11-20",
+      "title_en": "Add EIP: Native rollups",
+      "note_en": "Add ERC: Operator contract for non delegated EOAs (marcelomorgado), merged after submission on August 5, 2025; Add EIP: Native rollups (lucadonnoh), merged after submission on November 14, 2025.",
+      "topic_en": "Accounts: EOAs and native rollups"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：简化支付验证网关",
+      "note": "（Hrom131）2025 年 8 月 7 日提交后合并；新增 ERC：加密哈希参数与调用（cfries）提交；Magicians：ERC-8089 智能合约生命周期注册表 18:18。",
+      "url": "https://github.com/ethereum/ERCs/pull/1155",
+      "date": "2025-11-20",
+      "title_en": "Add ERC: Simplified Payment Verification Gateway",
+      "note_en": "(Hrom131), merged after submission on August 7, 2025; Add ERC: Encrypted Hashed Arguments and Calls (cfries), submitted; Magicians: ERC-8089 Smart Contract Lifecycle Registry, 18:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：加密哈希参数与调用",
+      "note": "新增 ERC：简化支付验证网关（Hrom131）2025 年 8 月 7 日提交后合并；新增 ERC：加密哈希参数与调用（cfries）提交；Magicians：ERC-8089 智能合约生命周期注册表 18:18。",
+      "url": "https://github.com/ethereum/ERCs/pull/1361",
+      "date": "2025-11-20",
+      "title_en": "Add ERC: Encrypted Hashed Arguments and Calls",
+      "note_en": "Add ERC: Simplified Payment Verification Gateway (Hrom131), merged after submission on August 7, 2025; Add ERC: Encrypted Hashed Arguments and Calls (cfries), submitted; Magicians: ERC-8089 Smart Contract Lifecycle Registry, 18:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8089 智能合约生命周期注册表",
+      "note": "新增 ERC：简化支付验证网关（Hrom131）2025 年 8 月 7 日提交后合并；新增 ERC：加密哈希参数与调用（cfries）提交；Magicians：ERC-8089 智能合约生命周期注册表 18:18。",
+      "url": "https://ethereum-magicians.org/t/erc-8089-smart-contract-lifecycle-registry/26641",
+      "date": "2025-11-20",
+      "title_en": "Magicians: ERC-8089 Smart Contract Lifecycle Registry",
+      "note_en": "Add ERC: Simplified Payment Verification Gateway (Hrom131), merged after submission on August 7, 2025; Add ERC: Encrypted Hashed Arguments and Calls (cfries), submitted; Magicians: ERC-8089 Smart Contract Lifecycle Registry, 18:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：需要站在用户一边的对抗式 UI 设计，例如显示含税费小费的总价",
+      "note": "17:42；tcoratger：以太坊正从概念上的世界计算机演进为注重隐私的技术栈 16:25。",
+      "url": "https://x.com/VitalikButerin/status/1991457123604312221",
+      "date": "2025-11-20",
+      "title_en": "VitalikButerin: we need adversarial UI design that works for users, such as showing all inclusive prices",
+      "note_en": "17:42; tcoratger: Ethereum is evolving from a conceptual world computer into a privacy preserving stack, 16:25.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：以太坊正从概念上的世界计算机演进为注重隐私的技术栈",
+      "note": "VitalikButerin：需要站在用户一边的对抗式 UI 设计，例如显示含税费小费的总价 17:42；tcoratger：以太坊正从概念上的世界计算机演进为注重隐私的技术栈 16:25。",
+      "url": "https://x.com/tcoratger/status/1991437815973110161",
+      "date": "2025-11-20",
+      "title_en": "tcoratger: Ethereum is evolving from a conceptual world computer into a privacy preserving stack",
+      "note_en": "VitalikButerin: we need adversarial UI design that works for users, such as showing all inclusive prices, 17:42; tcoratger: Ethereum is evolving from a conceptual world computer into a privacy preserving stack, 16:25.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/open-question-to-the-core-devs-about-eip-7932/26636",
+    "credit": "Ethereum Magicians, Open question to the core devs about EIP-7932",
+    "local_path": "assets/2025-11-20.jpg",
+    "credit_en": "Ethereum Magicians, Open question to the core devs about EIP-7932"
+  },
+  "keywords_en": [
+    "The Falcon precompile EIP merged",
+    "the native rollups EIP merged",
+    "an operator contract ERC for non-delegated EOAs merged",
+    "an open question on EIP-7932 scope",
+    "a simplified payment verification gateway ERC",
+    "the encrypted argument calls ERC submitted",
+    "Vitalik calls for adversarial UI on the user's side"
+  ],
+  "summary_en": "simonmasson's Falcon verification precompile EIP merged; lucadonnoh's native rollups EIP merged. SirSpudlington asked core devs whether, if EIP-6404 interoperates with EIP-7932, EIP-7932 should shrink to a registry plus precompile so AA can verify any algorithm efficiently. marcelomorgado's operator contract ERC for non-delegated EOAs merged."
+}

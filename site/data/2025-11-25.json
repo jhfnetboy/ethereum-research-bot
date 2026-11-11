@@ -1,0 +1,109 @@
+{
+  "date": "2025-11-25",
+  "keywords": [
+    "ERC-8087 加密参数调用",
+    "无需信任支付是否带来更多信任",
+    "40% 验证者支持 60M gas",
+    "ERC-8090 Uniswap v4 免 gas 铸造兑换",
+    "硬件密钥尚不支持 ML-DSA",
+    "EIP-4762 移除过时的 AA 待办"
+  ],
+  "summary": "cfries 提出 ERC-8087，通过无状态解密预言机执行带加密参数的函数调用，用于隐私订单簿等场景。trent_vanepps 称 40% 验证者已支持把 gas 上限提到 60M，超过 50% 即生效。alextes 撰文质疑 ePBS 无需信任支付可能让以太坊更依赖信任披露。",
+  "items": [
+    {
+      "topic": "交易隐私：加密调用",
+      "title": "Magicians：ERC-8087 加密哈希参数与调用",
+      "note": "（cfries）05:10：通过无状态解密预言机执行带加密参数的函数调用，可选加密调用描述，支持隐私订单簿与有条件的 DvP 流程。",
+      "url": "https://ethereum-magicians.org/t/erc-8087-encrypted-hashed-arguments-and-calls/26706",
+      "date": "2025-11-25",
+      "title_en": "Magicians: ERC-8087 Encrypted Hashed Arguments and Calls",
+      "note_en": "(cfries), 05:10: executes calls with encrypted arguments, and optionally encrypted call descriptors, through a stateless decryption oracle, for private order books and conditional DvP.",
+      "topic_en": "Transaction privacy: encrypted calls"
+    },
+    {
+      "topic": "Gas 与出块",
+      "title": "trent_vanepps：40% 验证者支持 60M，超过 50% 即从 45M 提高",
+      "note": "04:00；ethresear.ch：无需信任支付，方向对了，信任却更多？（alextes）19:18；Magicians：ERC-8090 Uniswap v4 免 gas 铸造兑换 19:51。",
+      "url": "https://x.com/trent_vanepps/status/1993062210185396596",
+      "date": "2025-11-25",
+      "title_en": "trent_vanepps: 40% of validators signal 60M, and above 50% the limit rises from 45M",
+      "note_en": "04:00; ethresear.ch: Trustless payments, right vibe, more trust? (alextes), 19:18; Magicians: ERC-8090 gasless minting swaps on Uniswap v4, 19:51.",
+      "topic_en": "Gas and block building"
+    },
+    {
+      "topic": "Gas 与出块",
+      "title": "ethresear.ch：无需信任支付，方向对了，信任却更多？",
+      "note": "trent_vanepps：40% 验证者支持 60M，超过 50% 即从 45M 提高 04:00；ethresear.ch：无需信任支付，方向对了，信任却更多？（alextes）19:18；Magicians：ERC-8090 Uniswap v4 免 gas 铸造兑换 19:51。",
+      "url": "https://ethresear.ch/t/trustless-payments-right-vibe-more-trust/23531",
+      "date": "2025-11-25",
+      "title_en": "ethresear.ch: Trustless payments, right vibe, more trust?",
+      "note_en": "Trent_vanepps: 40% of validators signal 60M, and above 50% the limit rises from 45M, 04:00; ethresear.ch: Trustless payments, right vibe, more trust? (alextes), 19:18; Magicians: ERC-8090 gasless minting swaps on Uniswap v4, 19:51.",
+      "topic_en": "Gas and block building"
+    },
+    {
+      "topic": "Gas 与出块",
+      "title": "Magicians：ERC-8090 Uniswap v4 免 gas 铸造兑换",
+      "note": "trent_vanepps：40% 验证者支持 60M，超过 50% 即从 45M 提高 04:00；ethresear.ch：无需信任支付，方向对了，信任却更多？（alextes）19:18；Magicians：ERC-8090 Uniswap v4 免 gas 铸造兑换 19:51。",
+      "url": "https://ethereum-magicians.org/t/erc-8090-gasless-minting-swap-standards-in-uniswap-v4/26711",
+      "date": "2025-11-25",
+      "title_en": "Magicians: ERC-8090 gasless minting swaps on Uniswap v4",
+      "note_en": "Trent_vanepps: 40% of validators signal 60M, and above 50% the limit rises from 45M, 04:00; ethresear.ch: Trustless payments, right vibe, more trust? (alextes), 19:18; Magicians: ERC-8090 gasless minting swaps on Uniswap v4, 19:51.",
+      "topic_en": "Gas and block building"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-4762：移除过时的账户抽象待办",
+      "note": "（Doryu001）提交；ERC-8001 语义更新（KBryan）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10829",
+      "date": "2025-11-25",
+      "title_en": "EIP-4762: remove an outdated account abstraction TODO",
+      "note_en": "(Doryu001), submitted; ERC-8001: update semantics (KBryan), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8001 语义更新",
+      "note": "EIP-4762：移除过时的账户抽象待办（Doryu001）提交；ERC-8001 语义更新（KBryan）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1374",
+      "date": "2025-11-25",
+      "title_en": "ERC-8001: update semantics",
+      "note_en": "EIP-4762: remove an outdated account abstraction TODO (Doryu001), submitted; ERC-8001: update semantics (KBryan), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：询问 Yubico 是否计划推出支持 ML-DSA 的硬件密钥",
+      "note": "22:53；_SEAL_Org：SEAL Intel 威胁情报中心 21:00。",
+      "url": "https://x.com/peter_szilagyi/status/1993347334273737120",
+      "date": "2025-11-25",
+      "title_en": "peter_szilagyi: asks Yubico about hardware keys supporting ML-DSA",
+      "note_en": "22:53; _SEAL_Org: SEAL Intel, a threat intelligence hub, 21:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "_SEAL_Org：SEAL Intel 威胁情报中心",
+      "note": "peter_szilagyi：询问 Yubico 是否计划推出支持 ML-DSA 的硬件密钥 22:53；_SEAL_Org：SEAL Intel 威胁情报中心 21:00。",
+      "url": "https://x.com/_SEAL_Org/status/1993318764356813081",
+      "date": "2025-11-25",
+      "title_en": "_SEAL_Org: SEAL Intel, a threat intelligence hub",
+      "note_en": "Peter_szilagyi: asks Yubico about hardware keys supporting ML-DSA, 22:53; _SEAL_Org: SEAL Intel, a threat intelligence hub, 21:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8087-encrypted-hashed-arguments-and-calls/26706",
+    "credit": "Ethereum Magicians, ERC-8087 Encrypted Hashed Arguments and Calls",
+    "local_path": "assets/2025-11-25.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8087 Encrypted Hashed Arguments and Calls"
+  },
+  "keywords_en": [
+    "ERC-8087 encrypted argument calls",
+    "whether trustless payments bring more trust",
+    "40% of validators signal 60M gas",
+    "ERC-8090 gasless minting swaps on Uniswap v4",
+    "hardware keys do not yet support ML-DSA",
+    "EIP-4762 removes an outdated AA TODO"
+  ],
+  "summary_en": "cfries proposed ERC-8087, executing calls with encrypted arguments through a stateless decryption oracle for uses like private order books. trent_vanepps said 40% of validators signal a 60M gas limit, effective above 50%. alextes argued ePBS trustless payments may make Ethereum rely more on trust disclosure."
+}

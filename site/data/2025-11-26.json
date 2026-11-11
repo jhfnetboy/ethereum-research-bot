@@ -1,0 +1,118 @@
+{
+  "date": "2025-11-26",
+  "keywords": [
+    "gas 上限一年翻倍到 60M",
+    "以太坊手续费全年低廉",
+    "退出使用合并队列的 EIP 合并",
+    "EIP-7904 WarmStorageReadCost 对齐",
+    "Plinko PIR 教程",
+    "Vitalik 预测明年增长更有针对性"
+  ],
+  "summary": "nero_eth 宣布以太坊已运行 60M 区块 gas 上限，一年翻倍。evan_van_ness 指出 2025 年手续费一直很低。fradamt 的退出使用合并队列 EIP 合并。VitalikButerin 分享 Plinko PIR 教程，私密信息检索可让钱包查询链上数据而不暴露地址。",
+  "items": [
+    {
+      "topic": "Gas：60M 上限",
+      "title": "nero_eth：社区推动提高 gas 上限一年后，以太坊已运行 60M 区块 gas 上限，一年翻倍",
+      "note": "19:35；evan_van_ness：2025 年全年以太坊手续费都很低，gas 上限还会继续提高 22:47；EIP-7904：WarmStorageReadCost 与规范对齐为 5 gas（phrwlk）提交并合并。",
+      "url": "https://x.com/nero_eth/status/1993659827969458296",
+      "date": "2025-11-26",
+      "title_en": "nero_eth: a year after the push began, Ethereum runs a 60M block gas limit, double in one year",
+      "note_en": "19:35; evan_van_ness: fees were cheap all of 2025 and the gas limit keeps rising, 22:47; EIP-7904: align WarmStorageReadCost with the spec at 5 gas (phrwlk), submitted and merged.",
+      "topic_en": "Gas: a 60M limit"
+    },
+    {
+      "topic": "Gas：60M 上限",
+      "title": "evan_van_ness：2025 年全年以太坊手续费都很低，gas 上限还会继续提高",
+      "note": "nero_eth：社区推动提高 gas 上限一年后，以太坊已运行 60M 区块 gas 上限，一年翻倍 19:35；evan_van_ness：2025 年全年以太坊手续费都很低，gas 上限还会继续提高 22:47；EIP-7904：WarmStorageReadCost 与规范对齐为 5 gas（phrwlk）提交并合并。",
+      "url": "https://x.com/evan_van_ness/status/1993708190371139915",
+      "date": "2025-11-26",
+      "title_en": "evan_van_ness: fees were cheap all of 2025 and the gas limit keeps rising",
+      "note_en": "Nero_eth: a year after the push began, Ethereum runs a 60M block gas limit, double in one year, 19:35; evan_van_ness: fees were cheap all of 2025 and the gas limit keeps rising, 22:47; EIP-7904: align WarmStorageReadCost with the spec at 5 gas (phrwlk), submitted and merged.",
+      "topic_en": "Gas: a 60M limit"
+    },
+    {
+      "topic": "Gas：60M 上限",
+      "title": "EIP-7904：WarmStorageReadCost 与规范对齐为 5 gas",
+      "note": "nero_eth：社区推动提高 gas 上限一年后，以太坊已运行 60M 区块 gas 上限，一年翻倍 19:35；evan_van_ness：2025 年全年以太坊手续费都很低，gas 上限还会继续提高 22:47；EIP-7904：WarmStorageReadCost 与规范对齐为 5 gas（phrwlk）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10831",
+      "date": "2025-11-26",
+      "title_en": "EIP-7904: align WarmStorageReadCost with the spec at 5 gas",
+      "note_en": "Nero_eth: a year after the push began, Ethereum runs a 60M block gas limit, double in one year, 19:35; evan_van_ness: fees were cheap all of 2025 and the gas limit keeps rising, 22:47; EIP-7904: align WarmStorageReadCost with the spec at 5 gas (phrwlk), submitted and merged.",
+      "topic_en": "Gas: a 60M limit"
+    },
+    {
+      "topic": "隐私：私密信息检索",
+      "title": "VitalikButerin：Plinko PIR 教程",
+      "note": "06:58。",
+      "url": "https://x.com/VitalikButerin/status/1993469302608216208",
+      "date": "2025-11-26",
+      "title_en": "VitalikButerin: a Plinko PIR tutorial",
+      "note_en": "06:58.",
+      "topic_en": "Privacy: private information retrieval"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：让退出使用合并队列",
+      "note": "（fradamt）2025 年 11 月 13 日提交后合并；新增 ERC：有条件解锁的用途绑定 ERC-20（64anushka）2025 年 7 月 29 日提交后合并；新增 ERC：Payout Race（k-thornton）2025 年 9 月 1 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10790",
+      "date": "2025-11-26",
+      "title_en": "Add EIP: Let exits use the consolidation queue",
+      "note_en": "(fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 2, 20259, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：有条件解锁的用途绑定 ERC-20",
+      "note": "新增 EIP：让退出使用合并队列（fradamt）2025 年 11 月 13 日提交后合并；新增 ERC：有条件解锁的用途绑定 ERC-20（64anushka）2025 年 7 月 29 日提交后合并；新增 ERC：Payout Race（k-thornton）2025 年 9 月 1 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1140",
+      "date": "2025-11-26",
+      "title_en": "Add ERC: Purpose-Bound ERC-20 with Conditional Unlock",
+      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 2, 20259, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Payout Race",
+      "note": "新增 EIP：让退出使用合并队列（fradamt）2025 年 11 月 13 日提交后合并；新增 ERC：有条件解锁的用途绑定 ERC-20（64anushka）2025 年 7 月 29 日提交后合并；新增 ERC：Payout Race（k-thornton）2025 年 9 月 1 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1194",
+      "date": "2025-11-26",
+      "title_en": "Add ERC: Payout Race",
+      "note_en": "Add EIP: Let exits use the consolidation queue (fradamt), merged after submission on November 13, 2025; Add ERC: Purpose-Bound ERC-20 with Conditional Unlock (64anushka), merged after submission on July 2, 20259, 2025; Add ERC: Payout Race (k-thornton), merged after submission on September 1, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：预计明年增长持续，但更有针对性、更不均匀",
+      "note": "20:41；aztecnetwork：隐私让区块链同时服务个人与机构 01:07。",
+      "url": "https://x.com/VitalikButerin/status/1993676389812232490",
+      "date": "2025-11-26",
+      "title_en": "VitalikButerin: expects continued but more targeted, less uniform growth next year",
+      "note_en": "20:41; aztecnetwork: privacy lets blockchains serve individuals and institutions, 01:07.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：隐私让区块链同时服务个人与机构",
+      "note": "VitalikButerin：预计明年增长持续，但更有针对性、更不均匀 20:41；aztecnetwork：隐私让区块链同时服务个人与机构 01:07。",
+      "url": "https://x.com/aztecnetwork/status/1993380940601868503",
+      "date": "2025-11-26",
+      "title_en": "aztecnetwork: privacy lets blockchains serve individuals and institutions",
+      "note_en": "VitalikButerin: expects continued but more targeted, less uniform growth next year, 20:41; aztecnetwork: privacy lets blockchains serve individuals and institutions, 01:07.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/10790",
+    "credit": "GitHub, ethereum/EIPs PR 10790",
+    "credit_en": "GitHub, ethereum/EIPs PR 10790"
+  },
+  "keywords_en": [
+    "The gas limit doubles to 60M in a year",
+    "Ethereum fees cheap all of 2025",
+    "an EIP letting exits use the consolidation queue merged",
+    "EIP-7904 aligns WarmStorageReadCost",
+    "a Plinko PIR tutorial",
+    "Vitalik expects more targeted growth next year"
+  ],
+  "summary_en": "nero_eth said Ethereum now runs a 60M block gas limit, doubled in a year. evan_van_ness noted fees stayed cheap all of 2025. fradamt's EIP letting exits use the consolidation queue merged. VitalikButerin shared a Plinko PIR tutorial; private information retrieval lets wallets query chain data without revealing addresses."
+}

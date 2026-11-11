@@ -48,37 +48,37 @@
       "url": "https://github.com/ethereum/EIPs/pull/10557",
       "date": "2025-12-17",
       "title_en": "Add EIP: Precompile for ML-DSA signature verification",
-      "note_en": "(simonmasson), merged after submission on October 17, 2025.",
+      "note_en": "(simonmasson), merged after submission on October 1, 20257, 2025.",
       "topic_en": "Signatures: the ML-DSA precompile"
     },
     {
       "topic": "Gas 与区块结构",
       "title": "ethresear.ch：EIP-8077 nonce 缺口模拟报告",
-      "note": "（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）11 月 9 日提交后合并。",
+      "note": "（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）2025 年 11 月 9 日提交后合并。",
       "url": "https://ethresear.ch/t/eip-8077-nonce-gap-simulation-report/23687",
       "date": "2025-12-17",
       "title_en": "ethresear.ch: EIP-8077 nonce gap simulation report",
-      "note_en": "(leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9.",
+      "note_en": "(leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9, 2025.",
       "topic_en": "Gas and block structure"
     },
     {
       "topic": "Gas 与区块结构",
       "title": "EIP-7928：把 BAL 移出执行层区块",
-      "note": "ethresear.ch：EIP-8077 nonce 缺口模拟报告（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）11 月 9 日提交后合并。",
+      "note": "ethresear.ch：EIP-8077 nonce 缺口模拟报告（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）2025 年 11 月 9 日提交后合并。",
       "url": "https://github.com/ethereum/EIPs/pull/10937",
       "date": "2025-12-17",
       "title_en": "EIP-7928: remove BAL from the EL block",
-      "note_en": "Ethresear.ch: EIP-8077 nonce gap simulation report (leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9.",
+      "note_en": "Ethresear.ch: EIP-8077 nonce gap simulation report (leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9, 2025.",
       "topic_en": "Gas and block structure"
     },
     {
       "topic": "Gas 与区块结构",
       "title": "EIP-7907：账户元组加入 codesize 并更新每字 gas",
-      "note": "ethresear.ch：EIP-8077 nonce 缺口模拟报告（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）11 月 9 日提交后合并。",
+      "note": "ethresear.ch：EIP-8077 nonce 缺口模拟报告（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）2025 年 11 月 9 日提交后合并。",
       "url": "https://github.com/ethereum/EIPs/pull/10758",
       "date": "2025-12-17",
       "title_en": "EIP-7907: add codesize to the account tuple and update gas per word",
-      "note_en": "Ethresear.ch: EIP-8077 nonce gap simulation report (leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9.",
+      "note_en": "Ethresear.ch: EIP-8077 nonce gap simulation report (leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9, 2025.",
       "topic_en": "Gas and block structure"
     },
     {

@@ -1,0 +1,97 @@
+{
+  "date": "2025-11-17",
+  "keywords": [
+    "ERC-8085 双模同质化代币可在公开与隐私模式间切换",
+    "Devcon 布宜诺斯艾利斯隐私专区",
+    "FOCIL 即将到来",
+    "ERC-7573 解密预言机合约更新",
+    "EIP-7979 历史与技术更新"
+  ],
+  "summary": "0xRowan 提出 ERC-8085 双模同质化代币，同一代币可在公开模式与隐私模式间切换。Devcon 在布宜诺斯艾利斯举行，Aztec 在隐私专区设展。cfries 更新 ERC-7573 解密预言机合约，提交并合并。",
+  "items": [
+    {
+      "topic": "隐私：双模代币",
+      "title": "Magicians：ERC-8085 双模同质化代币",
+      "note": "（zero）09:35：为隐私代币定义最小接口，同一代币可公开或隐私持有。",
+      "url": "https://ethereum-magicians.org/t/erc-8085-dual-mode-fungible-tokens/26592",
+      "date": "2025-11-17",
+      "title_en": "Magicians: ERC-8085 Dual-Mode Fungible Tokens",
+      "note_en": "(zero), 09:35: a minimal interface letting one token be held publicly or privately.",
+      "topic_en": "Privacy: dual mode tokens"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7573：解密预言机合约与 n-DvP 文档更新",
+      "note": "（cfries）2025 年 11 月 16 日提交后合并；EIP-7979：历史与技术更新（gcolvin）提交并合并；FOCIL 分组会 #24 议程 21:29。",
+      "url": "https://github.com/ethereum/ERCs/pull/1353",
+      "date": "2025-11-17",
+      "title_en": "ERC-7573: decryption oracle contracts and n-DvP docs",
+      "note_en": "(cfries), merged after submission on November 16, 2025; EIP-7979: historical and technical updates (gcolvin), submitted and merged; FOCIL Breakout #24 agenda, 21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：历史与技术更新",
+      "note": "ERC-7573：解密预言机合约与 n-DvP 文档更新（cfries）2025 年 11 月 16 日提交后合并；EIP-7979：历史与技术更新（gcolvin）提交并合并；FOCIL 分组会 #24 议程 21:29。",
+      "url": "https://github.com/ethereum/EIPs/pull/10802",
+      "date": "2025-11-17",
+      "title_en": "EIP-7979: historical and technical updates",
+      "note_en": "ERC-7573: decryption oracle contracts and n-DvP docs (cfries), merged after submission on November 16, 2025; EIP-7979: historical and technical updates (gcolvin), submitted and merged; FOCIL Breakout #24 agenda, 21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL 分组会 #24 议程",
+      "note": "ERC-7573：解密预言机合约与 n-DvP 文档更新（cfries）2025 年 11 月 16 日提交后合并；EIP-7979：历史与技术更新（gcolvin）提交并合并；FOCIL 分组会 #24 议程 21:29。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-24-december-2-2025/26601",
+      "date": "2025-11-17",
+      "title_en": "FOCIL Breakout #24 agenda",
+      "note_en": "ERC-7573: decryption oracle contracts and n-DvP docs (cfries), merged after submission on November 16, 2025; EIP-7979: historical and technical updates (gcolvin), submitted and merged; FOCIL Breakout #24 agenda, 21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "soispoke：FOCIL 即将到来",
+      "note": "22:21；aztecnetwork：Aztec 展位位于 Devcon 隐私专区 20:48；ethereumfndn：EF 团队在 Ethereum Day 的演讲 18:15。",
+      "url": "https://x.com/soispoke/status/1990440231900762612",
+      "date": "2025-11-17",
+      "title_en": "soispoke: FOCIL coming soon",
+      "note_en": "22:21; aztecnetwork: the Aztec booth is in the Devcon privacy district, 20:48; ethereumfndn: EF talks at Ethereum Day, 18:15.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Aztec 展位位于 Devcon 隐私专区",
+      "note": "soispoke：FOCIL 即将到来 22:21；aztecnetwork：Aztec 展位位于 Devcon 隐私专区 20:48；ethereumfndn：EF 团队在 Ethereum Day 的演讲 18:15。",
+      "url": "https://x.com/aztecnetwork/status/1990416752333742532",
+      "date": "2025-11-17",
+      "title_en": "aztecnetwork: the Aztec booth is in the Devcon privacy district",
+      "note_en": "Soispoke: FOCIL coming soon, 22:21; aztecnetwork: the Aztec booth is in the Devcon privacy district, 20:48; ethereumfndn: EF talks at Ethereum Day, 18:15.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereumfndn：EF 团队在 Ethereum Day 的演讲",
+      "note": "soispoke：FOCIL 即将到来 22:21；aztecnetwork：Aztec 展位位于 Devcon 隐私专区 20:48；ethereumfndn：EF 团队在 Ethereum Day 的演讲 18:15。",
+      "url": "https://x.com/ethereumfndn/status/1990378149440622759",
+      "date": "2025-11-17",
+      "title_en": "ethereumfndn: EF talks at Ethereum Day",
+      "note_en": "Soispoke: FOCIL coming soon, 22:21; aztecnetwork: the Aztec booth is in the Devcon privacy district, 20:48; ethereumfndn: EF talks at Ethereum Day, 18:15.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8085-dual-mode-fungible-tokens/26592",
+    "credit": "Ethereum Magicians, ERC-8085 Dual-Mode Fungible Tokens",
+    "local_path": "assets/2025-11-17.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8085 Dual-Mode Fungible Tokens"
+  },
+  "keywords_en": [
+    "ERC-8085 dual-mode fungible tokens that switch between public and private",
+    "the Devcon Buenos Aires privacy district",
+    "FOCIL coming soon",
+    "ERC-7573 decryption oracle contract update",
+    "EIP-7979 historical and technical updates"
+  ],
+  "summary_en": "0xRowan proposed ERC-8085, fungible tokens that switch between public and private modes. Devcon ran in Buenos Aires, with Aztec in the privacy district. cfries updated ERC-7573 decryption oracle contracts, submitted and merged."
+}

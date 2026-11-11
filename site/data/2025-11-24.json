@@ -1,0 +1,119 @@
+{
+  "date": "2025-11-24",
+  "keywords": [
+    "ERC-8091 隐私地址格式",
+    "协议内分布式历史与状态存储",
+    "Full Send 带 MEV 保护的 RPC",
+    "Kohaku 钱包计划",
+    "EIP-7975 更新",
+    "Fusaka Files secp256r1 预编译"
+  ],
+  "summary": "0xRowan 提交 ERC-8091，为隐私代币定义标准化的客户端隐私地址格式。mteamisloading 推出 Full Send，一个带 MEV 保护的面向用户 RPC。kassandraETH 介绍 Kohaku 钱包计划。rjl493456442 更新 EIP-7975 并合并。",
+  "items": [
+    {
+      "topic": "隐私：地址格式与钱包",
+      "title": "Magicians：ERC-8091 隐私地址格式",
+      "note": "（zero）12:49：为隐私代币定义标准化的客户端隐私地址格式；新增 ERC：隐私地址格式（0xRowan）提交；kassandraETH：在 Devcon 代表 Kohaku 钱包计划 19:13。",
+      "url": "https://ethereum-magicians.org/t/erc-8091-privacy-address-format/26689",
+      "date": "2025-11-24",
+      "title_en": "Magicians: ERC-8091 Privacy Address Format",
+      "note_en": "(zero), 12:49: a standard client side privacy address format for privacy tokens; Add ERC: Privacy Address Format (0xRowan), submitted; kassandraETH: represented the Kohaku wallet initiative at Devcon, 19:13.",
+      "topic_en": "Privacy: address formats and wallets"
+    },
+    {
+      "topic": "隐私：地址格式与钱包",
+      "title": "新增 ERC：隐私地址格式",
+      "note": "Magicians：ERC-8091 隐私地址格式（zero）12:49：为隐私代币定义标准化的客户端隐私地址格式；新增 ERC：隐私地址格式（0xRowan）提交；kassandraETH：在 Devcon 代表 Kohaku 钱包计划 19:13。",
+      "url": "https://github.com/ethereum/ERCs/pull/1373",
+      "date": "2025-11-24",
+      "title_en": "Add ERC: Privacy Address Format",
+      "note_en": "Magicians: ERC-8091 Privacy Address Format (zero), 12:49: a standard client side privacy address format for privacy tokens; Add ERC: Privacy Address Format (0xRowan), submitted; kassandraETH: represented the Kohaku wallet initiative at Devcon, 19:13.",
+      "topic_en": "Privacy: address formats and wallets"
+    },
+    {
+      "topic": "隐私：地址格式与钱包",
+      "title": "kassandraETH：在 Devcon 代表 Kohaku 钱包计划",
+      "note": "Magicians：ERC-8091 隐私地址格式（zero）12:49：为隐私代币定义标准化的客户端隐私地址格式；新增 ERC：隐私地址格式（0xRowan）提交；kassandraETH：在 Devcon 代表 Kohaku 钱包计划 19:13。",
+      "url": "https://x.com/kassandraETH/status/1992929603405643847",
+      "date": "2025-11-24",
+      "title_en": "kassandraETH: represented the Kohaku wallet initiative at Devcon",
+      "note_en": "Magicians: ERC-8091 Privacy Address Format (zero), 12:49: a standard client side privacy address format for privacy tokens; Add ERC: Privacy Address Format (0xRowan), submitted; kassandraETH: represented the Kohaku wallet initiative at Devcon, 19:13.",
+      "topic_en": "Privacy: address formats and wallets"
+    },
+    {
+      "topic": "交易：MEV 保护",
+      "title": "mteamisloading：推出 Full Send，带 MEV 保护、更快交易与更好成交的用户 RPC",
+      "note": "20:53；EIP-7975 更新（rjl493456442）提交并合并。",
+      "url": "https://x.com/mteamisloading/status/1992954730377822357",
+      "date": "2025-11-24",
+      "title_en": "mteamisloading: Full Send, a user RPC with MEV protection, faster transactions and better fills",
+      "note_en": "20:53; EIP-7975 update (rjl493456442), submitted and merged.",
+      "topic_en": "Transactions: MEV protection"
+    },
+    {
+      "topic": "交易：MEV 保护",
+      "title": "EIP-7975 更新",
+      "note": "mteamisloading：推出 Full Send，带 MEV 保护、更快交易与更好成交的用户 RPC 20:53；EIP-7975 更新（rjl493456442）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10825",
+      "date": "2025-11-24",
+      "title_en": "EIP-7975 update",
+      "note_en": "Mteamisloading: Full Send, a user RPC with MEV protection, faster transactions and better fills, 20:53; EIP-7975 update (rjl493456442), submitted and merged.",
+      "topic_en": "Transactions: MEV protection"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：协议内集成的分布式历史与状态存储",
+      "note": "22:49；poojaranjan19：Fusaka Files #4，secp256r1 曲线预编译 21:32。",
+      "url": "https://ethresear.ch/t/integrated-in-protocol-distributed-history-and-state-storage/23522",
+      "date": "2025-11-24",
+      "title_en": "ethresear.ch: integrated in-protocol distributed history and state storage",
+      "note_en": "22:49; poojaranjan19: Fusaka Files #4 on the secp256r1 precompile, 21:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "poojaranjan19：Fusaka Files #4，secp256r1 曲线预编译",
+      "note": "ethresear.ch：协议内集成的分布式历史与状态存储 22:49；poojaranjan19：Fusaka Files #4，secp256r1 曲线预编译 21:32。",
+      "url": "https://x.com/poojaranjan19/status/1992964449393623282",
+      "date": "2025-11-24",
+      "title_en": "poojaranjan19: Fusaka Files #4 on the secp256r1 precompile",
+      "note_en": "Ethresear.ch: integrated in-protocol distributed history and state storage, 22:49; poojaranjan19: Fusaka Files #4 on the secp256r1 precompile, 21:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：以太坊已经是美国链，USDT 与 USDC 掌控分叉选择",
+      "note": "17:42；VitalikButerin：预测显示账户所在国家的功能短期会有大量影响 04:54。",
+      "url": "https://x.com/ameensol/status/1992906548532883496",
+      "date": "2025-11-24",
+      "title_en": "ameensol: Ethereum is already a USA chain, with USDT and USDC controlling fork choice",
+      "note_en": "17:42; VitalikButerin: predicts the show account country feature will have big short term effects, 04:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：预测显示账户所在国家的功能短期会有大量影响",
+      "note": "ameensol：以太坊已经是美国链，USDT 与 USDC 掌控分叉选择 17:42；VitalikButerin：预测显示账户所在国家的功能短期会有大量影响 04:54。",
+      "url": "https://x.com/VitalikButerin/status/1992713297250918755",
+      "date": "2025-11-24",
+      "title_en": "VitalikButerin: predicts the show account country feature will have big short term effects",
+      "note_en": "Ameensol: Ethereum is already a USA chain, with USDT and USDC controlling fork choice, 17:42; VitalikButerin: predicts the show account country feature will have big short term effects, 04:54.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8091-privacy-address-format/26689",
+    "credit": "Ethereum Magicians, ERC-8091 Privacy Address Format",
+    "local_path": "assets/2025-11-24.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8091 Privacy Address Format"
+  },
+  "keywords_en": [
+    "ERC-8091 privacy address format",
+    "integrated in-protocol distributed history and state storage",
+    "Full Send an RPC with MEV protection",
+    "the Kohaku wallet initiative",
+    "an EIP-7975 update",
+    "Fusaka Files on the secp256r1 precompile"
+  ],
+  "summary_en": "0xRowan submitted ERC-8091, a standard client side privacy address format for privacy tokens. mteamisloading launched Full Send, a user facing RPC with MEV protection. kassandraETH presented the Kohaku wallet initiative. rjl493456442 updated EIP-7975, merged."
+}

@@ -1,0 +1,128 @@
+{
+  "date": "2025-12-09",
+  "keywords": [
+    "BPO1 上线 blob 目标从 6 提到 10",
+    "受限行为交易类型 EIP 合并",
+    "eth/vhash blob 感知内存池 EIP 合并",
+    "Tempo 公开测试网带原生 AA",
+    "Vitalik 称 PeerDAS 证明 EF 的 P2P 能力",
+    "Fusaka 后的 gas 变化"
+  ],
+  "summary": "BPO1 在主网上线，每区块 blob 目标从 6 提到 10，主网出现 15 个 blob 的区块。forshtat 提出的受限行为交易类型 EIP 合并。cskiraly 的 eth/vhash blob 感知内存池 EIP 合并。gakonst 上线 Tempo 公开测试网，带多验证者 BFT、原生账户抽象与原生稳定币支持。",
+  "items": [
+    {
+      "topic": "Gas 与 blob：BPO1",
+      "title": "ralexstokes：BPO1 在主网上线，每区块 blob 目标从 6 提到 10",
+      "note": "21:32；raulvk：主网迎来 15 个 blob 的区块 21:58。",
+      "url": "https://x.com/ralexstokes/status/1998400388169695574",
+      "date": "2025-12-09",
+      "title_en": "ralexstokes: BPO1 is live on mainnet, raising the per block blob target from 6 to 10",
+      "note_en": "21:32; raulvk: 15 blob blocks have arrived on mainnet, 21:58.",
+      "topic_en": "Gas and blobs: BPO1"
+    },
+    {
+      "topic": "Gas 与 blob：BPO1",
+      "title": "raulvk：主网迎来 15 个 blob 的区块",
+      "note": "ralexstokes：BPO1 在主网上线，每区块 blob 目标从 6 提到 10 21:32；raulvk：主网迎来 15 个 blob 的区块 21:58。",
+      "url": "https://x.com/raulvk/status/1998407019070382463",
+      "date": "2025-12-09",
+      "title_en": "raulvk: 15 blob blocks have arrived on mainnet",
+      "note_en": "Ralexstokes: BPO1 is live on mainnet, raising the per block blob target from 6 to 10, 21:32; raulvk: 15 blob blocks have arrived on mainnet, 21:58.",
+      "topic_en": "Gas and blobs: BPO1"
+    },
+    {
+      "topic": "交易：新交易类型与内存池",
+      "title": "新增 EIP：受限行为交易类型",
+      "note": "（forshtat）2025 年 3 月 12 日提交后合并；新增 EIP：eth/vhash blob 感知内存池（cskiraly）2025 年 11 月 29 日提交后合并；EIP-5593：解决第三方 iframe 屏蔽的 MUST 与 SHOULD 矛盾（forkfury）2025 年 11 月 16 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/9476",
+      "date": "2025-12-09",
+      "title_en": "Add EIP: Restricted Behavior Transaction Type",
+      "note_en": "(forshtat), merged after submission on March 1, 20252, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
+      "topic_en": "Transactions: a new type and the mempool"
+    },
+    {
+      "topic": "交易：新交易类型与内存池",
+      "title": "新增 EIP：eth/vhash blob 感知内存池",
+      "note": "新增 EIP：受限行为交易类型（forshtat）2025 年 3 月 12 日提交后合并；新增 EIP：eth/vhash blob 感知内存池（cskiraly）2025 年 11 月 29 日提交后合并；EIP-5593：解决第三方 iframe 屏蔽的 MUST 与 SHOULD 矛盾（forkfury）2025 年 11 月 16 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10853",
+      "date": "2025-12-09",
+      "title_en": "Add EIP: eth/vhash, a blob aware mempool",
+      "note_en": "Add EIP: Restricted Behavior Transaction Type (forshtat), merged after submission on March 1, 20252, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
+      "topic_en": "Transactions: a new type and the mempool"
+    },
+    {
+      "topic": "交易：新交易类型与内存池",
+      "title": "EIP-5593：解决第三方 iframe 屏蔽的 MUST 与 SHOULD 矛盾",
+      "note": "新增 EIP：受限行为交易类型（forshtat）2025 年 3 月 12 日提交后合并；新增 EIP：eth/vhash blob 感知内存池（cskiraly）2025 年 11 月 29 日提交后合并；EIP-5593：解决第三方 iframe 屏蔽的 MUST 与 SHOULD 矛盾（forkfury）2025 年 11 月 16 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10801",
+      "date": "2025-12-09",
+      "title_en": "EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking",
+      "note_en": "Add EIP: Restricted Behavior Transaction Type (forshtat), merged after submission on March 1, 20252, 2025; Add EIP: eth/vhash, a blob aware mempool (cskiraly), merged after submission on November 29, 2025; EIP-5593: resolve the MUST and SHOULD conflict on third party iframe blocking (forkfury), merged after submission on November 16, 2025.",
+      "topic_en": "Transactions: a new type and the mempool"
+    },
+    {
+      "topic": "账户：Tempo 原生 AA",
+      "title": "gakonst：Tempo 公开测试网上线，多验证者 BFT 共识、原生账户抽象与原生稳定币支持",
+      "note": "22:04。",
+      "url": "https://x.com/gakonst/status/1998408431703904679",
+      "date": "2025-12-09",
+      "title_en": "gakonst: the Tempo public testnet is live, with multi validator BFT consensus, native account abstraction and native stablecoin support",
+      "note_en": "22:04.",
+      "topic_en": "Accounts: Tempo native AA"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereum：Fusaka 为持续增长奠定基础，介绍 EIP-7935 与 gas 变化",
+      "note": "22:57；EIP 编辑办公时间第 82 次议程 03:53。",
+      "url": "https://x.com/ethereum/status/1998421740540895343",
+      "date": "2025-12-09",
+      "title_en": "ethereum: Fusaka set the foundation for growth, covering EIP-7935 and gas changes",
+      "note_en": "22:57; EIP Editing Office Hour #82 agenda, 03:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP 编辑办公时间第 82 次议程",
+      "note": "ethereum：Fusaka 为持续增长奠定基础，介绍 EIP-7935 与 gas 变化 22:57；EIP 编辑办公时间第 82 次议程 03:53。",
+      "url": "https://ethereum-magicians.org/t/eip-editing-office-hour-eip-erc-meeting-82-dec-16-2025/27008",
+      "date": "2025-12-09",
+      "title_en": "EIP Editing Office Hour #82 agenda",
+      "note_en": "Ethereum: Fusaka set the foundation for growth, covering EIP-7935 and gas changes, 22:57; EIP Editing Office Hour #82 agenda, 03:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：多年来抱怨 EF 缺少 P2P 专长，PeerDAS 证明这已不再成立",
+      "note": "02:27；VitalikButerin：回应近日对欧洲的攻击 18:24。",
+      "url": "https://x.com/VitalikButerin/status/1998112138364084371",
+      "date": "2025-12-09",
+      "title_en": "VitalikButerin: he long complained EF lacked P2P expertise, and PeerDAS shows that is no longer true",
+      "note_en": "02:27; VitalikButerin: on the recent attacks on Europe, 18:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：回应近日对欧洲的攻击",
+      "note": "VitalikButerin：多年来抱怨 EF 缺少 P2P 专长，PeerDAS 证明这已不再成立 02:27；VitalikButerin：回应近日对欧洲的攻击 18:24。",
+      "url": "https://x.com/VitalikButerin/status/1998353131822870675",
+      "date": "2025-12-09",
+      "title_en": "VitalikButerin: on the recent attacks on Europe",
+      "note_en": "VitalikButerin: he long complained EF lacked P2P expertise, and PeerDAS shows that is no longer true, 02:27; VitalikButerin: on the recent attacks on Europe, 18:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/9476",
+    "credit": "GitHub, ethereum/EIPs PR 9476",
+    "credit_en": "GitHub, ethereum/EIPs PR 9476"
+  },
+  "keywords_en": [
+    "BPO1 live with blob target raised from 6 to 10",
+    "a restricted behavior transaction type EIP merged",
+    "the eth/vhash blob aware mempool EIP merged",
+    "the Tempo public testnet with native AA",
+    "Vitalik says PeerDAS proves EF's P2P strength",
+    "gas changes after Fusaka"
+  ],
+  "summary_en": "BPO1 went live on mainnet, raising the blob target from 6 to 10, and 15 blob blocks appeared. forshtat's restricted behavior transaction type EIP merged. cskiraly's eth/vhash blob aware mempool EIP merged. gakonst launched the Tempo public testnet with multi validator BFT, native account abstraction and native stablecoin support."
+}

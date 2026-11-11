@@ -1,0 +1,161 @@
+{
+  "date": "2025-12-02",
+  "keywords": [
+    "门限加密内存池结合 mev-commit 预确认",
+    "FOCIL 是否提升抗审查之争",
+    "提高点评估预编译 gas 的 EIP 提交",
+    "EIP-7688 进入 Review",
+    "ERC-7246 与 ERC-7994 进入 Review",
+    "ERC-7730 支持互操作地址",
+    "Aztec 销售 12k ETH"
+  ],
+  "summary": "Primev 与 Shutter 团队提出门限加密内存池结合 mev-commit 预确认，减少用户被抢跑的损失。nero_eth 认为 FOCIL 对抗审查帮助不大，soispoke 回应 FOCIL 本就不追求短期影响。marcindsobczak 提交提高点评估预编译 gas 的 EIP。",
+  "items": [
+    {
+      "topic": "交易隐私：门限加密内存池",
+      "title": "ethresear.ch：门限加密内存池结合 mev-commit 预确认",
+      "note": "（pepae）21:12：Primev 与 Shutter Network 作者合写，用户每天因抢跑损失价值，交易在门限解密前保持加密，并由预确认给出打包承诺。",
+      "url": "https://ethresear.ch/t/threshold-encrypted-mempools-with-mev-commit-preconfirmations/23588",
+      "date": "2025-12-02",
+      "title_en": "ethresear.ch: Threshold encrypted mempools with mev-commit preconfirmations",
+      "note_en": "(pepae), 21:12: by Primev and Shutter Network authors; users lose value daily to frontrunning, so transactions stay encrypted until threshold decryption, with preconfirmations promising inclusion.",
+      "topic_en": "Transaction privacy: threshold encrypted mempools"
+    },
+    {
+      "topic": "交易：FOCIL 之争",
+      "title": "nero_eth：抗审查不是二元的，FOCIL 并未实质改善，只加快极少数交易的打包，却让大多数交易被广播两次",
+      "note": "21:24；soispoke：FOCIL 从不追求短期影响，只有在大规模审查已发生时它才会立刻起作用 16:28。",
+      "url": "https://x.com/nero_eth/status/1995861708968264132",
+      "date": "2025-12-02",
+      "title_en": "nero_eth: censorship resistance is not binary and FOCIL does not materially improve it, speeding up very few transactions while most get broadcast twice",
+      "note_en": "21:24; soispoke: FOCIL was never meant for short term impact, which would only show if massive censorship had already happened, 16:28.",
+      "topic_en": "Transactions: the FOCIL debate"
+    },
+    {
+      "topic": "交易：FOCIL 之争",
+      "title": "soispoke：FOCIL 从不追求短期影响，只有在大规模审查已发生时它才会立刻起作用",
+      "note": "nero_eth：抗审查不是二元的，FOCIL 并未实质改善，只加快极少数交易的打包，却让大多数交易被广播两次 21:24；soispoke：FOCIL 从不追求短期影响，只有在大规模审查已发生时它才会立刻起作用 16:28。",
+      "url": "https://x.com/soispoke/status/1995787032476443037",
+      "date": "2025-12-02",
+      "title_en": "soispoke: FOCIL was never meant for short term impact, which would only show if massive censorship had already happened",
+      "note_en": "Nero_eth: censorship resistance is not binary and FOCIL does not materially improve it, speeding up very few transactions while most get broadcast twice, 21:24; soispoke: FOCIL was never meant for short term impact, which would only show if massive censorship had already happened, 16:28.",
+      "topic_en": "Transactions: the FOCIL debate"
+    },
+    {
+      "topic": "Gas 与规范",
+      "title": "新增 EIP：提高点评估预编译的 gas 成本",
+      "note": "（marcindsobczak）提交；EIP-7688 进入 Review（etan-status）2025 年 11 月 27 日提交后合并；EIP-8061：去除与 EIP-8080 的重叠（fradamt）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10864",
+      "date": "2025-12-02",
+      "title_en": "Add EIP: Increase Gas Cost of Point Evaluation",
+      "note_en": "(marcindsobczak), submitted; EIP-7688: move to Review (etan-status), merged after submission on November 27, 2025; EIP-8061: remove the overlap with EIP-8080 (fradamt), submitted and merged.",
+      "topic_en": "Gas and specs"
+    },
+    {
+      "topic": "Gas 与规范",
+      "title": "EIP-7688 进入 Review",
+      "note": "新增 EIP：提高点评估预编译的 gas 成本（marcindsobczak）提交；EIP-7688 进入 Review（etan-status）2025 年 11 月 27 日提交后合并；EIP-8061：去除与 EIP-8080 的重叠（fradamt）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10839",
+      "date": "2025-12-02",
+      "title_en": "EIP-7688: move to Review",
+      "note_en": "Add EIP: Increase Gas Cost of Point Evaluation (marcindsobczak), submitted; EIP-7688: move to Review (etan-status), merged after submission on November 27, 2025; EIP-8061: remove the overlap with EIP-8080 (fradamt), submitted and merged.",
+      "topic_en": "Gas and specs"
+    },
+    {
+      "topic": "Gas 与规范",
+      "title": "EIP-8061：去除与 EIP-8080 的重叠",
+      "note": "新增 EIP：提高点评估预编译的 gas 成本（marcindsobczak）提交；EIP-7688 进入 Review（etan-status）2025 年 11 月 27 日提交后合并；EIP-8061：去除与 EIP-8080 的重叠（fradamt）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10860",
+      "date": "2025-12-02",
+      "title_en": "EIP-8061: remove the overlap with EIP-8080",
+      "note_en": "Add EIP: Increase Gas Cost of Point Evaluation (marcindsobczak), submitted; EIP-7688: move to Review (etan-status), merged after submission on November 27, 2025; EIP-8061: remove the overlap with EIP-8080 (fradamt), submitted and merged.",
+      "topic_en": "Gas and specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7246 进入 Review",
+      "note": "（coburncoburn）2025 年 11 月 5 日提交后合并；ERC-7994 进入 Review（64anushka）2025 年 11 月 26 日提交后合并；ERC-7518 进入 Review（rajatwasan）2025 年 9 月 9 日提交后合并；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；ERC-7964：使用标准 EIP-712 数组编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1339",
+      "date": "2025-12-02",
+      "title_en": "ERC-7246: move to Review",
+      "note_en": "(coburncoburn), merged after submission on November 5, 2025; ERC-7994: move to Review (64anushka), merged after submission on November 26, 2025; ERC-7518: move to Review (rajatwasan), merged after submission on September 9, 2025; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; ERC-7964: use standard EIP-712 array encoding (ernestognw), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7994 进入 Review",
+      "note": "ERC-7246 进入 Review（coburncoburn）2025 年 11 月 5 日提交后合并；ERC-7994 进入 Review（64anushka）2025 年 11 月 26 日提交后合并；ERC-7518 进入 Review（rajatwasan）2025 年 9 月 9 日提交后合并；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；ERC-7964：使用标准 EIP-712 数组编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1376",
+      "date": "2025-12-02",
+      "title_en": "ERC-7994: move to Review",
+      "note_en": "ERC-7246: move to Review (coburncoburn), merged after submission on November 5, 2025; ERC-7994: move to Review (64anushka), merged after submission on November 26, 2025; ERC-7518: move to Review (rajatwasan), merged after submission on September 9, 2025; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; ERC-7964: use standard EIP-712 array encoding (ernestognw), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7518 进入 Review",
+      "note": "ERC-7246 进入 Review（coburncoburn）2025 年 11 月 5 日提交后合并；ERC-7994 进入 Review（64anushka）2025 年 11 月 26 日提交后合并；ERC-7518 进入 Review（rajatwasan）2025 年 9 月 9 日提交后合并；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；ERC-7964：使用标准 EIP-712 数组编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1204",
+      "date": "2025-12-02",
+      "title_en": "ERC-7518: move to Review",
+      "note_en": "ERC-7246: move to Review (coburncoburn), merged after submission on November 5, 2025; ERC-7994: move to Review (64anushka), merged after submission on November 26, 2025; ERC-7518: move to Review (rajatwasan), merged after submission on September 9, 2025; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; ERC-7964: use standard EIP-712 array encoding (ernestognw), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：支持 ERC-7930 互操作地址格式",
+      "note": "ERC-7246 进入 Review（coburncoburn）2025 年 11 月 5 日提交后合并；ERC-7994 进入 Review（64anushka）2025 年 11 月 26 日提交后合并；ERC-7518 进入 Review（rajatwasan）2025 年 9 月 9 日提交后合并；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；ERC-7964：使用标准 EIP-712 数组编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1388",
+      "date": "2025-12-02",
+      "title_en": "ERC-7730: add the ERC-7930 interoperable address format",
+      "note_en": "ERC-7246: move to Review (coburncoburn), merged after submission on November 5, 2025; ERC-7994: move to Review (64anushka), merged after submission on November 26, 2025; ERC-7518: move to Review (rajatwasan), merged after submission on September 9, 2025; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; ERC-7964: use standard EIP-712 array encoding (ernestognw), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7964：使用标准 EIP-712 数组编码",
+      "note": "ERC-7246 进入 Review（coburncoburn）2025 年 11 月 5 日提交后合并；ERC-7994 进入 Review（64anushka）2025 年 11 月 26 日提交后合并；ERC-7518 进入 Review（rajatwasan）2025 年 9 月 9 日提交后合并；ERC-7730：支持 ERC-7930 互操作地址格式（aalimsahin）提交；ERC-7964：使用标准 EIP-712 数组编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1386",
+      "date": "2025-12-02",
+      "title_en": "ERC-7964: use standard EIP-712 array encoding",
+      "note_en": "ERC-7246: move to Review (coburncoburn), merged after submission on November 5, 2025; ERC-7994: move to Review (64anushka), merged after submission on November 26, 2025; ERC-7518: move to Review (rajatwasan), merged after submission on September 9, 2025; ERC-7730: add the ERC-7930 interoperable address format (aalimsahin), submitted; ERC-7964: use standard EIP-712 array encoding (ernestognw), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：隐私很重要，已承诺 12k ETH",
+      "note": "03:44；ethStaker：Fusaka 上线观看派对 04:44。",
+      "url": "https://x.com/aztecnetwork/status/1995594984687632547",
+      "date": "2025-12-02",
+      "title_en": "aztecnetwork: privacy matters, with 12k ETH committed",
+      "note_en": "03:44; ethStaker: a Fusaka watch party, 04:44.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethStaker：Fusaka 上线观看派对",
+      "note": "aztecnetwork：隐私很重要，已承诺 12k ETH 03:44；ethStaker：Fusaka 上线观看派对 04:44。",
+      "url": "https://x.com/ethStaker/status/1995609987071311905",
+      "date": "2025-12-02",
+      "title_en": "ethStaker: a Fusaka watch party",
+      "note_en": "Aztecnetwork: privacy matters, with 12k ETH committed, 03:44; ethStaker: a Fusaka watch party, 04:44.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/threshold-encrypted-mempools-with-mev-commit-preconfirmations/23588",
+    "credit": "ethresear.ch, Threshold Encrypted Mempools with mev-commit Preconfirmations",
+    "local_path": "assets/2025-12-02.jpg",
+    "credit_en": "ethresear.ch, Threshold Encrypted Mempools with mev-commit Preconfirmations"
+  },
+  "keywords_en": [
+    "Threshold encrypted mempools with mev-commit preconfirmations",
+    "the debate over whether FOCIL improves censorship resistance",
+    "an EIP raising point evaluation gas submitted",
+    "EIP-7688 moves to Review",
+    "ERC-7246 and ERC-7994 move to Review",
+    "ERC-7730 supports interoperable addresses",
+    "the Aztec sale reaches 12k ETH"
+  ],
+  "summary_en": "Primev and Shutter proposed threshold encrypted mempools with mev-commit preconfirmations to cut frontrunning losses. nero_eth argued FOCIL barely improves censorship resistance, and soispoke replied it was never meant for short term impact. marcindsobczak submitted an EIP raising point evaluation gas."
+}

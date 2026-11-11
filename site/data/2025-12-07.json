@@ -1,0 +1,101 @@
+{
+  "date": "2025-12-07",
+  "keywords": [
+    "原生 AA 提案 EIP-7701 被标记停滞",
+    "Aztec 代币销售 19",
+    "476 ETH 与 16",
+    "741 名参与者",
+    "ERC-8042 进入 Final",
+    "EIP-8072 规范修正",
+    "隐私跨链桥"
+  ],
+  "summary": "eth-bot 对原生 AA 提案 EIP-7701 发起停滞标记。aztecnetwork 称代币销售共 19,476 ETH、16,741 名参与者，一半资金来自 Aztec 社区。mudgen 的 ERC-8042 进入 Final 并合并。周末动态较少。",
+  "items": [
+    {
+      "topic": "账户：EIP-7701",
+      "title": "EIP-7701 停滞标记",
+      "note": "（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10874",
+      "date": "2025-12-07",
+      "title_en": "EIP-7701: stagnant flag",
+      "note_en": "(eth-bot), submitted.",
+      "topic_en": "Accounts: EIP-7701"
+    },
+    {
+      "topic": "隐私：Aztec",
+      "title": "aztecnetwork：感谢为隐私而来，共 19,476 ETH、16,741 名参与者，一半资金来自 Aztec 社区",
+      "note": "01:41；fede_intern：隐私跨链桥在技术上可行，前提是两条链都私密 09:02。",
+      "url": "https://x.com/aztecnetwork/status/1997375978536857678",
+      "date": "2025-12-07",
+      "title_en": "aztecnetwork: thanks for showing up for privacy, 19,476 ETH committed by 16,741 participants, half from the Aztec community",
+      "note_en": "01:41; fede_intern: a privacy preserving bridge is possible if both chains are private, 09:02.",
+      "topic_en": "Privacy: Aztec"
+    },
+    {
+      "topic": "隐私：Aztec",
+      "title": "fede_intern：隐私跨链桥在技术上可行，前提是两条链都私密",
+      "note": "aztecnetwork：感谢为隐私而来，共 19,476 ETH、16,741 名参与者，一半资金来自 Aztec 社区 01:41；fede_intern：隐私跨链桥在技术上可行，前提是两条链都私密 09:02。",
+      "url": "https://x.com/fede_intern/status/1997486874601140234",
+      "date": "2025-12-07",
+      "title_en": "fede_intern: a privacy preserving bridge is possible if both chains are private",
+      "note_en": "Aztecnetwork: thanks for showing up for privacy, 19,476 ETH committed by 16,741 participants, half from the Aztec community, 01:41; fede_intern: a privacy preserving bridge is possible if both chains are private, 09:02.",
+      "topic_en": "Privacy: Aztec"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8042 进入 Final",
+      "note": "（mudgen）12 月 5 日提交后合并；EIP-8072：修正规范不一致（jcastil0）提交并合并；EIP-7848：更新升级时间段影响的措辞（fulldecent）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1394",
+      "date": "2025-12-07",
+      "title_en": "ERC-8042: move to Final",
+      "note_en": "(mudgen), merged after submission on December 5; EIP-8072: fix spec inconsistencies (jcastil0), submitted and merged; EIP-7848: update wording on upgrade time period effects (fulldecent), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8072：修正规范不一致",
+      "note": "ERC-8042 进入 Final（mudgen）12 月 5 日提交后合并；EIP-8072：修正规范不一致（jcastil0）提交并合并；EIP-7848：更新升级时间段影响的措辞（fulldecent）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10876",
+      "date": "2025-12-07",
+      "title_en": "EIP-8072: fix spec inconsistencies",
+      "note_en": "ERC-8042: move to Final (mudgen), merged after submission on December 5; EIP-8072: fix spec inconsistencies (jcastil0), submitted and merged; EIP-7848: update wording on upgrade time period effects (fulldecent), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7848：更新升级时间段影响的措辞",
+      "note": "ERC-8042 进入 Final（mudgen）12 月 5 日提交后合并；EIP-8072：修正规范不一致（jcastil0）提交并合并；EIP-7848：更新升级时间段影响的措辞（fulldecent）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10877",
+      "date": "2025-12-07",
+      "title_en": "EIP-7848: update wording on upgrade time period effects",
+      "note_en": "ERC-8042: move to Final (mudgen), merged after submission on December 5; EIP-8072: fix spec inconsistencies (jcastil0), submitted and merged; EIP-7848: update wording on upgrade time period effects (fulldecent), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：看空者想象不到我们能做到什么",
+      "note": "09:09。",
+      "url": "https://x.com/binji_x/status/1997488728260886758",
+      "date": "2025-12-07",
+      "title_en": "binji_x: bears cannot imagine what we are capable of",
+      "note_en": "09:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/10874",
+    "credit": "GitHub, ethereum/EIPs PR 10874",
+    "local_path": "assets/2025-12-07.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR 10874"
+  },
+  "keywords_en": [
+    "Native AA proposal EIP-7701 flagged stagnant",
+    "the Aztec token sale with 19",
+    "476 ETH from 16",
+    "741 participants",
+    "ERC-8042 moves to Final",
+    "EIP-8072 spec fixes",
+    "privacy preserving bridges"
+  ],
+  "summary_en": "eth-bot flagged native AA proposal EIP-7701 as stagnant. aztecnetwork said its token sale drew 19,476 ETH from 16,741 participants, half from the Aztec community. mudgen's ERC-8042 moved to Final, merged. A quiet weekend."
+}

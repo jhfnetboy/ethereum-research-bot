@@ -1,0 +1,107 @@
+{
+  "date": "2025-11-28",
+  "keywords": [
+    "私密 ERC-20 把零知识燃烧证明扩展到代币",
+    "PQ-Interop devnet-1 达成",
+    "后量子签名比现有签名大约 30 倍",
+    "Ethereal news #0",
+    "ERC-7627 提交进入 Final"
+  ],
+  "summary": "jakeolo 提出私密 ERC-20：把 EIP-7503 的零知识燃烧证明扩展到 ERC-20，用户把代币转到不可花费地址，再私下重新铸造。leanEthereum 宣布 PQ-Interop devnet-1 达成，实现后量子签名的签署与验证。ladislaus0x 指出后量子签名约大 30 倍，聚合更棘手。",
+  "items": [
+    {
+      "topic": "隐私：私密 ERC-20",
+      "title": "Magicians：私密 ERC-20 的零知识燃烧",
+      "note": "（jakeolo）17:50：把 EIP-7503 零知识燃烧证明扩展到 ERC-20，代币转入密码学上不可花费的地址后，可私下重新铸造等量代币；新增 ERC：私密 ERC-20（jakeolo）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8093-ppob-on-erc20-contract-storage/26763",
+      "date": "2025-11-28",
+      "title_en": "Magicians: Private ERC-20, zero knowledge burns for token privacy",
+      "note_en": "(jakeolo), 17:50: extends EIP-7503 proof of burn to ERC-20, so tokens sent to cryptographically unspendable addresses can be privately re-minted; Add ERC: Private ERC-20 (jakeolo), submitted.",
+      "topic_en": "Privacy: Private ERC-20"
+    },
+    {
+      "topic": "隐私：私密 ERC-20",
+      "title": "新增 ERC：私密 ERC-20",
+      "note": "Magicians：私密 ERC-20 的零知识燃烧（jakeolo）17:50：把 EIP-7503 零知识燃烧证明扩展到 ERC-20，代币转入密码学上不可花费的地址后，可私下重新铸造等量代币；新增 ERC：私密 ERC-20（jakeolo）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1379",
+      "date": "2025-11-28",
+      "title_en": "Add ERC: Private ERC-20",
+      "note_en": "Magicians: Private ERC-20, zero knowledge burns for token privacy (jakeolo), 17:50: extends EIP-7503 proof of burn to ERC-20, so tokens sent to cryptographically unspendable addresses can be privately re-minted; Add ERC: Private ERC-20 (jakeolo), submitted.",
+      "topic_en": "Privacy: Private ERC-20"
+    },
+    {
+      "topic": "签名：后量子进展",
+      "title": "leanEthereum：PQ-Interop devnet-1 达成，实现后量子签名的签署与验证，下一步是单层与递归签名聚合",
+      "note": "21:22；ladislaus0x：后量子签名约大 30 倍，聚合更难 16:49。",
+      "url": "https://x.com/leanEthereum/status/1994411472835821971",
+      "date": "2025-11-28",
+      "title_en": "leanEthereum: PQ-Interop devnet-1 reached with post-quantum signing and verification, next single layer and recursive aggregation",
+      "note_en": "21:22; ladislaus0x: post-quantum signatures are about 30x larger and aggregation is harder, 16:49.",
+      "topic_en": "Signatures: post-quantum progress"
+    },
+    {
+      "topic": "签名：后量子进展",
+      "title": "ladislaus0x：后量子签名约大 30 倍，聚合更难",
+      "note": "leanEthereum：PQ-Interop devnet-1 达成，实现后量子签名的签署与验证，下一步是单层与递归签名聚合 21:22；ladislaus0x：后量子签名约大 30 倍，聚合更难 16:49。",
+      "url": "https://x.com/ladislaus0x/status/1994342897152311665",
+      "date": "2025-11-28",
+      "title_en": "ladislaus0x: post-quantum signatures are about 30x larger and aggregation is harder",
+      "note_en": "LeanEthereum: PQ-Interop devnet-1 reached with post-quantum signing and verification, next single layer and recursive aggregation, 21:22; ladislaus0x: post-quantum signatures are about 30x larger and aggregation is harder, 16:49.",
+      "topic_en": "Signatures: post-quantum progress"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EtherealnewsHQ：Ethereal news #0，gas 上限提到 60M，Fusaka 12 月 3 日上线，FOCIL 不进 Glamsterdam",
+      "note": "18:48；ERC-7627 进入 Final（bizliaoyuan）提交。",
+      "url": "https://x.com/EtherealnewsHQ/status/1994372725771833597",
+      "date": "2025-11-28",
+      "title_en": "EtherealnewsHQ: Ethereal news #0, gas limit at 60M, Fusaka on December 3, FOCIL not in Glamsterdam",
+      "note_en": "18:48; ERC-7627: move to Final (bizliaoyuan), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7627 进入 Final",
+      "note": "EtherealnewsHQ：Ethereal news #0，gas 上限提到 60M，Fusaka 12 月 3 日上线，FOCIL 不进 Glamsterdam 18:48；ERC-7627 进入 Final（bizliaoyuan）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1378",
+      "date": "2025-11-28",
+      "title_en": "ERC-7627: move to Final",
+      "note_en": "EtherealnewsHQ: Ethereal news #0, gas limit at 60M, Fusaka on December 3, FOCIL not in Glamsterdam, 18:48; ERC-7627: move to Final (bizliaoyuan), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：L2 泡沫正转向 L1 泡沫",
+      "note": "20:45；AndyGuzmanEth：隐私不只是理念，也是安全 05:00。",
+      "url": "https://x.com/donnoh_eth/status/1994402277655027847",
+      "date": "2025-11-28",
+      "title_en": "donnoh_eth: the L2 bubble is turning into an L1 bubble",
+      "note_en": "20:45; AndyGuzmanEth: privacy is not just ideology, it is safety, 05:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：隐私不只是理念，也是安全",
+      "note": "donnoh_eth：L2 泡沫正转向 L1 泡沫 20:45；AndyGuzmanEth：隐私不只是理念，也是安全 05:00。",
+      "url": "https://x.com/AndyGuzmanEth/status/1994164475352465431",
+      "date": "2025-11-28",
+      "title_en": "AndyGuzmanEth: privacy is not just ideology, it is safety",
+      "note_en": "Donnoh_eth: the L2 bubble is turning into an L1 bubble, 20:45; AndyGuzmanEth: privacy is not just ideology, it is safety, 05:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8093-ppob-on-erc20-contract-storage/26763",
+    "credit": "Ethereum Magicians, ERC-8093 PPoB on ERC20 contract storage",
+    "local_path": "assets/2025-11-28.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8093 PPoB on ERC20 contract storage"
+  },
+  "keywords_en": [
+    "Private ERC-20 extends zero knowledge proof of burn to tokens",
+    "PQ-Interop devnet-1 reached",
+    "post-quantum signatures about 30x larger",
+    "Ethereal news #0",
+    "ERC-7627 submitted to Final"
+  ],
+  "summary_en": "jakeolo proposed Private ERC-20, extending EIP-7503 zero knowledge proof of burn to ERC-20: users send tokens to unspendable addresses and privately re-mint them. leanEthereum reached PQ-Interop devnet-1 with post-quantum signing and verification. ladislaus0x noted post-quantum signatures are about 30x larger, making aggregation harder."
+}

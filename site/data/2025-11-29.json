@@ -1,0 +1,77 @@
+{
+  "date": "2025-11-29",
+  "keywords": [
+    "eth/vhash blob 感知内存池 EIP 提交",
+    "EIP-7742 规定 target_blobs_per_block 的头部编码",
+    "隐私协议之间的互操作",
+    "量子计算与 Bitcoin ECDSA 风险",
+    "DeDe 实物交付结算协议"
+  ],
+  "summary": "cskiraly 提交 eth/vhash blob 感知内存池 EIP。ANtutov 为 EIP-7742 规定 target_blobs_per_block 的区块头 RLP 编码。zengjiajun_eth 称接下来要解决隐私协议之间的互操作。周末动态较少。",
+  "items": [
+    {
+      "topic": "交易：blob 内存池",
+      "title": "新增 EIP：eth/vhash blob 感知内存池",
+      "note": "（cskiraly）提交；EIP-7742：规定区块头 RLP 编码与 target_blobs_per_block 的位置（ANtutov）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10853",
+      "date": "2025-11-29",
+      "title_en": "Add EIP: eth/vhash, a blob aware mempool",
+      "note_en": "(cskiraly), submitted; EIP-7742: specify header RLP encoding and placement of target_blobs_per_block (ANtutov), submitted.",
+      "topic_en": "Transactions: the blob mempool"
+    },
+    {
+      "topic": "交易：blob 内存池",
+      "title": "EIP-7742：规定区块头 RLP 编码与 target_blobs_per_block 的位置",
+      "note": "新增 EIP：eth/vhash blob 感知内存池（cskiraly）提交；EIP-7742：规定区块头 RLP 编码与 target_blobs_per_block 的位置（ANtutov）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10850",
+      "date": "2025-11-29",
+      "title_en": "EIP-7742: specify header RLP encoding and placement of target_blobs_per_block",
+      "note_en": "Add EIP: eth/vhash, a blob aware mempool (cskiraly), submitted; EIP-7742: specify header RLP encoding and placement of target_blobs_per_block (ANtutov), submitted.",
+      "topic_en": "Transactions: the blob mempool"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：DeDe 协议，实物交付的无需信任结算层",
+      "note": "23:37。",
+      "url": "https://ethresear.ch/t/dede-protocol-a-trustless-settlement-layer-for-physical-delivery/23567",
+      "date": "2025-11-29",
+      "title_en": "ethresear.ch: DeDe protocol, a trustless settlement layer for physical delivery",
+      "note_en": "23:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：接下来需要解决隐私协议之间的互操作",
+      "note": "23:40；tcoratger：解读 nic_carter 关于量子计算与 Bitcoin ECDSA 风险的文章 06:24。",
+      "url": "https://x.com/zengjiajun_eth/status/1994808732115755508",
+      "date": "2025-11-29",
+      "title_en": "zengjiajun_eth: next we need interoperability between privacy protocols",
+      "note_en": "23:40; tcoratger: on nic_carter's article about quantum risk to Bitcoin ECDSA, 06:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：解读 nic_carter 关于量子计算与 Bitcoin ECDSA 风险的文章",
+      "note": "zengjiajun_eth：接下来需要解决隐私协议之间的互操作 23:40；tcoratger：解读 nic_carter 关于量子计算与 Bitcoin ECDSA 风险的文章 06:24。",
+      "url": "https://x.com/tcoratger/status/1994548089839853992",
+      "date": "2025-11-29",
+      "title_en": "tcoratger: on nic_carter's article about quantum risk to Bitcoin ECDSA",
+      "note_en": "Zengjiajun_eth: next we need interoperability between privacy protocols, 23:40; tcoratger: on nic_carter's article about quantum risk to Bitcoin ECDSA, 06:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/10853",
+    "credit": "GitHub, ethereum/EIPs PR 10853",
+    "local_path": "assets/2025-11-29.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR 10853"
+  },
+  "keywords_en": [
+    "The eth/vhash blob aware mempool EIP submitted",
+    "EIP-7742 specifies header encoding for target_blobs_per_block",
+    "interoperability between privacy protocols",
+    "quantum risk to Bitcoin ECDSA",
+    "the DeDe settlement protocol for physical delivery"
+  ],
+  "summary_en": "cskiraly submitted the eth/vhash blob aware mempool EIP. ANtutov specified header RLP encoding for target_blobs_per_block in EIP-7742. zengjiajun_eth said interoperability between privacy protocols is next. A quiet weekend."
+}

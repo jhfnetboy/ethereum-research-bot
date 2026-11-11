@@ -1,0 +1,175 @@
+{
+  "date": "2025-12-11",
+  "keywords": [
+    "ACDC #171 ePBS 保留无需信任支付",
+    "EIP-7688",
+    "EIP-8080 与 EIP-8061 列为 CFI",
+    "FOCIL 列为 Hegotá CFI",
+    "后量子签名聚合的折叠方法",
+    "无需信任支付",
+    "EIP-8101 负载分块",
+    "2025 升级流程回顾",
+    "samczsun 谈漏洞赏金"
+  ],
+  "summary": "ACDC #171：ePBS 保留无需信任支付，探索非验证的质押 builder；EIP-7688、EIP-8080 与 EIP-8061 列为 Glamsterdam CFI；FOCIL 列为下一升级 CFI，可能成为头号提案。tcoratger 与 Srinath Setty 提出用折叠方法聚合后量子签名。nerolation 提交 EIP-8101 负载分块。",
+  "items": [
+    {
+      "topic": "会议：ACDC #171",
+      "title": "ACDC #171",
+      "note": "21:00，据 Ethereal news #2：Glamsterdam 目标 2026 年 6 月；ePBS 不移除无需信任支付，探索非验证的质押 builder；EIP-7688 前向兼容的共识数据结构、EIP-8080 退出使用合并队列与 EIP-8061 提高 churn 上限列为 CFI；下一升级的头号提案讨论 1 月开始，EIP-7805 FOCIL 列为 CFI，可能成为头号提案。",
+      "url": "https://forkcast.org/calls/acdc/171",
+      "date": "2025-12-11",
+      "title_en": "ACDC #171",
+      "note_en": "21:00, per Ethereal news #2: Glamsterdam targets June 2026; ePBS keeps trustless payments and explores non-validating staked builders; EIP-7688 forward compatible consensus structures, EIP-8080 exits via the consolidation queue and EIP-8061 higher churn limits are CFI; headliner talks for the next upgrade start in January, with EIP-7805 FOCIL CFI and a possible headliner.",
+      "topic_en": "Calls: ACDC #171"
+    },
+    {
+      "topic": "会议：ACDC #171",
+      "title": "Ethereal news #2",
+      "note": "ACDC #171 21:00，据 Ethereal news #2：Glamsterdam 目标 2026 年 6 月；ePBS 不移除无需信任支付，探索非验证的质押 builder；EIP-7688 前向兼容的共识数据结构、EIP-8080 退出使用合并队列与 EIP-8061 提高 churn 上限列为 CFI；下一升级的头号提案讨论 1 月开始，EIP-7805 FOCIL 列为 CFI，可能成为头号提案。",
+      "url": "https://ethereal.news/ethereal-news-weekly-2/",
+      "date": "2025-12-11",
+      "title_en": "Ethereal news #2",
+      "note_en": "ACDC #171, 21:00, per Ethereal news #2: Glamsterdam targets June 2026; ePBS keeps trustless payments and explores non-validating staked builders; EIP-7688 forward compatible consensus structures, EIP-8080 exits via the consolidation queue and EIP-8061 higher churn limits are CFI; headliner talks for the next upgrade start in January, with EIP-7805 FOCIL CFI and a possible headliner.",
+      "topic_en": "Calls: ACDC #171"
+    },
+    {
+      "topic": "会议：ACDC #171",
+      "title": "EIP-7805",
+      "note": "ACDC #171 21:00，据 Ethereal news #2：Glamsterdam 目标 2026 年 6 月；ePBS 不移除无需信任支付，探索非验证的质押 builder；EIP-7688 前向兼容的共识数据结构、EIP-8080 退出使用合并队列与 EIP-8061 提高 churn 上限列为 CFI；下一升级的头号提案讨论 1 月开始，EIP-7805 FOCIL 列为 CFI，可能成为头号提案。",
+      "url": "https://eips.ethereum.org/EIPS/eip-7805",
+      "date": "2025-12-11",
+      "title_en": "EIP-7805",
+      "note_en": "ACDC #171, 21:00, per Ethereal news #2: Glamsterdam targets June 2026; ePBS keeps trustless payments and explores non-validating staked builders; EIP-7688 forward compatible consensus structures, EIP-8080 exits via the consolidation queue and EIP-8061 higher churn limits are CFI; headliner talks for the next upgrade start in January, with EIP-7805 FOCIL CFI and a possible headliner.",
+      "topic_en": "Calls: ACDC #171"
+    },
+    {
+      "topic": "签名与支付",
+      "title": "ethresear.ch：后量子签名聚合的折叠方法",
+      "note": "（tcoratger）19:31：作者 Thomas Coratger 与 Srinath Setty，面向数十万验证者的海量见证，探讨后量子签名如何高效聚合；ethresear.ch：无需信任支付（BrunoMazorra）03:50：主张保留 EIP-7732 的无需信任支付组件。",
+      "url": "https://ethresear.ch/t/post-quantum-signature-aggregation-a-folding-approach/23639",
+      "date": "2025-12-11",
+      "title_en": "ethresear.ch: Post quantum signature aggregation, a folding approach",
+      "note_en": "(tcoratger), 19:31: by Thomas Coratger and Srinath Setty, on aggregating post-quantum signatures efficiently for attestations from hundreds of thousands of validators; ethresear.ch: Trustless payments (BrunoMazorra), 03:50: argues to keep the trustless payments part of EIP-7732.",
+      "topic_en": "Signatures and payments"
+    },
+    {
+      "topic": "签名与支付",
+      "title": "ethresear.ch：无需信任支付",
+      "note": "ethresear.ch：后量子签名聚合的折叠方法（tcoratger）19:31：作者 Thomas Coratger 与 Srinath Setty，面向数十万验证者的海量见证，探讨后量子签名如何高效聚合；ethresear.ch：无需信任支付（BrunoMazorra）03:50：主张保留 EIP-7732 的无需信任支付组件。",
+      "url": "https://ethresear.ch/t/trustless-payments/23635",
+      "date": "2025-12-11",
+      "title_en": "ethresear.ch: Trustless payments",
+      "note_en": "Ethresear.ch: Post quantum signature aggregation, a folding approach (tcoratger), 19:31: by Thomas Coratger and Srinath Setty, on aggregating post-quantum signatures efficiently for attestations from hundreds of thousands of validators; ethresear.ch: Trustless payments (BrunoMazorra), 03:50: argues to keep the trustless payments part of EIP-7732.",
+      "topic_en": "Signatures and payments"
+    },
+    {
+      "topic": "Gas 与区块",
+      "title": "新增 EIP：带分块访问列表的负载分块",
+      "note": "（nerolation）提交，Magicians：EIP-8101 21:22；EIP-7928：澄清系统合约调用者（nerolation）提交并合并；EIP-8024：加入明确的停机条件（frangio）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10900",
+      "date": "2025-12-11",
+      "title_en": "Add EIP: Payload Chunking with Chunk Access Lists",
+      "note_en": "(nerolation), submitted, with Magicians: EIP-8101, 21:22; EIP-7928: clarify the system contract caller (nerolation), submitted and merged; EIP-8024: add explicit halting conditions (frangio), submitted and merged.",
+      "topic_en": "Gas and blocks"
+    },
+    {
+      "topic": "Gas 与区块",
+      "title": "Magicians：EIP-8101",
+      "note": "新增 EIP：带分块访问列表的负载分块（nerolation）提交，Magicians：EIP-8101 21:22；EIP-7928：澄清系统合约调用者（nerolation）提交并合并；EIP-8024：加入明确的停机条件（frangio）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/eip-8101-payload-chunking/27085",
+      "date": "2025-12-11",
+      "title_en": "Magicians: EIP-8101",
+      "note_en": "Add EIP: Payload Chunking with Chunk Access Lists (nerolation), submitted, with Magicians: EIP-8101, 21:22; EIP-7928: clarify the system contract caller (nerolation), submitted and merged; EIP-8024: add explicit halting conditions (frangio), submitted and merged.",
+      "topic_en": "Gas and blocks"
+    },
+    {
+      "topic": "Gas 与区块",
+      "title": "EIP-7928：澄清系统合约调用者",
+      "note": "新增 EIP：带分块访问列表的负载分块（nerolation）提交，Magicians：EIP-8101 21:22；EIP-7928：澄清系统合约调用者（nerolation）提交并合并；EIP-8024：加入明确的停机条件（frangio）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10895",
+      "date": "2025-12-11",
+      "title_en": "EIP-7928: clarify the system contract caller",
+      "note_en": "Add EIP: Payload Chunking with Chunk Access Lists (nerolation), submitted, with Magicians: EIP-8101, 21:22; EIP-7928: clarify the system contract caller (nerolation), submitted and merged; EIP-8024: add explicit halting conditions (frangio), submitted and merged.",
+      "topic_en": "Gas and blocks"
+    },
+    {
+      "topic": "Gas 与区块",
+      "title": "EIP-8024：加入明确的停机条件",
+      "note": "新增 EIP：带分块访问列表的负载分块（nerolation）提交，Magicians：EIP-8101 21:22；EIP-7928：澄清系统合约调用者（nerolation）提交并合并；EIP-8024：加入明确的停机条件（frangio）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10897",
+      "date": "2025-12-11",
+      "title_en": "EIP-8024: add explicit halting conditions",
+      "note_en": "Add EIP: Payload Chunking with Chunk Access Lists (nerolation), submitted, with Magicians: EIP-8101, 21:22; EIP-7928: clarify the system contract caller (nerolation), submitted and merged; EIP-8024: add explicit halting conditions (frangio), submitted and merged.",
+      "topic_en": "Gas and blocks"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：2025 年升级流程回顾",
+      "note": "（nixo）07:34；ethereum：PeerDAS（EIP-7594）是 Fusaka 的核心改进，数据吞吐最多提高 8 倍 03:18。",
+      "url": "https://ethereum-magicians.org/t/2025-upgrade-process-retrospective/27082",
+      "date": "2025-12-11",
+      "title_en": "Magicians: 2025 upgrade process retrospective",
+      "note_en": "(nixo), 07:34; ethereum: PeerDAS (EIP-7594) is Fusaka's headline change, with up to 8x data throughput, 03:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereum：PeerDAS（EIP-7594）是 Fusaka 的核心改进，数据吞吐最多提高 8 倍",
+      "note": "Magicians：2025 年升级流程回顾（nixo）07:34；ethereum：PeerDAS（EIP-7594）是 Fusaka 的核心改进，数据吞吐最多提高 8 倍 03:18。",
+      "url": "https://x.com/ethereum/status/1998849926210678830",
+      "date": "2025-12-11",
+      "title_en": "ethereum: PeerDAS (EIP-7594) is Fusaka's headline change, with up to 8x data throughput",
+      "note_en": "Magicians: 2025 upgrade process retrospective (nixo), 07:34; ethereum: PeerDAS (EIP-7594) is Fusaka's headline change, with up to 8x data throughput, 03:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "samczsun：关于漏洞赏金与加密安全未来的思考",
+      "note": "01:06；VitalikButerin：推荐去中心化开源加密文档 fileverse 01:20；fede_intern：以太坊应慎重依赖由风投控制的 Reth 01:20。",
+      "url": "https://x.com/samczsun/status/1998816590901756081",
+      "date": "2025-12-11",
+      "title_en": "samczsun: thoughts on bug bounty payouts and the future of crypto security",
+      "note_en": "01:06; VitalikButerin: impressed by fileverse, decentralized open source encrypted docs, 01:20; fede_intern: Ethereum should be cautious relying on VC controlled Reth, 01:20.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：推荐去中心化开源加密文档 fileverse",
+      "note": "samczsun：关于漏洞赏金与加密安全未来的思考 01:06；VitalikButerin：推荐去中心化开源加密文档 fileverse 01:20；fede_intern：以太坊应慎重依赖由风投控制的 Reth 01:20。",
+      "url": "https://x.com/VitalikButerin/status/1998820202054832639",
+      "date": "2025-12-11",
+      "title_en": "VitalikButerin: impressed by fileverse, decentralized open source encrypted docs",
+      "note_en": "Samczsun: thoughts on bug bounty payouts and the future of crypto security, 01:06; VitalikButerin: impressed by fileverse, decentralized open source encrypted docs, 01:20; fede_intern: Ethereum should be cautious relying on VC controlled Reth, 01:20.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：以太坊应慎重依赖由风投控制的 Reth",
+      "note": "samczsun：关于漏洞赏金与加密安全未来的思考 01:06；VitalikButerin：推荐去中心化开源加密文档 fileverse 01:20；fede_intern：以太坊应慎重依赖由风投控制的 Reth 01:20。",
+      "url": "https://x.com/fede_intern/status/1998820103937274308",
+      "date": "2025-12-11",
+      "title_en": "fede_intern: Ethereum should be cautious relying on VC controlled Reth",
+      "note_en": "Samczsun: thoughts on bug bounty payouts and the future of crypto security, 01:06; VitalikButerin: impressed by fileverse, decentralized open source encrypted docs, 01:20; fede_intern: Ethereum should be cautious relying on VC controlled Reth, 01:20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/post-quantum-signature-aggregation-a-folding-approach/23639",
+    "credit": "ethresear.ch, Post Quantum Signature Aggregation: a Folding Approach",
+    "local_path": "assets/2025-12-11.jpg",
+    "credit_en": "ethresear.ch, Post Quantum Signature Aggregation: a Folding Approach"
+  },
+  "keywords_en": [
+    "ACDC #171 keeps trustless payments in ePBS",
+    "EIP-7688",
+    "EIP-8080 and EIP-8061 are CFI",
+    "FOCIL is CFI for Hegotá",
+    "a folding approach to post-quantum signature aggregation",
+    "trustless payments",
+    "EIP-8101 payload chunking",
+    "the 2025 upgrade process retrospective",
+    "samczsun on bug bounties"
+  ],
+  "summary_en": "ACDC #171: ePBS keeps trustless payments and explores non-validating staked builders; EIP-7688, EIP-8080 and EIP-8061 are CFI for Glamsterdam; FOCIL is CFI for the next upgrade and a possible headliner. tcoratger and Srinath Setty proposed folding to aggregate post-quantum signatures. nerolation submitted EIP-8101 payload chunking."
+}
