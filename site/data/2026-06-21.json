@@ -1,0 +1,85 @@
+{
+  "date": "2026-06-21",
+  "keywords": [
+    "Validator Redirected Revenue",
+    "以验证者为主导的公共物品资金机制",
+    "EF 风波",
+    "隐私与后量子成为必选项"
+  ],
+  "summary": "周日较安静。clesaege 在 ethresear.ch 发表 Validator Redirected Revenue，提出两项协议层改动，让验证者自行配置把一定比例的质押奖励转给公共物品，以解决以太坊共享改进中的搭便车问题，讨论热度很高。Eli Ben-Sasson 就 EF 风波发表看法。",
+  "items": [
+    {
+      "topic": "协议层的公共物品资金",
+      "title": "ethresear.ch：Validator Redirected Revenue",
+      "note": "15:34（clesaege）。文章认为以太坊陷入协调失败：所有人都从共享改进中受益，但没人愿意在别人可以搭便车时付钱，造成持续的无谓损失。提案在协议层引入两项改动，建立由验证者驱动的资金机制，验证者配置把一定比例的质押奖励转出。",
+      "url": "https://ethresear.ch/t/validator-redirected-revenue/25248",
+      "date": "2026-06-21",
+      "title_en": "ethresear.ch: Validator Redirected Revenue",
+      "note_en": "15:34 (clesaege). The post argues Ethereum is stuck in a coordination failure: everyone benefits from shared improvements but no one wants to pay when others can free-ride, creating a persistent deadweight loss. It proposes two protocol-level changes for a validator-driven funding mechanism, where validators configure a percentage of staking rewards to be redirected.",
+      "topic_en": "Protocol-level public goods funding"
+    },
+    {
+      "topic": "EF 风波",
+      "title": "Eli Ben-Sasson：我对 EF 风波的看法",
+      "note": "19:12，他不加入抨击 EF 的一方，也不认为一切都好，以太坊有很多优势，也有其政治。",
+      "url": "https://x.com/EliBenSasson/status/2068668392609837457",
+      "date": "2026-06-21",
+      "title_en": "Eli Ben-Sasson: my view on the Ethereum Foundation turmoil",
+      "note_en": "19:12; he is not joining those bashing the EF, nor saying all is rosy, and notes Ethereum has many strengths and also its politics.",
+      "topic_en": "EF turmoil"
+    },
+    {
+      "topic": "EF 风波",
+      "title": "Eli：五年后每个项目都必须具备隐私和后量子安全",
+      "note": "00:50。",
+      "url": "https://x.com/EliBenSasson/status/2068390961164464501",
+      "date": "2026-06-21",
+      "title_en": "Eli: five years from now every project will need privacy and post-quantum security",
+      "note_en": "00:50.",
+      "topic_en": "EF turmoil"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：MUST 改为 will",
+      "note": "（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11822",
+      "date": "2026-06-21",
+      "title_en": "EIP-7979: MUST changed to will",
+      "note_en": "(gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：把 EIP-8189 加入 Glamsterdam CFI 网络层 EIP",
+      "note": "（barnabasbusa）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11792",
+      "date": "2026-06-21",
+      "title_en": "EIP-7773: add EIP-8189 to Glamsterdam CFI networking EIPs",
+      "note_en": "(barnabasbusa), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano_：入侵者仍在内部，试图找到 Twitter 登录以投放钱包盗取程序",
+      "note": "22:25。",
+      "url": "https://x.com/tayvano_/status/2068717042107359479",
+      "date": "2026-06-21",
+      "title_en": "tayvano_: attackers still inside, trying to find the Twitter logins to drop a wallet drainer",
+      "note_en": "22:25.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/validator-redirected-revenue/25248",
+    "credit": "ethresear.ch, Validator Redirected Revenue (clesaege)",
+    "local_path": "assets/2026-06-21.jpg",
+    "credit_en": "ethresear.ch, Validator Redirected Revenue (clesaege)"
+  },
+  "keywords_en": [
+    "Validator Redirected Revenue",
+    "a validator-driven public goods funding mechanism",
+    "EF turmoil",
+    "privacy and post-quantum as requirements"
+  ],
+  "summary_en": "A quiet Sunday. clesaege published Validator Redirected Revenue on ethresear.ch, proposing two protocol-level changes that let validators configure a share of their staking rewards to be redirected to public goods, to address free-riding on Ethereum's shared improvements; the thread drew a lot of discussion. Eli Ben-Sasson shared his view on the EF turmoil."
+}

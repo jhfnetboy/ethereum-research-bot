@@ -1,0 +1,201 @@
+{
+  "date": "2026-06-04",
+  "keywords": [
+    "EIP-8130 actor 重命名",
+    "actor 调用策略与过期",
+    "ERC-8286 frame 交易模块化账户",
+    "隐私原生同质化代币",
+    "EIP-8282 builder 执行请求",
+    "ACDE #238",
+    "EOA 迁移到智能账户"
+  ],
+  "summary": "chunter-cb 对 EIP-8130 连续提交并合并三项修改：把 owner 改名为 actor，验证接口改为 verifyActor，并加入按 actor 的调用策略与过期时间。ERC-8286 提交，把 ERC-7579 模块化账户接到 EIP-8141 frame 交易的验证流程。隐私原生同质化代币标准（8287）在 ethresear.ch 和 Magicians 同时发帖。当晚 ACDE #238 讨论 Hegotá 非 headliner 候选，包括 EOA 迁移到智能账户的 EIP-7851 与 EIP-8151。",
+  "items": [
+    {
+      "topic": "EIP-8130：从 owner 到有范围的 actor",
+      "title": "EIP-8130：owner 改名为 actor，并定稿 Transaction Context 命名",
+      "note": "（chunter-cb）提交并合并。理由是很多签名实体只是有范围的凭证（仅 PAYER、仅 SIGNATURE、会话式密钥），叫 owner 夸大了权限；`ownerId`、`OwnerConfig`、`authorizeOwner` 等相应改为 `actorId`、`actor_config`、`authorizeActor` 一类命名。",
+      "url": "https://github.com/ethereum/EIPs/pull/11764",
+      "date": "2026-06-04",
+      "title_en": "EIP-8130: rename owner to actor and finalize Transaction Context naming",
+      "note_en": "(chunter-cb), submitted and merged. Many signing entities are scoped credentials (PAYER only, SIGNATURE only, session style keys), so \"owner\" overstated their authority; `ownerId`, `OwnerConfig`, `authorizeOwner` and similar become `actorId`, `actor_config`, `authorizeActor` and so on.",
+      "topic_en": "EIP-8130: from owner to scoped actor"
+    },
+    {
+      "topic": "EIP-8130：从 owner 到有范围的 actor",
+      "title": "EIP-8130：`IAccountConfiguration.verify` 改名为 `verifyActor`",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11765",
+      "date": "2026-06-04",
+      "title_en": "EIP-8130: rename `IAccountConfiguration.verify` to `verifyActor`",
+      "note_en": "Submitted and merged.",
+      "topic_en": "EIP-8130: from owner to scoped actor"
+    },
+    {
+      "topic": "EIP-8130：从 owner 到有范围的 actor",
+      "title": "EIP-8130：加入 actor 调用策略和按 actor 的过期时间",
+      "note": "提交并合并。`actor_config` 中的 `policyType` 字节选择可选的调用策略，带签名的 `commitment` 和 `manager` 存在按 `(account, actorId)` 定位的策略槽中。策略在执行时检查而不是在验证时检查，协议判断交易有效性时不读取策略槽，因此策略不进入 mempool 的有效性判断面。",
+      "url": "https://github.com/ethereum/EIPs/pull/11766",
+      "date": "2026-06-04",
+      "title_en": "EIP-8130: add actor call policies and per-actor expiry",
+      "note_en": "Submitted and merged. A `policyType` byte in `actor_config` selects an optional call policy, with a signed `commitment` and a `manager` stored in policy slots keyed by `(account, actorId)`. Enforcement happens at execution, not validation: the protocol never reads the policy slots when deciding validity, so policies stay off the mempool validity surface.",
+      "topic_en": "EIP-8130: from owner to scoped actor"
+    },
+    {
+      "topic": "frame 交易的账户生态",
+      "title": "ERC：frame 交易的模块化账户",
+      "note": "（chiranjeev13）提交，Magicians 讨论帖 06:35，即 ERC-8286。它不改动 ERC-7579 的模块结构，只定义 EIP-8141 frame 交易的验证流程：验证器模块返回批准模式，账户在 VERIFY frame 中通过 APPROVE 指令执行它。",
+      "url": "https://github.com/ethereum/ERCs/pull/1794",
+      "date": "2026-06-04",
+      "title_en": "ERC: Modular Accounts for Frame Transactions",
+      "note_en": "(chiranjeev13), submitted, with a Magicians thread at 06:35; this is ERC-8286. It leaves the ERC-7579 module structure unchanged and only defines the validation flow for EIP-8141 frame transactions: a validator module returns an approval mode, and the account applies it with the APPROVE instruction during a VERIFY frame.",
+      "topic_en": "The account ecosystem around frame transactions"
+    },
+    {
+      "topic": "frame 交易的账户生态",
+      "title": "Magicians 讨论帖",
+      "note": "ERC：frame 交易的模块化账户（chiranjeev13）提交，Magicians 讨论帖 06:35，即 ERC-8286。它不改动 ERC-7579 的模块结构，只定义 EIP-8141 frame 交易的验证流程：验证器模块返回批准模式，账户在 VERIFY frame 中通过 APPROVE 指令执行它。",
+      "url": "https://ethereum-magicians.org/t/erc-8286-modular-accounts-for-frame-transactions/28695",
+      "date": "2026-06-04",
+      "title_en": "Magicians thread",
+      "note_en": "ERC: Modular Accounts for Frame Transactions (chiranjeev13), submitted, with a Magicians thread at 06:35; this is ERC-8286. It leaves the ERC-7579 module structure unchanged and only defines the validation flow for EIP-8141 frame transactions: a validator module returns an approval mode, and the account applies it with the APPROVE instruction during a VERIFY frame.",
+      "topic_en": "The account ecosystem around frame transactions"
+    },
+    {
+      "topic": "frame 交易的账户生态",
+      "title": "Magicians：EIP-8282 builder 执行请求",
+      "note": "14:40（wemeetagain）。为 EIP-7732（ePBS）的 builder 在 EIP-7685 请求总线上提供独立的执行层请求合约，而不是借用验证者的存款和退出流程。",
+      "url": "https://ethereum-magicians.org/t/eip-8282-builder-execution-requests/28699",
+      "date": "2026-06-04",
+      "title_en": "Magicians: EIP-8282 Builder Execution Requests",
+      "note_en": "14:40 (wemeetagain). It gives EIP-7732 (ePBS) builders their own execution layer request contracts on the EIP-7685 request bus, rather than routing them through the validator deposit and exit flows.",
+      "topic_en": "The account ecosystem around frame transactions"
+    },
+    {
+      "topic": "隐私原生代币与后量子",
+      "title": "ethresear.ch：EIP8287 隐私原生同质化代币标准（草案）",
+      "note": "14:32（JiangXb-son），Magicians 讨论帖 17:04，对应 ERC PR 提交。目标是为 EVM 上的隐私原生同质化代币定义标准 API。",
+      "url": "https://ethresear.ch/t/eip8287-privacy-native-fungible-token-standard-draft/25089",
+      "date": "2026-06-04",
+      "title_en": "ethresear.ch: EIP8287 Privacy-Native Fungible Token Standard (Draft)",
+      "note_en": "14:32 (JiangXb-son), with a Magicians thread at 17:04 and an ERC PR submitted. The goal is a standard API for privacy-native fungible tokens on the EVM.",
+      "topic_en": "Privacy-native tokens and post-quantum"
+    },
+    {
+      "topic": "隐私原生代币与后量子",
+      "title": "Magicians 讨论帖",
+      "note": "ethresear.ch：EIP8287 隐私原生同质化代币标准（草案） 14:32（JiangXb-son），Magicians 讨论帖 17:04，对应 ERC PR 提交。目标是为 EVM 上的隐私原生同质化代币定义标准 API。",
+      "url": "https://ethereum-magicians.org/t/erc-8287-privacy-native-fungible-tokens/28702",
+      "date": "2026-06-04",
+      "title_en": "Magicians thread",
+      "note_en": "Ethresear.ch: EIP8287 Privacy-Native Fungible Token Standard (Draft), 14:32 (JiangXb-son), with a Magicians thread at 17:04 and an ERC PR submitted. The goal is a standard API for privacy-native fungible tokens on the EVM.",
+      "topic_en": "Privacy-native tokens and post-quantum"
+    },
+    {
+      "topic": "隐私原生代币与后量子",
+      "title": "ERC PR",
+      "note": "ethresear.ch：EIP8287 隐私原生同质化代币标准（草案） 14:32（JiangXb-son），Magicians 讨论帖 17:04，对应 ERC PR 提交。目标是为 EVM 上的隐私原生同质化代币定义标准 API。",
+      "url": "https://github.com/ethereum/ERCs/pull/1796",
+      "date": "2026-06-04",
+      "title_en": "ERC PR",
+      "note_en": "Ethresear.ch: EIP8287 Privacy-Native Fungible Token Standard (Draft), 14:32 (JiangXb-son), with a Magicians thread at 17:04 and an ERC PR submitted. The goal is a standard API for privacy-native fungible tokens on the EVM.",
+      "topic_en": "Privacy-native tokens and post-quantum"
+    },
+    {
+      "topic": "隐私原生代币与后量子",
+      "title": "ethbeat：Tornado Cash、Railgun 与 Privacy Pools 的区别对比",
+      "note": "21:17。",
+      "url": "https://x.com/ethbeat_org/status/2062539328287334651",
+      "date": "2026-06-04",
+      "title_en": "ethbeat: how Tornado Cash, Railgun and Privacy Pools differ",
+      "note_en": "21:17.",
+      "topic_en": "Privacy-native tokens and post-quantum"
+    },
+    {
+      "topic": "隐私原生代币与后量子",
+      "title": "tcoratger 转发 hashcloak 的文章：以太坊计划如何用后量子签名替换 BLS",
+      "note": "15:39。binji：以太坊在公开推进后量子工作，欢迎合作 18:50。",
+      "url": "https://x.com/tcoratger/status/2062454146754625859",
+      "date": "2026-06-04",
+      "title_en": "tcoratger shared a hashcloak article on how Ethereum plans to replace BLS with post-quantum signatures",
+      "note_en": "15:39. binji: Ethereum is doing post-quantum work in the open and welcomes collaborators, 18:50.",
+      "topic_en": "Privacy-native tokens and post-quantum"
+    },
+    {
+      "topic": "隐私原生代币与后量子",
+      "title": "binji：以太坊在公开推进后量子工作，欢迎合作",
+      "note": "tcoratger 转发 hashcloak 的文章：以太坊计划如何用后量子签名替换 BLS 15:39。binji：以太坊在公开推进后量子工作，欢迎合作 18:50。",
+      "url": "https://x.com/binji_x/status/2062502347750900147",
+      "date": "2026-06-04",
+      "title_en": "binji: Ethereum is doing post-quantum work in the open and welcomes collaborators",
+      "note_en": "Tcoratger shared a hashcloak article on how Ethereum plans to replace BLS with post-quantum signatures, 15:39. binji: Ethereum is doing post-quantum work in the open and welcomes collaborators, 18:50.",
+      "topic_en": "Privacy-native tokens and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：提议 EIP-8148 进入 Hegotá",
+      "note": "（gkoumout）合并。EIP-8148 让复利提款凭证的验证者把自动提款阈值设在 32 到 2048 ETH 之间。",
+      "url": "https://github.com/ethereum/EIPs/pull/11508",
+      "date": "2026-06-04",
+      "title_en": "EIP-8081: propose EIP-8148 for inclusion in Hegotá",
+      "note_en": "(gkoumout), merged. EIP-8148 lets validators with compounding withdrawal credentials set their auto sweep threshold anywhere from 32 to 2048 ETH.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8142：修复多处 blob 编码解码问题",
+      "note": "（Thegaram）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11763",
+      "date": "2026-06-04",
+      "title_en": "EIP-8142: various blob encoding and decoding fixes",
+      "note_en": "(Thegaram), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8180：把 contentTag 提升为 BAM 核心事件的索引 topic",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1793",
+      "date": "2026-06-04",
+      "title_en": "ERC-8180: promote contentTag to an indexed topic on BAM core events",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：加密需要隐私才能增长",
+      "note": "21:35。",
+      "url": "https://x.com/EliBenSasson/status/2062543886421996013",
+      "date": "2026-06-04",
+      "title_en": "Eli Ben-Sasson: crypto needs privacy to grow",
+      "note_en": "21:35.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：关键不是做隐私应用，而是给现有产品加上隐私",
+      "note": "12:27。",
+      "url": "https://x.com/EliBenSasson/status/2062405764061266416",
+      "date": "2026-06-04",
+      "title_en": "Eli Ben-Sasson: it is not about building a privacy app but adding privacy to existing products",
+      "note_en": "12:27.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/eip8287-privacy-native-fungible-token-standard-draft/25089",
+    "credit": "ethresear.ch, EIP8287: Privacy-Native Fungible Token Standard (Draft)",
+    "local_path": "assets/2026-06-04.jpg",
+    "credit_en": "ethresear.ch, EIP8287: Privacy-Native Fungible Token Standard (Draft)"
+  },
+  "keywords_en": [
+    "EIP-8130 actor rename",
+    "actor call policies and expiry",
+    "ERC-8286 modular accounts for frame transactions",
+    "privacy-native fungible tokens",
+    "EIP-8282 builder execution requests",
+    "ACDE #238",
+    "EOA migration to smart accounts"
+  ],
+  "summary_en": "chunter-cb submitted and merged three EIP-8130 changes: owner is renamed to actor, the verification interface becomes verifyActor, and per-actor call policies and expiry are added. ERC-8286 was submitted, connecting ERC-7579 modular accounts to the EIP-8141 frame transaction validation flow. The privacy-native fungible token standard (8287) was posted on both ethresear.ch and Magicians. In the evening, ACDE #238 discussed Hegotá non-headliner candidates, including EIP-7851 and EIP-8151 for migrating EOAs to smart accounts."
+}

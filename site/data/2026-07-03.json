@@ -1,0 +1,221 @@
+{
+  "date": "2026-07-03",
+  "keywords": [
+    "Starknet STRK20 协议级隐私池上线",
+    "ERC-8322 公证人背书的保密代币 PR",
+    "EIP-8037 合约创建按条件收费",
+    "EIP-8282 builder execution requests 合并",
+    "EIP-8289 多区块访问列表预热合并",
+    "协议内客户端数据上报",
+    "Ethereal news #30"
+  ],
+  "summary": "StarkWare 宣布 STRK20 在主网全面上线，这是集成在协议层的隐私池，为所有资产提供原生隐私。awrichardson 提交 ERC-8322 公证人背书的保密代币 PR。chfast 提交 EIP-8037 修改，让 CREATE/CREATE2 只在真正访问目标地址时按条件收取账户创建费用。EIP-8282 builder execution requests 与 EIP-8289 多区块访问列表预热合并。Ethereal news #30 发布。",
+  "items": [
+    {
+      "topic": "隐私：协议级隐私池与保密代币",
+      "title": "StarkWare：所有资产的原生隐私已在 Starknet 上线，STRK20 在主网全面上线，这是集成在协议层的隐私池",
+      "note": "23:57，称隐私费用为市场最低，支持一键操作。",
+      "url": "https://x.com/StarkWareLtd/status/2073088809030320488",
+      "date": "2026-07-03",
+      "title_en": "StarkWare: native privacy for all assets is live on Starknet; STRK20s are fully live on mainnet, a privacy pool integrated at the protocol level",
+      "note_en": "23:57, claiming the lowest privacy fee on the market and one click UX.",
+      "topic_en": "Privacy: protocol level privacy pools and confidential tokens"
+    },
+    {
+      "topic": "隐私：协议级隐私池与保密代币",
+      "title": "新 ERC：公证人背书的保密代币",
+      "note": "（awrichar）提交，即 ERC-8322：使用私有状态承诺的保密代币接口，状态转换由一个公证人或公证人组预先验证。",
+      "url": "https://github.com/ethereum/ERCs/pull/1850",
+      "date": "2026-07-03",
+      "title_en": "New ERC: Notary-Backed Confidential Token",
+      "note_en": "(awrichar), submitted as ERC-8322: a confidential token interface using private state commitments, with state transitions pre-validated by a notary or notary group.",
+      "topic_en": "Privacy: protocol level privacy pools and confidential tokens"
+    },
+    {
+      "topic": "隐私：协议级隐私池与保密代币",
+      "title": "ethereum：Proton Mail 以面向所有人的加密工具推动更广泛的隐私运动",
+      "note": "20:58。EFDevcon：隐私不是功能，而是原则，Devcon 8 孟买 07:37。",
+      "url": "https://x.com/ethereum/status/2073043680353497435",
+      "date": "2026-07-03",
+      "title_en": "ethereum: Proton Mail inspires the broader privacy movement with encrypted web tools for everyone",
+      "note_en": "20:58. EFDevcon: privacy is not a feature, it is a principle, Devcon 8 Mumbai, 07:37.",
+      "topic_en": "Privacy: protocol level privacy pools and confidential tokens"
+    },
+    {
+      "topic": "隐私：协议级隐私池与保密代币",
+      "title": "EFDevcon：隐私不是功能，而是原则，Devcon 8 孟买",
+      "note": "ethereum：Proton Mail 以面向所有人的加密工具推动更广泛的隐私运动 20:58。EFDevcon：隐私不是功能，而是原则，Devcon 8 孟买 07:37。",
+      "url": "https://x.com/EFDevcon/status/2072842140279853274",
+      "date": "2026-07-03",
+      "title_en": "EFDevcon: privacy is not a feature, it is a principle, Devcon 8 Mumbai",
+      "note_en": "Ethereum: Proton Mail inspires the broader privacy movement with encrypted web tools for everyone, 20:58. EFDevcon: privacy is not a feature, it is a principle, Devcon 8 Mumbai, 07:37.",
+      "topic_en": "Privacy: protocol level privacy pools and confidential tokens"
+    },
+    {
+      "topic": "账户交易与 gas：EIP-8037",
+      "title": "EIP-8037：账户创建在访问时按条件收费",
+      "note": "（chfast）提交：CREATE/CREATE2 不再先无条件收费再退还，而是在同时执行 EIP-7610 冲突检查的那一次目标地址访问时按条件收取；未通过余额、nonce 或深度检查的创建不会读取目标地址，也不收费；预先注资的确定性部署地址等已存在的目标不收费。",
+      "url": "https://github.com/ethereum/EIPs/pull/11858",
+      "date": "2026-07-03",
+      "title_en": "EIP-8037: charge account creation conditionally at access",
+      "note_en": "(chfast), submitted: instead of charging unconditionally and refilling, CREATE/CREATE2 charge at the single destination access that also performs the EIP-7610 collision check; creations failing the balance, nonce or depth checks never read the destination and charge nothing, and pre-existing destinations such as pre-funded deterministic deployment addresses charge nothing.",
+      "topic_en": "Account transactions and gas: EIP-8037"
+    },
+    {
+      "topic": "账户交易与 gas：EIP-8037",
+      "title": "EIP-7997：加入类似 EAS 的字节码，把工厂合约视为系统合约",
+      "note": "（jochem-brouwer）提交，与 EIP-7002、EIP-7251 的系统合约做法一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/11856",
+      "date": "2026-07-03",
+      "title_en": "EIP-7997: add EAS-like bytecode, treating the factory contract as a system contract",
+      "note_en": "(jochem-brouwer), submitted, matching the system contract approach of EIP-7002 and EIP-7251.",
+      "topic_en": "Account transactions and gas: EIP-8037"
+    },
+    {
+      "topic": "共识层与执行层合并",
+      "title": "新 EIP：Builder Execution Requests",
+      "note": "（wemeetagain）合并，即 EIP-8282：为 EIP-7732（ePBS）的 builder 在 EIP-7685 请求总线上提供独立的执行层请求合约，而不是借用验证者流程处理 builder 加入与退出；EIP-8282：与 gloas 规范同步 提交，前缀改为 `0xB0` 并加入余额检查。",
+      "url": "https://github.com/ethereum/EIPs/pull/11760",
+      "date": "2026-07-03",
+      "title_en": "New EIP: Builder Execution Requests",
+      "note_en": "(wemeetagain), merged as EIP-8282: it gives EIP-7732 (ePBS) builders their own execution layer request contracts on the EIP-7685 request bus instead of routing builder onboarding and exit through validator flows; EIP-8282: sync with the gloas spec, submitted, changing the prefix to `0xB0` and adding a balance check.",
+      "topic_en": "Consensus and execution merges"
+    },
+    {
+      "topic": "共识层与执行层合并",
+      "title": "EIP-8282：与 gloas 规范同步",
+      "note": "新 EIP：Builder Execution Requests（wemeetagain）合并，即 EIP-8282：为 EIP-7732（ePBS）的 builder 在 EIP-7685 请求总线上提供独立的执行层请求合约，而不是借用验证者流程处理 builder 加入与退出；EIP-8282：与 gloas 规范同步 提交，前缀改为 `0xB0` 并加入余额检查。",
+      "url": "https://github.com/ethereum/EIPs/pull/11859",
+      "date": "2026-07-03",
+      "title_en": "EIP-8282: sync with the gloas spec",
+      "note_en": "New EIP: Builder Execution Requests (wemeetagain), merged as EIP-8282: it gives EIP-7732 (ePBS) builders their own execution layer request contracts on the EIP-7685 request bus instead of routing builder onboarding and exit through validator flows; EIP-8282: sync with the gloas spec, submitted, changing the prefix to `0xB0` and adding a balance check.",
+      "topic_en": "Consensus and execution merges"
+    },
+    {
+      "topic": "共识层与执行层合并",
+      "title": "新 EIP：多区块访问列表预热",
+      "note": "（nerolation）合并，即 EIP-8289：用 256 个区块的滚动预热集合（以 SHA-256 SMT 根提交到区块头）让 EIP-2929 访问列表跨区块延续，每区块 gas 中位数节省约 14%，节点额外状态约 10 MB。",
+      "url": "https://github.com/ethereum/EIPs/pull/11776",
+      "date": "2026-07-03",
+      "title_en": "New EIP: Multi-block Access List Warming",
+      "note_en": "(nerolation), merged as EIP-8289: a 256-block rolling warm access multiset, committed via a SHA-256 SMT root in the block header, carries the EIP-2929 access list across blocks, for about a 14% median gas saving per block at about 10 MB of node state.",
+      "topic_en": "Consensus and execution merges"
+    },
+    {
+      "topic": "共识层与执行层合并",
+      "title": "新 EIP：在源头批量聚合证明",
+      "note": "（raulk）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11589",
+      "date": "2026-07-03",
+      "title_en": "New EIP: Batching Attestations at Source",
+      "note_en": "(raulk), merged.",
+      "topic_en": "Consensus and execution merges"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：协议内客户端数据上报",
+      "note": "13:56（hanniabu），Blockprint 指纹识别在 Electra 后失准，提出在协议内可靠上报 CL/EL 客户端使用情况。",
+      "url": "https://ethresear.ch/t/in-protocol-client-data-reporting/25353",
+      "date": "2026-07-03",
+      "title_en": "ethresear.ch: In-Protocol Client Data Reporting",
+      "note_en": "13:56 (hanniabu). Blockprint fingerprinting became inaccurate after Electra, so the post proposes reliable in-protocol reporting of CL/EL client usage.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8319：监管合规协议",
+      "note": "14:51 与 ERC-8320：受监管资产声明 17:19，对应 PR ERCs #1848 与 ERCs #1849 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8319-regulatory-compliance-protocol/28917",
+      "date": "2026-07-03",
+      "title_en": "ERC-8319: Regulatory Compliance Protocol",
+      "note_en": "14:51, and ERC-8320: Regulated Asset Claim, 17:19, with PRs ERCs #1848 and ERCs #1849 submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8320：受监管资产声明",
+      "note": "ERC-8319：监管合规协议 14:51 与 ERC-8320：受监管资产声明 17:19，对应 PR ERCs #1848 与 ERCs #1849 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8320-regulated-asset-claim/28919",
+      "date": "2026-07-03",
+      "title_en": "ERC-8320: Regulated Asset Claim",
+      "note_en": "ERC-8319: Regulatory Compliance Protocol, 14:51, and ERC-8320: Regulated Asset Claim, 17:19, with PRs ERCs #1848 and ERCs #1849 submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs #1848",
+      "note": "ERC-8319：监管合规协议 14:51 与 ERC-8320：受监管资产声明 17:19，对应 PR ERCs #1848 与 ERCs #1849 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1848",
+      "date": "2026-07-03",
+      "title_en": "ERCs #1848",
+      "note_en": "ERC-8319: Regulatory Compliance Protocol, 14:51, and ERC-8320: Regulated Asset Claim, 17:19, with PRs ERCs #1848 and ERCs #1849 submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs #1849",
+      "note": "ERC-8319：监管合规协议 14:51 与 ERC-8320：受监管资产声明 17:19，对应 PR ERCs #1848 与 ERCs #1849 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1849",
+      "date": "2026-07-03",
+      "title_en": "ERCs #1849",
+      "note_en": "ERC-8319: Regulatory Compliance Protocol, 14:51, and ERC-8320: Regulated Asset Claim, 17:19, with PRs ERCs #1848 and ERCs #1849 submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：产权类资产基础设施的一组候选 ERC 接口",
+      "note": "02:56（redcoat），拆分为六个候选接口。",
+      "url": "https://ethereum-magicians.org/t/proposing-a-family-of-candidate-erc-interfaces-for-titled-asset-infrastructure-architecture-review/28913",
+      "date": "2026-07-03",
+      "title_en": "Magicians: a family of candidate ERC interfaces for titled asset infrastructure",
+      "note_en": "02:56 (redcoat), split into six candidate interfaces.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：移至 Review",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11855",
+      "date": "2026-07-03",
+      "title_en": "EIP-7773: move to Review",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：以太坊获得用户的规模比其他区块链大几个数量级",
+      "note": "21:12。",
+      "url": "https://x.com/binji_x/status/2073047184417685916",
+      "date": "2026-07-03",
+      "title_en": "binji: Ethereum gets users at a larger scale than any other blockchain by several orders of magnitude",
+      "note_en": "21:12.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "nero_eth：向 Nethermind 学习，提升效率而不牺牲安全",
+      "note": "10:34。",
+      "url": "https://x.com/nero_eth/status/2072886782656467124",
+      "date": "2026-07-03",
+      "title_en": "nero_eth: be like Nethermind, improve efficiency without trading off security",
+      "note_en": "10:34.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/in-protocol-client-data-reporting/25353",
+    "credit": "ethresear.ch, In-Protocol Client Data Reporting (hanniabu)",
+    "local_path": "assets/2026-07-03.jpg",
+    "credit_en": "ethresear.ch, In-Protocol Client Data Reporting (hanniabu)"
+  },
+  "keywords_en": [
+    "Starknet STRK20 protocol level privacy pool goes live",
+    "ERC-8322 Notary-Backed Confidential Token PR",
+    "EIP-8037 conditional charge for contract creation",
+    "EIP-8282 builder execution requests merged",
+    "EIP-8289 multi-block access list warming merged",
+    "in-protocol client data reporting",
+    "Ethereal news #30"
+  ],
+  "summary_en": "StarkWare announced that STRK20 is fully live on mainnet, a privacy pool integrated at the protocol level that brings native privacy to all assets. awrichardson submitted the ERC-8322 Notary-Backed Confidential Token PR. chfast submitted an EIP-8037 change so that CREATE/CREATE2 charge account creation conditionally, only at the actual destination access. EIP-8282 builder execution requests and EIP-8289 multi-block access list warming were merged. Ethereal news #30 was published."
+}

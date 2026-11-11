@@ -1,0 +1,243 @@
+{
+  "date": "2026-06-09",
+  "keywords": [
+    "EIP-8130 verifier 改名 authenticator",
+    "Hegotá 新增 PFI（EIP-7851",
+    "EIP-8151 等）",
+    "4337 中继 Railgun 提款",
+    "STRK20 上线",
+    "EIP-7997 改用 Arachnid 工厂",
+    "EIP-8188 最后写入区块",
+    "ERC-8307 紧急状态"
+  ],
+  "summary": "nixorokish 把 ACDE #238 上提议的 EIP-7851（代码控制的 EOA 委托）、EIP-8151（感知 ECDSA 授权停用的 ecRecover）、EIP-8131、EIP-7979 等加入 Hegotá PFI 列表并合并。EIP-8130 把 verifier 改名为 authenticator，并合并一轮澄清。kassandraETH 表示团队在主网内部测试用 ERC-4337 中继 Railgun 提款。Starknet 的 STRK20 隐私资产正式上线。",
+  "items": [
+    {
+      "topic": "Hegotá 候选中的账户 EIP",
+      "title": "EIP-8081：加入新 PFI 的 EIP",
+      "note": "（nixorokish）提交并合并：EIP-7851 代码控制的 EOA 委托与 EIP-8151 感知 ECDSA 授权停用的 ecRecover（均由 lightclient 在 ACDE #238 提出）、EIP-8131 把 auth 数据计入 EIP-7623 下限（nerolation，ACDE #238）、EIP-7979 调用与返回操作码（gcolvin，ACDE #235）等。",
+      "url": "https://github.com/ethereum/EIPs/pull/11786",
+      "date": "2026-06-09",
+      "title_en": "EIP-8081: add newly PFI'd EIPs",
+      "note_en": "(nixorokish), submitted and merged: EIP-7851 code controlled EOA delegation and EIP-8151 ECDSA authority deactivation aware ecRecover (both proposed by lightclient at ACDE #238), EIP-8131 adding auth data to the EIP-7623 floor (nerolation, ACDE #238), EIP-7979 call and return opcodes (gcolvin, ACDE #235) and others.",
+      "topic_en": "Account EIPs among the Hegotá candidates"
+    },
+    {
+      "topic": "Hegotá 候选中的账户 EIP",
+      "title": "EIP-8130：verifier 改名为 authenticator",
+      "note": "（chunter-cb）提交并合并；EIP-8130：澄清与清理 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11785",
+      "date": "2026-06-09",
+      "title_en": "EIP-8130: rename verifier to authenticator",
+      "note_en": "(chunter-cb), submitted and merged; EIP-8130: clarifications and clean up, submitted and merged.",
+      "topic_en": "Account EIPs among the Hegotá candidates"
+    },
+    {
+      "topic": "Hegotá 候选中的账户 EIP",
+      "title": "EIP-8130：澄清与清理",
+      "note": "EIP-8130：verifier 改名为 authenticator（chunter-cb）提交并合并；EIP-8130：澄清与清理 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11782",
+      "date": "2026-06-09",
+      "title_en": "EIP-8130: clarifications and clean up",
+      "note_en": "EIP-8130: rename verifier to authenticator (chunter-cb), submitted and merged; EIP-8130: clarifications and clean up, submitted and merged.",
+      "topic_en": "Account EIPs among the Hegotá candidates"
+    },
+    {
+      "topic": "隐私：4337 中继与 STRK20",
+      "title": "kassandraETH：团队在主网内部测试用 4337 中继 Railgun 提款",
+      "note": "18:59，并强调未审计、不可用于生产。",
+      "url": "https://x.com/kassandraETH/status/2064316332993102058",
+      "date": "2026-06-09",
+      "title_en": "kassandraETH: the team is internally testing 4337 relaying of Railgun withdrawals on mainnet",
+      "note_en": "18:59, stressing that it is unaudited and not for production.",
+      "topic_en": "Privacy: 4337 relaying and STRK20"
+    },
+    {
+      "topic": "隐私：4337 中继与 STRK20",
+      "title": "StarkWare：STRK20 正式上线，为所有资产提供一键隐私并深度集成 DeFi",
+      "note": "22:58。Eli Ben-Sasson：隐私今天来到 Starknet 10:57；Eli：升级到抗量子钱包或切换屏蔽模式，都不应让用户操心 20:06。",
+      "url": "https://x.com/StarkWareLtd/status/2064376513818968307",
+      "date": "2026-06-09",
+      "title_en": "StarkWare: STRK20 is officially live, with one-click privacy for all assets and deep DeFi integration",
+      "note_en": "22:58. Eli Ben-Sasson: privacy is coming to Starknet today, 10:57; Eli: whether upgrading to a quantum-safe wallet or switching to shielded mode, users should not have to worry, 20:06.",
+      "topic_en": "Privacy: 4337 relaying and STRK20"
+    },
+    {
+      "topic": "隐私：4337 中继与 STRK20",
+      "title": "Eli Ben-Sasson：隐私今天来到 Starknet",
+      "note": "StarkWare：STRK20 正式上线，为所有资产提供一键隐私并深度集成 DeFi 22:58。Eli Ben-Sasson：隐私今天来到 Starknet 10:57；Eli：升级到抗量子钱包或切换屏蔽模式，都不应让用户操心 20:06。",
+      "url": "https://x.com/EliBenSasson/status/2064195119201312816",
+      "date": "2026-06-09",
+      "title_en": "Eli Ben-Sasson: privacy is coming to Starknet today",
+      "note_en": "StarkWare: STRK20 is officially live, with one-click privacy for all assets and deep DeFi integration, 22:58. Eli Ben-Sasson: privacy is coming to Starknet today, 10:57; Eli: whether upgrading to a quantum-safe wallet or switching to shielded mode, users should not have to worry, 20:06.",
+      "topic_en": "Privacy: 4337 relaying and STRK20"
+    },
+    {
+      "topic": "隐私：4337 中继与 STRK20",
+      "title": "Eli：升级到抗量子钱包或切换屏蔽模式，都不应让用户操心",
+      "note": "StarkWare：STRK20 正式上线，为所有资产提供一键隐私并深度集成 DeFi 22:58。Eli Ben-Sasson：隐私今天来到 Starknet 10:57；Eli：升级到抗量子钱包或切换屏蔽模式，都不应让用户操心 20:06。",
+      "url": "https://x.com/EliBenSasson/status/2064333293068116023",
+      "date": "2026-06-09",
+      "title_en": "Eli: whether upgrading to a quantum-safe wallet or switching to shielded mode, users should not have to worry",
+      "note_en": "StarkWare: STRK20 is officially live, with one-click privacy for all assets and deep DeFi integration, 22:58. Eli Ben-Sasson: privacy is coming to Starknet today, 10:57; Eli: whether upgrading to a quantum-safe wallet or switching to shielded mode, users should not have to worry, 20:06.",
+      "topic_en": "Privacy: 4337 relaying and STRK20"
+    },
+    {
+      "topic": "隐私：4337 中继与 STRK20",
+      "title": "aztecnetwork：与 Wonderland 合作推出新代币标准、开发工具和钱包体验",
+      "note": "01:06。",
+      "url": "https://x.com/aztecnetwork/status/2064046503304540622",
+      "date": "2026-06-09",
+      "title_en": "aztecnetwork: work with Wonderland on new token standards, developer tooling and wallet UX",
+      "note_en": "01:06.",
+      "topic_en": "Privacy: 4337 relaying and STRK20"
+    },
+    {
+      "topic": "执行层规范更新",
+      "title": "EIP-7997：改用 Arachnid 工厂",
+      "note": "（frangio）提交，落实 ACDT #82 的决定。",
+      "url": "https://github.com/ethereum/EIPs/pull/11783",
+      "date": "2026-06-09",
+      "title_en": "EIP-7997: switch to the Arachnid factory",
+      "note_en": "(frangio), submitted, implementing the ACDT #82 decision.",
+      "topic_en": "Execution layer spec updates"
+    },
+    {
+      "topic": "执行层规范更新",
+      "title": "EIP-8188：账户与存储槽的最后写入区块",
+      "note": "（weiihann）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11784",
+      "date": "2026-06-09",
+      "title_en": "EIP-8188: last-written block for accounts and slots",
+      "note_en": "(weiihann), submitted.",
+      "topic_en": "Execution layer spec updates"
+    },
+    {
+      "topic": "执行层规范更新",
+      "title": "EIP-8268：移除冗余的存储根校验",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11781",
+      "date": "2026-06-09",
+      "title_en": "EIP-8268: remove redundant storage roots validation",
+      "note_en": "Submitted.",
+      "topic_en": "Execution layer spec updates"
+    },
+    {
+      "topic": "执行层规范更新",
+      "title": "EIP-7906：修复结果排序",
+      "note": "（forshtat）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11588",
+      "date": "2026-06-09",
+      "title_en": "EIP-7906: fix result ordering",
+      "note_en": "(forshtat), merged.",
+      "topic_en": "Execution layer spec updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8307 智能合约紧急状态",
+      "note": "13:53；ERC-8308 智能合约应急响应 15:25。",
+      "url": "https://ethereum-magicians.org/t/erc-8307-smart-contract-emergency-state/28748",
+      "date": "2026-06-09",
+      "title_en": "Magicians: ERC-8307 Smart Contract Emergency State",
+      "note_en": "13:53; ERC-8308 Smart Contract Emergency Response, 15:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8308 智能合约应急响应",
+      "note": "Magicians：ERC-8307 智能合约紧急状态 13:53；ERC-8308 智能合约应急响应 15:25。",
+      "url": "https://ethereum-magicians.org/t/erc-8308-smart-contract-emergency-response/28750",
+      "date": "2026-06-09",
+      "title_en": "ERC-8308 Smart Contract Emergency Response",
+      "note_en": "Magicians: ERC-8307 Smart Contract Emergency State, 13:53; ERC-8308 Smart Contract Emergency Response, 15:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger：AntChain OpenLab 用 GPU 加速后量子签名聚合",
+      "note": "17:59。",
+      "url": "https://x.com/tcoratger/status/2064301405293117864",
+      "date": "2026-06-09",
+      "title_en": "tcoratger: GPU acceleration for post-quantum signature aggregation by AntChain OpenLab",
+      "note_en": "17:59.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：反事实拒绝事件日志（CREL）",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11779",
+      "date": "2026-06-09",
+      "title_en": "New EIP: Counterfactual Rejection Event Log (CREL)",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-2770 撤回",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1803",
+      "date": "2026-06-09",
+      "title_en": "ERC-2770 to Withdrawn",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #180 议程",
+      "note": "04:05；ACDE #239 议程 19:52；后量子交易签名 #10 13:58。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-180-june-11-2026/28746",
+      "date": "2026-06-09",
+      "title_en": "ACDC #180 agenda",
+      "note_en": "04:05; ACDE #239 agenda, 19:52; Post Quantum transaction signature #10, 13:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #239 议程",
+      "note": "ACDC #180 议程 04:05；ACDE #239 议程 19:52；后量子交易签名 #10 13:58。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-239-june-18-2026/28751",
+      "date": "2026-06-09",
+      "title_en": "ACDE #239 agenda",
+      "note_en": "ACDC #180 agenda, 04:05; ACDE #239 agenda, 19:52; Post Quantum transaction signature #10, 13:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "后量子交易签名 #10",
+      "note": "ACDC #180 议程 04:05；ACDE #239 议程 19:52；后量子交易签名 #10 13:58。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-10/28749",
+      "date": "2026-06-09",
+      "title_en": "Post Quantum transaction signature #10",
+      "note_en": "ACDC #180 agenda, 04:05; ACDE #239 agenda, 19:52; Post Quantum transaction signature #10, 13:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：你想要 DeFi 隐私的主要原因是什么",
+      "note": "21:12。",
+      "url": "https://x.com/EliBenSasson/status/2064349874498187524",
+      "date": "2026-06-09",
+      "title_en": "Eli Ben-Sasson: what is the main reason you want privacy for DeFi",
+      "note_en": "21:12.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8307-smart-contract-emergency-state/28748",
+    "credit": "Ethereum Magicians, ERC-8307: Smart Contract Emergency State",
+    "local_path": "assets/2026-06-09.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8307: Smart Contract Emergency State"
+  },
+  "keywords_en": [
+    "EIP-8130 verifier renamed authenticator",
+    "new Hegotá PFIs (EIP-7851",
+    "EIP-8151 and others)",
+    "4337 relaying of Railgun withdrawals",
+    "STRK20 live",
+    "EIP-7997 switches to the Arachnid factory",
+    "EIP-8188 last-written block",
+    "ERC-8307 emergency state"
+  ],
+  "summary_en": "nixorokish added EIP-7851 (code controlled EOA delegation), EIP-8151 (ECDSA authority deactivation aware ecRecover), EIP-8131, EIP-7979 and others proposed at ACDE #238 to the Hegotá PFI list, and it was merged. EIP-8130 renamed verifier to authenticator and merged a round of clarifications. kassandraETH said the team is internally testing ERC-4337 relaying of Railgun withdrawals on mainnet. Starknet's STRK20 private assets went live."
+}

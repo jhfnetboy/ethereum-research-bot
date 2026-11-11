@@ -1,0 +1,213 @@
+{
+  "date": "2026-06-25",
+  "keywords": [
+    "ACDC #181",
+    "glamsterdam-devnet-6 上线",
+    "devnet-7 加入 EIP-7688 与更新的 EIP-8282",
+    "EIP-8080 被拒",
+    "EIP-2780 顶层收费 OOG 处理",
+    "EIP-7999 四维资源定价",
+    "Tornado Cash 与 Pertsev 案",
+    "STRK20 主网"
+  ],
+  "summary": "当晚 ACDC #181 确认 glamsterdam-devnet-6 已上线（除 EIP-7688 外的剩余 EIP 全部加入），devnet-7 目标 2 到 3 周后，加入 EIP-7688 和更新后的 EIP-8282 合约（需外部安全审查），并拒绝把 EIP-8080 纳入 Glamsterdam。misilva73 对 EIP-2780 合并两项修改，明确 gas 不足以支付新账户状态费用或委托收款方额外冷访问费用时按 OOG 处理；另提交 EIP-7999 扩展为四个资源维度。ethereum 官方账号转发 ameensol 关于 Alex Pertsev 案的长帖。",
+  "items": [
+    {
+      "topic": "ACDC #181 与 devnet 进度",
+      "title": "terencechain：Glamsterdam devnet-6 发布，向测试网迈进",
+      "note": "21:54，EIP-8282 带来两个新系统合约；执行层在 bal-devnet-7 之后新加入 EIP-2780、8038（重定价）、7997、8246 和可选的 8070。",
+      "url": "https://x.com/terencechain/status/2070158602049110244",
+      "date": "2026-06-25",
+      "title_en": "terencechain: Glamsterdam devnet-6 is shipping, with lots of progress toward testnet",
+      "note_en": "21:54; EIP-8282 brings two new system contracts, and on the execution layer the work after bal-devnet-7 adds EIP-2780, 8038 (repricing), 7997, 8246 and an optional 8070.",
+      "topic_en": "ACDC #181 and devnet progress"
+    },
+    {
+      "topic": "交易固有 gas 与多维定价",
+      "title": "EIP-2780：澄清顶层收费的 OOG 处理",
+      "note": "（misilva73）提交并合并：交易的 gas 够付固有成本但不够付执行期间的顶层收费（新账户状态费，或委托收款方额外的 `COLD_ACCOUNT_ACCESS`）时，由于这些收费在 EIP-7702 授权之后计算且需要读状态，按异常停止处理，交易被包含并回滚，而不是无效，交易有效性仍可不读状态判定。",
+      "url": "https://github.com/ethereum/EIPs/pull/11834",
+      "date": "2026-06-25",
+      "title_en": "EIP-2780: clarify OOG handling for top-level gas charges",
+      "note_en": "(misilva73), submitted and merged: when a transaction has enough gas for its intrinsic cost but not for the top-level charges applied during execution (the new-account state charge, or the extra `COLD_ACCOUNT_ACCESS` for a delegated recipient), since these are evaluated after EIP-7702 authorizations and need state access, it is treated as an exceptional halt: the transaction is included and reverted, not invalidated, and validity stays decidable without state.",
+      "topic_en": "Intrinsic gas and multidimensional pricing"
+    },
+    {
+      "topic": "交易固有 gas 与多维定价",
+      "title": "EIP-2780：考虑 EIP-7623 calldata 下限的基数",
+      "note": "提交并合并；EIP-2780：要求 EIP-7523 而非 EIP-161 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11836",
+      "date": "2026-06-25",
+      "title_en": "EIP-2780: account for the EIP-7623 calldata floor base",
+      "note_en": "Submitted and merged; EIP-2780: require EIP-7523 instead of EIP-161, merged.",
+      "topic_en": "Intrinsic gas and multidimensional pricing"
+    },
+    {
+      "topic": "交易固有 gas 与多维定价",
+      "title": "EIP-2780：要求 EIP-7523 而非 EIP-161",
+      "note": "EIP-2780：考虑 EIP-7623 calldata 下限的基数 提交并合并；EIP-2780：要求 EIP-7523 而非 EIP-161 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11828",
+      "date": "2026-06-25",
+      "title_en": "EIP-2780: require EIP-7523 instead of EIP-161",
+      "note_en": "EIP-2780: account for the EIP-7623 calldata floor base, submitted and merged; EIP-2780: require EIP-7523 instead of EIP-161, merged.",
+      "topic_en": "Intrinsic gas and multidimensional pricing"
+    },
+    {
+      "topic": "交易固有 gas 与多维定价",
+      "title": "EIP-7999：加入数据和状态资源，简化 gas 计算",
+      "note": "（misilva73）提交，从执行、blob 三个维度扩展为四个：数据资源按 EIP-8131 内容字节和 EIP-8279 BAL 字节计价，固定 `DATA_GAS_LIMIT = 60M`，去掉 EIP-7623 下限；状态增长成为单独计价的维度。",
+      "url": "https://github.com/ethereum/EIPs/pull/11835",
+      "date": "2026-06-25",
+      "title_en": "EIP-7999: add data and state resources, simplify gas accounting",
+      "note_en": "(misilva73), submitted, expanding from three resource dimensions to four: a data resource priced from EIP-8131 content bytes and EIP-8279 BAL bytes with a flat `DATA_GAS_LIMIT = 60M`, dropping EIP-7623 floor pricing, and state growth as a separately priced dimension.",
+      "topic_en": "Intrinsic gas and multidimensional pricing"
+    },
+    {
+      "topic": "交易固有 gas 与多维定价",
+      "title": "EIP-8037：说明 101 字节",
+      "note": "合并；EIP-8279 显式 BAL 数据计量 合并；Magicians：EIP-8311 calldata 下限提到 96 19:16。",
+      "url": "https://github.com/ethereum/EIPs/pull/11818",
+      "date": "2026-06-25",
+      "title_en": "EIP-8037: explanation of the 101 byte count",
+      "note_en": "Merged; EIP-8279 explicit BAL data metering, merged; Magicians: EIP-8311 Increase Calldata Floor Cost to 96, 19:16.",
+      "topic_en": "Intrinsic gas and multidimensional pricing"
+    },
+    {
+      "topic": "交易固有 gas 与多维定价",
+      "title": "EIP-8279 显式 BAL 数据计量",
+      "note": "EIP-8037：说明 101 字节 合并；EIP-8279 显式 BAL 数据计量 合并；Magicians：EIP-8311 calldata 下限提到 96 19:16。",
+      "url": "https://github.com/ethereum/EIPs/pull/11819",
+      "date": "2026-06-25",
+      "title_en": "EIP-8279 explicit BAL data metering",
+      "note_en": "EIP-8037: explanation of the 101 byte count, merged; EIP-8279 explicit BAL data metering, merged; Magicians: EIP-8311 Increase Calldata Floor Cost to 96, 19:16.",
+      "topic_en": "Intrinsic gas and multidimensional pricing"
+    },
+    {
+      "topic": "交易固有 gas 与多维定价",
+      "title": "Magicians：EIP-8311 calldata 下限提到 96",
+      "note": "EIP-8037：说明 101 字节 合并；EIP-8279 显式 BAL 数据计量 合并；Magicians：EIP-8311 calldata 下限提到 96 19:16。",
+      "url": "https://ethereum-magicians.org/t/eip-8311-increase-calldata-floor-cost-to-96/28860",
+      "date": "2026-06-25",
+      "title_en": "Magicians: EIP-8311 Increase Calldata Floor Cost to 96",
+      "note_en": "EIP-8037: explanation of the 101 byte count, merged; EIP-8279 explicit BAL data metering, merged; Magicians: EIP-8311 Increase Calldata Floor Cost to 96, 19:16.",
+      "topic_en": "Intrinsic gas and multidimensional pricing"
+    },
+    {
+      "topic": "隐私",
+      "title": "ethereum：Tornado Cash 法律之争仍在继续，Alex Pertsev 仍在为自由抗争",
+      "note": "20:08，ameensol 的客座长帖介绍他在荷兰的案件。",
+      "url": "https://x.com/ethereum/status/2070132050259063221",
+      "date": "2026-06-25",
+      "title_en": "ethereum: the Tornado Cash legal saga continues, and Alex Pertsev is still fighting for his freedom",
+      "note_en": "20:08, with a guest thread by ameensol on his case in the Netherlands.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWare：STRK20 在 Starknet 主网上线",
+      "note": "14:14。",
+      "url": "https://x.com/StarkWareLtd/status/2070042862016729502",
+      "date": "2026-06-25",
+      "title_en": "StarkWare: STRK20 is live on Starknet mainnet",
+      "note_en": "14:14.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "dcbuilder：投资 Octet，补上位置证明这一原语",
+      "note": "22:56。",
+      "url": "https://x.com/dcbuilder/status/2070174343628222824",
+      "date": "2026-06-25",
+      "title_en": "dcbuilder: invested in Octet, filling in the missing primitive of proof of location",
+      "note_en": "22:56.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8316 可编程结算锁",
+      "note": "20:55，对应 ERC PR 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8316-programmable-settlement-locks/28861",
+      "date": "2026-06-25",
+      "title_en": "Magicians: ERC-8316 Programmable Settlement Locks",
+      "note_en": "20:55, with the ERC PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8316 可编程结算锁 20:55，对应 ERC PR 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1840",
+      "date": "2026-06-25",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8316 Programmable Settlement Locks, 20:55, with the ERC PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：引入 schema 语义化版本",
+      "note": "（forshtat）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1838",
+      "date": "2026-06-25",
+      "title_en": "ERC-7730: introduce schema semantic versioning",
+      "note_en": "(forshtat), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：SOAC 安全操作与访问控制框架",
+      "note": "06:35。",
+      "url": "https://ethereum-magicians.org/t/introducing-soac-security-operation-and-access-control-framework/28859",
+      "date": "2026-06-25",
+      "title_en": "Magicians: the SOAC Security Operation and Access Control framework",
+      "note_en": "06:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #240 议程",
+      "note": "21:10；AllWalletDevs #40 议程 02:26。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-240-july-2-2026/28862",
+      "date": "2026-06-25",
+      "title_en": "ACDE #240 agenda",
+      "note_en": "21:10; AllWalletDevs #40 agenda, 02:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "AllWalletDevs #40 议程",
+      "note": "ACDE #240 议程 21:10；AllWalletDevs #40 议程 02:26。",
+      "url": "https://ethereum-magicians.org/t/allwalletdevs-40-july-15-2026/28858",
+      "date": "2026-06-25",
+      "title_en": "AllWalletDevs #40 agenda",
+      "note_en": "ACDE #240 agenda, 21:10; AllWalletDevs #40 agenda, 02:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：每条区块链现在就需要后量子迁移计划",
+      "note": "18:07。",
+      "url": "https://x.com/EliBenSasson/status/2070101490602037429",
+      "date": "2026-06-25",
+      "title_en": "Eli Ben-Sasson: every blockchain needs a post-quantum transition plan, now",
+      "note_en": "18:07.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8316-programmable-settlement-locks/28861",
+    "credit": "Ethereum Magicians, ERC-8316: Programmable Settlement Locks (awrichardson)",
+    "local_path": "assets/2026-06-25.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8316: Programmable Settlement Locks (awrichardson)"
+  },
+  "keywords_en": [
+    "ACDC #181",
+    "glamsterdam-devnet-6 live",
+    "devnet-7 adds EIP-7688 and the updated EIP-8282",
+    "EIP-8080 declined",
+    "EIP-2780 OOG handling for top-level charges",
+    "EIP-7999 four-dimensional resource pricing",
+    "Tornado Cash and the Pertsev case",
+    "STRK20 on mainnet"
+  ],
+  "summary_en": "In the evening ACDC #181 confirmed glamsterdam-devnet-6 is live (with all remaining EIPs except EIP-7688), targeted devnet-7 in 2 to 3 weeks with EIP-7688 and the updated EIP-8282 contracts (external security review required), and declined EIP-8080 for Glamsterdam. misilva73 merged two EIP-2780 changes, specifying that running out of gas for the new-account state charge or the extra cold access for a delegated recipient is treated as OOG, and submitted an expansion of EIP-7999 to four resource dimensions. The official ethereum account shared ameensol's thread on Alex Pertsev's case."
+}

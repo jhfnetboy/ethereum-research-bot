@@ -1,0 +1,97 @@
+{
+  "date": "2026-06-27",
+  "keywords": [
+    "隐私池可信设置的稳健性",
+    "CROPS 视角评估隐私协议",
+    "Aztec 私密可组合性",
+    "ENS DAO 治理争议",
+    "以太坊的技术耐久性"
+  ],
+  "summary": "周六较安静。ethbeat 在隐私页面加入可信设置稳健性指标，从 CROPS 的安全角度评估各隐私池。Aztec 本周回顾包括达到 L2BEAT Stage 2、私密可组合性演示，以及 Zac 关于隐私为何需要去中心化的文章。",
+  "items": [
+    {
+      "topic": "如何评估隐私协议",
+      "title": "ethbeat：每个隐私协议都可以从 CROPS 角度评估，在安全（S）方面，可信设置的稳健性很重要",
+      "note": "00:15，新的隐私页面为其支持的隐私池展示这一指标。",
+      "url": "https://x.com/ethbeat_org/status/2070556526704529724",
+      "date": "2026-06-27",
+      "title_en": "ethbeat: each privacy protocol can be evaluated from a CROPS perspective, and for the S (security), trusted setup robustness matters",
+      "note_en": "00:15; its new privacy page shows this for the pools it supports.",
+      "topic_en": "How to evaluate privacy protocols"
+    },
+    {
+      "topic": "如何评估隐私协议",
+      "title": "aztecnetwork：本周回顾，L2BEAT Stage 2、私密可组合性演示，以及 Zac 关于隐私为何需要去中心化的文章",
+      "note": "00:08。",
+      "url": "https://x.com/aztecnetwork/status/2070554771778683078",
+      "date": "2026-06-27",
+      "title_en": "aztecnetwork: this week, Stage 2 on L2BEAT, a walkthrough of private composability, and an essay by Zac on why privacy needs decentralization",
+      "note_en": "00:08.",
+      "topic_en": "How to evaluate privacy protocols"
+    },
+    {
+      "topic": "如何评估隐私协议",
+      "title": "StarkWare：屏蔽功能已直接集成到钱包层",
+      "note": "21:02。",
+      "url": "https://x.com/StarkWareLtd/status/2070870371264254371",
+      "date": "2026-06-27",
+      "title_en": "StarkWare: shielding is now available directly at the wallet level",
+      "note_en": "21:02.",
+      "topic_en": "How to evaluate privacy protocols"
+    },
+    {
+      "topic": "其他动态",
+      "title": "casparschwa：以太坊的可信中立让它有机会成为全球经济的根",
+      "note": "16:42。",
+      "url": "https://x.com/casparschwa/status/2070805050838958138",
+      "date": "2026-06-27",
+      "title_en": "casparschwa: Ethereum's credible neutrality gives it a unique opportunity to become the root of the global economy",
+      "note_en": "16:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "barnabemonnot 引用：以太坊可能比比特币更具技术耐久性，更易升级，路线图透明可追踪",
+      "note": "21:04。",
+      "url": "https://x.com/barnabemonnot/status/2070871016025231869",
+      "date": "2026-06-27",
+      "title_en": "barnabemonnot quoting: Ethereum may prove more technically durable than Bitcoin, being easier to upgrade with a transparent, trackable roadmap",
+      "note_en": "21:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "fede_intern：在 The Rollup 访谈中解释与 class_lambda、gattacahq 合作的 PropAMM 基础设施",
+      "note": "00:49。",
+      "url": "https://x.com/fede_intern/status/2070565232301273591",
+      "date": "2026-06-27",
+      "title_en": "fede_intern: explaining the PropAMM infrastructure built with class_lambda and gattacahq in an interview with The Rollup",
+      "note_en": "00:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：ENS 治理论坛上 Limes 直说安全委员会不应续期，让 DAO 结束、由 ENS Labs 接管",
+      "note": "17:06。",
+      "url": "https://x.com/LefterisJP/status/2070811076325683440",
+      "date": "2026-06-27",
+      "title_en": "LefterisJP: on the ENS governance forum, Limes says plainly the security council should not renew, letting the DAO die and ENS Labs take over",
+      "note_en": "17:06.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/ethbeat_org/status/2070556526704529724",
+    "credit": "X, ethbeat_org",
+    "local_path": "assets/2026-06-27.jpg",
+    "credit_en": "X, ethbeat_org"
+  },
+  "keywords_en": [
+    "trusted setup robustness of privacy pools",
+    "evaluating privacy protocols through CROPS",
+    "Aztec private composability",
+    "ENS DAO governance dispute",
+    "Ethereum's technical durability"
+  ],
+  "summary_en": "A quiet Saturday. ethbeat added trusted setup robustness to its privacy page, evaluating privacy pools from the security angle of CROPS. Aztec's weekly recap covered reaching L2BEAT Stage 2, a private composability walkthrough, and an essay by Zac on why privacy needs decentralization."
+}

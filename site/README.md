@@ -168,9 +168,27 @@ bash site/publish.sh "日报 2026-11-12"
 bash site/publish.sh --no-deploy "只推 GitHub"
 ```
 
-脚本会：构建 `dist/`，检查暂存内容里没有 `.env`、密钥或被排除的目录，提交，push 到 `main` 并核对远端 SHA，然后执行
+脚本会：把源文件单向镜像到本地构建目录，在那里构建 `dist/`，检查暂存内容里没有 `.env`、密钥或被排除的目录，提交，push 到 `main` 并核对远端 SHA，然后执行
 `npx wrangler pages deploy dist --project-name ethereum-research-bot --branch main --commit-hash <SHA>`。
 `CLOUDFLARE_API_TOKEN` 只从环境变量读取。
+
+### 在本地目录构建（避免挂载盘卡住）
+
+源文件的权威版本在 store 目录（`site/` 和 `reports/` 所在的挂载盘）。直接在挂载盘上运行 `build.py` 会因为大量小文件写入而卡住，所以 `publish.sh` 每次都这样做：
+
+1. 清空本地构建目录 `BUILD_ROOT`（默认 `/home/box/build/ethereum-research-bot`），再从 store 单向复制 `.gitignore`、`site/`（不含 `dist/`、`docs/`、`workers/`、`__pycache__/`）和 `reports/`。复制有超时（`COPY_TIMEOUT`，默认 300 秒），卡住会直接失败而不是无限等待。
+2. 以 `BUILD_ROOT` 作为 git 工作区（`GIT_WORK_TREE`），在 `BUILD_ROOT/site` 里构建，`dist/` 只写在本地。
+3. 在本地做 secret 检查、提交、push、核对远端 SHA，再从本地 `dist/` 部署。
+
+因为每次运行都先清空再从 store 复制，提交进 git 的内容就是 store 当时的内容；本地目录只是一次性副本，不要在里面改文件，改了也会在下次运行时被覆盖。脚本从不写回 store。提交后若工作区不干净会在 push 前中止。
+
+日常流程（包括每天 8:30 的日报例行任务）不变：先把当天 Markdown 写进 store 的 `reports/` 和 `reports/en/`，在 store 的 `site/` 下运行 `ingest.py` 生成 JSON 和配图，然后运行：
+
+```bash
+bash /cursor/stores/<store-id>/ethereum-research/site/publish.sh "日报 YYYY-MM-DD"
+```
+
+不需要手动复制或在 store 里运行 `build.py`。若要换本地目录，设置 `BUILD_ROOT`；它不能是 store 目录本身或其子目录。
 
 git 目录默认在 `/home/box/git/ethereum-research-bot.git`（工作区所在的挂载盘不允许创建 `.git`），可用环境变量 `GIT_DIR` 覆盖。哪些文件进仓库由根目录 `.gitignore` 白名单决定：只有 `site/`（不含 `dist/`、`docs/`、`workers/`）和 `reports/`。
 

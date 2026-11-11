@@ -1,0 +1,143 @@
+{
+  "date": "2026-06-22",
+  "keywords": [
+    "CROPS 的 Hegotá 愿望清单",
+    "frame 交易 keyed nonce 与 recent roots 服务隐私",
+    "执行层后量子迁移综述",
+    "EIP-8038 SSTORE 清除退款漏洞",
+    "原生 zkEVM 扩展带宽",
+    "Lighthouse v8.2.0 安全更新",
+    "AI 文本分析与匿名",
+    "ACDT #84"
+  ],
+  "summary": "soispoke 列出 Hegotá 的 CROPS 愿望清单：抗审查靠 FOCIL（EIP-7805，SFI），隐私靠 frame 交易（EIP-8141，CFI）、keyed nonce（EIP-8250）和 recent roots（EIP-8272）。misilva73 修复 EIP-8038 中 `x → 0 → x` 可净得退款的漏洞并合并。mikeneuder 指出原生 zkEVM 扩展的不只是执行，还有带宽。Lighthouse v8.2.0 修复多个安全漏洞，建议尽快升级。Vitalik 发起实验，检验 AI 文本分析能否识别他匿名写的文档。",
+  "items": [
+    {
+      "topic": "Hegotá 的 CROPS 清单与后量子迁移",
+      "title": "soispoke：CROPS 的 Hegotá 愿望清单",
+      "note": "20:34：抗审查方面是 FOCIL（EIP-7805，已 SFI）；开源方面，协议升级一切开源；隐私方面是 frame 交易（EIP-8141，已 CFI）、keyed nonce（EIP-8250）和 recent roots（EIP-8272）；另有安全项。",
+      "url": "https://x.com/soispoke/status/2069051519878463989",
+      "date": "2026-06-22",
+      "title_en": "soispoke: CROPS Hegotá wishlist",
+      "note_en": "20:34: censorship resistance via FOCIL (EIP-7805, SFI'd); open source, with everything open source in protocol upgrades; privacy via frame transactions (EIP-8141, CFI'd), keyed nonces (EIP-8250) and recent roots (EIP-8272); plus security items.",
+      "topic_en": "The CROPS list for Hegotá and post-quantum migration"
+    },
+    {
+      "topic": "Hegotá 的 CROPS 清单与后量子迁移",
+      "title": "tcoratger：推荐 riva_labs 关于以太坊执行层后量子迁移的综述",
+      "note": "23:43，全面梳理以太坊后量子交易签名的设计空间和取舍。",
+      "url": "https://x.com/tcoratger/status/2069098911420006585",
+      "date": "2026-06-22",
+      "title_en": "tcoratger: recommending riva_labs' overview of Ethereum's post-quantum migration at the execution layer",
+      "note_en": "23:43, a thorough look at the design space and tradeoffs for post-quantum transaction signatures on Ethereum.",
+      "topic_en": "The CROPS list for Hegotá and post-quantum migration"
+    },
+    {
+      "topic": "Gas 规范与扩容",
+      "title": "EIP-8038：撤销 SSTORE 清除退款，防止有利可图的往返",
+      "note": "（misilva73）提交并合并。在一笔交易内把槽改回原值（如 `x → 0 → x`）时，清除时给的 `STORAGE_CLEAR_REFUND` 在恢复时没有撤回，净状态无变化却能得到 9380 gas 的净退款。",
+      "url": "https://github.com/ethereum/EIPs/pull/11823",
+      "date": "2026-06-22",
+      "title_en": "EIP-8038: reverse the SSTORE clear refund to prevent net-profitable round trips",
+      "note_en": "(misilva73), submitted and merged. When a slot is returned to its original value within one transaction (for example `x → 0 → x`), the `STORAGE_CLEAR_REFUND` granted on the clear was never reversed on restore, leaving a net refund of 9,380 gas despite no net state change.",
+      "topic_en": "Gas specs and scaling"
+    },
+    {
+      "topic": "Gas 规范与扩容",
+      "title": "EIP-7778：无退款的区块 gas 计算，增加退款去向规则",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11824",
+      "date": "2026-06-22",
+      "title_en": "EIP-7778: block gas accounting without refunds, with a rule for where refunds go",
+      "note_en": "Submitted.",
+      "topic_en": "Gas specs and scaling"
+    },
+    {
+      "topic": "Gas 规范与扩容",
+      "title": "ethresear.ch：原生 zkEVM 扩展的是带宽，不只是执行",
+      "note": "00:29（mikeneuder）。原生 zkEVM 通常被描述为执行扩容，验证者只需下载并验证整个区块的证明；文章论证它同样改变带宽约束。",
+      "url": "https://ethresear.ch/t/a-native-zkevm-scales-bandwidth-not-just-execution/25254",
+      "date": "2026-06-22",
+      "title_en": "ethresear.ch: A native zkEVM scales bandwidth, not just execution",
+      "note_en": "00:29 (mikeneuder). A native zkEVM is usually pitched as execution scaling, with validators downloading and verifying a proof for the whole block; the post argues it changes the bandwidth constraint as well.",
+      "topic_en": "Gas specs and scaling"
+    },
+    {
+      "topic": "客户端安全",
+      "title": "sigp_io：Lighthouse v8.2.0 是高优先级版本，修复多个安全漏洞",
+      "note": "19:40，所有信标节点用户应尽快升级，验证者客户端用户应检查 fee-recipient 和 graffiti 设置。",
+      "url": "https://x.com/sigp_io/status/2069037719771087107",
+      "date": "2026-06-22",
+      "title_en": "sigp_io: Lighthouse v8.2.0 is a high-priority release with fixes for several security vulnerabilities",
+      "note_en": "19:40; all beacon node users should upgrade as soon as practical, and validator client users should review their fee-recipient and graffiti settings.",
+      "topic_en": "Client security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048：加入代理元数据配置（ERC-721T）",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1829",
+      "date": "2026-06-22",
+      "title_en": "ERC-8048: add Agent Metadata Profile (ERC-721T)",
+      "note_en": "Submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8182 移至 Review",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11825",
+      "date": "2026-06-22",
+      "title_en": "EIP-8182 to Review",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #85 议程",
+      "note": "22:40。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-85-june-29-2026/28840",
+      "date": "2026-06-22",
+      "title_en": "ACDT #85 agenda",
+      "note_en": "22:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：有人认为 AI 文本分析会让网络匿名无法维持，他用自己匿名写的一份文档做实验",
+      "note": "22:32。",
+      "url": "https://x.com/VitalikButerin/status/2069080988097876084",
+      "date": "2026-06-22",
+      "title_en": "Vitalik: given claims that AI text analysis will make online anonymity untenable, he runs an experiment with a document he wrote anonymously",
+      "note_en": "22:32.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：大规模采用的四大障碍是扩容、UX、隐私和监管",
+      "note": "20:02。",
+      "url": "https://x.com/EliBenSasson/status/2069043463589368277",
+      "date": "2026-06-22",
+      "title_en": "Eli Ben-Sasson: the four biggest blockers to mass adoption are scale, UX, privacy and regulation",
+      "note_en": "20:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/a-native-zkevm-scales-bandwidth-not-just-execution/25254",
+    "credit": "ethresear.ch, A native zkEVM scales bandwidth, not just execution (mikeneuder)",
+    "local_path": "assets/2026-06-22.jpg",
+    "credit_en": "ethresear.ch, A native zkEVM scales bandwidth, not just execution (mikeneuder)"
+  },
+  "keywords_en": [
+    "CROPS Hegotá wishlist",
+    "frame transactions with keyed nonces and recent roots for privacy",
+    "execution layer post-quantum migration overview",
+    "EIP-8038 SSTORE clear refund bug",
+    "a native zkEVM scales bandwidth",
+    "Lighthouse v8.2.0 security release",
+    "AI text analysis and anonymity",
+    "ACDT #84"
+  ],
+  "summary_en": "soispoke listed a CROPS wishlist for Hegotá: censorship resistance via FOCIL (EIP-7805, SFI) and privacy via frame transactions (EIP-8141, CFI), keyed nonces (EIP-8250) and recent roots (EIP-8272). misilva73 fixed a bug in EIP-8038 where `x → 0 → x` could yield a net refund, and it was merged. mikeneuder argued that a native zkEVM scales bandwidth, not just execution. Lighthouse v8.2.0 fixed several security vulnerabilities and users should upgrade soon. Vitalik ran an experiment to test whether AI text analysis can identify a document he wrote anonymously."
+}

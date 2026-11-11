@@ -1,0 +1,139 @@
+{
+  "date": "2026-06-15",
+  "keywords": [
+    "ACDT #83",
+    "EIP-8282 安全审查 1 到 2 个月",
+    "pERC20 私密代币标准",
+    "Starknet 隐私池 TVL",
+    "Least Authority AI 辅助审计",
+    "ERC-8301 提交"
+  ],
+  "summary": "当晚 ACDT #83 确认把 builder 存款和退出拆到独立合约（EIP-8282）是正确设计，新系统合约的安全审查估计需要 1 到 2 个月。Cyimon 在 Magicians 和 ethresear.ch 发布 pERC20 私密代币标准修订，主要新增扩展的 approve。Eli Ben-Sasson 披露 Starknet 隐私池一周 TVL 约 25 万美元，含 25 种代币。",
+  "items": [
+    {
+      "topic": "私密代币标准",
+      "title": "Magicians：pERC20 私密代币标准",
+      "note": "22:17（Cyimon），EIP 编号 8287，描述为 EVM 上默认私密的同质化代币标准；本次修订在此前设计基础上主要加入扩展的 ERC-20 approve。ethresear.ch 同步发帖 22:44。",
+      "url": "https://ethereum-magicians.org/t/perc20-private-token-standard/28796",
+      "date": "2026-06-15",
+      "title_en": "Magicians: pERC20 Private Token Standard",
+      "note_en": "22:17 (Cyimon), EIP number 8287, described as a fungible token standard for the EVM that is private by default; this revision mainly adds an extended ERC-20 approve to the earlier design. Cross-posted on ethresear.ch, 22:44.",
+      "topic_en": "Private token standards"
+    },
+    {
+      "topic": "私密代币标准",
+      "title": "ethresear.ch 同步发帖",
+      "note": "Magicians：pERC20 私密代币标准 22:17（Cyimon），EIP 编号 8287，描述为 EVM 上默认私密的同质化代币标准；本次修订在此前设计基础上主要加入扩展的 ERC-20 approve。ethresear.ch 同步发帖 22:44。",
+      "url": "https://ethresear.ch/t/perc20-private-token-standard-draft-approve-extended/25200",
+      "date": "2026-06-15",
+      "title_en": "Cross-posted on ethresear.ch",
+      "note_en": "Magicians: pERC20 Private Token Standard, 22:17 (Cyimon), EIP number 8287, described as a fungible token standard for the EVM that is private by default; this revision mainly adds an extended ERC-20 approve to the earlier design. Cross-posted on ethresear.ch, 22:44.",
+      "topic_en": "Private token standards"
+    },
+    {
+      "topic": "私密代币标准",
+      "title": "Eli Ben-Sasson：Starknet 隐私池 TVL 约 25 万美元，25 种代币在同一个池中",
+      "note": "19:18，DeFi 集成还在初期。",
+      "url": "https://x.com/EliBenSasson/status/2066495464367685720",
+      "date": "2026-06-15",
+      "title_en": "Eli Ben-Sasson: Starknet's privacy pool TVL is about $250K, with 25 tokens in the same pool",
+      "note_en": "19:18; DeFi integration is at a very early stage.",
+      "topic_en": "Private token standards"
+    },
+    {
+      "topic": "安全审计",
+      "title": "zooko：Least Authority 作为 Zcash 生态安全负责方，介绍其 AI 辅助审计流程",
+      "note": "22:14。",
+      "url": "https://x.com/zooko/status/2066539897075482672",
+      "date": "2026-06-15",
+      "title_en": "zooko: Least Authority, as Zcash Ecosystem Security Lead, on its AI-assisted auditing workflow",
+      "note_en": "22:14.",
+      "topic_en": "Security audits"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：AI 代理执行",
+      "note": "（JimmyShi22）提交，即 ERC-8301。",
+      "url": "https://github.com/ethereum/ERCs/pull/1815",
+      "date": "2026-06-15",
+      "title_en": "ERC: AI Agent Execution",
+      "note_en": "(JimmyShi22), submitted; this is ERC-8301.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8293 反事实拒绝事件日志（CREL）",
+      "note": "12:07；ERC-8331 按角色分组的操作限制策略 13:19；ERC-8303 合约版本 20:34。",
+      "url": "https://ethereum-magicians.org/t/erc-8293-counterfactual-rejection-event-log-crel/28792",
+      "date": "2026-06-15",
+      "title_en": "Magicians: ERC-8293 Counterfactual Rejection Event Log (CREL)",
+      "note_en": "12:07; ERC-8331 Role-Grouped Operation Restriction Policy, 13:19; ERC-8303 Contract Version, 20:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8331 按角色分组的操作限制策略",
+      "note": "Magicians：ERC-8293 反事实拒绝事件日志（CREL） 12:07；ERC-8331 按角色分组的操作限制策略 13:19；ERC-8303 合约版本 20:34。",
+      "url": "https://ethereum-magicians.org/t/erc-8331-role-grouped-operation-restriction-policy/28793",
+      "date": "2026-06-15",
+      "title_en": "ERC-8331 Role-Grouped Operation Restriction Policy",
+      "note_en": "Magicians: ERC-8293 Counterfactual Rejection Event Log (CREL), 12:07; ERC-8331 Role-Grouped Operation Restriction Policy, 13:19; ERC-8303 Contract Version, 20:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8303 合约版本",
+      "note": "Magicians：ERC-8293 反事实拒绝事件日志（CREL） 12:07；ERC-8331 按角色分组的操作限制策略 13:19；ERC-8303 合约版本 20:34。",
+      "url": "https://ethereum-magicians.org/t/erc-8303-contract-version/28795",
+      "date": "2026-06-15",
+      "title_en": "ERC-8303 Contract Version",
+      "note_en": "Magicians: ERC-8293 Counterfactual Rejection Event Log (CREL), 12:07; ERC-8331 Role-Grouped Operation Restriction Policy, 13:19; ERC-8303 Contract Version, 20:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #36 议程",
+      "note": "17:31。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-36-june-16-2026/28794",
+      "date": "2026-06-15",
+      "title_en": "FOCIL Breakout #36 agenda",
+      "note_en": "17:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：先是去中心化，然后扩容，现在是隐私，下一步是后量子安全",
+      "note": "18:08。",
+      "url": "https://x.com/EliBenSasson/status/2066477890581983499",
+      "date": "2026-06-15",
+      "title_en": "Eli Ben-Sasson: first decentralization, then scale, now privacy, and next post-quantum security",
+      "note_en": "18:08.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：加密、隐私和开源需要认真面对现实",
+      "note": "00:11。",
+      "url": "https://x.com/LefterisJP/status/2066206857945825461",
+      "date": "2026-06-15",
+      "title_en": "LefterisJP: crypto, privacy and open source need a serious dose of reality",
+      "note_en": "00:11.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/perc20-private-token-standard/28796",
+    "credit": "Ethereum Magicians, pERC20: Private Token Standard (Cyimon)",
+    "local_path": "assets/2026-06-15.jpg",
+    "credit_en": "Ethereum Magicians, pERC20: Private Token Standard (Cyimon)"
+  },
+  "keywords_en": [
+    "ACDT #83",
+    "1 to 2 months of EIP-8282 security review",
+    "pERC20 private token standard",
+    "Starknet privacy pool TVL",
+    "Least Authority AI-assisted audits",
+    "ERC-8301 submitted"
+  ],
+  "summary_en": "In the evening ACDT #83 confirmed that separating builder deposits and exits into their own contracts (EIP-8282) is the right design, with an estimated 1 to 2 months of security review for the new system contracts. Cyimon posted a revision of the pERC20 private token standard on Magicians and ethresear.ch, mainly adding an extended approve. Eli Ben-Sasson said Starknet's privacy pool reached about $250K TVL in its first week, across 25 tokens."
+}

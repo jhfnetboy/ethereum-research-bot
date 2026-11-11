@@ -1,0 +1,231 @@
+{
+  "date": "2026-06-10",
+  "keywords": [
+    "EIP-8037 中 EIP-7702 授权 gas 计算改进",
+    "EIP-8130 authenticateActor 返回策略",
+    "ERC-8168 8130 付款服务",
+    "EIP-8295 按周期的状态分层",
+    "ERC-8290 合并",
+    "EIP-7708",
+    "Starknet 隐私"
+  ],
+  "summary": "rjl493456442 改进 EIP-8037 中 EIP-7702 授权的 gas 计算并合并，状态 gas 按授权带来的净状态变化收取。chunter-cb 提交 EIP-8130 修改，让 `authenticateActor` 一次返回 scope、策略类型和策略目标，并为 ERC-8168（8130 付款服务）开讨论帖。weiihann 提交两种状态分层方案（EIP-8295、EIP-8296），让写入长期不活跃状态更贵。屏蔽票据转移 ERC-8290 合并。",
+  "items": [
+    {
+      "topic": "7702 授权与 8130 账户",
+      "title": "EIP-8037：改进 EIP-7702 授权的 gas 计算",
+      "note": "（rjl493456442）合并，覆盖同一交易内撤销授权等边界情况。状态 gas 现与授权带来的净状态变化一致，唯一例外是清除已有授权不退款，这是有意为之。",
+      "url": "https://github.com/ethereum/EIPs/pull/11715",
+      "date": "2026-06-10",
+      "title_en": "EIP-8037: improve EIP-7702 authorization gas accounting",
+      "note_en": "(rjl493456442), merged, covering corner cases such as cancelling an authorization within the same transaction. State gas now matches the net state changes from authorizations, except that clearing a pre-existing authorization is intentionally not refunded.",
+      "topic_en": "7702 authorizations and 8130 accounts"
+    },
+    {
+      "topic": "7702 授权与 8130 账户",
+      "title": "EIP-8130：`authenticateActor` 返回 scope、policyType、policyTarget",
+      "note": "（chunter-cb）提交。此前只返回 scope 字节，修改后一次调用即可得到解析出的 actor 的完整授权面。EIP-8130：RLP ABI 修正 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11794",
+      "date": "2026-06-10",
+      "title_en": "EIP-8130: `authenticateActor` returns scope, policyType, policyTarget",
+      "note_en": "(chunter-cb), submitted. It used to return only the scope byte; now one call surfaces the resolved actor's full authorization surface. EIP-8130: RLP ABI correction, submitted and merged.",
+      "topic_en": "7702 authorizations and 8130 accounts"
+    },
+    {
+      "topic": "7702 授权与 8130 账户",
+      "title": "EIP-8130：RLP ABI 修正",
+      "note": "EIP-8130：`authenticateActor` 返回 scope、policyType、policyTarget（chunter-cb）提交。此前只返回 scope 字节，修改后一次调用即可得到解析出的 actor 的完整授权面。EIP-8130：RLP ABI 修正 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11791",
+      "date": "2026-06-10",
+      "title_en": "EIP-8130: RLP ABI correction",
+      "note_en": "EIP-8130: `authenticateActor` returns scope, policyType, policyTarget (chunter-cb), submitted. It used to return only the scope byte; now one call surfaces the resolved actor's full authorization surface. EIP-8130: RLP ABI correction, submitted and merged.",
+      "topic_en": "7702 authorizations and 8130 accounts"
+    },
+    {
+      "topic": "7702 授权与 8130 账户",
+      "title": "Magicians：ERC-8168 ERC-8130 付款服务",
+      "note": "22:48（chunter），对应一个 8130 付款 Web 服务能力的 ERC。",
+      "url": "https://ethereum-magicians.org/t/erc-8168-payer-services-for-erc-8130/28762",
+      "date": "2026-06-10",
+      "title_en": "Magicians: ERC-8168 Payer Services for ERC-8130",
+      "note_en": "22:48 (chunter), for an ERC on an 8130 payer web service capability.",
+      "topic_en": "7702 authorizations and 8130 accounts"
+    },
+    {
+      "topic": "状态分层定价",
+      "title": "新 EIP：按周期的状态分层",
+      "note": "（weiihann）提交，Magicians 讨论帖 23:40，即 EIP-8295。它读取 EIP-8188 记录的 `last_written_block`，写入约一年未改动的状态比写入最近修改过的状态更贵；读取不变，也不删除或过期任何状态。另提交 固定截止点的状态分层（EIP-8296）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11788",
+      "date": "2026-06-10",
+      "title_en": "New EIP: State Tiering by Periods",
+      "note_en": "(weiihann), submitted, with a Magicians thread at 23:40; this is EIP-8295. It reads the `last_written_block` recorded by EIP-8188, so writing to state untouched for roughly a year costs more than writing to recently mutated state; reads are unchanged and nothing is removed or expired. Fixed-Cutoff State Tiering (EIP-8296) was also submitted.",
+      "topic_en": "State tiering pricing"
+    },
+    {
+      "topic": "状态分层定价",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：按周期的状态分层（weiihann）提交，Magicians 讨论帖 23:40，即 EIP-8295。它读取 EIP-8188 记录的 `last_written_block`，写入约一年未改动的状态比写入最近修改过的状态更贵；读取不变，也不删除或过期任何状态。另提交 固定截止点的状态分层（EIP-8296）。",
+      "url": "https://ethereum-magicians.org/t/eip-8295-state-tiering-by-periods/28763",
+      "date": "2026-06-10",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: State Tiering by Periods (weiihann), submitted, with a Magicians thread at 23:40; this is EIP-8295. It reads the `last_written_block` recorded by EIP-8188, so writing to state untouched for roughly a year costs more than writing to recently mutated state; reads are unchanged and nothing is removed or expired. Fixed-Cutoff State Tiering (EIP-8296) was also submitted.",
+      "topic_en": "State tiering pricing"
+    },
+    {
+      "topic": "状态分层定价",
+      "title": "固定截止点的状态分层",
+      "note": "新 EIP：按周期的状态分层（weiihann）提交，Magicians 讨论帖 23:40，即 EIP-8295。它读取 EIP-8188 记录的 `last_written_block`，写入约一年未改动的状态比写入最近修改过的状态更贵；读取不变，也不删除或过期任何状态。另提交 固定截止点的状态分层（EIP-8296）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11790",
+      "date": "2026-06-10",
+      "title_en": "Fixed-Cutoff State Tiering",
+      "note_en": "New EIP: State Tiering by Periods (weiihann), submitted, with a Magicians thread at 23:40; this is EIP-8295. It reads the `last_written_block` recorded by EIP-8188, so writing to state untouched for roughly a year costs more than writing to recently mutated state; reads are unchanged and nothing is removed or expired. Fixed-Cutoff State Tiering (EIP-8296) was also submitted.",
+      "topic_en": "State tiering pricing"
+    },
+    {
+      "topic": "状态分层定价",
+      "title": "EIP-8188：账户与存储槽的最后写入区块",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11784",
+      "date": "2026-06-10",
+      "title_en": "EIP-8188: last-written block for accounts and slots",
+      "note_en": "Merged.",
+      "topic_en": "State tiering pricing"
+    },
+    {
+      "topic": "隐私",
+      "title": "新 ERC：屏蔽票据转移",
+      "note": "（geovgy）合并，即 ERC-8290。",
+      "url": "https://github.com/ethereum/ERCs/pull/1800",
+      "date": "2026-06-10",
+      "title_en": "New ERC: Shielded Note Teleportation",
+      "note_en": "(geovgy), merged; this is ERC-8290.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWare：一键、低成本的隐私和私密 DeFi 在 Starknet 上线",
+      "note": "22:04；StarkWare：基于 STRK20 的首个集合竞价暗池上测试网 15:25。",
+      "url": "https://x.com/StarkWareLtd/status/2064725382645825918",
+      "date": "2026-06-10",
+      "title_en": "StarkWare: one-click, low-cost privacy and private DeFi are live on Starknet",
+      "note_en": "22:04; StarkWare: the first call auction dark pool on Starknet, powered by STRK20, is on testnet, 15:25.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "StarkWare：基于 STRK20 的首个集合竞价暗池上测试网",
+      "note": "StarkWare：一键、低成本的隐私和私密 DeFi 在 Starknet 上线 22:04；StarkWare：基于 STRK20 的首个集合竞价暗池上测试网 15:25。",
+      "url": "https://x.com/StarkWareLtd/status/2064624904322830345",
+      "date": "2026-06-10",
+      "title_en": "StarkWare: the first call auction dark pool on Starknet, powered by STRK20, is on testnet",
+      "note_en": "StarkWare: one-click, low-cost privacy and private DeFi are live on Starknet, 22:04; StarkWare: the first call auction dark pool on Starknet, powered by STRK20, is on testnet, 15:25.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "Eli Ben-Sasson：除了 ZK，构建安全隐私最重要的是形式化验证",
+      "note": "20:24。",
+      "url": "https://x.com/EliBenSasson/status/2064700161033375812",
+      "date": "2026-06-10",
+      "title_en": "Eli Ben-Sasson: beyond ZK, the most important ingredient for safe privacy is formal verification",
+      "note_en": "20:24.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7997：改用 Arachnid 工厂",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11783",
+      "date": "2026-06-10",
+      "title_en": "EIP-7997: switch to the Arachnid factory",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps：EIP-7708 将在 Glamsterdam 修复这个问题",
+      "note": "22:50。EIP-7708 让 ETH 转账发出日志。",
+      "url": "https://x.com/trent_vanepps/status/2064736902582812926",
+      "date": "2026-06-10",
+      "title_en": "trent_vanepps: EIP-7708 will fix this in Glamsterdam",
+      "note_en": "22:50. EIP-7708 makes ETH transfers emit a log.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：提议 EIP-2488 和 EIP-7645 进入 Hegotá",
+      "note": "提交，旨在清理技术债。",
+      "url": "https://github.com/ethereum/EIPs/pull/11793",
+      "date": "2026-06-10",
+      "title_en": "EIP-8081: propose EIP-2488 and EIP-7645 for inclusion in Hegotá",
+      "note_en": "Submitted, aimed at removing technical debt.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-6404：secp256k1 算法标识由 0xFF 改为 0x00",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11430",
+      "date": "2026-06-10",
+      "title_en": "EIP-6404: secp256k1 algorithm id changed from 0xFF to 0x00",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zengjiajun_eth：Cleave 把 1 ETH 拆成现金部分和上涨部分，无需借贷也不会被清算，已上测试网",
+      "note": "04:08。",
+      "url": "https://x.com/zengjiajun_eth/status/2064454545401397362",
+      "date": "2026-06-10",
+      "title_en": "zengjiajun_eth: Cleave splits 1 ETH into a cash half and an upside half, with no loan and nothing to liquidate, now on testnet",
+      "note_en": "04:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #83 议程",
+      "note": "15:24；PQ Interop #43 17:17。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-83-june-15-2026/28759",
+      "date": "2026-06-10",
+      "title_en": "ACDT #83 agenda",
+      "note_en": "15:24; PQ Interop #43, 17:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #43",
+      "note": "ACDT #83 议程 15:24；PQ Interop #43 17:17。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-43-june-10-2026/28761",
+      "date": "2026-06-10",
+      "title_en": "PQ Interop #43",
+      "note_en": "ACDT #83 agenda, 15:24; PQ Interop #43, 17:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：Zcash 论坛一则讨论，当上帝看见一切时隐私意味着什么",
+      "note": "02:25。",
+      "url": "https://x.com/zooko/status/2064428646547259658",
+      "date": "2026-06-10",
+      "title_en": "zooko: a Zcash forum thread on what privacy means if God sees everything",
+      "note_en": "02:25.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8295-state-tiering-by-periods/28763",
+    "credit": "Ethereum Magicians, EIP-8295: State Tiering by Periods (weiihann)",
+    "local_path": "assets/2026-06-10.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8295: State Tiering by Periods (weiihann)"
+  },
+  "keywords_en": [
+    "EIP-7702 authorization gas accounting in EIP-8037",
+    "EIP-8130 authenticateActor returns policy",
+    "ERC-8168 payer services for 8130",
+    "EIP-8295 state tiering by periods",
+    "ERC-8290 merged",
+    "EIP-7708",
+    "Starknet privacy"
+  ],
+  "summary_en": "rjl493456442 improved EIP-7702 authorization gas accounting in EIP-8037 and it was merged, charging state gas by the net state change an authorization causes. chunter-cb submitted an EIP-8130 change so that `authenticateActor` returns scope, policy type and policy target in one call, and opened a thread for ERC-8168 (payer services for 8130). weiihann submitted two state tiering designs (EIP-8295, EIP-8296) that make writes to long inactive state more expensive. The shielded note teleportation ERC-8290 was merged."
+}

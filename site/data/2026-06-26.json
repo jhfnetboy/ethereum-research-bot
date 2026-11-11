@@ -1,0 +1,171 @@
+{
+  "date": "2026-06-26",
+  "keywords": [
+    "EIP-8141 允许任意签名数据",
+    "EIP-7928 回退 7702 跟踪方案",
+    "EIP-8279 列入 Hegotá PFI",
+    "CoW 的 EIP-7702 求解器委托合约审计",
+    "Flock 二元域证明系统",
+    "EIP-8317 合约存储布局描述格式",
+    "机构隐私"
+  ],
+  "summary": "lightclient 提交 EIP-8141 修改，允许任意签名数据，避免自定义验证器使用规范签名哈希时的循环依赖。nerolation 把 EIP-7928（BAL）中 7702 委托的跟踪方式回退到“方案一”：在预热之后检查，解析时读取委托目标，相关访问都保留在 BAL 中；EIP-8279 列入 Hegotá PFI 并合并。ChainSecurity 公布对 CoW Protocol 求解器所用 EIP-7702 委托合约的审计。tcoratger 表示将评估 Flock 能否用于证明以太坊后量子签名聚合。",
+  "items": [
+    {
+      "topic": "原生 AA 与 7702 的规范细节",
+      "title": "EIP-8141：允许任意签名数据，避免自定义验证器的循环依赖",
+      "note": "（lightclient）提交。作者原打算放进此前的 PR，后来认为不需要，现在意识到若要让自定义验证器使用规范签名哈希，这是必需的。",
+      "url": "https://github.com/ethereum/EIPs/pull/11837",
+      "date": "2026-06-26",
+      "title_en": "EIP-8141: allow arbitrary signature data to avoid a circular dependency for custom verifiers",
+      "note_en": "(lightclient), submitted. The author originally meant to include this in an earlier PR but decided it was unneeded; it turns out to be required if custom verifiers are to use the canonical signing hash.",
+      "topic_en": "Spec details for native AA and 7702"
+    },
+    {
+      "topic": "原生 AA 与 7702 的规范细节",
+      "title": "EIP-7928：回退 7702 跟踪",
+      "note": "（nerolation）提交，根据 Discord 讨论回到“方案一”：在预热之后做检查，解析期间读取委托，相关访问全部保留在 BAL 中。",
+      "url": "https://github.com/ethereum/EIPs/pull/11838",
+      "date": "2026-06-26",
+      "title_en": "EIP-7928: revert 7702 tracking",
+      "note_en": "(nerolation), submitted; based on Discord discussions it goes back to \"option 1\": checks after warming, the delegate read during resolution, and everything stays in the BAL.",
+      "topic_en": "Spec details for native AA and 7702"
+    },
+    {
+      "topic": "原生 AA 与 7702 的规范细节",
+      "title": "EIP-8081：把 EIP-8279 列为 PFI",
+      "note": "（nerolation）提交并合并；EIP-8141：恢复 Behavior 章节 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11839",
+      "date": "2026-06-26",
+      "title_en": "EIP-8081: PFI EIP-8279",
+      "note_en": "(nerolation), submitted and merged; EIP-8141: restore Behavior section, merged.",
+      "topic_en": "Spec details for native AA and 7702"
+    },
+    {
+      "topic": "原生 AA 与 7702 的规范细节",
+      "title": "EIP-8141：恢复 Behavior 章节",
+      "note": "EIP-8081：把 EIP-8279 列为 PFI（nerolation）提交并合并；EIP-8141：恢复 Behavior 章节 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11810",
+      "date": "2026-06-26",
+      "title_en": "EIP-8141: restore Behavior section",
+      "note_en": "EIP-8081: PFI EIP-8279 (nerolation), submitted and merged; EIP-8141: restore Behavior section, merged.",
+      "topic_en": "Spec details for native AA and 7702"
+    },
+    {
+      "topic": "EIP-7702 委托合约的安全",
+      "title": "ChainSecurity：审计了 CoW Swap 的 Solver7702Delegate",
+      "note": "18:18，这是 CoW Protocol 求解器使用的 EIP-7702 委托目标合约。",
+      "url": "https://x.com/chain_security/status/2070466832327147766",
+      "date": "2026-06-26",
+      "title_en": "ChainSecurity: audited CoW Swap's Solver7702Delegate",
+      "note_en": "18:18, an EIP-7702 delegation target for CoW Protocol solvers.",
+      "topic_en": "Security of EIP-7702 delegation contracts"
+    },
+    {
+      "topic": "后量子与证明系统",
+      "title": "tcoratger：Benedikt Bünz 等人发布快速二元域证明系统 Flock",
+      "note": "05:37，团队将用几周评估它是否适合证明以太坊的后量子签名聚合。Eli Ben-Sasson：2018 年最初的 ZK STARK 就是在二元 64 位域上实现的 14:47。",
+      "url": "https://x.com/tcoratger/status/2070275099165442079",
+      "date": "2026-06-26",
+      "title_en": "tcoratger: Flock, a new fast binary-field proving system by Benedikt Bünz and others",
+      "note_en": "05:37; the team will spend a few weeks evaluating whether it fits proving post-quantum signature aggregation for Ethereum. Eli Ben-Sasson: the original 2018 ZK STARK was implemented over the binary 64-bit field, 14:47.",
+      "topic_en": "Post-quantum and proof systems"
+    },
+    {
+      "topic": "后量子与证明系统",
+      "title": "Eli Ben-Sasson：2018 年最初的 ZK STARK 就是在二元 64 位域上实现的",
+      "note": "tcoratger：Benedikt Bünz 等人发布快速二元域证明系统 Flock 05:37，团队将用几周评估它是否适合证明以太坊的后量子签名聚合。Eli Ben-Sasson：2018 年最初的 ZK STARK 就是在二元 64 位域上实现的 14:47。",
+      "url": "https://x.com/EliBenSasson/status/2070413690269024747",
+      "date": "2026-06-26",
+      "title_en": "Eli Ben-Sasson: the original 2018 ZK STARK was implemented over the binary 64-bit field",
+      "note_en": "Tcoratger: Flock, a new fast binary-field proving system by Benedikt Bünz and others, 05:37; the team will spend a few weeks evaluating whether it fits proving post-quantum signature aggregation for Ethereum. Eli Ben-Sasson: the original 2018 ZK STARK was implemented over the binary 64-bit field, 14:47.",
+      "topic_en": "Post-quantum and proof systems"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8317 合约存储布局描述格式",
+      "note": "16:42（alex-forshtat-tbk），用 JSON 标准化合约存储布局元数据，供实现 Clear Signing（ERC-7730）的硬件钱包做交易模拟和断言，对应 ERC PR 提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8317-contract-storage-layout-descriptor-format/28864",
+      "date": "2026-06-26",
+      "title_en": "Magicians: EIP-8317 Contract Storage Layout Descriptor Format",
+      "note_en": "16:42 (alex-forshtat-tbk), standardizing contract storage layout metadata as JSON for transaction simulation and assertions in hardware wallets implementing clear signing (ERC-7730), with the ERC PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC PR",
+      "note": "Magicians：EIP-8317 合约存储布局描述格式 16:42（alex-forshtat-tbk），用 JSON 标准化合约存储布局元数据，供实现 Clear Signing（ERC-7730）的硬件钱包做交易模拟和断言，对应 ERC PR 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1841",
+      "date": "2026-06-26",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: EIP-8317 Contract Storage Layout Descriptor Format, 16:42 (alex-forshtat-tbk), standardizing contract storage layout metadata as JSON for transaction simulation and assertions in hardware wallets implementing clear signing (ERC-7730), with the ERC PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：受监管机构的链上隐私，前提是对市场隐藏的内容对审计和监管方开放",
+      "note": "18:45，新的隐私系列从屏蔽池开始。",
+      "url": "https://x.com/Nethermind/status/2070473643704873065",
+      "date": "2026-06-26",
+      "title_en": "Nethermind: for a regulated institution, onchain privacy only counts if what is hidden from the market stays open to auditors and regulators",
+      "note_en": "18:45, starting a new privacy series with a shielded pool.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊的第四协议层，内存",
+      "note": "18:21。",
+      "url": "https://ethresear.ch/t/ethereums-fourth-protocol-layer-memory/25305",
+      "date": "2026-06-26",
+      "title_en": "ethresear.ch: Ethereum's Fourth Protocol Layer, Memory",
+      "note_en": "18:21.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #28 点击最多的链接",
+      "note": "06:08。",
+      "url": "https://x.com/EtherealnewsHQ/status/2070283020423360898",
+      "date": "2026-06-26",
+      "title_en": "Ethereal news #28 top links clicked",
+      "note_en": "06:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #29 议程",
+      "note": "23:02。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-29-june-29-2026-15-00-utc/28867",
+      "date": "2026-15-00",
+      "title_en": "RPC Standards #29 agenda",
+      "note_en": "23:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：区块链的劣化，产品起初很好，后来被中心化和公司利益变成价值榨取工具",
+      "note": "17:23。",
+      "url": "https://x.com/EliBenSasson/status/2070452775377387801",
+      "date": "2026-06-26",
+      "title_en": "Eli Ben-Sasson: the enshittification of blockchain, where a great product is turned into value extraction by centralization and corporate pulls",
+      "note_en": "17:23.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8317-contract-storage-layout-descriptor-format/28864",
+    "credit": "Ethereum Magicians, EIP-8317: Contract Storage Layout Descriptor Format (alex-forshtat-tbk)",
+    "local_path": "assets/2026-06-26.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8317: Contract Storage Layout Descriptor Format (alex-forshtat-tbk)"
+  },
+  "keywords_en": [
+    "EIP-8141 allows arbitrary signature data",
+    "EIP-7928 reverts its 7702 tracking approach",
+    "EIP-8279 PFI for Hegotá",
+    "audit of CoW's EIP-7702 solver delegate",
+    "the Flock binary-field proving system",
+    "EIP-8317 contract storage layout descriptor format",
+    "institutional privacy"
+  ],
+  "summary_en": "lightclient submitted an EIP-8141 change allowing arbitrary signature data, avoiding a circular dependency when custom verifiers use the canonical signing hash. nerolation reverted the 7702 delegation tracking in EIP-7928 (BAL) back to \"option 1\": checks happen after warming, the delegate is read during resolution, and those accesses all stay in the BAL; EIP-8279 was listed as Hegotá PFI and merged. ChainSecurity published its audit of the EIP-7702 delegation contract used by CoW Protocol solvers. tcoratger said the team will evaluate whether Flock suits proving Ethereum's post-quantum signature aggregation."
+}

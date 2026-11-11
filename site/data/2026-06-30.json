@@ -1,0 +1,201 @@
+{
+  "date": "2026-06-30",
+  "keywords": [
+    "keyed nonce 与 recent roots 将在 ACDE 提议进入 Hegotá",
+    "Starknet 后量子路线图",
+    "隐私池匿名集",
+    "pyca/cryptography 后量子原语",
+    "Aztec Alpha V5",
+    "检查型算术操作码 EIP 合并",
+    "ENS 安全委员会之争"
+  ],
+  "summary": "soispoke 预告将在周四 ACDE 上提议 keyed nonce（EIP-8250）和 recent roots（EIP-8272）进入 Hegotá，称这两项建立在 frame 交易之上的原语对隐私 dapp 交易的抗审查与无需信任至关重要。StarkWare 发布路线图，目标是在 Q-day 之前实现端到端后量子安全的 Starknet。ethbeat 解释 L2BEAT 隐私看板如何跟踪匿名集。检查型算术操作码 EIP 合并。ENS 安全委员会续期提案在链上被否决，引发争议。",
+  "items": [
+    {
+      "topic": "隐私 dapp 的协议基础",
+      "title": "soispoke：周四 ACDE 上将提议 keyed nonce（EIP-8250）和 recent roots（EIP-8272）进入 Hegota",
+      "note": "18:46，这两项 EIP 建立在 frame 交易之上，是让隐私 dapp 交易具备抗审查和无需信任属性的重要原语。",
+      "url": "https://x.com/soispoke/status/2071923344165716344",
+      "date": "2026-06-30",
+      "title_en": "soispoke: on Thursday's ACDE I'll propose Keyed Nonces (EIP-8250) and Recent Roots (EIP-8272) for Hegota",
+      "note_en": "18:46; these two EIPs sit on top of frame transactions and are important primitives for making privacy dapp transactions censorship resistant and trustless.",
+      "topic_en": "Protocol foundations for privacy dapps"
+    },
+    {
+      "topic": "隐私 dapp 的协议基础",
+      "title": "ethbeat：在 Brew Berlin 介绍 L2BEAT 的新隐私看板",
+      "note": "20:35，每个被跟踪的隐私池核心是匿名集，即你的交易藏身的人群。",
+      "url": "https://x.com/ethbeat_org/status/2071950806702571972",
+      "date": "2026-06-30",
+      "title_en": "ethbeat: presenting L2BEAT's new privacy dashboard at Brew Berlin",
+      "note_en": "20:35; at the center of every privacy pool tracked is the anonymity set, the crowd your transaction hides in.",
+      "topic_en": "Protocol foundations for privacy dapps"
+    },
+    {
+      "topic": "隐私 dapp 的协议基础",
+      "title": "aztecnetwork：Alpha V5 代码已就绪，带来重要安全更新、速度提升和简化隐私体验的新功能",
+      "note": "01:10。Aztec：Cantina 上的漏洞赏金仍在进行 06:00。",
+      "url": "https://x.com/aztecnetwork/status/2071657649725440005",
+      "date": "2026-06-30",
+      "title_en": "aztecnetwork: the Alpha V5 code is ready, with significant security updates, speed improvements and new features to simplify privacy UX",
+      "note_en": "01:10. Aztec: the bug bounty on Cantina is still open, 06:00.",
+      "topic_en": "Protocol foundations for privacy dapps"
+    },
+    {
+      "topic": "隐私 dapp 的协议基础",
+      "title": "Aztec：Cantina 上的漏洞赏金仍在进行",
+      "note": "aztecnetwork：Alpha V5 代码已就绪，带来重要安全更新、速度提升和简化隐私体验的新功能 01:10。Aztec：Cantina 上的漏洞赏金仍在进行 06:00。",
+      "url": "https://x.com/aztecnetwork/status/2071730436338761760",
+      "date": "2026-06-30",
+      "title_en": "Aztec: the bug bounty on Cantina is still open",
+      "note_en": "Aztecnetwork: the Alpha V5 code is ready, with significant security updates, speed improvements and new features to simplify privacy UX, 01:10. Aztec: the bug bounty on Cantina is still open, 06:00.",
+      "topic_en": "Protocol foundations for privacy dapps"
+    },
+    {
+      "topic": "后量子迁移",
+      "title": "StarkWare：发布路线图，目标是在 Q-day 之前实现端到端后量子安全的 Starknet",
+      "note": "19:34。Eli Ben-Sasson：Starknet 的底层密码学大多已是后量子安全的，迁移路径相对较短 20:18。",
+      "url": "https://x.com/StarkWareLtd/status/2071935303963861074",
+      "date": "2026-06-30",
+      "title_en": "StarkWare: publishing the roadmap toward an end-to-end post-quantum secure Starknet before Q-day",
+      "note_en": "19:34. Eli Ben-Sasson: much of Starknet's underlying cryptography is already post-quantum secure, so the migration path is relatively short, 20:18.",
+      "topic_en": "Post-quantum migration"
+    },
+    {
+      "topic": "后量子迁移",
+      "title": "Eli Ben-Sasson：Starknet 的底层密码学大多已是后量子安全的，迁移路径相对较短",
+      "note": "StarkWare：发布路线图，目标是在 Q-day 之前实现端到端后量子安全的 Starknet 19:34。Eli Ben-Sasson：Starknet 的底层密码学大多已是后量子安全的，迁移路径相对较短 20:18。",
+      "url": "https://x.com/EliBenSasson/status/2071946484220621232",
+      "date": "2026-06-30",
+      "title_en": "Eli Ben-Sasson: much of Starknet's underlying cryptography is already post-quantum secure, so the migration path is relatively short",
+      "note_en": "StarkWare: publishing the roadmap toward an end-to-end post-quantum secure Starknet before Q-day, 19:34. Eli Ben-Sasson: much of Starknet's underlying cryptography is already post-quantum secure, so the migration path is relatively short, 20:18.",
+      "topic_en": "Post-quantum migration"
+    },
+    {
+      "topic": "后量子迁移",
+      "title": "trailofbits：pyca/cryptography 上月下载 12 亿次，若它不提供后量子原语，Python 生态就无法迁移",
+      "note": "18:15。",
+      "url": "https://x.com/trailofbits/status/2071915420584411634",
+      "date": "2026-06-30",
+      "title_en": "trailofbits: 1.2 billion downloads ran through pyca/cryptography last month, and if it doesn't ship post-quantum primitives the Python ecosystem can't migrate",
+      "note_en": "18:15.",
+      "topic_en": "Post-quantum migration"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：检查型算术操作码",
+      "note": "（ritzdorf）合并；EIP-8219：补充回滚与操作码细节 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11495",
+      "date": "2026-06-30",
+      "title_en": "New EIP: Checked Arithmetic Opcodes",
+      "note_en": "(ritzdorf), merged; EIP-8219: add revert and opcode details, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8219：补充回滚与操作码细节",
+      "note": "新 EIP：检查型算术操作码（ritzdorf）合并；EIP-8219：补充回滚与操作码细节 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11842",
+      "date": "2026-06-30",
+      "title_en": "EIP-8219: add revert and opcode details",
+      "note_en": "New EIP: Checked Arithmetic Opcodes (ritzdorf), merged; EIP-8219: add revert and opcode details, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8142：多处 blob 编码解码修复",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11763",
+      "date": "2026-06-30",
+      "title_en": "EIP-8142: various blob encoding and decoding fixes",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ECHInstitute：加入 Encrypt the Mempool Coalition",
+      "note": "00:04。",
+      "url": "https://x.com/ECHInstitute/status/2071640961264853397",
+      "date": "2026-06-30",
+      "title_en": "ECHInstitute: joining the Encrypt the Mempool Coalition",
+      "note_en": "00:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "jessepollak：在 Base 上用 Open USD 构建，含 Ledgers 隐私",
+      "note": "22:51。",
+      "url": "https://x.com/jessepollak/status/2071984899309940791",
+      "date": "2026-06-30",
+      "title_en": "jessepollak: build with Open USD on Base, including privacy with Ledgers",
+      "note_en": "22:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：ERC-8004 是否形成了代理间信任网络",
+      "note": "09:40，基于主网 1 月 29 日到 6 月 9 日数据。",
+      "url": "https://ethresear.ch/t/does-erc-8004-form-an-agent-to-agent-trust-network/25322",
+      "date": "2026-06-30",
+      "title_en": "ethresear.ch: Does ERC-8004 Form an Agent-to-Agent Trust Network?",
+      "note_en": "09:40, based on mainnet data from January 29 to June 9.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #86 议程",
+      "note": "01:05；FOCIL Breakout #38 议程 21:29。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-86-july-6-2026/28890",
+      "date": "2026-06-30",
+      "title_en": "ACDT #86 agenda",
+      "note_en": "01:05; FOCIL Breakout #38 agenda, 21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #38 议程",
+      "note": "ACDT #86 议程 01:05；FOCIL Breakout #38 议程 21:29。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-38-july-21-2026/28895",
+      "date": "2026-06-30",
+      "title_en": "FOCIL Breakout #38 agenda",
+      "note_en": "ACDT #86 agenda, 01:05; FOCIL Breakout #38 agenda, 21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：Nick 用 50% 的投票权否决了续期安全委员会的链上提案",
+      "note": "16:42。donnoh_eth：别被误导，安全委员会并未超出其既定职责 17:23。",
+      "url": "https://x.com/LefterisJP/status/2071892182621970491",
+      "date": "2026-06-30",
+      "title_en": "LefterisJP: Nick used 50% of the voting supply to vote down the onchain proposal to renew the security council",
+      "note_en": "16:42. donnoh_eth: don't be fooled into thinking the security council acted outside its stated purpose, 17:23.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：别被误导，安全委员会并未超出其既定职责",
+      "note": "LefterisJP：Nick 用 50% 的投票权否决了续期安全委员会的链上提案 16:42。donnoh_eth：别被误导，安全委员会并未超出其既定职责 17:23。",
+      "url": "https://x.com/donnoh_eth/status/2071902464849117483",
+      "date": "2026-06-30",
+      "title_en": "donnoh_eth: don't be fooled into thinking the security council acted outside its stated purpose",
+      "note_en": "LefterisJP: Nick used 50% of the voting supply to vote down the onchain proposal to renew the security council, 16:42. donnoh_eth: don't be fooled into thinking the security council acted outside its stated purpose, 17:23.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/soispoke/status/2071923344165716344",
+    "credit": "X, soispoke",
+    "local_path": "assets/2026-06-30.jpg",
+    "credit_en": "X, soispoke"
+  },
+  "keywords_en": [
+    "keyed nonces and recent roots to be proposed for Hegotá at ACDE",
+    "Starknet post-quantum roadmap",
+    "privacy pool anonymity sets",
+    "post-quantum primitives in pyca/cryptography",
+    "Aztec Alpha V5",
+    "checked arithmetic opcodes EIP merged",
+    "ENS security council dispute"
+  ],
+  "summary_en": "soispoke said he will propose keyed nonces (EIP-8250) and recent roots (EIP-8272) for Hegotá at Thursday's ACDE, calling these primitives on top of frame transactions essential for making privacy dapp transactions censorship resistant and trustless. StarkWare published a roadmap toward an end-to-end post-quantum secure Starknet before Q-day. ethbeat explained how L2BEAT's privacy dashboard tracks anonymity sets. The checked arithmetic opcodes EIP was merged. An onchain proposal to renew the ENS security council was voted down, sparking a dispute."
+}

@@ -1,0 +1,53 @@
+{
+  "date": "2026-06-28",
+  "keywords": [
+    "ERC-8211",
+    "比特币与 STARK",
+    "验证者记账工具"
+  ],
+  "summary": "周日非常安静，当天没有新的 EIP、ERC 或论坛重点帖。barnabemonnot 提到 ERC-8211 并抄送 Biconomy。Eli Ben-Sasson 谈比特币引入 op_cat 与 op_STARK 的设想。",
+  "items": [
+    {
+      "topic": "账户相关讨论",
+      "title": "barnabemonnot：ERC-8211 被提及，抄送 Biconomy",
+      "note": "21:27。",
+      "url": "https://x.com/barnabemonnot/status/2071239104910537079",
+      "date": "2026-06-28",
+      "title_en": "barnabemonnot: ERC-8211 mentioned, cc Biconomy",
+      "note_en": "21:27.",
+      "topic_en": "Account related discussion"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：与其制造新问题，不如推动比特币加入 op_cat 和 op_STARK 这类能解决问题的功能",
+      "note": "18:21。",
+      "url": "https://x.com/EliBenSasson/status/2071192189841895905",
+      "date": "2026-06-28",
+      "title_en": "Eli Ben-Sasson: rather than create new problems, push Bitcoin to add things like op_cat and op_STARK that solve problems",
+      "note_en": "18:21.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "LefterisJP：质押 ETH 需要能管理验证者、核算奖励与损益的记账工具",
+      "note": "18:24。",
+      "url": "https://x.com/LefterisJP/status/2071192978744377433",
+      "date": "2026-06-28",
+      "title_en": "LefterisJP: if you stake ETH you need an accounting tool that manages validators and tracks rewards, losses and PnL",
+      "note_en": "18:24.",
+      "topic_en": "Other updates"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/barnabemonnot/status/2071239104910537079",
+    "credit": "X, barnabemonnot",
+    "local_path": "assets/2026-06-28.jpg",
+    "credit_en": "X, barnabemonnot"
+  },
+  "keywords_en": [
+    "ERC-8211",
+    "Bitcoin and STARKs",
+    "validator accounting tools"
+  ],
+  "summary_en": "A very quiet Sunday with no new EIPs, ERCs or notable forum posts. barnabemonnot mentioned ERC-8211 and tagged Biconomy. Eli Ben-Sasson talked about adding op_cat and op_STARK to Bitcoin."
+}

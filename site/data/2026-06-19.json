@@ -1,0 +1,171 @@
+{
+  "date": "2026-06-19",
+  "keywords": [
+    "Hegotá 扩容以 ETH 转账为锚",
+    "FOCIL 用作 L2 强制交易",
+    "EIP-8007 重定价汇总",
+    "EIP-8037 每授权 101 字节说明",
+    "核心开发资金之争",
+    "代理 ERC 组合说明",
+    "Ethereal news #28"
+  ],
+  "summary": "misilva73 在 ethresear.ch 分析 Glamsterdam 之后 Hegotá 如何继续提高 gas 上限：21000 gas 的 ETH 转账同时约束执行和带宽两个维度。donnoh 探讨把 FOCIL 改造为 L2 强制交易机制。EIP-8007 更新 2780、7904、8037、8038 的重定价汇总并合并。社区围绕核心开发团队资金展开争论，fede_intern 认为许多核心团队靠 EF 资助维持，potuz 则推荐 trent_vanepps 的相关文档。",
+  "items": [
+    {
+      "topic": "重定价与 Hegotá 扩容",
+      "title": "ethresear.ch：Hegota 中的扩容，以 ETH 转账为锚定执行与带宽",
+      "note": "15:19（misilva73）。出发点是 21000 gas 的 ETH 转账同时限定 slot 的两个维度：执行侧，Glamsterdam 重定价已把成本推到转账上限允许的程度；带宽侧，全是转账的区块有一个无法降低的字节密度。文章推导 Hegotá 要继续提高 gas 上限需要改什么。",
+      "url": "https://ethresear.ch/t/scaling-in-hegota-using-the-eth-transfer-to-anchor-execution-and-bandwidth/25232",
+      "date": "2026-06-19",
+      "title_en": "ethresear.ch: Scaling in Hegota, using the ETH transfer to anchor execution and bandwidth",
+      "note_en": "15:19 (misilva73). The starting point is that the 21,000-gas ETH transfer bounds both dimensions of the slot: on the execution side, the Glamsterdam repricings pushed costs as far as the transfer cap allows; on the bandwidth side, a block full of transfers has an irreducible byte density. The post works out what Hegotá must change to keep raising the gas limit.",
+      "topic_en": "Repricing and scaling in Hegotá"
+    },
+    {
+      "topic": "重定价与 Hegotá 扩容",
+      "title": "EIP-8007：更新 2780、7904、8037、8038 的重定价汇总",
+      "note": "（misilva73）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11817",
+      "date": "2026-06-19",
+      "title_en": "EIP-8007: refresh repricing summaries for 2780, 7904, 8037, 8038",
+      "note_en": "(misilva73), submitted and merged.",
+      "topic_en": "Repricing and scaling in Hegotá"
+    },
+    {
+      "topic": "重定价与 Hegotá 扩容",
+      "title": "EIP-8037：说明 `REGULAR_PER_AUTH_BASE_COST` 中 101 字节的由来",
+      "note": "（danceratopz）提交，这个数字在 8038 的 EELS 实现中引起疑问。",
+      "url": "https://github.com/ethereum/EIPs/pull/11818",
+      "date": "2026-06-19",
+      "title_en": "EIP-8037: explain the 101 byte count in `REGULAR_PER_AUTH_BASE_COST`",
+      "note_en": "(danceratopz), submitted; the number raised questions during the 8038 EELS implementation.",
+      "topic_en": "Repricing and scaling in Hegotá"
+    },
+    {
+      "topic": "FOCIL 与 L2 强制交易",
+      "title": "ethresear.ch：把 FOCIL 改造为 L2 强制交易机制",
+      "note": "16:39（donnoh），涉及 FOCIL（SFI）、可选执行证明（PFI）、BAL（SFI）、仅有效性的部分无状态和原生 rollup。",
+      "url": "https://ethresear.ch/t/repurposing-focil-as-an-l2-forced-transaction-mechanism/25233",
+      "date": "2026-06-19",
+      "title_en": "ethresear.ch: Repurposing FOCIL as an L2 forced transaction mechanism",
+      "note_en": "16:39 (donnoh), touching FOCIL (SFI), optional execution proofs (PFI), BALs (SFI), validity-only partial statelessness and native rollups.",
+      "topic_en": "FOCIL and L2 forced transactions"
+    },
+    {
+      "topic": "生态与资金",
+      "title": "fede_intern：多数核心团队工作并不出色，很多靠 EF 年复一年资助维持",
+      "note": "16:06。potuz：trent_vanepps 多年来研究这个问题，所有利益相关方都应读这份文档 21:38，文档涉及两个相互交织但独立的问题。",
+      "url": "https://x.com/fede_intern/status/2067896740070437113",
+      "date": "2026-06-19",
+      "title_en": "fede_intern: most core teams don't do great work, and many survive on EF funding year after year",
+      "note_en": "16:06. potuz: trent_vanepps has studied this topic for years, and everyone with a stake in Ethereum should read the document, 21:38; the document touches on two intertwined but independent problems.",
+      "topic_en": "Ecosystem and funding"
+    },
+    {
+      "topic": "生态与资金",
+      "title": "potuz：trent_vanepps 多年来研究这个问题，所有利益相关方都应读这份文档",
+      "note": "fede_intern：多数核心团队工作并不出色，很多靠 EF 年复一年资助维持 16:06。potuz：trent_vanepps 多年来研究这个问题，所有利益相关方都应读这份文档 21:38，文档涉及两个相互交织但独立的问题。",
+      "url": "https://x.com/potuz_eth/status/2067980356247003402",
+      "date": "2026-06-19",
+      "title_en": "potuz: trent_vanepps has studied this topic for years, and everyone with a stake in Ethereum should read the document",
+      "note_en": "Fede_intern: most core teams don't do great work, and many survive on EF funding year after year, 16:06. potuz: trent_vanepps has studied this topic for years, and everyone with a stake in Ethereum should read the document, 21:38; the document touches on two intertwined but independent problems.",
+      "topic_en": "Ecosystem and funding"
+    },
+    {
+      "topic": "生态与资金",
+      "title": "ethereum：过去一个月以太坊生态发布、升级和宣布的 25 件事",
+      "note": "03:16，第一项是 DAO Fund 与 Giveth 的以太坊安全二次方资助轮，支持 134 个安全项目、3934 名捐赠者。",
+      "url": "https://x.com/ethereum/status/2067703002111385609",
+      "date": "2026-06-19",
+      "title_en": "ethereum: 25 things the Ethereum ecosystem launched, upgraded and announced over the past month",
+      "note_en": "03:16, starting with the DAO Fund and Giveth Ethereum Security quadratic funding round, which supported 134 security projects with 3,934 donors.",
+      "topic_en": "Ecosystem and funding"
+    },
+    {
+      "topic": "生态与资金",
+      "title": "ethereumfndn：Tor Project 与 Funding Commons 的互联网自由二次方资助轮最后一天",
+      "note": "22:48，资助隐私和抗审查等方向的 10 个组织。",
+      "url": "https://x.com/ethereumfndn/status/2067997962555277501",
+      "date": "2026-06-19",
+      "title_en": "ethereumfndn: final day of the Internet Freedom quadratic funding round by Tor Project and Funding Commons",
+      "note_en": "22:48, funding 10 organizations in privacy, anti-censorship and related areas.",
+      "topic_en": "Ecosystem and funding"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #28",
+      "note": "22:16：Hsiao-Wei Wang 卸任、累计 100 万开发者、Glamsterdam 加入独立的 builder 存款与退出合约。",
+      "url": "https://x.com/EtherealnewsHQ/status/2067989831343608164",
+      "date": "2026-06-19",
+      "title_en": "Ethereal news #28",
+      "note_en": "22:16: Hsiao-Wei Wang stepped down, 1M lifetime developers, Glamsterdam adds separate builder deposit and exit contracts.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：代理服务咨询流程，组合代理 ERC（8004、8263、8274、8275、8281、8299、8301）的说明",
+      "note": "04:26。",
+      "url": "https://ethereum-magicians.org/t/composition-note-agent-service-consultation-flow-composing-the-agent-ercs-8004-8263-8274-8275-8281-8299-8301-informational/28833",
+      "date": "2026-06-19",
+      "title_en": "Magicians: Agent-Service Consultation Flow, a composition note for the agent ERCs (8004, 8263, 8274, 8275, 8281, 8299, 8301)",
+      "note_en": "04:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：没有可信守门人，futarchy 不安全",
+      "note": "20:02。",
+      "url": "https://ethresear.ch/t/futarchy-is-insecure-without-a-trusted-gatekeeper/25235",
+      "date": "2026-06-19",
+      "title_en": "ethresear.ch: Futarchy is insecure without a trusted gatekeeper",
+      "note_en": "20:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zooko：价值 5500 万美元的 Zcash 存在由匿名链上投票控制的基金中",
+      "note": "08:42。",
+      "url": "https://x.com/zooko/status/2067785009713590563",
+      "date": "2026-06-19",
+      "title_en": "zooko: $55m of Zcash sits in a fund controlled by anonymous onchain coin voting",
+      "note_en": "08:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：CCIP-Read 网关网状同步协议",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1826",
+      "date": "2026-06-19",
+      "title_en": "New ERC: Gateway Mesh Sync Protocol for CCIP-Read",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：隐私若不是毫不费力，就不真正有用",
+      "note": "13:05。",
+      "url": "https://x.com/EliBenSasson/status/2067851293503242511",
+      "date": "2026-06-19",
+      "title_en": "Eli Ben-Sasson: if privacy isn't effortless, it's not really useful",
+      "note_en": "13:05.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/scaling-in-hegota-using-the-eth-transfer-to-anchor-execution-and-bandwidth/25232",
+    "credit": "ethresear.ch, Scaling in Hegota: using the ETH transfer to anchor execution and bandwidth (misilva73)",
+    "local_path": "assets/2026-06-19.jpg",
+    "credit_en": "ethresear.ch, Scaling in Hegota: using the ETH transfer to anchor execution and bandwidth (misilva73)"
+  },
+  "keywords_en": [
+    "scaling in Hegotá anchored on the ETH transfer",
+    "FOCIL as an L2 forced transaction mechanism",
+    "EIP-8007 repricing summaries",
+    "the 101 bytes per authorization in EIP-8037",
+    "core dev funding debate",
+    "agent ERC composition note",
+    "Ethereal news #28"
+  ],
+  "summary_en": "misilva73 analyzed on ethresear.ch how Hegotá can keep raising the gas limit after Glamsterdam: the 21,000-gas ETH transfer bounds both execution and bandwidth. donnoh explored repurposing FOCIL as an L2 forced transaction mechanism. EIP-8007 updated the repricing summaries for 2780, 7904, 8037 and 8038 and was merged. The community debated how core dev teams are funded: fede_intern argued many core teams survive on EF funding, while potuz recommended trent_vanepps' document on the topic."
+}

@@ -1,0 +1,225 @@
+{
+  "date": "2026-06-23",
+  "keywords": [
+    "EF 新结构五个领域集群",
+    "EF 预算削减约 40%",
+    "PSE 收缩",
+    "Ethlabs 成立",
+    "EIP-8222 Lean Staking 合并",
+    "STRK20 信任假设",
+    "Aztec 达到 Stage 2",
+    "ERC-8312 有界代理操作",
+    "UBS 与 Nethermind 概念验证"
+  ],
+  "summary": "EF 发布新组织结构：协议层、访问层、用户层、社区层、机构层五个领域集群，另有运营与管理集群，同时减少 54 人，约占 20%。Vitalik 说明 EF 今年预算削减约 40%，向以长期捐赠基金为基础的组织转型。前 EF 协议研究人员成立非营利研发机构 Ethlabs。EIP-8222 Lean Staking 合并，它在 ACDE #238 上介绍过通过隐私池进行质押存款和提款。ethbeat 把 STRK20 加入隐私看板，指出单个管理员账户可以看到所有屏蔽转账。Aztec 在 L2BEAT 达到 Stage 2。",
+  "items": [
+    {
+      "topic": "EF 重组与预算",
+      "title": "EF 博客：EF 的新结构",
+      "note": "EF 结束数月重组，作为执行 Mandate 与 Treasury Management Policy 的一部分，现有协议层、访问层、用户层、社区层、机构层五个领域集群，另有运营集群和管理集群；同事减少 54 人，约占 EF 的 20%。协议集群负责硬化和扩展协议，把审查与俘获抗性、开源、隐私和安全作为不可妥协的协议保证，包括防御有害 MEV 和特权订单流，把后量子、zkEVM、L1 隐私等长期研究转化为协议改动；访问层负责让个人和代表他们的代理在读链、交易、证明、委托和退出时获得 CROPS 属性。",
+      "url": "https://blog.ethereum.org/en/2026/06/23/ef-structure",
+      "date": "2026-06-23",
+      "title_en": "EF blog: The EF's new structure",
+      "note_en": ". The EF concluded a months-long reorganization as part of implementing the Mandate and the Treasury Management Policy. It now has five domain clusters (protocol, access, user, community and institutional layers) plus an operations cluster and a management cluster, with 54 fewer colleagues, about 20% of the EF. The protocol cluster hardens and scales the protocol, treating censorship and capture resistance, open source, privacy and security as non-negotiable protocol guarantees, including defending against toxic MEV and privileged orderflow and turning long-horizon research such as post-quantum, zkEVM and L1 privacy into protocol changes. The access layer makes CROPS properties real for individuals, and the agents acting for them, when reading the chain, transacting, proving, delegating and exiting.",
+      "topic_en": "EF restructuring and budget"
+    },
+    {
+      "topic": "EF 重组与预算",
+      "title": "Vitalik：EF 今年预算削减约 40%，需要做出一些艰难决定",
+      "note": "21:44，目标是转型为面向长期、以捐赠基金为基础的组织。据 Ethereal news #29 的总结，削减涉及客户端（多客户端模式从冗余转向专业分工，探索 AI 辅助形式化验证）、PSE（Privacy Stewards of Ethereum 收缩，转为专注实现而非探索 ZKP 隐私与扩容）、Devcon（更小更简朴）等。",
+      "url": "https://x.com/VitalikButerin/status/2069431500035023121",
+      "date": "2026-06-23",
+      "title_en": "Vitalik: the EF is cutting its budget by roughly 40% this year, which entails some difficult decisions",
+      "note_en": "21:44, as it transitions to a long-term, endowment-based organization. Per Ethereal news #29's summary, the cuts touch clients (the multi-client model shifting from redundancy to specialization, exploring AI-assisted formal verification), PSE (Privacy Stewards of Ethereum winding down, focusing on implementing rather than exploring ZKP privacy and scaling), Devcon (smaller and more spartan) and more.",
+      "topic_en": "EF restructuring and budget"
+    },
+    {
+      "topic": "EF 重组与预算",
+      "title": "tkstanczak：从战略上看，这份清单是好的",
+      "note": "23:16。",
+      "url": "https://x.com/tkstanczak/status/2069454499509596582",
+      "date": "2026-06-23",
+      "title_en": "tkstanczak: strategically, this list is good",
+      "note_en": "23:16.",
+      "topic_en": "EF restructuring and budget"
+    },
+    {
+      "topic": "Ethlabs 成立",
+      "title": "ethlabs_org：宣布 Ethlabs，以太坊与 ETH 的非营利研发实验室",
+      "note": "00:03。据 Ethlabs 官网的 Thesis 页面，其使命是让以太坊成为全球经济的结算层；团队与用户、应用、钱包、L2、基础设施团队、机构、ETH 持有者、核心开发者和研究者合作，把实际需求转化为协议工作、共享标准、基础设施和产品，并称自己是“多节点未来”中的一个节点。",
+      "url": "https://x.com/ethlabs_org/status/2069104073245159573",
+      "date": "2026-06-23",
+      "title_en": "ethlabs_org: announcing Ethlabs, a non-profit R&D lab for Ethereum and ETH",
+      "note_en": "00:03. According to the Thesis page on the Ethlabs website, its mission is to make Ethereum the settlement layer of the global economy; the team works with users, applications, wallets, L2s, infrastructure teams, institutions, ETH holders, core devs and researchers to turn real needs into protocol work, shared standards, infrastructure and shipped products, and describes itself as one node in a \"multi-node future\".",
+      "topic_en": "Ethlabs founded"
+    },
+    {
+      "topic": "Ethlabs 成立",
+      "title": "Ethlabs 官网的 Thesis 页面",
+      "note": "ethlabs_org：宣布 Ethlabs，以太坊与 ETH 的非营利研发实验室 00:03。据 Ethlabs 官网的 Thesis 页面，其使命是让以太坊成为全球经济的结算层；团队与用户、应用、钱包、L2、基础设施团队、机构、ETH 持有者、核心开发者和研究者合作，把实际需求转化为协议工作、共享标准、基础设施和产品，并称自己是“多节点未来”中的一个节点。",
+      "url": "https://ethlabs.org/thesis.html",
+      "date": "2026-06-23",
+      "title_en": "Thesis page on the Ethlabs website",
+      "note_en": "Ethlabs_org: announcing Ethlabs, a non-profit R&D lab for Ethereum and ETH, 00:03. According to the Thesis page on the Ethlabs website, its mission is to make Ethereum the settlement layer of the global economy; the team works with users, applications, wallets, L2s, infrastructure teams, institutions, ETH holders, core devs and researchers to turn real needs into protocol work, shared standards, infrastructure and shipped products, and describes itself as one node in a \"multi-node future\".",
+      "topic_en": "Ethlabs founded"
+    },
+    {
+      "topic": "Ethlabs 成立",
+      "title": "casparschwa：很高兴开始 Ethlabs",
+      "note": "17:25，以太坊生态在加速去中心化，就像客户端多样性一样，成本和协调摩擦更高，但更有原则也更有韧性。",
+      "url": "https://x.com/casparschwa/status/2069366248228495844",
+      "date": "2026-06-23",
+      "title_en": "casparschwa: very excited to start Ethlabs",
+      "note_en": "17:25; Ethereum's ecosystem is accelerating its decentralization, which, like client diversity, costs more and adds coordination friction but is the principled and resilient path.",
+      "topic_en": "Ethlabs founded"
+    },
+    {
+      "topic": "隐私与质押",
+      "title": "新 EIP：Lean Staking",
+      "note": "（dmpierre）合并，即 EIP-8222。据 Ethereal news #26，它在 ACDE #238 上介绍过通过隐私池进行质押存款和提款。",
+      "url": "https://github.com/ethereum/EIPs/pull/11500",
+      "date": "2026-06-23",
+      "title_en": "New EIP: Lean Staking",
+      "note_en": "(dmpierre), merged; this is EIP-8222. Per Ethereal news #26, it was presented at ACDE #238 as staking deposits and withdrawals through a privacy pool.",
+      "topic_en": "Privacy and staking"
+    },
+    {
+      "topic": "隐私与质押",
+      "title": "ethbeat：把 Starknet 上的 STRK-20 加入隐私看板",
+      "note": "21:17，认为它是中心化的隐私池，信任假设与近期的机构隐私方案相当：单个管理员账户可以看到所有屏蔽转账。",
+      "url": "https://x.com/ethbeat_org/status/2069424716822032524",
+      "date": "2026-06-23",
+      "title_en": "ethbeat: STRK-20 on Starknet added to our privacy dashboard",
+      "note_en": "21:17, describing it as a centralized privacy pool with trust assumptions comparable to recent institutional privacy offerings: a single admin account has visibility over all shielded transfers.",
+      "topic_en": "Privacy and staking"
+    },
+    {
+      "topic": "隐私与质押",
+      "title": "aztecnetwork：Aztec 在 L2BEAT 达到 Stage 2",
+      "note": "02:36，链上治理撤销了 rollup 合约的所有权，代码不可变，没有管理员能覆盖协议，用户总能通过逃生通道退出。",
+      "url": "https://x.com/aztecnetwork/status/2069142485562175575",
+      "date": "2026-06-23",
+      "title_en": "aztecnetwork: Aztec reached Stage 2 on L2BEAT",
+      "note_en": "02:36; onchain governance revoked ownership of the rollup contract, the code is immutable, no admin can override the protocol, and users can always exit via the escape hatch.",
+      "topic_en": "Privacy and staking"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8312 有界代理操作",
+      "note": "21:29（blockbird），讨论非常活跃。它只做计量：记录代理在一项有界授权下已花掉多少，供下游合约查询剩余额度；对应 ERC PR 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8312-bounded-agent-actions/28851",
+      "date": "2026-06-23",
+      "title_en": "Magicians: ERC-8312 Bounded Agent Actions",
+      "note_en": "21:29 (blockbird), with very active discussion. It only meters: it tracks how much of a bounded mandate an agent has already spent so downstream contracts can look up what remains; the ERC PR was submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8312 有界代理操作 21:29（blockbird），讨论非常活跃。它只做计量：记录代理在一项有界授权下已花掉多少，供下游合约查询剩余额度；对应 ERC PR 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1833",
+      "date": "2026-06-23",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8312 Bounded Agent Actions, 21:29 (blockbird), with very active discussion. It only meters: it tracks how much of a bounded mandate an agent has already spent so downstream contracts can look up what remains; the ERC PR was submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：与 UBS 完成两个联合概念验证",
+      "note": "14:16，展示公共无需许可网络可以满足受监管金融机构的合规和运营需求。",
+      "url": "https://x.com/Nethermind/status/2069318707235410372",
+      "date": "2026-06-23",
+      "title_en": "Nethermind: completed two joint proofs of concept with UBS",
+      "note_en": "14:16, showing a public, permissionless network can support the compliance and operational needs of regulated financial institutions.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8180：加入 registerBlobBatches 原子多批次入口",
+      "note": "合并；ERC-5516 移至 Review 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1798",
+      "date": "2026-06-23",
+      "title_en": "ERC-8180: add registerBlobBatches atomic multi-batch entrypoint",
+      "note_en": "Merged; ERC-5516 to Review, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-5516 移至 Review",
+      "note": "ERC-8180：加入 registerBlobBatches 原子多批次入口 合并；ERC-5516 移至 Review 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1765",
+      "date": "2026-06-23",
+      "title_en": "ERC-5516 to Review",
+      "note_en": "ERC-8180: add registerBlobBatches atomic multi-batch entrypoint, merged; ERC-5516 to Review, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：ETHgent 测试网上线",
+      "note": "09:04。",
+      "url": "https://ethresear.ch/t/the-ethgent-testnet-officially-launches-today/25279",
+      "date": "2026-06-23",
+      "title_en": "ethresear.ch: the ETHgent testnet launches",
+      "note_en": "09:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #10 议程",
+      "note": "19:52；EVM 子程序 #1 议程 04:01。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-10-july-7-2026/28850",
+      "date": "2026-06-23",
+      "title_en": "FCR #10 agenda",
+      "note_en": "19:52; Subroutines for the EVM #1 agenda, 04:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EVM 子程序 #1 议程",
+      "note": "FCR #10 议程 19:52；EVM 子程序 #1 议程 04:01。",
+      "url": "https://ethereum-magicians.org/t/subroutines-for-the-evm-1-june-30-2026/28843",
+      "date": "2026-06-23",
+      "title_en": "Subroutines for the EVM #1 agenda",
+      "note_en": "FCR #10 agenda, 19:52; Subroutines for the EVM #1 agenda, 04:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：ETH 将成为后量子货币",
+      "note": "07:28。",
+      "url": "https://x.com/binji_x/status/2069215936905728028",
+      "date": "2026-06-23",
+      "title_en": "binji: ETH will become post-quantum money",
+      "note_en": "07:28.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：私密 KYC 意义重大",
+      "note": "20:33。",
+      "url": "https://x.com/EliBenSasson/status/2069413591028043974",
+      "date": "2026-06-23",
+      "title_en": "Eli Ben-Sasson: private KYC is huge",
+      "note_en": "20:33.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8312-bounded-agent-actions/28851",
+    "credit": "Ethereum Magicians, ERC-8312: Bounded Agent Actions (blockbird)",
+    "local_path": "assets/2026-06-23.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8312: Bounded Agent Actions (blockbird)"
+  },
+  "keywords_en": [
+    "EF's new structure with five domain clusters",
+    "EF budget cut by about 40%",
+    "PSE winding down",
+    "Ethlabs founded",
+    "EIP-8222 Lean Staking merged",
+    "STRK20 trust assumptions",
+    "Aztec reaches Stage 2",
+    "ERC-8312 Bounded Agent Actions",
+    "UBS and Nethermind proofs of concept"
+  ],
+  "summary_en": "The EF published its new structure: five domain clusters (protocol, access, user, community and institutional layers) plus operations and management clusters, with 54 fewer people, about 20%. Vitalik said the EF is cutting its budget by about 40% this year as it becomes a long-term, endowment-based organization. Former EF protocol researchers founded Ethlabs, a non-profit R&D lab. EIP-8222 Lean Staking was merged; it had been presented at ACDE #238 as staking deposits and withdrawals through a privacy pool. ethbeat added STRK20 to its privacy dashboard and noted that a single admin account can see all shielded transfers. Aztec reached Stage 2 on L2BEAT."
+}

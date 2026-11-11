@@ -1,0 +1,93 @@
+{
+  "date": "2026-06-07",
+  "keywords": [
+    "EIP-8289 多区块访问列表预热",
+    "Zcash Ironwood 形式化验证",
+    "AI 代理执行收据"
+  ],
+  "summary": "周日较安静。nerolation 提交 EIP-8289，让 EIP-2929 访问列表跨 256 个区块保持预热，而不是每笔交易重置，估计每区块 gas 中位数节省约 14%，代价约 10 MB 节点状态。Zcash 漏洞促成 Ironwood 项目，对 Orchard 支付电路做形式化验证。",
+  "items": [
+    {
+      "topic": "多区块访问列表预热",
+      "title": "新 EIP：多区块访问列表预热",
+      "note": "（nerolation）提交，即 EIP-8289。它加入一个 256 区块的滚动预热访问多重集合，通过区块头中的 SHA-256 SMT 根承诺，使 EIP-2929 访问列表跨区块延续：每区块 gas 中位数约省 14%，节点需多存约 10 MB 状态。",
+      "url": "https://github.com/ethereum/EIPs/pull/11776",
+      "date": "2026-06-07",
+      "title_en": "New EIP: Multi-block Access List Warming",
+      "note_en": "(nerolation), submitted; this is EIP-8289. It adds a 256-block rolling warm access multiset, committed via a SHA-256 SMT root in the block header, so the EIP-2929 access list carries across blocks: a median gas saving of about 14% per block, for about 10 MB of extra node state.",
+      "topic_en": "Multi-block access list warming"
+    },
+    {
+      "topic": "隐私系统的形式化验证",
+      "title": "Eli Ben-Sasson：Zcash 漏洞促成 Ironwood，对 Orchard 支付电路做形式化验证",
+      "note": "21:08，他表示 Starknet 做形式化验证已超过 5 年。Eli：Zcash 对事件的处理负责且专业 14:39。",
+      "url": "https://x.com/EliBenSasson/status/2063624173683970311",
+      "date": "2026-06-07",
+      "title_en": "Eli Ben-Sasson: the Zcash bug leads to Ironwood, formal verification of the Orchard payment circuit",
+      "note_en": "21:08; he noted that Starknet has done formal verification for over 5 years. Eli: Zcash handled the issue responsibly and professionally, 14:39.",
+      "topic_en": "Formal verification of privacy systems"
+    },
+    {
+      "topic": "隐私系统的形式化验证",
+      "title": "Eli：Zcash 对事件的处理负责且专业",
+      "note": "Eli Ben-Sasson：Zcash 漏洞促成 Ironwood，对 Orchard 支付电路做形式化验证 21:08，他表示 Starknet 做形式化验证已超过 5 年。Eli：Zcash 对事件的处理负责且专业 14:39。",
+      "url": "https://x.com/EliBenSasson/status/2063526237373350379",
+      "date": "2026-06-07",
+      "title_en": "Eli: Zcash handled the issue responsibly and professionally",
+      "note_en": "Eli Ben-Sasson: the Zcash bug leads to Ironwood, formal verification of the Orchard payment circuit, 21:08; he noted that Starknet has done formal verification for over 5 years. Eli: Zcash handled the issue responsibly and professionally, 14:39.",
+      "topic_en": "Formal verification of privacy systems"
+    },
+    {
+      "topic": "隐私系统的形式化验证",
+      "title": "fede_intern：隐私和零知识证明应向公众、企业和政府解释清楚",
+      "note": "20:17。",
+      "url": "https://x.com/fede_intern/status/2063611226425360862",
+      "date": "2026-06-07",
+      "title_en": "fede_intern: privacy and zero knowledge proofs should be explained clearly to the public, companies and governments",
+      "note_en": "20:17.",
+      "topic_en": "Formal verification of privacy systems"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：AI 代理的执行收据，链下证据、链上根与可验证会话证明",
+      "note": "05:40。",
+      "url": "https://ethereum-magicians.org/t/execution-receipts-for-ai-agents-off-chain-evidence-on-chain-roots-and-verifiable-session-proofs/28737",
+      "date": "2026-06-07",
+      "title_en": "Magicians: execution receipts for AI agents, offchain evidence, onchain roots and verifiable session proofs",
+      "note_en": "05:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊的确定性治理验证",
+      "note": "23:52。",
+      "url": "https://ethresear.ch/t/deterministic-governance-verification-for-ethereum/25116",
+      "date": "2026-06-07",
+      "title_en": "ethresear.ch: Deterministic Governance Verification for Ethereum",
+      "note_en": "23:52.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethresear.ch：合作资本主义是加密仅剩的连贯经济路径",
+      "note": "01:37。",
+      "url": "https://ethresear.ch/t/cooperative-capitalism-is-the-last-coherent-economic-path-crypto-has-left/25109",
+      "date": "2026-06-07",
+      "title_en": "ethresear.ch: Cooperative Capitalism Is the Last Coherent Economic Path Crypto Has Left",
+      "note_en": "01:37.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11776",
+    "credit": "GitHub, ethereum/EIPs PR #11776",
+    "local_path": "assets/2026-06-07.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11776"
+  },
+  "keywords_en": [
+    "EIP-8289 multi-block access list warming",
+    "Zcash Ironwood formal verification",
+    "execution receipts for AI agents"
+  ],
+  "summary_en": "A quiet Sunday. nerolation submitted EIP-8289, which keeps the EIP-2929 access list warm across 256 blocks instead of resetting it per transaction, for an estimated median gas saving of about 14% per block at a cost of about 10 MB of node state. The Zcash bug led to Ironwood, a formal verification effort for the Orchard payment circuit."
+}

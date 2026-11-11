@@ -1,0 +1,191 @@
+{
+  "date": "2026-06-06",
+  "keywords": [
+    "EIP-8288 后量子签名与 STARK 聚合 frame 类型",
+    "EIP-8272 frame 交易的 recent roots",
+    "ERC-7562 移至 Review",
+    "EIP-2542 被 EIP-8141 取代",
+    "EIP-8268 空存储根编码",
+    "trailmix 量子电路",
+    "Starknet v0.14.3"
+  ],
+  "summary": "Vitalik 提交 EIP-8288，为 frame 交易新增一种 frame 类型，让交易把后量子签名和 STARK 声明为“依赖”，由 mempool 和 builder 用一个递归 STARK 替换，从而在后量子时代以低 gas 支持签名与隐私证明。frame 交易的 recent roots 引用（EIP-8272）合并为 Draft。forshtat 清理旧 AA 相关标准：ERC-7562（ERC-4337 验证规则）提交移至 Review，EIP-2542 以被 EIP-8141 取代为由提交撤回。",
+  "items": [
+    {
+      "topic": "后量子时代的 frame 交易",
+      "title": "新 EIP：用于后量子签名和 STARK 聚合的 frame 类型",
+      "note": "（vbuterin）提交，Magicians 讨论帖 05:15，即 EIP-8288。交易可以把签名和 STARK（用于隐私或 L2 等）声明为“依赖”，mempool 和区块 builder 可以把它们替换成一个证明这些依赖全部存在的递归 STARK。",
+      "url": "https://github.com/ethereum/EIPs/pull/11772",
+      "date": "2026-06-06",
+      "title_en": "New EIP: Frame Type for PQ Sig and STARK Aggregation",
+      "note_en": "(vbuterin), submitted, with a Magicians thread at 05:15; this is EIP-8288. Transactions can declare signatures and STARKs (for privacy or for L2s) as \"dependencies\", which the mempool and block builder can replace with a recursive STARK proving that they all exist.",
+      "topic_en": "Frame transactions in a post-quantum world"
+    },
+    {
+      "topic": "后量子时代的 frame 交易",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：用于后量子签名和 STARK 聚合的 frame 类型（vbuterin）提交，Magicians 讨论帖 05:15，即 EIP-8288。交易可以把签名和 STARK（用于隐私或 L2 等）声明为“依赖”，mempool 和区块 builder 可以把它们替换成一个证明这些依赖全部存在的递归 STARK。",
+      "url": "https://ethereum-magicians.org/t/eip-8288-frame-type-for-pq-sig-and-stark-aggregation/28723",
+      "date": "2026-06-06",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: Frame Type for PQ Sig and STARK Aggregation (vbuterin), submitted, with a Magicians thread at 05:15; this is EIP-8288. Transactions can declare signatures and STARKs (for privacy or for L2s) as \"dependencies\", which the mempool and block builder can replace with a recursive STARK proving that they all exist.",
+      "topic_en": "Frame transactions in a post-quantum world"
+    },
+    {
+      "topic": "后量子时代的 frame 交易",
+      "title": "新 EIP：frame 交易的 recent roots 引用",
+      "note": "（soispoke）合并，即 EIP-8272。",
+      "url": "https://github.com/ethereum/EIPs/pull/11726",
+      "date": "2026-06-06",
+      "title_en": "New EIP: Recent Roots for Frame Transactions",
+      "note_en": "(soispoke), merged; this is EIP-8272.",
+      "topic_en": "Frame transactions in a post-quantum world"
+    },
+    {
+      "topic": "AA 相关标准的清理",
+      "title": "ERC-7562 移至 Review",
+      "note": "forshtat 批量整理旧提案：ERC-7562 移至 Review 提交（ERC-7562 是 ERC-4337 的账户抽象验证规则）；EIP-2542 撤回 提交，理由是已被 EIP-8141 取代；ERC-7766 撤回 提交并合并；ERC-2770 撤回 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1804",
+      "date": "2026-06-06",
+      "title_en": "ERC-7562 to Review",
+      "note_en": "Forshtat tidied up older proposals: ERC-7562 to Review, submitted (ERC-7562 is the account abstraction validation rules for ERC-4337); EIP-2542 to Withdrawn, submitted, as superseded by EIP-8141; ERC-7766 to Withdrawn, submitted and merged; ERC-2770 to Withdrawn, submitted.",
+      "topic_en": "Cleanup of AA related standards"
+    },
+    {
+      "topic": "AA 相关标准的清理",
+      "title": "EIP-2542 撤回",
+      "note": "forshtat 批量整理旧提案：ERC-7562 移至 Review 提交（ERC-7562 是 ERC-4337 的账户抽象验证规则）；EIP-2542 撤回 提交，理由是已被 EIP-8141 取代；ERC-7766 撤回 提交并合并；ERC-2770 撤回 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11773",
+      "date": "2026-06-06",
+      "title_en": "EIP-2542 to Withdrawn",
+      "note_en": "Forshtat tidied up older proposals: ERC-7562 to Review, submitted (ERC-7562 is the account abstraction validation rules for ERC-4337); EIP-2542 to Withdrawn, submitted, as superseded by EIP-8141; ERC-7766 to Withdrawn, submitted and merged; ERC-2770 to Withdrawn, submitted.",
+      "topic_en": "Cleanup of AA related standards"
+    },
+    {
+      "topic": "AA 相关标准的清理",
+      "title": "ERC-7766 撤回",
+      "note": "forshtat 批量整理旧提案：ERC-7562 移至 Review 提交（ERC-7562 是 ERC-4337 的账户抽象验证规则）；EIP-2542 撤回 提交，理由是已被 EIP-8141 取代；ERC-7766 撤回 提交并合并；ERC-2770 撤回 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1805",
+      "date": "2026-06-06",
+      "title_en": "ERC-7766 to Withdrawn",
+      "note_en": "Forshtat tidied up older proposals: ERC-7562 to Review, submitted (ERC-7562 is the account abstraction validation rules for ERC-4337); EIP-2542 to Withdrawn, submitted, as superseded by EIP-8141; ERC-7766 to Withdrawn, submitted and merged; ERC-2770 to Withdrawn, submitted.",
+      "topic_en": "Cleanup of AA related standards"
+    },
+    {
+      "topic": "AA 相关标准的清理",
+      "title": "ERC-2770 撤回",
+      "note": "forshtat 批量整理旧提案：ERC-7562 移至 Review 提交（ERC-7562 是 ERC-4337 的账户抽象验证规则）；EIP-2542 撤回 提交，理由是已被 EIP-8141 取代；ERC-7766 撤回 提交并合并；ERC-2770 撤回 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1803",
+      "date": "2026-06-06",
+      "title_en": "ERC-2770 to Withdrawn",
+      "note_en": "Forshtat tidied up older proposals: ERC-7562 to Review, submitted (ERC-7562 is the account abstraction validation rules for ERC-4337); EIP-2542 to Withdrawn, submitted, as superseded by EIP-8141; ERC-7766 to Withdrawn, submitted and merged; ERC-2770 to Withdrawn, submitted.",
+      "topic_en": "Cleanup of AA related standards"
+    },
+    {
+      "topic": "AA 相关标准的清理",
+      "title": "ERC-1613 退回 Draft",
+      "note": "提交：GSN 多年未开发，但仍在部分链上使用（包括 Polygon 上的 Polymarket），作者认为不宜撤回。",
+      "url": "https://github.com/ethereum/ERCs/pull/1802",
+      "date": "2026-06-06",
+      "title_en": "ERC-1613 back to Draft",
+      "note_en": "Submitted: GSN has not been developed for years but is still used on some chains (including by Polymarket on Polygon), so the author did not think withdrawing it made sense.",
+      "topic_en": "Cleanup of AA related standards"
+    },
+    {
+      "topic": "其他协议工作",
+      "title": "EIP-8268：空存储根编码为空字符串",
+      "note": "（CPerezz）提交并合并。此前存储树为空的账户也要在 BAL 中携带 32 字节的空树根，而一个区块中被修改的账户大多是只改余额的 EOA，改为空字符串可以减小 BAL。",
+      "url": "https://github.com/ethereum/EIPs/pull/11771",
+      "date": "2026-06-06",
+      "title_en": "EIP-8268: encode empty storage root as empty string",
+      "note_en": "(CPerezz), submitted and merged. Previously an account with an empty storage trie still had to carry the 32-byte empty trie root in the BAL, while most accounts changed in a block are EOAs that only change balance; an empty string makes BALs smaller.",
+      "topic_en": "Other protocol work"
+    },
+    {
+      "topic": "其他协议工作",
+      "title": "EIP-7807：范围缩小为非 headliner 核心",
+      "note": "（etan-status）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11774",
+      "date": "2026-06-06",
+      "title_en": "EIP-7807: reduce scope to non-headliner core",
+      "note_en": "(etan-status), submitted and merged.",
+      "topic_en": "Other protocol work"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trailofbits 发布 trailmix，一套量子 kickmix 电路工具",
+      "note": "02:30，含 5 个椭圆曲线加法电路（Shor 算法最难的部分）。",
+      "url": "https://x.com/trailofbits/status/2062980523232805164",
+      "date": "2026-06-06",
+      "title_en": "trailofbits released trailmix, a toolkit for quantum kickmix circuits",
+      "note_en": "02:30, with 5 circuits for elliptic curve addition, the hardest part of Shor's algorithm.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet v0.14.3 本月上线，测试网 6 月 9 日，主网 6 月 22 日",
+      "note": "19:04，包括按 STRK 价格动态调整 L2 gas 基础费、更快出块。",
+      "url": "https://x.com/StarkWareLtd/status/2063230462076576048",
+      "date": "2026-06-06",
+      "title_en": "StarkWare: Starknet v0.14.3 ships this month, testnet June 9, mainnet June 22",
+      "note_en": "19:04, including dynamic L2 gas base fees based on the STRK price and faster blocks.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：SIWE 门控的 NFT 媒体 URI",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1801",
+      "date": "2026-06-06",
+      "title_en": "New ERC: SIWE-Gated NFT Media URI",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：原生 ETH 代理间托管",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11770",
+      "date": "2026-06-06",
+      "title_en": "New EIP: Native-ETH Agent-to-Agent Escrow",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP Editing Office Hour #101 议程",
+      "note": "02:42。",
+      "url": "https://ethereum-magicians.org/t/eip-editing-office-hour-eip-erc-meeting-101-june-09-2026/28722",
+      "date": "2026-06-06",
+      "title_en": "EIP Editing Office Hour #101 agenda",
+      "note_en": "02:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：本周的隐私控制权深度文章与选择性披露开发者教程",
+      "note": "00:14。",
+      "url": "https://x.com/aztecnetwork/status/2062946133807386947",
+      "date": "2026-06-06",
+      "title_en": "aztecnetwork: this week's deep dive on who controls your privacy and a selective disclosure developer tutorial",
+      "note_en": "00:14.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8288-frame-type-for-pq-sig-and-stark-aggregation/28723",
+    "credit": "Ethereum Magicians, EIP-8288: Frame type for PQ sig and STARK aggregation (vbuterin)",
+    "local_path": "assets/2026-06-06.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8288: Frame type for PQ sig and STARK aggregation (vbuterin)"
+  },
+  "keywords_en": [
+    "EIP-8288 frame type for PQ sig and STARK aggregation",
+    "EIP-8272 recent roots for frame transactions",
+    "ERC-7562 to Review",
+    "EIP-2542 superseded by EIP-8141",
+    "EIP-8268 empty storage root encoding",
+    "trailmix quantum circuits",
+    "Starknet v0.14.3"
+  ],
+  "summary_en": "Vitalik submitted EIP-8288, a new frame type that lets a transaction declare post-quantum signatures and STARKs as \"dependencies\" that the mempool and builder replace with one recursive STARK, supporting signatures and privacy proofs cheaply in a post-quantum world. Recent root references for frame transactions (EIP-8272) were merged as a Draft. forshtat cleaned up older AA related standards: ERC-7562 (the ERC-4337 validation rules) was submitted for Review, and EIP-2542 was submitted for withdrawal as superseded by EIP-8141."
+}

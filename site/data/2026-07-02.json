@@ -1,0 +1,253 @@
+{
+  "date": "2026-07-02",
+  "keywords": [
+    "ACDE #240 Hegotá 非头条提案",
+    "EIP-8250 keyed nonce 与 EIP-8272 recent roots",
+    "EIP-8130 actor 策略",
+    "EIP-7928 撤回 7702 追踪",
+    "EIP-7997 工厂 nonce",
+    "EIP-8297 分区二叉树",
+    "SPREAD 匿名传播",
+    "Tempo 的交易类型实践"
+  ],
+  "summary": "ACDE #240 上 Thomas Thiery 提议 keyed nonce（EIP-8250）和 recent roots（EIP-8272）进入 Hegotá，Toni Wahrstätter 提议延迟状态根和区块访问列表 sidecar，Ben Adams 提议 SETCODEFROM（EIP-8298）；非头条提案截止日期为 8 月 6 日。EIP-8130 澄清 actor 策略模型，EIP-7928 恢复在预热之后检查 7702 委托。SPREAD 提出为 GossipSub 加入高效匿名传播。gakonst 用 Tempo 的经验谈扩展 EVM 与新交易类型的收益。",
+  "items": [
+    {
+      "topic": "ACDE #240：Hegotá 非头条提案",
+      "title": "nixorokish：Hegotá 非头条功能的提议截止日期是 8 月 6 日",
+      "note": "21:49。",
+      "url": "https://x.com/nixorokish/status/2072694193772728812",
+      "date": "2026-07-02",
+      "title_en": "nixorokish: the deadline for proposing non-headlining features for Hegotá is August 6",
+      "note_en": "21:49.",
+      "topic_en": "ACDE #240: Hegotá non-headliner proposals"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "EIP-8130：澄清 actor 策略并简化 metadata 字段",
+      "note": "（chunter-cb）提交并合并，无规范性变化：明确协议唯一的保证是非零 `policyType` 会把该密钥的调用限制在其 `manager` 上，32 字节 `commitment` 完全不透明，由 manager 定义含义。",
+      "url": "https://github.com/ethereum/EIPs/pull/11847",
+      "date": "2026-07-02",
+      "title_en": "EIP-8130: clarify actor policies and simplify the metadata field",
+      "note_en": "(chunter-cb), submitted and merged, with no normative change: the one protocol guarantee is that a non-zero `policyType` confines the key's calls to its `manager`, and the 32-byte `commitment` is fully opaque, with meaning defined by the manager.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "EIP-7928：撤回 7702 追踪改动",
+      "note": "（nerolation）合并，恢复“选项 1”：先预热再做检查，解析时读取的委托目标全部记录在内。EIP-7928：SSTORE 访问成本检查 提交，澄清 stipend 与冷状态的追踪。",
+      "url": "https://github.com/ethereum/EIPs/pull/11838",
+      "date": "2026-07-02",
+      "title_en": "EIP-7928: revert 7702 tracking",
+      "note_en": "(nerolation), merged, going back to \"option 1\": checks happen after warming, and the delegate read during resolution is all recorded. EIP-7928: SSTORE access cost check, submitted, clarifying stipend and cold state tracking.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "EIP-7928：SSTORE 访问成本检查",
+      "note": "EIP-7928：撤回 7702 追踪改动（nerolation）合并，恢复“选项 1”：先预热再做检查，解析时读取的委托目标全部记录在内。EIP-7928：SSTORE 访问成本检查 提交，澄清 stipend 与冷状态的追踪。",
+      "url": "https://github.com/ethereum/EIPs/pull/11854",
+      "date": "2026-07-02",
+      "title_en": "EIP-7928: SSTORE access cost check",
+      "note_en": "EIP-7928: revert 7702 tracking (nerolation), merged, going back to \"option 1\": checks happen after warming, and the delegate read during resolution is all recorded. EIP-7928: SSTORE access cost check, submitted, clarifying stipend and cold state tracking.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "删除 nonce 规定",
+      "note": "EIP-7997 工厂合约：删除 nonce 规定 合并；澄清非常规状态转换中的 nonce（nerolation）与 在摘要要求中加入非零 nonce（frangio）提交并合并；用助记符替换 Yul 和 澄清 7997 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11846",
+      "date": "2026-07-02",
+      "title_en": "remove specification of nonce",
+      "note_en": "EIP-7997 factory contract: remove specification of nonce, merged; clarify nonce for irregular state transition (nerolation) and add nonzero nonce to summary requirements (frangio), submitted and merged; replace Yul with mnemonics and clarify 7997, submitted.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "澄清非常规状态转换中的 nonce",
+      "note": "EIP-7997 工厂合约：删除 nonce 规定 合并；澄清非常规状态转换中的 nonce（nerolation）与 在摘要要求中加入非零 nonce（frangio）提交并合并；用助记符替换 Yul 和 澄清 7997 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11850",
+      "date": "2026-07-02",
+      "title_en": "clarify nonce for irregular state transition",
+      "note_en": "EIP-7997 factory contract: remove specification of nonce, merged; clarify nonce for irregular state transition (nerolation) and add nonzero nonce to summary requirements (frangio), submitted and merged; replace Yul with mnemonics and clarify 7997, submitted.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "在摘要要求中加入非零 nonce",
+      "note": "EIP-7997 工厂合约：删除 nonce 规定 合并；澄清非常规状态转换中的 nonce（nerolation）与 在摘要要求中加入非零 nonce（frangio）提交并合并；用助记符替换 Yul 和 澄清 7997 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11852",
+      "date": "2026-07-02",
+      "title_en": "add nonzero nonce to summary requirements",
+      "note_en": "EIP-7997 factory contract: remove specification of nonce, merged; clarify nonce for irregular state transition (nerolation) and add nonzero nonce to summary requirements (frangio), submitted and merged; replace Yul with mnemonics and clarify 7997, submitted.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "用助记符替换 Yul",
+      "note": "EIP-7997 工厂合约：删除 nonce 规定 合并；澄清非常规状态转换中的 nonce（nerolation）与 在摘要要求中加入非零 nonce（frangio）提交并合并；用助记符替换 Yul 和 澄清 7997 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11849",
+      "date": "2026-07-02",
+      "title_en": "replace Yul with mnemonics",
+      "note_en": "EIP-7997 factory contract: remove specification of nonce, merged; clarify nonce for irregular state transition (nerolation) and add nonzero nonce to summary requirements (frangio), submitted and merged; replace Yul with mnemonics and clarify 7997, submitted.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "EIP-8130、EIP-7928 与 EIP-7997",
+      "title": "澄清 7997",
+      "note": "EIP-7997 工厂合约：删除 nonce 规定 合并；澄清非常规状态转换中的 nonce（nerolation）与 在摘要要求中加入非零 nonce（frangio）提交并合并；用助记符替换 Yul 和 澄清 7997 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11851",
+      "date": "2026-07-02",
+      "title_en": "clarify 7997",
+      "note_en": "EIP-7997 factory contract: remove specification of nonce, merged; clarify nonce for irregular state transition (nerolation) and add nonzero nonce to summary requirements (frangio), submitted and merged; replace Yul with mnemonics and clarify 7997, submitted.",
+      "topic_en": "EIP-8130, EIP-7928 and EIP-7997"
+    },
+    {
+      "topic": "网络层隐私与交易类型之争",
+      "title": "ethresear.ch：SPREAD，为 GossipSub 加入高效匿名传播",
+      "note": "08:27（Diogo Cardoso、Matheus Franco、Rodrigo Rodrigues），已向 libp2p/specs 提交草案规范，并为 go-libp2p-pubsub 提交参考实现。",
+      "url": "https://ethresear.ch/t/spread-extending-gossipsub-with-efficient-anonymous-dissemination/25343",
+      "date": "2026-07-02",
+      "title_en": "ethresear.ch: SPREAD, extending GossipSub with efficient anonymous dissemination",
+      "note_en": "08:27 (Diogo Cardoso, Matheus Franco, Rodrigo Rodrigues), with a draft spec submitted to libp2p/specs and a reference implementation for go-libp2p-pubsub.",
+      "topic_en": "Network level privacy and the transaction type debate"
+    },
+    {
+      "topic": "网络层隐私与交易类型之争",
+      "title": "gakonst：谈通过扩展 EVM、增加交易类型来创新，在 Tempo 上的收益很实在：一键多步操作、限定范围的账户委托、费用抽象和安全托管",
+      "note": "20:01。",
+      "url": "https://x.com/gakonst/status/2072666973717057718",
+      "date": "2026-07-02",
+      "title_en": "gakonst: on innovating by extending the EVM and adding new tx types, the upside at Tempo was very real: one click multi step actions, scoped account delegation, fee abstraction and secure custody",
+      "note_en": "20:01.",
+      "topic_en": "Network level privacy and the transaction type debate"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：分区二叉树",
+      "note": "（weiihann）合并，即 EIP-8297。",
+      "url": "https://github.com/ethereum/EIPs/pull/11799",
+      "date": "2026-07-02",
+      "title_en": "New EIP: Partitioned Binary Tree",
+      "note_en": "(weiihann), merged as EIP-8297.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：根据 breakout 意见澄清 Rationale",
+      "note": "提交并合并；EIP-7773：更新升级阶段 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11848",
+      "date": "2026-07-02",
+      "title_en": "EIP-7979: clarify Rationale in response to breakout comments",
+      "note_en": "Submitted and merged; EIP-7773: update upgrade stages, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：更新升级阶段",
+      "note": "EIP-7979：根据 breakout 意见澄清 Rationale 提交并合并；EIP-7773：更新升级阶段 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11853",
+      "date": "2026-07-02",
+      "title_en": "EIP-7773: update upgrade stages",
+      "note_en": "EIP-7979: clarify Rationale in response to breakout comments, submitted and merged; EIP-7773: update upgrade stages, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：合约角色命名",
+      "note": "与 新 ERC：合约角色语义 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1846",
+      "date": "2026-07-02",
+      "title_en": "New ERC: Contract Role Naming",
+      "note_en": "And New ERC: Contract Role Semantics, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：合约角色语义",
+      "note": "新 ERC：合约角色命名 与 新 ERC：合约角色语义 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1847",
+      "date": "2026-07-02",
+      "title_en": "New ERC: Contract Role Semantics",
+      "note_en": "New ERC: Contract Role Naming and New ERC: Contract Role Semantics, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8289：多区块访问列表预热讨论帖",
+      "note": "13:18。",
+      "url": "https://ethereum-magicians.org/t/eip-8289-multi-block-access-list-warming/28912",
+      "date": "2026-07-02",
+      "title_en": "EIP-8289: Multi-block Access List Warming discussion thread",
+      "note_en": "13:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EthDreamer：基于 272987 个区块 graffiti 的客户端多样性统计",
+      "note": "04:42。",
+      "url": "https://x.com/EthDreamer/status/2072435669054459987",
+      "date": "2026-07-02",
+      "title_en": "EthDreamer: client diversity from graffiti in 272987 blocks",
+      "note_en": "04:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EtherealnewsHQ：EIP-8310 与 EIP-8311 新提案",
+      "note": "05:38。",
+      "url": "https://x.com/EtherealnewsHQ/status/2072449705708302627",
+      "date": "2026-07-02",
+      "title_en": "EtherealnewsHQ: new proposals EIP-8310 and EIP-8311",
+      "note_en": "05:38.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "gakonst：Foundry 推出符号测试 forge test --symbolic",
+      "note": "20:32。",
+      "url": "https://x.com/gakonst/status/2072674688359186681",
+      "date": "2026-07-02",
+      "title_en": "gakonst: symbolic testing in Foundry with forge test --symbolic",
+      "note_en": "20:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：量子是一次迁移，Starknet 的证明层用 STARK 且有原生 AA",
+      "note": "13:12。",
+      "url": "https://x.com/EliBenSasson/status/2072564012991062353",
+      "date": "2026-07-02",
+      "title_en": "Eli Ben-Sasson: quantum is a migration, and Starknet's proving layer uses STARKs and it has native AA",
+      "note_en": "13:12.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：salmon 是 saltwater monsters 的缩写",
+      "note": "21:25。",
+      "url": "https://x.com/VitalikButerin/status/2072688115550929387",
+      "date": "2026-07-02",
+      "title_en": "Vitalik: \"salmon\" is short for \"saltwater monsters\"",
+      "note_en": "21:25.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8289-multi-block-access-list-warming/28912",
+    "credit": "Ethereum Magicians, EIP-8289: Multi-block Access List Warming (Nerolation)",
+    "local_path": "assets/2026-07-02.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8289: Multi-block Access List Warming (Nerolation)"
+  },
+  "keywords_en": [
+    "ACDE #240 Hegotá non-headliner proposals",
+    "EIP-8250 keyed nonces and EIP-8272 recent roots",
+    "EIP-8130 actor policies",
+    "EIP-7928 reverts 7702 tracking",
+    "EIP-7997 factory nonce",
+    "EIP-8297 partitioned binary tree",
+    "SPREAD anonymous dissemination",
+    "Tempo's experience with transaction types"
+  ],
+  "summary_en": "On ACDE #240 Thomas Thiery proposed keyed nonces (EIP-8250) and recent roots (EIP-8272) for Hegotá, Toni Wahrstätter proposed delayed state root and block access list sidecars, and Ben Adams proposed SETCODEFROM (EIP-8298); the non-headliner deadline is August 6. EIP-8130 clarified its actor policy model, and EIP-7928 went back to checking 7702 delegations after warming. SPREAD proposed efficient anonymous dissemination for GossipSub. gakonst used Tempo's experience to discuss the upside of extending the EVM and adding transaction types."
+}

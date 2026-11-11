@@ -1,0 +1,206 @@
+{
+  "date": "2026-06-18",
+  "keywords": [
+    "ACDE #239",
+    "EIP-8282 CFI",
+    "EIP-7904 不再重定价",
+    "EIP-8130 默认 EOA 撤销改为状态标志",
+    "自身 actor 配置内联",
+    "EIP-8141 规范清理",
+    "EIP-2780 按资源拆解 21000",
+    "元数据泄露与 Etherveil 隐私浏览器",
+    "Hsiao-Wei Wang 卸任"
+  ],
+  "summary": "当晚 ACDE #239 把 EIP-8282 列为考虑纳入 Glamsterdam，devnet-6 目标下周中，并确认 EIP-7904 转为 Informational，因为客户端超过 100 Mgas/s 目标，无需计算重定价。chunter-cb 合并两项 EIP-8130 存储模型修改：默认 EOA 的撤销改为状态标志，自身 secp256k1 配置内联到账户状态槽，一次 SLOAD 即可解析。morph-dev 提交 EIP-8141 规范清理。pcaversaccio 在 ethresear.ch 提出基于 Tor Browser 的以太坊隐私浏览器 Etherveil。Hsiao-Wei Wang 卸任 EF 联合执行董事。",
+  "items": [
+    {
+      "topic": "ACDE #239",
+      "title": "EIP-2780 改为按资源拆解交易固有 gas",
+      "note": "同日合并的 gas 规范：EIP-2780 改为按资源拆解交易固有 gas（misilva73），标准转账仍是 21000，但由 `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST` 组成；EIP-8279 BAL 字节下限（nerolation），把 BAL 数据计入 EIP-7623 calldata 下限以降低最坏区块大小；EIP-8037 与 EIP-7928 冲突的解决；EIP-8038 初步数值。",
+      "url": "https://github.com/ethereum/EIPs/pull/11645",
+      "date": "2026-06-18",
+      "title_en": "EIP-2780 reworked as resource-based intrinsic transaction gas",
+      "note_en": "Gas specs merged the same day: EIP-2780 reworked as resource-based intrinsic transaction gas (misilva73), where a standard transfer is still 21,000 but built from `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST`; EIP-8279 Block Access List Byte Floor (nerolation), adding BAL data to the EIP-7623 calldata floor to reduce worst-case block size; the EIP-8037 fix for the EIP-7928 conflict; EIP-8038 preliminary numbers.",
+      "topic_en": "ACDE #239"
+    },
+    {
+      "topic": "ACDE #239",
+      "title": "EIP-8279 BAL 字节下限",
+      "note": "同日合并的 gas 规范：EIP-2780 改为按资源拆解交易固有 gas（misilva73），标准转账仍是 21000，但由 `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST` 组成；EIP-8279 BAL 字节下限（nerolation），把 BAL 数据计入 EIP-7623 calldata 下限以降低最坏区块大小；EIP-8037 与 EIP-7928 冲突的解决；EIP-8038 初步数值。",
+      "url": "https://github.com/ethereum/EIPs/pull/11739",
+      "date": "2026-06-18",
+      "title_en": "EIP-8279 Block Access List Byte Floor",
+      "note_en": "Gas specs merged the same day: EIP-2780 reworked as resource-based intrinsic transaction gas (misilva73), where a standard transfer is still 21,000 but built from `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST`; EIP-8279 Block Access List Byte Floor (nerolation), adding BAL data to the EIP-7623 calldata floor to reduce worst-case block size; the EIP-8037 fix for the EIP-7928 conflict; EIP-8038 preliminary numbers.",
+      "topic_en": "ACDE #239"
+    },
+    {
+      "topic": "ACDE #239",
+      "title": "EIP-8037 与 EIP-7928 冲突的解决",
+      "note": "同日合并的 gas 规范：EIP-2780 改为按资源拆解交易固有 gas（misilva73），标准转账仍是 21000，但由 `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST` 组成；EIP-8279 BAL 字节下限（nerolation），把 BAL 数据计入 EIP-7623 calldata 下限以降低最坏区块大小；EIP-8037 与 EIP-7928 冲突的解决；EIP-8038 初步数值。",
+      "url": "https://github.com/ethereum/EIPs/pull/11807",
+      "date": "2026-06-18",
+      "title_en": "the EIP-8037 fix for the EIP-7928 conflict",
+      "note_en": "Gas specs merged the same day: EIP-2780 reworked as resource-based intrinsic transaction gas (misilva73), where a standard transfer is still 21,000 but built from `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST`; EIP-8279 Block Access List Byte Floor (nerolation), adding BAL data to the EIP-7623 calldata floor to reduce worst-case block size; the EIP-8037 fix for the EIP-7928 conflict; EIP-8038 preliminary numbers.",
+      "topic_en": "ACDE #239"
+    },
+    {
+      "topic": "ACDE #239",
+      "title": "EIP-8038 初步数值",
+      "note": "同日合并的 gas 规范：EIP-2780 改为按资源拆解交易固有 gas（misilva73），标准转账仍是 21000，但由 `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST` 组成；EIP-8279 BAL 字节下限（nerolation），把 BAL 数据计入 EIP-7623 calldata 下限以降低最坏区块大小；EIP-8037 与 EIP-7928 冲突的解决；EIP-8038 初步数值。",
+      "url": "https://github.com/ethereum/EIPs/pull/11802",
+      "date": "2026-06-18",
+      "title_en": "EIP-8038 preliminary numbers",
+      "note_en": "Gas specs merged the same day: EIP-2780 reworked as resource-based intrinsic transaction gas (misilva73), where a standard transfer is still 21,000 but built from `TX_BASE_COST + COLD_ACCOUNT_ACCESS + TX_VALUE_COST + TRANSFER_LOG_COST`; EIP-8279 Block Access List Byte Floor (nerolation), adding BAL data to the EIP-7623 calldata floor to reduce worst-case block size; the EIP-8037 fix for the EIP-7928 conflict; EIP-8038 preliminary numbers.",
+      "topic_en": "ACDE #239"
+    },
+    {
+      "topic": "EIP-8130 存储模型与 EIP-8141 清理",
+      "title": "EIP-8130：把默认 EOA 撤销并入状态标志",
+      "note": "（chunter-cb）提交并合并。移除 `REVOKED_AUTHENTICATOR` 哨兵值：此前撤销隐式 EOA actor 要用魔数地址 `type(uint160).max` 覆盖其 `actor_config` 槽；现在用状态标志表示，并统一 secp256k1 认证路径，不改交易线上格式，默认更安全。",
+      "url": "https://github.com/ethereum/EIPs/pull/11815",
+      "date": "2026-06-18",
+      "title_en": "EIP-8130: fold default EOA revocation into a state flag",
+      "note_en": "(chunter-cb), submitted and merged. It removes the `REVOKED_AUTHENTICATOR` sentinel: revoking the implicit EOA actor used to mean overwriting its `actor_config` slot with the magic address `type(uint160).max`; now a state flag represents it and the secp256k1 authentication path is unified, with no wire format change and a safer default.",
+      "topic_en": "The EIP-8130 storage model and EIP-8141 cleanup"
+    },
+    {
+      "topic": "EIP-8130 存储模型与 EIP-8141 清理",
+      "title": "EIP-8130：自身 actor 的 secp256k1 配置内联到账户状态槽",
+      "note": "提交并合并。默认 EOA 的 `scope`、`policyType`、`expiry` 与 `DEFAULT_EOA_REVOKED` 放在同一个 32 字节账户状态槽中，账户自己的密钥（包括有范围限制的自身密钥）一次 SLOAD 即可解析。",
+      "url": "https://github.com/ethereum/EIPs/pull/11816",
+      "date": "2026-06-18",
+      "title_en": "EIP-8130: store the self-actor secp256k1 config inline in the account state slot",
+      "note_en": "Submitted and merged. The default EOA's `scope`, `policyType` and `expiry` live in the same 32-byte account state slot as `DEFAULT_EOA_REVOKED`, so the account's own key, including a scoped self, resolves in a single SLOAD.",
+      "topic_en": "The EIP-8130 storage model and EIP-8141 cleanup"
+    },
+    {
+      "topic": "EIP-8130 存储模型与 EIP-8141 清理",
+      "title": "EIP-8141：规范清理与澄清",
+      "note": "（morph-dev）提交：`sig.signer` 可为空，默认为 `tx.sender`；所有 `sig_hash` 都省略原始 `sig.signature` 字节，因为交易有效要求所有签名有效，承诺 `sig.msg` 已间接承诺签名，若不省略，未来就无法做签名聚合；mempool 部分涉及过期验证 frame 等。",
+      "url": "https://github.com/ethereum/EIPs/pull/11814",
+      "date": "2026-06-18",
+      "title_en": "EIP-8141: spec cleanup and clarifications",
+      "note_en": "(morph-dev), submitted: `sig.signer` may be empty and defaults to `tx.sender`; raw `sig.signature` bytes are left out of every `sig_hash`, since all signatures must be valid for the transaction to be valid, committing to `sig.msg` already commits to the signatures indirectly, and including them would block future signature aggregation; the mempool section covers the expiry verifier frame and more.",
+      "topic_en": "The EIP-8130 storage model and EIP-8141 cleanup"
+    },
+    {
+      "topic": "网络层隐私",
+      "title": "pcaversaccio：泄露 IP、user-agent、时区、语言等元数据就能完全破坏链上隐私",
+      "note": "02:07，用 Tor 也容易被识别为 Tor 用户，以太坊需要原生的浏览器。随后在 ethresear.ch 发布 Etherveil，以太坊隐私浏览器 16:14，基于 Firefox/Gecko 和 Tor Browser，目前是早期架构提案，征集反馈。",
+      "url": "https://x.com/pcaversaccio/status/2067323271436177600",
+      "date": "2026-06-18",
+      "title_en": "pcaversaccio: leaking metadata such as IP, user-agent, timezone and language settings can fully destroy onchain privacy",
+      "note_en": "02:07; using Tor also makes it easy to fingerprint you as a Tor user, and Ethereum needs its own native browser. He then posted Etherveil, an Ethereum privacy browser, on ethresear.ch, 16:14, based on Firefox/Gecko and Tor Browser; it is an early architectural proposal seeking feedback.",
+      "topic_en": "Network layer privacy"
+    },
+    {
+      "topic": "网络层隐私",
+      "title": "ethresear.ch 发布 Etherveil，以太坊隐私浏览器",
+      "note": "pcaversaccio：泄露 IP、user-agent、时区、语言等元数据就能完全破坏链上隐私 02:07，用 Tor 也容易被识别为 Tor 用户，以太坊需要原生的浏览器。随后在 ethresear.ch 发布 Etherveil，以太坊隐私浏览器 16:14，基于 Firefox/Gecko 和 Tor Browser，目前是早期架构提案，征集反馈。",
+      "url": "https://ethresear.ch/t/etherveil-an-ethereum-privacy-browser/25224",
+      "date": "2026-06-18",
+      "title_en": "Etherveil, an Ethereum privacy browser, on ethresear.ch",
+      "note_en": "Pcaversaccio: leaking metadata such as IP, user-agent, timezone and language settings can fully destroy onchain privacy, 02:07; using Tor also makes it easy to fingerprint you as a Tor user, and Ethereum needs its own native browser. He then posted Etherveil, an Ethereum privacy browser, on ethresear.ch, 16:14, based on Firefox/Gecko and Tor Browser; it is an early architectural proposal seeking feedback.",
+      "topic_en": "Network layer privacy"
+    },
+    {
+      "topic": "网络层隐私",
+      "title": "kassandraETH：如果更多人使用 Tornado Cash，作为基本的链上隐私习惯、扩大匿名集，并成为默认的钱包标准",
+      "note": "19:50。",
+      "url": "https://x.com/kassandraETH/status/2067590873886466215",
+      "date": "2026-06-18",
+      "title_en": "kassandraETH: what if way more people used Tornado Cash, as basic onchain privacy hygiene, to grow the anonymity set, and as a default wallet standard",
+      "note_en": "19:50.",
+      "topic_en": "Network layer privacy"
+    },
+    {
+      "topic": "网络层隐私",
+      "title": "StarkWare：Starknet v0.14.3 新增范围，客户端证明支持 Keccak，可用 EVM 签名发起虚拟私密交易；SNOS 哈希用 Blake 替换 Pedersen 以抗量子",
+      "note": "21:10。",
+      "url": "https://x.com/StarkWareLtd/status/2067610980876529744",
+      "date": "2026-06-18",
+      "title_en": "StarkWare: Starknet v0.14.3 adds Keccak support for client-side proving, enabling virtual private transactions signed with EVM signatures, and a quantum-resistant SNOS hash with Blake replacing Pedersen",
+      "note_en": "21:10.",
+      "topic_en": "Network layer privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：Hsiao-Wei Wang 十年来一直是以太坊生态的坚定贡献者",
+      "note": "21:30。据 Ethereal news #28，她卸任 EF 联合执行董事和董事会成员。",
+      "url": "https://x.com/VitalikButerin/status/2067616044911374428",
+      "date": "2026-06-18",
+      "title_en": "Vitalik: Hsiao-Wei Wang has been a steadfast contributor to the Ethereum ecosystem for a decade",
+      "note_en": "21:30. Per Ethereal news #28, she stepped down as EF co-executive director and board member.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC 资产强制的支出授权",
+      "note": "16:40（VladKuzR），由代币本身限制 AI 代理的单笔上限、过期时间、允许的代币，并可立即撤销。",
+      "url": "https://ethereum-magicians.org/t/erc-asset-enforced-spend-mandate/28831",
+      "date": "2026-06-18",
+      "title_en": "Magicians: ERC Asset-Enforced Spend Mandate",
+      "note_en": "16:40 (VladKuzR), where the token itself bounds what an AI agent may spend: per-transaction cap, expiry, allowed token, plus instant revoke.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethrex v17.0.0 发布",
+      "note": "01:01，维护版本。",
+      "url": "https://x.com/ethrex_client/status/2067306744863232272",
+      "date": "2026-06-18",
+      "title_en": "ethrex v17.0.0 released",
+      "note_en": "01:01, a maintenance release.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：JSON schema 升级到 2020-12",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1822",
+      "date": "2026-06-18",
+      "title_en": "ERC-7730: update JSON schema to 2020-12",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "SSZ Engine API #1 议程",
+      "note": "23:48。",
+      "url": "https://ethereum-magicians.org/t/ssz-engine-api-1-june-26-2026/28832",
+      "date": "2026-06-18",
+      "title_en": "SSZ Engine API #1 agenda",
+      "note_en": "23:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "jon_charb：ZK 的经典例子是不出示证件验证年龄，但英国等地的社交媒体年龄限制实现得很反乌托邦",
+      "note": "02:02。",
+      "url": "https://x.com/jon_charb/status/2067322081641926684",
+      "date": "2026-06-18",
+      "title_en": "jon_charb: the classic ZK example is age verification without showing ID, yet social media age limits in places like the UK look dystopian",
+      "note_en": "02:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/etherveil-an-ethereum-privacy-browser/25224",
+    "credit": "ethresear.ch, Etherveil: An Ethereum Privacy Browser (pcaversaccio)",
+    "local_path": "assets/2026-06-18.jpg",
+    "credit_en": "ethresear.ch, Etherveil: An Ethereum Privacy Browser (pcaversaccio)"
+  },
+  "keywords_en": [
+    "ACDE #239",
+    "EIP-8282 CFI",
+    "EIP-7904 no repricing",
+    "EIP-8130 default EOA revocation as a state flag",
+    "inline self-actor config",
+    "EIP-8141 spec cleanup",
+    "EIP-2780 resource-based 21",
+    "000",
+    "metadata leaks and the Etherveil privacy browser",
+    "Hsiao-Wei Wang steps down"
+  ],
+  "summary_en": "In the evening ACDE #239 listed EIP-8282 as considered for inclusion in Glamsterdam, targeted devnet-6 for mid next week, and confirmed EIP-7904 becomes Informational because clients exceed the 100 Mgas/s target and need no compute repricing. chunter-cb merged two EIP-8130 storage model changes: revoking the default EOA becomes a state flag, and the account's own secp256k1 config is inlined into the account state slot so it resolves in one SLOAD. morph-dev submitted an EIP-8141 spec cleanup. pcaversaccio proposed Etherveil, an Ethereum privacy browser built on Tor Browser, on ethresear.ch. Hsiao-Wei Wang stepped down as EF co-executive director."
+}

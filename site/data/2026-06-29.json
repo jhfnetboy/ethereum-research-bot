@@ -1,0 +1,127 @@
+{
+  "date": "2026-06-29",
+  "keywords": [
+    "Vitalik 不可区分混淆（iO）长文",
+    "以太坊状态访问剖析",
+    "EIP-7906 TXDIFF 按 EIP-2929 计价",
+    "Sybil 抗性的美元成本",
+    "ACDT #85"
+  ],
+  "summary": "Vitalik 发布一篇约一万字的长文，梳理主流不可区分混淆（iO）协议背后的整棵技术树。weiihann 在 ethresear.ch 发表以太坊状态访问剖析，为休眠状态分离、状态过期等研究提供数据基础。forshtat 为 EIP-7906 的 TXDIFF 指定按 EIP-2929 规则计价并合并。当晚召开 ACDT #85。",
+  "items": [
+    {
+      "topic": "隐私密码学：不可区分混淆",
+      "title": "Vitalik：一篇万字长文，梳理主流不可区分混淆（iO）协议背后的整棵技术树",
+      "note": "13:21。",
+      "url": "https://x.com/VitalikButerin/status/2071479076217348443",
+      "date": "2026-06-29",
+      "title_en": "Vitalik: a ten-thousand word monster post covering the entire tech tree behind the main lineage of obfuscation (iO) protocols",
+      "note_en": "13:21.",
+      "topic_en": "Privacy cryptography: indistinguishability obfuscation"
+    },
+    {
+      "topic": "隐私密码学：不可区分混淆",
+      "title": "ethresear.ch：伪造的价格，以美元衡量 Sybil 抗性（论文）",
+      "note": "15:53（porobov），提出用“攻破某种人格证明方法需要多少美元”作为共同度量。",
+      "url": "https://ethresear.ch/t/the-price-of-forgery-measuring-sybil-resistance-in-dollars-a-paper/25316",
+      "date": "2026-06-29",
+      "title_en": "ethresear.ch: The Price of Forgery, measuring Sybil resistance in dollars (a paper)",
+      "note_en": "15:53 (porobov), proposing \"how many dollars it costs to break a proof of personhood method\" as a shared metric.",
+      "topic_en": "Privacy cryptography: indistinguishability obfuscation"
+    },
+    {
+      "topic": "状态与 frame 交易",
+      "title": "ethresear.ch：以太坊状态访问剖析",
+      "note": "17:37（weiihann）。每笔交易都读写余额、nonce、代码和存储槽，随着链增长，越来越多状态长期无人触碰，因此有分离休眠状态、让休眠状态过期、创建新形式状态等提案；报告为这些研究提供实证数据。",
+      "url": "https://ethresear.ch/t/the-anatomy-of-ethereum-s-state-access/25317",
+      "date": "2026-06-29",
+      "title_en": "ethresear.ch: The Anatomy of Ethereum's State Access",
+      "note_en": "17:37 (weiihann). Every transaction reads and writes balances, nonces, code and storage slots; as the chain grows, more state goes untouched for a long time, which is why proposals look at separating dormant state, expiring it or creating new forms of state. The report provides empirical data for that research.",
+      "topic_en": "State and frame transactions"
+    },
+    {
+      "topic": "状态与 frame 交易",
+      "title": "EIP-7906：TXDIFF 按 EIP-2929 计价，删除重复段落",
+      "note": "（forshtat）提交并合并：存储槽参数按 `COLD_SLOAD_COST`/`WARM_STORAGE_READ_COST`，余额和 codehash 参数按 `COLD_ACCOUNT_ACCESS_COST`/`WARM_STORAGE_READ_COST`，取代待定的固定费用。",
+      "url": "https://github.com/ethereum/EIPs/pull/11840",
+      "date": "2026-06-29",
+      "title_en": "EIP-7906: TXDIFF priced by EIP-2929 rules, duplicate paragraph removed",
+      "note_en": "(forshtat), submitted and merged: storage slot parameters use `COLD_SLOAD_COST`/`WARM_STORAGE_READ_COST`, and balance and codehash parameters use `COLD_ACCOUNT_ACCESS_COST`/`WARM_STORAGE_READ_COST`, replacing a flat placeholder cost.",
+      "topic_en": "State and frame transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zkSecurity：在所有头部 ZK 项目的电路中都发现过漏洞，并帮助它们形式化验证替代实现",
+      "note": "00:31。",
+      "url": "https://x.com/zksecurityXYZ/status/2071285319056375883",
+      "date": "2026-06-29",
+      "title_en": "zkSecurity: has found bugs in circuits of all the top ZK projects and helps them formally verify replacements",
+      "note_en": "00:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8226：加入参考实现并完善规范",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1844",
+      "date": "2026-06-29",
+      "title_en": "ERC-8226: add reference implementation and refine spec",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #37 议程",
+      "note": "20:59；EIP Editing Office Hour #104 议程 21:47。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-37-june-30-2026/28886",
+      "date": "2026-06-29",
+      "title_en": "FOCIL Breakout #37 agenda",
+      "note_en": "20:59; EIP Editing Office Hour #104 agenda, 21:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP Editing Office Hour #104 议程",
+      "note": "FOCIL Breakout #37 议程 20:59；EIP Editing Office Hour #104 议程 21:47。",
+      "url": "https://ethereum-magicians.org/t/eip-editing-office-hour-eip-erc-meeting-104-june-30-2026/28887",
+      "date": "2026-06-29",
+      "title_en": "EIP Editing Office Hour #104 agenda",
+      "note_en": "FOCIL Breakout #37 agenda, 20:59; EIP Editing Office Hour #104 agenda, 21:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：2026 年如何做出色的加密消费应用，加密应是底层和新体验的入口",
+      "note": "17:09。",
+      "url": "https://x.com/binji_x/status/2071536552123994203",
+      "date": "2026-06-29",
+      "title_en": "binji: how to build a great crypto consumer app in 2026, with crypto as the substrate and the access point to new experiences",
+      "note_en": "17:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：未来五年能存活的区块链项目都会提供隐私并重视量子就绪",
+      "note": "17:43。",
+      "url": "https://x.com/EliBenSasson/status/2071545009426301040",
+      "date": "2026-06-29",
+      "title_en": "Eli Ben-Sasson: the blockchain projects that survive the next five years will offer privacy and prioritize quantum readiness",
+      "note_en": "17:43.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/the-anatomy-of-ethereum-s-state-access/25317",
+    "credit": "ethresear.ch, The Anatomy of Ethereum's State Access (weiihann)",
+    "local_path": "assets/2026-06-29.jpg",
+    "credit_en": "ethresear.ch, The Anatomy of Ethereum's State Access (weiihann)"
+  },
+  "keywords_en": [
+    "Vitalik's long post on indistinguishability obfuscation (iO)",
+    "the anatomy of Ethereum's state access",
+    "EIP-7906 TXDIFF priced by EIP-2929",
+    "Sybil resistance measured in dollars",
+    "ACDT #85"
+  ],
+  "summary_en": "Vitalik published a post of about ten thousand words covering the whole tech tree behind the main lineage of indistinguishability obfuscation (iO) protocols. weiihann published The Anatomy of Ethereum's State Access on ethresear.ch, giving an empirical base for research on separating or expiring dormant state. forshtat specified EIP-2929 based pricing for EIP-7906's TXDIFF, and it was merged. ACDT #85 was held in the evening."
+}

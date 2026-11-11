@@ -1,0 +1,75 @@
+{
+  "date": "2026-06-14",
+  "keywords": [
+    "ERC-8301 AI 代理执行",
+    "隐身地址名称解析",
+    "STRK20 每笔约 0.14 美元",
+    "EIP-1 重新定义 meta EIP"
+  ],
+  "summary": "周日较安静。Magicians 上 ERC-8301 AI 代理执行的讨论帖热度很高，它定义链上 AI 代理任务分派的三个最小接口。collinsadi 发布隐身地址名称解析草案，让 ENS 名称解析到 ERC-6538 的隐身元地址，并支持跨链只读镜像。",
+  "items": [
+    {
+      "topic": "隐身地址的名称解析",
+      "title": "Magicians：隐身名称解析草案，跨异步链的隐身元地址名称",
+      "note": "03:54（collinsadi）。以太坊上的规范注册表同时充当某个父 ENS 名称的注册器和 ENSIP-10 通配解析器，提供 `com.opaque.meta` 文本记录；注册表可直接存储密钥，也可实时从 ERC-6538 注册表读取。草案还定义与传输方式无关的镜像载荷，让另一条链维护只读名称记录，而无需查询以太坊 RPC。",
+      "url": "https://ethereum-magicians.org/t/draft-proposal-stealth-name-resolution-stealth-meta-address-names-across-asynchronous-chains/28787",
+      "date": "2026-06-14",
+      "title_en": "Magicians: draft proposal for Stealth Name Resolution, stealth meta-address names across asynchronous chains",
+      "note_en": "03:54 (collinsadi). A canonical Ethereum registry acts as both registrar and ENSIP-10 wildcard resolver for a parent ENS name, serving a `com.opaque.meta` text record; it can store keys directly or source them live from the ERC-6538 registry. The draft also defines a transport-agnostic mirror payload so a second chain can keep read-only name records without querying an Ethereum RPC.",
+      "topic_en": "Name resolution for stealth addresses"
+    },
+    {
+      "topic": "AI 代理执行",
+      "title": "Magicians：ERC-8301 AI 代理执行",
+      "note": "02:34（JimmyShi22），定义 `AgentTask`、`IAgentCaller`、`IAgentHandler` 三个最小接口，以及从单个代理调用扩展到分布式多轮共识的可组合工作流模型。",
+      "url": "https://ethereum-magicians.org/t/erc-8301-ai-agent-execution/28785",
+      "date": "2026-06-14",
+      "title_en": "Magicians: ERC-8301 AI Agent Execution",
+      "note_en": "02:34 (JimmyShi22), defining three minimal interfaces, `AgentTask`, `IAgentCaller` and `IAgentHandler`, plus a composable workflow model that scales from a single agent call to distributed multi-round consensus.",
+      "topic_en": "AI agent execution"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：STRK20 是为 DeFi 设计的隐私，每笔约 0.14 美元，可组合，一键开关",
+      "note": "15:24。",
+      "url": "https://x.com/EliBenSasson/status/2066074183298109467",
+      "date": "2026-06-14",
+      "title_en": "Eli Ben-Sasson: STRK20 is privacy designed for DeFi, about $0.14 per transaction, composable, one click to opt in or out",
+      "note_en": "15:24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-1：重新定义 meta EIP",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11804",
+      "date": "2026-06-14",
+      "title_en": "EIP-1: redefine what a meta EIP is",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：用 loop 重建 AI 原生、代理优先的以太坊钱包",
+      "note": "22:19。",
+      "url": "https://x.com/zengjiajun_eth/status/2066178776094867729",
+      "date": "2026-06-14",
+      "title_en": "zengjiajun_eth: rebuilding an AI native, agent first Ethereum wallet with loop",
+      "note_en": "22:19.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8301-ai-agent-execution/28785",
+    "credit": "Ethereum Magicians, ERC-8301: AI Agent Execution (JimmyShi22)",
+    "local_path": "assets/2026-06-14.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8301: AI Agent Execution (JimmyShi22)"
+  },
+  "keywords_en": [
+    "ERC-8301 AI agent execution",
+    "stealth name resolution",
+    "STRK20 at about $0.14 per transaction",
+    "EIP-1 redefines meta EIPs"
+  ],
+  "summary_en": "A quiet Sunday. The Magicians thread for ERC-8301 AI Agent Execution drew a lot of attention; it defines three minimal interfaces for onchain AI agent task dispatch. collinsadi published a draft for stealth name resolution, letting ENS names resolve to ERC-6538 stealth meta-addresses with read-only mirrors on other chains."
+}

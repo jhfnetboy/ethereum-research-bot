@@ -1,0 +1,223 @@
+{
+  "date": "2026-06-05",
+  "keywords": [
+    "Zcash Orchard 漏洞",
+    "隐私协议与 ZK 的可审计性",
+    "EIP-8037 状态 gas 上调 5 到 8 倍",
+    "EIP-8130 定稿整理",
+    "ERC-8290 屏蔽票据跨协议转移",
+    "ERC-8283 Clear Signing 注册表",
+    "后量子 ERC-4337 钱包",
+    "Ethereal news #26"
+  ],
+  "summary": "Zcash 的 Orchard 池曝出漏洞，以太坊社区讨论隐私系统中漏洞难以察觉的问题，ameensol 建议用户退出 Orchard 池以检验是否被利用。lightclient 提醒 EIP-8037 已排入 Glamsterdam，新建账户和写入新存储槽的 gas 将上升 5 到 8 倍，征集可能受影响的协议。EIP-8130 完成整理定稿和修订。ERC-8290 提出在 UTXO 隐私协议之间直接转移屏蔽票据。",
+  "items": [
+    {
+      "topic": "EIP-8037 与账户相关的 gas 变化",
+      "title": "lightclient：EIP-8037 已排入 Glamsterdam，新建账户和写入新存储槽的 gas 将上升 5 到 8 倍",
+      "note": "00:50，询问哪些协议对状态 gas 成本有硬编码预期、哪些可能出问题。",
+      "url": "https://x.com/lightclients/status/2062592768439202225",
+      "date": "2026-06-05",
+      "title_en": "lightclient: EIP-8037 is scheduled for Glamsterdam and will increase the gas cost of creating new accounts and writing new storage slots by 5 to 8x",
+      "note_en": "00:50, asking which protocols hard-code state gas expectations and what might break.",
+      "topic_en": "EIP-8037 and account related gas changes"
+    },
+    {
+      "topic": "EIP-8130 与钱包签名安全",
+      "title": "EIP-8130：清理、重组并定稿",
+      "note": "（chunter-cb）提交并合并；EIP-8130：修复与澄清 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11767",
+      "date": "2026-06-05",
+      "title_en": "EIP-8130: clean up, reorganize and finalize pass",
+      "note_en": "(chunter-cb), submitted and merged; EIP-8130: fixes and clarifications, submitted and merged.",
+      "topic_en": "EIP-8130 and wallet signing safety"
+    },
+    {
+      "topic": "EIP-8130 与钱包签名安全",
+      "title": "EIP-8130：修复与澄清",
+      "note": "EIP-8130：清理、重组并定稿（chunter-cb）提交并合并；EIP-8130：修复与澄清 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11769",
+      "date": "2026-06-05",
+      "title_en": "EIP-8130: fixes and clarifications",
+      "note_en": "EIP-8130: clean up, reorganize and finalize pass (chunter-cb), submitted and merged; EIP-8130: fixes and clarifications, submitted and merged.",
+      "topic_en": "EIP-8130 and wallet signing safety"
+    },
+    {
+      "topic": "EIP-8130 与钱包签名安全",
+      "title": "Magicians：ERC-8283 ERC-7730 Clear Signing 描述符的链上注册表",
+      "note": "21:37（alex-forshtat-tbk）。ERC-7730 解决盲签问题，但没有规定社区如何无需许可地维护和更新描述符注册表，本提案补上这一点。",
+      "url": "https://ethereum-magicians.org/t/erc-8283-on-chain-registry-for-erc-7730-clear-signing-descriptors/28717",
+      "date": "2026-06-05",
+      "title_en": "Magicians: ERC-8283 On-Chain Registry for ERC-7730 Clear Signing Descriptors",
+      "note_en": "21:37 (alex-forshtat-tbk). ERC-7730 addresses blind signing but does not specify how the community can permissionlessly maintain and update the descriptor registry; this proposal fills that gap.",
+      "topic_en": "EIP-8130 and wallet signing safety"
+    },
+    {
+      "topic": "EIP-8130 与钱包签名安全",
+      "title": "Magicians：后量子 ERC-4337 钱包 WOTS-39",
+      "note": "11:50，基于 Winternitz 一次性签名。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-erc-4337-wots-39-winternitz-one-time-signature-wallet-for-ethereum/28715",
+      "date": "2026-06-05",
+      "title_en": "Magicians: post-quantum ERC-4337 wallet WOTS-39",
+      "note_en": "11:50, based on Winternitz one-time signatures.",
+      "topic_en": "EIP-8130 and wallet signing safety"
+    },
+    {
+      "topic": "隐私：Zcash 漏洞与跨协议屏蔽票据",
+      "title": "ameensol：Zcash 用户应鼓励大家退出 Orchard 池",
+      "note": "07:27，目前除了集体退出看最后退出者是否卡住（turnstile 要求流出等于流入）之外，无法知道漏洞是否被利用。Eli Ben-Sasson：若黑客已利用漏洞，几天内大概率会知道，因为黑客会急于通过 turnstile 取出 14:51。",
+      "url": "https://x.com/ameensol/status/2062692764140310542",
+      "date": "2026-06-05",
+      "title_en": "ameensol: zcashers should encourage everyone to exit the Orchard pool",
+      "note_en": "07:27; right now there is no way to know whether the exploit was used other than a mass exit to see whether the last ones out get stuck (the turnstile enforces out = in). Eli Ben-Sasson: if a hacker used the exploit we will likely know within days, as they rush to the turnstile to unshield, 14:51.",
+      "topic_en": "Privacy: the Zcash bug and cross-protocol shielded notes"
+    },
+    {
+      "topic": "隐私：Zcash 漏洞与跨协议屏蔽票据",
+      "title": "Eli Ben-Sasson：若黑客已利用漏洞，几天内大概率会知道，因为黑客会急于通过 turnstile 取出",
+      "note": "ameensol：Zcash 用户应鼓励大家退出 Orchard 池 07:27，目前除了集体退出看最后退出者是否卡住（turnstile 要求流出等于流入）之外，无法知道漏洞是否被利用。Eli Ben-Sasson：若黑客已利用漏洞，几天内大概率会知道，因为黑客会急于通过 turnstile 取出 14:51。",
+      "url": "https://x.com/EliBenSasson/status/2062804412003705290",
+      "date": "2026-06-05",
+      "title_en": "Eli Ben-Sasson: if a hacker used the exploit we will likely know within days, as they rush to the turnstile to unshield",
+      "note_en": "Ameensol: zcashers should encourage everyone to exit the Orchard pool, 07:27; right now there is no way to know whether the exploit was used other than a mass exit to see whether the last ones out get stuck (the turnstile enforces out = in). Eli Ben-Sasson: if a hacker used the exploit we will likely know within days, as they rush to the turnstile to unshield, 14:51.",
+      "topic_en": "Privacy: the Zcash bug and cross-protocol shielded notes"
+    },
+    {
+      "topic": "隐私：Zcash 漏洞与跨协议屏蔽票据",
+      "title": "dankrad：这是 ZK 的普遍问题，漏洞利用变得无法检测",
+      "note": "16:29，他因此一直对只发布状态变化的 ZK rollup 持怀疑态度。pcaversaccio：Zcash 拥有最好的安全与密码学人才 14:54。",
+      "url": "https://x.com/dankrad/status/2062829270913679414",
+      "date": "2026-06-05",
+      "title_en": "dankrad: this is a general problem with zk, exploits become impossible to detect",
+      "note_en": "16:29, which is why he was always skeptical of zk rollups that only publish state changes. pcaversaccio: Zcash has some of the best security and cryptography people, 14:54.",
+      "topic_en": "Privacy: the Zcash bug and cross-protocol shielded notes"
+    },
+    {
+      "topic": "隐私：Zcash 漏洞与跨协议屏蔽票据",
+      "title": "pcaversaccio：Zcash 拥有最好的安全与密码学人才",
+      "note": "dankrad：这是 ZK 的普遍问题，漏洞利用变得无法检测 16:29，他因此一直对只发布状态变化的 ZK rollup 持怀疑态度。pcaversaccio：Zcash 拥有最好的安全与密码学人才 14:54。",
+      "url": "https://x.com/pcaversaccio/status/2062805325120696456",
+      "date": "2026-06-05",
+      "title_en": "pcaversaccio: Zcash has some of the best security and cryptography people",
+      "note_en": "Dankrad: this is a general problem with zk, exploits become impossible to detect, 16:29, which is why he was always skeptical of zk rollups that only publish state changes. pcaversaccio: Zcash has some of the best security and cryptography people, 14:54.",
+      "topic_en": "Privacy: the Zcash bug and cross-protocol shielded notes"
+    },
+    {
+      "topic": "隐私：Zcash 漏洞与跨协议屏蔽票据",
+      "title": "新 ERC：屏蔽票据转移",
+      "note": "（geovgy）提交，Magicians 讨论帖 23:39，即 ERC-8290。作者在研究 EIP-7503 zkwormhole 时发现，可让用户在 Tornado Cash、0xbow Privacy Pools、Railgun 等 UTXO 隐私协议之间转移资产，而无需公开取出再存入。",
+      "url": "https://github.com/ethereum/ERCs/pull/1800",
+      "date": "2026-06-05",
+      "title_en": "New ERC: Shielded Note Teleportation",
+      "note_en": "(geovgy), submitted, with a Magicians thread at 23:39; this is ERC-8290. While exploring EIP-7503 zkwormholes, the author found a way to move assets between UTXO privacy protocols such as Tornado Cash, 0xbow's Privacy Pools and Railgun without publicly withdrawing and redepositing.",
+      "topic_en": "Privacy: the Zcash bug and cross-protocol shielded notes"
+    },
+    {
+      "topic": "隐私：Zcash 漏洞与跨协议屏蔽票据",
+      "title": "Magicians 讨论帖",
+      "note": "新 ERC：屏蔽票据转移（geovgy）提交，Magicians 讨论帖 23:39，即 ERC-8290。作者在研究 EIP-7503 zkwormhole 时发现，可让用户在 Tornado Cash、0xbow Privacy Pools、Railgun 等 UTXO 隐私协议之间转移资产，而无需公开取出再存入。",
+      "url": "https://ethereum-magicians.org/t/erc-8290-shielded-note-teleportation/28721",
+      "date": "2026-06-05",
+      "title_en": "Magicians thread",
+      "note_en": "New ERC: Shielded Note Teleportation (geovgy), submitted, with a Magicians thread at 23:39; this is ERC-8290. While exploring EIP-7503 zkwormholes, the author found a way to move assets between UTXO privacy protocols such as Tornado Cash, 0xbow's Privacy Pools and Railgun without publicly withdrawing and redepositing.",
+      "topic_en": "Privacy: the Zcash bug and cross-protocol shielded notes"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #26",
+      "note": "15:44：Justin Drake 的 qday 概率、Aave rsETH 事后分析、glamsterdam-devnet-5 上线。",
+      "url": "https://x.com/EtherealnewsHQ/status/2062817799953928678",
+      "date": "2026-06-05",
+      "title_en": "Ethereal news #26",
+      "note_en": "15:44: Justin Drake's qday odds, the Aave rsETH post mortem, glamsterdam-devnet-5 launched.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat：Scroll 完成治理过渡，用 3-of-4 多签取代 9-of-12 安全委员会",
+      "note": "20:49。",
+      "url": "https://x.com/ethbeat_org/status/2062894639477104830",
+      "date": "2026-06-05",
+      "title_en": "ethbeat: Scroll completed its governance transition, replacing the 9-of-12 Security Council with a 3-of-4 multisig",
+      "note_en": "20:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8291 SIWE 门控的 NFT 媒体 URI",
+      "note": "05:17。",
+      "url": "https://ethereum-magicians.org/t/erc-8291-siwe-gated-nft-media-uri/28708",
+      "date": "2026-06-05",
+      "title_en": "Magicians: ERC-8291 SIWE-Gated NFT Media URI",
+      "note_en": "05:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：AI 代理身份与威胁注册表",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11768",
+      "date": "2026-06-05",
+      "title_en": "New EIP: AI Agent Identity and Threat Registry",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Encrypt The Mempool #5 议程",
+      "note": "00:52；L1-zkEVM breakout #05 议程 17:50。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-5-june-10-2026/28703",
+      "date": "2026-06-05",
+      "title_en": "Encrypt The Mempool #5 agenda",
+      "note_en": "00:52; L1-zkEVM breakout #05 agenda, 17:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L1-zkEVM breakout #05 议程",
+      "note": "Encrypt The Mempool #5 议程 00:52；L1-zkEVM breakout #05 议程 17:50。",
+      "url": "https://ethereum-magicians.org/t/l1-zkevm-breakout-05-june-10-2026/28716",
+      "date": "2026-06-05",
+      "title_en": "L1-zkEVM breakout #05 agenda",
+      "note_en": "Encrypt The Mempool #5 agenda, 00:52; L1-zkEVM breakout #05 agenda, 17:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：以太坊在隐私、多客户端、后量子、形式化验证、扩容等方向同时推进",
+      "note": "17:16。",
+      "url": "https://x.com/binji_x/status/2062840881242100180",
+      "date": "2026-06-05",
+      "title_en": "binji: Ethereum is working on privacy, multi-client architecture, post-quantum, formal verification, scale and more at once",
+      "note_en": "17:16.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "preston_vanloon：在 AI 发现协议漏洞的时代，客户端多样性更重要",
+      "note": "15:53。",
+      "url": "https://x.com/preston_vanloon/status/2062820131705627029",
+      "date": "2026-06-05",
+      "title_en": "preston_vanloon: in the age of AI finding protocol bugs, client diversity matters more than ever",
+      "note_en": "15:53.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8290-shielded-note-teleportation/28721",
+    "credit": "Ethereum Magicians, ERC-8290: Shielded Note Teleportation",
+    "local_path": "assets/2026-06-05.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8290: Shielded Note Teleportation"
+  },
+  "keywords_en": [
+    "Zcash Orchard bug",
+    "privacy protocols and ZK auditability",
+    "EIP-8037 state gas up 5 to 8x",
+    "EIP-8130 finalize pass",
+    "ERC-8290 shielded note teleportation",
+    "ERC-8283 clear signing registry",
+    "post-quantum ERC-4337 wallet",
+    "Ethereal news #26"
+  ],
+  "summary_en": "A bug surfaced in Zcash's Orchard pool, and the Ethereum community discussed how hard bugs are to detect in privacy systems; ameensol suggested users exit the Orchard pool to test whether it was exploited. lightclient noted that EIP-8037 is scheduled for Glamsterdam and will raise the gas cost of creating accounts and writing new storage slots by 5 to 8x, and asked which protocols might be affected. EIP-8130 got a finalize pass and fixes. ERC-8290 proposes moving shielded notes directly between UTXO privacy protocols."
+}

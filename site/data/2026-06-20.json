@@ -1,0 +1,137 @@
+{
+  "date": "2026-06-20",
+  "keywords": [
+    "calldata 下限提到每字节 96",
+    "EIP-8279 显式 BAL 数据计量与净零退款",
+    "有状态哈希密钥的后量子 keystore",
+    "Starknet v0.14.3 EVM 隐私与抗量子投票",
+    "以太坊应否固化"
+  ],
+  "summary": "misilva73 提交新 EIP，把 calldata 下限从每字节 64 提到 96 gas，理由是全是转账的区块存在无法降低的字节密度；同时提交 EIP-8279 重构，用显式计数器计量 BAL 字节并加入净零退款。ch4r10t33r 提交 XMSS 等有状态哈希签名密钥的 keystore 格式 EIP。Starknet 就 v0.14.3 中面向 EVM 隐私和量子安全的两项优化发起投票。",
+  "items": [
+    {
+      "topic": "数据定价",
+      "title": "新 EIP：把 calldata 下限提到 96",
+      "note": "（misilva73）提交，把 calldata 下限从 64/64 提到 96/96 gas 每字节。动机是 21000 gas 的 ETH 转账同时锚定区块的执行和带宽维度，全是转账的区块有约 0.0105 字节每 gas 的不可降低字节密度。",
+      "url": "https://github.com/ethereum/EIPs/pull/11821",
+      "date": "2026-06-20",
+      "title_en": "New EIP: Increase Calldata Floor Cost to 96",
+      "note_en": "(misilva73), submitted, raising the calldata floor from 64/64 to 96/96 gas per byte. The motivation is that the 21,000-gas ETH transfer anchors both the execution and bandwidth dimensions of a block, and a block full of transfers has an irreducible byte density of about 0.0105 bytes per gas.",
+      "topic_en": "Data pricing"
+    },
+    {
+      "topic": "数据定价",
+      "title": "EIP-8279：显式 BAL 数据计量，加入净零退款",
+      "note": "（misilva73）提交。用每笔交易的 `bal_data_bytes` 计数器计量 BAL 字节，只用于下限，不新增 gas 维度，仍按 `max(execution, floor)` 收费；存储值恢复为交易前的值（O→X→O）不收费，连续多次写不同值（A→B→C）只算一次。",
+      "url": "https://github.com/ethereum/EIPs/pull/11819",
+      "date": "2026-06-20",
+      "title_en": "EIP-8279: explicit BAL data metering with net-zero refund",
+      "note_en": "(misilva73), submitted. BAL bytes are metered in a per-transaction `bal_data_bytes` counter that only feeds the floor, with no new gas dimension and the same `max(execution, floor)` charge; a slot restored to its pre-transaction value (O→X→O) costs nothing, and repeated distinct writes (A→B→C) count once.",
+      "topic_en": "Data pricing"
+    },
+    {
+      "topic": "后量子密钥",
+      "title": "新 EIP：有状态哈希密钥的后量子 keystore",
+      "note": "（ch4r10t33r）提交，为 lean 以太坊共识层使用的 XMSS 等有状态哈希签名密钥定义 keystore 格式，扩展 EIP-2335，让加密的秘密可以是 XMSS 种子，并加入可消耗密钥所需的机制。",
+      "url": "https://github.com/ethereum/EIPs/pull/11820",
+      "date": "2026-06-20",
+      "title_en": "New EIP: Post-Quantum Keystore for Stateful Keys",
+      "note_en": "(ch4r10t33r), submitted, defining a keystore format for stateful hash-based signing keys such as the XMSS used by the lean Ethereum consensus layer. It extends EIP-2335 so the encrypted secret may be an XMSS seed, and adds the machinery a consumable key requires.",
+      "topic_en": "Post-quantum keys"
+    },
+    {
+      "topic": "后量子密钥",
+      "title": "StarkWare：Starknet v0.14.3 两项面向 EVM 隐私和量子安全的新优化开始投票",
+      "note": "17:06，6 月 26 日截止。StarkWare：任何人都可以几次点击屏蔽全部链上活动 19:01。",
+      "url": "https://x.com/StarkWareLtd/status/2068274401187905881",
+      "date": "2026-06-20",
+      "title_en": "StarkWare: a vote on two new Starknet v0.14.3 optimizations for EVM privacy and quantum security is live",
+      "note_en": "17:06, ending June 26. StarkWare: anyone can shield their entire onchain activity in a few clicks, 19:01.",
+      "topic_en": "Post-quantum keys"
+    },
+    {
+      "topic": "后量子密钥",
+      "title": "StarkWare：任何人都可以几次点击屏蔽全部链上活动",
+      "note": "StarkWare：Starknet v0.14.3 两项面向 EVM 隐私和量子安全的新优化开始投票 17:06，6 月 26 日截止。StarkWare：任何人都可以几次点击屏蔽全部链上活动 19:01。",
+      "url": "https://x.com/StarkWareLtd/status/2068303271677112734",
+      "date": "2026-06-20",
+      "title_en": "StarkWare: anyone can shield their entire onchain activity in a few clicks",
+      "note_en": "StarkWare: a vote on two new Starknet v0.14.3 optimizations for EVM privacy and quantum security is live, 17:06, ending June 26. StarkWare: anyone can shield their entire onchain activity in a few clicks, 19:01.",
+      "topic_en": "Post-quantum keys"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8100 小幅更新",
+      "note": "与 ERC-6123 仓位改为 int256（cfries）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1827",
+      "date": "2026-06-20",
+      "title_en": "ERC-8100 minor updates",
+      "note_en": "And ERC-6123 position to int256 (cfries), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-6123 仓位改为 int256",
+      "note": "ERC-8100 小幅更新 与 ERC-6123 仓位改为 int256（cfries）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1828",
+      "date": "2026-06-20",
+      "title_en": "ERC-6123 position to int256",
+      "note_en": "ERC-8100 minor updates and ERC-6123 position to int256 (cfries), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "brucexu_eth：只有三件事能拯救以太坊，首先是协议固化，完成剩余工作，让 EF 变小并专注核心基础设施、安全、研究和管理",
+      "note": "09:42。",
+      "url": "https://x.com/brucexu_eth/status/2068162599716606239",
+      "date": "2026-06-20",
+      "title_en": "brucexu_eth: only three things can save Ethereum, starting with ossification: finish the remaining protocol work and let the EF become smaller and focused on core infra, security, research and stewardship",
+      "note_en": "09:42.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern 回应 trent_vanepps：你要的资金是为了维持以太坊现有的工程结构，这正是我反对的",
+      "note": "01:38。",
+      "url": "https://x.com/fede_intern/status/2068040622963867679",
+      "date": "2026-06-20",
+      "title_en": "fede_intern to trent_vanepps: you are asking for funding to preserve Ethereum's current engineering structure, which is what I argue against",
+      "note_en": "01:38.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：很多执着于交易速度的人，自己却在中心化交易所等确认和银行到账",
+      "note": "18:48。",
+      "url": "https://x.com/pcaversaccio/status/2068299847736979802",
+      "date": "2026-06-20",
+      "title_en": "pcaversaccio: many people obsessed with transaction speed wait for CEX confirmations and bank transfers themselves",
+      "note_en": "18:48.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：生态支持开源、隐私、主权和抗审查是好事，但请听听做过产品的人怎么说",
+      "note": "19:26。",
+      "url": "https://x.com/LefterisJP/status/2068309532170723622",
+      "date": "2026-06-20",
+      "title_en": "LefterisJP: ecosystem support for open source, privacy, sovereignty and censorship resistance is good, but listen to someone who has built a product",
+      "note_en": "19:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11821",
+    "credit": "GitHub, ethereum/EIPs PR #11821",
+    "local_path": "assets/2026-06-20.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11821"
+  },
+  "keywords_en": [
+    "calldata floor to 96 per byte",
+    "EIP-8279 explicit BAL data metering with net-zero refund",
+    "post-quantum keystore for stateful hash-based keys",
+    "Starknet v0.14.3 vote on EVM privacy and quantum security",
+    "should Ethereum ossify"
+  ],
+  "summary_en": "misilva73 submitted a new EIP raising the calldata floor from 64 to 96 gas per byte, because a block full of transfers has an irreducible byte density, and also submitted an EIP-8279 refactor that meters BAL bytes with an explicit counter and adds a net-zero refund. ch4r10t33r submitted an EIP defining a keystore format for stateful hash-based keys such as XMSS. Starknet opened a vote on two v0.14.3 optimizations for EVM privacy and quantum security."
+}

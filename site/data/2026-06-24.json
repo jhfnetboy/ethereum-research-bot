@@ -1,0 +1,171 @@
+{
+  "date": "2026-06-24",
+  "keywords": [
+    "迈向原生后量子私密 ETH",
+    "EIP-8272 提议进入 Hegotá",
+    "EIP-7906 POST_TX frame 模式与 TXDIFF",
+    "EIP-7864 改为分区二叉树设计",
+    "低发行下的发行抵扣与罚金",
+    "Lighthouse 份额超 33%",
+    "Base 代理应用"
+  ],
+  "summary": "Pierre 在 ethresear.ch 发表 Towards Native Post-Quantum Private ETH，梳理在 L1 内置后量子隐私需要做的密码学工作，并指出仅防范“先收集后解密”并不够。soispoke 提交 EIP-8081 修改，提议 EIP-8272 recent roots 进入 Hegotá。forshtat 为 EIP-7906 加入 POST_TX frame 模式和 TXDIFF 操作码并合并。Vitalik 把 EIP-7864 调整为分区二叉树（PBT）设计。aelowsson 分析低、零、负发行政策下的发行抵扣与加重罚金。",
+  "items": [
+    {
+      "topic": "原生后量子隐私",
+      "title": "ethresear.ch：Towards Native Post-Quantum Private ETH",
+      "note": "22:53（Pierre）。L1 strawmap 把 L1 原生的后量子私密转账列为北极星目标。目前已部署的隐私方案依赖椭圆曲线原语或不令人满意的硬件假设；有人认为防范“先收集、后解密”（HNDL）攻击就够了，但文章指出，一旦出现具备密码学意义的量子计算机，攻击者可能实施无法察觉的攻击并造成灾难性损失，届时 turnstile 等恢复机制需要大量社会层协调。文章以 Zcash Sapling（约 62 万枚屏蔽 ZEC）为例，说明交付后量子屏蔽 ETH 所需的工作远不止切换证明系统。",
+      "url": "https://ethresear.ch/t/towards-native-post-quantum-private-eth/25291",
+      "date": "2026-06-24",
+      "title_en": "ethresear.ch: Towards Native Post-Quantum Private ETH",
+      "note_en": "22:53 (Pierre). The L1 strawmap lists L1-native private post-quantum transfers as a north star. Privacy solutions in production today rely on elliptic curve primitives or unsatisfying hardware assumptions; some argue protecting against harvest-now-decrypt-later (HNDL) attacks is enough, but the post notes that once a cryptographically relevant quantum computer exists, adversaries could carry out undetectable attacks with catastrophic losses, and recovery mechanisms such as turnstiles would require heavy social layer coordination. Using Zcash Sapling (about 620k shielded ZEC) as an example, it shows that delivering post-quantum shielded ETH takes far more than switching proof systems.",
+      "topic_en": "Native post-quantum privacy"
+    },
+    {
+      "topic": "原生后量子隐私",
+      "title": "soispoke：EIP-8081 提议 EIP-8272 进入 Hegotá",
+      "note": "提交，把 recent roots 加入 PFI 列表。",
+      "url": "https://github.com/ethereum/EIPs/pull/11831",
+      "date": "2026-06-24",
+      "title_en": "soispoke: EIP-8081, propose EIP-8272 for Hegotá",
+      "note_en": "Submitted, adding recent roots to the PFI list.",
+      "topic_en": "Native post-quantum privacy"
+    },
+    {
+      "topic": "frame 交易与状态树",
+      "title": "EIP-7906：为 TXTRACE 操作码引入 POST_TX frame 模式",
+      "note": "（forshtat）提交并合并；EIP-7906：新增 TXDIFF 操作码 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11829",
+      "date": "2026-06-24",
+      "title_en": "EIP-7906: introduce a POST_TX frame mode as a requirement for the TXTRACE opcode",
+      "note_en": "(forshtat), submitted and merged; EIP-7906: introduce an additional TXDIFF opcode, submitted and merged.",
+      "topic_en": "Frame transactions and the state tree"
+    },
+    {
+      "topic": "frame 交易与状态树",
+      "title": "EIP-7906：新增 TXDIFF 操作码",
+      "note": "EIP-7906：为 TXTRACE 操作码引入 POST_TX frame 模式（forshtat）提交并合并；EIP-7906：新增 TXDIFF 操作码 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11830",
+      "date": "2026-06-24",
+      "title_en": "EIP-7906: introduce an additional TXDIFF opcode",
+      "note_en": "EIP-7906: introduce a POST_TX frame mode as a requirement for the TXTRACE opcode (forshtat), submitted and merged; EIP-7906: introduce an additional TXDIFF opcode, submitted and merged.",
+      "topic_en": "Frame transactions and the state tree"
+    },
+    {
+      "topic": "frame 交易与状态树",
+      "title": "EIP-7864：调整为分区二叉树（PBT）设计",
+      "note": "（vbuterin）提交并合并，与 EIP-8297 的分区二叉树方向一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/11832",
+      "date": "2026-06-24",
+      "title_en": "EIP-7864: adjust to the PBT (partitioned binary tree) design",
+      "note_en": "(vbuterin), submitted and merged, in line with the partitioned binary tree direction of EIP-8297.",
+      "topic_en": "Frame transactions and the state tree"
+    },
+    {
+      "topic": "frame 交易与状态树",
+      "title": "EIP-2780：要求 EIP-7523 而非 EIP-161",
+      "note": "（chfast）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11828",
+      "date": "2026-06-24",
+      "title_en": "EIP-2780: require EIP-7523 instead of EIP-161",
+      "note_en": "(chfast), submitted.",
+      "topic_en": "Frame transactions and the state tree"
+    },
+    {
+      "topic": "发行政策",
+      "title": "ethresear.ch：低、零、负发行政策下发行抵扣与加重罚金的性质",
+      "note": "22:57（aelowsson）。以太坊正在讨论降低发行。若把每单位基础奖励降到接近零，执行 attestation 职责的激励就会消失，有两种保留激励的方案：在 epoch 处理时施加“发行抵扣”，或加重罚金。文章分析两者的性质，不提出具体奖励曲线。",
+      "url": "https://ethresear.ch/t/properties-of-issuance-offsets-and-increased-penalties-under-low-zero-negative-issuance-policies/25292",
+      "date": "2026-06-24",
+      "title_en": "ethresear.ch: Properties of issuance offsets and increased penalties under low/zero/negative issuance policies",
+      "note_en": "22:57 (aelowsson). Ethereum is debating an issuance reduction. If the base reward per increment goes toward zero, the incentive to perform attestation duties disappears; two ways to keep it are an \"issuance offset\" applied during epoch processing, or increased penalties. The post analyzes both and does not propose a specific reward curve.",
+      "topic_en": "Issuance policy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps：理想情况下任何单一客户端都不应超过 33%，运行 Lighthouse 的运营者应考虑其他共识客户端",
+      "note": "20:42。",
+      "url": "https://x.com/trent_vanepps/status/2069778261094150170",
+      "date": "2026-06-24",
+      "title_en": "trent_vanepps: ideally no single client should be above 33%, and operators running Lighthouse should consider other consensus clients",
+      "note_en": "20:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "jessepollak：代理现在可以在 Base 上另外 13 个应用中交易、借贷、铸造等",
+      "note": "06:12。",
+      "url": "https://x.com/jessepollak/status/2069559215673495992",
+      "date": "2026-06-24",
+      "title_en": "jessepollak: agents can now trade, lend, mint and more across 13 more apps on Base",
+      "note_en": "06:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "aztecnetwork：Alpha V5 即将到来，加固网络安全，V4 用户须注意",
+      "note": "04:20。",
+      "url": "https://x.com/aztecnetwork/status/2069530945234084173",
+      "date": "2026-06-24",
+      "title_en": "aztecnetwork: Alpha V5 is coming to harden network security, notice to V4 users",
+      "note_en": "04:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8310 有状态密钥的后量子 keystore",
+      "note": "01:19。",
+      "url": "https://ethereum-magicians.org/t/eip-8310-post-quantum-keystore-for-stateful-keys/28853",
+      "date": "2026-06-24",
+      "title_en": "Magicians: EIP-8310 Post-Quantum Keystore for Stateful Keys",
+      "note_en": "01:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #181 议程",
+      "note": "14:57；PQ Interop #45 14:14。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-181-june-25-2026/28855",
+      "date": "2026-06-24",
+      "title_en": "ACDC #181 agenda",
+      "note_en": "14:57; PQ Interop #45, 14:14.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #45",
+      "note": "ACDC #181 议程 14:57；PQ Interop #45 14:14。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-45-june-24-2026/28854",
+      "date": "2026-06-24",
+      "title_en": "PQ Interop #45",
+      "note_en": "ACDC #181 agenda, 14:57; PQ Interop #45, 14:14.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tarunchitra：ZK 圈里聪明人要么在做 AI 天使投资，要么转向 AI 推理，要么祈祷电路别被黑",
+      "note": "11:24。",
+      "url": "https://x.com/tarunchitra/status/2069637857287778679",
+      "date": "2026-06-24",
+      "title_en": "tarunchitra: everyone smart in ZK is either an AI angel investor, pivoting to AI inference, or praying their circuit doesn't get hacked",
+      "note_en": "11:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/towards-native-post-quantum-private-eth/25291",
+    "credit": "ethresear.ch, Towards Native Post-Quantum Private ETH (Pierre)",
+    "local_path": "assets/2026-06-24.jpg",
+    "credit_en": "ethresear.ch, Towards Native Post-Quantum Private ETH (Pierre)"
+  },
+  "keywords_en": [
+    "towards native post-quantum private ETH",
+    "EIP-8272 proposed for Hegotá",
+    "EIP-7906 POST_TX frame mode and TXDIFF",
+    "EIP-7864 moves to a partitioned binary tree",
+    "issuance offsets and penalties under low issuance",
+    "Lighthouse share above 33%",
+    "agent apps on Base"
+  ],
+  "summary_en": "Pierre published Towards Native Post-Quantum Private ETH on ethresear.ch, laying out the cryptographic work needed to enshrine post-quantum privacy in the L1 and arguing that protecting against harvest-now-decrypt-later alone is not enough. soispoke submitted an EIP-8081 change proposing EIP-8272 recent roots for Hegotá. forshtat added a POST_TX frame mode and a TXDIFF opcode to EIP-7906, both merged. Vitalik adjusted EIP-7864 to the partitioned binary tree (PBT) design. aelowsson analyzed issuance offsets and increased penalties under low, zero or negative issuance."
+}

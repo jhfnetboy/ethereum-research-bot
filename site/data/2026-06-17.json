@@ -1,0 +1,223 @@
+{
+  "date": "2026-06-17",
+  "keywords": [
+    "Base 隐私（Base Ledgers）",
+    "EIP-8250 keyed nonce 等进入 Hegotá PFI",
+    "EIP-8131 统一交易内容下限",
+    "EIP-8130 初始 actor 槽写入计费",
+    "EIP-8141 恢复 Behavior 章节",
+    "EIP-8304 无需信任的日志与交易索引",
+    "Poseidon 代数攻击",
+    "ethrex BAL 基准第一"
+  ],
+  "summary": "nerolation 把 EIP-8131、EIP-8146 和 EIP-8250（keyed nonce）列入 Hegotá PFI 并合并，EIP-8131 同日改写为统一交易内容下限。EIP-8130 修复一处 intrinsic gas 少算：创建账户时写入初始 actor 的存储槽此前未计费。Jesse Pollak 宣布 Base 推出基于 Base Ledgers 的隐私功能。asanso 发表针对 Poseidon 与 Poseidon2 的代数攻击论文。zsfelfoldi 提交 EIP-8304。",
+  "items": [
+    {
+      "topic": "Hegotá 中的交易与账户 EIP",
+      "title": "EIP-8081：把 EIP-8131、EIP-8146 和 EIP-8250 列为 Hegotá PFI",
+      "note": "（nerolation）合并。EIP-8250 是 keyed nonce，EIP-8146 是 BAL sidecar。",
+      "url": "https://github.com/ethereum/EIPs/pull/11615",
+      "date": "2026-06-17",
+      "title_en": "EIP-8081: PFI EIPs 8131, 8146 and 8250 for Hegotá",
+      "note_en": "(nerolation), merged. EIP-8250 is keyed nonces and EIP-8146 is BAL sidecars.",
+      "topic_en": "Transaction and account EIPs in Hegotá"
+    },
+    {
+      "topic": "Hegotá 中的交易与账户 EIP",
+      "title": "EIP-8131：改写为统一交易内容下限",
+      "note": "（nerolation）合并，为 Hegotá 做准备：加入 blob 版本哈希，并更一般地看作用户可控字节，更新影响分析。",
+      "url": "https://github.com/ethereum/EIPs/pull/11738",
+      "date": "2026-06-17",
+      "title_en": "EIP-8131: rewritten as a Unified Transaction Content Floor",
+      "note_en": "(nerolation), merged, in preparation for Hegotá: it adds blob versioned hashes, generalizes the idea as user-controlled bytes and updates the impact analysis.",
+      "topic_en": "Transaction and account EIPs in Hegotá"
+    },
+    {
+      "topic": "Hegotá 中的交易与账户 EIP",
+      "title": "EIP-8141：恢复误删的 Behavior 章节",
+      "note": "（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11810",
+      "date": "2026-06-17",
+      "title_en": "EIP-8141: restore the accidentally deleted Behavior section",
+      "note_en": "(nerolation), submitted.",
+      "topic_en": "Transaction and account EIPs in Hegotá"
+    },
+    {
+      "topic": "EIP-8130 的 gas 计算修正",
+      "title": "EIP-8130：创建账户时对初始 actor 槽写入计费",
+      "note": "（chunter-cb）提交并合并。创建条目的 `initial_actors` 会写入存储（每个 actor 一个 `actor_config` 槽），但此前 `account_changes_cost` 只统计配置变更和委托条目，创建条目只按字节码收费，因此通过创建条目注册 N 个 actor 的槽写入是免费的。",
+      "url": "https://github.com/ethereum/EIPs/pull/11812",
+      "date": "2026-06-17",
+      "title_en": "EIP-8130: charge initial actor slot writes on account creation",
+      "note_en": "(chunter-cb), submitted and merged. A create entry's `initial_actors` are written to storage (one `actor_config` slot per actor), but `account_changes_cost` only counted config change and delegation entries, and a create entry was charged for bytecode alone, so registering N actors through a create entry got the slot writes for free.",
+      "topic_en": "EIP-8130 gas accounting fixes"
+    },
+    {
+      "topic": "EIP-8130 的 gas 计算修正",
+      "title": "EIP-8130：澄清 intrinsic gas 表是推荐值",
+      "note": "提交：`AA_BASE_COST`、`nonce_key_cost` 表、calldata 费用、槽写入费用等反映当前 EIP-2929/EIP-2028 成本，不是固定的协议常量。",
+      "url": "https://github.com/ethereum/EIPs/pull/11813",
+      "date": "2026-06-17",
+      "title_en": "EIP-8130: clarify the intrinsic gas schedule is a recommendation",
+      "note_en": "Submitted: `AA_BASE_COST`, the `nonce_key_cost` table, calldata costs, slot write costs and so on reflect current EIP-2929/EIP-2028 costs and are not fixed protocol constants.",
+      "topic_en": "EIP-8130 gas accounting fixes"
+    },
+    {
+      "topic": "隐私与密码学",
+      "title": "jessepollak：在 Base 上推出隐私，由 Base Ledgers 驱动，这是为企业上链打造的新隐私原语",
+      "note": "02:57。norswap：很有意思，但没有说明它实际如何工作，是 TEE 还是 ZK，有什么性质 22:13。",
+      "url": "https://x.com/jessepollak/status/2066973366414684596",
+      "date": "2026-06-17",
+      "title_en": "jessepollak: launching privacy on Base, powered by Base Ledgers, a new privacy primitive for bringing every enterprise onchain",
+      "note_en": "02:57. norswap: super interesting, but not a word about how it actually works, TEE or ZK, and what the properties are, 22:13.",
+      "topic_en": "Privacy and cryptography"
+    },
+    {
+      "topic": "隐私与密码学",
+      "title": "norswap：很有意思，但没有说明它实际如何工作，是 TEE 还是 ZK，有什么性质",
+      "note": "jessepollak：在 Base 上推出隐私，由 Base Ledgers 驱动，这是为企业上链打造的新隐私原语 02:57。norswap：很有意思，但没有说明它实际如何工作，是 TEE 还是 ZK，有什么性质 22:13。",
+      "url": "https://x.com/norswap/status/2067264311387738537",
+      "date": "2026-06-17",
+      "title_en": "norswap: super interesting, but not a word about how it actually works, TEE or ZK, and what the properties are",
+      "note_en": "Jessepollak: launching privacy on Base, powered by Base Ledgers, a new privacy primitive for bringing every enterprise onchain, 02:57. norswap: super interesting, but not a word about how it actually works, TEE or ZK, and what the properties are, 22:13.",
+      "topic_en": "Privacy and cryptography"
+    },
+    {
+      "topic": "隐私与密码学",
+      "title": "asanso：与 Giuseppe Vitto 的新论文 Top Gun，针对 Poseidon 的次数消除攻击",
+      "note": "14:13，研究 Poseidon 与 Poseidon2 的 CICO 问题，引入降低多项式系统复杂度的框架。",
+      "url": "https://x.com/asanso/status/2067143518938599788",
+      "date": "2026-06-17",
+      "title_en": "asanso: new paper with Giuseppe Vitto, Top Gun, degree annihilation attacks on Poseidon",
+      "note_en": "14:13, studying the CICO problem for Poseidon and Poseidon2 and introducing a framework that reduces the complexity of the polynomial systems.",
+      "topic_en": "Privacy and cryptography"
+    },
+    {
+      "topic": "隐私与密码学",
+      "title": "StarkWare：一键隐私已覆盖 Starknet 上的所有场景和资产",
+      "note": "15:52。",
+      "url": "https://x.com/StarkWareLtd/status/2067168599098212757",
+      "date": "2026-06-17",
+      "title_en": "StarkWare: one-click privacy is now available for every use case and asset on Starknet",
+      "note_en": "15:52.",
+      "topic_en": "Privacy and cryptography"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：无需信任的日志与交易索引",
+      "note": "（zsfelfoldi）提交，Magicians 讨论帖 22:13，即 EIP-8304：把索引表的根哈希存入系统合约，以便高效、无需信任地证明日志和交易查询，是比 EIP-7745 简单得多的新设计。",
+      "url": "https://github.com/ethereum/EIPs/pull/11811",
+      "date": "2026-06-17",
+      "title_en": "New EIP: Trustless log and transaction index",
+      "note_en": "(zsfelfoldi), submitted, with a Magicians thread at 22:13; this is EIP-8304. It stores the root hashes of index tables in a system contract for efficient trustless proofs of log and transaction lookups, a new and much simpler design than EIP-7745.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：无需信任的日志与交易索引（zsfelfoldi）提交，Magicians 讨论帖 22:13，即 EIP-8304：把索引表的根哈希存入系统合约，以便高效、无需信任地证明日志和交易查询，是比 EIP-7745 简单得多的新设计。",
+      "url": "https://ethereum-magicians.org/t/eip-8304-trustless-log-and-transaction-index/28824",
+      "date": "2026-06-17",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: Trustless log and transaction index (zsfelfoldi), submitted, with a Magicians thread at 22:13; this is EIP-8304. It stores the root hashes of index tables in a system contract for efficient trustless proofs of log and transaction lookups, a new and much simpler design than EIP-7745.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethrex：在 Glamsterdam BAL 基准中两项均排第一",
+      "note": "03:24，计算测试集约 1.96 Ggas/s。",
+      "url": "https://x.com/ethrex_client/status/2066980211124572247",
+      "date": "2026-06-17",
+      "title_en": "ethrex: first on both Glamsterdam BAL benchmarks",
+      "note_en": "03:24, about 1.96 Ggas/s on the compute suite.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：链上验证算法及其他编辑",
+      "note": "（gcolvin）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11744",
+      "date": "2026-06-17",
+      "title_en": "EIP-7979: validation algorithm on blockchain and other edits",
+      "note_en": "(gcolvin), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "sigp_io：AI 是强大的工具，人的专业判断才让它成为安全优势",
+      "note": "13:42。",
+      "url": "https://x.com/sigp_io/status/2067135711434916008",
+      "date": "2026-06-17",
+      "title_en": "sigp_io: AI is a powerful tool, but human expertise turns it into a security advantage",
+      "note_en": "13:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nixorokish：Forkcast 正在成为以太坊升级信息的权威来源",
+      "note": "21:53。",
+      "url": "https://x.com/nixorokish/status/2067259366085153034",
+      "date": "2026-06-17",
+      "title_en": "nixorokish: Forkcast is becoming the canonical resource for Ethereum upgrade information",
+      "note_en": "21:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：延时访问控制",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1821",
+      "date": "2026-06-17",
+      "title_en": "New ERC: Time-Delayed Access Control",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #44",
+      "note": "17:43；P2P Networking #3 议程 21:45。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-44-june-17-2026/28822",
+      "date": "2026-06-17",
+      "title_en": "PQ Interop #44",
+      "note_en": "17:43; P2P Networking #3 agenda, 21:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "P2P Networking #3 议程",
+      "note": "PQ Interop #44 17:43；P2P Networking #3 议程 21:45。",
+      "url": "https://ethereum-magicians.org/t/p2p-networking-3-july-1-2026/28823",
+      "date": "2026-06-17",
+      "title_en": "P2P Networking #3 agenda",
+      "note_en": "PQ Interop #44, 17:43; P2P Networking #3 agenda, 21:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：用 iPhone 和法币，新人怎样最好地拿到第一笔 gas 代币",
+      "note": "02:50。",
+      "url": "https://x.com/binji_x/status/2066971700214817025",
+      "date": "2026-06-17",
+      "title_en": "binji: with an iPhone and some fiat, what is the best way for a newcomer to get a first gas token",
+      "note_en": "02:50.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8304-trustless-log-and-transaction-index/28824",
+    "credit": "Ethereum Magicians, EIP-8304: Trustless log and transaction index (zsfelfoldi)",
+    "local_path": "assets/2026-06-17.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8304: Trustless log and transaction index (zsfelfoldi)"
+  },
+  "keywords_en": [
+    "privacy on Base (Base Ledgers)",
+    "EIP-8250 keyed nonces and others PFI for Hegotá",
+    "EIP-8131 unified transaction content floor",
+    "EIP-8130 initial actor slot writes charged",
+    "EIP-8141 Behavior section restored",
+    "EIP-8304 trustless log and transaction index",
+    "algebraic attacks on Poseidon",
+    "ethrex first in BAL benchmarks"
+  ],
+  "summary_en": "nerolation listed EIP-8131, EIP-8146 and EIP-8250 (keyed nonces) as Hegotá PFI and it was merged, and EIP-8131 was rewritten the same day as a unified transaction content floor. EIP-8130 fixed an intrinsic gas undercount: storage slots written for initial actors at account creation were not charged. Jesse Pollak announced privacy on Base powered by Base Ledgers. asanso published a paper on algebraic attacks against Poseidon and Poseidon2. zsfelfoldi submitted EIP-8304."
+}

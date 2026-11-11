@@ -1,0 +1,161 @@
+{
+  "date": "2026-06-11",
+  "keywords": [
+    "ACDC #180",
+    "EIP-8282 可能推迟 Glamsterdam",
+    "EIP-8130 authenticateActor 合并",
+    "SIWE 与签名疲劳",
+    "EIP-8297 分区二叉树",
+    "EIP-8296 固定截止状态分层",
+    "Blob Streaming"
+  ],
+  "summary": "当晚 ACDC #180 讨论把 builder 存款和退出拆到独立合约的 EIP-8282，它可能让 Glamsterdam 推迟数月，会上提到可考虑拆分升级。EIP-8130 让 `authenticateActor` 返回完整授权面的修改合并。pcaversaccio 认为 Sign-In with Ethereum 让用户习惯随手签名，造成签名疲劳。weiihann 提交 EIP-8297 分区二叉树。",
+  "items": [
+    {
+      "topic": "账户与签名",
+      "title": "EIP-8130：`authenticateActor` 返回 scope、policyType、policyTarget",
+      "note": "（chunter-cb）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11794",
+      "date": "2026-06-11",
+      "title_en": "EIP-8130: `authenticateActor` returns scope, policyType, policyTarget",
+      "note_en": "(chunter-cb), merged.",
+      "topic_en": "Accounts and signing"
+    },
+    {
+      "topic": "账户与签名",
+      "title": "pcaversaccio：Sign-In with Ethereum 其实是个糟糕的主意",
+      "note": "21:14，它训练人们随时签名、造成签名疲劳，签名本应被视为危险的特殊事件。",
+      "url": "https://x.com/pcaversaccio/status/2065075322920603769",
+      "date": "2026-06-11",
+      "title_en": "pcaversaccio: Sign-In with Ethereum is actually a terrible idea",
+      "note_en": "21:14: it trains people to sign messages all the time and creates signing fatigue, when a signature should be treated as a dangerous, special event.",
+      "topic_en": "Accounts and signing"
+    },
+    {
+      "topic": "状态结构",
+      "title": "新 EIP：分区二叉树",
+      "note": "（weiihann）提交，即 EIP-8297：用一棵 32 字节键的二叉树替换十六叉 Patricia trie，账户树与存储树并为一棵并包含合约代码；账户数据按 256 个一组拆成独立叶子以获得局部性；键的高 4 位是分区标识，区分账户头、合约代码和存储。",
+      "url": "https://github.com/ethereum/EIPs/pull/11799",
+      "date": "2026-06-11",
+      "title_en": "New EIP: Partitioned Binary Tree",
+      "note_en": "(weiihann), submitted; this is EIP-8297. It replaces the hexary Patricia tries with one binary tree keyed by 32 bytes, merging account and storage tries and holding contract code; account data is split into independent leaves grouped by 256 for locality; the high 4 bits of each key are a zone id for account headers, contract code or storage.",
+      "topic_en": "State structure"
+    },
+    {
+      "topic": "状态结构",
+      "title": "Magicians：EIP-8296 固定截止点的状态分层",
+      "note": "12:09。",
+      "url": "https://ethereum-magicians.org/t/eip-8296-fixed-cutoff-state-tiering/28772",
+      "date": "2026-06-11",
+      "title_en": "Magicians: EIP-8296 Fixed-Cutoff State Tiering",
+      "note_en": "12:09.",
+      "topic_en": "State structure"
+    },
+    {
+      "topic": "状态结构",
+      "title": "EIP-8188：澄清回滚与新增字节",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11797",
+      "date": "2026-06-11",
+      "title_en": "EIP-8188: clarify reverts and bytes added",
+      "note_en": "Submitted and merged.",
+      "topic_en": "State structure"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：Blob Streaming",
+      "note": "（bharath-123）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11610",
+      "date": "2026-06-11",
+      "title_en": "New EIP: Blob Streaming",
+      "note_en": "(bharath-123), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：WYRIWE，所读即所执行",
+      "note": "提交，另有 对应 ERC 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11798",
+      "date": "2026-06-11",
+      "title_en": "New EIP: WYRIWE, What You Read Is What You Execute",
+      "note_en": "Submitted, with a matching ERC submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "对应 ERC",
+      "note": "新 EIP：WYRIWE，所读即所执行 提交，另有 对应 ERC 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1810",
+      "date": "2026-06-11",
+      "title_en": "matching ERC",
+      "note_en": "New EIP: WYRIWE, What You Read Is What You Execute, submitted, with a matching ERC submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet v0.14.3 投票开启",
+      "note": "23:30。",
+      "url": "https://x.com/StarkWareLtd/status/2065109364545822889",
+      "date": "2026-06-11",
+      "title_en": "StarkWare: the vote on Starknet v0.14.3 is live",
+      "note_en": "23:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethStaker：Community Call #67 讨论 Nimbus 客户端和 Keycard 硬件钱包，6 月 16 日 22:00",
+      "note": "20:28。",
+      "url": "https://x.com/ethStaker/status/2065063518139769202",
+      "date": "2026-06-11",
+      "title_en": "ethStaker: Community Call #67 on Nimbus client development and the Keycard hardware wallet, June 16 at 22:00",
+      "note_en": "20:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Encrypt The Mempool #6 议程",
+      "note": "02:27。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-6-jun-24-2026/28765",
+      "date": "2026-06-11",
+      "title_en": "Encrypt The Mempool #6 agenda",
+      "note_en": "02:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：期权类的想法已经有人在做，若这些快速上主网，强烈建议先做形式化验证",
+      "note": "17:40。",
+      "url": "https://x.com/VitalikButerin/status/2065021415003234519",
+      "date": "2026-06-11",
+      "title_en": "Vitalik: the options idea is already happening; if any of these get on mainnet quickly, formally verify first",
+      "note_en": "17:40.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "growthepie：隐私会让某些指标更难追踪，但我们欢迎这个挑战",
+      "note": "16:15。",
+      "url": "https://x.com/growthepie_eth/status/2064999864438575256",
+      "date": "2026-06-11",
+      "title_en": "growthepie: privacy may make some metrics harder to track, but we welcome the challenge",
+      "note_en": "16:15.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8296-fixed-cutoff-state-tiering/28772",
+    "credit": "Ethereum Magicians, EIP-8296: Fixed-Cutoff State Tiering (weiihann)",
+    "local_path": "assets/2026-06-11.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8296: Fixed-Cutoff State Tiering (weiihann)"
+  },
+  "keywords_en": [
+    "ACDC #180",
+    "EIP-8282 may delay Glamsterdam",
+    "EIP-8130 authenticateActor merged",
+    "SIWE and signing fatigue",
+    "EIP-8297 partitioned binary tree",
+    "EIP-8296 fixed-cutoff state tiering",
+    "Blob Streaming"
+  ],
+  "summary_en": "In the evening ACDC #180 discussed EIP-8282, which moves builder deposits and exits into separate contracts and could delay Glamsterdam by months; splitting the upgrade was mentioned as an option. The EIP-8130 change making `authenticateActor` return the full authorization surface was merged. pcaversaccio argued that Sign-In with Ethereum trains users to sign casually and creates signing fatigue. weiihann submitted EIP-8297, a partitioned binary tree."
+}

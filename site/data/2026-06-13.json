@@ -1,0 +1,93 @@
+{
+  "date": "2026-06-13",
+  "keywords": [
+    "Anthropic 用 Mythos 审计 Zcash",
+    "ethrex BAL 基准",
+    "forkcast"
+  ],
+  "summary": "周六较安静。zooko 表示，应 Shielded Labs 请求，Anthropic 用 Mythos 对 Zcash 做了安全审计，没有发现更多严重的协议漏洞，加固工作仍在继续。ethrex 开始运行新的 benchmarkoor BAL 测试集后，在两个基准中都进入前三，计算测试集吞吐约 1.95 Ggas/s。",
+  "items": [
+    {
+      "topic": "隐私协议的安全加固",
+      "title": "zooko：感谢 Anthropic 帮助保护 Zcash 用户",
+      "note": "04:09。应 Shielded Labs 请求，Anthropic 用 Mythos 对 Zcash 做了安全审计，没有发现 Zcash 协议中更多严重漏洞，Shielded Labs 等方面的安全加固工作仍在继续。",
+      "url": "https://x.com/zooko/status/2065541979979784341",
+      "date": "2026-06-13",
+      "title_en": "zooko: thanks to Anthropic for helping protect Zcash users",
+      "note_en": "04:09. At Shielded Labs' request, Anthropic ran a security audit of Zcash with Mythos and found no more serious bugs in the Zcash protocol; Shielded Labs and others continue security hardening work.",
+      "topic_en": "Security hardening of privacy protocols"
+    },
+    {
+      "topic": "客户端性能",
+      "title": "fede_intern：ethrex 运行新的 benchmarkoor BAL 测试集几天后，已在两个基准中进入前三",
+      "note": "16:27，目前计算测试集按 gas 加权聚合吞吐约 1.95 Ggas/s 领先。ethrex 官方同样发帖 01:13。",
+      "url": "https://x.com/fede_intern/status/2065727826045665632",
+      "date": "2026-06-13",
+      "title_en": "fede_intern: a few days after starting the new benchmarkoor BAL suites, ethrex is already among the top three clients in both benchmarks",
+      "note_en": "16:27, currently leading the compute suite at about 1.95 Ggas/s of gas-weighted aggregated throughput. ethrex posted the same, 01:13.",
+      "topic_en": "Client performance"
+    },
+    {
+      "topic": "客户端性能",
+      "title": "ethrex 官方同样发帖",
+      "note": "fede_intern：ethrex 运行新的 benchmarkoor BAL 测试集几天后，已在两个基准中进入前三 16:27，目前计算测试集按 gas 加权聚合吞吐约 1.95 Ggas/s 领先。ethrex 官方同样发帖 01:13。",
+      "url": "https://x.com/ethrex_client/status/2065497822250590295",
+      "date": "2026-06-13",
+      "title_en": "ethrex posted the same",
+      "note_en": "Fede_intern: a few days after starting the new benchmarkoor BAL suites, ethrex is already among the top three clients in both benchmarks, 16:27, currently leading the compute suite at about 1.95 Ggas/s of gas-weighted aggregated throughput. ethrex posted the same, 01:13.",
+      "topic_en": "Client performance"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps：为 CarlBeek 的 EIP 和 EF 协议团队的 forkcast 工作点赞",
+      "note": "01:47。",
+      "url": "https://x.com/trent_vanepps/status/2065506349169950890",
+      "date": "2026-06-13",
+      "title_en": "trent_vanepps: flowers to CarlBeek for the EIP and to the EF protocol team for forkcast",
+      "note_en": "01:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie：EigenLayer 首个合约交易三周年，按交易数排名靠前的是 Delegation Manager 等合约",
+      "note": "18:44。",
+      "url": "https://x.com/growthepie_eth/status/2065762347721908435",
+      "date": "2026-06-13",
+      "title_en": "growthepie: three years since EigenLayer's first contract transactions, with the Delegation Manager among the top contracts by transaction count",
+      "note_en": "18:44.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：IERC8060Reservable，ERC-8060 价值型 NFT 的最小预留记账扩展",
+      "note": "13:54。",
+      "url": "https://ethereum-magicians.org/t/discussion-ierc8060reservable-a-minimal-reservation-accounting-extension-for-erc-8060/28780",
+      "date": "2026-06-13",
+      "title_en": "Magicians: IERC8060Reservable, a minimal reservation accounting extension for ERC-8060 value-bearing NFTs",
+      "note_en": "13:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "recmo：考虑成立合作社，在欧盟 GPU 上运行开放模型，强调隐私且不会被关停",
+      "note": "19:48。",
+      "url": "https://x.com/recmo/status/2065778281094205702",
+      "date": "2026-06-13",
+      "title_en": "recmo: thinking of a cooperative running open models on EU GPUs, with privacy and no risk of shutdown",
+      "note_en": "19:48.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/discussion-ierc8060reservable-a-minimal-reservation-accounting-extension-for-erc-8060/28780",
+    "credit": "Ethereum Magicians, IERC8060Reservable discussion (ten-io-meta)",
+    "local_path": "assets/2026-06-13.jpg",
+    "credit_en": "Ethereum Magicians, IERC8060Reservable discussion (ten-io-meta)"
+  },
+  "keywords_en": [
+    "Anthropic audits Zcash with Mythos",
+    "ethrex BAL benchmarks",
+    "forkcast"
+  ],
+  "summary_en": "A quiet Saturday. zooko said that at Shielded Labs' request, Anthropic ran a security audit of Zcash with Mythos and found no more serious bugs in the protocol, while hardening work continues. A few days after starting the new benchmarkoor BAL suites, ethrex is among the top three clients in both benchmarks, at about 1.95 Ggas/s on the compute suite."
+}

@@ -1,0 +1,183 @@
+{
+  "date": "2026-06-12",
+  "keywords": [
+    "EIP-8298 SETCODEFROM",
+    "EIP-7851 与 EIP-8058 合流",
+    "SPHINCS minus 后量子签名验证",
+    "EIP-7904 改为 Informational",
+    "Encrypt the Mempool Coalition",
+    "PropAMM",
+    "Protocol Guild Keycard",
+    "Ethereal news #27"
+  ],
+  "summary": "colinlyguo 提交 EIP-8298 SETCODEFROM，按 Ben Adams 在 ACDE 上的想法把 EIP-7851 与 EIP-8058 的目标合成一个更底层的代码采用原语：当前账户可以采用一个已部署合约的代码。ethresear.ch 上 SPHINCS minus 介绍在 EVM 上高效验证无状态后量子签名。EIP-7904 改为 Informational，因为客户端已在当前 gas 价格下达到 100 Mgas/s 目标，无需计算重定价。Erigon 加入 Encrypt the Mempool Coalition。",
+  "items": [
+    {
+      "topic": "SETCODEFROM：更底层的代码采用原语",
+      "title": "新 EIP：SETCODEFROM 代码复用指令",
+      "note": "（colinlyguo）提交，Magicians 讨论帖 22:10，即 EIP-8298。思路来自 ACDE 上 benaadams 的提议，把 EIP-7851 与 EIP-8058 的目标结合：新 EVM 指令让当前账户采用一个已部署合约的 code hash。来源是一个活跃账户地址而非原始 code hash，因此被采用的代码与当前共识状态绑定。两个主要用途：一是部署成本（EIP-8058 的问题），代码相同的合约先初始化各自的存储，再采用共享代码，不必为客户端已存储的字节码重复支付代码存储 gas，在 EIP-8037 让部署更贵后尤其有用；二是停用 ECDSA 的 EOA 迁移（EIP-7851 的问题），迁移代码先初始化钱包状态（包括后量子钱包状态），再采用常规钱包代码，账户有了常规代码后，按 EIP-3607 不能再由 ECDSA 发起交易，也不能再用旧 ECDSA 密钥做 EIP-7702 重新委托。",
+      "url": "https://github.com/ethereum/EIPs/pull/11800",
+      "date": "2026-06-12",
+      "title_en": "New EIP: SETCODEFROM Code Reuse Instruction",
+      "note_en": "(colinlyguo), submitted, with a Magicians thread at 22:10; this is EIP-8298. It comes from benaadams' idea on an ACDE call to combine the goals of EIP-7851 and EIP-8058: a new EVM instruction lets the current account adopt the code hash of an existing deployed contract. The source is a live account address rather than a raw code hash, so the adopted code is tied to the current consensus state. There are two main uses. First, deployment cost (the problem EIP-8058 targets): contracts with identical runtime code initialize their own storage and then adopt shared code without paying code deposit gas again for bytecode clients already store, which matters more once EIP-8037 makes deployment more expensive. Second, EOA migration with ECDSA authority disabled (the problem EIP-7851 targets): migration code initializes wallet state, including post-quantum wallet state, then adopts regular wallet code; once the account has regular code, ECDSA transaction origination is disabled under EIP-3607 and EIP-7702 redelegation through the old ECDSA key is no longer available.",
+      "topic_en": "SETCODEFROM: a lower level code adoption primitive"
+    },
+    {
+      "topic": "SETCODEFROM：更底层的代码采用原语",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：SETCODEFROM 代码复用指令（colinlyguo）提交，Magicians 讨论帖 22:10，即 EIP-8298。思路来自 ACDE 上 benaadams 的提议，把 EIP-7851 与 EIP-8058 的目标结合：新 EVM 指令让当前账户采用一个已部署合约的 code hash。来源是一个活跃账户地址而非原始 code hash，因此被采用的代码与当前共识状态绑定。两个主要用途：一是部署成本（EIP-8058 的问题），代码相同的合约先初始化各自的存储，再采用共享代码，不必为客户端已存储的字节码重复支付代码存储 gas，在 EIP-8037 让部署更贵后尤其有用；二是停用 ECDSA 的 EOA 迁移（EIP-7851 的问题），迁移代码先初始化钱包状态（包括后量子钱包状态），再采用常规钱包代码，账户有了常规代码后，按 EIP-3607 不能再由 ECDSA 发起交易，也不能再用旧 ECDSA 密钥做 EIP-7702 重新委托。",
+      "url": "https://ethereum-magicians.org/t/eip-8298-setcodefrom-code-reuse-instruction/28779",
+      "date": "2026-06-12",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: SETCODEFROM Code Reuse Instruction (colinlyguo), submitted, with a Magicians thread at 22:10; this is EIP-8298. It comes from benaadams' idea on an ACDE call to combine the goals of EIP-7851 and EIP-8058: a new EVM instruction lets the current account adopt the code hash of an existing deployed contract. The source is a live account address rather than a raw code hash, so the adopted code is tied to the current consensus state. There are two main uses. First, deployment cost (the problem EIP-8058 targets): contracts with identical runtime code initialize their own storage and then adopt shared code without paying code deposit gas again for bytecode clients already store, which matters more once EIP-8037 makes deployment more expensive. Second, EOA migration with ECDSA authority disabled (the problem EIP-7851 targets): migration code initializes wallet state, including post-quantum wallet state, then adopts regular wallet code; once the account has regular code, ECDSA transaction origination is disabled under EIP-3607 and EIP-7702 redelegation through the old ECDSA key is no longer available.",
+      "topic_en": "SETCODEFROM: a lower level code adoption primitive"
+    },
+    {
+      "topic": "后量子签名在 EVM 上的验证",
+      "title": "ethresear.ch：SPHINCS minus，在 EVM 上高效验证无状态后量子签名",
+      "note": "20:15（nicocsgy），致谢 Vitalik、Justin Drake 和 EF PQ 与密码学团队等。文章从量子计算终将破解 ECDSA 出发，讨论基于哈希的无状态签名如何在 EVM 上以可接受的成本验证。",
+      "url": "https://ethresear.ch/t/sphincs-minus-efficient-stateless-post-quantum-signature-verification-on-the-evm/25165",
+      "date": "2026-06-12",
+      "title_en": "ethresear.ch: SPHINCS minus, efficient stateless post-quantum signature verification on the EVM",
+      "note_en": "20:15 (nicocsgy), with thanks to Vitalik, Justin Drake, the EF PQ and cryptography team and others. Starting from the fact that quantum computers will eventually break ECDSA, it discusses how stateless hash-based signatures can be verified on the EVM at acceptable cost.",
+      "topic_en": "Verifying post-quantum signatures on the EVM"
+    },
+    {
+      "topic": "后量子签名在 EVM 上的验证",
+      "title": "Magicians：EIP-8292 后量子 attestation 聚合者",
+      "note": "18:11。",
+      "url": "https://ethereum-magicians.org/t/eip-8292-pq-attestation-aggregators/28778",
+      "date": "2026-06-12",
+      "title_en": "Magicians: EIP-8292 PQ Attestation Aggregators",
+      "note_en": "18:11.",
+      "topic_en": "Verifying post-quantum signatures on the EVM"
+    },
+    {
+      "topic": "Gas 与 mempool",
+      "title": "EIP-7904：改为 Informational（不需要计算重定价）",
+      "note": "（misilva73）合并。在 EIP-7928（BAL）优化稳定后重跑 gas 分析，在 100 Mgas/s 目标下，所有被检查的计算操作和预编译在当前 gas 价格下都已达标。EIP 改名为“计算 gas 成本分析”。",
+      "url": "https://github.com/ethereum/EIPs/pull/11622",
+      "date": "2026-06-12",
+      "title_en": "EIP-7904: convert to Informational (no compute repricing needed)",
+      "note_en": "(misilva73), merged. The gas analysis was rerun with the EIP-7928 (BAL) optimizations stabilized; at the 100 Mgas/s target, every examined compute operation and precompile clears the target at its current gas cost. The EIP is retitled \"Compute Gas Cost Analysis\".",
+      "topic_en": "Gas and the mempool"
+    },
+    {
+      "topic": "Gas 与 mempool",
+      "title": "EIP-8038：加入初步数值",
+      "note": "（misilva73）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11802",
+      "date": "2026-06-12",
+      "title_en": "EIP-8038: add preliminary numbers",
+      "note_en": "(misilva73), submitted.",
+      "topic_en": "Gas and the mempool"
+    },
+    {
+      "topic": "Gas 与 mempool",
+      "title": "ErigonEth：加入新的 Encrypt the Mempool Coalition",
+      "note": "14:00，推动在 I* 硬分叉中加入加密以太坊 mempool 的 EIP，以阻止有害 MEV 和实时审查。",
+      "url": "https://x.com/ErigonEth/status/2065328301795668015",
+      "date": "2026-06-12",
+      "title_en": "ErigonEth: joining the new Encrypt the Mempool Coalition",
+      "note_en": "14:00, pushing to include an EIP that encrypts the Ethereum mempool in the I* hard fork to stop toxic MEV and real-time censorship.",
+      "topic_en": "Gas and the mempool"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #27",
+      "note": "20:34：LG Electronics 为广告搭建 L2、Aave 风险框架提议、账户抽象的历史。",
+      "url": "https://x.com/EtherealnewsHQ/status/2065427463698821268",
+      "date": "2026-06-12",
+      "title_en": "Ethereal news #27",
+      "note_en": "20:34: LG Electronics built an L2 for advertising, an Aave risk framework proposed, the history of account abstraction.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "fede_intern：少数几个 PropAMM 部署后，10 万美元稳定币兑换的成本只要 0.4 bps",
+      "note": "19:24。",
+      "url": "https://x.com/fede_intern/status/2065409937421853089",
+      "date": "2026-06-12",
+      "title_en": "fede_intern: with only a few PropAMMs deployed, a $100k stablecoin swap costs just 0.4 bps",
+      "note_en": "19:24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Protocol Guild：所有成员将获赠 Keycard Shell 硬件钱包",
+      "note": "22:01。",
+      "url": "https://x.com/ProtocolGuild/status/2065449419554869748",
+      "date": "2026-06-12",
+      "title_en": "Protocol Guild: all members will receive Keycard Shell hardware wallets",
+      "note_en": "22:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8297 分区二叉树",
+      "note": "09:24。",
+      "url": "https://ethereum-magicians.org/t/eip-8297-partitioned-binary-tree/28776",
+      "date": "2026-06-12",
+      "title_en": "Magicians: EIP-8297 Partitioned Binary Tree",
+      "note_en": "09:24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：批量拍卖消除而非转移排序面",
+      "note": "08:11。",
+      "url": "https://ethresear.ch/t/closing-the-first-precondition-batch-auctions-remove-the-ordering-surface-they-do-not-relocate-it/25160",
+      "date": "2026-06-12",
+      "title_en": "ethresear.ch: batch auctions remove the ordering surface, they do not relocate it",
+      "note_en": "08:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：基于证明的代理操作",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1770",
+      "date": "2026-06-12",
+      "title_en": "ERC: Attestation-Gated Agentic Actions",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #28 议程",
+      "note": "04:41。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-28-june-15-2026-15-00-utc/28775",
+      "date": "2026-15-00",
+      "title_en": "RPC Standards #28 agenda",
+      "note_en": "04:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：是否重启通过 mpp 做广告拍卖、让应用补贴用户成本的想法",
+      "note": "04:56。",
+      "url": "https://x.com/gakonst/status/2065191424484581855",
+      "date": "2026-06-12",
+      "title_en": "gakonst: should we bring back ad auctions over mpp that let apps subsidize user costs",
+      "note_en": "04:56.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/sphincs-minus-efficient-stateless-post-quantum-signature-verification-on-the-evm/25165",
+    "credit": "ethresear.ch, SPHINCS minus: Efficient Stateless Post-Quantum Signature Verification on the EVM (nicocsgy)",
+    "local_path": "assets/2026-06-12.jpg",
+    "credit_en": "ethresear.ch, SPHINCS minus: Efficient Stateless Post-Quantum Signature Verification on the EVM (nicocsgy)"
+  },
+  "keywords_en": [
+    "EIP-8298 SETCODEFROM",
+    "EIP-7851 and EIP-8058 combined",
+    "SPHINCS minus post-quantum signature verification",
+    "EIP-7904 to Informational",
+    "Encrypt the Mempool Coalition",
+    "PropAMM",
+    "Protocol Guild Keycard",
+    "Ethereal news #27"
+  ],
+  "summary_en": "colinlyguo submitted EIP-8298 SETCODEFROM, which follows Ben Adams' idea from an ACDE call to combine the goals of EIP-7851 and EIP-8058 into a lower level code adoption primitive: the current account can adopt the code of an already deployed contract. SPHINCS minus on ethresear.ch describes efficient verification of stateless post-quantum signatures on the EVM. EIP-7904 was converted to Informational, since clients already reach the 100 Mgas/s target at current gas costs and no compute repricing is needed. Erigon joined the Encrypt the Mempool Coalition."
+}
