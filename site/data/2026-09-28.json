@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-28",
+  "keywords": [
+    "Chainlink CCIP 2.0 首个上线 FCR",
+    "ACDT #98",
+    "200M gas 执行时间安全",
+    "Daisugi v0.2 支持 frame 交易",
+    "EIP-8429 重复调用递增 gas",
+    "后量子隐身地址"
+  ],
+  "summary": "Chainlink CCIP 2.0 成为第一个在生产中使用快速确认规则（FCR）的跨链桥，从以太坊发起的转账可以比最终性快得多且仍有明确安全保证；Derek Chiang 说是 30 倍。ACDT #98 上，200M gas 上限在执行时间上被认为安全，FCR 将使用新的 confirmed 区块标签。Daisugi v0.2 支持 frame 交易，SPHINCS 签名的交易可以作为原生 frame 运行。",
+  "items": [
+    {
+      "topic": "快速确认进入生产",
+      "title": "Julian Ma：Chainlink CCIP 2.0 是第一个在生产中使用 FCR 的跨链桥",
+      "note": "21:58，资产发行方可以让资产以快于最终性的速度跨链，同时有 FCR 的安全保证。",
+      "url": "https://x.com/_julianma/status/2104586544086389091",
+      "date": "2026-09-28",
+      "title_en": "Julian Ma: Chainlink CCIP 2.0 is the first bridge to put FCR into production",
+      "note_en": "21:58, letting asset issuers bridge at faster-than-finality speed with FCR's security.",
+      "topic_en": "Fast confirmation goes to production"
+    },
+    {
+      "topic": "快速确认进入生产",
+      "title": "Derek Chiang：这是他加入 Ethlabs 后的第一个项目，与 Chainlink 一起把 FCR 带到 CCIP 2.0",
+      "note": "22:18，从以太坊发起的转账和资产发行可快 30 倍；fradamt：不用再随便选个确认块数等待，又得不到明确的安全保证 22:05；barnabemonnot 22:09；trent_vanepps：这是 Ethlabs、CL 客户端和 EF 等多方协作的成果 22:03。",
+      "url": "https://x.com/decentrek/status/2104591636802179571",
+      "date": "2026-09-28",
+      "title_en": "Derek Chiang: the first project he worked on after joining Ethlabs, rolling out FCR to CCIP 2.0 with Chainlink",
+      "note_en": "22:18, making transfers and issuance from Ethereum 30 times faster; fradamt: no more choosing a random number of block confirmations and waiting without clear security guarantees, 22:05; barnabemonnot, 22:09; trent_vanepps: a collaborative effort by Ethlabs, CL clients, the EF and others, 22:03.",
+      "topic_en": "Fast confirmation goes to production"
+    },
+    {
+      "topic": "快速确认进入生产",
+      "title": "fradamt：不用再随便选个确认块数等待，又得不到明确的安全保证",
+      "note": "Derek Chiang：这是他加入 Ethlabs 后的第一个项目，与 Chainlink 一起把 FCR 带到 CCIP 2.0 22:18，从以太坊发起的转账和资产发行可快 30 倍；fradamt：不用再随便选个确认块数等待，又得不到明确的安全保证 22:05；barnabemonnot 22:09；trent_vanepps：这是 Ethlabs、CL 客户端和 EF 等多方协作的成果 22:03。",
+      "url": "https://x.com/fradamt/status/2104588393480958066",
+      "date": "2026-09-28",
+      "title_en": "fradamt: no more choosing a random number of block confirmations and waiting without clear security guarantees",
+      "note_en": "Derek Chiang: the first project he worked on after joining Ethlabs, rolling out FCR to CCIP 2.0 with Chainlink, 22:18, making transfers and issuance from Ethereum 30 times faster; fradamt: no more choosing a random number of block confirmations and waiting without clear security guarantees, 22:05; barnabemonnot, 22:09; trent_vanepps: a collaborative effort by Ethlabs, CL clients, the EF and others, 22:03.",
+      "topic_en": "Fast confirmation goes to production"
+    },
+    {
+      "topic": "快速确认进入生产",
+      "title": "barnabemonnot",
+      "note": "Derek Chiang：这是他加入 Ethlabs 后的第一个项目，与 Chainlink 一起把 FCR 带到 CCIP 2.0 22:18，从以太坊发起的转账和资产发行可快 30 倍；fradamt：不用再随便选个确认块数等待，又得不到明确的安全保证 22:05；barnabemonnot 22:09；trent_vanepps：这是 Ethlabs、CL 客户端和 EF 等多方协作的成果 22:03。",
+      "url": "https://x.com/barnabemonnot/status/2104589359445905507",
+      "date": "2026-09-28",
+      "title_en": "barnabemonnot",
+      "note_en": "Derek Chiang: the first project he worked on after joining Ethlabs, rolling out FCR to CCIP 2.0 with Chainlink, 22:18, making transfers and issuance from Ethereum 30 times faster; fradamt: no more choosing a random number of block confirmations and waiting without clear security guarantees, 22:05; barnabemonnot, 22:09; trent_vanepps: a collaborative effort by Ethlabs, CL clients, the EF and others, 22:03.",
+      "topic_en": "Fast confirmation goes to production"
+    },
+    {
+      "topic": "快速确认进入生产",
+      "title": "trent_vanepps：这是 Ethlabs、CL 客户端和 EF 等多方协作的成果",
+      "note": "Derek Chiang：这是他加入 Ethlabs 后的第一个项目，与 Chainlink 一起把 FCR 带到 CCIP 2.0 22:18，从以太坊发起的转账和资产发行可快 30 倍；fradamt：不用再随便选个确认块数等待，又得不到明确的安全保证 22:05；barnabemonnot 22:09；trent_vanepps：这是 Ethlabs、CL 客户端和 EF 等多方协作的成果 22:03。",
+      "url": "https://x.com/trent_vanepps/status/2104587770031223170",
+      "date": "2026-09-28",
+      "title_en": "trent_vanepps: a collaborative effort by Ethlabs, CL clients, the EF and others",
+      "note_en": "Derek Chiang: the first project he worked on after joining Ethlabs, rolling out FCR to CCIP 2.0 with Chainlink, 22:18, making transfers and issuance from Ethereum 30 times faster; fradamt: no more choosing a random number of block confirmations and waiting without clear security guarantees, 22:05; barnabemonnot, 22:09; trent_vanepps: a collaborative effort by Ethlabs, CL clients, the EF and others, 22:03.",
+      "topic_en": "Fast confirmation goes to production"
+    },
+    {
+      "topic": "后量子账户与 gas",
+      "title": "asanso：Daisugi v0.2 支持 frame 交易",
+      "note": "15:41，SPHINCS 签名的交易可以作为原生 frame 运行，逐帧执行和验证，与现有 ERC-4337 流程并存；下一步是签名聚合。",
+      "url": "https://x.com/asanso/status/2104491639251050555",
+      "date": "2026-09-28",
+      "title_en": "asanso: Daisugi v0.2 supports frame transactions",
+      "note_en": "15:41; SPHINCS-signed transactions can run as native frames with per-frame execution and verification, alongside the existing ERC-4337 flow, with signature aggregation next.",
+      "topic_en": "Post-quantum accounts and gas"
+    },
+    {
+      "topic": "后量子账户与 gas",
+      "title": "新 EIP：重复调用递增 gas",
+      "note": "（staccDOTsol，后编号 EIP-8429）。客户端在世界状态之外为地址维护引用计数，账户可一次性不可撤销地登记，之后对它的状态变更调用（不含 `STATICCALL`、`DELEGATECALL`）按两条递增曲线中较高者计价。",
+      "url": "https://github.com/ethereum/EIPs/pull/12384",
+      "date": "2026-09-28",
+      "title_en": "New EIP: escalating gas for repeated calls",
+      "note_en": "(staccDOTsol, later EIP-8429). The client keeps a per-address reference counter outside world state; an account may enroll once, irrevocably, and state-changing calls into it (not `STATICCALL` or `DELEGATECALL`) are then priced on two ratchets, paying the larger.",
+      "topic_en": "Post-quantum accounts and gas"
+    },
+    {
+      "topic": "后量子账户与 gas",
+      "title": "ethresear.ch：隐身地址协议的后量子匿名性",
+      "note": "08:05 和 后量子花费 08:09（namnc），系列第二、三篇。",
+      "url": "https://ethresear.ch/t/pq-anonymity-for-stealth-address-protocol/26094",
+      "date": "2026-09-28",
+      "title_en": "ethresear.ch: PQ anonymity for the Stealth Address Protocol",
+      "note_en": "08:05, and PQ spending, 08:09 (namnc), the second and third posts in the series.",
+      "topic_en": "Post-quantum accounts and gas"
+    },
+    {
+      "topic": "后量子账户与 gas",
+      "title": "后量子花费",
+      "note": "ethresear.ch：隐身地址协议的后量子匿名性 08:05 和 后量子花费 08:09（namnc），系列第二、三篇。",
+      "url": "https://ethresear.ch/t/pq-spending-for-stealth-address-protocol/26095",
+      "date": "2026-09-28",
+      "title_en": "PQ spending",
+      "note_en": "Ethresear.ch: PQ anonymity for the Stealth Address Protocol, 08:05, and PQ spending, 08:09 (namnc), the second and third posts in the series.",
+      "topic_en": "Post-quantum accounts and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8432 链上 IP 资产与许可注册表",
+      "note": "20:46。",
+      "url": "https://ethereum-magicians.org/t/erc-8432-onchain-ip-asset-and-license-registry/29792",
+      "date": "2026-09-28",
+      "title_en": "ERC-8432 onchain IP asset and license registry",
+      "note_en": "20:46.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson 将在 10 月 7 日 StarkWare 新加坡隐私峰会演讲",
+      "note": "23:18。",
+      "url": "https://x.com/EliBenSasson/status/2104606744445927843",
+      "date": "2026-09-28",
+      "title_en": "Eli Ben-Sasson will speak at StarkWare's Privacy Summit in Singapore on October 7",
+      "note_en": "23:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "barnabemonnot：把计算推到链下的更微妙之处",
+      "note": "00:24。",
+      "url": "https://x.com/barnabemonnot/status/2104260847975707013",
+      "date": "2026-09-28",
+      "title_en": "barnabemonnot on a subtler aspect of pushing computation offchain",
+      "note_en": "00:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/_julianma/status/2104586544086389091",
+    "credit": "X, @_julianma",
+    "local_path": "assets/2026-09-28.jpg",
+    "credit_en": "X, @_julianma"
+  },
+  "keywords_en": [
+    "Chainlink CCIP 2.0 first to ship FCR",
+    "ACDT #98",
+    "200M gas safe on execution time",
+    "Daisugi v0.2 supports frame transactions",
+    "EIP-8429 escalating gas for repeated calls",
+    "post-quantum stealth addresses"
+  ],
+  "summary_en": "Chainlink CCIP 2.0 became the first bridge to put the Fast Confirmation Rule (FCR) into production, so transfers originating from Ethereum can move much faster than finality with clear security guarantees; Derek Chiang put it at 30 times faster. At ACDT #98, the 200M gas limit was deemed safe on execution time, and FCR will use a new confirmed block tag. Daisugi v0.2 added frame transaction support, so SPHINCS-signed transactions can run as native frames."
+}

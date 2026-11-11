@@ -1,0 +1,207 @@
+{
+  "date": "2026-09-30",
+  "keywords": [
+    "EIP-8430 讨论帖",
+    "EIP-8298 BAL 中记录代码哈希",
+    "EF 后量子哈希签名挑战",
+    "ethrex v28 支持 Glamsterdam",
+    "Glamsterdam 风险与治理讨论"
+  ],
+  "summary": "EIP-8430（从 8130 拆出的 AA 交易类型）开讨论帖，说明拆分理由：交易类型本身就有用，可先上线。EIP-8298 提交修订（10 月 2 日合并），`SETCODEFROM` 在 BAL 中只记录代码哈希，并拒绝同一交易内创建的源账户，避免一次 9,300 gas 的调用让 BAL 增加最多 24 KiB。EF 发起开放挑战，征集为后量子以太坊设计的无状态哈希签名并在 Lean 中证明安全。",
+  "items": [
+    {
+      "topic": "账户与代码的状态成本",
+      "title": "Magicians：EIP-8430 AA 交易类型（从 8130 拆出）",
+      "note": "19:00（chunter），交易类型不依赖 Keystore，适用于用原生 secp256k1 认证的现有 EOA，所以可以先上线，Keystore 之后跟上。",
+      "url": "https://ethereum-magicians.org/t/eip-8430-aa-transaction-type-split-out-from-8130/29810",
+      "date": "2026-09-30",
+      "title_en": "Magicians: EIP-8430 AA transaction type (split out from 8130)",
+      "note_en": "19:00 (chunter); the transaction type has no Keystore dependency and works for today's EOAs with native secp256k1 authentication, so it can ship first and the Keystore can follow.",
+      "topic_en": "State costs for accounts and code"
+    },
+    {
+      "topic": "账户与代码的状态成本",
+      "title": "EIP-8298：BAL 中把采用的代码记为哈希，拒绝同一交易创建的源账户",
+      "note": "（CPerezz）。EIP-7928 把每次代码哈希变化记为完整字节码，一次热源 `SETCODEFROM` 只花 9,300 gas，却可能让 BAL 增加最多 24 KiB；只记哈希则要求字节码在别处可找到，同一交易内创建又自毁的源账户会让哈希无字节码可查。",
+      "url": "https://github.com/ethereum/EIPs/pull/12399",
+      "date": "2026-09-30",
+      "title_en": "EIP-8298: record adopted code as a hash in the BAL and reject same-transaction-created sources",
+      "note_en": "(CPerezz). EIP-7928 records every code hash change as full bytecode, so one warm-source `SETCODEFROM` at 9,300 gas could add up to 24 KiB to the BAL; a hash-only entry needs the bytecode findable elsewhere, and a source created and self-destructed in the same transaction would leave the hash with no bytecode anywhere.",
+      "topic_en": "State costs for accounts and code"
+    },
+    {
+      "topic": "账户与代码的状态成本",
+      "title": "EIP-8250：在区块访问索引 0 记录激活时的状态变化",
+      "note": "（后关闭），EIP-8250 和 EIP-8272 在激活首块安装合约，实现对其在 BAL 中的位置理解不一。",
+      "url": "https://github.com/ethereum/EIPs/pull/12406",
+      "date": "2026-09-30",
+      "title_en": "EIP-8250: record activation state changes at block access index 0",
+      "note_en": "(later closed); EIP-8250 and EIP-8272 install contracts in their first active block, and implementations disagreed on where that goes in the BAL.",
+      "topic_en": "State costs for accounts and code"
+    },
+    {
+      "topic": "账户与代码的状态成本",
+      "title": "EIP-8037 增加 Paweł Bylica 为共同作者",
+      "note": "合并，另有两个增加共同作者的 PR。",
+      "url": "https://github.com/ethereum/EIPs/pull/12400",
+      "date": "2026-09-30",
+      "title_en": "EIP-8037: add Paweł Bylica as co-author",
+      "note_en": "Merged, along with two other PRs adding co-authors.",
+      "topic_en": "State costs for accounts and code"
+    },
+    {
+      "topic": "Glamsterdam 前夕",
+      "title": "ethrex：首次与所有其他执行客户端一起列入 EF 升级公告，v28.0.0 已为 Sepolia 上的 Glamsterdam 准备好",
+      "note": "02:32；terencechain：Glamsterdam 改变以太坊的扩容方式 22:38。",
+      "url": "https://x.com/ethrex_client/status/2105017899177881948",
+      "date": "2026-09-30",
+      "title_en": "ethrex: for the first time listed alongside every other execution client in an EF upgrade announcement, with v28.0.0 ready for Glamsterdam on Sepolia",
+      "note_en": "02:32; terencechain: Glamsterdam changes how Ethereum scales, 22:38.",
+      "topic_en": "On the eve of Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 前夕",
+      "title": "terencechain：Glamsterdam 改变以太坊的扩容方式",
+      "note": "ethrex：首次与所有其他执行客户端一起列入 EF 升级公告，v28.0.0 已为 Sepolia 上的 Glamsterdam 准备好 02:32；terencechain：Glamsterdam 改变以太坊的扩容方式 22:38。",
+      "url": "https://x.com/terencechain/status/2105321390920573106",
+      "date": "2026-09-30",
+      "title_en": "terencechain: Glamsterdam changes how Ethereum scales",
+      "note_en": "Ethrex: for the first time listed alongside every other execution client in an EF upgrade announcement, with v28.0.0 ready for Glamsterdam on Sepolia, 02:32; terencechain: Glamsterdam changes how Ethereum scales, 22:38.",
+      "topic_en": "On the eve of Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 前夕",
+      "title": "potuz：下一次分叉风险很高，gas 上限提高 5 倍、blob 数据提高 4 倍、更快的状态更新、无信任的槽位出售等，复杂到参与者神经紧绷",
+      "note": "16:44。",
+      "url": "https://x.com/potuz_eth/status/2105232321053859977",
+      "date": "2026-09-30",
+      "title_en": "potuz: the next fork is high stakes, with a 5x gas limit, 4x blob data, faster state updates and trustless slot selling, so complex that people's nerves are wrecked",
+      "note_en": "16:44.",
+      "topic_en": "On the eve of Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 前夕",
+      "title": "EF：开放自动研究挑战，设计后量子以太坊的无状态哈希签名并在 Lean 中证明安全",
+      "note": "22:12；EF 支持形式化验证的 Vyper 20:51。",
+      "url": "https://x.com/ethereumfndn/status/2105314932283814382",
+      "date": "2026-09-30",
+      "title_en": "EF: an open autoresearch challenge to design stateless hash-based signatures for post-quantum Ethereum and prove them secure in Lean",
+      "note_en": "22:12; EF supports formally verified Vyper, 20:51.",
+      "topic_en": "On the eve of Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 前夕",
+      "title": "EF 支持形式化验证的 Vyper",
+      "note": "EF：开放自动研究挑战，设计后量子以太坊的无状态哈希签名并在 Lean 中证明安全 22:12；EF 支持形式化验证的 Vyper 20:51。",
+      "url": "https://x.com/ethereumfndn/status/2105294431494811855",
+      "date": "2026-09-30",
+      "title_en": "EF supports formally verified Vyper",
+      "note_en": "EF: an open autoresearch challenge to design stateless hash-based signatures for post-quantum Ethereum and prove them secure in Lean, 22:12; EF supports formally verified Vyper, 20:51.",
+      "topic_en": "On the eve of Glamsterdam"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7907：把大小上限提升交给 EIP-7954",
+      "note": "合并；EIP-8347 PBT 快照合并多项修订，如 把 pbtRoot 移到快照末尾。",
+      "url": "https://github.com/ethereum/EIPs/pull/12398",
+      "date": "2026-09-30",
+      "title_en": "EIP-7907: defer size-limit increases to EIP-7954",
+      "note_en": "Merged; EIP-8347's PBT snapshot merged several revisions, such as moving pbtRoot to the end of the snapshot.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "把 pbtRoot 移到快照末尾",
+      "note": "EIP-7907：把大小上限提升交给 EIP-7954 合并；EIP-8347 PBT 快照合并多项修订，如 把 pbtRoot 移到快照末尾。",
+      "url": "https://github.com/ethereum/EIPs/pull/12403",
+      "date": "2026-09-30",
+      "title_en": "moving pbtRoot to the end of the snapshot",
+      "note_en": "EIP-7907: defer size-limit increases to EIP-7954, merged; EIP-8347's PBT snapshot merged several revisions, such as moving pbtRoot to the end of the snapshot.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8433 退役 0x00 验证者",
+      "note": "17:26；ERC-8434 代理身份 AID 10:43。",
+      "url": "https://ethereum-magicians.org/t/eip-8433-retire-0x00-validators/29808",
+      "date": "2026-09-30",
+      "title_en": "Magicians: EIP-8433 retire 0x00 validators",
+      "note_en": "17:26; ERC-8434 Agent Identity (AID), 10:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8434 代理身份 AID",
+      "note": "Magicians：EIP-8433 退役 0x00 验证者 17:26；ERC-8434 代理身份 AID 10:43。",
+      "url": "https://ethereum-magicians.org/t/erc-8434-agent-identity-aid/29805",
+      "date": "2026-09-30",
+      "title_en": "ERC-8434 Agent Identity (AID)",
+      "note_en": "Magicians: EIP-8433 retire 0x00 validators, 17:26; ERC-8434 Agent Identity (AID), 10:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7813 进入 Final",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1997",
+      "date": "2026-09-30",
+      "title_en": "ERC-7813 moves to Final",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：发送 USDC、USDT 或 DAI 到经 ENS 解析的标签即可获得隐私",
+      "note": "02:25。",
+      "url": "https://x.com/aztecnetwork/status/2105016226170941447",
+      "date": "2026-09-30",
+      "title_en": "Aztec: send USDC, USDT or DAI to an ENS-resolved tag to get privacy",
+      "note_en": "02:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：可升级账户能更换签名方案而保留地址和资产",
+      "note": "23:03。",
+      "url": "https://x.com/StarkWareLtd/status/2105327569826681306",
+      "date": "2026-09-30",
+      "title_en": "StarkWare: upgradeable accounts can change signing schemes while keeping the same address and assets",
+      "note_en": "23:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：EF 迟早会与相当一部分核心开发者冲突，以太坊有治理问题",
+      "note": "23:05；他还批评 Paradigm 一边分叉以太坊做 Tempo，一边试图影响以太坊路线图 23:10。",
+      "url": "https://x.com/fede_intern/status/2105328257105076330",
+      "date": "2026-09-30",
+      "title_en": "fede_intern: the EF will sooner or later clash with a relevant part of core devs, and Ethereum has a governance problem",
+      "note_en": "23:05; he also criticized Paradigm for forking Ethereum into Tempo while trying to influence Ethereum's roadmap, 23:10.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "他还批评 Paradigm 一边分叉以太坊做 Tempo，一边试图影响以太坊路线图",
+      "note": "fede_intern：EF 迟早会与相当一部分核心开发者冲突，以太坊有治理问题 23:05；他还批评 Paradigm 一边分叉以太坊做 Tempo，一边试图影响以太坊路线图 23:10。",
+      "url": "https://x.com/fede_intern/status/2105329391496556780",
+      "date": "2026-09-30",
+      "title_en": "he also criticized Paradigm for forking Ethereum into Tempo while trying to influence Ethereum's roadmap",
+      "note_en": "Fede_intern: the EF will sooner or later clash with a relevant part of core devs, and Ethereum has a governance problem, 23:05; he also criticized Paradigm for forking Ethereum into Tempo while trying to influence Ethereum's roadmap, 23:10.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8430-aa-transaction-type-split-out-from-8130/29810",
+    "credit": "Ethereum Magicians, EIP-8430: AA Transaction Type (Split out from 8130)",
+    "local_path": "assets/2026-09-30.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8430: AA Transaction Type (Split out from 8130)"
+  },
+  "keywords_en": [
+    "EIP-8430 discussion thread",
+    "EIP-8298 records code hashes in the BAL",
+    "EF post-quantum hash-based signature challenge",
+    "ethrex v28 ready for Glamsterdam",
+    "Glamsterdam risk and governance debate"
+  ],
+  "summary_en": "EIP-8430 (the AA transaction type split out of 8130) opened its discussion thread, explaining the split: the transaction type is useful on its own and can ship first. EIP-8298 submitted a revision (merged October 2) so `SETCODEFROM` records only the code hash in the BAL and rejects sources created in the same transaction, preventing one 9,300 gas call from adding up to 24 KiB to the BAL. The EF launched an open challenge to design stateless hash-based signatures for post-quantum Ethereum and prove them secure in Lean."
+}

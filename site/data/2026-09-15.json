@@ -1,0 +1,139 @@
+{
+  "date": "2026-09-15",
+  "keywords": [
+    "ERC-7562 进入 Review",
+    "EIP-8081 记录 ACDE #245 的 DFI",
+    "frame 与 keystore 共享授权",
+    "递归 STARK 与无信任日志索引",
+    "后量子签名选型",
+    "FOCIL #42"
+  ],
+  "summary": "账户抽象方面，ERC-7562（AA 验证规则）进入 Review；AnkushinDaniil 提出两个可选扩展，让 keystore 账户和 frame 账户共享同一授权步骤，并让密钥变更签名跨模型、跨链可移植。Hegotá 元 EIP-8081 合并 ACDE #245 的 DFI 决定。zsfelfoldi 认为递归 STARK 预授权（EIP-8288）会大幅降低无状态见证数据的链上成本，包括无信任日志索引的证明。",
+  "items": [
+    {
+      "topic": "账户抽象标准的跨模型协作",
+      "title": "ERC-7562 进入 Review",
+      "note": "（forshtat）合并，这是 ERC-4337 账户抽象的验证规则。",
+      "url": "https://github.com/ethereum/ERCs/pull/1804",
+      "date": "2026-09-15",
+      "title_en": "ERC-7562 moves to Review",
+      "note_en": "(forshtat) was merged; it holds the validation rules for ERC-4337 account abstraction.",
+      "topic_en": "Cross-model collaboration on AA standards"
+    },
+    {
+      "topic": "账户抽象标准的跨模型协作",
+      "title": "EIP-8141：共享授权步骤的可选 sender 键控权限读取",
+      "note": "（AnkushinDaniil，后关闭）。目前 `VERIFY` 帧只能读 `tx.sender` 的存储，无法读 keystore 合约里按账户键控、只有账户能写的权限记录，这阻碍了 keystore 账户与 frame 账户共享授权步骤。",
+      "url": "https://github.com/ethereum/EIPs/pull/12340",
+      "date": "2026-09-15",
+      "title_en": "EIP-8141: optional sender-keyed authority read for a shared authorization step",
+      "note_en": "(AnkushinDaniil, later closed). A `VERIFY` frame can only read `tx.sender` storage today, so it cannot read an authority record in a keystore contract that is keyed to the account and writable only by it, which blocks keystore and frame accounts from sharing an authorization step.",
+      "topic_en": "Cross-model collaboration on AA standards"
+    },
+    {
+      "topic": "账户抽象标准的跨模型协作",
+      "title": "EIP-8130：可选的模型中立变更摘要",
+      "note": "签名摘要只绑定域、chainId、账户、actorId、新旧配置，不含签名者身份和交易，同一签名就能在 8130、其他原生 AA 模型或其他链上授权同一变更。",
+      "url": "https://github.com/ethereum/EIPs/pull/12341",
+      "date": "2026-09-15",
+      "title_en": "EIP-8130: optional model-neutral change digest",
+      "note_en": "Where the signed digest binds only domain, chainId, account, actorId and the old and new config, with no signer identity or transaction, so the same signature authorizes the same change through 8130, another native AA model, or another chain.",
+      "topic_en": "Cross-model collaboration on AA standards"
+    },
+    {
+      "topic": "账户抽象标准的跨模型协作",
+      "title": "EIP-7906：摘要覆盖三个操作码和 POST_TX 帧模式",
+      "note": "等三项更新合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12329",
+      "date": "2026-09-15",
+      "title_en": "EIP-7906: abstract covers all three opcodes and the POST_TX frame mode",
+      "note_en": "One of three updates merged.",
+      "topic_en": "Cross-model collaboration on AA standards"
+    },
+    {
+      "topic": "递归 STARK 的更多用途",
+      "title": "ethresear.ch：用递归 STARK 和无信任日志索引扩容以太坊",
+      "note": "19:37（zsfelfoldi）。PQ 签名体积大，EIP-8288 的递归 STARK 预授权很可能成为升级路径；届时任何无状态可验证的见证数据的链上成本都大幅下降，包括基于 EIP-8304 索引表的日志查询证明。",
+      "url": "https://ethresear.ch/t/scaling-ethereum-with-recursive-starks-and-the-trustless-log-index/26002",
+      "date": "2026-09-15",
+      "title_en": "ethresear.ch: scaling Ethereum with recursive STARKs and the Trustless Log Index",
+      "note_en": "19:37 (zsfelfoldi). Because PQ signatures are large, EIP-8288's recursive STARK pre-authorization is a very likely upgrade path; then the onchain cost of any statelessly verifiable witness data drops sharply, including log query proofs based on EIP-8304's index tables.",
+      "topic_en": "More uses for recursive STARKs"
+    },
+    {
+      "topic": "递归 STARK 的更多用途",
+      "title": "ethresear.ch：后量子选格还是选哈希",
+      "note": "21:49，采访了 ML-DSA 和 SLH-DSA 的共同设计者 Peter Schwabe 等人。",
+      "url": "https://ethresear.ch/t/post-quantum-lattice-or-hash-based-one-question-two-right-answers/26003",
+      "date": "2026-09-15",
+      "title_en": "ethresear.ch: post-quantum lattice or hash-based",
+      "note_en": "21:49, with interviews including Peter Schwabe, co-designer of ML-DSA and SLH-DSA.",
+      "topic_en": "More uses for recursive STARKs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：记录 ACDE #245 的 DFI 决定",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12335",
+      "date": "2026-09-15",
+      "title_en": "EIP-8081: DFI decisions from ACDE #245",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "soispoke 在 edge_pod 谈以太坊协议隐私路线图",
+      "note": "18:47，涉及 7805、8181、8250、8272 和 PQ 隐私。",
+      "url": "https://x.com/soispoke/status/2099827403501523015",
+      "date": "2026-09-15",
+      "title_en": "soispoke on edge_pod about Ethereum's protocol privacy roadmap",
+      "note_en": "18:47, covering 7805, 8181, 8250, 8272 and PQ privacy.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：DAO Fund 的 ETHSecurity Initiatives 第二轮开放",
+      "note": "23:41。",
+      "url": "https://x.com/ethereumfndn/status/2099901526772731991",
+      "date": "2026-09-15",
+      "title_en": "EF: Round Two of ETHSecurity Initiatives from the DAO Fund is live",
+      "note_en": "23:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "donnoh：L2BEAT 推出固化评分，67 分表示 67% 超过 1,000 美元的攻击针对较新的代码",
+      "note": "21:44。",
+      "url": "https://x.com/donnoh_eth/status/2099871889514451102",
+      "date": "2026-09-15",
+      "title_en": "donnoh: L2BEAT's ossification score, where 67 means 67% of exploits over $1k targeted younger code",
+      "note_en": "21:44.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Trail of Bits：1Password 报告称 AI 只有 26% 能写出干净的安全修复，防守方不该当真",
+      "note": "18:15。",
+      "url": "https://x.com/trailofbits/status/2099819316745060639",
+      "date": "2026-09-15",
+      "title_en": "Trail of Bits: 1Password's report that AI produces a clean security fix only 26% of the time should not be taken seriously by defenders",
+      "note_en": "18:15.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/scaling-ethereum-with-recursive-starks-and-the-trustless-log-index/26002",
+    "credit": "ethresear.ch, Scaling Ethereum with recursive STARKs and the Trustless Log Index",
+    "local_path": "assets/2026-09-15.jpg",
+    "credit_en": "ethresear.ch, Scaling Ethereum with recursive STARKs and the Trustless Log Index"
+  },
+  "keywords_en": [
+    "ERC-7562 moves to Review",
+    "EIP-8081 records ACDE #245 DFIs",
+    "shared authorization for frame and keystore accounts",
+    "recursive STARKs and the trustless log index",
+    "choosing post-quantum signatures",
+    "FOCIL #42"
+  ],
+  "summary_en": "On account abstraction, ERC-7562 (AA validation rules) moved to Review; AnkushinDaniil proposed two optional extensions letting keystore and frame accounts share one authorization step and making key change signatures portable across models and chains. The Hegotá meta EIP-8081 merged ACDE #245's DFI decisions. zsfelfoldi argued that recursive STARK pre-authorization (EIP-8288) would sharply cut the onchain cost of statelessly verifiable witness data, including trustless log index proofs."
+}

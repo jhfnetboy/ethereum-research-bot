@@ -1,0 +1,157 @@
+{
+  "date": "2026-09-23",
+  "keywords": [
+    "frame 交易替代内存池 ERC",
+    "FCR 安全性",
+    "Privacy Pools 网络观察者隐私",
+    "Post-Poseidon 哈希选型",
+    "EIP-8360 TCREATE 账户"
+  ],
+  "summary": "forshtat 提交“frame 交易替代内存池”ERC 草案，为不满足公共内存池规则的 frame 交易提供另一条传播路径。Julian Ma 解释快速确认规则（FCR）如何保持安全：FCR 是客户端本地运行的算法，不像最终性那样从链上读取。L2BEAT 把 Privacy Pools 的“网络观察者链接隐私”评为绿色，原因是前端支持自定义 RPC。khovratovich 讨论 Flock 出现后以太坊该用哪种哈希函数。",
+  "items": [
+    {
+      "topic": "frame 交易与隐私应用的传播",
+      "title": "新 ERC：frame 交易替代内存池",
+      "note": "（forshtat）。EIP-8141 的公共内存池限制验证 gas、付款方和每个 sender 的待处理数量，不满足规则的交易需要另外的传播渠道，类似 ERC-4337 的替代内存池。",
+      "url": "https://github.com/ethereum/ERCs/pull/2028",
+      "date": "2026-09-23",
+      "title_en": "New ERC: frame transaction alternative mempools",
+      "note_en": "(forshtat). EIP-8141's public mempool limits validation gas, payers and pending transactions per sender, so transactions that do not meet these rules need another channel, similar to ERC-4337's alternative mempools.",
+      "topic_en": "Propagating frame transactions and privacy apps"
+    },
+    {
+      "topic": "frame 交易与隐私应用的传播",
+      "title": "ethbeat：Privacy Pools 的网络观察者链接隐私变为绿色",
+      "note": "20:04，原因是前端最近两项修复，最新一项是支持自定义 RPC。",
+      "url": "https://x.com/ethbeat_org/status/2102745913110167751",
+      "date": "2026-09-23",
+      "title_en": "ethbeat: link privacy against the network observer is now green for Privacy Pools",
+      "note_en": "20:04, the result of two recent frontend fixes, the latest being custom RPC support.",
+      "topic_en": "Propagating frame transactions and privacy apps"
+    },
+    {
+      "topic": "frame 交易与隐私应用的传播",
+      "title": "StarkWare：Ekubo 上线私密兑换，与公开兑换共用流动性",
+      "note": "15:23。",
+      "url": "https://x.com/StarkWareLtd/status/2102675296520634537",
+      "date": "2026-09-23",
+      "title_en": "StarkWare: private swaps live on Ekubo, using the same liquidity as public swaps",
+      "note_en": "15:23.",
+      "topic_en": "Propagating frame transactions and privacy apps"
+    },
+    {
+      "topic": "快速确认与哈希",
+      "title": "Julian Ma：FCR 可能很快承载数百万美元的跨链流量，这是保持其安全的方法",
+      "note": "21:55，FCR 是客户端本地运行的算法，而不是像最终性那样从链上读取，因此更复杂。",
+      "url": "https://x.com/_julianma/status/2102773912585011370",
+      "date": "2026-09-23",
+      "title_en": "Julian Ma: FCR may soon be relied on for millions of dollars in bridging volume, and here is how it stays secure",
+      "note_en": "21:55; FCR is an algorithm clients run locally rather than something read from the chain like finality, which makes it more complex.",
+      "topic_en": "Fast confirmation and hashes"
+    },
+    {
+      "topic": "快速确认与哈希",
+      "title": "ethresear.ch：Post-Poseidon，以太坊的哈希函数选择",
+      "note": "16:50（khovratovich），Flock 作为面向二进制电路的 PQ 证明系统出现后，需要被证明的协议不再必须使用电路友好的哈希，但选型仍要权衡共识层 XMSS 签名等大规模用途。",
+      "url": "https://ethresear.ch/t/post-poseidon-hash-function-variants-for-ethereum/26071",
+      "date": "2026-09-23",
+      "title_en": "ethresear.ch: post-Poseidon hash function variants for Ethereum",
+      "note_en": "16:50 (khovratovich). With Flock as a PQ proof system for binary circuits, protocols whose computation is proven no longer require circuit-friendly hashes, but the choice still has to weigh mass uses such as the consensus layer's XMSS signatures.",
+      "topic_en": "Fast confirmation and hashes"
+    },
+    {
+      "topic": "快速确认与哈希",
+      "title": "ethresear.ch：EIP-8411 在 Shadow 模拟器下的结果",
+      "note": "14:16，所有分段方案在每种配置下都比整块消息快。",
+      "url": "https://ethresear.ch/t/eip-8411-payload-segmentation-under-the-shadow-simulator/26070",
+      "date": "2026-09-23",
+      "title_en": "ethresear.ch: EIP-8411 payload segmentation under the Shadow simulator",
+      "note_en": "14:16, where every segmented variant beats the whole message in every configuration.",
+      "topic_en": "Fast confirmation and hashes"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：缩短共识层区块保留窗口",
+      "note": "（kevaundray）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12188",
+      "date": "2026-09-23",
+      "title_en": "New EIP: reduce the CL block retention window",
+      "note_en": "(kevaundray), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "在 TCREATE 账户中规定 CREATE 和 CREATE2",
+      "note": "EIP-8360（临时账户与 TCREATE）连续修订：在 TCREATE 账户中规定 CREATE 和 CREATE2 合并，定义 TCREATE 账户上下文、操作码规则和 gas 对齐。",
+      "url": "https://github.com/ethereum/EIPs/pull/12368",
+      "date": "2026-09-23",
+      "title_en": "specify CREATE and CREATE2 in TCREATE accounts",
+      "note_en": "A run of EIP-8360 (ephemeral accounts and TCREATE) revisions: specify CREATE and CREATE2 in TCREATE accounts, merged, and define the TCREATE account context, opcode rules and gas alignment.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "定义 TCREATE 账户上下文、操作码规则和 gas 对齐",
+      "note": "EIP-8360（临时账户与 TCREATE）连续修订：在 TCREATE 账户中规定 CREATE 和 CREATE2 合并，定义 TCREATE 账户上下文、操作码规则和 gas 对齐。",
+      "url": "https://github.com/ethereum/EIPs/pull/12370",
+      "date": "2026-09-23",
+      "title_en": "define the TCREATE account context, opcode rules and gas alignment",
+      "note_en": "A run of EIP-8360 (ephemeral accounts and TCREATE) revisions: specify CREATE and CREATE2 in TCREATE accounts, merged, and define the TCREATE account context, opcode rules and gas alignment.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8410 可移植执行计划",
+      "note": "合并为草案（moodysalem）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1992",
+      "date": "2026-09-23",
+      "title_en": "ERC-8410 portable execution plan artifact",
+      "note_en": "Was merged as a draft (moodysalem).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：抗量子比特币交易的估计成本一周内从 320 美元降到 67 美元",
+      "note": "23:06。",
+      "url": "https://x.com/StarkWareLtd/status/2102791757104849320",
+      "date": "2026-09-23",
+      "title_en": "StarkWare: the estimated cost of a quantum-safe Bitcoin transaction fell from $320 to $67 in one week",
+      "note_en": "23:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "bkiepuszewski：很多 L2 的说法被证明是假的，现在用同样标准审视隐私协议",
+      "note": "00:25。",
+      "url": "https://x.com/bkiepuszewski/status/2102449152730837287",
+      "date": "2026-09-23",
+      "title_en": "bkiepuszewski: many L2 claims turned out false, and now privacy protocols get the same scrutiny",
+      "note_en": "00:25.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：隐私和后量子安全将成为加密的基线要求",
+      "note": "18:30。",
+      "url": "https://x.com/EliBenSasson/status/2102722154647413105",
+      "date": "2026-09-23",
+      "title_en": "Eli Ben-Sasson: privacy and post-quantum security will become baseline requirements for crypto",
+      "note_en": "18:30.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/post-poseidon-hash-function-variants-for-ethereum/26071",
+    "credit": "ethresear.ch, Post-Poseidon: Hash Function Variants for Ethereum",
+    "local_path": "assets/2026-09-23.jpg",
+    "credit_en": "ethresear.ch, Post-Poseidon: Hash Function Variants for Ethereum"
+  },
+  "keywords_en": [
+    "frame transaction alternative mempools ERC",
+    "FCR security",
+    "Privacy Pools network observer privacy",
+    "post-Poseidon hash choice",
+    "EIP-8360 TCREATE accounts"
+  ],
+  "summary_en": "forshtat submitted a draft ERC for \"Frame Transaction Alternative Mempools\", another propagation path for frame transactions that do not meet the public mempool rules. Julian Ma explained how the Fast Confirmation Rule (FCR) stays secure: FCR is an algorithm clients run locally rather than something read from the chain like finality. L2BEAT rated Privacy Pools green on link privacy against the network observer, thanks to custom RPC support in its frontend. khovratovich discussed which hash function Ethereum should use now that Flock exists."
+}

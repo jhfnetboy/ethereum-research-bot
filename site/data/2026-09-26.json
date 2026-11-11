@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-26",
+  "keywords": [
+    "PeerDAS 稳定运行近一年",
+    "snap v2 同步",
+    "EIP-7928 区块级访问列表",
+    "节点同步半天",
+    "ERC-8427 可移植支出授权"
+  ],
+  "summary": "周六的话题集中在节点运行成本。Vitalik 提醒，现在半天就能同步一个以太坊节点，激进设置下磁盘占用可低于 0.5 TB；他还称 PeerDAS 近一年几乎零问题运行，是客户端开发者被低估的成就。nero_eth 介绍 Glamsterdam 的 snap v2：用区块级访问列表（本质上是状态差异）取代传统的修复阶段，同步更快更简单。",
+  "items": [
+    {
+      "topic": "节点更轻",
+      "title": "Vitalik：现在半天就能同步以太坊节点，激进设置下磁盘占用可低于 0.5 TB",
+      "note": "07:01，归功于 EIP-4444 和客户端团队对 snap 同步的优化，Glamsterdam 还会进一步改善同步。",
+      "url": "https://x.com/VitalikButerin/status/2103636111260373176",
+      "date": "2026-09-26",
+      "title_en": "Vitalik: you can now sync an Ethereum node within half a day, and with aggressive settings it takes under half a terabyte of disk",
+      "note_en": "07:01, thanks to EIP-4444 and client teams' snap sync work, with Glamsterdam improving sync further.",
+      "topic_en": "Lighter nodes"
+    },
+    {
+      "topic": "节点更轻",
+      "title": "nero_eth：Glamsterdam 把 snap 同步提升一级",
+      "note": "08:15，snap v2 用区块级访问列表这种状态差异取代传统修复阶段；nero_eth：EIP-7928 已近最后一程 18:18，并行带来明显吞吐提升，同时兼容 zkEVM、部分有状态节点和包含列表。",
+      "url": "https://x.com/nero_eth/status/2103654571398877443",
+      "date": "2026-09-26",
+      "title_en": "nero_eth: Glamsterdam takes snap sync to the next level",
+      "note_en": "08:15, with snap v2 using the block-level access list, a state diff, to replace the traditional healing phase; nero_eth: EIP-7928 is approaching the final mile, 18:18, with significant throughput gains from parallelism and compatibility with zkEVMs, partially stateful nodes and inclusion lists.",
+      "topic_en": "Lighter nodes"
+    },
+    {
+      "topic": "节点更轻",
+      "title": "nero_eth：EIP-7928 已近最后一程",
+      "note": "nero_eth：Glamsterdam 把 snap 同步提升一级 08:15，snap v2 用区块级访问列表这种状态差异取代传统修复阶段；nero_eth：EIP-7928 已近最后一程 18:18，并行带来明显吞吐提升，同时兼容 zkEVM、部分有状态节点和包含列表。",
+      "url": "https://x.com/nero_eth/status/2103806304469008385",
+      "date": "2026-09-26",
+      "title_en": "nero_eth: EIP-7928 is approaching the final mile",
+      "note_en": "Nero_eth: Glamsterdam takes snap sync to the next level, 08:15, with snap v2 using the block-level access list, a state diff, to replace the traditional healing phase; nero_eth: EIP-7928 is approaching the final mile, 18:18, with significant throughput gains from parallelism and compatibility with zkEVMs, partially stateful nodes and inclusion lists.",
+      "topic_en": "Lighter nodes"
+    },
+    {
+      "topic": "节点更轻",
+      "title": "Vitalik：PeerDAS 运行近一年基本没有问题，是客户端开发者被低估的成就",
+      "note": "19:33。",
+      "url": "https://x.com/VitalikButerin/status/2103825405530853710",
+      "date": "2026-09-26",
+      "title_en": "Vitalik: PeerDAS running for nearly a year with basically no problems is an underappreciated triumph of client developers",
+      "note_en": "19:33.",
+      "topic_en": "Lighter nodes"
+    },
+    {
+      "topic": "账户授权",
+      "title": "Magicians：ERC-8427 可移植支出授权",
+      "note": "00:26（tankcdr），委托人在不可变注册表中登记多资产支出授权，设单次、滚动窗口和终身上限，被委托方只持有授权 ID；依赖 ERC-1271 和 EIP-7702 等，ERC PR。",
+      "url": "https://ethereum-magicians.org/t/erc-8427-portable-spend-grants/29776",
+      "date": "2026-09-26",
+      "title_en": "Magicians: ERC-8427 portable spend grants",
+      "note_en": "00:26 (tankcdr), where a principal registers a multi-asset spend grant with per-call, trailing-window and lifetime caps in an immutable registry and the delegate holds only the grant's id; it requires ERC-1271, EIP-7702 and others, with an ERC PR.",
+      "topic_en": "Account authorization"
+    },
+    {
+      "topic": "账户授权",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8427 可移植支出授权 00:26（tankcdr），委托人在不可变注册表中登记多资产支出授权，设单次、滚动窗口和终身上限，被委托方只持有授权 ID；依赖 ERC-1271 和 EIP-7702 等，ERC PR。",
+      "url": "https://github.com/ethereum/ERCs/pull/2037",
+      "date": "2026-09-26",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8427 portable spend grants, 00:26 (tankcdr), where a principal registers a multi-asset spend grant with per-call, trailing-window and lifetime caps in an immutable registry and the delegate holds only the grant's id; it requires ERC-1271, EIP-7702 and others, with an ERC PR.",
+      "topic_en": "Account authorization"
+    },
+    {
+      "topic": "其他动态",
+      "title": "gakonst：Paradigm 的 Solar 编译器已能生成比手工优化更省 gas 的无汇编代码",
+      "note": "07:27。",
+      "url": "https://x.com/gakonst/status/2103642552364937592",
+      "date": "2026-09-26",
+      "title_en": "gakonst: Paradigm's Solar compiler now produces assembly-free code more gas-optimized than hand-optimized code",
+      "note_en": "07:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EFDevcon：lightclient 将在 Devcon 8 讲“Frames are all you need”",
+      "note": "19:11。",
+      "url": "https://x.com/EFDevcon/status/2103819657417281789",
+      "date": "2026-09-26",
+      "title_en": "EFDevcon: lightclient will present \"Frames are all you need\" at Devcon 8",
+      "note_en": "19:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：钱包十多年来都没保护好普通用户，助记词和私钥是很糟的安全模型",
+      "note": "16:56。",
+      "url": "https://x.com/pcaversaccio/status/2103785672373104828",
+      "date": "2026-09-26",
+      "title_en": "pcaversaccio: wallets have failed to protect normal users for over a decade, and seed phrases and private keys are a poor security model",
+      "note_en": "16:56.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：软件开源还是闭源已经不重要，闭源也会被逆向",
+      "note": "07:22。",
+      "url": "https://x.com/gakonst/status/2103641301371724207",
+      "date": "2026-09-26",
+      "title_en": "gakonst: it no longer matters whether software is open or closed source, since closed source will be reverse-engineered",
+      "note_en": "07:22.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/nero_eth/status/2103654571398877443",
+    "credit": "X, @nero_eth",
+    "local_path": "assets/2026-09-26.jpg",
+    "credit_en": "X, @nero_eth"
+  },
+  "keywords_en": [
+    "PeerDAS running smoothly for nearly a year",
+    "snap v2 sync",
+    "EIP-7928 block-level access lists",
+    "half-day node sync",
+    "ERC-8427 portable spend grants"
+  ],
+  "summary_en": "Saturday's discussion centered on the cost of running nodes. Vitalik noted you can now sync an Ethereum node in half a day, and with aggressive settings it takes under half a terabyte of disk; he also called PeerDAS running for nearly a year with basically no problems an underappreciated triumph of client developers. nero_eth described Glamsterdam's snap v2, which uses block-level access lists, essentially state diffs, to replace the traditional healing phase, making sync faster and simpler."
+}

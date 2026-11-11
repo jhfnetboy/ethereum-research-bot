@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-27",
+  "keywords": [
+    "Vitalik《加密世界计算机》",
+    "Lean 共识",
+    "8 秒槽与 2 到 3 分钟最终性",
+    "EIP-8425 草案提交",
+    "quick slots 进 Hegotá"
+  ],
+  "summary": "Vitalik 发表《加密世界计算机》，尝试简洁表达 Hegotá 之后的分叉计划的真正含义：以太坊不再只是区块链，而是一种混合体。barnabemonnot 认为，若 Hegotá 完成更快的槽，2028 年初可能实现 8 秒槽和 2 到 3 分钟最终性。EIP-8425 量子冻结与账户恢复提交为 EIP 草案。",
+  "items": [
+    {
+      "topic": "Hegotá 之后的以太坊",
+      "title": "Vitalik：加密世界计算机",
+      "note": "17:45，尝试以较简洁的方式表达从 Hegotá 之后的分叉开始计划中的几乎所有变化的真正含义：以太坊已经不只是区块链，而是一种混合体（帖子较长，此处只引用可见部分）。",
+      "url": "https://x.com/VitalikButerin/status/2104160561374343176",
+      "date": "2026-09-27",
+      "title_en": "Vitalik: the cryptographic world computer",
+      "note_en": "17:45, an attempt to express concisely the true meaning of basically everything planned starting from the fork after Hegotá: Ethereum is really not just a blockchain anymore, but a hybrid (the post is long, and only the visible part is cited here).",
+      "topic_en": "Ethereum after Hegotá"
+    },
+    {
+      "topic": "Hegotá 之后的以太坊",
+      "title": "Vitalik：Lean 共识会很棒",
+      "note": "19:28。",
+      "url": "https://x.com/VitalikButerin/status/2104186531829445083",
+      "date": "2026-09-27",
+      "title_en": "Vitalik: Lean consensus will be amazing",
+      "note_en": "19:28.",
+      "topic_en": "Ethereum after Hegotá"
+    },
+    {
+      "topic": "Hegotá 之后的以太坊",
+      "title": "barnabemonnot：如果 Hegotá 完成更快的槽，2028 年初就可能实现 8 秒槽和 2 到 3 分钟最终性",
+      "note": "23:15；binji：EIP-8198 能让槽时间从 2027 年开始逐步缩短 23:25。",
+      "url": "https://x.com/barnabemonnot/status/2104243489508577382",
+      "date": "2026-09-27",
+      "title_en": "barnabemonnot: we can probably get 8-second slots and 2 to 3 minute finality by early 2028 if faster slots get done in Hegotá",
+      "note_en": "23:15; binji: EIP-8198 can start shortening slots in 2027, 23:25.",
+      "topic_en": "Ethereum after Hegotá"
+    },
+    {
+      "topic": "Hegotá 之后的以太坊",
+      "title": "binji：EIP-8198 能让槽时间从 2027 年开始逐步缩短",
+      "note": "barnabemonnot：如果 Hegotá 完成更快的槽，2028 年初就可能实现 8 秒槽和 2 到 3 分钟最终性 23:15；binji：EIP-8198 能让槽时间从 2027 年开始逐步缩短 23:25。",
+      "url": "https://x.com/binji_x/status/2104246153705652708",
+      "date": "2026-09-27",
+      "title_en": "binji: EIP-8198 can start shortening slots in 2027",
+      "note_en": "Barnabemonnot: we can probably get 8-second slots and 2 to 3 minute finality by early 2028 if faster slots get done in Hegotá, 23:15; binji: EIP-8198 can start shortening slots in 2027, 23:25.",
+      "topic_en": "Ethereum after Hegotá"
+    },
+    {
+      "topic": "后量子账户迁移",
+      "title": "新 EIP：量子冻结与账户恢复",
+      "note": "（colinlyguo），根据社区讨论提出冻结旧 ECDSA 授权、恢复未迁移账户的最小框架。",
+      "url": "https://github.com/ethereum/EIPs/pull/12383",
+      "date": "2026-09-27",
+      "title_en": "New EIP: quantum freeze and account recovery",
+      "note_en": "(colinlyguo), proposing, after community discussion, a minimal framework for freezing legacy ECDSA authorization and recovering unmigrated accounts.",
+      "topic_en": "Post-quantum account migration"
+    },
+    {
+      "topic": "后量子账户迁移",
+      "title": "StarkWare：Google 大幅下调了破解椭圆曲线密码的估计，并用 ZK 证明电路有效而不公开电路",
+      "note": "19:03。",
+      "url": "https://x.com/StarkWareLtd/status/2104180087340122610",
+      "date": "2026-09-27",
+      "title_en": "StarkWare: Google significantly lowered its estimate for breaking elliptic-curve crypto and used ZK to prove its circuit works without revealing it",
+      "note_en": "19:03.",
+      "topic_en": "Post-quantum account migration"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8173 进入 Review",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12382",
+      "date": "2026-09-27",
+      "title_en": "EIP-8173 moves to Review",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：这件事现在完成了",
+      "note": "21:29。",
+      "url": "https://x.com/VitalikButerin/status/2104216824258932907",
+      "date": "2026-09-27",
+      "title_en": "Vitalik: this thing is done now",
+      "note_en": "21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：ZEC 崛起给 BTC 的第一课是市场和用户想要更多技术",
+      "note": "13:20。",
+      "url": "https://x.com/EliBenSasson/status/2104093892622549084",
+      "date": "2026-09-27",
+      "title_en": "Eli Ben-Sasson: the number one lesson for BTC from the rise of ZEC is that markets and users want more technology",
+      "note_en": "13:20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/VitalikButerin/status/2104160561374343176",
+    "credit": "X, @VitalikButerin",
+    "local_path": "assets/2026-09-27.jpg",
+    "credit_en": "X, @VitalikButerin"
+  },
+  "keywords_en": [
+    "Vitalik's \"The cryptographic world computer\"",
+    "Lean consensus",
+    "8-second slots and 2 to 3 minute finality",
+    "EIP-8425 draft submitted",
+    "quick slots in Hegotá"
+  ],
+  "summary_en": "Vitalik published \"The cryptographic world computer\", an attempt to concisely express the true meaning of the forks planned after Hegotá: Ethereum is no longer just a blockchain but a hybrid. barnabemonnot argued that if faster slots ship in Hegotá, 8-second slots and 2 to 3 minute finality could arrive by early 2028. EIP-8425 quantum freeze and account recovery was submitted as a draft EIP."
+}

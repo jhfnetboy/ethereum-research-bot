@@ -1,0 +1,169 @@
+{
+  "date": "2026-09-24",
+  "keywords": [
+    "ACDE #246",
+    "EIP-8250 与 EIP-8272 进入 CFI",
+    "EIP-7906 交易断言",
+    "重定价 EIP-8131 与 EIP-8279",
+    "Daisugi 后量子测试网",
+    "CHAMP 内存池对等保护"
+  ],
+  "summary": "ACDE #246 把 10 个 EIP 列为 Hegotá 的考虑纳入（CFI），其中包括 frame 交易的三个配套 EIP：keyed nonce（EIP-8250）、recent roots（EIP-8272）和基于状态差异操作码的交易断言（EIP-7906），还有移除退款（EIP-3298）以及重定价 EIP-8131、EIP-8279；EIP-8304 被拒；EIP-8372 和 EIP-8368 要等 Glamsterdam 主网积累 30 天数据再定。asanso 发布使用 SPHINCS 哈希签名的后量子测试网 Daisugi v0.1。",
+  "items": [
+    {
+      "topic": "ACDE #246 的 Hegotá 范围",
+      "title": "EIP-8081：记录 ACDE #246 的决定",
+      "note": "合并：CFI 为 3298、7668、7906、7979、8131、8163、8250、8253、8272、8279；DFI 为 8304；8372 和 8368 保持 PFI，等 Glamsterdam 主网积累 30 天数据后再决定 CFI 其中一个或都 DFI。",
+      "url": "https://github.com/ethereum/EIPs/pull/12377",
+      "date": "2026-09-24",
+      "title_en": "EIP-8081: decisions from ACDE #246",
+      "note_en": "Merged: CFI for 3298, 7668, 7906, 7979, 8131, 8163, 8250, 8253, 8272 and 8279; DFI for 8304; 8372 and 8368 stay PFI until 30 days of Glamsterdam mainnet data accumulate, when devs will CFI one or DFI both.",
+      "topic_en": "Hegotá scope at ACDE #246"
+    },
+    {
+      "topic": "ACDE #246 的 Hegotá 范围",
+      "title": "nixorokish：今天进入“考虑”状态的特性",
+      "note": "23:46，包括三个 frame 交易 EIP（状态差异操作码实现的交易断言、keyed nonce、recent roots）、移除 bloom 过滤器、为零 nonce 存储账户递增 nonce、移除存储清除退款等。",
+      "url": "https://x.com/nixorokish/status/2103164113841250376",
+      "date": "2026-09-24",
+      "title_en": "nixorokish: features moved to \"considered\" for Hegotá today",
+      "note_en": "23:46, including three frame transaction EIPs (transaction assertions via a state diff opcode, keyed nonces and recent roots), removing bloom filters, bumping the nonce of zero-nonce storage accounts and removing the storage-clear refund.",
+      "topic_en": "Hegotá scope at ACDE #246"
+    },
+    {
+      "topic": "ACDE #246 的 Hegotá 范围",
+      "title": "soispoke：keyed nonce 和 recent roots 进入 CFI，离原生隐私又近一步",
+      "note": "22:11；ethrex：两者与 EIP-8141 一起运行在其公共隐私测试网上，现在就能试用 22:29。",
+      "url": "https://x.com/soispoke/status/2103140368535683098",
+      "date": "2026-09-24",
+      "title_en": "soispoke: keyed nonces and recent roots were just CFI'd, one more step toward native privacy",
+      "note_en": "22:11; ethrex: both run alongside EIP-8141 on its public privacy testnet, where you can try them now, 22:29.",
+      "topic_en": "Hegotá scope at ACDE #246"
+    },
+    {
+      "topic": "ACDE #246 的 Hegotá 范围",
+      "title": "ethrex：两者与 EIP-8141 一起运行在其公共隐私测试网上，现在就能试用",
+      "note": "soispoke：keyed nonce 和 recent roots 进入 CFI，离原生隐私又近一步 22:11；ethrex：两者与 EIP-8141 一起运行在其公共隐私测试网上，现在就能试用 22:29。",
+      "url": "https://x.com/ethrex_client/status/2103144915693678855",
+      "date": "2026-09-24",
+      "title_en": "ethrex: both run alongside EIP-8141 on its public privacy testnet, where you can try them now",
+      "note_en": "Soispoke: keyed nonces and recent roots were just CFI'd, one more step toward native privacy, 22:11; ethrex: both run alongside EIP-8141 on its public privacy testnet, where you can try them now, 22:29.",
+      "topic_en": "Hegotá scope at ACDE #246"
+    },
+    {
+      "topic": "后量子和网络",
+      "title": "asanso：后量子以太坊测试网 Daisugi v0.1 上线",
+      "note": "01:34，使用基于哈希的 SPHINCS 签名和非原生账户抽象，下一步是 frame 交易和 LeanSPHINCS 签名聚合。",
+      "url": "https://x.com/asanso/status/2102829025211060529",
+      "date": "2026-09-24",
+      "title_en": "asanso: Daisugi v0.1, a post-quantum Ethereum testnet, is live",
+      "note_en": "01:34, using hash-based SPHINCS signatures with non-native account abstraction, with frame transactions and LeanSPHINCS signature aggregation coming next.",
+      "topic_en": "Post-quantum and networking"
+    },
+    {
+      "topic": "后量子和网络",
+      "title": "tcoratger：以太坊转向 leanVM、Flock 等后量子证明系统，不再严格需要 Poseidon 等算术友好哈希",
+      "note": "04:29。",
+      "url": "https://x.com/tcoratger/status/2102873051562197497",
+      "date": "2026-09-24",
+      "title_en": "tcoratger: Ethereum is moving to post-quantum proof systems like leanVM and Flock, removing the strict need for arithmetic-friendly hashes like Poseidon",
+      "note_en": "04:29.",
+      "topic_en": "Post-quantum and networking"
+    },
+    {
+      "topic": "后量子和网络",
+      "title": "ethresear.ch：CHAMP，用链锚定的多维对等保护加固内存池",
+      "note": "17:58（cskiraly），在随机淘汰之外保护少量优质对等节点。",
+      "url": "https://ethresear.ch/t/champ-hardening-the-mempool-with-chain-anchored-multi-dimensional-peer-protection/26074",
+      "date": "2026-09-24",
+      "title_en": "ethresear.ch: CHAMP, hardening the mempool with chain-anchored, multi-dimensional peer protection",
+      "note_en": "17:58 (cskiraly), shielding a small set of high-quality peers from random churn.",
+      "topic_en": "Post-quantum and networking"
+    },
+    {
+      "topic": "后量子和网络",
+      "title": "ethresear.ch：带记忆的 Snappy，gossip 流量减少约 40%",
+      "note": "19:28，来自快速最终性的网络研究。",
+      "url": "https://ethresear.ch/t/snappy-with-a-memory-40-less-gossip-traffic/26078",
+      "date": "2026-09-24",
+      "title_en": "ethresear.ch: Snappy with a memory, about 40% less gossip traffic",
+      "note_en": "19:28, from networking research for fast finality.",
+      "topic_en": "Post-quantum and networking"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：延迟载荷验证",
+      "note": "（frisitano）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12372",
+      "date": "2026-09-24",
+      "title_en": "New EIP: deferred payload verification",
+      "note_en": "(frisitano).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8347：PBT 快照的空快照和原像匹配范围",
+      "note": "合并；EIP-8298 允许在 initcode 中使用 SETCODEFROM 今日合并（18 日提交）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12378",
+      "date": "2026-09-24",
+      "title_en": "EIP-8347: empty snapshots and the scope of the preimage match in the PBT snapshot",
+      "note_en": "Merged; EIP-8298 allowing SETCODEFROM in initcode was merged today (submitted on the 18th).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8298 允许在 initcode 中使用 SETCODEFROM",
+      "note": "EIP-8347：PBT 快照的空快照和原像匹配范围 合并；EIP-8298 允许在 initcode 中使用 SETCODEFROM 今日合并（18 日提交）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12356",
+      "date": "2026-09-24",
+      "title_en": "EIP-8298 allowing SETCODEFROM in initcode",
+      "note_en": "EIP-8347: empty snapshots and the scope of the preimage match in the PBT snapshot, merged; EIP-8298 allowing SETCODEFROM in initcode was merged today (submitted on the 18th).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：把 EIP-8383 加入 PFI",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12371",
+      "date": "2026-09-24",
+      "title_en": "EIP-8081: add EIP-8383 to PFI",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "gakonst：Tempo Zones 为支付提供隐私",
+      "note": "06:07。",
+      "url": "https://x.com/gakonst/status/2102897758118314201",
+      "date": "2026-09-24",
+      "title_en": "gakonst: Tempo Zones bring privacy to payments",
+      "note_en": "06:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "asanso：合并是在全球金融系统运行时更换共识机制，后量子迁移会更难",
+      "note": "18:52。",
+      "url": "https://x.com/asanso/status/2103090073189183694",
+      "date": "2026-09-24",
+      "title_en": "asanso: the Merge changed consensus while a global financial system kept running, and the PQ transition will be even harder",
+      "note_en": "18:52.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12377",
+    "credit": "GitHub, ethereum/EIPs PR #12377",
+    "local_path": "assets/2026-09-24.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12377"
+  },
+  "keywords_en": [
+    "ACDE #246",
+    "EIP-8250 and EIP-8272 CFI",
+    "EIP-7906 transaction assertions",
+    "repricing EIP-8131 and EIP-8279",
+    "Daisugi post-quantum testnet",
+    "CHAMP mempool peer protection"
+  ],
+  "summary_en": "ACDE #246 moved 10 EIPs to Considered for Inclusion (CFI) in Hegotá, including three companions to frame transactions: keyed nonces (EIP-8250), recent roots (EIP-8272) and transaction assertions via a state diff opcode (EIP-7906), plus refund removal (EIP-3298) and the repricings EIP-8131 and EIP-8279; EIP-8304 was declined, and EIP-8372 and EIP-8368 wait for 30 days of Glamsterdam mainnet data. asanso launched Daisugi v0.1, a post-quantum testnet using SPHINCS hash-based signatures."
+}

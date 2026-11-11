@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-11",
+  "keywords": [
+    "EIP-8288 通俗解读",
+    "ethrex 两个 frame 测试网",
+    "EIP-8250 保留嵌套 fees",
+    "EIP-8038 SELFDESTRUCT 豁免",
+    "Bermuda 隐私池支持 Safe",
+    "客户端资金危机"
+  ],
+  "summary": "frame 交易成为 Hegotá 头条后，ethrex 表示其实现已运行两个公共测试网；Derek Chiang 用通俗语言解释 EIP-8288，称若能上线将是以太坊最具突破性的升级之一。EIP-8250 合并修正，保留 EIP-8141 交易载荷中嵌套的 `fees` 列表。Safe 生态的隐私方案 Bermuda 上线，隐私池资金可由 Safe 控制。",
+  "items": [
+    {
+      "topic": "frame 交易与聚合的实现进展",
+      "title": "ethrex：EIP-8141 成为 Hegotá 头条",
+      "note": "22:56，ethrex 从最初就支持 frame，实现目前运行两个公共测试网，其中一个专门用于 frame 交易。",
+      "url": "https://x.com/ethrex_client/status/2098440608922608110",
+      "date": "2026-09-11",
+      "title_en": "ethrex: EIP-8141 is now a Hegotá headliner",
+      "note_en": "22:56; ethrex backed frames from the start, and its implementation now runs two public testnets, one dedicated to frame transactions.",
+      "topic_en": "Implementation progress on frames and aggregation"
+    },
+    {
+      "topic": "frame 交易与聚合的实现进展",
+      "title": "Derek Chiang：EIP-8288 若上线将是最具突破性的更新之一",
+      "note": "19:47，他从以太坊目前在执行（gas 上限）、blob（数据可用性）等维度扩容讲起做通俗解释。",
+      "url": "https://x.com/decentrek/status/2098392867773509799",
+      "date": "2026-09-11",
+      "title_en": "Derek Chiang: EIP-8288 would be one of the most groundbreaking updates if shipped",
+      "note_en": "19:47, explaining it plainly starting from how Ethereum scales today in execution (gas limit), blobs (data availability) and so on.",
+      "topic_en": "Implementation progress on frames and aggregation"
+    },
+    {
+      "topic": "frame 交易与聚合的实现进展",
+      "title": "EIP-8250：保留交易载荷中嵌套的 fees",
+      "note": "合并（danceratopz），与 EIP-8141 外层 RLP 中作为单个字段的三项费用列表保持一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12316",
+      "date": "2026-09-11",
+      "title_en": "EIP-8250: preserve nested fees in the transaction payload",
+      "note_en": "Was merged (danceratopz), matching EIP-8141's list of three fee parameters as one field in the outer RLP.",
+      "topic_en": "Implementation progress on frames and aggregation"
+    },
+    {
+      "topic": "frame 交易与聚合的实现进展",
+      "title": "EIP-8038：保留热 SELFDESTRUCT 受益人的访问豁免",
+      "note": "（9 月 14 日合并），冷受益人付 `COLD_ACCOUNT_ACCESS`，热受益人不付访问费，与 EIP-2929 和 Geth 一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12317",
+      "date": "2026-09-11",
+      "title_en": "EIP-8038: preserve the warm SELFDESTRUCT access exemption",
+      "note_en": "(merged September 14): cold beneficiaries pay `COLD_ACCOUNT_ACCESS` and warm ones pay no access charge, consistent with EIP-2929 and Geth.",
+      "topic_en": "Implementation progress on frames and aggregation"
+    },
+    {
+      "topic": "frame 交易与聚合的实现进展",
+      "title": "EIP-7805：包含列表检查中跳过 blob 交易",
+      "note": "草案征求意见。",
+      "url": "https://github.com/ethereum/EIPs/pull/12319",
+      "date": "2026-09-11",
+      "title_en": "EIP-7805: skip blob transactions in the inclusion list check",
+      "note_en": "A draft to gauge agreement.",
+      "topic_en": "Implementation progress on frames and aggregation"
+    },
+    {
+      "topic": "隐私产品",
+      "title": "koeppelmann：Bermuda 上线，首个完全兼容 Safe 的隐私方案",
+      "note": "22:00，隐私池资金由 Safe 控制，能访问或恢复 Safe 就能访问资金。",
+      "url": "https://x.com/koeppelmann/status/2098426474223050910",
+      "date": "2026-09-11",
+      "title_en": "koeppelmann: Bermuda launches, the first privacy solution that works fully with Safe",
+      "note_en": "22:00, with privacy pool funds controlled by a Safe, so access to or recovery of the Safe means access to the funds.",
+      "topic_en": "Privacy products"
+    },
+    {
+      "topic": "隐私产品",
+      "title": "StarkWare：Erebus 为 AI 代理构建私密支付",
+      "note": "21:04，不暴露收款方和交易元数据。",
+      "url": "https://x.com/StarkWareLtd/status/2098412441101295924",
+      "date": "2026-09-11",
+      "title_en": "StarkWare: Erebus is building private payments for AI agents",
+      "note_en": "21:04, without exposing payees or transaction metadata.",
+      "topic_en": "Privacy products"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps：Hegotá 范围讨论看似一切正常，但客户端资金危机只在加深",
+      "note": "05:26。",
+      "url": "https://x.com/trent_vanepps/status/2098176271691755709",
+      "date": "2026-09-11",
+      "title_en": "trent_vanepps: Hegotá scoping may look normal, but the client funding crisis has only deepened",
+      "note_en": "05:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "jessepollak：Base、去中心化和 Coinbase Wallet 的更新",
+      "note": "01:34，Base 的 DeFi TVL 创 57 亿美元新高。",
+      "url": "https://x.com/jessepollak/status/2098117987949748229",
+      "date": "2026-09-11",
+      "title_en": "jessepollak: an update on Base, decentralization and Coinbase Wallet",
+      "note_en": "01:34, with Base DeFi TVL at an all-time high of $5.7B.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：质押者从 24% APR 中获得收益来运行网络",
+      "note": "04:01。",
+      "url": "https://x.com/aztecnetwork/status/2098155034441912753",
+      "date": "2026-09-11",
+      "title_en": "Aztec: stakers earn a 24% APR for running the network",
+      "note_en": "04:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7923：取消交易级内存上限",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12314",
+      "date": "2026-09-11",
+      "title_en": "EIP-7923: remove the transaction-wide memory cap",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：抗量子准备不只是密码学，还包括迁移系统中易受攻击的部分",
+      "note": "17:26。",
+      "url": "https://x.com/EliBenSasson/status/2098357599494103437",
+      "date": "2026-09-11",
+      "title_en": "Eli Ben-Sasson: quantum readiness is not just cryptography but also migrating the vulnerable parts of a system",
+      "note_en": "17:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12316",
+    "credit": "GitHub, ethereum/EIPs PR #12316",
+    "local_path": "assets/2026-09-11.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12316"
+  },
+  "keywords_en": [
+    "EIP-8288 in plain words",
+    "ethrex's two frame testnets",
+    "EIP-8250 keeps nested fees",
+    "EIP-8038 SELFDESTRUCT exemption",
+    "Bermuda privacy pool for Safe",
+    "client funding crisis"
+  ],
+  "summary_en": "After frame transactions became the Hegotá headliner, ethrex said its implementation now runs two public testnets; Derek Chiang explained EIP-8288 in plain words, calling it one of the most groundbreaking possible updates to Ethereum. EIP-8250 merged a fix keeping EIP-8141's nested `fees` list in the transaction payload. Bermuda, a privacy solution for the Safe ecosystem, launched with privacy pool funds controlled by a Safe."
+}

@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-03",
+  "keywords": [
+    "EIP-8141 隐私应用验证预算",
+    "MAX_VERIFY_GAS",
+    "ERC-8403 账户权限生命周期",
+    "EIP-8130 检查点 keystore",
+    "ACDC #186",
+    "客户端形式化验证"
+  ],
+  "summary": "ethresear 上一篇基准测试指出，Tornado Cash、RAILGUN 这类隐私应用若想借 frame 交易摆脱链下 relayer，最低验证开销 211,828 gas，超过公共内存池 100k 的 `MAX_VERIFY_GAS`，建议上调到至少 250k。账户侧，ERC-8403 提出原生 AA 账户权限的增加、轮换和撤销规范，EIP-8130 增加可选的检查点 keystore。晚上 ACDC #186 确认 Sepolia 目标 10 月 6 日。",
+  "items": [
+    {
+      "topic": "隐私应用进公共内存池的验证预算",
+      "title": "ethresear.ch：EIP-8141 与隐私应用所需的最低验证预算",
+      "note": "06:14（mmjahanara）。隐私应用可以用 frame 交易去掉链下 relayer，获得强抗审查，但前提是交易能经公共内存池传播，而其验证预算上限 `MAX_VERIFY_GAS = 100k`。基于 Groth16 的测算：单 note 花费最少 211,828 gas，部署中最大的一种（花费并作废 8 个 note）至少 351,828 gas；作者建议把上限提到至少 250k。计入上限的包括证明验证执行、签名验证固有成本，以及 EIP-8250 首次使用 keyed nonce 的费用。",
+      "url": "https://ethresear.ch/t/eip-8141-and-minimum-required-validation-budget-for-privacy-applications/25889",
+      "date": "2026-09-03",
+      "title_en": "ethresear.ch: EIP-8141 and the minimum required validation budget for privacy applications",
+      "note_en": "06:14 (mmjahanara). Privacy apps could use frame transactions to drop offchain relayers and gain strong censorship resistance, but only if their transactions can propagate through the public mempool, whose validation budget is capped at `MAX_VERIFY_GAS = 100k`. Measuring Groth16 verification, a single-note spend needs at least 211,828 gas and the largest deployed one (spending and nullifying eight notes) at least 351,828 gas; the author recommends raising the cap to at least 250k. The cap counts proof verification execution, the signature validation intrinsic cost and EIP-8250's keyed nonce first-use charge.",
+      "topic_en": "The validation budget for privacy apps in the public mempool"
+    },
+    {
+      "topic": "隐私应用进公共内存池的验证预算",
+      "title": "ethresear.ch：Hegotá 如何影响状态路线图",
+      "note": "16:46（misilva73、CPerezz），主张 Hegotá 把状态增长控制在明确预算内、让 frame 交易新增的状态有界，并推迟那些今天收益小、却会增加 PBT 迁移成本的改动。",
+      "url": "https://ethresear.ch/t/how-hegota-can-influence-the-state-roadmap/25895",
+      "date": "2026-09-03",
+      "title_en": "ethresear.ch: how Hegotá can influence the state roadmap",
+      "note_en": "16:46 (misilva73 and CPerezz), arguing Hegotá should keep state growth within a clear budget, keep the new state created by frame transactions bounded, and defer changes whose benefit is small today but would raise the cost of the PBT migration.",
+      "topic_en": "The validation budget for privacy apps in the public mempool"
+    },
+    {
+      "topic": "原生 AA 账户的权限管理",
+      "title": "Magicians：ERC-8403 账户权限生命周期",
+      "note": "03:10（AnkushinDaniil）。为原生 AA 账户定义权限（签名密钥，或锁、额度等谓词）的增加、轮换和撤销；权限是账户承诺树中的叶子，账户公开树根，交易携带成员证明，账户在自己的授权步骤中校验，失败则不授权。",
+      "url": "https://ethereum-magicians.org/t/erc-8403-account-authority-lifecycle/29570",
+      "date": "2026-09-03",
+      "title_en": "Magicians: ERC-8403 account authority lifecycle",
+      "note_en": "03:10 (AnkushinDaniil). It defines how an authority on a native AA account (a signing key, or a predicate such as a lock or a limit) is added, rotated and revoked. Each authority is a leaf in a committed tree whose root the account publishes; a transaction carries a membership proof, and the account verifies it in its own authorization step and withholds authorization on failure.",
+      "topic_en": "Authority management for native AA accounts"
+    },
+    {
+      "topic": "原生 AA 账户的权限管理",
+      "title": "EIP-8130：可选的检查点 keystore",
+      "note": "（pedrouid）。为非管理员角色增加永久检查点 keystore 模式，管理员仍在链上并独立共同授权后继状态，检查点方不能单独授予权限；一次根批准可覆盖一批不同认证器、过期时间和策略的密钥，并可跨交易复用。",
+      "url": "https://github.com/ethereum/EIPs/pull/12293",
+      "date": "2026-09-03",
+      "title_en": "EIP-8130: optional checkpointed keystore",
+      "note_en": "(pedrouid). It adds a permanent checkpointed keystore mode for non-admin actors, while admins remain onchain and independently co-authorize successor states, so a checkpointer cannot grant authority on its own; one root approval can cover a batch of keys with different authenticators, expiries and policies and be reused across transactions.",
+      "topic_en": "Authority management for native AA accounts"
+    },
+    {
+      "topic": "原生 AA 账户的权限管理",
+      "title": "EIP-7906：引用 frame 家族操作码注册表",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12292",
+      "date": "2026-09-03",
+      "title_en": "EIP-7906: reference the frame-family registry for opcode bytes",
+      "note_en": "Merged.",
+      "topic_en": "Authority management for native AA accounts"
+    },
+    {
+      "topic": "其他动态",
+      "title": "pcaversaccio：长期看，所有硬分叉相关的客户端改动都应形式化验证",
+      "note": "14:56，ethresear.ch 讨论帖 14:40。",
+      "url": "https://x.com/pcaversaccio/status/2095420680116547672",
+      "date": "2026-09-03",
+      "title_en": "pcaversaccio: long term, every hard-fork-related client change should be formally verified",
+      "note_en": "14:56, with an ethresear.ch discussion thread at 14:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch 讨论帖",
+      "note": "pcaversaccio：长期看，所有硬分叉相关的客户端改动都应形式化验证 14:56，ethresear.ch 讨论帖 14:40。",
+      "url": "https://ethresear.ch/t/formal-verification-of-execution-and-consensus-clients/25894",
+      "date": "2026-09-03",
+      "title_en": "ethresear.ch discussion thread",
+      "note_en": "Pcaversaccio: long term, every hard-fork-related client change should be formally verified, 14:56, with an ethresear.ch discussion thread at 14:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps：本周 blob 使用创新高，3 日均值每块 5.9 个",
+      "note": "22:01，但继续扩容需要资助客户端团队。",
+      "url": "https://x.com/trent_vanepps/status/2095527542157455510",
+      "date": "2026-09-03",
+      "title_en": "trent_vanepps: blob usage hit an all-time high this week, a 3-day average of 5.9 blobs per block",
+      "note_en": "22:01, but further scaling needs funding for client teams.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "binji：目前从 L1 存入 L2 要 13 分钟，已有技术可降到约 12 秒",
+      "note": "16:45。",
+      "url": "https://x.com/binji_x/status/2095448046515507579",
+      "date": "2026-09-03",
+      "title_en": "binji: depositing from L1 to an L2 takes 13 minutes today, and existing tech could cut that to about 12 seconds",
+      "note_en": "16:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8409 签名的服务付款报价",
+      "note": "19:47，基于 EIP-712。",
+      "url": "https://ethereum-magicians.org/t/erc-8409-signed-service-payment-quotes/29577",
+      "date": "2026-09-03",
+      "title_en": "ERC-8409 signed service payment quotes",
+      "note_en": "19:47, based on EIP-712.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：8 月生态 35 件发布和升级",
+      "note": "19:18，首条是 GnosisDAO 投票通过从独立 L1 转为 ZK 证明的以太坊 L2。",
+      "url": "https://x.com/ethereum/status/2095486647634645071",
+      "date": "2026-09-03",
+      "title_en": "ethereum: 35 things the ecosystem launched and upgraded in August",
+      "note_en": "19:18, starting with GnosisDAO voting to move from its own L1 to a ZK-proven Ethereum L2.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：抗量子准备要回答两个问题，链的密码学能否抵御量子计算机，以及迁移时用户要做什么",
+      "note": "13:13。",
+      "url": "https://x.com/EliBenSasson/status/2095394732864152052",
+      "date": "2026-09-03",
+      "title_en": "Eli Ben-Sasson: quantum readiness comes down to two questions, whether a chain's cryptography can withstand a quantum computer and what users must do when it migrates",
+      "note_en": "13:13.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/eip-8141-and-minimum-required-validation-budget-for-privacy-applications/25889",
+    "credit": "ethresear.ch, EIP-8141 and minimum required validation budget for privacy applications",
+    "local_path": "assets/2026-09-03.jpg",
+    "credit_en": "ethresear.ch, EIP-8141 and minimum required validation budget for privacy applications"
+  },
+  "keywords_en": [
+    "EIP-8141 validation budget for privacy apps",
+    "MAX_VERIFY_GAS",
+    "ERC-8403 account authority lifecycle",
+    "EIP-8130 checkpointed keystore",
+    "ACDC #186",
+    "formal verification of clients"
+  ],
+  "summary_en": "A benchmark on ethresear showed that if privacy apps like Tornado Cash and RAILGUN want to use frame transactions to drop offchain relayers, their minimum validation cost is 211,828 gas, above the public mempool's 100k `MAX_VERIFY_GAS`; the author suggests raising it to at least 250k. On accounts, ERC-8403 proposes a standard for adding, rotating and revoking authorities on native AA accounts, and EIP-8130 adds an optional checkpointed keystore. In the evening, ACDC #186 confirmed October 6 as the Sepolia target."
+}

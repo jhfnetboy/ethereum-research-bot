@@ -1,0 +1,139 @@
+{
+  "date": "2026-09-14",
+  "keywords": [
+    "8130 与 8141 的 AA 合作破裂",
+    "ERC-8286 frame 交易模块化账户",
+    "gas 代付需要托管",
+    "债券或信任",
+    "ACDT #96",
+    "EIP-8130 双轨 epoch"
+  ],
+  "summary": "Derek Chiang 披露，EIP-8130 与 EIP-8141（frame）之间的账户抽象合作上周破裂，Base 和以太坊将分别实现不同的 AA 标准。同日 ERC-8286“frame 交易的模块化账户”合并更新，EIP-8130 则提交与 Base 官方仓库对齐的两项规范同步。AnkushinDaniil 论证：公共内存池里的 gas 代付，在不锁资金、不靠链下信任的前提下无法兼得，这正是 EIP-8141 预留余额的原因。",
+  "items": [
+    {
+      "topic": "原生 AA 的两条路",
+      "title": "Derek Chiang：8130 与 8141 的 AA 合作上周破裂",
+      "note": "20:28，Base 和以太坊将分别实现不同的 AA 标准；他随后分享对这次合作和 EVM 未来的反思（帖子较长，此处只引用可见部分）。据 Ethereal news #40，Base 计划在今年晚些时候上线 EIP-8130 keystore 账户，并表示这不妨碍将来启用 EIP-8141。",
+      "url": "https://x.com/decentrek/status/2099490351337902392",
+      "date": "2026-09-14",
+      "title_en": "Derek Chiang: the AA collaboration between 8130 and 8141 broke down last week",
+      "note_en": "20:28, and Base and Ethereum will now implement different AA standards; he goes on to reflect on the collaboration and the future of the EVM (the post is long, and only the visible part is cited here). According to Ethereal news #40, Base plans to ship EIP-8130 keystore accounts later this year and says this does not block enabling EIP-8141 in future.",
+      "topic_en": "Two paths for native AA"
+    },
+    {
+      "topic": "原生 AA 的两条路",
+      "title": "EIP-8130：对齐 scope 位、POLICY/OPERATOR 语义和 importAccount",
+      "note": "（chunter-cb，次日合并）与 对称双轨 epoch、IncrementEpoch 和临时参与者层，都是把规范同步到 Base 的官方实现仓库，只改规范。",
+      "url": "https://github.com/ethereum/EIPs/pull/12333",
+      "date": "2026-09-14",
+      "title_en": "EIP-8130: align scope bits, POLICY/OPERATOR semantics and importAccount",
+      "note_en": "(chunter-cb, merged the next day) and symmetric two-track epochs, IncrementEpoch and the transient actor tier, both syncing the spec with Base's canonical implementation repository, spec changes only.",
+      "topic_en": "Two paths for native AA"
+    },
+    {
+      "topic": "原生 AA 的两条路",
+      "title": "对称双轨 epoch、IncrementEpoch 和临时参与者层",
+      "note": "EIP-8130：对齐 scope 位、POLICY/OPERATOR 语义和 importAccount（chunter-cb，次日合并）与 对称双轨 epoch、IncrementEpoch 和临时参与者层，都是把规范同步到 Base 的官方实现仓库，只改规范。",
+      "url": "https://github.com/ethereum/EIPs/pull/12334",
+      "date": "2026-09-14",
+      "title_en": "symmetric two-track epochs, IncrementEpoch and the transient actor tier",
+      "note_en": "EIP-8130: align scope bits, POLICY/OPERATOR semantics and importAccount (chunter-cb, merged the next day) and symmetric two-track epochs, IncrementEpoch and the transient actor tier, both syncing the spec with Base's canonical implementation repository, spec changes only.",
+      "topic_en": "Two paths for native AA"
+    },
+    {
+      "topic": "原生 AA 的两条路",
+      "title": "ERC-8286：frame 交易的模块化账户",
+      "note": "（chiranjeev13）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2008",
+      "date": "2026-09-14",
+      "title_en": "ERC-8286: modular accounts for frame transactions",
+      "note_en": "(chiranjeev13) was merged.",
+      "topic_en": "Two paths for native AA"
+    },
+    {
+      "topic": "代付的安全边界",
+      "title": "ethresear.ch：公共内存池 gas 代付需要托管、债券或信任",
+      "note": "18:07（AnkushinDaniil）。如果想让合约为别人的交易付 gas，又想让公共内存池在不锁资金、没有链下信任的情况下转发，三者不可兼得；文章证明这一点并把所有变通方案归为三类，这也是 EIP-8141 采用余额预留的原因。",
+      "url": "https://ethresear.ch/t/public-mempool-gas-sponsorship-needs-escrow-a-bond-or-trust/25995",
+      "date": "2026-09-14",
+      "title_en": "ethresear.ch: public-mempool gas sponsorship needs escrow, a bond, or trust",
+      "note_en": "18:07 (AnkushinDaniil). If you want a contract to pay gas for someone else's transaction and the public mempool to relay it with no locked money and no offchain trust, you cannot have all three; the post proves this, sorts every workaround into three categories, and explains why EIP-8141 reserves balance.",
+      "topic_en": "The security boundary of sponsorship"
+    },
+    {
+      "topic": "代付的安全边界",
+      "title": "EIP-8141：规定标准付款方提款延迟的下限为重组深度",
+      "note": "（后关闭）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12330",
+      "date": "2026-09-14",
+      "title_en": "EIP-8141: pin the canonical paymaster withdrawal delay to reorg depth",
+      "note_en": "(later closed).",
+      "topic_en": "The security boundary of sponsorship"
+    },
+    {
+      "topic": "其他动态",
+      "title": "barnabemonnot：主网证明传播数据较去年明显改善",
+      "note": "19:21。",
+      "url": "https://x.com/barnabemonnot/status/2099473589200171353",
+      "date": "2026-09-14",
+      "title_en": "barnabemonnot: mainnet attestation propagation has noticeably improved since last year",
+      "note_en": "19:21.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat：Fluidkey 加入 L2BEAT Privacy，为每笔付款生成新的隐身 Safe 账户",
+      "note": "21:08。",
+      "url": "https://x.com/ethbeat_org/status/2099500584269139994",
+      "date": "2026-09-14",
+      "title_en": "ethbeat: Fluidkey added to L2BEAT Privacy, giving recipients a fresh stealth Safe account for every payment",
+      "note_en": "21:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind 任命 Alvin Su 为 CEO",
+      "note": "17:07，Daniel Celeda 专任 CTO。",
+      "url": "https://x.com/Nethermind/status/2099439919508619287",
+      "date": "2026-09-14",
+      "title_en": "Nethermind appoints Alvin Su as CEO",
+      "note_en": "17:07, with Daniel Celeda focusing on the CTO role.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8416 按 epoch 固定利率金库",
+      "note": "18:00。",
+      "url": "https://ethereum-magicians.org/t/erc-8416-epoch-based-fixed-rate-vault/29669",
+      "date": "2026-09-14",
+      "title_en": "ERC-8416 epoch-based fixed-rate vault",
+      "note_en": "18:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：对抗性治理机制设计理论的杀手级应用可能是 AI 安全",
+      "note": "03:07。",
+      "url": "https://x.com/VitalikButerin/status/2099228441963012475",
+      "date": "2026-09-14",
+      "title_en": "Vitalik: a killer app of adversarial governance mechanism design theory may turn out to be AI safety",
+      "note_en": "03:07.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/public-mempool-gas-sponsorship-needs-escrow-a-bond-or-trust/25995",
+    "credit": "ethresear.ch, Public-mempool gas sponsorship needs escrow, a bond, or trust",
+    "local_path": "assets/2026-09-14.jpg",
+    "credit_en": "ethresear.ch, Public-mempool gas sponsorship needs escrow, a bond, or trust"
+  },
+  "keywords_en": [
+    "8130 and 8141 AA collaboration breaks down",
+    "ERC-8286 modular accounts for frame transactions",
+    "gas sponsorship needs escrow",
+    "a bond or trust",
+    "ACDT #96",
+    "EIP-8130 two-track epochs"
+  ],
+  "summary_en": "Derek Chiang disclosed that the account abstraction collaboration between EIP-8130 and EIP-8141 (frames) broke down last week, and Base and Ethereum will implement different AA standards. The same day ERC-8286, \"Modular Accounts for Frame Transactions\", merged an update, while EIP-8130 submitted two spec syncs with Base's canonical repository. AnkushinDaniil argued that public-mempool gas sponsorship cannot work without locked funds or offchain trust, which is why EIP-8141 reserves balance."
+}

@@ -1,0 +1,219 @@
+{
+  "date": "2026-09-29",
+  "keywords": [
+    "EIP-8130 拆分出 AA 交易类型",
+    "ERC-8421 frame 交易替代内存池",
+    "EIP-8141 限制出块方重执行",
+    "EIP-7906 断言输入",
+    "FOCIL Profile 2",
+    "ePBS 不再需要 sidecar"
+  ],
+  "summary": "Base 团队的 chunter-cb 把 EIP-8130 的交易类型拆成独立 EIP（后编号 EIP-8430），不依赖 Keystore，现有 secp256k1 EOA 即可使用，支持分阶段批量调用、gas 代付、二维 nonce 和带内 EIP-7702 式代码委托；EIP-8130 则只保留 Keystore。EIP-8141 合并一项修订，限制出块方重新执行未批准验证前缀的工作量，并改用 EIP-7976 计算 calldata 下限。forshtat 为 ERC-8421 替代内存池开讨论帖，称其与 MATCHA 思路相近。",
+  "items": [
+    {
+      "topic": "原生 AA 的拆分与内存池",
+      "title": "新 EIP：AA 交易类型",
+      "note": "（chunter-cb）。从 EIP-8130 拆出的 EIP-2718 交易类型，不依赖 Keystore，现有 EOA 用原生 secp256k1 认证即可使用：分阶段批量调用（调用可带原生 value）、有绑定和开放两种付款方模式的 gas 代付、二维 nonce（key 0 即账户 nonce）及无 nonce 模式、带内 EIP-7702 式代码委托。",
+      "url": "https://github.com/ethereum/EIPs/pull/12385",
+      "date": "2026-09-29",
+      "title_en": "New EIP: AA transaction type",
+      "note_en": "(chunter-cb). An EIP-2718 transaction type split out of EIP-8130 with no Keystore dependency, usable by today's EOAs with native secp256k1 authentication: phased call batching (with native value in calls), gas sponsorship with bound and open payer modes, 2D nonces (key 0 is the account nonce) and a nonce-free mode, and in-band EIP-7702-style code delegation.",
+      "topic_en": "Splitting native AA, and mempools"
+    },
+    {
+      "topic": "原生 AA 的拆分与内存池",
+      "title": "EIP-8130：只保留 Keystore，交易类型移到新 EIP",
+      "note": "范围包括参与者、认证器、scope、policy、锁、账户创建与导入、签名验证。",
+      "url": "https://github.com/ethereum/EIPs/pull/12386",
+      "date": "2026-09-29",
+      "title_en": "EIP-8130: scope to the Keystore and move the transaction type to a new EIP",
+      "note_en": "Covering actors, authenticators, scopes, policies, lock, account creation and import, and signature verification.",
+      "topic_en": "Splitting native AA, and mempools"
+    },
+    {
+      "topic": "原生 AA 的拆分与内存池",
+      "title": "Magicians：ERC-8421 frame 交易替代内存池",
+      "note": "18:51（forshtat），结构与 ERC-4337 的 ERC-7562 验证规则相似并大体向后兼容，是比标准内存池更宽松的信誉系统；概念上与 MATCHA 相近，主要区别是计量单位（用掉的 gas 还是见到的交易数）。",
+      "url": "https://ethereum-magicians.org/t/erc-8421-frame-transaction-alternative-mempools/29800",
+      "date": "2026-09-29",
+      "title_en": "Magicians: ERC-8421 frame transaction alternative mempools",
+      "note_en": "18:51 (forshtat), similar in structure to and mostly backward compatible with ERC-7562's validation rules for ERC-4337, a reputation-based system more permissive than the canonical mempool; conceptually close to MATCHA, with the main difference being the unit of accounting (gas used versus transactions seen).",
+      "topic_en": "Splitting native AA, and mempools"
+    },
+    {
+      "topic": "原生 AA 的拆分与内存池",
+      "title": "EIP-8141：限制出块方对未批准验证前缀的重执行",
+      "note": "（AnkushinDaniil）合并。内存池部分已经限制了准入和链头变化后的重验证，但没有限制出块：frame 交易在某个帧批准之前不付任何费用。EIP-8141：用 7976 替换 7623（lightclient）合并；把 frame 过期验证器改为部署的标准合约。",
+      "url": "https://github.com/ethereum/EIPs/pull/12213",
+      "date": "2026-09-29",
+      "title_en": "EIP-8141: bound producer-side re-execution of an unapproving validation prefix",
+      "note_en": "(AnkushinDaniil) was merged. The mempool section already bounds admission and head-change revalidation, but not block production: a frame transaction pays nothing until one of its frames approves. EIP-8141: replace 7623 with 7976 (lightclient) was merged; deploy the frames expiry verifier as a standard contract.",
+      "topic_en": "Splitting native AA, and mempools"
+    },
+    {
+      "topic": "原生 AA 的拆分与内存池",
+      "title": "EIP-8141：用 7976 替换 7623",
+      "note": "EIP-8141：限制出块方对未批准验证前缀的重执行（AnkushinDaniil）合并。内存池部分已经限制了准入和链头变化后的重验证，但没有限制出块：frame 交易在某个帧批准之前不付任何费用。EIP-8141：用 7976 替换 7623（lightclient）合并；把 frame 过期验证器改为部署的标准合约。",
+      "url": "https://github.com/ethereum/EIPs/pull/12395",
+      "date": "2026-09-29",
+      "title_en": "EIP-8141: replace 7623 with 7976",
+      "note_en": "EIP-8141: bound producer-side re-execution of an unapproving validation prefix (AnkushinDaniil) was merged. The mempool section already bounds admission and head-change revalidation, but not block production: a frame transaction pays nothing until one of its frames approves. EIP-8141: replace 7623 with 7976 (lightclient) was merged; deploy the frames expiry verifier as a standard contract.",
+      "topic_en": "Splitting native AA, and mempools"
+    },
+    {
+      "topic": "原生 AA 的拆分与内存池",
+      "title": "把 frame 过期验证器改为部署的标准合约",
+      "note": "EIP-8141：限制出块方对未批准验证前缀的重执行（AnkushinDaniil）合并。内存池部分已经限制了准入和链头变化后的重验证，但没有限制出块：frame 交易在某个帧批准之前不付任何费用。EIP-8141：用 7976 替换 7623（lightclient）合并；把 frame 过期验证器改为部署的标准合约。",
+      "url": "https://github.com/ethereum/EIPs/pull/12387",
+      "date": "2026-09-29",
+      "title_en": "deploy the frames expiry verifier as a standard contract",
+      "note_en": "EIP-8141: bound producer-side re-execution of an unapproving validation prefix (AnkushinDaniil) was merged. The mempool section already bounds admission and head-change revalidation, but not block production: a frame transaction pays nothing until one of its frames approves. EIP-8141: replace 7623 with 7976 (lightclient) was merged; deploy the frames expiry verifier as a standard contract.",
+      "topic_en": "Splitting native AA, and mempools"
+    },
+    {
+      "topic": "原生 AA 的拆分与内存池",
+      "title": "EIP-7906：由交易控制的断言输入",
+      "note": "断言若从交易主体能写的状态读取参考值（价格、阈值、允许的花费者）就仍可被操纵。",
+      "url": "https://github.com/ethereum/EIPs/pull/12391",
+      "date": "2026-09-29",
+      "title_en": "EIP-7906: assertion inputs controlled by the transaction",
+      "note_en": "An assertion that takes reference values (a price, a threshold, a permitted spender) from state the body could write is still steerable.",
+      "topic_en": "Splitting native AA, and mempools"
+    },
+    {
+      "topic": "Glamsterdam 与 FOCIL",
+      "title": "ralexstokes：Glamsterdam 将带来无需可信中继构建的区块，Sepolia 10 月 6 日升级",
+      "note": "06:47，Hoodi 和主网日期另行公布。",
+      "url": "https://x.com/ralexstokes/status/2104719613519184019",
+      "date": "2026-09-29",
+      "title_en": "ralexstokes: Glamsterdam brings blocks built without trusted relays, with Sepolia upgrading October 6",
+      "note_en": "06:47; Hoodi and mainnet dates will be announced separately.",
+      "topic_en": "Glamsterdam and FOCIL"
+    },
+    {
+      "topic": "Glamsterdam 与 FOCIL",
+      "title": "ladislaus0x：ePBS 之后，质押运营者不再需要 mev-boost 或 commit-boost 接收第三方区块",
+      "note": "16:37，信标节点自己收集和选择出价，构建者偏好在验证者客户端中原生设置。",
+      "url": "https://x.com/ladislaus0x/status/2104868279521091610",
+      "date": "2026-09-29",
+      "title_en": "ladislaus0x: with ePBS, staking operators no longer need mev-boost or commit-boost to receive third-party blocks",
+      "note_en": "16:37; the beacon node collects and selects bids itself, and builder preferences are set natively in the validator client.",
+      "topic_en": "Glamsterdam and FOCIL"
+    },
+    {
+      "topic": "Glamsterdam 与 FOCIL",
+      "title": "EIP-7805：Profile 2 遗漏声明和每个包含列表的 VERIFY 预算",
+      "note": "FOCIL 与 frame 交易联合激活；EIP-8369：确定性的 Profile 2 预算和重放。",
+      "url": "https://github.com/ethereum/EIPs/pull/12394",
+      "date": "2026-09-29",
+      "title_en": "EIP-7805: Profile 2 omission claims and per-list VERIFY budgets",
+      "note_en": "With joint FOCIL and frame activation; EIP-8369: deterministic Profile 2 budgets and replay.",
+      "topic_en": "Glamsterdam and FOCIL"
+    },
+    {
+      "topic": "Glamsterdam 与 FOCIL",
+      "title": "EIP-8369：确定性的 Profile 2 预算和重放",
+      "note": "EIP-7805：Profile 2 遗漏声明和每个包含列表的 VERIFY 预算，FOCIL 与 frame 交易联合激活；EIP-8369：确定性的 Profile 2 预算和重放。",
+      "url": "https://github.com/ethereum/EIPs/pull/12396",
+      "date": "2026-09-29",
+      "title_en": "EIP-8369: deterministic Profile 2 budgets and replay",
+      "note_en": "EIP-7805: Profile 2 omission claims and per-list VERIFY budgets, with joint FOCIL and frame activation; EIP-8369: deterministic Profile 2 budgets and replay.",
+      "topic_en": "Glamsterdam and FOCIL"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-4444：HISTORY_PRUNE_EPOCHS 更新为 14,299",
+      "note": "合并；新 EIP：退役 0x00 验证者；EIP-8365 缩小到存款防护。",
+      "url": "https://github.com/ethereum/EIPs/pull/12388",
+      "date": "2026-09-29",
+      "title_en": "EIP-4444: update HISTORY_PRUNE_EPOCHS to 14,299",
+      "note_en": "Merged; new EIP: retire 0x00 validators; EIP-8365 reduced in scope to the deposit guard.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：退役 0x00 验证者",
+      "note": "EIP-4444：HISTORY_PRUNE_EPOCHS 更新为 14,299 合并；新 EIP：退役 0x00 验证者；EIP-8365 缩小到存款防护。",
+      "url": "https://github.com/ethereum/EIPs/pull/12390",
+      "date": "2026-09-29",
+      "title_en": "new EIP: retire 0x00 validators",
+      "note_en": "EIP-4444: update HISTORY_PRUNE_EPOCHS to 14,299, merged; new EIP: retire 0x00 validators; EIP-8365 reduced in scope to the deposit guard.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8365 缩小到存款防护",
+      "note": "EIP-4444：HISTORY_PRUNE_EPOCHS 更新为 14,299 合并；新 EIP：退役 0x00 验证者；EIP-8365 缩小到存款防护。",
+      "url": "https://github.com/ethereum/EIPs/pull/12389",
+      "date": "2026-09-29",
+      "title_en": "EIP-8365 reduced in scope to the deposit guard",
+      "note_en": "EIP-4444: update HISTORY_PRUNE_EPOCHS to 14,299, merged; new EIP: retire 0x00 validators; EIP-8365 reduced in scope to the deposit guard.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8429 重复调用递增 gas",
+      "note": "15:27。",
+      "url": "https://ethereum-magicians.org/t/eip-8429-escalating-gas-for-repeated-calls/29798",
+      "date": "2026-09-29",
+      "title_en": "Magicians: EIP-8429 escalating gas for repeated calls",
+      "note_en": "15:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "SEAL：9 月 22 日至 29 日参与 67 起事件",
+      "note": "21:52，假客服 800 万美元、助记词泄露 674 万美元。",
+      "url": "https://x.com/_SEAL_Org/status/2104947439903912328",
+      "date": "2026-09-29",
+      "title_en": "SEAL: 67 incidents from September 22 to 29",
+      "note_en": "21:52, including $8M to fake support callers and $6.74M in seed compromises.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Julian Ma：感谢让 FCR 成为可能的各位",
+      "note": "02:37。",
+      "url": "https://x.com/_julianma/status/2104656707800715673",
+      "date": "2026-09-29",
+      "title_en": "Julian Ma: thanks to everyone who made FCR possible",
+      "note_en": "02:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zksecurity：用 Lean 4 形式化验证 Liam Eagen 的技术",
+      "note": "22:17。",
+      "url": "https://x.com/zksecurityXYZ/status/2104953772669808866",
+      "date": "2026-09-29",
+      "title_en": "zksecurity: Liam Eagen's techniques formally verified in Lean 4",
+      "note_en": "22:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：量子安全由量子暴露程度和密码敏捷性两个因素决定",
+      "note": "23:34。",
+      "url": "https://x.com/EliBenSasson/status/2104973047929176337",
+      "date": "2026-09-29",
+      "title_en": "Eli Ben-Sasson: quantum safety is determined by quantum exposure and crypto agility",
+      "note_en": "23:34.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12385",
+    "credit": "GitHub, ethereum/EIPs PR #12385",
+    "local_path": "assets/2026-09-29.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12385"
+  },
+  "keywords_en": [
+    "AA transaction type split out of EIP-8130",
+    "ERC-8421 frame transaction alternative mempools",
+    "EIP-8141 bounds producer re-execution",
+    "EIP-7906 assertion inputs",
+    "FOCIL Profile 2",
+    "no sidecar needed with ePBS"
+  ],
+  "summary_en": "chunter-cb of the Base team split EIP-8130's transaction type into its own EIP (later EIP-8430). It has no Keystore dependency and works for today's secp256k1 EOAs, supporting phased call batching, gas sponsorship, 2D nonces and in-band EIP-7702-style code delegation; EIP-8130 keeps only the Keystore. EIP-8141 merged a revision bounding how much work block producers spend re-executing unapproving validation prefixes, and switched to EIP-7976 for the calldata floor. forshtat opened a discussion thread for ERC-8421 alternative mempools, calling it conceptually close to MATCHA."
+}

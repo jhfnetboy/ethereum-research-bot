@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-12",
+  "keywords": [
+    "EIP-8141 提前拒绝与付款方重验证",
+    "EIP-8130 calldata 下限",
+    "EIP-8288 对齐 frame 字段",
+    "ZK KYC",
+    "WPPT 截止延期"
+  ],
+  "summary": "周六的工作集中在 frame 交易的内存池安全和 gas 计算。EIP-8141 的 PR 提出四项规则，减少结构错误交易和共享付款方变更带来的验证放大。EIP-8130 提交修正（16 日合并），让 EIP-7623 的 calldata 下限也适用于其交易类型。binji 等人讨论 ZK KYC 和 zk passport。",
+  "items": [
+    {
+      "topic": "frame 与 keystore 交易的 gas 和验证规则",
+      "title": "EIP-8141：定义提前拒绝和付款方重验证规则",
+      "note": "（sm-stack）。现有规则可能对已经结构不合格的交易做昂贵验证，或在共享付款方或工厂变更一次后对大量待处理交易重复验证；PR 处理四个验证放大来源，首先是在验签前做编码和静态约束检查。",
+      "url": "https://github.com/ethereum/EIPs/pull/12321",
+      "date": "2026-09-12",
+      "title_en": "EIP-8141: define early rejection and payer revalidation rules",
+      "note_en": "(sm-stack). The current rules can require expensive validation for transactions that already fail structural checks, or repeat validation across many pending transactions after one change to a shared payer or factory; the PR addresses four sources of amplification, starting with encoding and static checks before signature verification.",
+      "topic_en": "Gas and validation rules for frame and keystore transactions"
+    },
+    {
+      "topic": "frame 与 keystore 交易的 gas 和验证规则",
+      "title": "EIP-8130：在固有 gas 中应用 EIP-7623 calldata 下限",
+      "note": "（chunter-cb，9 月 16 日合并）。8130 交易的字节在 `calls`、`account_changes` 等字段而非 `data`，原先按每字节 16/4 计价且无下限，在采用 EIP-7623 的链上下限从不生效。",
+      "url": "https://github.com/ethereum/EIPs/pull/12320",
+      "date": "2026-09-12",
+      "title_en": "EIP-8130: apply the EIP-7623 calldata floor to intrinsic gas",
+      "note_en": "(chunter-cb, merged September 16). An 8130 transaction's bytes live in `calls`, `account_changes` and other fields rather than `data`, and were priced at a flat 16/4 per byte with no floor, so on chains that adopted EIP-7623 the floor never bound.",
+      "topic_en": "Gas and validation rules for frame and keystore transactions"
+    },
+    {
+      "topic": "frame 与 keystore 交易的 gas 和验证规则",
+      "title": "EIP-8288：对齐 EIP-8141 当前的 frame 字段和指令",
+      "note": "（ilitteri）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12322",
+      "date": "2026-09-12",
+      "title_en": "EIP-8288: align with EIP-8141's current frame fields and instructions",
+      "note_en": "(ilitteri).",
+      "topic_en": "Gas and validation rules for frame and keystore transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "binji：ZK KYC 可能是最重要但没人大规模关注的加密用例",
+      "note": "18:28；gakonst：这些应用中得有一个采用 zk passport 17:20。",
+      "url": "https://x.com/binji_x/status/2098735444401811699",
+      "date": "2026-09-12",
+      "title_en": "binji: ZK KYC is probably the most important crypto use case no one is focusing on at scale",
+      "note_en": "18:28; gakonst: one of these apps must adopt zk passport, 17:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "gakonst：这些应用中得有一个采用 zk passport",
+      "note": "binji：ZK KYC 可能是最重要但没人大规模关注的加密用例 18:28；gakonst：这些应用中得有一个采用 zk passport 17:20。",
+      "url": "https://x.com/gakonst/status/2098718382509932728",
+      "date": "2026-09-12",
+      "title_en": "gakonst: one of these apps must adopt zk passport",
+      "note_en": "Binji: ZK KYC is probably the most important crypto use case no one is focusing on at scale, 18:28; gakonst: one of these apps must adopt zk passport, 17:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：首届隐私保护技术研讨会 WPPT 2026 投稿截止延至 10 月 11 日",
+      "note": "00:42。",
+      "url": "https://x.com/ethereumfndn/status/2098467276508807629",
+      "date": "2026-09-12",
+      "title_en": "EF: the submission deadline for the 1st Workshop on Privacy-Preserving Technologies (WPPT 2026) is extended to October 11",
+      "note_en": "00:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：比特币主网已可做 QSB，公钥暴露也不会被量子计算机盗走 BTC",
+      "note": "20:58。",
+      "url": "https://x.com/StarkWareLtd/status/2098773150788190539",
+      "date": "2026-09-12",
+      "title_en": "StarkWare: QSB is possible today on Bitcoin mainnet, so an exposed public key no longer lets a quantum attacker steal BTC",
+      "note_en": "20:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：加密和 AI 都在得出 TEE 和机密计算是终局技术的结论",
+      "note": "06:17。",
+      "url": "https://x.com/gakonst/status/2098551657839677929",
+      "date": "2026-09-12",
+      "title_en": "gakonst: crypto and AI are converging on TEEs and confidential compute as endgame technology",
+      "note_en": "06:17.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12321",
+    "credit": "GitHub, ethereum/EIPs PR #12321",
+    "local_path": "assets/2026-09-12.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12321"
+  },
+  "keywords_en": [
+    "EIP-8141 early rejection and payer revalidation",
+    "EIP-8130 calldata floor",
+    "EIP-8288 aligned with frame fields",
+    "ZK KYC",
+    "WPPT deadline extended"
+  ],
+  "summary_en": "Saturday's work focused on mempool safety and gas calculation for frame transactions. An EIP-8141 PR proposed four rules to cut validation amplification from malformed transactions and shared payer changes. EIP-8130 submitted a fix (merged on the 16th) so EIP-7623's calldata floor applies to its transaction type too. binji and others discussed ZK KYC and zk passports."
+}

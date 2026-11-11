@@ -1,0 +1,169 @@
+{
+  "date": "2026-09-25",
+  "keywords": [
+    "quick slots 并入共识规范",
+    "形式化验证的解耦共识",
+    "frames-devnet-0",
+    "EIP-8425 量子冻结与账户恢复",
+    "Ethereum TCB",
+    "Bitget 被盗"
+  ],
+  "summary": "两项“更快以太坊”的进展：barnabemonnot 宣布 quick slots（EIP-8198）作为特性规范并入以太坊共识规范；fradamt 发布面向 I* 的解耦共识协议形式化验证方案，目标是最终性快 4 到 8 倍。ethPandaOps 的 Hegotá frames-devnet-0 上线。Magicians 上开始讨论 EIP-8425，提议冻结并恢复未迁移到后量子方案的账户。",
+  "items": [
+    {
+      "topic": "账户的后量子迁移与 frame 开发网",
+      "title": "Magicians：EIP-8425 量子冻结与账户恢复",
+      "note": "00:19（colinlyguo）。延续“量子恢复路径”的讨论，问是否该为冻结和恢复未迁移账户写 EIP，例如基于 Vitalik 的量子紧急恢复提案；提前在各客户端准备和测试实现能缩短应急时间。一个担忧是：已通过签名暴露公钥但所有者已失去访问的账户无法迁移，资金可能落入量子攻击者手中。",
+      "url": "https://ethereum-magicians.org/t/eip-8425-quantum-freeze-and-account-recovery/29770",
+      "date": "2026-09-25",
+      "title_en": "Magicians: EIP-8425 quantum freeze and account recovery",
+      "note_en": "00:19 (colinlyguo). Continuing the \"quantum recovery pathway\" discussion, it asks whether there should be an EIP for freezing and recovering unmigrated accounts, for example building on Vitalik's quantum emergency recovery proposal; preparing and testing implementations across clients in advance could shorten emergency response time. One concern: accounts whose public keys were exposed through signatures but whose owners have lost access cannot migrate, and their funds could fall to quantum attackers.",
+      "topic_en": "Post-quantum migration for accounts and the frame devnet"
+    },
+    {
+      "topic": "账户的后量子迁移与 frame 开发网",
+      "title": "Ethereal news mini #2：ethPandaOps 的 Hegotá frames-devnet-0 上线，Nethermind 2.0.0，asanso 的 Daisugi 后量子测试网",
+      "note": "21:12。",
+      "url": "https://x.com/EtherealnewsHQ/status/2103487897609646467",
+      "date": "2026-09-25",
+      "title_en": "Ethereal news mini #2: ethPandaOps' Hegotá frames-devnet-0 is live, Nethermind 2.0.0, and asanso's Daisugi post-quantum testnet",
+      "note_en": "21:12.",
+      "topic_en": "Post-quantum migration for accounts and the frame devnet"
+    },
+    {
+      "topic": "更快的以太坊",
+      "title": "barnabemonnot：经一个月工作，EIP-8198 quick slots 作为特性规范合入共识规范",
+      "note": "04:38，感谢规范维护者 jih2nn 和 jtraglia。",
+      "url": "https://x.com/barnabemonnot/status/2103237576496681227",
+      "date": "2026-09-25",
+      "title_en": "barnabemonnot: after a month of work, EIP-8198 quick slots was merged as a feature spec in the consensus specs",
+      "note_en": "04:38, thanking spec maintainers jih2nn and jtraglia.",
+      "topic_en": "A faster Ethereum"
+    },
+    {
+      "topic": "更快的以太坊",
+      "title": "fradamt：离 4 到 8 倍更快的最终性又近一步",
+      "note": "22:06，面向 I* 的解耦共识协议有了形式化验证方案，尚不是完整规范（下一步），但包含所有关键部分；barnabemonnot 的介绍 23:48。",
+      "url": "https://x.com/fradamt/status/2103501375279706556",
+      "date": "2026-09-25",
+      "title_en": "fradamt: one step closer to 4 to 8 times faster finality",
+      "note_en": "22:06; there is now a formally verified proposal for a decoupled consensus protocol in I*, not yet a full spec (up next) but including all the key parts; barnabemonnot's introduction, 23:48.",
+      "topic_en": "A faster Ethereum"
+    },
+    {
+      "topic": "更快的以太坊",
+      "title": "barnabemonnot 的介绍",
+      "note": "fradamt：离 4 到 8 倍更快的最终性又近一步 22:06，面向 I* 的解耦共识协议有了形式化验证方案，尚不是完整规范（下一步），但包含所有关键部分；barnabemonnot 的介绍 23:48。",
+      "url": "https://x.com/barnabemonnot/status/2103527152591204363",
+      "date": "2026-09-25",
+      "title_en": "barnabemonnot's introduction",
+      "note_en": "Fradamt: one step closer to 4 to 8 times faster finality, 22:06; there is now a formally verified proposal for a decoupled consensus protocol in I*, not yet a full spec (up next) but including all the key parts; barnabemonnot's introduction, 23:48.",
+      "topic_en": "A faster Ethereum"
+    },
+    {
+      "topic": "更快的以太坊",
+      "title": "ethresear.ch：以太坊的可信计算基（TCB）第一部分，客户端",
+      "note": "17:11（asn），从“哪些组件、规范、工具和假设是被信任而非被证明的”角度讨论形式化验证。",
+      "url": "https://ethresear.ch/t/ethereums-tcb-part-1-the-client/26086",
+      "date": "2026-09-25",
+      "title_en": "ethresear.ch: Ethereum's TCB, part 1, the client",
+      "note_en": "17:11 (asn), looking at formal verification through which components, specs, tools and assumptions are trusted rather than proven.",
+      "topic_en": "A faster Ethereum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tayvano：Bitget 被 DPRK 的 TraderTraitor 攻击",
+      "note": "08:15，并给出相关地址。",
+      "url": "https://x.com/tayvano_/status/2103292242911994202",
+      "date": "2026-09-25",
+      "title_en": "tayvano: Bitget was hacked by DPRK's TraderTraitor",
+      "note_en": "08:15, with the addresses involved.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8424 机密 RWA 代币",
+      "note": "09:04，扩展 ERC-7984；ERC PR。",
+      "url": "https://ethereum-magicians.org/t/erc-8424-confidential-real-world-asset-token/29771",
+      "date": "2026-09-25",
+      "title_en": "ERC-8424 confidential real-world asset token",
+      "note_en": "09:04, extending ERC-7984; ERC PR.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC PR",
+      "note": "ERC-8424 机密 RWA 代币 09:04，扩展 ERC-7984；ERC PR。",
+      "url": "https://github.com/ethereum/ERCs/pull/2034",
+      "date": "2026-09-25",
+      "title_en": "ERC PR",
+      "note_en": "ERC-8424 confidential real-world asset token, 09:04, extending ERC-7984; ERC PR.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8347：PBT 快照改用带类型、按 stem 分组的记录",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12379",
+      "date": "2026-09-25",
+      "title_en": "EIP-8347: typed, stem-grouped records in the PBT snapshot",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "金额格式化允许阈值格式",
+      "note": "ERC-7730 合并两项：金额格式化允许阈值格式、修正 tokenAmount 示例。",
+      "url": "https://github.com/ethereum/ERCs/pull/1991",
+      "date": "2026-09-25",
+      "title_en": "threshold formatting for amount formatters",
+      "note_en": "ERC-7730 merged two changes: threshold formatting for amount formatters and a fixed tokenAmount example.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "修正 tokenAmount 示例",
+      "note": "ERC-7730 合并两项：金额格式化允许阈值格式、修正 tokenAmount 示例。",
+      "url": "https://github.com/ethereum/ERCs/pull/2017",
+      "date": "2026-09-25",
+      "title_en": "a fixed tokenAmount example",
+      "note_en": "ERC-7730 merged two changes: threshold formatting for amount formatters and a fixed tokenAmount example.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：新的 Solidity 编译器发布",
+      "note": "19:02。",
+      "url": "https://x.com/VitalikButerin/status/2103455209322320022",
+      "date": "2026-09-25",
+      "title_en": "Vitalik: a new Solidity compiler dropped",
+      "note_en": "19:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：Starknet 隐私生态，钱包内屏蔽、私密质押、私密工资、私密兑换",
+      "note": "14:42。",
+      "url": "https://x.com/StarkWareLtd/status/2103389547182830042",
+      "date": "2026-09-25",
+      "title_en": "StarkWare: the Starknet privacy ecosystem, with in-wallet shielding, private staking, private payroll and private swaps",
+      "note_en": "14:42.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8425-quantum-freeze-and-account-recovery/29770",
+    "credit": "Ethereum Magicians, EIP-8425: Quantum Freeze and Account Recovery",
+    "local_path": "assets/2026-09-25.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8425: Quantum Freeze and Account Recovery"
+  },
+  "keywords_en": [
+    "quick slots merged into consensus specs",
+    "formally verified decoupled consensus",
+    "frames-devnet-0",
+    "EIP-8425 quantum freeze and account recovery",
+    "Ethereum's TCB",
+    "Bitget hack"
+  ],
+  "summary_en": "Two \"faster Ethereum\" milestones: barnabemonnot announced that quick slots (EIP-8198) was merged as a feature spec into the Ethereum consensus specs, and fradamt released a formally verified proposal for a decoupled consensus protocol in I*, targeting 4 to 8 times faster finality. ethPandaOps launched the Hegotá frames-devnet-0. Magicians began discussing EIP-8425, which would freeze and recover accounts that have not migrated to post-quantum schemes."
+}

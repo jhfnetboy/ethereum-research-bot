@@ -1,0 +1,157 @@
+{
+  "date": "2026-09-09",
+  "keywords": [
+    "EIP-8288 递归 STARK 内存池",
+    "PQ 签名与 STARK 聚合 frame 类型",
+    "Glamsterdam 费用市场模拟",
+    "Geth Hegotá 分级榜",
+    "Kohaku CLI"
+  ],
+  "summary": "Vitalik 发文解释递归 STARK 内存池（EIP-8288），希望它进入 Hegotá 之后的 I* 分叉，作为 frame 交易之后的下一步；他的“PQ 签名与 STARK 聚合 frame 类型”EIP 同日合并为草案。misilva73 模拟 gas 上限从 60M 升到 200M 的第一天：费用先飙升后回落，12 个需求情景中 9 个的中位利用率接近目标。",
+  "items": [
+    {
+      "topic": "frame 交易之后：递归 STARK 聚合",
+      "title": "Vitalik：关于递归 STARK 内存池（EIP-8288）的说明",
+      "note": "22:39，他希望这个 EIP 进入 I*，可以视为 frame 之后的下一步，会解锁很大的能力。",
+      "url": "https://x.com/VitalikButerin/status/2097711433073172837",
+      "date": "2026-09-09",
+      "title_en": "Vitalik: a note on recursive STARK mempools (EIP-8288)",
+      "note_en": "22:39; he hopes this EIP gets into I* and describes it as the next step after frames, unlocking extreme amounts of power.",
+      "topic_en": "After frames: recursive STARK aggregation"
+    },
+    {
+      "topic": "frame 交易之后：递归 STARK 聚合",
+      "title": "新 EIP：用于 PQ 签名和 STARK 聚合的 frame 类型",
+      "note": "（vbuterin）合并。让交易把签名和 STARK（用于隐私或 L2）声明为“依赖”，内存池和出块者可以用一个证明它们都存在的递归 STARK 替换，在后量子世界里以很高的 gas 效率支持这些验证。同日 EIP-8288 更新 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11772",
+      "date": "2026-09-09",
+      "title_en": "New EIP: frame type for PQ signature and STARK aggregation",
+      "note_en": "(vbuterin) was merged. Transactions declare signatures and STARKs (for privacy or for L2s) as \"dependencies\", and the mempool and block builder can replace them with a recursive STARK proving they all exist, supporting them very gas-efficiently in a post-quantum world. An EIP-8288 update was also merged.",
+      "topic_en": "After frames: recursive STARK aggregation"
+    },
+    {
+      "topic": "frame 交易之后：递归 STARK 聚合",
+      "title": "EIP-8288 更新",
+      "note": "新 EIP：用于 PQ 签名和 STARK 聚合的 frame 类型（vbuterin）合并。让交易把签名和 STARK（用于隐私或 L2）声明为“依赖”，内存池和出块者可以用一个证明它们都存在的递归 STARK 替换，在后量子世界里以很高的 gas 效率支持这些验证。同日 EIP-8288 更新 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12308",
+      "date": "2026-09-09",
+      "title_en": "EIP-8288 update",
+      "note_en": "New EIP: frame type for PQ signature and STARK aggregation (vbuterin) was merged. Transactions declare signatures and STARKs (for privacy or for L2s) as \"dependencies\", and the mempool and block builder can replace them with a recursive STARK proving they all exist, supporting them very gas-efficiently in a post-quantum world. An EIP-8288 update was also merged.",
+      "topic_en": "After frames: recursive STARK aggregation"
+    },
+    {
+      "topic": "Glamsterdam 的 gas 容量",
+      "title": "ethresear.ch：从 60M 到 200M，模拟 Glamsterdam 的费用市场",
+      "note": "14:43（misilva73）。用约 21 天的主网历史交易在新 gas 表下重放，模拟前 7,200 个区块（约一天）的 12 种需求情景。上限约 4 小时升到 200M；当天先是费用飙升，随容量扩大回落，再围绕新的 100M 目标调整；9 个情景的中位利用率接近目标，中位基础费 0.0002 到 0.3928 gwei，另 3 个即使基础费几乎为零仍低于目标。",
+      "url": "https://ethresear.ch/t/from-60m-to-200m-simulating-glamsterdam-s-fee-market/25957",
+      "date": "2026-09-09",
+      "title_en": "ethresear.ch: from 60M to 200M, simulating Glamsterdam's fee market",
+      "note_en": "14:43 (misilva73). Around 21 days of historical mainnet transactions were replayed under the new gas schedule to simulate the first 7,200 blocks (about a day) under 12 demand scenarios. The limit takes about 4 hours to reach 200M; the day shows an initial fee spike, a decline as capacity expands, then adjustment around the new 100M target. Nine scenarios end with median utilization near target and median base fees from 0.0002 to 0.3928 gwei; the other three stay below target even with a nearly negligible base fee.",
+      "topic_en": "Glamsterdam's gas capacity"
+    },
+    {
+      "topic": "Glamsterdam 的 gas 容量",
+      "title": "EIP-7928：修正存储读取 gas 可行性检查",
+      "note": "合并，原检查可能拒绝有效区块。",
+      "url": "https://github.com/ethereum/EIPs/pull/12277",
+      "date": "2026-09-09",
+      "title_en": "EIP-7928: amend the storage-read gas-feasibility check",
+      "note_en": "Was merged, since the old check could reject valid blocks.",
+      "topic_en": "Glamsterdam's gas capacity"
+    },
+    {
+      "topic": "其他动态",
+      "title": "lightclient：Geth 的 Hegotá 分级榜",
+      "note": "21:37。",
+      "url": "https://x.com/lightclients/status/2097695943303057539",
+      "date": "2026-09-09",
+      "title_en": "lightclient: Geth's Hegotá tier list",
+      "note_en": "21:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：直播探索 Kohaku CLI，演示跨 Railgun、Tornado Cash 的私密交易",
+      "note": "21:01；EF Protocol 9 月 16 日办 Reddit AMA 21:29。",
+      "url": "https://x.com/ethereumfndn/status/2097686895283036608",
+      "date": "2026-09-09",
+      "title_en": "EF: live exploration of the Kohaku CLI, demoing private transactions across Railgun and Tornado Cash",
+      "note_en": "21:01; EF Protocol hosts a Reddit AMA on September 16, 21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF Protocol 9 月 16 日办 Reddit AMA",
+      "note": "EF：直播探索 Kohaku CLI，演示跨 Railgun、Tornado Cash 的私密交易 21:01；EF Protocol 9 月 16 日办 Reddit AMA 21:29。",
+      "url": "https://x.com/ethereumfndn/status/2097693832812921174",
+      "date": "2026-09-09",
+      "title_en": "EF Protocol hosts a Reddit AMA on September 16",
+      "note_en": "EF: live exploration of the Kohaku CLI, demoing private transactions across Railgun and Tornado Cash, 21:01; EF Protocol hosts a Reddit AMA on September 16, 21:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：将质押与验证者注册解耦",
+      "note": "（kevaundray），讨论帖 EIP-8413 16:27。",
+      "url": "https://github.com/ethereum/EIPs/pull/12306",
+      "date": "2026-09-09",
+      "title_en": "New EIP: decouple stake from validator registration",
+      "note_en": "(kevaundray), with a discussion thread for EIP-8413, 16:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "讨论帖 EIP-8413",
+      "note": "新 EIP：将质押与验证者注册解耦（kevaundray），讨论帖 EIP-8413 16:27。",
+      "url": "https://ethereum-magicians.org/t/eip-8413-decouple-stake-from-validator-registration/29628",
+      "date": "2026-09-09",
+      "title_en": "discussion thread for EIP-8413",
+      "note_en": "New EIP: decouple stake from validator registration (kevaundray), with a discussion thread for EIP-8413, 16:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "SEAL：9 月 1 日至 8 日处理 48 起事件",
+      "note": "08:39，协议被攻破损失 381 万美元、基础设施漏洞 300 万美元。",
+      "url": "https://x.com/_SEAL_Org/status/2097500098729062487",
+      "date": "2026-09-09",
+      "title_en": "SEAL: 48 incidents handled from September 1 to 8",
+      "note_en": "08:39, including $3.81M in protocol compromises and $3M in infrastructure exploits.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trail of Bits：利用 Lean 的一个 bug，用 20 行“证明”了费马大定理",
+      "note": "18:15。",
+      "url": "https://x.com/trailofbits/status/2097644988121104815",
+      "date": "2026-09-09",
+      "title_en": "Trail of Bits: \"proved\" Fermat's Last Theorem in 20 lines by exploiting a bug in Lean",
+      "note_en": "18:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EFDevcon：公布 Devcon 8 的 14 个社区中心，包括隐私和安全",
+      "note": "23:18。",
+      "url": "https://x.com/EFDevcon/status/2097721361770701294",
+      "date": "2026-09-09",
+      "title_en": "EFDevcon: 14 Community Hubs announced for Devcon 8, including Privacy and Security",
+      "note_en": "23:18.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11772",
+    "credit": "GitHub, ethereum/EIPs PR #11772",
+    "local_path": "assets/2026-09-09.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11772"
+  },
+  "keywords_en": [
+    "EIP-8288 recursive STARK mempool",
+    "frame type for PQ signature and STARK aggregation",
+    "Glamsterdam fee market simulation",
+    "Geth Hegotá tier list",
+    "Kohaku CLI"
+  ],
+  "summary_en": "Vitalik wrote a note on the recursive STARK mempool (EIP-8288), which he hopes gets into I*, the fork after Hegotá, as the next step after frame transactions; his EIP for a frame type for PQ signature and STARK aggregation was merged as a draft the same day. misilva73 simulated the first day of the gas limit rising from 60M to 200M: fees spike and then fall, and 9 of 12 demand scenarios end with median utilization near the target."
+}

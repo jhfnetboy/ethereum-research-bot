@@ -1,0 +1,177 @@
+{
+  "date": "2026-09-04",
+  "keywords": [
+    "ethrex 隐私路线图测试网",
+    "EIP-8037 跨帧状态 gas 修复",
+    "EIP-8130 改名 Keystore Accounts",
+    "AI 代理钱包 ERC",
+    "quick slots"
+  ],
+  "summary": "ethrex 开放一个基于 Glamsterdam 的公开测试网，同时运行 EIP-8141、EIP-8250、EIP-8272、FOCIL 和 VOPS，这些都是隐私路线图背后的 EIP。EIP-8037 合并两处跨帧修复：回滚时按帧起点恢复状态 gas，子帧合并时把状态 gas 还给 `gas_left`。EIP-8130 改名为 Keystore Accounts。Flashbots 表态支持 Hegotá 的 quick slots。",
+  "items": [
+    {
+      "topic": "frame 交易和 EIP-8037 的落地准备",
+      "title": "ethrex：为以太坊隐私路线图背后的 EIP 运行公开测试网",
+      "note": "22:29，构建在 Glamsterdam 之上，运行 EIP-8141（frame 交易）、EIP-8250（keyed nonce）、EIP-8272（recent roots）、EIP-7805（FOCIL）和 EIP-8369（VOPS 档位），实现均为最新。",
+      "url": "https://x.com/ethrex_client/status/2095897077955899638",
+      "date": "2026-09-04",
+      "title_en": "ethrex: a public testnet for the EIPs behind Ethereum's privacy roadmap",
+      "note_en": "22:29, built on Glamsterdam and running EIP-8141 (frame transactions), EIP-8250 (keyed nonces), EIP-8272 (recent roots), EIP-7805 (FOCIL) and EIP-8369 (VOPS profiles), each implementation up to date.",
+      "topic_en": "Getting frame transactions and EIP-8037 ready"
+    },
+    {
+      "topic": "frame 交易和 EIP-8037 的落地准备",
+      "title": "EIP-8037：回滚时恢复帧的状态 gas",
+      "note": "合并（chfast）。原规则说回滚时退还“帧内收取的”状态 gas，但没有计数器记录这个量；PR 引入帧起点储备，使两个计数器相同的帧回滚时不会欠不同的数额。",
+      "url": "https://github.com/ethereum/EIPs/pull/12256",
+      "date": "2026-09-04",
+      "title_en": "EIP-8037: restore a frame's state gas on rollback",
+      "note_en": "Was merged (chfast). The rule said rollbacks refill the state gas \"charged within the frame\", but no counter held that quantity; the PR introduces the frame's starting reservoir so two frames with equal counters cannot revert owing different amounts.",
+      "topic_en": "Getting frame transactions and EIP-8037 ready"
+    },
+    {
+      "topic": "frame 交易和 EIP-8037 的落地准备",
+      "title": "EIP-8037：子帧合并时把状态 gas 还给 gas_left",
+      "note": "合并（chfast）。原理由承诺执行 gas 不会永久困在储备里，但规则做不到：两个兄弟调用（ERC-4337 bundle 的形状）就能让第一笔写新槽从 `gas_left` 溢出 97,920，第二笔清空时退款却进了储备。",
+      "url": "https://github.com/ethereum/EIPs/pull/12265",
+      "date": "2026-09-04",
+      "title_en": "EIP-8037: return state gas to gas_left when a child merges",
+      "note_en": "Was merged (chfast). The rationale promised execution gas would never be stranded in the reservoir, but the rules did not deliver: two sibling calls, the shape of an ERC-4337 bundle, are enough for the first call's write to a fresh slot to spill 97,920 from `gas_left` while the second call's clearing refund lands in the reservoir.",
+      "topic_en": "Getting frame transactions and EIP-8037 ready"
+    },
+    {
+      "topic": "frame 交易和 EIP-8037 的落地准备",
+      "title": "EIP-8037：删除过时的 EIP-7610 冲突规则",
+      "note": "EIP-2780：对齐运行时收费与参考用例 合并，给 7702 委托账户的自转账也收取委托目标访问费，与 EELS 和 geth 一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12296",
+      "date": "2026-09-04",
+      "title_en": "EIP-8037: remove stale EIP-7610 collision rules",
+      "note_en": "EIP-2780: align runtime charging and reference cases, merged, which also charges delegation-target access for self-transfers from 7702-delegated accounts, matching EELS and geth.",
+      "topic_en": "Getting frame transactions and EIP-8037 ready"
+    },
+    {
+      "topic": "frame 交易和 EIP-8037 的落地准备",
+      "title": "EIP-2780：对齐运行时收费与参考用例",
+      "note": "EIP-8037：删除过时的 EIP-7610 冲突规则；EIP-2780：对齐运行时收费与参考用例 合并，给 7702 委托账户的自转账也收取委托目标访问费，与 EELS 和 geth 一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12080",
+      "date": "2026-09-04",
+      "title_en": "EIP-2780: align runtime charging and reference cases",
+      "note_en": "EIP-8037: remove stale EIP-7610 collision rules; EIP-2780: align runtime charging and reference cases, merged, which also charges delegation-target access for self-transfers from 7702-delegated accounts, matching EELS and geth.",
+      "topic_en": "Getting frame transactions and EIP-8037 ready"
+    },
+    {
+      "topic": "frame 交易和 EIP-8037 的落地准备",
+      "title": "EIP-8130：改名为 Keystore Accounts",
+      "note": "合并，原名“通过账户配置实现账户抽象”，规范和线格式不变。",
+      "url": "https://github.com/ethereum/EIPs/pull/12295",
+      "date": "2026-09-04",
+      "title_en": "EIP-8130: rename to Keystore Accounts",
+      "note_en": "Was merged; it was previously \"Account Abstraction by Account Configuration\", with no spec or wire-format changes.",
+      "topic_en": "Getting frame transactions and EIP-8037 ready"
+    },
+    {
+      "topic": "AI 代理签名",
+      "title": "新 ERC：声明式钱包签名策略",
+      "note": "（moodysalem，ERC-8411），提前声明钱包可以不经人工签哪些交易：对每个计划调用、交易信封和请求通道做有序的 `allow`、`review`、`deny` 规则。",
+      "url": "https://github.com/ethereum/ERCs/pull/1994",
+      "date": "2026-09-04",
+      "title_en": "New ERC: declarative wallet signing policy",
+      "note_en": "(moodysalem, ERC-8411), stating in advance which transactions a wallet may sign without asking a human through an ordered list of `allow`, `review` and `deny` rules over each planned call, the transaction envelope and the request channel.",
+      "topic_en": "AI agent signing"
+    },
+    {
+      "topic": "AI 代理签名",
+      "title": "新 ERC：代理钱包执行接口",
+      "note": "（ERC-8412），供 AI 代理、定时任务等无法自己批准的客户端提交和跟踪交易；同批还有 ERC-8410 可移植执行计划。",
+      "url": "https://github.com/ethereum/ERCs/pull/1995",
+      "date": "2026-09-04",
+      "title_en": "New ERC: agent wallet execution interface",
+      "note_en": "(ERC-8412), for AI agents, scheduled jobs and other clients that cannot approve on their own to submit and track transactions; the same batch included ERC-8410 portable execution plan artifact.",
+      "topic_en": "AI agent signing"
+    },
+    {
+      "topic": "AI 代理签名",
+      "title": "ERC-8410 可移植执行计划",
+      "note": "新 ERC：代理钱包执行接口（ERC-8412），供 AI 代理、定时任务等无法自己批准的客户端提交和跟踪交易；同批还有 ERC-8410 可移植执行计划。",
+      "url": "https://ethereum-magicians.org/t/erc-8410-portable-execution-plan-artifact/29587",
+      "date": "2026-09-04",
+      "title_en": "ERC-8410 portable execution plan artifact",
+      "note_en": "New ERC: agent wallet execution interface (ERC-8412), for AI agents, scheduled jobs and other clients that cannot approve on their own to submit and track transactions; the same batch included ERC-8410 portable execution plan artifact.",
+      "topic_en": "AI agent signing"
+    },
+    {
+      "topic": "其他动态",
+      "title": "casparschwa：Flashbots 支持 Hegotá 的 quick slots",
+      "note": "23:01，同时要关注地理去中心化。",
+      "url": "https://x.com/casparschwa/status/2095904983593947526",
+      "date": "2026-09-04",
+      "title_en": "casparschwa: Flashbots supports quick slots for Hegotá",
+      "note_en": "23:01, while keeping a close eye on geographic decentralization.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：Top-up Sync",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12154",
+      "date": "2026-09-04",
+      "title_en": "New EIP: Top-up Sync",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：快速载荷广播的各种方案",
+      "note": "21:30（cskiraly）。",
+      "url": "https://ethresear.ch/t/wen-fast-payload-broadcast-segment-code-push-pull-and-everything-in-between/25913",
+      "date": "2026-09-04",
+      "title_en": "ethresear.ch: approaches to fast payload broadcast",
+      "note_en": "21:30 (cskiraly).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：新结果若正确，基本验证了 STARK 可靠性约等于容量这一长期猜想",
+      "note": "17:11。",
+      "url": "https://x.com/EliBenSasson/status/2095817007190901169",
+      "date": "2026-09-04",
+      "title_en": "Eli Ben-Sasson: if correct, a new result roughly validates the long-held conjecture that STARK soundness is about that of capacity",
+      "note_en": "17:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Derek Chiang：L2 的出现并非源于自上而下的路线图",
+      "note": "01:04；Julian Ma：rollup 是以太坊的分发引擎，但也不该假装扩张中没有问题 01:20。",
+      "url": "https://x.com/decentrek/status/2095573555643867328",
+      "date": "2026-09-04",
+      "title_en": "Derek Chiang: L2s did not come from a top-down roadmap",
+      "note_en": "01:04; Julian Ma: rollups are Ethereum's distribution engines, but we shouldn't pretend there were no problems with the build-out, 01:20.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Julian Ma：rollup 是以太坊的分发引擎，但也不该假装扩张中没有问题",
+      "note": "Derek Chiang：L2 的出现并非源于自上而下的路线图 01:04；Julian Ma：rollup 是以太坊的分发引擎，但也不该假装扩张中没有问题 01:20。",
+      "url": "https://x.com/_julianma/status/2095577692150337833",
+      "date": "2026-09-04",
+      "title_en": "Julian Ma: rollups are Ethereum's distribution engines, but we shouldn't pretend there were no problems with the build-out",
+      "note_en": "Derek Chiang: L2s did not come from a top-down roadmap, 01:04; Julian Ma: rollups are Ethereum's distribution engines, but we shouldn't pretend there were no problems with the build-out, 01:20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12265",
+    "credit": "GitHub, ethereum/EIPs PR #12265",
+    "local_path": "assets/2026-09-04.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12265"
+  },
+  "keywords_en": [
+    "ethrex privacy roadmap testnet",
+    "EIP-8037 cross-frame state gas fixes",
+    "EIP-8130 renamed Keystore Accounts",
+    "AI agent wallet ERCs",
+    "quick slots"
+  ],
+  "summary_en": "ethrex opened a public testnet built on Glamsterdam that runs EIP-8141, EIP-8250, EIP-8272, FOCIL and VOPS together, the EIPs behind the privacy roadmap. EIP-8037 merged two cross-frame fixes: rollbacks restore state gas relative to the frame's starting point, and merging child frames returns state gas to `gas_left`. EIP-8130 was renamed Keystore Accounts. Flashbots came out in support of quick slots for Hegotá."
+}

@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-17",
+  "keywords": [
+    "Glamsterdam Sepolia 10 月 6 日激活",
+    "EIP-8037 与 EIP-8038 重定价",
+    "ACDC #187",
+    "Hoodi 目标 10 月 27 日",
+    "Ethlabs quick slots 长文",
+    "EIP-8411 分段载荷扩散"
+  ],
+  "summary": "EF 博客正式公布 Glamsterdam 测试网时间：Sepolia 在 10 月 6 日 13:53:36 UTC（曼谷 20:53）激活，Hoodi 和主网未定。公告提醒应用开发者用新规则测试合约和 gas 估算，依赖固定 gas 补贴、硬编码 gas 上限或剩余 gas 假设的合约可能要改。晚上 ACDC #187 确认 Sepolia 日期，Hoodi 目标 10 月 27 日，EIP-8015 进入 CFI，EIP-8411 被提议纳入。Ethlabs 发布关于更快 L1 出块的长文。",
+  "items": [
+    {
+      "topic": "Glamsterdam 上测试网",
+      "title": "EF 博客：Glamsterdam 测试网公告",
+      "note": "Sepolia 在 epoch 353,024、slot 11,296,768（10 月 6 日 13:53:36 UTC）激活；Hoodi 和主网未定。头条是 ePBS（EIP-7732）和区块级访问列表（EIP-7928）。gas 方面，EIP-8037 提高并单独计量创建状态的成本，EIP-8038 更新状态访问成本，另有固有交易 gas（EIP-2780）、calldata、访问列表和无退款的区块 gas 记账（EIP-7778）等变化。公告提醒：依赖固定 gas 补贴、硬编码 gas 上限或剩余 gas 假设的合约可能需要修改，并附重定价影响指南。",
+      "url": "https://blog.ethereum.org/en/2026/09/17/glamsterdam-testnet-announcement",
+      "date": "2026-09-17",
+      "title_en": "EF blog: Glamsterdam testnet announcement",
+      "note_en": ". Sepolia activates at epoch 353,024, slot 11,296,768 (October 6, 13:53:36 UTC); Hoodi and mainnet are undecided. The headliners are ePBS (EIP-7732) and block-level access lists (EIP-7928). On gas, EIP-8037 raises and separately meters the cost of creating state and EIP-8038 updates state access costs, alongside changes to intrinsic transaction gas (EIP-2780), calldata, access lists and block gas accounting without refunds (EIP-7778). The announcement warns that contracts relying on fixed gas stipends, hardcoded gas limits or remaining-gas assumptions may need changes, and links a repricing impact guide.",
+      "topic_en": "Glamsterdam heads to testnets"
+    },
+    {
+      "topic": "Glamsterdam 上测试网",
+      "title": "EIP-8365：BLS 提款凭证退役",
+      "note": "合并为草案，提议退役 0x00 提款凭证类型。",
+      "url": "https://github.com/ethereum/EIPs/pull/12097",
+      "date": "2026-09-17",
+      "title_en": "EIP-8365: BLS withdrawal credential retirement",
+      "note_en": "Was merged as a draft, proposing to retire the 0x00 withdrawal credential type.",
+      "topic_en": "Glamsterdam heads to testnets"
+    },
+    {
+      "topic": "更快的出块",
+      "title": "barnabemonnot：Ethlabs 经一个月社区走访，发布关于更快 L1 出块的长文",
+      "note": "20:21；binji：通过 Ethlabs 账号发布一篇花了很多功夫的文章 16:51；Derek Chiang：两人没有空谈，而是认真论证 quick slots（EIP-8198） 21:00。",
+      "url": "https://x.com/barnabemonnot/status/2100575903461839032",
+      "date": "2026-09-17",
+      "title_en": "barnabemonnot: after a month of outreach, Ethlabs ships a major piece on faster L1 blocks",
+      "note_en": "20:21; binji: publishing an article that took a lot of work via the Ethlabs account, 16:51; Derek Chiang: the two did not handwave but made a careful case for quick slots (EIP-8198), 21:00.",
+      "topic_en": "Faster blocks"
+    },
+    {
+      "topic": "更快的出块",
+      "title": "binji：通过 Ethlabs 账号发布一篇花了很多功夫的文章",
+      "note": "barnabemonnot：Ethlabs 经一个月社区走访，发布关于更快 L1 出块的长文 20:21；binji：通过 Ethlabs 账号发布一篇花了很多功夫的文章 16:51；Derek Chiang：两人没有空谈，而是认真论证 quick slots（EIP-8198） 21:00。",
+      "url": "https://x.com/binji_x/status/2100523127864275047",
+      "date": "2026-09-17",
+      "title_en": "binji: publishing an article that took a lot of work via the Ethlabs account",
+      "note_en": "Barnabemonnot: after a month of outreach, Ethlabs ships a major piece on faster L1 blocks, 20:21; binji: publishing an article that took a lot of work via the Ethlabs account, 16:51; Derek Chiang: the two did not handwave but made a careful case for quick slots (EIP-8198), 21:00.",
+      "topic_en": "Faster blocks"
+    },
+    {
+      "topic": "更快的出块",
+      "title": "Derek Chiang：两人没有空谈，而是认真论证 quick slots（EIP-8198）",
+      "note": "barnabemonnot：Ethlabs 经一个月社区走访，发布关于更快 L1 出块的长文 20:21；binji：通过 Ethlabs 账号发布一篇花了很多功夫的文章 16:51；Derek Chiang：两人没有空谈，而是认真论证 quick slots（EIP-8198） 21:00。",
+      "url": "https://x.com/decentrek/status/2100585746340147342",
+      "date": "2026-09-17",
+      "title_en": "Derek Chiang: the two did not handwave but made a careful case for quick slots (EIP-8198)",
+      "note_en": "Barnabemonnot: after a month of outreach, Ethlabs ships a major piece on faster L1 blocks, 20:21; binji: publishing an article that took a lot of work via the Ethlabs account, 16:51; Derek Chiang: the two did not handwave but made a careful case for quick slots (EIP-8198), 21:00.",
+      "topic_en": "Faster blocks"
+    },
+    {
+      "topic": "更快的出块",
+      "title": "Julian Ma：快速确认能加速 L1 到 L2 存款，ZK 证明能加速 L2 到 L1 提款，但槽时间是影响一切的最小时间单位",
+      "note": "20:14。",
+      "url": "https://x.com/_julianma/status/2100574109482557865",
+      "date": "2026-09-17",
+      "title_en": "Julian Ma: fast confirmations can speed up L1-to-L2 deposits and ZK proofs can speed up L2-to-L1 withdrawals, but slot time is the smallest unit of time affecting everything",
+      "note_en": "20:14.",
+      "topic_en": "Faster blocks"
+    },
+    {
+      "topic": "更快的出块",
+      "title": "ethresear.ch：EIP-8411 分段载荷扩散由什么构成",
+      "note": "10:41（cskiraly）。载荷传播今天够快，主要因为区块小以及数据中心构建者和高带宽节点承担了传播；EIP-8411 用消息分段让片段在网络中流水线传播，唯一的共识改动是出价中的 Merkle 树承诺。",
+      "url": "https://ethresear.ch/t/eip-8411-what-segmented-payload-diffusion-is-made-of/26025",
+      "date": "2026-09-17",
+      "title_en": "ethresear.ch: EIP-8411, what segmented payload diffusion is made of",
+      "note_en": "10:41 (cskiraly). Payload propagation is fast enough today largely because blocks are small and datacenter builders and high-bandwidth nodes carry it; EIP-8411 uses message segmentation so pieces pipeline through the network, and the only consensus change is a Merkle tree commitment in the bid.",
+      "topic_en": "Faster blocks"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nero_eth：Glamsterdam 即将到来，对用户的解锁会很大",
+      "note": "00:05。",
+      "url": "https://x.com/nero_eth/status/2100269849784316158",
+      "date": "2026-09-17",
+      "title_en": "nero_eth: Glamsterdam is coming in hot, and the unlock for users will be huge",
+      "note_en": "00:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：让 BAL 保留期与历史过期窗口对齐",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12347",
+      "date": "2026-09-17",
+      "title_en": "EIP-7928: align BAL retention with the history expiry window",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EFDevcon：Justin Drake 将在 Devcon 8 讲后量子以太坊",
+      "note": "21:25。",
+      "url": "https://x.com/EFDevcon/status/2100591856941731945",
+      "date": "2026-09-17",
+      "title_en": "EFDevcon: Justin Drake will speak on post-quantum Ethereum at Devcon 8",
+      "note_en": "21:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：越来越多人认为 AI 黑客意味着网络安全注定失败，他不同意，认为网络安全天然有利于防守方",
+      "note": "04:34。",
+      "url": "https://x.com/VitalikButerin/status/2100337594722890145",
+      "date": "2026-09-17",
+      "title_en": "Vitalik: it is increasingly common to say AI hacking dooms cybersecurity, and he disagrees, arguing cybersecurity is naturally defense-favoring",
+      "note_en": "04:34.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "preston_vanloon：明明可以发 L2 享受以太坊的安全性，为什么要发 PoA L1 EVM 链",
+      "note": "08:20。",
+      "url": "https://x.com/preston_vanloon/status/2100394331290874158",
+      "date": "2026-09-17",
+      "title_en": "preston_vanloon: why launch a proof-of-authority L1 EVM chain when you could launch an L2 with Ethereum's security",
+      "note_en": "08:20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/09/17/glamsterdam-testnet-announcement",
+    "credit": "Ethereum Foundation Blog, Glamsterdam Testnet Announcement",
+    "local_path": "assets/2026-09-17.jpg",
+    "credit_en": "Ethereum Foundation Blog, Glamsterdam Testnet Announcement"
+  },
+  "keywords_en": [
+    "Glamsterdam on Sepolia October 6",
+    "EIP-8037 and EIP-8038 repricing",
+    "ACDC #187",
+    "Hoodi targeting October 27",
+    "Ethlabs quick slots article",
+    "EIP-8411 segmented payload diffusion"
+  ],
+  "summary_en": "The EF blog formally announced the Glamsterdam testnet schedule: Sepolia activates on October 6 at 13:53:36 UTC (20:53 Bangkok), and Hoodi and mainnet are undecided. The announcement told app developers to test contracts and gas estimation against the new rules, since contracts relying on fixed gas stipends, hardcoded gas limits or remaining-gas assumptions may need changes. In the evening ACDC #187 confirmed the Sepolia date, targeted Hoodi for October 27, moved EIP-8015 to CFI and saw EIP-8411 proposed for inclusion. Ethlabs published a long piece on faster L1 blocks."
+}

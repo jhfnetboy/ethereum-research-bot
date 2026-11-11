@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-19",
+  "keywords": [
+    "屏蔽池无 relayer 互惠广播",
+    "EIP-7906 按 topic 值的事件视图",
+    "ERC-8419 了解你的代理",
+    "热钱包摩擦"
+  ],
+  "summary": "周六较安静。ethresear 上有提案用写进 note 承诺里的“角色位”让屏蔽池用户互相代为广播，取代 relayer 市场；文中引用 6 月 Railgun 测量：1,049 笔自行广播的提款通过 gas 付款方与存款人关联，124 个类 relayer 地址承担 89% 的代转量。EIP-7906 提交按 topic 值索引的事件视图（21 日合并），便于按用户身份写交易断言。",
+  "items": [
+    {
+      "topic": "隐私交易的广播与断言",
+      "title": "ethresear.ch：严格角色交替，EVM 屏蔽池的无 relayer 互惠广播",
+      "note": "14:07（atoranzo，仅规范和模拟）。屏蔽池依赖 relayer，因为 `msg.sender` 必须用有资金的透明账户付 gas；文中引用的 Railgun 测量显示，1,049 笔自行广播的提款通过 gas 付款方与存款人关联，124 个类 relayer 地址承担 89% 的代转量。提案在每个 note 的承诺中加入角色位，让用户相互代为广播。",
+      "url": "https://ethresear.ch/t/strict-role-alternation-reciprocal-broadcast-without-relayers-for-evm-shielded-pools-spec-population-simulation-no-code-yet/26051",
+      "date": "2026-09-19",
+      "title_en": "ethresear.ch: strict role alternation, reciprocal broadcast without relayers for EVM shielded pools",
+      "note_en": "14:07 (atoranzo, spec and simulation only). Shielded pools depend on relayers because `msg.sender` must pay gas from a funded transparent account; the cited Railgun measurement shows 1,049 self-broadcast withdrawals linked to their depositor through the gas payer and 124 relayer-like addresses serving 89% of relayed volume. The proposal adds a role bit to each note commitment so users broadcast for one another.",
+      "topic_en": "Broadcasting and asserting private transactions"
+    },
+    {
+      "topic": "隐私交易的广播与断言",
+      "title": "EIP-7906：按 topic 值的事件视图（TXDIFF 0x0B/0x0C）",
+      "note": "（AnkushinDaniil，21 日合并）。保护用户的断言要按用户身份筛选事件，比如所有 `from` 是该用户的 `Transfer`；动态路由下签名时不知道哪些合约会发事件，按发出地址索引就不够用。",
+      "url": "https://github.com/ethereum/EIPs/pull/12358",
+      "date": "2026-09-19",
+      "title_en": "EIP-7906: per-topic-value event views (TXDIFF 0x0B/0x0C)",
+      "note_en": "(AnkushinDaniil, merged on the 21st). An assertion protecting a user filters events by that user's identity, such as every `Transfer` whose `from` is the user; under dynamic routing the emitting contracts are unknown at signing time, so keying by emitter is not enough.",
+      "topic_en": "Broadcasting and asserting private transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8419 了解你的代理（KYA）框架",
+      "note": "09:23，在 ERC-8004 代理身份之上标准化“谁按什么原则核验、达到什么级别、有效期多久”；ERC 草案 PR。ERC：代理记忆状态注册表 合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8419-know-your-agent-kya-framework/29735",
+      "date": "2026-09-19",
+      "title_en": "ERC-8419 Know-Your-Agent (KYA) framework",
+      "note_en": "09:23, standardizing on top of ERC-8004 agent identity who checked an agent under which principle, at what level and until when; draft ERC PR. ERC: agent memory state registry, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC 草案 PR",
+      "note": "ERC-8419 了解你的代理（KYA）框架 09:23，在 ERC-8004 代理身份之上标准化“谁按什么原则核验、达到什么级别、有效期多久”；ERC 草案 PR。ERC：代理记忆状态注册表 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2012",
+      "date": "2026-09-19",
+      "title_en": "draft ERC PR",
+      "note_en": "ERC-8419 Know-Your-Agent (KYA) framework, 09:23, standardizing on top of ERC-8004 agent identity who checked an agent under which principle, at what level and until when; draft ERC PR. ERC: agent memory state registry, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：代理记忆状态注册表",
+      "note": "ERC-8419 了解你的代理（KYA）框架 09:23，在 ERC-8004 代理身份之上标准化“谁按什么原则核验、达到什么级别、有效期多久”；ERC 草案 PR。ERC：代理记忆状态注册表 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1910",
+      "date": "2026-09-19",
+      "title_en": "ERC: agent memory state registry",
+      "note_en": "ERC-8419 Know-Your-Agent (KYA) framework, 09:23, standardizing on top of ERC-8004 agent identity who checked an agent under which principle, at what level and until when; draft ERC PR. ERC: agent memory state registry, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：所有资产共用同一隐私池，支持私密兑换、质押和收益",
+      "note": "17:20。",
+      "url": "https://x.com/StarkWareLtd/status/2101255069123625356",
+      "date": "2026-09-19",
+      "title_en": "StarkWare: one privacy pool for every asset, with private swaps, staking and yield",
+      "note_en": "17:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fradamt：2027 年的以太坊会几乎认不出来，高吞吐、原生 AA、接近原生的隐私",
+      "note": "17:46。",
+      "url": "https://x.com/fradamt/status/2101261731708235819",
+      "date": "2026-09-19",
+      "title_en": "fradamt: Ethereum in 2027 will be almost unrecognizable, with high throughput, native AA and near-native privacy",
+      "note_en": "17:46.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：自托管软件钱包应给创建热钱包加最大摩擦，把用户推向硬件钱包",
+      "note": "18:11。",
+      "url": "https://x.com/pcaversaccio/status/2101267883946897684",
+      "date": "2026-09-19",
+      "title_en": "pcaversaccio: self-custodial software wallets should add maximum friction to creating hot wallets and push users toward hardware wallets",
+      "note_en": "18:11.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：d/acc 核心论点的一个小例子，改进被动防御技术同时提升安全和自由",
+      "note": "04:55。",
+      "url": "https://x.com/VitalikButerin/status/2101067602198138908",
+      "date": "2026-09-19",
+      "title_en": "Vitalik: a small example of the core d/acc thesis, where better passive defensive technology improves both safety and freedom",
+      "note_en": "04:55.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/strict-role-alternation-reciprocal-broadcast-without-relayers-for-evm-shielded-pools-spec-population-simulation-no-code-yet/26051",
+    "credit": "ethresear.ch, Strict role alternation: reciprocal broadcast without relayers for EVM shielded pools",
+    "local_path": "assets/2026-09-19.jpg",
+    "credit_en": "ethresear.ch, Strict role alternation: reciprocal broadcast without relayers for EVM shielded pools"
+  },
+  "keywords_en": [
+    "relayer-free reciprocal broadcast for shielded pools",
+    "EIP-7906 per-topic-value event views",
+    "ERC-8419 Know Your Agent",
+    "hot wallet friction"
+  ],
+  "summary_en": "A quiet Saturday. An ethresear proposal uses a \"role bit\" inside each note commitment so shielded pool users broadcast for one another, replacing the relayer market; it cites a June Railgun measurement where 1,049 self-broadcast withdrawals were linked to their depositor through the gas payer and 124 relayer-like addresses served 89% of relayed volume. EIP-7906 submitted event views keyed by topic value (merged on the 21st), making it easier to write transaction assertions by user identity."
+}

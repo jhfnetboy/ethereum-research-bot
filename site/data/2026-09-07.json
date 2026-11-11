@@ -1,0 +1,188 @@
+{
+  "date": "2026-09-07",
+  "keywords": [
+    "EF Protocol Hegotá 分级榜",
+    "FOCIL 与 frame 交易 S 级",
+    "EIP-8272 验证 gas 计入上限",
+    "EIP-8037 预执行状态 gas",
+    "Hegotá 重定价",
+    "ACDT #95"
+  ],
+  "summary": "EF Protocol 集群发布 Hegotá 分级榜，对 62 个提案 EIP 统一评级，FOCIL 和 frame 交易（EIP-8141）为 S 级必发，keyed nonce、recent roots 等为 A 级。EIP-8272 合并改动，把 recent root 验证帧的执行 gas 计入 `MAX_VERIFY_GAS`。EIP-8037 修复顶层回滚时把预执行状态 gas 错误退回的问题。misilva73 发帖梳理 Hegotá 的 10 多个重定价 EIP。",
+  "items": [
+    {
+      "topic": "Hegotá 的优先级",
+      "title": "EF Protocol 集群发布两篇文章",
+      "note": "21:57：Hegotá EIP 观点与分级榜 和 当前与新兴优先事项。约 60 人、16 份意见，对 62 个 EIP 给出 397 个评级（S=4 到 D=0）。EIP-8141 被称为“锁定的 EL 头条”，理由是安全：无需每种方案都分叉就能走向 PQ 签名、可聚合以合理定价 PQ 验证、并逐步淘汰 k1 密钥，与 EIP-8250、EIP-8272 一起发布。FOCIL 为锁定的 CL 头条，应与 EIP-8369 一起发布。",
+      "url": "https://x.com/ethereumfndn/status/2096976125511541198",
+      "date": "2026-09-07",
+      "title_en": "The EF Protocol cluster published two posts",
+      "note_en": "21:57: the Hegotá EIP opinion post and tier list and current and emerging priorities. About 60 people and 16 contributions produced 397 grades across 62 EIPs (S = 4 down to D = 0). EIP-8141 is called the \"locked-in EL headliner\" on security grounds: a path to PQ signature schemes without a fork per scheme, aggregation so PQ verification can be priced, and a route to retiring k1 keys; it ships with EIP-8250 and EIP-8272. FOCIL is the locked-in CL headliner and should ship with EIP-8369.",
+      "topic_en": "Hegotá priorities"
+    },
+    {
+      "topic": "Hegotá 的优先级",
+      "title": "Hegotá EIP 观点与分级榜",
+      "note": "EF Protocol 集群发布两篇文章 21:57：Hegotá EIP 观点与分级榜 和 当前与新兴优先事项。约 60 人、16 份意见，对 62 个 EIP 给出 397 个评级（S=4 到 D=0）。EIP-8141 被称为“锁定的 EL 头条”，理由是安全：无需每种方案都分叉就能走向 PQ 签名、可聚合以合理定价 PQ 验证、并逐步淘汰 k1 密钥，与 EIP-8250、EIP-8272 一起发布。FOCIL 为锁定的 CL 头条，应与 EIP-8369 一起发布。",
+      "url": "https://blog.ethereum.org/en/2026/09/07/protocol-hegota-eips",
+      "date": "2026-09-07",
+      "title_en": "Hegotá EIP opinion post and tier list",
+      "note_en": "The EF Protocol cluster published two posts, 21:57: the Hegotá EIP opinion post and tier list and current and emerging priorities. About 60 people and 16 contributions produced 397 grades across 62 EIPs (S = 4 down to D = 0). EIP-8141 is called the \"locked-in EL headliner\" on security grounds: a path to PQ signature schemes without a fork per scheme, aggregation so PQ verification can be priced, and a route to retiring k1 keys; it ships with EIP-8250 and EIP-8272. FOCIL is the locked-in CL headliner and should ship with EIP-8369.",
+      "topic_en": "Hegotá priorities"
+    },
+    {
+      "topic": "Hegotá 的优先级",
+      "title": "当前与新兴优先事项",
+      "note": "EF Protocol 集群发布两篇文章 21:57：Hegotá EIP 观点与分级榜 和 当前与新兴优先事项。约 60 人、16 份意见，对 62 个 EIP 给出 397 个评级（S=4 到 D=0）。EIP-8141 被称为“锁定的 EL 头条”，理由是安全：无需每种方案都分叉就能走向 PQ 签名、可聚合以合理定价 PQ 验证、并逐步淘汰 k1 密钥，与 EIP-8250、EIP-8272 一起发布。FOCIL 为锁定的 CL 头条，应与 EIP-8369 一起发布。",
+      "url": "https://blog.ethereum.org/en/2026/09/07/protocol-priorities",
+      "date": "2026-09-07",
+      "title_en": "current and emerging priorities",
+      "note_en": "The EF Protocol cluster published two posts, 21:57: the Hegotá EIP opinion post and tier list and current and emerging priorities. About 60 people and 16 contributions produced 397 grades across 62 EIPs (S = 4 down to D = 0). EIP-8141 is called the \"locked-in EL headliner\" on security grounds: a path to PQ signature schemes without a fork per scheme, aggregation so PQ verification can be priced, and a route to retiring k1 keys; it ships with EIP-8250 and EIP-8272. FOCIL is the locked-in CL headliner and should ship with EIP-8369.",
+      "topic_en": "Hegotá priorities"
+    },
+    {
+      "topic": "Hegotá 的优先级",
+      "title": "soispoke 的分级速查",
+      "note": "22:03；nero_eth：未来几周要决定 Hegotá 发什么，原生隐私是 8141、8250、8272 的组合 13:42。",
+      "url": "https://x.com/soispoke/status/2096977735381889164",
+      "date": "2026-09-07",
+      "title_en": "soispoke's tier list cheat sheet",
+      "note_en": "22:03; nero_eth: in the coming weeks we decide what ships in Hegotá, and native privacy is the bundle of 8141, 8250 and 8272, 13:42.",
+      "topic_en": "Hegotá priorities"
+    },
+    {
+      "topic": "Hegotá 的优先级",
+      "title": "nero_eth：未来几周要决定 Hegotá 发什么，原生隐私是 8141、8250、8272 的组合",
+      "note": "soispoke 的分级速查 22:03；nero_eth：未来几周要决定 Hegotá 发什么，原生隐私是 8141、8250、8272 的组合 13:42。",
+      "url": "https://x.com/nero_eth/status/2096851469580275926",
+      "date": "2026-09-07",
+      "title_en": "nero_eth: in the coming weeks we decide what ships in Hegotá, and native privacy is the bundle of 8141, 8250 and 8272",
+      "note_en": "Soispoke's tier list cheat sheet, 22:03; nero_eth: in the coming weeks we decide what ships in Hegotá, and native privacy is the bundle of 8141, 8250 and 8272, 13:42.",
+      "topic_en": "Hegotá priorities"
+    },
+    {
+      "topic": "Hegotá 的优先级",
+      "title": "ethresear.ch：Hegotá 应如何对待 gas 重定价",
+      "note": "17:54（misilva73），基于上次分叉经验给 10 多个重定价 EIP 一个有观点的梳理，提醒兼容性风险。",
+      "url": "https://ethresear.ch/t/how-hegota-should-approach-gas-repricing/25935",
+      "date": "2026-09-07",
+      "title_en": "ethresear.ch: how Hegotá should approach gas repricing",
+      "note_en": "17:54 (misilva73), an opinionated overview of the 10+ repricing EIPs based on the last fork, warning about compatibility risks.",
+      "topic_en": "Hegotá priorities"
+    },
+    {
+      "topic": "frame 交易的验证与状态 gas 细节",
+      "title": "EIP-8272：计入 recent root 验证 gas",
+      "note": "（soispoke）合并。此前验证帧不计入 EIP-8141 的 `MAX_VERIFY_GAS`，现在它的 `limits.execution` 与签名验证和验证前缀里其他帧一起计入同一上限，不新增额度。",
+      "url": "https://github.com/ethereum/EIPs/pull/12302",
+      "date": "2026-09-07",
+      "title_en": "EIP-8272: count recent root verification gas",
+      "note_en": "(soispoke) was merged. The verifier frame was excluded from EIP-8141's `MAX_VERIFY_GAS`; now its `limits.execution` counts toward the same cap as signature verification and the other frames in the validation prefix, with no separate allowance.",
+      "topic_en": "Validation and state gas details for frame transactions"
+    },
+    {
+      "topic": "frame 交易的验证与状态 gas 细节",
+      "title": "EIP-8037：预执行状态 gas 不参与帧回滚",
+      "note": "（chfast，9 月 14 日合并）。上周的回滚修复只覆盖储备，顶层回滚会把预执行收费退回 `gas_left`，而它付费的状态仍然写入；例如一笔带一个 EIP-7702 授权的交易，整笔 `STATE_BYTES_PER_AUTH_BASE` 被退回但委托仍生效。",
+      "url": "https://github.com/ethereum/EIPs/pull/12303",
+      "date": "2026-09-07",
+      "title_en": "EIP-8037: keep pre-execution state gas out of the frame rollback",
+      "note_en": "(chfast, merged September 14). Last week's rollback fix covered only the reservoir, so a top-level rollback credited a pre-execution charge back to `gas_left` while the state it paid for stayed written; for a transaction with one EIP-7702 authorization the whole `STATE_BYTES_PER_AUTH_BASE` charge was refilled though the delegation stayed applied.",
+      "topic_en": "Validation and state gas details for frame transactions"
+    },
+    {
+      "topic": "frame 交易的验证与状态 gas 细节",
+      "title": "EIP-7906：增加 frame 豁免标志",
+      "note": "让 `DEFAULT`、`SENDER` 帧的写入在 `POST_TX` 回滚时保留，例子包括代付方还款。",
+      "url": "https://github.com/ethereum/EIPs/pull/12304",
+      "date": "2026-09-07",
+      "title_en": "EIP-7906: add a frame exemption flag",
+      "note_en": "Letting writes from `DEFAULT` and `SENDER` frames survive a `POST_TX` revert, with examples including fee-payer repayment.",
+      "topic_en": "Validation and state gas details for frame transactions"
+    },
+    {
+      "topic": "frame 交易的验证与状态 gas 细节",
+      "title": "ethresear.ch：以顺序依赖作为 frame 交易内存池准入的分类维度",
+      "note": "17:49（AnkushinDaniil）。",
+      "url": "https://ethresear.ch/t/order-dependence-as-the-classifying-dimension-for-frame-transaction-mempool-admission/25934",
+      "date": "2026-09-07",
+      "title_en": "ethresear.ch: order-dependence as the classifying dimension for frame-transaction mempool admission",
+      "note_en": "17:49 (AnkushinDaniil).",
+      "topic_en": "Validation and state gas details for frame transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "soispoke：原生隐私测试网是重要里程碑，已在上面发送私密交易",
+      "note": "19:11。",
+      "url": "https://x.com/soispoke/status/2096934480837505044",
+      "date": "2026-09-07",
+      "title_en": "soispoke: the native privacy testnet is a big milestone, and private transactions have already been sent on it",
+      "note_en": "19:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "potuz：devnet 8 上 67% 的区块缺失，链仍在正常最终确认",
+      "note": "01:57。",
+      "url": "https://x.com/potuz_eth/status/2096674099875529018",
+      "date": "2026-09-07",
+      "title_en": "potuz: with 67% of blocks missing on devnet 8, the chain is still happily finalizing",
+      "note_en": "01:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8411 快速执行载荷广播讨论帖",
+      "note": "14:56。",
+      "url": "https://ethereum-magicians.org/t/eip-8411-fast-execution-payload-broadcast/29613",
+      "date": "2026-09-07",
+      "title_en": "EIP-8411 fast execution payload broadcast discussion thread",
+      "note_en": "14:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet 上已屏蔽价值 100 万美元、45 种代币的资产",
+      "note": "17:56。",
+      "url": "https://x.com/StarkWareLtd/status/2096915397861875736",
+      "date": "2026-09-07",
+      "title_en": "StarkWare: $1M of assets across 45 tokens are now shielded on Starknet",
+      "note_en": "17:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：比特币生态在安全、赏金和白帽协作上落后其他生态 4 到 5 年",
+      "note": "05:28。",
+      "url": "https://x.com/tayvano_/status/2096727378852753735",
+      "date": "2026-09-07",
+      "title_en": "tayvano: Bitcoin is 4 to 5 years behind the rest of the ecosystem on security, bounties and working with white hats",
+      "note_en": "05:28.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：5 年后每个加密项目的基线是隐私和后量子安全",
+      "note": "12:38。",
+      "url": "https://x.com/EliBenSasson/status/2096835563097669756",
+      "date": "2026-09-07",
+      "title_en": "Eli Ben-Sasson: in 5 years the baseline for every crypto project will be privacy and post-quantum security",
+      "note_en": "12:38.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/09/07/protocol-hegota-eips",
+    "credit": "Ethereum Foundation Blog, Hegotá EIP Opinion Post and Tier List",
+    "credit_en": "Ethereum Foundation Blog, Hegotá EIP Opinion Post and Tier List"
+  },
+  "keywords_en": [
+    "EF Protocol Hegotá tier list",
+    "FOCIL and frame transactions in S tier",
+    "EIP-8272 verification gas counted toward the cap",
+    "EIP-8037 pre-execution state gas",
+    "Hegotá repricing",
+    "ACDT #95"
+  ],
+  "summary_en": "The EF Protocol cluster published its Hegotá tier list, grading all 62 proposed EIPs in one view: FOCIL and frame transactions (EIP-8141) are S tier, must ship, and keyed nonces, recent roots and others are A tier. EIP-8272 merged a change counting the recent root verifier frame's execution gas toward `MAX_VERIFY_GAS`. EIP-8037 fixed top-level rollbacks wrongly refunding pre-execution state gas. misilva73 posted an overview of Hegotá's 10+ repricing EIPs."
+}

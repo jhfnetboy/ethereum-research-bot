@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-21",
+  "keywords": [
+    "EIP-8250 验证前缀恢复不得回滚批准",
+    "L2BEAT 隐私对手模型",
+    "Etheorem Lean 4 共识规范",
+    "Glamsterdam 后一维费用市场",
+    "ACDT #97"
+  ],
+  "summary": "EIP-8250 合并一项安全修正：`POST_TX` 断言失败时会恢复验证前缀并丢弃交易主体，但交易仍有效并被打包，这种情况下付款范围的 `APPROVE` 效果也不得回滚，以保证 nonce 只花一次。L2BEAT 上线新功能，针对 5 种对手评估每个隐私协议“对谁私密”。Etheorem 的 Lean 4 共识规范已通过 Fulu、Gloas、Heze 三个分叉的 pyspec 测试向量。",
+  "items": [
+    {
+      "topic": "frame 交易的 nonce 一次性保证",
+      "title": "EIP-8250：验证前缀恢复时不得回滚批准效果",
+      "note": "（AnkushinDaniil）合并。nonce 消耗一节列出了不得回滚付款范围 `APPROVE` 效果的情况：后续帧回滚、跳过后续帧、恢复原子批量快照，但没有提到 `POST_TX` 断言失败时的验证前缀恢复。这种恢复会丢弃交易主体，但交易仍有效并被打包。PR 把这一情况加入 MUST NOT 清单。",
+      "url": "https://github.com/ethereum/EIPs/pull/12266",
+      "date": "2026-09-21",
+      "title_en": "EIP-8250: forbid reverting approval effects on validation-prefix restore",
+      "note_en": "(AnkushinDaniil) was merged. The nonce consumption section lists the rollbacks that must not revert a payment-scoped `APPROVE`'s effects: a later frame revert, skipping later frames and restoring an atomic-batch snapshot, but not the validation-prefix restore a `POST_TX` assertion failure performs, which discards the transaction body while keeping the transaction valid and included. The PR adds that case to the MUST NOT list.",
+      "topic_en": "The spent-once guarantee for frame transaction nonces"
+    },
+    {
+      "topic": "frame 交易的 nonce 一次性保证",
+      "title": "EIP-7906：按 topic 值的事件视图",
+      "note": "今日合并（19 日提交）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12358",
+      "date": "2026-09-21",
+      "title_en": "EIP-7906: per-topic-value event views",
+      "note_en": "Was merged today (submitted on the 19th).",
+      "topic_en": "The spent-once guarantee for frame transaction nonces"
+    },
+    {
+      "topic": "隐私与形式化",
+      "title": "ethbeat：L2BEAT 新功能，针对 5 种对手回答每个隐私协议“对谁私密”",
+      "note": "22:11。",
+      "url": "https://x.com/ethbeat_org/status/2102053042803605760",
+      "date": "2026-09-21",
+      "title_en": "ethbeat: a new L2BEAT feature answers \"private from whom\" for every privacy protocol against 5 adversaries",
+      "note_en": "22:11.",
+      "topic_en": "Privacy and formal methods"
+    },
+    {
+      "topic": "隐私与形式化",
+      "title": "ethresear.ch：Etheorem 进展，完整可执行的 Lean 4 共识规范",
+      "note": "19:51（leolara），状态转换、分叉选择和建模的容器在 Fulu、Gloas、Heze 三个分叉上通过所有 pyspec 向量，含 mainnet 和 minimal 两种预设。",
+      "url": "https://ethresear.ch/t/etheorem-update-the-complete-executable-consensus-specs-written-in-lean-4/26063",
+      "date": "2026-09-21",
+      "title_en": "ethresear.ch: Etheorem update, the complete executable consensus specs in Lean 4",
+      "note_en": "19:51 (leolara); the state transition, fork choice and modeled containers pass all pyspec vectors on Fulu, Gloas and Heze, for both the mainnet and minimal presets.",
+      "topic_en": "Privacy and formal methods"
+    },
+    {
+      "topic": "隐私与形式化",
+      "title": "ethresear.ch：Glamsterdam 后的一维费用市场与 EIP-7999 比较",
+      "note": "17:40。",
+      "url": "https://ethresear.ch/t/post-glamsterdam-one-dimensional-fee-market-and-comparison-with-eip-7999/26062",
+      "date": "2026-09-21",
+      "title_en": "ethresear.ch: post-Glamsterdam one-dimensional fee market and comparison with EIP-7999",
+      "note_en": "17:40.",
+      "topic_en": "Privacy and formal methods"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethlabs_org：第 13 周有 20 多个团队分享为什么需要更快的 L1，并研究将最终性时间缩短一半以上的可能",
+      "note": "01:10。",
+      "url": "https://x.com/ethlabs_org/status/2101735860282532180",
+      "date": "2026-09-21",
+      "title_en": "ethlabs_org: week 13 brought 20+ teams explaining why a faster L1 matters and research into cutting finality times by more than half",
+      "note_en": "01:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：STRK20 黑客松 200 多个隐私项目，公布三名获胜者",
+      "note": "21:47。",
+      "url": "https://x.com/StarkWareLtd/status/2102047013122785723",
+      "date": "2026-09-21",
+      "title_en": "StarkWare: 200+ privacy projects in the STRK20 hackathon, with three winners announced",
+      "note_en": "21:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zksecurity：Clean 的形式化验证入门",
+      "note": "22:56。",
+      "url": "https://x.com/zksecurityXYZ/status/2102064343844045110",
+      "date": "2026-09-21",
+      "title_en": "zksecurity: Clean's introduction to formal verification",
+      "note_en": "22:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Base 链标识示例",
+      "note": "ERC-8048 合并两项修订：Base 链标识示例、metadata_contract 为普通 EVM 地址。",
+      "url": "https://github.com/ethereum/ERCs/pull/2015",
+      "date": "2026-09-21",
+      "title_en": "the Base chain identifier example",
+      "note_en": "ERC-8048 merged two revisions: the Base chain identifier example and metadata_contract as a plain EVM address.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "metadata_contract 为普通 EVM 地址",
+      "note": "ERC-8048 合并两项修订：Base 链标识示例、metadata_contract 为普通 EVM 地址。",
+      "url": "https://github.com/ethereum/ERCs/pull/2016",
+      "date": "2026-09-21",
+      "title_en": "metadata_contract as a plain EVM address",
+      "note_en": "ERC-8048 merged two revisions: the Base chain identifier example and metadata_contract as a plain EVM address.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "barnabemonnot：可验证性是公链最被低估的属性",
+      "note": "13:56。",
+      "url": "https://x.com/barnabemonnot/status/2101928462638268576",
+      "date": "2026-09-21",
+      "title_en": "barnabemonnot: verifiability is the most underrated property of truly public blockchains",
+      "note_en": "13:56.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12266",
+    "credit": "GitHub, ethereum/EIPs PR #12266",
+    "local_path": "assets/2026-09-21.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12266"
+  },
+  "keywords_en": [
+    "EIP-8250 validation-prefix restore must not revert approval",
+    "L2BEAT privacy adversary model",
+    "Etheorem Lean 4 consensus specs",
+    "post-Glamsterdam one-dimensional fee market",
+    "ACDT #97"
+  ],
+  "summary_en": "EIP-8250 merged a safety fix: when a `POST_TX` assertion fails, the validation prefix is restored and the transaction body discarded, but the transaction stays valid and included, and in that case the effects of a payment-scoped `APPROVE` must not be reverted either, so the nonce is spent only once. L2BEAT launched a feature assessing \"private from whom\" for each privacy protocol against 5 adversaries. Etheorem's Lean 4 consensus specs now pass the pyspec vectors on three forks, Fulu, Gloas and Heze."
+}

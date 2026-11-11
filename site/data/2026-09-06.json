@@ -1,0 +1,147 @@
+{
+  "date": "2026-09-06",
+  "keywords": [
+    "EIP-8141 设计突破",
+    "MAX_VERIFY_GAS 共享内存池下限",
+    "交易格式",
+    "Poseidon",
+    "Egyptian God Protocols"
+  ],
+  "summary": "Vitalik 推荐阅读 frame 交易（EIP-8141）近几个月的进展和更新后的 EIP，称很多重要进展在悄悄发生；Derek Chiang 说作者们最近取得设计突破，原以为必须放进交易信封的东西可以不放。同日有 PR 提议把 `MAX_VERIFY_GAS` 定义为共享的内存池下限，而不是单节点上限。",
+  "items": [
+    {
+      "topic": "EIP-8141 的进展",
+      "title": "Vitalik：过去几个月 frame 交易有很多重要进展在悄悄发生",
+      "note": "05:49，推荐阅读相关文章和更新后的 EIP。",
+      "url": "https://x.com/VitalikButerin/status/2096370186094076098",
+      "date": "2026-09-06",
+      "title_en": "Vitalik: a lot of important progress on frames has been quietly happening over the last few months",
+      "note_en": "05:49, recommending the write-up and the updated EIP.",
+      "topic_en": "Progress on EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的进展",
+      "title": "Vitalik：对交易格式的细致思考带来的好处",
+      "note": "06:20，不只 8141，还有 UTXO、PBT、keyed nonce、递归 STARK 内存池等“状态的未来”讨论。",
+      "url": "https://x.com/VitalikButerin/status/2096378061377900881",
+      "date": "2026-09-06",
+      "title_en": "Vitalik: a positive consequence of the detailed thinking about transaction formats",
+      "note_en": "06:20, not just 8141 but also \"future of state\" discussions such as UTXOs, PBT, keyed nonces and the recursive STARK mempool.",
+      "topic_en": "Progress on EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的进展",
+      "title": "Derek Chiang：作者们最近取得设计突破",
+      "note": "20:12，发现以前以为必须放进交易信封的东西其实不必。",
+      "url": "https://x.com/decentrek/status/2096587220195192981",
+      "date": "2026-09-06",
+      "title_en": "Derek Chiang: the 8141 authors recently achieved a design breakthrough",
+      "note_en": "20:12, realizing that things they thought had to be in the transaction envelope did not.",
+      "topic_en": "Progress on EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的进展",
+      "title": "nero_eth：frame 交易让用户自选签名方案，如 passkey、后量子，支持签名聚合、密钥轮换和原子批量",
+      "note": "12:10；soispoke：frame 建立在十年原生 AA 工作之上，是走向隐私的垫脚石 20:41。",
+      "url": "https://x.com/nero_eth/status/2096466132785856933",
+      "date": "2026-09-06",
+      "title_en": "nero_eth: frame transactions let users choose their signature scheme, such as passkeys or post-quantum, and enable signature aggregation, key rotation and atomic batching",
+      "note_en": "12:10; soispoke: frames build on a decade of native AA work and are the stepping stone to privacy, 20:41.",
+      "topic_en": "Progress on EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的进展",
+      "title": "soispoke：frame 建立在十年原生 AA 工作之上，是走向隐私的垫脚石",
+      "note": "nero_eth：frame 交易让用户自选签名方案，如 passkey、后量子，支持签名聚合、密钥轮换和原子批量 12:10；soispoke：frame 建立在十年原生 AA 工作之上，是走向隐私的垫脚石 20:41。",
+      "url": "https://x.com/soispoke/status/2096594725348278436",
+      "date": "2026-09-06",
+      "title_en": "soispoke: frames build on a decade of native AA work and are the stepping stone to privacy",
+      "note_en": "Nero_eth: frame transactions let users choose their signature scheme, such as passkeys or post-quantum, and enable signature aggregation, key rotation and atomic batching, 12:10; soispoke: frames build on a decade of native AA work and are the stepping stone to privacy, 20:41.",
+      "topic_en": "Progress on EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的进展",
+      "title": "EIP-8141：把 MAX_VERIFY_GAS 定义为共享内存池下限",
+      "note": "（AnkushinDaniil）。理由是验证 frame 交易的实际成本随客户端、签名和配对库、存储后端、部分无状态节点而相差数倍，硬编码单节点上限形状不对。",
+      "url": "https://github.com/ethereum/EIPs/pull/12301",
+      "date": "2026-09-06",
+      "title_en": "EIP-8141: define MAX_VERIFY_GAS as a shared mempool floor",
+      "note_en": "(AnkushinDaniil). The rationale is that the real cost of validating a frame transaction differs several-fold across clients, signature and pairing libraries, storage backends and partially stateless nodes, so a hardcoded per-node maximum is the wrong shape.",
+      "topic_en": "Progress on EIP-8141"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：Poseidon 系列哈希多年来提供了很大实际价值",
+      "note": "20:12，是现代隐私协议能快速生成客户端 SNARK 的原因。",
+      "url": "https://x.com/VitalikButerin/status/2096587349635616865",
+      "date": "2026-09-06",
+      "title_en": "Vitalik: the Poseidon family of hashes has provided great real-world value for years",
+      "note_en": "20:12, and is why client-side SNARKs for modern privacy protocols are fast to generate.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：TCREATE 操作码",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12073",
+      "date": "2026-09-06",
+      "title_en": "New EIP: TCREATE opcode",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：首笔抗量子比特币主网交易成本很高，但可以优化",
+      "note": "15:19。",
+      "url": "https://x.com/StarkWareLtd/status/2096513527599243650",
+      "date": "2026-09-06",
+      "title_en": "StarkWare: the first quantum-safe Bitcoin mainnet transaction was expensive, but it can be optimized",
+      "note_en": "15:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：能否验证一个 ERC，而不仅是它的代码",
+      "note": "14:01。",
+      "url": "https://ethresear.ch/t/can-we-verify-an-erc-not-just-its-code/25926",
+      "date": "2026-09-06",
+      "title_en": "ethresear.ch: can we verify an ERC, not just its code?",
+      "note_en": "14:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：一个仍非共识的乐观看法，有 33% 的机会对一般实际计算存在实现 SNARK、FHE、iO 三者的方法",
+      "note": "20:20。",
+      "url": "https://x.com/VitalikButerin/status/2096589479305961591",
+      "date": "2026-09-06",
+      "title_en": "Vitalik: a still very non-consensus optimistic belief that there is a 33% chance that ways exist to implement SNARK, FHE and iO for average real-world computation",
+      "note_en": "20:20.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "jessepollak：攻击者通过关联第三方应用在其账号发布诈骗代币信息，已删除并收回控制",
+      "note": "04:00。",
+      "url": "https://x.com/jessepollak/status/2096342759917662718",
+      "date": "2026-09-06",
+      "title_en": "jessepollak: an attacker posted scam tickers through a third-party app connected to his account; posts deleted and control regained",
+      "note_en": "04:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12301",
+    "credit": "GitHub, ethereum/EIPs PR #12301",
+    "local_path": "assets/2026-09-06.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12301"
+  },
+  "keywords_en": [
+    "EIP-8141 design breakthrough",
+    "MAX_VERIFY_GAS as a shared mempool floor",
+    "transaction formats",
+    "Poseidon",
+    "Egyptian God Protocols"
+  ],
+  "summary_en": "Vitalik recommended reading about the last few months of progress on frame transactions (EIP-8141) and the updated EIP, saying a lot of important progress had been happening quietly; Derek Chiang said the authors recently achieved a design breakthrough, realizing things they thought had to go into the transaction envelope did not. The same day, a PR proposed defining `MAX_VERIFY_GAS` as a shared mempool floor rather than a per-node ceiling."
+}

@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-01",
+  "keywords": [
+    "ACDC #188",
+    "quick slots（EIP-8198）进入 CFI",
+    "EIP-8365 进入 CFI",
+    "FOCIL devnet-0 上线",
+    "EIP-8141 用 max_fee 限定成本",
+    "zk.money 私密钱包"
+  ],
+  "summary": "ACDC #188 把 quick slots（EIP-8198）和禁止新 0x00 验证者（EIP-8365）列为 Hegotá 的 CFI，撤回 EIP-8363 与 EIP-8333，拒绝 EIP-8379。FOCIL devnet-0 上线。账户侧，lightclient 尝试在 frame 对象中引入 `max_fee`，代替按维度的资源上限，思路借鉴 EIP-7999。zk.money 在 Aztec 上推出私密、自托管、开源的钱包，EF 公开祝贺。",
+  "items": [
+    {
+      "topic": "Hegotá 的出块速度和抗审查",
+      "title": "barnabemonnot：quick slots 在今天的 ACD 上进入 CFI",
+      "note": "ACDC #188 21:00（据 Ethereal news #41）：EIP-8365（禁止新 0x00 验证者）和 EIP-8198 quick slots 进入 CFI，讨论中提到后量子影响和测试顾虑；撤回 EIP-8363 递减发行销毁和 EIP-8333；EIP-8379 Top-up Sync 被拒。barnabemonnot：quick slots 在今天的 ACD 上进入 CFI 22:58。",
+      "url": "https://x.com/barnabemonnot/status/2105688718057074919",
+      "date": "2026-10-01",
+      "title_en": "barnabemonnot: quick slots moved to CFI in today's ACD call",
+      "note_en": "ACDC #188 at 21:00 (per Ethereal news #41): EIP-8365 (disallow new 0x00 validators) and EIP-8198 quick slots moved to CFI, with post-quantum impact and testing concerns discussed; EIP-8363 tapered issuance burn and EIP-8333 were withdrawn; EIP-8379 Top-up Sync was declined. barnabemonnot: quick slots moved to CFI in today's ACD call, 22:58.",
+      "topic_en": "Block speed and censorship resistance in Hegotá"
+    },
+    {
+      "topic": "Hegotá 的出块速度和抗审查",
+      "title": "soispoke：FOCIL devnet 0 上线",
+      "note": "19:07。",
+      "url": "https://x.com/soispoke/status/2105630593602212136",
+      "date": "2026-10-01",
+      "title_en": "soispoke: FOCIL devnet 0 is live",
+      "note_en": "19:07.",
+      "topic_en": "Block speed and censorship resistance in Hegotá"
+    },
+    {
+      "topic": "Hegotá 的出块速度和抗审查",
+      "title": "Derek Chiang：以太坊自诞生以来 100% 在线，为什么 Ethlabs 和 EF 还要重新设计共识协议",
+      "note": "20:28，从当前的 ebb-and-flow 共识讲起。",
+      "url": "https://x.com/decentrek/status/2105650945631957129",
+      "date": "2026-10-01",
+      "title_en": "Derek Chiang: Ethereum has had 100% uptime since inception, so why are Ethlabs and the EF redesigning its consensus protocol",
+      "note_en": "20:28, starting from today's ebb-and-flow consensus.",
+      "topic_en": "Block speed and censorship resistance in Hegotá"
+    },
+    {
+      "topic": "Hegotá 的出块速度和抗审查",
+      "title": "EIP-8333 改为 Withdrawn",
+      "note": "合并；EIP-8411 快速执行载荷广播 今日合并为草案（9 月 5 日提交）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12413",
+      "date": "2026-10-01",
+      "title_en": "EIP-8333 moves to Withdrawn",
+      "note_en": "Merged; EIP-8411 fast execution payload broadcast was merged as a draft today (submitted September 5).",
+      "topic_en": "Block speed and censorship resistance in Hegotá"
+    },
+    {
+      "topic": "Hegotá 的出块速度和抗审查",
+      "title": "EIP-8411 快速执行载荷广播",
+      "note": "EIP-8333 改为 Withdrawn 合并；EIP-8411 快速执行载荷广播 今日合并为草案（9 月 5 日提交）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12299",
+      "date": "2026-10-01",
+      "title_en": "EIP-8411 fast execution payload broadcast",
+      "note_en": "EIP-8333 moves to Withdrawn, merged; EIP-8411 fast execution payload broadcast was merged as a draft today (submitted September 5).",
+      "topic_en": "Block speed and censorship resistance in Hegotá"
+    },
+    {
+      "topic": "frame 交易的费用和隐私钱包",
+      "title": "EIP-8141：用 max_fee 限定成本",
+      "note": "（lightclient），尝试在 frame 对象中引入 `max_fee`，代替按维度的资源上限，改编自 EIP-7999。",
+      "url": "https://github.com/ethereum/EIPs/pull/12414",
+      "date": "2026-10-01",
+      "title_en": "EIP-8141: use max_fee to bound cost",
+      "note_en": "(lightclient), trying out a `max_fee` on the frame object instead of per-dimension resource limits, adapted from EIP-7999.",
+      "topic_en": "Frame transaction fees and a privacy wallet"
+    },
+    {
+      "topic": "frame 交易的费用和隐私钱包",
+      "title": "EIP-7906：阐述事件访问的理由",
+      "note": "（forshtat）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12412",
+      "date": "2026-10-01",
+      "title_en": "EIP-7906: elaborate the rationale for events access",
+      "note_en": "(forshtat), merged.",
+      "topic_en": "Frame transaction fees and a privacy wallet"
+    },
+    {
+      "topic": "frame 交易的费用和隐私钱包",
+      "title": "EF：祝贺 zk.money 推出私密、自托管、开源的钱包",
+      "note": "23:02；Aztec：zk.money 已在 Aztec 上线，新地址、含 gas、无任何回指 23:33。",
+      "url": "https://x.com/ethereumfndn/status/2105689868873715720",
+      "date": "2026-10-01",
+      "title_en": "EF: congratulations to zk.money on launching a private, self-custodial, open source wallet",
+      "note_en": "23:02; Aztec: zk.money is live on Aztec, with a new address, gas included and nothing pointing back, 23:33.",
+      "topic_en": "Frame transaction fees and a privacy wallet"
+    },
+    {
+      "topic": "frame 交易的费用和隐私钱包",
+      "title": "Aztec：zk.money 已在 Aztec 上线，新地址、含 gas、无任何回指",
+      "note": "EF：祝贺 zk.money 推出私密、自托管、开源的钱包 23:02；Aztec：zk.money 已在 Aztec 上线，新地址、含 gas、无任何回指 23:33。",
+      "url": "https://x.com/aztecnetwork/status/2105697536229155080",
+      "date": "2026-10-01",
+      "title_en": "Aztec: zk.money is live on Aztec, with a new address, gas included and nothing pointing back",
+      "note_en": "EF: congratulations to zk.money on launching a private, self-custodial, open source wallet, 23:02; Aztec: zk.money is live on Aztec, with a new address, gas included and nothing pointing back, 23:33.",
+      "topic_en": "Frame transaction fees and a privacy wallet"
+    },
+    {
+      "topic": "frame 交易的费用和隐私钱包",
+      "title": "kassandraETH：要让隐私成为以太坊的核心属性，需要通用的钱包隐私标准，而不是各自为政的方案",
+      "note": "23:39。",
+      "url": "https://x.com/kassandraETH/status/2105699015983788330",
+      "date": "2026-10-01",
+      "title_en": "kassandraETH: for privacy to become a core property of Ethereum, we need common wallet standards for privacy rather than siloed solutions",
+      "note_en": "23:39.",
+      "topic_en": "Frame transaction fees and a privacy wallet"
+    },
+    {
+      "topic": "其他动态",
+      "title": "用近期区块重新分析",
+      "note": "EIP-7928 更新 60M gas 下的区块大小分析：用近期区块重新分析、更新大小数据，均合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12409",
+      "date": "2026-10-01",
+      "title_en": "a fresh analysis with recent blocks",
+      "note_en": "EIP-7928 updated its block size analysis at 60M gas: a fresh analysis with recent blocks and updated size numbers, both merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "更新大小数据",
+      "note": "EIP-7928 更新 60M gas 下的区块大小分析：用近期区块重新分析、更新大小数据，均合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12410",
+      "date": "2026-10-01",
+      "title_en": "updated size numbers",
+      "note_en": "EIP-7928 updated its block size analysis at 60M gas: a fresh analysis with recent blocks and updated size numbers, both merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8025：执行层与 tests-zkevm v21.0.1 对齐",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12411",
+      "date": "2026-10-01",
+      "title_en": "EIP-8025: align the execution layer with tests-zkevm v21.0.1",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：其密码学的形式化验证正在进行",
+      "note": "21:16。",
+      "url": "https://x.com/aztecnetwork/status/2105663030860435545",
+      "date": "2026-10-01",
+      "title_en": "Aztec: formal verification of its cryptography is underway",
+      "note_en": "21:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：schema 中 intent 改为必填",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2031",
+      "date": "2026-10-01",
+      "title_en": "ERC-7730: make intent mandatory in the schema",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：欢迎 Ulrich Haböck 等人加入 Shielded Labs",
+      "note": "23:51。",
+      "url": "https://x.com/zooko/status/2105702267911585838",
+      "date": "2026-10-01",
+      "title_en": "zooko: welcoming Ulrich Haböck and others to Shielded Labs",
+      "note_en": "23:51.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12414",
+    "credit": "GitHub, ethereum/EIPs PR #12414",
+    "local_path": "assets/2026-10-01.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12414"
+  },
+  "keywords_en": [
+    "ACDC #188",
+    "quick slots (EIP-8198) CFI",
+    "EIP-8365 CFI",
+    "FOCIL devnet-0 live",
+    "EIP-8141 bounds cost with max_fee",
+    "zk.money private wallet"
+  ],
+  "summary_en": "ACDC #188 moved quick slots (EIP-8198) and disallowing new 0x00 validators (EIP-8365) to CFI for Hegotá, withdrew EIP-8363 and EIP-8333, and declined EIP-8379. FOCIL devnet-0 went live. On accounts, lightclient tried introducing `max_fee` to the frame object instead of per-dimension resource limits, adapted from EIP-7999. zk.money launched a private, self-custodial, open source wallet on Aztec, and the EF congratulated it publicly."
+}

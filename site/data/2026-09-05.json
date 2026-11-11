@@ -1,0 +1,97 @@
+{
+  "date": "2026-09-05",
+  "keywords": [
+    "快速最终性",
+    "解耦共识",
+    "EIP-8411 快速执行载荷广播",
+    "MODEXP 形式化验证",
+    "代理任务招标 ERC"
+  ],
+  "summary": "周六较平静。benjaminion 展示了解耦共识的概念验证，在相当于主网一定比例规模的网络上把最终确认时间缩短约 4 倍。kamilsa 提交新 EIP，把执行载荷改为分块传播。ladislaus0x 发起的众包活动一天内得到经过优化且形式化验证的 MODEXP EVM 实现。",
+  "items": [
+    {
+      "topic": "更快的最终性和更快的出块",
+      "title": "benjaminion：快速最终性要来了",
+      "note": "15:31，一个快速概念验证，在相当于主网一定比例规模的网络上把最终确认时间提升约 4 倍，主要目的是给解耦共识做基准测试。",
+      "url": "https://x.com/benjaminion_xyz/status/2096154357712494719",
+      "date": "2026-09-05",
+      "title_en": "benjaminion: faster finality is coming",
+      "note_en": "15:31, a quick proof of concept on a network a decent fraction of mainnet's size that improved time to finality about 4x, mainly to benchmark decoupled consensus.",
+      "topic_en": "Faster finality and faster blocks"
+    },
+    {
+      "topic": "更快的最终性和更快的出块",
+      "title": "barnabemonnot：看到“解耦共识”，就想想更快的最终性和更快的出块",
+      "note": "15:55，网络层决定了速度上限。",
+      "url": "https://x.com/barnabemonnot/status/2096160340887097420",
+      "date": "2026-09-05",
+      "title_en": "barnabemonnot: when you read \"decoupled consensus\", think faster finality and faster blocks",
+      "note_en": "15:55, with networking setting the speed limit.",
+      "topic_en": "Faster finality and faster blocks"
+    },
+    {
+      "topic": "更快的最终性和更快的出块",
+      "title": "新 EIP：快速执行载荷广播",
+      "note": "（kamilsa，10 月 1 日合并），用分块传播替代原 `execution_payload` 主题，后编号为 EIP-8411。",
+      "url": "https://github.com/ethereum/EIPs/pull/12299",
+      "date": "2026-09-05",
+      "title_en": "New EIP: fast execution payload broadcast",
+      "note_en": "(kamilsa, merged October 1), replacing the `execution_payload` topic with chunked propagation; it later became EIP-8411.",
+      "topic_en": "Faster finality and faster blocks"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ladislaus0x：一天之内，28 份提交得出竞争性优化且形式化验证的 MODEXP EVM 实现",
+      "note": "01:22。",
+      "url": "https://x.com/ladislaus0x/status/2095940664978530448",
+      "date": "2026-09-05",
+      "title_en": "ladislaus0x: one day later, 28 submissions produced a competitively optimized and formally verified EVM implementation of MODEXP",
+      "note_en": "01:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger：比特币和以太坊的后量子讨论正在汇聚到相似问题",
+      "note": "05:30，比如区块级 PQ 签名聚合中的电路与 VM、递归选择。",
+      "url": "https://x.com/tcoratger/status/2096002878632575245",
+      "date": "2026-09-05",
+      "title_en": "tcoratger: Bitcoin and Ethereum post-quantum discussions are converging on similar questions",
+      "note_en": "05:30, such as circuits versus VMs and recursion for block-wide PQ signature aggregation.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8414 代币绑定任务招标",
+      "note": "17:26，为代理经济补上需求侧：预先托管资金的任务。",
+      "url": "https://ethereum-magicians.org/t/erc-8414-token-bound-task-tenders/29597",
+      "date": "2026-09-05",
+      "title_en": "ERC-8414 token-bound task tenders",
+      "note_en": "17:26, adding the demand side to the agent economy: tasks with funds already set aside.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol 在阿姆斯特丹谈 Tornado Cash 案和合规隐私",
+      "note": "11:58。",
+      "url": "https://x.com/ameensol/status/2096100580456345724",
+      "date": "2026-09-05",
+      "title_en": "ameensol spoke in Amsterdam on the Tornado Cash case and compliant privacy",
+      "note_en": "11:58.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12299",
+    "credit": "GitHub, ethereum/EIPs PR #12299",
+    "local_path": "assets/2026-09-05.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12299"
+  },
+  "keywords_en": [
+    "faster finality",
+    "decoupled consensus",
+    "EIP-8411 fast execution payload broadcast",
+    "MODEXP formal verification",
+    "agent task tender ERC"
+  ],
+  "summary_en": "A quiet Saturday. benjaminion showed a proof of concept of decoupled consensus that cut time to finality by about 4x on a network a decent fraction of mainnet's size. kamilsa submitted a new EIP that propagates execution payloads in chunks. A crowdsourcing effort started by ladislaus0x produced an optimized and formally verified EVM implementation of MODEXP within a day."
+}

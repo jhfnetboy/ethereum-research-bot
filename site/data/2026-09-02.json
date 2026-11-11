@@ -1,0 +1,167 @@
+{
+  "date": "2026-09-02",
+  "keywords": [
+    "EIP-8250 keyed nonce 改收状态 gas",
+    "EIP-8272 recent roots 改用 VERIFY 帧",
+    "EIP-8037 GAS 非单调",
+    "ProveKit v1",
+    "FCR"
+  ],
+  "summary": "frame 交易配套 EIP 当天密集更新：EIP-8250 把新建 keyed nonce 改为按 EIP-8037 一个新存储槽的价格（97,920）收状态 gas，EIP-8272 用规范的 VERIFY 帧取代 recent roots 交易字段。spencer-tb 提交 PR，想在 EIP-8037 安全考量里说明 `GAS` 在帧内不再单调。隐私方向，recmo 宣布 ProveKit v1，在手机上就能做零知识身份证明，dcbuilder 次日凌晨补充说它已用于 World ID。",
+  "items": [
+    {
+      "topic": "frame 交易的 gas 和验证规则",
+      "title": "EIP-8250：keyed nonce 首次使用按状态 gas 收费",
+      "note": "合并（soispoke）。EIP-8141 给每个帧分开执行 gas 和状态 gas 预算，而 EIP-8250 原来从批准帧的执行 gas 收 20,000；改为从 `state_gas_left` 收取，价格按 EIP-8037 一个新存储槽 `STATE_BYTES_PER_STORAGE_SET * CPSB`（当前 97,920），因为每个新 key 都会新建一个普通持久槽。",
+      "url": "https://github.com/ethereum/EIPs/pull/12279",
+      "date": "2026-09-02",
+      "title_en": "EIP-8250: charge keyed nonce first use as state gas",
+      "note_en": "Was merged (soispoke). EIP-8141 gives each frame separate execution and state gas budgets, while EIP-8250 still charged 20,000 from the approving frame's execution gas. The charge now comes from `state_gas_left`, priced at EIP-8037's cost for one new storage slot, `STATE_BYTES_PER_STORAGE_SET * CPSB` (currently 97,920), since each fresh key creates one ordinary persistent slot.",
+      "topic_en": "Gas and validation rules for frame transactions"
+    },
+    {
+      "topic": "frame 交易的 gas 和验证规则",
+      "title": "EIP-8272：用规范 frame 验证 recent roots",
+      "note": "（soispoke）。去掉 `recent_root_references` 字段，改为调用 recent root 合约的 `VERIFY` 帧，最多 16 个 `(source_id, slot, root)` 元组，放在应用验证之前；公共内存池验证只允许 `SLOTNUM` 和必要的 recent root 存储读取，该帧不计入 `MAX_VERIFY_GAS`，把预算留给签名检查。",
+      "url": "https://github.com/ethereum/EIPs/pull/12281",
+      "date": "2026-09-02",
+      "title_en": "EIP-8272: verify recent roots with a canonical frame",
+      "note_en": "(soispoke). The `recent_root_references` field is replaced by a `VERIFY` frame that calls the recent root contract with up to sixteen `(source_id, slot, root)` tuples, placed before application validation. Public mempool validation allows only `SLOTNUM` and the required recent root storage reads, and the frame does not count toward `MAX_VERIFY_GAS`, leaving that budget for signature checks.",
+      "topic_en": "Gas and validation rules for frame transactions"
+    },
+    {
+      "topic": "frame 交易的 gas 和验证规则",
+      "title": "EIP-8037：说明 gas_left 可能在帧内增加",
+      "note": "（spencer-tb），只加安全考量、不改语义，说明 `GAS` 不再单调；该 PR 最终被关闭未合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12285",
+      "date": "2026-09-02",
+      "title_en": "EIP-8037: note that gas_left can increase within a frame",
+      "note_en": "(spencer-tb) added only a security consideration, without changing semantics, stating that `GAS` is no longer monotonic; the PR was eventually closed without merging.",
+      "topic_en": "Gas and validation rules for frame transactions"
+    },
+    {
+      "topic": "frame 交易的 gas 和验证规则",
+      "title": "EIP-8141：删除对帧状态 gas 上限的多余检查",
+      "note": "合并；VOPS Profiles for FOCIL Eligibility 合并，为 FOCIL 定义两个 VOPS 档位，档位 2 为符合条件的 frame 交易增加有界的验证重放。",
+      "url": "https://github.com/ethereum/EIPs/pull/12276",
+      "date": "2026-09-02",
+      "title_en": "EIP-8141: remove a redundant check for a frame's state gas limit",
+      "note_en": "Merged; VOPS Profiles for FOCIL Eligibility, merged, defining two VOPS profiles for FOCIL, with profile 2 adding bounded validation replay for eligible frame transactions.",
+      "topic_en": "Gas and validation rules for frame transactions"
+    },
+    {
+      "topic": "frame 交易的 gas 和验证规则",
+      "title": "VOPS Profiles for FOCIL Eligibility",
+      "note": "EIP-8141：删除对帧状态 gas 上限的多余检查 合并；VOPS Profiles for FOCIL Eligibility 合并，为 FOCIL 定义两个 VOPS 档位，档位 2 为符合条件的 frame 交易增加有界的验证重放。",
+      "url": "https://github.com/ethereum/EIPs/pull/12110",
+      "date": "2026-09-02",
+      "title_en": "VOPS Profiles for FOCIL Eligibility",
+      "note_en": "EIP-8141: remove a redundant check for a frame's state gas limit, merged; VOPS Profiles for FOCIL Eligibility, merged, defining two VOPS profiles for FOCIL, with profile 2 adding bounded validation replay for eligible frame transactions.",
+      "topic_en": "Gas and validation rules for frame transactions"
+    },
+    {
+      "topic": "隐私与更快确认",
+      "title": "recmo：ProveKit v1 发布",
+      "note": "23:50，开发者可以在所有用户设备上做带零知识隐私的身份认证；目标是证明普通手机能在一分钟内对护照做零知识证明，无可信设置，128 位后量子安全。",
+      "url": "https://x.com/recmo/status/2095192675276173485",
+      "date": "2026-09-02",
+      "title_en": "recmo: ProveKit v1 is out",
+      "note_en": "23:50, letting developers build authentication with ZK privacy on all user devices; the goal is to show that an ordinary phone can ZK-prove a passport in under a minute, with no trusted setup and 128-bit post-quantum security.",
+      "topic_en": "Privacy and faster confirmation"
+    },
+    {
+      "topic": "隐私与更快确认",
+      "title": "EF：直播介绍 Web3Privacy Now 及其 Privacy Explorer",
+      "note": "21:09。",
+      "url": "https://x.com/ethereumfndn/status/2095152211026129071",
+      "date": "2026-09-02",
+      "title_en": "EF: live session on Web3Privacy Now and its Privacy Explorer",
+      "note_en": "21:09.",
+      "topic_en": "Privacy and faster confirmation"
+    },
+    {
+      "topic": "隐私与更快确认",
+      "title": "binji：Ethlabs 推动 FCR（快速确认规则）落地",
+      "note": "15:58，让在 EVM 链和交易所之间转移资金快 60 倍。",
+      "url": "https://x.com/binji_x/status/2095073745115205773",
+      "date": "2026-09-02",
+      "title_en": "binji: Ethlabs is pushing for adoption of FCR (the fast confirmation rule)",
+      "note_en": "15:58, making moves between EVM chains and exchanges 60x faster.",
+      "topic_en": "Privacy and faster confirmation"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind 2.0.0 RC 发布",
+      "note": "22:44。",
+      "url": "https://x.com/Nethermind/status/2095175988065775795",
+      "date": "2026-09-02",
+      "title_en": "Nethermind 2.0.0 release candidate is live",
+      "note_en": "22:44.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：首笔抗量子比特币交易已在比特币主网执行",
+      "note": "18:12，基于 Avihu Levy 的 QSB 设计。",
+      "url": "https://x.com/StarkWareLtd/status/2095107659410051099",
+      "date": "2026-09-02",
+      "title_en": "StarkWare: the first quantum-safe Bitcoin transaction was executed on Bitcoin mainnet",
+      "note_en": "18:12, using Avihu Levy's QSB design.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "SEAL 周报（8 月 25 日至 31 日）",
+      "note": "03:14，处理 45 起事件，协议被攻破类损失 570 万美元，钱包盗取 280 万美元。",
+      "url": "https://x.com/_SEAL_Org/status/2094881724161220741",
+      "date": "2026-09-02",
+      "title_en": "SEAL weekly stats (August 25 to 31)",
+      "note_en": "03:14: 45 incidents handled, with $5.7M lost to protocol compromises and $2.8M to wallet drains.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8025：StatelessInput 加入证明者提供的哈希种子",
+      "note": "新 EIP：eth/73 索引 cell 请求。",
+      "url": "https://github.com/ethereum/EIPs/pull/12286",
+      "date": "2026-09-02",
+      "title_en": "EIP-8025: add a prover-supplied hash seed to StatelessInput",
+      "note_en": "New EIP: eth/73 indexed cell requests.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：eth/73 索引 cell 请求",
+      "note": "EIP-8025：StatelessInput 加入证明者提供的哈希种子；新 EIP：eth/73 索引 cell 请求。",
+      "url": "https://github.com/ethereum/EIPs/pull/12287",
+      "date": "2026-09-02",
+      "title_en": "new EIP: eth/73 indexed cell requests",
+      "note_en": "EIP-8025: add a prover-supplied hash seed to StatelessInput; new EIP: eth/73 indexed cell requests.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians：程序清单，AI 代理解决合同纠纷的机制",
+      "note": "08:55，当天 24 帖。",
+      "url": "https://ethereum-magicians.org/t/rfc-procedure-manifests-mechanism-for-ai-agents-to-resolve-contractual-disputes/29563",
+      "date": "2026-09-02",
+      "title_en": "Magicians: procedure manifests, a mechanism for AI agents to resolve contractual disputes",
+      "note_en": "08:55, with 24 posts that day.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12279",
+    "credit": "GitHub, ethereum/EIPs PR #12279",
+    "local_path": "assets/2026-09-02.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12279"
+  },
+  "keywords_en": [
+    "EIP-8250 keyed nonces charged as state gas",
+    "EIP-8272 recent roots via a VERIFY frame",
+    "EIP-8037 non-monotonic GAS",
+    "ProveKit v1",
+    "FCR"
+  ],
+  "summary_en": "The EIPs around frame transactions saw a burst of updates: EIP-8250 now charges a new keyed nonce as state gas at EIP-8037's price for one new storage slot (97,920), and EIP-8272 replaces the recent roots transaction field with a canonical VERIFY frame. spencer-tb filed a PR to state in EIP-8037's security considerations that `GAS` is no longer monotonic within a frame. On privacy, recmo announced ProveKit v1, bringing zero-knowledge identity proofs to phones; dcbuilder added shortly after midnight that it already powers World ID."
+}

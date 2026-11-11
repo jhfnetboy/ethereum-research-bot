@@ -1,0 +1,137 @@
+{
+  "date": "2026-09-18",
+  "keywords": [
+    "EIP-8250 区分一次性 nonce",
+    "EIP-8298 SETCODEFROM 允许在 initcode 中使用",
+    "EIP-7773 写入 Sepolia 激活时间",
+    "门限 IBE 加密内存池",
+    "L1 与 L2 统一流动性"
+  ],
+  "summary": "账户侧两项改动：Gottfried Herold 提交 PR，让 EIP-8250 能区分一次性 nonce（如 nullifier）和普通序号 nonce；CPerezz 提交 EIP-8298 修订（24 日合并），允许在 initcode 中使用 SETCODEFROM，并要求源账户必须存在。EIP-7773 写入 Sepolia 激活时间。Gottfried Herold 另发帖勾勒不需要批量解密的门限 IBE 加密内存池。",
+  "items": [
+    {
+      "topic": "账户与 nonce 的状态设计",
+      "title": "EIP-8250：增加 nonce 类型以区分一次性 nonce",
+      "note": "（GottfriedHerold，后关闭）。背景是 9 月 8 日的 Bloom 过滤器文章；该文建议用 nonce key 首字节标记类型，本 PR 改用单独字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/12352",
+      "date": "2026-09-18",
+      "title_en": "EIP-8250: include nonce type to distinguish binary nonces",
+      "note_en": "(GottfriedHerold, later closed). The background is the September 8 Bloom filter post, which suggested tagging the type in the nonce key's first byte; this PR uses a separate field instead.",
+      "topic_en": "State design for accounts and nonces"
+    },
+    {
+      "topic": "账户与 nonce 的状态设计",
+      "title": "EIP-8298：允许在 initcode 中使用 SETCODEFROM，并要求源账户已存在",
+      "note": "（CPerezz，24 日合并）。作者在 Magicians 上更正了自己早先导致 initcode 禁令的评审意见。",
+      "url": "https://github.com/ethereum/EIPs/pull/12356",
+      "date": "2026-09-18",
+      "title_en": "EIP-8298: allow SETCODEFROM in initcode and require an existing source",
+      "note_en": "(CPerezz, merged on the 24th). The author corrected on Magicians his own earlier review comment that had led to the initcode ban.",
+      "topic_en": "State design for accounts and nonces"
+    },
+    {
+      "topic": "账户与 nonce 的状态设计",
+      "title": "EIP-8037：删除过时的 EIP-7610 冲突规则",
+      "note": "今日合并；EIP-8038：改用执行 gas 措辞并修正 CALLCODE 创建单元格 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12296",
+      "date": "2026-09-18",
+      "title_en": "EIP-8037: remove stale EIP-7610 collision rules",
+      "note_en": "Was merged today; EIP-8038: use execution-gas wording and fix the CALLCODE creation cell was merged.",
+      "topic_en": "State design for accounts and nonces"
+    },
+    {
+      "topic": "账户与 nonce 的状态设计",
+      "title": "EIP-8038：改用执行 gas 措辞并修正 CALLCODE 创建单元格",
+      "note": "EIP-8037：删除过时的 EIP-7610 冲突规则 今日合并；EIP-8038：改用执行 gas 措辞并修正 CALLCODE 创建单元格 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12353",
+      "date": "2026-09-18",
+      "title_en": "EIP-8038: use execution-gas wording and fix the CALLCODE creation cell",
+      "note_en": "EIP-8037: remove stale EIP-7610 collision rules was merged today; EIP-8038: use execution-gas wording and fix the CALLCODE creation cell was merged.",
+      "topic_en": "State design for accounts and nonces"
+    },
+    {
+      "topic": "加密内存池",
+      "title": "ethresear.ch：基于无批量门限 IBE 的加密内存池",
+      "note": "23:09（GottfriedHerold）。受 LUCID 启发，一张类似 FOCIL 的票据先上链，把执行锁定到已知的未来区块；之后发送者以承载票据区块的哈希作为身份加密交易。不要求批量解密，可选的门限方案更多。",
+      "url": "https://ethresear.ch/t/towards-encrypted-mempools-from-threshold-ibe-without-batching/26040",
+      "date": "2026-09-18",
+      "title_en": "ethresear.ch: towards encrypted mempools from threshold IBE without batching",
+      "note_en": "23:09 (GottfriedHerold). Inspired by LUCID, a FOCIL-like ticket lands onchain first and pins execution to a known future block; only then does the sender encrypt toward the hash of the ticket-carrying block as the identity. Batch decryption is not required, which widens the choice of threshold schemes.",
+      "topic_en": "Encrypted mempools"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：设定 Sepolia 激活时间",
+      "note": "（ralexstokes）合并，epoch 353024、Unix 时间 1791294816，Holešky 行换成 Hoodi，Hoodi 和主网时间未定。",
+      "url": "https://github.com/ethereum/EIPs/pull/12355",
+      "date": "2026-09-18",
+      "title_en": "EIP-7773: set the Sepolia activation time",
+      "note_en": "(ralexstokes) was merged: epoch 353024, Unix timestamp 1791294816, with the Holešky row replaced by Hoodi; Hoodi and mainnet times remain undecided.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7843：Engine API 方法名与 execution-apis 对齐",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12354",
+      "date": "2026-09-18",
+      "title_en": "EIP-7843: align Engine API method names with execution-apis",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "koeppelmann：通过以太坊经济区，L2 上结算的 CoW Swap 交易使用了 L1 流动性，跨出和换回原子完成",
+      "note": "16:37，公开测试网即将推出。",
+      "url": "https://x.com/koeppelmann/status/2100881849039855803",
+      "date": "2026-09-18",
+      "title_en": "koeppelmann: via the Ethereum Economic Zone, a CoW Swap trade settled on L2 used L1 liquidity, with bridging out and back happening atomically",
+      "note_en": "16:37, with a public testnet coming soon.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "casparschwa：通往更快以太坊和更快最终性的道路正在变得清晰",
+      "note": "02:52。",
+      "url": "https://x.com/casparschwa/status/2100674338538094802",
+      "date": "2026-09-18",
+      "title_en": "casparschwa: the road to a faster Ethereum with faster finality is clearing",
+      "note_en": "02:52.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：用质押奖励做风险投资、由 futarchy 治理",
+      "note": "01:56。",
+      "url": "https://ethresear.ch/t/staking-rewards-as-venture-capital-governed-by-futarchy/26030",
+      "date": "2026-09-18",
+      "title_en": "ethresear.ch: staking rewards as venture capital, governed by futarchy",
+      "note_en": "01:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：以 Zcash 联合创始人身份说，隐私对 DeFi 很重要",
+      "note": "18:28。",
+      "url": "https://x.com/EliBenSasson/status/2100909787370213449",
+      "date": "2026-09-18",
+      "title_en": "Eli Ben-Sasson: speaking as a Zcash co-founder, privacy is important for DeFi",
+      "note_en": "18:28.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/towards-encrypted-mempools-from-threshold-ibe-without-batching/26040",
+    "credit": "ethresear.ch, Towards Encrypted Mempools from Threshold IBE without Batching",
+    "local_path": "assets/2026-09-18.jpg",
+    "credit_en": "ethresear.ch, Towards Encrypted Mempools from Threshold IBE without Batching"
+  },
+  "keywords_en": [
+    "EIP-8250 distinguishes one-shot nonces",
+    "EIP-8298 SETCODEFROM allowed in initcode",
+    "EIP-7773 sets the Sepolia activation time",
+    "threshold IBE encrypted mempool",
+    "unified L1 and L2 liquidity"
+  ],
+  "summary_en": "Two account-side changes: Gottfried Herold submitted a PR letting EIP-8250 tell one-shot nonces (such as nullifiers) apart from ordinary sequence nonces, and CPerezz submitted an EIP-8298 revision (merged on the 24th) allowing SETCODEFROM in initcode and requiring the source account to exist. EIP-7773 recorded the Sepolia activation time. Gottfried Herold also sketched an encrypted mempool based on threshold IBE without batch decryption."
+}

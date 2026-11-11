@@ -1,0 +1,159 @@
+{
+  "date": "2026-09-10",
+  "keywords": [
+    "ACDE #245",
+    "EIP-8141 定为 Hegotá 头条",
+    "EIP-7819 与 EIP-7851 被拒",
+    "EIP-8037 交易 gas 上限 2^32-1",
+    "PBT 与代码委托",
+    "Hegotá 排名"
+  ],
+  "summary": "ACDE #245 把 frame 交易（EIP-8141）定为 Hegotá 的执行层头条，并把 14 个 EIP 列为拒绝纳入（DFI），其中包括账户抽象相关的 EIP-7819 SETDELEGATE 和 EIP-7851 代码控制的 EOA 委托。Vitalik 发帖指出 PBT 把合约代码按 codehash 单独存储，可以借机理顺 EIP-7702、SETCODEFROM 等多种代码委托方式。Ethlabs、L2BEAT、ethbeat 相继发布 Hegotá 排名。",
+  "items": [
+    {
+      "topic": "ACDE #245 与账户抽象方向",
+      "title": "vdWijden：今天 ACD 做了出人意料理性的决定",
+      "note": "ACDE #245 21:00（据 Ethereal news #39）：EIP-8141 frame 交易定为 Hegotá 头条；14 个 EIP 被列为 DFI，账户抽象方面是 EIP-7819 SETDELEGATE 指令和 EIP-7851 代码控制的 EOA 委托，EVM 方面有 EIP-8182 私密 ETH 和 ERC-20 转账等，定价方面有 EIP-8358 账户变更的净 gas 计量等。EIP-7979、EIP-8163、EIP-8372、EIP-8304 推迟决定，默认 DFI。vdWijden：今天 ACD 做了出人意料理性的决定 22:17。",
+      "url": "https://x.com/vdWijden/status/2098068285791121842",
+      "date": "2026-09-10",
+      "title_en": "vdWijden: a surprisingly rational decision made on ACD today",
+      "note_en": "ACDE #245 at 21:00 (per Ethereal news #39): EIP-8141 frame transactions were set as the Hegotá headliner; 14 EIPs were DFI, including the account abstraction proposals EIP-7819 SETDELEGATE instruction and EIP-7851 code-controlled EOA delegation, EVM proposals such as EIP-8182 private ETH and ERC-20 transfers, and pricing proposals such as EIP-8358 net gas metering for account changes. Decisions on EIP-7979, EIP-8163, EIP-8372 and EIP-8304 were delayed, defaulting to DFI. vdWijden: a surprisingly rational decision made on ACD today, 22:17.",
+      "topic_en": "ACDE #245 and the direction of account abstraction"
+    },
+    {
+      "topic": "ACDE #245 与账户抽象方向",
+      "title": "Magicians：分区二叉树与代码委托的未来",
+      "note": "22:51（vbuterin）。PBT（EIP-8297）把合约代码放进按 codehash 索引的独立树。EIP-7702 用一段 23 字节序列表示委托；EIP-8141 让委托需求更多；SETCODEFROM（EIP-8298）允许合约把代码设为另一地址的代码而无需重新部署。Hegotá 之后将有三种方式让账户使用已上链的大段代码，PBT 的新代码格式是一次统一清理的机会。",
+      "url": "https://ethereum-magicians.org/t/partitioned-binary-trees-and-the-future-of-code-delegation/29638",
+      "date": "2026-09-10",
+      "title_en": "Magicians: partitioned binary trees and the future of code delegation",
+      "note_en": "22:51 (vbuterin). PBT (EIP-8297) stores contract code in a separate tree indexed by codehash. EIP-7702 uses a 23-byte sequence to mean delegation; EIP-8141 creates more demand for delegation; SETCODEFROM (EIP-8298) lets a contract set its code to another address's code without redeploying it. After Hegotá there would be three ways for an account to use large code already onchain, and PBT's new code format is a chance for a clean fix.",
+      "topic_en": "ACDE #245 and the direction of account abstraction"
+    },
+    {
+      "topic": "gas 与账户相关的规范修订",
+      "title": "EIP-8037：把交易 gas 上限封顶在 2^32-1",
+      "note": "（chfast，9 月 14 日合并）。EIP-7825 的上限只作用于执行 gas，`tx.gas` 便只受区块 gas 上限约束；新上限 `TX_MAX_TOTAL_GAS_LIMIT` 为 4,294,967,295，留出约 2.8 MB 的代码部署预算，约为 EIP-7954 合约大小上限的 43 倍。",
+      "url": "https://github.com/ethereum/EIPs/pull/12311",
+      "date": "2026-09-10",
+      "title_en": "EIP-8037: cap the transaction gas limit at 2^32-1",
+      "note_en": "(chfast, merged September 14). EIP-7825's cap applied to execution gas alone, leaving `tx.gas` bounded only by the block gas limit; the new `TX_MAX_TOTAL_GAS_LIMIT` of 4,294,967,295 leaves a code-deposit budget of roughly 2.8 MB, about 43 times the EIP-7954 contract size limit.",
+      "topic_en": "Gas and account spec revisions"
+    },
+    {
+      "topic": "gas 与账户相关的规范修订",
+      "title": "EIP-8130：可选的检查点参与者",
+      "note": "（pedrouid），每个检查点叶子都需要来源接受和链上管理员对完整配置的签名。",
+      "url": "https://github.com/ethereum/EIPs/pull/12313",
+      "date": "2026-09-10",
+      "title_en": "EIP-8130: optional checkpointed actors",
+      "note_en": "(pedrouid), where every checkpointed leaf needs both source acceptance and an onchain admin's signature over its full configuration.",
+      "topic_en": "Gas and account spec revisions"
+    },
+    {
+      "topic": "gas 与账户相关的规范修订",
+      "title": "EIP-8272：澄清公共内存池范围",
+      "note": "recent root 验证器作为普通的 EIP-8141 `VERIFY` 帧执行。",
+      "url": "https://github.com/ethereum/EIPs/pull/12310",
+      "date": "2026-09-10",
+      "title_en": "EIP-8272: clarify public mempool scope",
+      "note_en": "With the recent root verifier executing as an ordinary EIP-8141 `VERIFY` frame.",
+      "topic_en": "Gas and account spec revisions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethlabs：评审 60 多个 Hegotá EIP，排名围绕四个主题，首先是更强的抗审查",
+      "note": "07:03；L2BEAT 研究团队的 Hegotá 排名 16:56；ethbeat 研究团队的排名 21:02。",
+      "url": "https://x.com/ethlabs_org/status/2097838222621446629",
+      "date": "2026-09-10",
+      "title_en": "Ethlabs: reviewed all 60+ Hegotá EIPs, with rankings following four themes, starting with stronger censorship resistance",
+      "note_en": "07:03; the L2BEAT research team's Hegotá ranking, 16:56; the ethbeat research team's ranking, 21:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT 研究团队的 Hegotá 排名",
+      "note": "Ethlabs：评审 60 多个 Hegotá EIP，排名围绕四个主题，首先是更强的抗审查 07:03；L2BEAT 研究团队的 Hegotá 排名 16:56；ethbeat 研究团队的排名 21:02。",
+      "url": "https://x.com/donnoh_eth/status/2097987576560803889",
+      "date": "2026-09-10",
+      "title_en": "the L2BEAT research team's Hegotá ranking",
+      "note_en": "Ethlabs: reviewed all 60+ Hegotá EIPs, with rankings following four themes, starting with stronger censorship resistance, 07:03; the L2BEAT research team's Hegotá ranking, 16:56; the ethbeat research team's ranking, 21:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat 研究团队的排名",
+      "note": "Ethlabs：评审 60 多个 Hegotá EIP，排名围绕四个主题，首先是更强的抗审查 07:03；L2BEAT 研究团队的 Hegotá 排名 16:56；ethbeat 研究团队的排名 21:02。",
+      "url": "https://x.com/ethbeat_org/status/2098049390757749043",
+      "date": "2026-09-10",
+      "title_en": "the ethbeat research team's ranking",
+      "note_en": "Ethlabs: reviewed all 60+ Hegotá EIPs, with rankings following four themes, starting with stronger censorship resistance, 07:03; the L2BEAT research team's Hegotá ranking, 16:56; the ethbeat research team's ranking, 21:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "binji：呼吁把 quick slots（EIP-8198）纳入 Hegotá",
+      "note": "21:07。",
+      "url": "https://x.com/binji_x/status/2098050855689650392",
+      "date": "2026-09-10",
+      "title_en": "binji: urging inclusion of quick slots (EIP-8198) in Hegotá",
+      "note_en": "21:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：让基础费成为中点，EIP-1559 的时间流动性授权",
+      "note": "08:00。",
+      "url": "https://ethresear.ch/t/letting-the-base-fee-be-a-midpoint-a-temporal-liquidity-authorization-for-eip-1559/25958",
+      "date": "2026-09-10",
+      "title_en": "ethresear.ch: letting the base fee be a midpoint, a temporal liquidity authorization for EIP-1559",
+      "note_en": "08:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：两个月里 100 多名参与者和 AI 代理降低了量子攻击椭圆曲线所需算术的估计成本",
+      "note": "20:31；Starknet v0.14.4 支持按证明而非执行付费 15:11。",
+      "url": "https://x.com/StarkWareLtd/status/2098041660655464869",
+      "date": "2026-09-10",
+      "title_en": "StarkWare: in two months 100+ participants and AI agents drove down the estimated cost of the arithmetic of a quantum attack on elliptic curves",
+      "note_en": "20:31; Starknet v0.14.4 lets apps pay for logic as a proof rather than execution, 15:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Starknet v0.14.4 支持按证明而非执行付费",
+      "note": "StarkWare：两个月里 100 多名参与者和 AI 代理降低了量子攻击椭圆曲线所需算术的估计成本 20:31；Starknet v0.14.4 支持按证明而非执行付费 15:11。",
+      "url": "https://x.com/StarkWareLtd/status/2097961022435029419",
+      "date": "2026-09-10",
+      "title_en": "Starknet v0.14.4 lets apps pay for logic as a proof rather than execution",
+      "note_en": "StarkWare: in two months 100+ participants and AI agents drove down the estimated cost of the arithmetic of a quantum attack on elliptic curves, 20:31; Starknet v0.14.4 lets apps pay for logic as a proof rather than execution, 15:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fradamt：再也不在分叉范围讨论季开新组织了",
+      "note": "07:12。",
+      "url": "https://x.com/fradamt/status/2097840673479163919",
+      "date": "2026-09-10",
+      "title_en": "fradamt: never again start a new org during fork scoping season",
+      "note_en": "07:12.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/partitioned-binary-trees-and-the-future-of-code-delegation/29638",
+    "credit": "Ethereum Magicians, Partitioned binary trees and the future of code delegation",
+    "local_path": "assets/2026-09-10.jpg",
+    "credit_en": "Ethereum Magicians, Partitioned binary trees and the future of code delegation"
+  },
+  "keywords_en": [
+    "ACDE #245",
+    "EIP-8141 set as Hegotá headliner",
+    "EIP-7819 and EIP-7851 declined",
+    "EIP-8037 transaction gas cap at 2^32-1",
+    "PBT and code delegation",
+    "Hegotá rankings"
+  ],
+  "summary_en": "ACDE #245 set frame transactions (EIP-8141) as Hegotá's execution layer headliner and Declined for Inclusion (DFI) 14 EIPs, including the account abstraction proposals EIP-7819 SETDELEGATE and EIP-7851 code-controlled EOA delegation. Vitalik posted that PBT stores contract code separately by codehash, a chance to clean up the multiple code delegation methods such as EIP-7702 and SETCODEFROM. Ethlabs, L2BEAT and ethbeat released Hegotá rankings."
+}

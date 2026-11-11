@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-08",
+  "keywords": [
+    "MATCHA 内存池容量",
+    "keyed nonce 与 Bloom 过滤器",
+    "Trezor 支持 ERC-7730",
+    "quick slots 评为 B 级",
+    "Frame Breakout #4"
+  ],
+  "summary": "soispoke 发布 MATCHA：frame 交易加上 keyed nonce 后，同一 sender 可能有多笔待处理交易，这会带来 DoS 风险；MATCHA 让 sender 只能凭已最终确认区块里实际用掉的 gas 赚取额外“宽度”。Gottfried Herold 建议 EIP-8250 用 nonce key 首字节区分一次性 nonce 和计数 nonce，以便将来用 Bloom 过滤器减少无状态节点存储。Trezor 开始支持 ERC-7730 清晰签名。",
+  "items": [
+    {
+      "topic": "隐私应用的共享 sender 与内存池",
+      "title": "soispoke：新文章 MATCHA",
+      "note": "20:52，ethresear.ch 正文。EIP-8141 通常每个 sender 只接纳一笔待处理交易；EIP-8250 让隐私应用的许多用户共用一个 sender 而 nonce 互不冲突，从而为接纳多笔交易打开可能。风险是：恶意应用可以提交大量有效花费，再用一次链上设置改动让整批失效，反复制造重验证负担；或者恶意用户用低费交易挤占诚实隐私应用的容量。MATCHA 作为本地内存池策略，让超出第一笔的每次接纳都花费分配给该 sender 的“宽度”，宽度只能由该 sender 在已最终确认区块中实际用掉的 gas 赚取，交易离开内存池也不返还。FOCIL 的 frame 交易扩展（EIP-8369）会让洪泛交易更容易被打包，从而让攻击更有成本。",
+      "url": "https://x.com/soispoke/status/2097322172570013894",
+      "date": "2026-09-08",
+      "title_en": "soispoke: new post, MATCHA",
+      "note_en": "20:52, with the ethresear.ch post. EIP-8141 normally admits one pending transaction per sender; EIP-8250 lets many users of a privacy app share one sender without nonce conflicts, which opens the door to admitting several. The risks: a malicious app could submit many valid spends and then invalidate the whole set with one onchain settings change, repeating the revalidation burden; or a malicious user could crowd out an honest privacy app's capacity with low-fee transactions. MATCHA, a local mempool policy, makes every admission beyond the first spend \"width\" assigned to the sender, earned only from the gas that sender actually used in finalized blocks and not returned when a transaction leaves the mempool. The FOCIL extension for frame transactions (EIP-8369) would make flooding transactions more likely to be included, making the attack costlier.",
+      "topic_en": "Shared senders and the mempool for privacy apps"
+    },
+    {
+      "topic": "隐私应用的共享 sender 与内存池",
+      "title": "ethresear.ch 正文",
+      "note": "soispoke：新文章 MATCHA 20:52，ethresear.ch 正文。EIP-8141 通常每个 sender 只接纳一笔待处理交易；EIP-8250 让隐私应用的许多用户共用一个 sender 而 nonce 互不冲突，从而为接纳多笔交易打开可能。风险是：恶意应用可以提交大量有效花费，再用一次链上设置改动让整批失效，反复制造重验证负担；或者恶意用户用低费交易挤占诚实隐私应用的容量。MATCHA 作为本地内存池策略，让超出第一笔的每次接纳都花费分配给该 sender 的“宽度”，宽度只能由该 sender 在已最终确认区块中实际用掉的 gas 赚取，交易离开内存池也不返还。FOCIL 的 frame 交易扩展（EIP-8369）会让洪泛交易更容易被打包，从而让攻击更有成本。",
+      "url": "https://ethresear.ch/t/mempool-account-transaction-capacity-from-historical-activity-matcha/25949",
+      "date": "2026-09-08",
+      "title_en": "ethresear.ch post",
+      "note_en": "Soispoke: new post, MATCHA, 20:52, with the ethresear.ch post. EIP-8141 normally admits one pending transaction per sender; EIP-8250 lets many users of a privacy app share one sender without nonce conflicts, which opens the door to admitting several. The risks: a malicious app could submit many valid spends and then invalidate the whole set with one onchain settings change, repeating the revalidation burden; or a malicious user could crowd out an honest privacy app's capacity with low-fee transactions. MATCHA, a local mempool policy, makes every admission beyond the first spend \"width\" assigned to the sender, earned only from the gas that sender actually used in finalized blocks and not returned when a transaction leaves the mempool. The FOCIL extension for frame transactions (EIP-8369) would make flooding transactions more likely to be included, making the attack costlier.",
+      "topic_en": "Shared senders and the mempool for privacy apps"
+    },
+    {
+      "topic": "隐私应用的共享 sender 与内存池",
+      "title": "soispoke：新文章 Bloom 过滤器与 keyed nonce",
+      "note": "21:27，ethresear.ch 正文（Gottfried Herold）。建议 EIP-8250 用 nonce key 的第一个字节标记 nonce 类型，区分一次性和计数型，以兼容将来用 Bloom 过滤器减少 VOPS 存储。",
+      "url": "https://x.com/soispoke/status/2097330892603572323",
+      "date": "2026-09-08",
+      "title_en": "soispoke: new post, Bloom filters and keyed nonces",
+      "note_en": "21:27, with the ethresear.ch post (Gottfried Herold). It suggests EIP-8250 tag the nonce type with the first byte of the nonce key, separating one-shot from counter nonces, to stay compatible with future use of Bloom filters to reduce VOPS storage.",
+      "topic_en": "Shared senders and the mempool for privacy apps"
+    },
+    {
+      "topic": "隐私应用的共享 sender 与内存池",
+      "title": "ethresear.ch 正文",
+      "note": "soispoke：新文章 Bloom 过滤器与 keyed nonce 21:27，ethresear.ch 正文（Gottfried Herold）。建议 EIP-8250 用 nonce key 的第一个字节标记 nonce 类型，区分一次性和计数型，以兼容将来用 Bloom 过滤器减少 VOPS 存储。",
+      "url": "https://ethresear.ch/t/bloom-filters-and-keyed-nonces/25950",
+      "date": "2026-09-08",
+      "title_en": "ethresear.ch post",
+      "note_en": "Soispoke: new post, Bloom filters and keyed nonces, 21:27, with the ethresear.ch post (Gottfried Herold). It suggests EIP-8250 tag the nonce type with the first byte of the nonce key, separating one-shot from counter nonces, to stay compatible with future use of Bloom filters to reduce VOPS storage.",
+      "topic_en": "Shared senders and the mempool for privacy apps"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Trezor 现在支持通过 ERC-7730 清晰签名",
+      "note": "22:06，来自万亿美元安全计划的清晰签名工作组。同日 ERC-7730 PR 修正代理合约指引，要求描述文件绑定实现地址。",
+      "url": "https://x.com/ethereumfndn/status/2097340751604543663",
+      "date": "2026-09-08",
+      "title_en": "EF: Trezor now supports clear signing via ERC-7730",
+      "note_en": "22:06, from the Trillion Dollar Security Initiative's Clear Signing Working Group. The same day an ERC-7730 PR corrected the proxy guidance so descriptor files bind to implementation addresses.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730 PR",
+      "note": "EF：Trezor 现在支持通过 ERC-7730 清晰签名 22:06，来自万亿美元安全计划的清晰签名工作组。同日 ERC-7730 PR 修正代理合约指引，要求描述文件绑定实现地址。",
+      "url": "https://github.com/ethereum/ERCs/pull/2003",
+      "date": "2026-09-08",
+      "title_en": "ERC-7730 PR",
+      "note_en": "EF: Trezor now supports clear signing via ERC-7730, 22:06, from the Trillion Dollar Security Initiative's Clear Signing Working Group. The same day an ERC-7730 PR corrected the proxy guidance so descriptor files bind to implementation addresses.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "barnabemonnot：EF Protocol 团队把 quick slots 评为 B 级",
+      "note": "01:24，并列出提高交付信心的四个具体要求。",
+      "url": "https://x.com/barnabemonnot/status/2097028168146202813",
+      "date": "2026-09-08",
+      "title_en": "barnabemonnot: EF Protocol teams graded quick slots B tier",
+      "note_en": "01:24, listing four concrete requirements to raise confidence in delivery.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：STRK20 隐私冲刺结束，220 多名开发者做了 200 个项目",
+      "note": "14:49。",
+      "url": "https://x.com/StarkWareLtd/status/2097230732876013927",
+      "date": "2026-09-08",
+      "title_en": "StarkWare: the STRK20 Private Sprint wrapped up with 220+ builders and 200 projects",
+      "note_en": "14:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8304 更新",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12305",
+      "date": "2026-09-08",
+      "title_en": "EIP-8304 update",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：当前 AI 很不擅长发现和修复结构性问题",
+      "note": "16:44。",
+      "url": "https://x.com/peter_szilagyi/status/2097259835293053149",
+      "date": "2026-09-08",
+      "title_en": "peter_szilagyi: current-generation AIs are very bad at realizing and fixing structural issues",
+      "note_en": "16:44.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/mempool-account-transaction-capacity-from-historical-activity-matcha/25949",
+    "credit": "ethresear.ch, Mempool Account Transaction Capacity from Historical Activity (MATCHA)",
+    "local_path": "assets/2026-09-08.jpg",
+    "credit_en": "ethresear.ch, Mempool Account Transaction Capacity from Historical Activity (MATCHA)"
+  },
+  "keywords_en": [
+    "MATCHA mempool capacity",
+    "keyed nonces and Bloom filters",
+    "Trezor supports ERC-7730",
+    "quick slots graded B tier",
+    "Frame Breakout #4"
+  ],
+  "summary_en": "soispoke published MATCHA. With frame transactions and keyed nonces, one sender may have several pending transactions, which creates a DoS risk; MATCHA lets a sender earn extra \"width\" only from the gas it actually used in finalized blocks. Gottfried Herold suggested EIP-8250 use the first byte of the nonce key to tell one-shot nonces from counter nonces, so Bloom filters can later reduce storage for stateless nodes. Trezor began supporting ERC-7730 clear signing."
+}
