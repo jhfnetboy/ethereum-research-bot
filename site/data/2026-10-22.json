@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-22",
+  "keywords": [
+    "Glamsterdam Hoodi 推迟",
+    "ACDE #248",
+    "ChainSecurity",
+    "EIP-8037 状态 gas 储备",
+    "EIP-8453 解耦共识",
+    "EIP-8141 省略签名长度"
+  ],
+  "summary": "ACDE #248 决定推迟原定 10 月 26 日的 Hoodi 上 Glamsterdam 激活，以研究 EIP-8037 与主网合约的交互，新日期未定。起因是 ChainSecurity 的分析：状态 gas 储备、即时退还和重新定价会让“失败后靠剩余 gas 判断是否 OOG”的合约逻辑失效，已发现 13 个真实案例。同日 EIP-8453 解耦共识发布初稿，EIP-8141 修补了可被中继方填充签名的计费漏洞。",
+  "items": [
+    {
+      "topic": "Glamsterdam 在 Hoodi 推迟：EIP-8037 的 gas 假设问题",
+      "title": "EF 博客：Glamsterdam 在 Hoodi 推迟",
+      "note": "ACDE #248 决定推迟，以调查 EIP-8037 与主网合约的交互；10 月 26 日的激活和 200M gas 上限计划一并取消，新日期未定，博客列出了 Hoodi 节点运营者需要关注的各客户端版本。",
+      "url": "https://blog.ethereum.org/en/2026/10/22/glamsterdam-hoodi-delay",
+      "date": "2026-10-22",
+      "title_en": "EF blog: Glamsterdam on Hoodi delayed",
+      "note_en": ". ACDE #248 decided to postpone in order to investigate EIP-8037's interactions with mainnet contracts. The October 26 activation and the 200M gas limit schedule are both removed, no new date is set, and the post lists the client versions Hoodi node operators need to watch.",
+      "topic_en": "Glamsterdam on Hoodi postponed: EIP-8037's gas assumptions"
+    },
+    {
+      "topic": "Glamsterdam 在 Hoodi 推迟：EIP-8037 的 gas 假设问题",
+      "title": "ChainSecurity：刚刚决定因我们博客中指出的安全影响推迟 Hoodi 分叉",
+      "note": "23:14，已发现 13 个真实案例，正与受影响项目负责任披露。",
+      "url": "https://x.com/chain_security/status/2113303061078671814",
+      "date": "2026-10-22",
+      "title_en": "ChainSecurity: it has just been decided to delay the Hoodi fork because of security impacts identified in our blog post",
+      "note_en": "23:14. They have already found 13 real-world examples and are in responsible disclosure with the affected projects.",
+      "topic_en": "Glamsterdam on Hoodi postponed: EIP-8037's gas assumptions"
+    },
+    {
+      "topic": "Glamsterdam 在 Hoodi 推迟：EIP-8037 的 gas 假设问题",
+      "title": "ChainSecurity 博客：Glamsterdam 硬分叉，花掉的 gas 会回来",
+      "note": "（基于 10 月 13 日的规范）。合约常靠三种方式防“故意少给 gas”的攻击：调用前检查预算、调用后看 `gasleft()` 是否过低、或依赖失败处理本身会 OOG 回滚。Glamsterdam 下：",
+      "url": "https://www.chainsecurity.com/blog/glamsterdam-gas/",
+      "date": "2026-10-22",
+      "title_en": "ChainSecurity blog: Glamsterdam hard fork, when spent gas comes back",
+      "note_en": "(based on the specs as of October 13). Contracts defend against deliberately underfunded calls in three ways: checking the budget before the call, checking whether `gasleft()` is too low after it, or relying on the failure handler itself running out of gas and reverting. Under Glamsterdam:",
+      "topic_en": "Glamsterdam on Hoodi postponed: EIP-8037's gas assumptions"
+    },
+    {
+      "topic": "frame 交易与后量子",
+      "title": "EIP-8141：承诺被省略签名的长度",
+      "note": "合并（lightclient）。Brett 在 Magicians 指出，空消息签名的原始字节不进签名哈希却照样计费，任何中继方都能填充任意签名让付款方多付；修复后付款方的费用完全由签名哈希决定。",
+      "url": "https://github.com/ethereum/EIPs/pull/12502",
+      "date": "2026-10-22",
+      "title_en": "EIP-8141: commit to elided signature lengths",
+      "note_en": "Was merged (lightclient). Brett pointed out on Magicians that the raw bytes of empty-msg signatures are elided from the sig hash but still billed, so any relayer could pad an arbitrary signature and make the payer pay for it; after the fix, the payer's charge is fully determined by the sig hash.",
+      "topic_en": "Frame transactions and post-quantum"
+    },
+    {
+      "topic": "frame 交易与后量子",
+      "title": "tcoratger：EIP-8450 后量子验证者公钥注册表初稿",
+      "note": "15:18，Magicians 讨论帖 14:47。",
+      "url": "https://x.com/tcoratger/status/2113183187799015652",
+      "date": "2026-10-22",
+      "title_en": "tcoratger: first draft of EIP-8450, a post-quantum public key registry for validators",
+      "note_en": "15:18, with a Magicians discussion thread at 14:47.",
+      "topic_en": "Frame transactions and post-quantum"
+    },
+    {
+      "topic": "frame 交易与后量子",
+      "title": "Magicians 讨论帖",
+      "note": "tcoratger：EIP-8450 后量子验证者公钥注册表初稿 15:18，Magicians 讨论帖 14:47。",
+      "url": "https://ethereum-magicians.org/t/eip-8450-post-quantum-validator-key-registry/30046",
+      "date": "2026-10-22",
+      "title_en": "Magicians discussion thread",
+      "note_en": "Tcoratger: first draft of EIP-8450, a post-quantum public key registry for validators, 15:18, with a Magicians discussion thread at 14:47.",
+      "topic_en": "Frame transactions and post-quantum"
+    },
+    {
+      "topic": "frame 交易与后量子",
+      "title": "ethresear.ch：Paranoid EIP-8288，用经认证的验证器类别库做异构递归",
+      "note": "15:29，让小聚合使用更小的证明关系。",
+      "url": "https://ethresear.ch/t/paranoid-eip-8288-heterogeneous-recursion-with-an-authenticated-class-bank/26170",
+      "date": "2026-10-22",
+      "title_en": "ethresear.ch: Paranoid EIP-8288, heterogeneous recursion with an authenticated class bank",
+      "note_en": "15:29, letting small aggregates use a smaller proving relation.",
+      "topic_en": "Frame transactions and post-quantum"
+    },
+    {
+      "topic": "frame 交易与后量子",
+      "title": "ethresear.ch：加密内存池里发送方的免费期权有多大",
+      "note": "12:07，提出 Blind Simultaneous Release（BSR）消除揭示期权。",
+      "url": "https://ethresear.ch/t/reveal-optionality-in-encrypted-mempools-how-big-is-the-sender-s-free-option-and-a-post-quantum-way-to-remove-it/26169",
+      "date": "2026-10-22",
+      "title_en": "ethresear.ch: how big is the sender's free option in encrypted mempools",
+      "note_en": "12:07, proposing Blind Simultaneous Release (BSR) to remove the reveal option.",
+      "topic_en": "Frame transactions and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：解耦共识",
+      "note": "（benjaminion），即 EIP-8453；nero_eth：解耦共识把链头投票和最终性投票分开 17:40，更抗重组、缩短最终性；Barnabé：24 小时内发布了 I\\* 两个关键 EIP 的草案 15:58。",
+      "url": "https://github.com/ethereum/EIPs/pull/12566",
+      "date": "2026-10-22",
+      "title_en": "New EIP: decoupled consensus",
+      "note_en": "(benjaminion), now EIP-8453; nero_eth: decoupled consensus separates chain head voting from finality voting, 17:40, making Ethereum more reorg-resistant and shortening time to finality; Barnabé: drafts of two key I\\* EIPs were published in the last 24 hours, 15:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8453",
+      "note": "新 EIP：解耦共识（benjaminion），即 EIP-8453；nero_eth：解耦共识把链头投票和最终性投票分开 17:40，更抗重组、缩短最终性；Barnabé：24 小时内发布了 I\\* 两个关键 EIP 的草案 15:58。",
+      "url": "https://ethereum-magicians.org/t/eip-8453-decoupled-consensus/30045",
+      "date": "2026-10-22",
+      "title_en": "EIP-8453",
+      "note_en": "New EIP: decoupled consensus (benjaminion), now EIP-8453; nero_eth: decoupled consensus separates chain head voting from finality voting, 17:40, making Ethereum more reorg-resistant and shortening time to finality; Barnabé: drafts of two key I\\* EIPs were published in the last 24 hours, 15:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nero_eth：解耦共识把链头投票和最终性投票分开",
+      "note": "新 EIP：解耦共识（benjaminion），即 EIP-8453；nero_eth：解耦共识把链头投票和最终性投票分开 17:40，更抗重组、缩短最终性；Barnabé：24 小时内发布了 I\\* 两个关键 EIP 的草案 15:58。",
+      "url": "https://x.com/nero_eth/status/2113218903329350107",
+      "date": "2026-10-22",
+      "title_en": "nero_eth: decoupled consensus separates chain head voting from finality voting",
+      "note_en": "New EIP: decoupled consensus (benjaminion), now EIP-8453; nero_eth: decoupled consensus separates chain head voting from finality voting, 17:40, making Ethereum more reorg-resistant and shortening time to finality; Barnabé: drafts of two key I\\* EIPs were published in the last 24 hours, 15:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：24 小时内发布了 I\\* 两个关键 EIP 的草案",
+      "note": "新 EIP：解耦共识（benjaminion），即 EIP-8453；nero_eth：解耦共识把链头投票和最终性投票分开 17:40，更抗重组、缩短最终性；Barnabé：24 小时内发布了 I\\* 两个关键 EIP 的草案 15:58。",
+      "url": "https://x.com/barnabemonnot/status/2113193383288029628",
+      "date": "2026-10-22",
+      "title_en": "Barnabé: drafts of two key I\\* EIPs were published in the last 24 hours",
+      "note_en": "New EIP: decoupled consensus (benjaminion), now EIP-8453; nero_eth: decoupled consensus separates chain head voting from finality voting, 17:40, making Ethereum more reorg-resistant and shortening time to finality; Barnabé: drafts of two key I\\* EIPs were published in the last 24 hours, 15:58.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Solidity v0.8.38 发布",
+      "note": "19:24，修复 Yul 优化器低危漏洞，并对 Amsterdam EVM 版本起保留的标识符给出警告。",
+      "url": "https://x.com/solidity_lang/status/2113245009504043261",
+      "date": "2026-10-22",
+      "title_en": "Solidity v0.8.38 is out",
+      "note_en": "19:24, fixing a low-severity Yul optimizer bug and warning about identifiers that become reserved from the Amsterdam EVM version.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Jesse Pollak：200ms 区块已在测试网上线",
+      "note": "01:08。",
+      "url": "https://x.com/jessepollak/status/2112969393902936285",
+      "date": "2026-10-22",
+      "title_en": "Jesse Pollak: 200ms blocks are live on testnet",
+      "note_en": "01:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：Starknet 社区以 93.52% 支持研究转为 L1",
+      "note": "18:09。",
+      "url": "https://x.com/EliBenSasson/status/2113226324361740344",
+      "date": "2026-10-22",
+      "title_en": "Eli Ben-Sasson: the Starknet community voted 93.52% in favor of researching a move to L1",
+      "note_en": "18:09.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8452：EVM 跳转表和调用表",
+      "note": "14:03；ERC-8473 uRWA 策略接口 18:24。",
+      "url": "https://ethereum-magicians.org/t/eip-8452-jump-and-call-tables-for-the-evm/30044",
+      "date": "2026-10-22",
+      "title_en": "EIP-8452: jump and call tables for the EVM",
+      "note_en": "14:03; ERC-8473 uRWA policy interface, 18:24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8473 uRWA 策略接口",
+      "note": "EIP-8452：EVM 跳转表和调用表 14:03；ERC-8473 uRWA 策略接口 18:24。",
+      "url": "https://ethereum-magicians.org/t/erc-8473-urwa-policy-interface/30048",
+      "date": "2026-10-22",
+      "title_en": "ERC-8473 uRWA policy interface",
+      "note_en": "EIP-8452: jump and call tables for the EVM, 14:03; ERC-8473 uRWA policy interface, 18:24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ameensol：团队非常在意做没有后门的私密货币",
+      "note": "00:12，“我们是赛博朋克，不是无政府主义者”。",
+      "url": "https://x.com/ameensol/status/2112955172041421023",
+      "date": "2026-10-22",
+      "title_en": "ameensol: our team cares an absurd amount about building private money without backdoors",
+      "note_en": "00:12: \"we're cypherpunks, not anarchists\".",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：被重新激进化回加密",
+      "note": "21:34，1040 赞。",
+      "url": "https://x.com/binji_x/status/2113277701385544082",
+      "date": "2026-10-22",
+      "title_en": "binji: being re-radicalized into crypto",
+      "note_en": "21:34, with 1,040 likes.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/10/22/glamsterdam-hoodi-delay",
+    "credit": "Ethereum Foundation Blog, Glamsterdam on Hoodi delayed",
+    "local_path": "assets/2026-10-22.jpg",
+    "credit_en": "Ethereum Foundation Blog, Glamsterdam on Hoodi delayed"
+  },
+  "keywords_en": [
+    "Glamsterdam on Hoodi delayed",
+    "ACDE #248",
+    "ChainSecurity",
+    "EIP-8037 state gas reservoir",
+    "EIP-8453 decoupled consensus",
+    "EIP-8141 elided signature lengths"
+  ],
+  "summary_en": "ACDE #248 decided to postpone the Glamsterdam activation on Hoodi, planned for October 26, to study EIP-8037's interaction with mainnet contracts; no new date was set. The trigger was ChainSecurity's analysis: the state gas reservoir, immediate refills and repricing can break contract logic that infers an out-of-gas failure from the gas left afterwards, with 13 real-world cases found. The same day, EIP-8453 decoupled consensus published its first draft, and EIP-8141 fixed a billing hole that let relayers pad signatures."
+}

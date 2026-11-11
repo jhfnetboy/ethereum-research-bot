@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-10",
+  "keywords": [
+    "frames-devnet-1",
+    "可配置账户与密钥轮换",
+    "EIP-8288 内存池与 FOCIL",
+    "Aztec Alpha V6",
+    "ACDE #248 议程"
+  ],
+  "summary": "ethrex 预告 frames-devnet-1 将在 EIP-8141 之外加入 EIP-8250、EIP-8272 和 EIP-7906。Georgios Konstantopoulos 说 Tempo 不担心后量子安全，因为可配置账户可以原地轮换密钥、停用非后量子密钥。EIP-8288 补上内存池包装和携带证明的包含列表。Aztec Alpha V6 代码就绪，进入治理流程。",
+  "items": [
+    {
+      "topic": "原生 AA 的抗量子路径：frames-devnet-1 与可配置账户",
+      "title": "ethrex：frames-devnet-0 即将让位给 frames-devnet-1",
+      "note": "02:57，新增 EIP-8250、EIP-8272、EIP-7906，执行规范测试已准备。",
+      "url": "https://x.com/ethrex_client/status/2108648101384757631",
+      "date": "2026-10-10",
+      "title_en": "ethrex: frames-devnet-0 will soon give way to frames-devnet-1",
+      "note_en": "02:57, adding EIP-8250, EIP-8272 and EIP-7906, with execution-spec tests ready.",
+      "topic_en": "Native AA's post-quantum path: frames-devnet-1 and configurable accounts"
+    },
+    {
+      "topic": "原生 AA 的抗量子路径：frames-devnet-1 与可配置账户",
+      "title": "Georgios：不担心 Tempo 的后量子安全",
+      "note": "02:40，共识侧有 Pat 团队的工作，执行侧可配置账户支持原地密钥轮换和停用非后量子密钥。",
+      "url": "https://x.com/gakonst/status/2108643910591680677",
+      "date": "2026-10-10",
+      "title_en": "Georgios: not worried about PQ safety in Tempo",
+      "note_en": "02:40. Pat's team covers the consensus side, and on the execution side configurable accounts allow in-place key rotation and disabling non-PQ keys.",
+      "topic_en": "Native AA's post-quantum path: frames-devnet-1 and configurable accounts"
+    },
+    {
+      "topic": "原生 AA 的抗量子路径：frames-devnet-1 与可配置账户",
+      "title": "有界完整的内存池包装",
+      "note": "EIP-8288（Marchhill）：有界完整的内存池包装、依赖摘要绑定验证方案、携带证明的包含列表。",
+      "url": "https://github.com/ethereum/EIPs/pull/12473",
+      "date": "2026-10-10",
+      "title_en": "bounded complete mempool wrappers",
+      "note_en": "EIP-8288 (Marchhill): bounded complete mempool wrappers, dependency digests bound to verification schemes and proof-carrying inclusion lists.",
+      "topic_en": "Native AA's post-quantum path: frames-devnet-1 and configurable accounts"
+    },
+    {
+      "topic": "原生 AA 的抗量子路径：frames-devnet-1 与可配置账户",
+      "title": "依赖摘要绑定验证方案",
+      "note": "EIP-8288（Marchhill）：有界完整的内存池包装、依赖摘要绑定验证方案、携带证明的包含列表。",
+      "url": "https://github.com/ethereum/EIPs/pull/12474",
+      "date": "2026-10-10",
+      "title_en": "dependency digests bound to verification schemes",
+      "note_en": "EIP-8288 (Marchhill): bounded complete mempool wrappers, dependency digests bound to verification schemes and proof-carrying inclusion lists.",
+      "topic_en": "Native AA's post-quantum path: frames-devnet-1 and configurable accounts"
+    },
+    {
+      "topic": "原生 AA 的抗量子路径：frames-devnet-1 与可配置账户",
+      "title": "携带证明的包含列表",
+      "note": "EIP-8288（Marchhill）：有界完整的内存池包装、依赖摘要绑定验证方案、携带证明的包含列表。",
+      "url": "https://github.com/ethereum/EIPs/pull/12475",
+      "date": "2026-10-10",
+      "title_en": "proof-carrying inclusion lists",
+      "note_en": "EIP-8288 (Marchhill): bounded complete mempool wrappers, dependency digests bound to verification schemes and proof-carrying inclusion lists.",
+      "topic_en": "Native AA's post-quantum path: frames-devnet-1 and configurable accounts"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：Alpha V6 代码就绪，可进入治理流程上主网",
+      "note": "02:46，主打安全、稳定和速度。",
+      "url": "https://x.com/aztecnetwork/status/2108645263502110916",
+      "date": "2026-10-10",
+      "title_en": "Aztec: the Alpha V6 code is ready and can enter the governance process toward mainnet",
+      "note_en": "02:46, focused on security, stability and speed.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #248（10 月 22 日）议程帖",
+      "note": "16:18。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-248-october-22-2026/29937",
+      "date": "2026-10-10",
+      "title_en": "ACDE #248 (October 22) agenda thread",
+      "note_en": "16:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8437 eth/73 证明包装传播讨论帖",
+      "note": "07:18。",
+      "url": "https://ethereum-magicians.org/t/eip-8437-eth-73-proof-wrapper-propagation/29934",
+      "date": "2026-10-10",
+      "title_en": "EIP-8437 eth/73 proof wrapper propagation discussion thread",
+      "note_en": "07:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7962 加入找零输出事件、nonce 和 ERC-5267",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2062",
+      "date": "2026-10-10",
+      "title_en": "ERC-7962 adds change output to events, nonces and ERC-5267",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8448 代理服务订单修订",
+      "note": "16:14，买方和 AI 代理服务商如何共同同意修改已定订单。",
+      "url": "https://ethereum-magicians.org/t/erc-8448-agent-service-order-amendments/29936",
+      "date": "2026-10-10",
+      "title_en": "Magicians: ERC-8448 agent service order amendments",
+      "note_en": "16:14, on how a buyer and an AI agent service provider can jointly agree to change an order already placed.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Francesco D'Amato：Justin 的沟通方式远非理想，危言耸听没有用",
+      "note": "00:13；binji：没有 Justin Drake 就没有今天的以太坊 00:04。",
+      "url": "https://x.com/fradamt/status/2108606737221640383",
+      "date": "2026-10-10",
+      "title_en": "Francesco D'Amato: Justin's way of communicating was very far from ideal, and alarmism is not useful",
+      "note_en": "00:13; binji: Ethereum would not be Ethereum without Justin Drake, 00:04.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：没有 Justin Drake 就没有今天的以太坊",
+      "note": "Francesco D'Amato：Justin 的沟通方式远非理想，危言耸听没有用 00:13；binji：没有 Justin Drake 就没有今天的以太坊 00:04。",
+      "url": "https://x.com/binji_x/status/2108604487090766289",
+      "date": "2026-10-10",
+      "title_en": "binji: Ethereum would not be Ethereum without Justin Drake",
+      "note_en": "Francesco D'Amato: Justin's way of communicating was very far from ideal, and alarmism is not useful, 00:13; binji: Ethereum would not be Ethereum without Justin Drake, 00:04.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：SHA-256、SHA3、BLAKE3 安全边际的今日更新",
+      "note": "15:46。",
+      "url": "https://x.com/zooko/status/2108841471269015967",
+      "date": "2026-10-10",
+      "title_en": "zooko: today's update on the security margins of SHA-256, SHA3 and BLAKE3",
+      "note_en": "15:46.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12475",
+    "credit": "GitHub, ethereum/EIPs PR #12475",
+    "credit_en": "GitHub, ethereum/EIPs PR #12475"
+  },
+  "keywords_en": [
+    "frames-devnet-1",
+    "configurable accounts and key rotation",
+    "EIP-8288 mempool and FOCIL",
+    "Aztec Alpha V6",
+    "ACDE #248 agenda"
+  ],
+  "summary_en": "ethrex previewed frames-devnet-1, which adds EIP-8250, EIP-8272 and EIP-7906 on top of EIP-8141. Georgios Konstantopoulos said Tempo is not worried about post-quantum safety because configurable accounts can rotate keys in place and disable non-PQ keys. EIP-8288 gained mempool wrappers and proof-carrying inclusion lists. Aztec's Alpha V6 code is ready and enters governance."
+}

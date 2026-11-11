@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-02",
+  "keywords": [
+    "zkAPI",
+    "EIP-8288 隐私转账",
+    "隐形地址最小标准",
+    "EIP-7928 BAL",
+    "Ethereal news #41"
+  ],
+  "summary": "EF 与 Open Anonymity Project 发布 zkAPI，用零知识证明为付费 API 做匿名额度支付。soispoke 介绍 EIP-8288 下私密、抗量子的转账，Kassandra 主张把隐形地址做成所有钱包都能接入的最小接收标准。规范侧主要是 Glamsterdam 的 BAL（EIP-7928）和 Hegotá 候选 SETCODEFROM（EIP-8298）的细化。",
+  "items": [
+    {
+      "topic": "隐私支付：zkAPI 与 EIP-8288",
+      "title": "EF 博客：zkAPI，给任意 API 的私密用量额度",
+      "note": "EF 03:14 在 X 宣布（@ethereumfndn 推文）。用法是往以太坊 vault 存一次额度，再用零知识证明代替身份去授权有上限的用量。文中的例子是私密 AI 推理。",
+      "url": "https://blog.ethereum.org/en/2026/10/01/introducing-zkapi",
+      "date": "2026-10-02",
+      "title_en": "EF Blog: zkAPI, private usage credits for any API",
+      "note_en": "Announced by the EF on X at 03:14 (@ethereumfndn post). You deposit credits into an Ethereum vault once, then authorize bounded usage with zero-knowledge proofs instead of an identity. The example given is private AI inference.",
+      "topic_en": "Private payments: zkAPI and EIP-8288"
+    },
+    {
+      "topic": "隐私支付：zkAPI 与 EIP-8288",
+      "title": "@ethereumfndn 推文",
+      "note": "EF 博客：zkAPI，给任意 API 的私密用量额度，EF 03:14 在 X 宣布（@ethereumfndn 推文）。用法是往以太坊 vault 存一次额度，再用零知识证明代替身份去授权有上限的用量。文中的例子是私密 AI 推理。",
+      "url": "https://x.com/ethereumfndn/status/2105753290977980682",
+      "date": "2026-10-02",
+      "title_en": "@ethereumfndn post",
+      "note_en": "EF Blog: zkAPI, private usage credits for any API, announced by the EF on X at 03:14 (@ethereumfndn post). You deposit credits into an Ethereum vault once, then authorize bounded usage with zero-knowledge proofs instead of an identity. The example given is private AI inference.",
+      "topic_en": "Private payments: zkAPI and EIP-8288"
+    },
+    {
+      "topic": "隐私支付：zkAPI 与 EIP-8288",
+      "title": "soispoke：EIP-8288 下私密、抗量子的转账",
+      "note": "23:17。",
+      "url": "https://x.com/soispoke/status/2106055901446549680",
+      "date": "2026-10-02",
+      "title_en": "soispoke: private, post-quantum secure transfers under EIP-8288",
+      "note_en": "23:17.",
+      "topic_en": "Private payments: zkAPI and EIP-8288"
+    },
+    {
+      "topic": "隐私支付：zkAPI 与 EIP-8288",
+      "title": "Kassandra：隐形地址应是所有钱包都能采用的最小标准",
+      "note": "23:20，统一的是“私密收款”这一步，其余隐私管理交给各钱包。",
+      "url": "https://x.com/kassandraETH/status/2106056728353620188",
+      "date": "2026-10-02",
+      "title_en": "Kassandra: stealth addresses should be a minimal standard all wallets can adopt",
+      "note_en": "23:20. The shared part is receiving privately; the rest of privacy management is left to each wallet.",
+      "topic_en": "Private payments: zkAPI and EIP-8288"
+    },
+    {
+      "topic": "BAL（Glamsterdam）与 SETCODEFROM（Hegotá 候选）细化",
+      "title": "EIP-8298：在 BAL 中以哈希记录被采用的代码，拒绝同一交易内创建的源",
+      "note": "合并（CPerezz）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12399",
+      "date": "2026-10-02",
+      "title_en": "EIP-8298: record adopted code as a hash in the BAL and reject same-transaction-created sources",
+      "note_en": "Was merged (CPerezz).",
+      "topic_en": "Refining BAL (Glamsterdam) and SETCODEFROM (Hegotá candidate)"
+    },
+    {
+      "topic": "BAL（Glamsterdam）与 SETCODEFROM（Hegotá 候选）细化",
+      "title": "storage key 排序",
+      "note": "EIP-7928（区块级访问列表）三处澄清合并：storage key 排序（nerolation）、空 BAL 的条件 和 warm `SELFDESTRUCT` 受益人访问成本（colinlyguo）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12415",
+      "date": "2026-10-02",
+      "title_en": "storage key ordering",
+      "note_en": "Three EIP-7928 (block-level access lists) clarifications were merged: storage key ordering (nerolation), empty BAL conditions and the access cost of a warm `SELFDESTRUCT` beneficiary (colinlyguo).",
+      "topic_en": "Refining BAL (Glamsterdam) and SETCODEFROM (Hegotá candidate)"
+    },
+    {
+      "topic": "BAL（Glamsterdam）与 SETCODEFROM（Hegotá 候选）细化",
+      "title": "空 BAL 的条件",
+      "note": "EIP-7928（区块级访问列表）三处澄清合并：storage key 排序（nerolation）、空 BAL 的条件 和 warm `SELFDESTRUCT` 受益人访问成本（colinlyguo）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12416",
+      "date": "2026-10-02",
+      "title_en": "empty BAL conditions",
+      "note_en": "Three EIP-7928 (block-level access lists) clarifications were merged: storage key ordering (nerolation), empty BAL conditions and the access cost of a warm `SELFDESTRUCT` beneficiary (colinlyguo).",
+      "topic_en": "Refining BAL (Glamsterdam) and SETCODEFROM (Hegotá candidate)"
+    },
+    {
+      "topic": "BAL（Glamsterdam）与 SETCODEFROM（Hegotá 候选）细化",
+      "title": "warm `SELFDESTRUCT` 受益人访问成本",
+      "note": "EIP-7928（区块级访问列表）三处澄清合并：storage key 排序（nerolation）、空 BAL 的条件 和 warm `SELFDESTRUCT` 受益人访问成本（colinlyguo）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12408",
+      "date": "2026-10-02",
+      "title_en": "the access cost of a warm `SELFDESTRUCT` beneficiary",
+      "note_en": "Three EIP-7928 (block-level access lists) clarifications were merged: storage key ordering (nerolation), empty BAL conditions and the access cost of a warm `SELFDESTRUCT` beneficiary (colinlyguo).",
+      "topic_en": "Refining BAL (Glamsterdam) and SETCODEFROM (Hegotá candidate)"
+    },
+    {
+      "topic": "BAL（Glamsterdam）与 SETCODEFROM（Hegotá 候选）细化",
+      "title": "EIP-8159 对齐 EIP-7928 的 BAL 存储类型",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12397",
+      "date": "2026-10-02",
+      "title_en": "EIP-8159 aligned with EIP-7928 BAL storage types",
+      "note_en": "Was merged.",
+      "topic_en": "Refining BAL (Glamsterdam) and SETCODEFROM (Hegotá candidate)"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news weekly #41",
+      "note": "19:12：Glamsterdam 10 月 6 日上 Sepolia，Vitalik 的“密码学世界计算机”，Hegotá 的 focil-devnet-0 上线。",
+      "url": "https://x.com/EtherealnewsHQ/status/2105994309615181973",
+      "date": "2026-10-02",
+      "title_en": "Ethereal news weekly #41",
+      "note_en": "19:12: Glamsterdam goes to Sepolia on October 6, Vitalik's \"cryptographic world computer\", and Hegotá's focil-devnet-0 is live.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Spencer Taylor-Brown",
+      "note": "EIP-8037（状态创建定价）新增两位共同作者：Spencer Taylor-Brown、Gary Rong。",
+      "url": "https://github.com/ethereum/EIPs/pull/12401",
+      "date": "2026-10-02",
+      "title_en": "Spencer Taylor-Brown",
+      "note_en": "EIP-8037 (state creation pricing) added two co-authors: Spencer Taylor-Brown and Gary Rong.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Gary Rong",
+      "note": "EIP-8037（状态创建定价）新增两位共同作者：Spencer Taylor-Brown、Gary Rong。",
+      "url": "https://github.com/ethereum/EIPs/pull/12402",
+      "date": "2026-10-02",
+      "title_en": "Gary Rong",
+      "note_en": "EIP-8037 (state creation pricing) added two co-authors: Spencer Taylor-Brown and Gary Rong.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETH Economic Zone 9 月更新",
+      "note": "21:51：审计方在读合约，Nethermind 在开发 EEZ 客户端，一笔 CoW Swap 订单在实验网络上跨链结算。",
+      "url": "https://x.com/etheconomiczone/status/2106034298214064612",
+      "date": "2026-10-02",
+      "title_en": "ETH Economic Zone September update",
+      "note_en": "21:51: auditors are reading the contracts, Nethermind is building an EEZ client, and a CoW Swap order settled across chains on the experimental network.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "SEAL Frameworks 进入 fund_defi 的 OPSEC 资料库",
+      "note": "20:00，涵盖 AI 安全、prompt injection、数据外泄等。",
+      "url": "https://x.com/_SEAL_Org/status/2106006297480941762",
+      "date": "2026-10-02",
+      "title_en": "SEAL Frameworks added to fund_defi's OPSEC repository",
+      "note_en": "20:00, covering AI security, prompt injection, data exfiltration and more.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：很高兴 EF 存在，并免费做这些事",
+      "note": "21:41。",
+      "url": "https://x.com/binji_x/status/2106031939333316792",
+      "date": "2026-10-02",
+      "title_en": "binji: glad the EF exists and does this work for free",
+      "note_en": "21:41.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/10/01/introducing-zkapi",
+    "credit": "Ethereum Foundation Blog, Introducing zkAPI",
+    "local_path": "assets/2026-10-02.jpg",
+    "credit_en": "Ethereum Foundation Blog, Introducing zkAPI"
+  },
+  "keywords_en": [
+    "zkAPI",
+    "EIP-8288 private transfers",
+    "minimal stealth address standard",
+    "EIP-7928 BAL",
+    "Ethereal news #41"
+  ],
+  "summary_en": "The EF and the Open Anonymity Project launched zkAPI, which uses zero-knowledge proofs to pay for metered APIs anonymously. soispoke showed private, post-quantum transfers under EIP-8288, and Kassandra argued that stealth addresses should be a minimal receiving standard every wallet can adopt. On the spec side, the work was mostly refining Glamsterdam's BAL (EIP-7928) and SETCODEFROM (EIP-8298), a Hegotá candidate."
+}

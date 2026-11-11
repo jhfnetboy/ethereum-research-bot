@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-25",
+  "keywords": [
+    "CALLSTATUS 指令",
+    "EIP-8141 legacy share 合并",
+    "哈希链账户 rollup",
+    "EIP-8453 与后量子",
+    "硬件钱包数据泄露"
+  ],
+  "summary": "周末继续围绕 EIP-8037 的失败处理问题。新 EIP CALLSTATUS 提出用 2 gas 的指令直接告诉合约上一次调用是正常回滚还是在某处异常耗尽 gas，不再靠 `GAS` 算术推断。EIP-8141 收取 legacy share 的 PR 合并。ethresear 上有人介绍一条账户是 keccak 哈希链、L2 内没有签名的 OP Stack rollup。",
+  "items": [
+    {
+      "topic": "让合约分清 OOG 和正常失败",
+      "title": "新 EIP：CALLSTATUS 指令",
+      "note": "（svlachakis）。`CALLSTATUS`（`0xA5`，2 gas）把当前帧最近一次调用或创建的完成状态以三个位推入栈：回滚、异常停机、下层某处停机。`0` 成功，`1` 回滚或未开始，`2` 异常停机或地址冲突，`4` 下层停机后仍成功，`5` 下层停机后回滚；值 ≥2 表示调用链某处转发的 gas 被异常停机耗尽。动机是：交易发送方可以靠选 gas 制造 OOG，而合约今天只能用调用后的 `GAS` 算术判断。",
+      "url": "https://github.com/ethereum/EIPs/pull/12586",
+      "date": "2026-10-25",
+      "title_en": "New EIP: CALLSTATUS instruction",
+      "note_en": "(svlachakis). `CALLSTATUS` (`0xA5`, 2 gas) pushes the completion status of the current frame's most recent call or create as three bits: reverted, halted, and halt somewhere below. `0` is success, `1` reverted or not started, `2` halted exceptionally or address collision, `4` succeeded after a halt below, and `5` reverted after a halt below; a value of 2 or more means gas forwarded somewhere along the call line was consumed by an exceptional halt. The motivation: the transaction sender can cause an OOG by choosing the gas, while today contracts can only judge from `GAS` arithmetic after the call.",
+      "topic_en": "Letting contracts tell OOG from ordinary failure"
+    },
+    {
+      "topic": "让合约分清 OOG 和正常失败",
+      "title": "EIP-8141：把 EIP-8037 legacy share 作为额外执行 gas 收取",
+      "note": "合并；svlachakis 的同名 PR 也已合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12583",
+      "date": "2026-10-25",
+      "title_en": "EIP-8141: charge the EIP-8037 legacy share as extra execution gas",
+      "note_en": "Was merged, and svlachakis's PR of the same name was merged too.",
+      "topic_en": "Letting contracts tell OOG from ordinary failure"
+    },
+    {
+      "topic": "让合约分清 OOG 和正常失败",
+      "title": "svlachakis 的同名 PR",
+      "note": "EIP-8141：把 EIP-8037 legacy share 作为额外执行 gas 收取 合并；svlachakis 的同名 PR 也已合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12587",
+      "date": "2026-10-25",
+      "title_en": "svlachakis's PR of the same name",
+      "note_en": "EIP-8141: charge the EIP-8037 legacy share as extra execution gas was merged, and svlachakis's PR of the same name was merged too.",
+      "topic_en": "Letting contracts tell OOG from ordinary failure"
+    },
+    {
+      "topic": "后量子账户与共识",
+      "title": "ethresear.ch：纯哈希 rollup，OP Stack L2 账户是 Lamport 式哈希链，L2 内没有 ECDSA",
+      "note": "06:24（作者为 bb84 创始人，链 ID 42069000，9 月 30 日起在主网运行）。账户是 keccak-256 哈希链的末端，花费时揭示下一个原像，先承诺后揭示把每个原像绑定到一笔交易；L2 内唯一的假设是 keccak-256 原像抗性，Grover 只能把它降到约 2^128。ECDSA 仍出现在 L1 边界。",
+      "url": "https://ethresear.ch/t/a-hash-only-rollup-op-stack-l2-accounts-as-lamport-style-hash-chains-no-ecdsa-inside-the-l2/26172",
+      "date": "2026-10-25",
+      "title_en": "ethresear.ch: a hash-only rollup, OP Stack L2 accounts as Lamport-style hash chains with no ECDSA inside the L2",
+      "note_en": "06:24 (by the founder of bb84; chain ID 42069000, live on mainnet since September 30). An account is the tip of a keccak-256 hash chain, spending reveals the next preimage, and a commit-reveal step binds each preimage to one transaction. The only assumption inside the L2 is keccak-256 preimage resistance, which Grover reduces to about 2^128 work. ECDSA still appears at the L1 boundary.",
+      "topic_en": "Post-quantum accounts and consensus"
+    },
+    {
+      "topic": "后量子账户与共识",
+      "title": "tcoratger：深入 EIP-8453 解耦共识与后量子的交集",
+      "note": "05:12，从“为什么不能直接缩短 epoch 或 slot”讲起。",
+      "url": "https://x.com/tcoratger/status/2114117844396822869",
+      "date": "2026-10-25",
+      "title_en": "tcoratger: digging into the intersection of EIP-8453 decoupled consensus and post-quantum",
+      "note_en": "05:12, starting from why we cannot simply shorten epochs or slots.",
+      "topic_en": "Post-quantum accounts and consensus"
+    },
+    {
+      "topic": "后量子账户与共识",
+      "title": "Eli Ben-Sasson：为什么哈希密码学对超级智能最安全",
+      "note": "17:45，其他密码学都隐含需要安全的哈希。",
+      "url": "https://x.com/EliBenSasson/status/2114307230560649286",
+      "date": "2026-10-25",
+      "title_en": "Eli Ben-Sasson: why hash-based cryptography is safest against superintelligence",
+      "note_en": "17:45, since all other forms of cryptography imply secure hashes.",
+      "topic_en": "Post-quantum accounts and consensus"
+    },
+    {
+      "topic": "后量子账户与共识",
+      "title": "StarkWare：Solana 用户已经可以把 SOL 存进后量子金库，但 Solana 只通过 8 项密码学敏捷性检查中的 2 项",
+      "note": "20:19，原因是可选应用只能保护部分资金，不改变原生账户的密码学。",
+      "url": "https://x.com/StarkWareLtd/status/2114345992497823955",
+      "date": "2026-10-25",
+      "title_en": "StarkWare: Solana users can already store SOL in a post-quantum vault, yet Solana passes just 2 of 8 cryptographic agility checks",
+      "note_en": "20:19, because an opt-in application protects some funds without changing the cryptography of native accounts.",
+      "topic_en": "Post-quantum accounts and consensus"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：形式化验证库会成为以太坊已知数学性质的登记册",
+      "note": "23:56。",
+      "url": "https://x.com/barnabemonnot/status/2114400603484950806",
+      "date": "2026-10-25",
+      "title_en": "Barnabé: the formal verification library should act as a registry of mathematically known properties of Ethereum",
+      "note_en": "23:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8468 代理安全框架（ASF）",
+      "note": "21:48，当天 23 帖。",
+      "url": "https://ethereum-magicians.org/t/erc-8468-agent-safety-framework-asf/30073",
+      "date": "2026-10-25",
+      "title_en": "ERC-8468 Agent Safety Framework (ASF)",
+      "note_en": "21:48, with 23 posts that day.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zooko：自豪在 Shielded Labs 工作，持续守护 Zcash 安全",
+      "note": "23:00。",
+      "url": "https://x.com/zooko/status/2114386725078548607",
+      "date": "2026-10-25",
+      "title_en": "zooko: proud to work at Shielded Labs, never stopping in defending Zcash's security",
+      "note_en": "23:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：硬件钱包泄露收货信息的风险是人身攻击和绑架",
+      "note": "06:22，671 赞。",
+      "url": "https://x.com/tayvano_/status/2114135500760158435",
+      "date": "2026-10-25",
+      "title_en": "tayvano: the risk of hardware wallets leaking shipping information is physical assault and kidnapping",
+      "note_en": "06:22, with 671 likes.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dcbuilder：应该对现代硬件上的所有软件做逆向审计，看自己有没有隐私",
+      "note": "20:51。",
+      "url": "https://x.com/dcbuilder/status/2114354056814899408",
+      "date": "2026-10-25",
+      "title_en": "dcbuilder: people should decompile and audit all software on modern hardware to see whether they have privacy",
+      "note_en": "20:51.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12586",
+    "credit": "GitHub, ethereum/EIPs PR #12586",
+    "credit_en": "GitHub, ethereum/EIPs PR #12586"
+  },
+  "keywords_en": [
+    "CALLSTATUS instruction",
+    "EIP-8141 legacy share merged",
+    "hash-chain account rollup",
+    "EIP-8453 and post-quantum",
+    "hardware wallet data leak"
+  ],
+  "summary_en": "The weekend kept circling EIP-8037's failure-handling problem. A new EIP, CALLSTATUS, proposes a 2-gas instruction that tells a contract directly whether its last call reverted normally or ran out of gas through an exceptional halt somewhere below, with no more inference from `GAS` arithmetic. The EIP-8141 PR charging the legacy share was merged. On ethresear, a team described an OP Stack rollup whose accounts are keccak hash chains, with no signatures inside the L2."
+}

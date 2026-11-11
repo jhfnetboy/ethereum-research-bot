@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-06",
+  "keywords": [
+    "Glamsterdam 上线 Sepolia",
+    "EIP-8298 内存池规则",
+    "EIP-7906 定价",
+    "Frame 过期验证合约",
+    "EIP-7708"
+  ],
+  "summary": "Glamsterdam 在 Sepolia 激活并完成最终确定，这是 ePBS 和区块级访问列表第一次上公共测试网，nero_eth 称它会带来以太坊上线以来最大的吞吐提升。规范侧围绕账户和交易继续推进：EIP-8298（SETCODEFROM）补上公共内存池规则，EIP-7906 的 TXTRACE/TXDIFF 按 warm 读取定价，EIP-8141 把 frame 过期验证器部署为标准合约。",
+  "items": [
+    {
+      "topic": "Glamsterdam 在 Sepolia 激活",
+      "title": "nero_eth：Sepolia 验证者请升级节点",
+      "note": "15:42，Glamsterdam（Gloas + Amsterdam）的主轴是扩容；随后补充：这会是以太坊上线以来最大的吞吐提升 17:43。",
+      "url": "https://x.com/nero_eth/status/2107391098297471335",
+      "date": "2026-10-06",
+      "title_en": "nero_eth: Sepolia validators, update your nodes",
+      "note_en": "15:42; Glamsterdam (Gloas + Amsterdam) is mainly about scaling. He followed up: it will bring Ethereum's biggest throughput increase since launch, 17:43.",
+      "topic_en": "Glamsterdam activates on Sepolia"
+    },
+    {
+      "topic": "Glamsterdam 在 Sepolia 激活",
+      "title": "随后补充：这会是以太坊上线以来最大的吞吐提升",
+      "note": "nero_eth：Sepolia 验证者请升级节点 15:42，Glamsterdam（Gloas + Amsterdam）的主轴是扩容；随后补充：这会是以太坊上线以来最大的吞吐提升 17:43。",
+      "url": "https://x.com/nero_eth/status/2107421605416911156",
+      "date": "2026-10-06",
+      "title_en": "He followed up: it will bring Ethereum's biggest throughput increase since launch",
+      "note_en": "Nero_eth: Sepolia validators, update your nodes, 15:42; Glamsterdam (Gloas + Amsterdam) is mainly about scaling. He followed up: it will bring Ethereum's biggest throughput increase since launch, 17:43.",
+      "topic_en": "Glamsterdam activates on Sepolia"
+    },
+    {
+      "topic": "Glamsterdam 在 Sepolia 激活",
+      "title": "Pooja Ranjan：Glamsterdam 已在 Sepolia 上线",
+      "note": "20:56，共 18 个 Core 和 7 个其他 EIP。Terence：Sepolia 的 Glamsterdam 升级已最终确定 21:24。",
+      "url": "https://x.com/poojaranjan19/status/2107469936884879637",
+      "date": "2026-10-06",
+      "title_en": "Pooja Ranjan: Glamsterdam is live on Sepolia",
+      "note_en": "20:56, with 18 Core and 7 other EIPs. Terence: Sepolia's Glamsterdam upgrade has finalized, 21:24.",
+      "topic_en": "Glamsterdam activates on Sepolia"
+    },
+    {
+      "topic": "Glamsterdam 在 Sepolia 激活",
+      "title": "Terence：Sepolia 的 Glamsterdam 升级已最终确定",
+      "note": "Pooja Ranjan：Glamsterdam 已在 Sepolia 上线 20:56，共 18 个 Core 和 7 个其他 EIP。Terence：Sepolia 的 Glamsterdam 升级已最终确定 21:24。",
+      "url": "https://x.com/terencechain/status/2107476997052256428",
+      "date": "2026-10-06",
+      "title_en": "Terence: Sepolia's Glamsterdam upgrade has finalized",
+      "note_en": "Pooja Ranjan: Glamsterdam is live on Sepolia, 20:56, with 18 Core and 7 other EIPs. Terence: Sepolia's Glamsterdam upgrade has finalized, 21:24.",
+      "topic_en": "Glamsterdam activates on Sepolia"
+    },
+    {
+      "topic": "Glamsterdam 在 Sepolia 激活",
+      "title": "Nethermind：节点在没有独立共识客户端的情况下跟上 Sepolia",
+      "note": "21:33，靠一个仍在开发的 beacon chain 插件。",
+      "url": "https://x.com/Nethermind/status/2107479338887049620",
+      "date": "2026-10-06",
+      "title_en": "Nethermind: a node following Sepolia with no separate consensus client",
+      "note_en": "21:33, using a beacon chain plugin still in development.",
+      "topic_en": "Glamsterdam activates on Sepolia"
+    },
+    {
+      "topic": "Glamsterdam 在 Sepolia 激活",
+      "title": "Luca Donno：一个用来测试 Glamsterdam 的公共聊天应用",
+      "note": "22:13，消息走 calldata，借 EIP-7708 的 ETH 转账日志建索引。",
+      "url": "https://x.com/donnoh_eth/status/2107489348950401232",
+      "date": "2026-10-06",
+      "title_en": "Luca Donno: a public chat app for testing Glamsterdam",
+      "note_en": "22:13. Messages go through calldata and are indexed with EIP-7708 ETH transfer logs.",
+      "topic_en": "Glamsterdam activates on Sepolia"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "EIP-8298 PR：加入公共内存池规则",
+      "note": "合并（Marchhill）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12427",
+      "date": "2026-10-06",
+      "title_en": "EIP-8298 PR: add public mempool rules",
+      "note_en": "Was merged (Marchhill).",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "EIP-7906 PR：TXTRACE 与 TXDIFF 视图按 warm 读取成本定价",
+      "note": "合并；另一 PR 规定单笔交易 diff 的上限。",
+      "url": "https://github.com/ethereum/EIPs/pull/12437",
+      "date": "2026-10-06",
+      "title_en": "EIP-7906 PR: price TXTRACE and TXDIFF views at warm read cost",
+      "note_en": "Was merged, and another PR sets limits on a single transaction's diff.",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "另一 PR 规定单笔交易 diff 的上限",
+      "note": "EIP-7906 PR：TXTRACE 与 TXDIFF 视图按 warm 读取成本定价 合并；另一 PR 规定单笔交易 diff 的上限。",
+      "url": "https://github.com/ethereum/EIPs/pull/12438",
+      "date": "2026-10-06",
+      "title_en": "another PR sets limits on a single transaction's diff",
+      "note_en": "EIP-7906 PR: price TXTRACE and TXDIFF views at warm read cost was merged, and another PR sets limits on a single transaction's diff.",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "EIP-8141 PR：把 frames 过期验证器部署为标准合约",
+      "note": "合并（lightclient）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12387",
+      "date": "2026-10-06",
+      "title_en": "EIP-8141 PR: deploy the frames expiry verifier as a standard contract",
+      "note_en": "Was merged (lightclient).",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "零 data_hash 代表交易签名哈希",
+      "note": "EIP-8288：零 data_hash 代表交易签名哈希、mode 1 包装要求依赖并集检查、recursive_stark_gas 记在交易上。",
+      "url": "https://github.com/ethereum/EIPs/pull/12435",
+      "date": "2026-10-06",
+      "title_en": "a zero data_hash stands for the transaction signature hash",
+      "note_en": "EIP-8288: a zero data_hash stands for the transaction signature hash, mode 1 wrappers must check the dependency union, and recursive_stark_gas is charged to the transaction.",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "mode 1 包装要求依赖并集检查",
+      "note": "EIP-8288：零 data_hash 代表交易签名哈希、mode 1 包装要求依赖并集检查、recursive_stark_gas 记在交易上。",
+      "url": "https://github.com/ethereum/EIPs/pull/12436",
+      "date": "2026-10-06",
+      "title_en": "mode 1 wrappers must check the dependency union",
+      "note_en": "EIP-8288: a zero data_hash stands for the transaction signature hash, mode 1 wrappers must check the dependency union, and recursive_stark_gas is charged to the transaction.",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "recursive_stark_gas 记在交易上",
+      "note": "EIP-8288：零 data_hash 代表交易签名哈希、mode 1 包装要求依赖并集检查、recursive_stark_gas 记在交易上。",
+      "url": "https://github.com/ethereum/EIPs/pull/12439",
+      "date": "2026-10-06",
+      "title_en": "recursive_stark_gas is charged to the transaction",
+      "note_en": "EIP-8288: a zero data_hash stands for the transaction signature hash, mode 1 wrappers must check the dependency union, and recursive_stark_gas is charged to the transaction.",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "账户与交易规范：SETCODEFROM、断言、Frame",
+      "title": "EIP-5920 PR：按 EIP-8038 的 ACCOUNT_WRITE 给转账价值定价",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12428",
+      "date": "2026-10-06",
+      "title_en": "EIP-5920 PR: price value with ACCOUNT_WRITE under EIP-8038",
+      "note_en": ".",
+      "topic_en": "Account and transaction specs: SETCODEFROM, assertions, frames"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Starknet v0.14.4 上线主网",
+      "note": "23:29，为区块级证明做准备，激活后单笔交易最多可用 11 亿 L2 gas。",
+      "url": "https://x.com/StarkWareLtd/status/2107508563564515747",
+      "date": "2026-10-06",
+      "title_en": "Starknet v0.14.4 live on mainnet",
+      "note_en": "23:29, laying groundwork for block-sized proofs; once activated, a single transaction can use up to 1.1B L2 gas.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081 记录 ACDC188 的决定",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12429",
+      "date": "2026-10-06",
+      "title_en": "EIP-8081 records the ACDC188 decisions",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Prysm 用户在 Sepolia 使用外部 builder 请用指定版本",
+      "note": "06:53。",
+      "url": "https://x.com/potuz_eth/status/2107257969498849332",
+      "date": "2026-10-06",
+      "title_en": "Prysm users with external builders on Sepolia should use a specific release",
+      "note_en": "06:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：Nethermind 持续让以太坊更高效、更快",
+      "note": "16:24。",
+      "url": "https://x.com/VitalikButerin/status/2107401554521428308",
+      "date": "2026-10-06",
+      "title_en": "Vitalik: Nethermind keeps making Ethereum more efficient and faster",
+      "note_en": "16:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：“私有列车，公共铁轨”",
+      "note": "18:09，目标是让资产在以太坊发行、持有和使用，价值归于网络和 ETH。",
+      "url": "https://x.com/barnabemonnot/status/2107428074681762008",
+      "date": "2026-10-06",
+      "title_en": "Barnabé: \"private trains, public rails\"",
+      "note_en": "18:09. The goal is the best network for issuing, holding and using assets, with value accruing to the network and ETH.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12387",
+    "credit": "GitHub, ethereum/EIPs PR #12387",
+    "credit_en": "GitHub, ethereum/EIPs PR #12387"
+  },
+  "keywords_en": [
+    "Glamsterdam live on Sepolia",
+    "EIP-8298 mempool rules",
+    "EIP-7906 pricing",
+    "frame expiry verifier contract",
+    "EIP-7708"
+  ],
+  "summary_en": "Glamsterdam activated and finalized on Sepolia, the first time ePBS and block-level access lists ran on a public testnet, and nero_eth called it Ethereum's biggest throughput increase since launch. Account and transaction specs kept moving: EIP-8298 (SETCODEFROM) gained public mempool rules, EIP-7906's TXTRACE/TXDIFF views are priced at warm read cost, and EIP-8141 deploys the frame expiry verifier as a standard contract."
+}

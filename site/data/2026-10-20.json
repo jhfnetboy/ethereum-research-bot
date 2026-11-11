@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-20",
+  "keywords": [
+    "SETCODEFROM 采用规范",
+    "EIP-8151",
+    "ERC-7902 frame 交易钱包能力",
+    "EIP-8198 10 秒 slot",
+    "EIP-7906 去掉 TXDIFF",
+    "Privacy Pools v2"
+  ],
+  "summary": "Magicians 上关于“EOA 通过 SETCODEFROM 采用代码”的 Pre-ERC 当天收到 27 帖。它指出 EIP-8298 加 EIP-8151 可以在不搬资产的情况下让 secp256k1 私钥退役，但采用是单向的，列出七种多数不可逆的失败模式。ERC-7902 改为以 frame 交易作为钱包 AA 能力的链上载体。EIP-8198（quick slots）改为目标 10 秒 slot。0xbow 的 Privacy Pools v2 上线，资金可以在屏蔽池内转账、换币和生息。当天召开 Frame Transaction Breakout #7。",
+  "items": [
+    {
+      "topic": "用 SETCODEFROM 让 EOA 的私钥退役",
+      "title": "Magicians：Pre-ERC，EOA 通过 SETCODEFROM 采用代码的采用规范与参考内核",
+      "note": "18:02（nezu511），当天 27 帖、30 赞。EIP-8298 让 EOA 在自己的地址上采用账户代码，EIP-8151 让 ecrecover 不再返回持有常规代码的地址；两者结合，secp256k1 私钥既不能再发交易，也不能再通过 ecrecover 代表该账户，资产不用转移。采用是单向的，没有回到空代码的路径，所以采用的代码和那笔交易必须一次做对。作者找到七种失败模式，多数不可逆，例如回退到 `ecrecover(...) == address(this)` 的代码会在采用瞬间把账户锁死。在 OP Stack 这类存在跳过 sender 代码检查的包含路径的链上，只有在路径源头完成迁移后才成立。",
+      "url": "https://ethereum-magicians.org/t/pre-erc-adoption-profile-and-reference-kernel-for-eoas-adopting-code-via-setcodefrom/30020",
+      "date": "2026-10-20",
+      "title_en": "Magicians: Pre-ERC, an adoption profile and reference kernel for EOAs adopting code via SETCODEFROM",
+      "note_en": "18:02 (nezu511), with 27 posts and 30 likes that day. EIP-8298 lets an EOA adopt account code at its own address, and EIP-8151 makes ecrecover stop returning addresses that hold regular code. Combined, the secp256k1 key can no longer send transactions or pass ecrecover for that account, and no assets need to move. Adoption is one-way, with no return to empty code, so the adopted code and the adopting transaction must be right the first time. The author found seven failure modes, most irreversible; for example, code that falls back to `ecrecover(...) == address(this)` locks the account out the moment it is adopted. On chains with an inclusion path that skips the sender-code check, such as OP Stack deposits, this only holds once the account has migrated where that path originates.",
+      "topic_en": "Retiring an EOA's key with SETCODEFROM"
+    },
+    {
+      "topic": "钱包与交易：ERC-7902、EIP-7906",
+      "title": "ERC-7902 PR：为 EIP-8141 frame 交易定义钱包能力",
+      "note": "合并（forshtat）。理由是 AA 的重心已全面转向 frame 交易，而现有能力里只有 `eip7702Auth` 有实际采用；更新后 dApp 可以通过 `wallet_sendCalls` 请求 frame 交易功能，包括 Hegotá 候选的 keyed nonce、recent roots 和交易断言。",
+      "url": "https://github.com/ethereum/ERCs/pull/2091",
+      "date": "2026-10-20",
+      "title_en": "ERC-7902 PR: wallet capabilities for EIP-8141 frame transactions",
+      "note_en": "Was merged (forshtat). The rationale is that AA progress has shifted fully to frame transactions, while among existing capabilities only `eip7702Auth` has seen meaningful adoption. After the update, a dApp can request frame transaction features through `wallet_sendCalls`, including the Hegotá candidates keyed nonces, recent roots and transaction assertions.",
+      "topic_en": "Wallets and transactions: ERC-7902 and EIP-7906"
+    },
+    {
+      "topic": "钱包与交易：ERC-7902、EIP-7906",
+      "title": "EIP-7906：去掉 TXDIFF",
+      "note": "合并；只在 sender 的账户 nonce 变化时把它放入 nonces_changed 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12530",
+      "date": "2026-10-20",
+      "title_en": "EIP-7906: remove TXDIFF",
+      "note_en": "Was merged, as was including tx.sender in nonces_changed only when its account nonce changes.",
+      "topic_en": "Wallets and transactions: ERC-7902 and EIP-7906"
+    },
+    {
+      "topic": "钱包与交易：ERC-7902、EIP-7906",
+      "title": "只在 sender 的账户 nonce 变化时把它放入 nonces_changed",
+      "note": "EIP-7906：去掉 TXDIFF 合并；只在 sender 的账户 nonce 变化时把它放入 nonces_changed 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12554",
+      "date": "2026-10-20",
+      "title_en": "including tx.sender in nonces_changed only when its account nonce changes",
+      "note_en": "EIP-7906: remove TXDIFF was merged, as was including tx.sender in nonces_changed only when its account nonce changes.",
+      "topic_en": "Wallets and transactions: ERC-7902 and EIP-7906"
+    },
+    {
+      "topic": "钱包与交易：ERC-7902、EIP-7906",
+      "title": "Derek Chiang：EIP-8288 递归内存池聚合的可视化",
+      "note": "20:23，去中心化程度越高、扩展性越强。",
+      "url": "https://x.com/decentrek/status/2112535053188145367",
+      "date": "2026-10-20",
+      "title_en": "Derek Chiang: a visualization of EIP-8288, recursive mempool aggregation",
+      "note_en": "20:23, a system whose scalability increases with decentralization.",
+      "topic_en": "Wallets and transactions: ERC-7902 and EIP-7906"
+    },
+    {
+      "topic": "钱包与交易：ERC-7902、EIP-7906",
+      "title": "新 EIP：eth/73 递归 STARK 交换",
+      "note": "（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12551",
+      "date": "2026-10-20",
+      "title_en": "New EIP: eth/73 recursive STARK exchange",
+      "note_en": "(nerolation).",
+      "topic_en": "Wallets and transactions: ERC-7902 and EIP-7906"
+    },
+    {
+      "topic": "Privacy Pools v2 上线",
+      "title": "0xbow：Privacy Pools v2 上线",
+      "note": "（博客日期 10 月 20 日），覆盖以太坊主网、Arbitrum、Base、OP Mainnet、BNB Chain、Robinhood Chain 和 Citrea。v1 只能存入后提到新地址；v2 让资金在屏蔽池内流转：池内转账不暴露发送方、接收方和金额，支持收款请求链接、经 LI.FI 换币、通过 Aave v3 生息（票据持有 ERC-4626 份额）。余额是一组票据，链上只放 Poseidon 承诺，花费时公开 nullifier。每笔存款带私有标签，由 0xbow 运营的 Association Set Provider（ASP）筛查并在链上公布获批标签集合；被拒时可以随时 ragequit 公开退出。隐私密钥由钱包签名派生，注册到链上 keystore，换花费密钥不用搬资金；relayer 代付 gas，从转移的资产里收费。",
+      "url": "https://0xbow.io/blog/privacy-pools-v2-is-live",
+      "date": "2026-10-20",
+      "title_en": "0xbow: Privacy Pools v2 is live",
+      "note_en": "(blog dated October 20) on Ethereum mainnet, Arbitrum, Base, OP Mainnet, BNB Chain, Robinhood Chain and Citrea. v1 only allowed depositing and later withdrawing to a new address; v2 lets funds move inside a shielded pool. Transfers in the pool reveal neither sender, recipient nor amount, and v2 adds payment request links, swaps routed through LI.FI and yield through Aave v3 (notes hold ERC-4626 shares). A balance is a set of notes; only a Poseidon commitment goes onchain, and spending publishes a nullifier. Every deposit carries a private label, screened by the Association Set Provider (ASP) run by 0xbow, which publishes the approved label set onchain; a declined deposit can always ragequit through a public exit. Privacy keys are derived from a wallet signature and registered in an onchain keystore, so the spending key can be rotated without moving funds, and a relayer pays gas and takes its fee in the asset being moved.",
+      "topic_en": "Privacy Pools v2 goes live"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8198：目标 10 秒 slot，并对齐参考规范",
+      "note": "合并（Barnabé），用类似 EIP-7892 `BLOB_SCHEDULE` 的 `SLOT_DURATION_SCHEDULE` 取代单一常量；base fee 响应速度按 slot 时长推导。",
+      "url": "https://github.com/ethereum/EIPs/pull/12217",
+      "date": "2026-10-20",
+      "title_en": "EIP-8198: target 10-second slots and align with the reference specs",
+      "note_en": "Was merged (Barnabé), replacing a single constant with a `SLOT_DURATION_SCHEDULE` modeled on EIP-7892's `BLOB_SCHEDULE`; derive base fee responsiveness from slot timing.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "base fee 响应速度按 slot 时长推导",
+      "note": "EIP-8198：目标 10 秒 slot，并对齐参考规范 合并（Barnabé），用类似 EIP-7892 `BLOB_SCHEDULE` 的 `SLOT_DURATION_SCHEDULE` 取代单一常量；base fee 响应速度按 slot 时长推导。",
+      "url": "https://github.com/ethereum/EIPs/pull/12552",
+      "date": "2026-10-20",
+      "title_en": "derive base fee responsiveness from slot timing",
+      "note_en": "EIP-8198: target 10-second slots and align with the reference specs was merged (Barnabé), replacing a single constant with a `SLOT_DURATION_SCHEDULE` modeled on EIP-7892's `BLOB_SCHEDULE`; derive base fee responsiveness from slot timing.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：BAL 保留期与历史过期窗口对齐",
+      "note": "合并；EIP-7732 对齐当前共识规范 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12347",
+      "date": "2026-10-20",
+      "title_en": "EIP-7928: align BAL retention with the history expiry window",
+      "note_en": "Merged; EIP-7732 aligned with current consensus specs, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7732 对齐当前共识规范",
+      "note": "EIP-7928：BAL 保留期与历史过期窗口对齐 合并；EIP-7732 对齐当前共识规范 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12553",
+      "date": "2026-10-20",
+      "title_en": "EIP-7732 aligned with current consensus specs",
+      "note_en": "EIP-7928: align BAL retention with the history expiry window, merged; EIP-7732 aligned with current consensus specs, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet Foundation 发布原生 AA 钱包 Bramble",
+      "note": "22:46，支持多签和内置隐私。",
+      "url": "https://x.com/StarkWareLtd/status/2112571151826264387",
+      "date": "2026-10-20",
+      "title_en": "StarkWare: the Starknet Foundation launches Bramble, a native AA wallet",
+      "note_en": "22:46, with multisig and built-in privacy.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：在客户端中加入 EEZ 支持",
+      "note": "22:54。",
+      "url": "https://x.com/Nethermind/status/2112573154639905174",
+      "date": "2026-10-20",
+      "title_en": "Nethermind: building EEZ support into its client",
+      "note_en": "22:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：统一钱包聚合与多代币付 gas 的想法",
+      "note": "07:11。",
+      "url": "https://ethereum-magicians.org/t/idea-unified-wallet-aggregator-with-multi-token-gas-payment/30013",
+      "date": "2026-10-20",
+      "title_en": "Magicians: an idea for a unified wallet aggregator with multi-token gas payment",
+      "note_en": "07:11.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8460 Agent Credit Lines",
+      "note": "一批 AI 代理信用类 ERC 讨论帖开启，如 ERC-8460 Agent Credit Lines 22:22。",
+      "url": "https://ethereum-magicians.org/t/erc-8460-agent-credit-lines/30023",
+      "date": "2026-10-20",
+      "title_en": "ERC-8460 Agent Credit Lines",
+      "note_en": "A batch of AI agent credit ERCs opened discussion threads, such as ERC-8460 Agent Credit Lines, 22:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：归根结底是安全和流动性两件事",
+      "note": "13:55。",
+      "url": "https://x.com/barnabemonnot/status/2112437571678532048",
+      "date": "2026-10-20",
+      "title_en": "Barnabé: it really boils down to security and liquidity",
+      "note_en": "13:55.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/pre-erc-adoption-profile-and-reference-kernel-for-eoas-adopting-code-via-setcodefrom/30020",
+    "credit": "Ethereum Magicians, Pre-ERC: Adoption Profile and Reference Kernel for EOAs Adopting Code via SETCODEFROM",
+    "local_path": "assets/2026-10-20.jpg",
+    "credit_en": "Ethereum Magicians, Pre-ERC: Adoption Profile and Reference Kernel for EOAs Adopting Code via SETCODEFROM"
+  },
+  "keywords_en": [
+    "SETCODEFROM adoption profile",
+    "EIP-8151",
+    "ERC-7902 frame transaction wallet capabilities",
+    "EIP-8198 10-second slots",
+    "EIP-7906 drops TXDIFF",
+    "Privacy Pools v2"
+  ],
+  "summary_en": "A Pre-ERC on Magicians about EOAs adopting code via SETCODEFROM drew 27 posts in a day. It points out that EIP-8298 plus EIP-8151 can retire a secp256k1 key without moving assets, but adoption is one-way, and it lists seven failure modes, most of them irreversible. ERC-7902 now uses frame transactions as the onchain transport for wallet AA capabilities. EIP-8198 (quick slots) now targets 10-second slots. 0xbow's Privacy Pools v2 went live, letting funds move, swap and earn yield inside a shielded pool. Frame Transaction Breakout #7 met today."
+}

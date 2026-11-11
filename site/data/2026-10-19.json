@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-19",
+  "keywords": [
+    "后量子隐私池",
+    "Flock SNARK",
+    "密码学不该放在预编译",
+    "EIP-8288 递归 STARK",
+    "后量子验证者密钥注册表",
+    "Safe Rollup"
+  ],
+  "summary": "Pierre 与 winderica 把 Tornado Cash 移植到后量子二元域 SNARK Flock，SHA-256 上深度 32 的提款证明不到 30 毫秒，并给出离散对数被攻破后现有池子也能存活的恢复协议。Vitalik 认为预编译和 EVM 都不是放大部分密码学支持的地方，因为数据都得进区块 calldata。EIP-8288 提议把递归 STARK 移进执行负载，tcoratger 提交后量子验证者密钥注册表。",
+  "items": [
+    {
+      "topic": "隐私池走向后量子",
+      "title": "ethresear.ch：更快、可聚合、抗量子的隐私池",
+      "note": "17:59（Pierre，与 winderica 合作）。Tornado Cash 这类池子靠 Pedersen 承诺和 Groth16 证明，都依赖离散对数难题。作者把它移植到 Flock（后量子二元域 SNARK），基于 SHA-256 的深度 32 提款证明不到 30 毫秒，并描述一个简单的恢复协议：只要钱包从种子派生 note 秘密，现有池子在离散对数被攻破后也能存活。",
+      "url": "https://ethresear.ch/t/faster-aggregatable-and-quantum-safe-privacy-pools/26163",
+      "date": "2026-10-19",
+      "title_en": "ethresear.ch: faster, aggregatable and quantum-safe privacy pools",
+      "note_en": "17:59 (Pierre, with winderica). Pools like Tornado Cash rely on Pedersen commitments and Groth16 proofs, both resting on the hardness of discrete log. The authors port it to Flock, a post-quantum binary-field SNARK, proving a depth-32 withdrawal over SHA-256 in under 30 ms, and describe a simple recovery protocol: as long as wallets derive note secrets from a seed, existing pools can survive a discrete log break.",
+      "topic_en": "Privacy pools go post-quantum"
+    },
+    {
+      "topic": "隐私池走向后量子",
+      "title": "Vitalik：预编译和 EVM 都不是放大部分密码学支持的正确位置",
+      "note": "11:04，原因是它们处理的数据都得进入区块，现实中就是 calldata。",
+      "url": "https://x.com/VitalikButerin/status/2112032009413439704",
+      "date": "2026-10-19",
+      "title_en": "Vitalik: precompiles and the EVM are both the wrong place to put most cryptography support",
+      "note_en": "11:04, because the data they operate on has to be included in the chain, which realistically means block calldata.",
+      "topic_en": "Privacy pools go post-quantum"
+    },
+    {
+      "topic": "隐私池走向后量子",
+      "title": "EIP-8288 PR：把递归 STARK 移进执行负载",
+      "note": "（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12549",
+      "date": "2026-10-19",
+      "title_en": "EIP-8288 PR: move the recursive STARK into the execution payload",
+      "note_en": "(nerolation).",
+      "topic_en": "Privacy pools go post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：后量子验证者密钥注册表",
+      "note": "（tcoratger）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12550",
+      "date": "2026-10-19",
+      "title_en": "New EIP: post-quantum validator key registry",
+      "note_en": "(tcoratger).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8250：单次使用序列免除数据定价",
+      "note": "合并；EIP-8151：失败输出为空与 EIP-8038 访问 gas 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12534",
+      "date": "2026-10-19",
+      "title_en": "EIP-8250: exempt single-use sequences from data pricing",
+      "note_en": "Merged; EIP-8151: empty failure output and EIP-8038 access gas, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8151：失败输出为空与 EIP-8038 访问 gas",
+      "note": "EIP-8250：单次使用序列免除数据定价 合并；EIP-8151：失败输出为空与 EIP-8038 访问 gas 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12540",
+      "date": "2026-10-19",
+      "title_en": "EIP-8151: empty failure output and EIP-8038 access gas",
+      "note_en": "EIP-8250: exempt single-use sequences from data pricing, merged; EIP-8151: empty failure output and EIP-8038 access gas, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8279 PR：按实际 BAL 字节结算下限",
+      "note": "EIP-8159 跟随 EIP-7928 的 BAL 保留期变更。",
+      "url": "https://github.com/ethereum/EIPs/pull/12548",
+      "date": "2026-10-19",
+      "title_en": "EIP-8279 PR: settle the floor on actual BAL bytes",
+      "note_en": "EIP-8159 follows the EIP-7928 BAL retention change.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8159 跟随 EIP-7928 的 BAL 保留期变更",
+      "note": "EIP-8279 PR：按实际 BAL 字节结算下限；EIP-8159 跟随 EIP-7928 的 BAL 保留期变更。",
+      "url": "https://github.com/ethereum/EIPs/pull/12546",
+      "date": "2026-10-19",
+      "title_en": "EIP-8159 follows the EIP-7928 BAL retention change",
+      "note_en": "EIP-8279 PR: settle the floor on actual BAL bytes; EIP-8159 follows the EIP-7928 BAL retention change.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Luca Donno：Safe Rollup，锚定以太坊、运营方控制",
+      "note": "18:31，名字里的 Safe 指 Safe 多签，已上 Sepolia。",
+      "url": "https://x.com/donnoh_eth/status/2112144580003180769",
+      "date": "2026-10-19",
+      "title_en": "Luca Donno: Safe Rollup, Ethereum-anchored and operator-controlled",
+      "note_en": "18:31; the Safe in the name means the Safe multisig. Live on Sepolia.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam 让离线节点追链大幅提速",
+      "note": "nero_eth：Glamsterdam 让离线节点追链大幅提速 13:21；部分状态节点可以不重新执行已最终确定的区块就提供 RPC 23:35。",
+      "url": "https://x.com/nero_eth/status/2112066478912499916",
+      "date": "2026-10-19",
+      "title_en": "Glamsterdam will greatly speed up catching up with the chain after being offline",
+      "note_en": "Nero_eth: Glamsterdam will greatly speed up catching up with the chain after being offline, 13:21; partial-stateful nodes can serve RPC without re-executing finalized blocks, 23:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "部分状态节点可以不重新执行已最终确定的区块就提供 RPC",
+      "note": "nero_eth：Glamsterdam 让离线节点追链大幅提速 13:21；部分状态节点可以不重新执行已最终确定的区块就提供 RPC 23:35。",
+      "url": "https://x.com/nero_eth/status/2112221198654312748",
+      "date": "2026-10-19",
+      "title_en": "partial-stateful nodes can serve RPC without re-executing finalized blocks",
+      "note_en": "Nero_eth: Glamsterdam will greatly speed up catching up with the chain after being offline, 13:21; partial-stateful nodes can serve RPC without re-executing finalized blocks, 23:35.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：原生账户抽象是后量子时代的密码学可替换性",
+      "note": "22:12。",
+      "url": "https://x.com/StarkWareLtd/status/2112200179818611022",
+      "date": "2026-10-19",
+      "title_en": "StarkWare: native account abstraction is crypto agility for a post-quantum world",
+      "note_en": "22:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081 记录 ACDC 189 决定并加入 Sepolia、Hoodi 日期",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12521",
+      "date": "2026-10-19",
+      "title_en": "EIP-8081 records the ACDC 189 decisions and adds Sepolia and Hoodi dates",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：可锁定代币的永久锁",
+      "note": "EIP-8445 通用计算 gas 缩放因子讨论帖 11:26。",
+      "url": "https://github.com/ethereum/ERCs/pull/2084",
+      "date": "2026-10-19",
+      "title_en": "New ERC: permanent locks for lockable tokens",
+      "note_en": "EIP-8445 common computational gas scaling factor discussion thread, 11:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8445 通用计算 gas 缩放因子讨论帖",
+      "note": "新 ERC：可锁定代币的永久锁；EIP-8445 通用计算 gas 缩放因子讨论帖 11:26。",
+      "url": "https://ethereum-magicians.org/t/eip-8445-common-computational-gas-scaling-factor/30002",
+      "date": "2026-10-19",
+      "title_en": "EIP-8445 common computational gas scaling factor discussion thread",
+      "note_en": "New ERC: permanent locks for lockable tokens; EIP-8445 common computational gas scaling factor discussion thread, 11:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "growthepie 引用 Ethlabs 第 17 周：ETH 是以太坊最重要的应用",
+      "note": "17:52。",
+      "url": "https://x.com/growthepie_eth/status/2112134730992796053",
+      "date": "2026-10-19",
+      "title_en": "growthepie quotes Ethlabs week 17: ETH is Ethereum's most important application",
+      "note_en": "17:52.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：“我们链有 X，以太坊没有”这种说法往往只对了一半",
+      "note": "14:29。",
+      "url": "https://x.com/barnabemonnot/status/2112083751509361018",
+      "date": "2026-10-19",
+      "title_en": "Barnabé: \"our chain has X, Ethereum doesn't\" is usually only half right",
+      "note_en": "14:29.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/faster-aggregatable-and-quantum-safe-privacy-pools/26163",
+    "credit": "ethresear.ch, Faster, Aggregatable and Quantum Safe Privacy Pools",
+    "local_path": "assets/2026-10-19.jpg",
+    "credit_en": "ethresear.ch, Faster, Aggregatable and Quantum Safe Privacy Pools"
+  },
+  "keywords_en": [
+    "post-quantum privacy pools",
+    "Flock SNARK",
+    "cryptography does not belong in precompiles",
+    "EIP-8288 recursive STARK",
+    "post-quantum validator key registry",
+    "Safe Rollup"
+  ],
+  "summary_en": "Pierre and winderica ported Tornado Cash to Flock, a post-quantum binary-field SNARK, proving a depth-32 withdrawal over SHA-256 in under 30 ms, and described a recovery protocol that lets existing pools survive a discrete log break. Vitalik argued that precompiles and the EVM are the wrong place for most cryptography support, because their data has to go into blocks as calldata. EIP-8288 proposes moving the recursive STARK into the execution payload, and tcoratger submitted a post-quantum validator key registry."
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-18",
+  "keywords": [
+    "gas 上限 60M 到 200M",
+    "L1 容量约 3.5 倍",
+    "EIP-8151 访问 gas",
+    "Starknet L1 投票",
+    "Cambridge 后量子研讨"
+  ],
+  "summary": "周日。nero_eth 和 Barnabé 都在算 Glamsterdam 的容量账：gas 上限从 60M 提到 200M，约 3.3 倍，下一步 300M 也现实；blob 空间也会增加。EIP-8151（账户代码受限的 ecRecover）对齐 EIP-8038 的访问 gas。Starknet 的非约束投票中 99.95% 票权支持探索转为独立的后量子 L1。",
+  "items": [
+    {
+      "topic": "Glamsterdam 的容量账",
+      "title": "nero_eth：Glamsterdam 上线后 gas 上限从 60M 提到 200M，约 3.3 倍",
+      "note": "14:12，此后 300M 是现实的下一步。",
+      "url": "https://x.com/nero_eth/status/2111717098271732040",
+      "date": "2026-10-18",
+      "title_en": "nero_eth: with Glamsterdam, the gas limit goes from 60M to 200M, about 3.3x",
+      "note_en": "14:12, and from there 300M is a realistic next step.",
+      "topic_en": "The capacity math of Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 的容量账",
+      "title": "Barnabé：未来几个月 L1 容量接近 3.5 倍，blob 空间也更多",
+      "note": "01:39，前提是十天后的最后一次测试网分叉顺利。",
+      "url": "https://x.com/barnabemonnot/status/2111527644223127741",
+      "date": "2026-10-18",
+      "title_en": "Barnabé: close to 3.5x more L1 capacity in the next few months, plus more room for blobs",
+      "note_en": "01:39, if the last testnet fork goes well in ten days.",
+      "topic_en": "The capacity math of Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 的容量账",
+      "title": "EIP-8151 PR：失败输出为空，访问 gas 按 EIP-8038",
+      "note": "（colinlyguo，次日合并）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12540",
+      "date": "2026-10-18",
+      "title_en": "EIP-8151 PR: empty failure output and EIP-8038 access gas",
+      "note_en": "(colinlyguo, merged the next day).",
+      "topic_en": "The capacity math of Glamsterdam"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：99.95% 的已投票权支持探索转为独立后量子 L1",
+      "note": "14:42。",
+      "url": "https://x.com/StarkWareLtd/status/2111724469488341452",
+      "date": "2026-10-18",
+      "title_en": "StarkWare: 99.95% of the voting power cast supports exploring a transition to an independent post-quantum L1",
+      "note_en": "14:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ladislaus：Cambridge EF 后量子研讨周的个人要点",
+      "note": "17:37，涉及 PQ 迁移、leanVM、形式化验证和 AI 辅助研发。",
+      "url": "https://x.com/ladislaus0x/status/2111768536062595545",
+      "date": "2026-10-18",
+      "title_en": "Ladislaus: personal takeaways from the EF's PQ R&D workshop week in Cambridge",
+      "note_en": "17:37, on PQ migration, leanVM, formal verification and AI-assisted R&D.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Antonio Sanso：NIST 跳过部分椭圆曲线的可能线索是同源结构",
+      "note": "00:37。",
+      "url": "https://x.com/asanso/status/2111511837866893580",
+      "date": "2026-10-18",
+      "title_en": "Antonio Sanso: a possible clue to why some NIST elliptic curve candidates were skipped is isogeny structure",
+      "note_en": "00:37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：FCR 让以太坊更快“输出”资产，同时给桥运营方高安全保证",
+      "note": "04:22。",
+      "url": "https://x.com/barnabemonnot/status/2111568540985647419",
+      "date": "2026-10-18",
+      "title_en": "Barnabé: FCR lets Ethereum export its assets faster, with high security guarantees for the bridge operator",
+      "note_en": "04:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8447 Swarm AI Framework",
+      "note": "12:22。",
+      "url": "https://ethereum-magicians.org/t/erc-8447-swarm-ai-framework/29998",
+      "date": "2026-10-18",
+      "title_en": "Magicians: ERC-8447 Swarm AI Framework",
+      "note_en": "12:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：假如不再有公钥加密",
+      "note": "16:57。",
+      "url": "https://x.com/EliBenSasson/status/2111758600616268149",
+      "date": "2026-10-18",
+      "title_en": "Eli Ben-Sasson: what if there is no more public-key encryption?",
+      "note_en": "16:57.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12540",
+    "credit": "GitHub, ethereum/EIPs PR #12540",
+    "local_path": "assets/2026-10-18.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12540"
+  },
+  "keywords_en": [
+    "gas limit from 60M to 200M",
+    "about 3.5x L1 capacity",
+    "EIP-8151 access gas",
+    "Starknet L1 vote",
+    "Cambridge post-quantum workshop"
+  ],
+  "summary_en": "A Sunday. nero_eth and Barnabé both ran the numbers on Glamsterdam's capacity: the gas limit goes from 60M to 200M, about 3.3x, and 300M looks realistic as a next step, with more blob space too. EIP-8151 (account-code-restricted ecRecover) aligned with EIP-8038 access gas. In Starknet's non-binding vote, 99.95% of the voting power supports exploring a move to an independent post-quantum L1."
+}

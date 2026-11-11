@@ -1,0 +1,259 @@
+{
+  "date": "2026-10-30",
+  "keywords": [
+    "Binance 安全事件",
+    "EIP-7702 争议",
+    "EIP-8476 永久关闭 EOA 委托",
+    "EIP-8477 绑定近期区块的授权",
+    "EIP-8141 EXTCODEHASH 限制",
+    "ERC-20 出账限额"
+  ],
+  "summary": "Binance 发生 63 亿美元的安全事件，数小时内约 30 亿美元被冻结。坊间把矛头指向 EIP-7702，Derek Chiang 和 Martin Köppelmann 都说 7702 本身没坏，只是被用来高效执行攻击。当天出现两个针对 7702 的新提案：EIP-8476 让 EOA 永久关闭委托能力，EIP-8477 要求授权绑定近 256 个区块内的区块。",
+  "items": [
+    {
+      "topic": "Binance 事件与 EIP-7702 的安全边界",
+      "title": "Ethereal news #45",
+      "note": "Binance 63 亿美元安全事件，交易所表示会覆盖损失，已冻结约 30 亿美元。",
+      "url": "https://ethereal.news/ethereal-news-weekly-45/",
+      "date": "2026-10-30",
+      "title_en": "Ethereal news #45",
+      "note_en": "Binance had a $6.3B security incident, says it will cover losses, and about $3B has been frozen so far.",
+      "topic_en": "The Binance incident and the security boundary of EIP-7702"
+    },
+    {
+      "topic": "Binance 事件与 EIP-7702 的安全边界",
+      "title": "tayvano：此前最大的黑客事件是 Bybit 约 15 亿美元，这次事发后几小时内被冻结的就是它的两倍，且还有更多没冻结",
+      "note": "11:59。",
+      "url": "https://x.com/tayvano_/status/2116032165368709234",
+      "date": "2026-10-30",
+      "title_en": "tayvano: the prior biggest hack was Bybit at about $1.5B; in the hours after this one, twice that amount was frozen, and more still was not",
+      "note_en": "11:59.",
+      "topic_en": "The Binance incident and the security boundary of EIP-7702"
+    },
+    {
+      "topic": "Binance 事件与 EIP-7702 的安全边界",
+      "title": "Martin Köppelmann：看到把 Binance 被黑归咎于 EIP-7702 的传言",
+      "note": "05:04，从他所见，7702 只是被用来高效执行攻击，并不是根因。",
+      "url": "https://x.com/koeppelmann/status/2115927796992393407",
+      "date": "2026-10-30",
+      "title_en": "Martin Köppelmann: seeing rumors blaming EIP-7702 for the Binance hack",
+      "note_en": "05:04; from what he can see, 7702 was just used to perform the hack efficiently and was not the root cause.",
+      "topic_en": "The Binance incident and the security boundary of EIP-7702"
+    },
+    {
+      "topic": "Binance 事件与 EIP-7702 的安全边界",
+      "title": "Derek Chiang：关于 7702 的几点说明",
+      "note": "07:13，7702 本身没有坏，使用支持 7702 的钱包（MetaMask、Uniswap、Ambire 等）不必恐慌。",
+      "url": "https://x.com/decentrek/status/2115960332032299192",
+      "date": "2026-10-30",
+      "title_en": "Derek Chiang: quick notes on 7702",
+      "note_en": "07:13; 7702 itself is not broken, and there is no need to panic if you use a wallet that supports it (MetaMask, Uniswap, Ambire and others).",
+      "topic_en": "The Binance incident and the security boundary of EIP-7702"
+    },
+    {
+      "topic": "Binance 事件与 EIP-7702 的安全边界",
+      "title": "新 EIP：永久关闭 EOA 委托",
+      "note": "（nicolashw，EIP-8476 讨论帖 23:35）。EOA 通过一种原本无效的、授权列表为空的 type-4 自发交易安装一个不可执行的代码标记，之后任何授权（包括清除授权）都不能替换它；EVM 把标记当作空代码（`EXTCODESIZE` 为 0），账户对合约来说仍是普通 EOA。动机是机构钱包、交易所热钱包和金库用不到委托执行，其操作控制可能默认它不存在；它不能防御私钥泄露。",
+      "url": "https://github.com/ethereum/EIPs/pull/12600",
+      "date": "2026-10-30",
+      "title_en": "New EIP: permanent EOA delegation opt-out",
+      "note_en": "(nicolashw, EIP-8476 discussion thread, 23:35). An EOA installs a non-executable code marker through a previously invalid type-4 self-transaction with an empty authorization list, after which no authorization, including a clearing one, can replace it. The EVM treats the marker as empty code (`EXTCODESIZE` is 0), so the account remains an ordinary EOA to contracts. The motivation is that institutional wallets, exchange hot wallets and treasuries do not need delegated execution and their operational controls may assume it is unavailable; it does not protect against private key compromise.",
+      "topic_en": "The Binance incident and the security boundary of EIP-7702"
+    },
+    {
+      "topic": "Binance 事件与 EIP-7702 的安全边界",
+      "title": "EIP-8476 讨论帖",
+      "note": "新 EIP：永久关闭 EOA 委托（nicolashw，EIP-8476 讨论帖 23:35）。EOA 通过一种原本无效的、授权列表为空的 type-4 自发交易安装一个不可执行的代码标记，之后任何授权（包括清除授权）都不能替换它；EVM 把标记当作空代码（`EXTCODESIZE` 为 0），账户对合约来说仍是普通 EOA。动机是机构钱包、交易所热钱包和金库用不到委托执行，其操作控制可能默认它不存在；它不能防御私钥泄露。",
+      "url": "https://ethereum-magicians.org/t/eip-8476-permanent-eoa-delegation-opt-out/30134",
+      "date": "2026-10-30",
+      "title_en": "EIP-8476 discussion thread",
+      "note_en": "New EIP: permanent EOA delegation opt-out (nicolashw, EIP-8476 discussion thread, 23:35). An EOA installs a non-executable code marker through a previously invalid type-4 self-transaction with an empty authorization list, after which no authorization, including a clearing one, can replace it. The EVM treats the marker as empty code (`EXTCODESIZE` is 0), so the account remains an ordinary EOA to contracts. The motivation is that institutional wallets, exchange hot wallets and treasuries do not need delegated execution and their operational controls may assume it is unavailable; it does not protect against private key compromise.",
+      "topic_en": "The Binance incident and the security boundary of EIP-7702"
+    },
+    {
+      "topic": "Binance 事件与 EIP-7702 的安全边界",
+      "title": "新 EIP：绑定近期区块的委托授权",
+      "note": "（dangerousfood，EIP-8477）。未使用的 7702 授权目前没有协议层的新鲜度限制，只要 nonce 对得上就能一直用；提案要求每个授权签入执行区块号和区块头哈希，只在该区块属于包含区块前 256 个祖先时有效，激活后拒绝旧格式授权，不影响已安装的委托。",
+      "url": "https://github.com/ethereum/EIPs/pull/12601",
+      "date": "2026-10-30",
+      "title_en": "New EIP: recent block bound delegation authorizations",
+      "note_en": "(dangerousfood, EIP-8477). Unused 7702 authorizations currently have no protocol-enforced freshness bound and stay usable whenever the nonce matches. The proposal has each authorization sign an execution block number and header hash and apply only while that block is one of the inclusion block's preceding 256 ancestors; legacy unanchored authorizations are rejected after activation, and installed delegations are unaffected.",
+      "topic_en": "The Binance incident and the security boundary of EIP-7702"
+    },
+    {
+      "topic": "frame 交易与账户规范",
+      "title": "EIP-8141：明确对预编译的 EXTCODEHASH 限制",
+      "note": "（yperbasis）。按 EIP-1052，空的预编译账户 `EXTCODEHASH` 返回 0，转入 1 wei 后变成 `keccak256(\"\")`，一笔转账就能让大量待处理 frame 交易失效；提议在验证阶段禁止对活跃预编译做 `EXTCODEHASH`。",
+      "url": "https://github.com/ethereum/EIPs/pull/12596",
+      "date": "2026-10-30",
+      "title_en": "EIP-8141: clarify EXTCODEHASH restrictions for precompiles",
+      "note_en": "(yperbasis). Under EIP-1052, an empty precompile account returns 0 from `EXTCODEHASH`, and sending it 1 wei changes the result to `keccak256(\"\")`, so one transfer can invalidate many pending frame transactions; the draft bans `EXTCODEHASH` of active precompiles during validation.",
+      "topic_en": "Frame transactions and account specs"
+    },
+    {
+      "topic": "frame 交易与账户规范",
+      "title": "EIP-8288：递归聚合前复用已有证明",
+      "note": "（Marchhill）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12595",
+      "date": "2026-10-30",
+      "title_en": "EIP-8288: reuse proofs before recursive aggregation",
+      "note_en": "(Marchhill).",
+      "topic_en": "Frame transactions and account specs"
+    },
+    {
+      "topic": "frame 交易与账户规范",
+      "title": "ethresear.ch：用递归验证实现后量子无签名授权",
+      "note": "14:13，授权方公布对可复用秘密的承诺，每次操作用新的知识证明授权。",
+      "url": "https://ethresear.ch/t/post-quantum-signatureless-authorization-with-recursive-verification/26196",
+      "date": "2026-10-30",
+      "title_en": "ethresear.ch: post-quantum signatureless authorization with recursive verification",
+      "note_en": "14:13; an authority publishes a commitment to a reusable secret, and each action is authorized by a fresh proof of knowledge.",
+      "topic_en": "Frame transactions and account specs"
+    },
+    {
+      "topic": "frame 交易与账户规范",
+      "title": "新 ERC：ERC-20 延迟解锁",
+      "note": "和 ERC-20 出账窗口限额（shargon），持有人可选的出账锁、按区块的解锁延迟和独立守护者否决。",
+      "url": "https://github.com/ethereum/ERCs/pull/2129",
+      "date": "2026-10-30",
+      "title_en": "New ERC: ERC-20 delayed unlock",
+      "note_en": "And ERC-20 outgoing window limits (shargon), with opt-in holder-controlled outgoing locks, block-based unlock delays and an independent guardian veto.",
+      "topic_en": "Frame transactions and account specs"
+    },
+    {
+      "topic": "frame 交易与账户规范",
+      "title": "ERC-20 出账窗口限额",
+      "note": "新 ERC：ERC-20 延迟解锁 和 ERC-20 出账窗口限额（shargon），持有人可选的出账锁、按区块的解锁延迟和独立守护者否决。",
+      "url": "https://github.com/ethereum/ERCs/pull/2130",
+      "date": "2026-10-30",
+      "title_en": "ERC-20 outgoing window limits",
+      "note_en": "New ERC: ERC-20 delayed unlock and ERC-20 outgoing window limits (shargon), with opt-in holder-controlled outgoing locks, block-based unlock delays and an independent guardian veto.",
+      "topic_en": "Frame transactions and account specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8148：规定合约输入、日志和 eth_config 键",
+      "note": "合并；把清扫阈值存入提款凭证 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12597",
+      "date": "2026-10-30",
+      "title_en": "EIP-8148: specify contract input, log and eth_config key",
+      "note_en": "Merged; store the sweep threshold in withdrawal credentials, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "把清扫阈值存入提款凭证",
+      "note": "EIP-8148：规定合约输入、日志和 eth_config 键 合并；把清扫阈值存入提款凭证 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12598",
+      "date": "2026-10-30",
+      "title_en": "store the sweep threshold in withdrawal credentials",
+      "note_en": "EIP-8148: specify contract input, log and eth_config key, merged; store the sweep threshold in withdrawal credentials, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8450：BLS 授权密钥更换等",
+      "note": "合并，合并后评审意见处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/12592",
+      "date": "2026-10-30",
+      "title_en": "EIP-8450: BLS-authorized key changes and more",
+      "note_en": "Was merged, followed by addressing post-merge review.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "合并后评审意见处理",
+      "note": "EIP-8450：BLS 授权密钥更换等 合并，合并后评审意见处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/12599",
+      "date": "2026-10-30",
+      "title_en": "addressing post-merge review",
+      "note_en": "EIP-8450: BLS-authorized key changes and more was merged, followed by addressing post-merge review.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nero_eth：新客户端发布",
+      "note": "01:54；binji：更多团队写以太坊客户端是这条链独特之处 02:51。",
+      "url": "https://x.com/nero_eth/status/2115879918915752319",
+      "date": "2026-10-30",
+      "title_en": "nero_eth: new client just dropped",
+      "note_en": "01:54; binji: more teams building Ethereum clients is what makes this chain unique, 02:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "binji：更多团队写以太坊客户端是这条链独特之处",
+      "note": "nero_eth：新客户端发布 01:54；binji：更多团队写以太坊客户端是这条链独特之处 02:51。",
+      "url": "https://x.com/binji_x/status/2115894384407273520",
+      "date": "2026-10-30",
+      "title_en": "binji: more teams building Ethereum clients is what makes this chain unique",
+      "note_en": "Nero_eth: new client just dropped, 01:54; binji: more teams building Ethereum clients is what makes this chain unique, 02:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：Nyx 收款地址每次给出不同地址，与私密账户之间没有可见关联",
+      "note": "23:50，即将在 Alpha V6 上线。",
+      "url": "https://x.com/aztecnetwork/status/2116211153986896246",
+      "date": "2026-10-30",
+      "title_en": "Aztec: Nyx receivers hand out a different Ethereum address each time, with no visible link to your private account",
+      "note_en": "23:50, launching soon on Alpha V6.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：社区以 93% 支持研究完全后量子的 Starknet L1",
+      "note": "16:17。",
+      "url": "https://x.com/StarkWareLtd/status/2116097053562724446",
+      "date": "2026-10-30",
+      "title_en": "StarkWare: the community voted 93% in favor of researching a fully post-quantum Starknet L1",
+      "note_en": "16:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：STVA 独立模拟结果 ERC 草案",
+      "note": "12:44。",
+      "url": "https://ethereum-magicians.org/t/erc-draft-independent-simulation-result-for-stva/30129",
+      "date": "2026-10-30",
+      "title_en": "Magicians: ERC draft, independent simulation result for STVA",
+      "note_en": "12:44.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dankrad：现在上网要格外小心，到处有人被黑",
+      "note": "21:16。",
+      "url": "https://x.com/dankrad/status/2116172398739247222",
+      "date": "2026-10-30",
+      "title_en": "dankrad: time to be super careful online, people are getting hacked everywhere",
+      "note_en": "21:16.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Martin Köppelmann：和商店失窃一样，黑客损失的每一美元最终都由用户买单",
+      "note": "15:41。",
+      "url": "https://x.com/koeppelmann/status/2116088067530600734",
+      "date": "2026-10-30",
+      "title_en": "Martin Köppelmann: just like with shoplifting, users ultimately pay for every dollar lost in a hack",
+      "note_en": "15:41.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8476-permanent-eoa-delegation-opt-out/30134",
+    "credit": "Ethereum Magicians, EIP-8476: Permanent EOA Delegation Opt-Out",
+    "local_path": "assets/2026-10-30.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8476: Permanent EOA Delegation Opt-Out"
+  },
+  "keywords_en": [
+    "Binance security incident",
+    "EIP-7702 debate",
+    "EIP-8476 permanent EOA delegation opt-out",
+    "EIP-8477 recent block bound authorizations",
+    "EIP-8141 EXTCODEHASH restrictions",
+    "ERC-20 outgoing limits"
+  ],
+  "summary_en": "Binance suffered a $6.3B security incident, and about $3B was frozen within hours. Rumors blamed EIP-7702, but Derek Chiang and Martin Köppelmann both said 7702 itself is not broken and was only used to carry out the attack efficiently. Two new 7702 proposals appeared the same day: EIP-8476 lets an EOA permanently disable delegation, and EIP-8477 requires authorizations to be anchored to a block within the last 256."
+}

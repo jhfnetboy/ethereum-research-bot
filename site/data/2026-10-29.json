@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-29",
+  "keywords": [
+    "ACDC #190",
+    "Alex Stokes 卸任主持",
+    "Hegotá 共识层定范围",
+    "ERC-8441 混合后量子隐身地址",
+    "leanXMSS",
+    "STVA"
+  ],
+  "summary": "ACDC #190 上 Alex Stokes 卸任共识层会议主持，Ben Edgington 接任、Will Corcoran 任副手；Hegotá 共识层定范围完成，EIP-8015 列为 SFI，EIP-8205 被拒并改由后量子存款合约解决。ERC-8441 混合后量子隐身地址合并，leanXMSS 在 Lean4 中有了第一个可用版本，计划用于 EIP-8450。",
+  "items": [
+    {
+      "topic": "后量子隐私与账户",
+      "title": "ERC-8441：混合后量子隐身地址方案",
+      "note": "合并（namnc）。定义 ERC-5564 的 `schemeId` 3，支付秘密结合 ML-KEM-768 封装和 secp256k1 ECDH 秘密，即使对手以后拥有量子计算机，也无法从公告日志判断谁被付款；花费仍用 secp256k1，已部署的 ERC-5564 公告合约和 ERC-6538 注册表不变。",
+      "url": "https://github.com/ethereum/ERCs/pull/2059",
+      "date": "2026-10-29",
+      "title_en": "ERC-8441: hybrid post-quantum stealth address scheme",
+      "note_en": "Was merged (namnc). It defines ERC-5564 `schemeId` 3, whose payment secret combines an ML-KEM-768 encapsulation with a secp256k1 ECDH secret, so an adversary who later gains a quantum computer still cannot tell from the announcement log who was paid. Spending stays on secp256k1, and the deployed ERC-5564 announcer and ERC-6538 registry are used unchanged.",
+      "topic_en": "Post-quantum privacy and accounts"
+    },
+    {
+      "topic": "后量子隐私与账户",
+      "title": "tcoratger：leanXMSS 在 Lean4 中有了第一个可用版本，已放入 EthLib",
+      "note": "05:44，这是 EIP-8450 计划使用的 XMSS 实现。",
+      "url": "https://x.com/tcoratger/status/2115575401720533221",
+      "date": "2026-10-29",
+      "title_en": "tcoratger: a first working version of leanXMSS in Lean4, available in EthLib",
+      "note_en": "05:44; it is the XMSS implementation planned for EIP-8450.",
+      "topic_en": "Post-quantum privacy and accounts"
+    },
+    {
+      "topic": "后量子隐私与账户",
+      "title": "ethresear.ch：STVA 安全交易验证与授权",
+      "note": "01:39；Magicians：STVA 的限定能力令牌 12:02。",
+      "url": "https://ethresear.ch/t/secure-transaction-verification-and-authorization-stva/26192",
+      "date": "2026-10-29",
+      "title_en": "ethresear.ch: STVA, secure transaction verification and authorization",
+      "note_en": "01:39; Magicians: scoped capability tokens for STVA, 12:02.",
+      "topic_en": "Post-quantum privacy and accounts"
+    },
+    {
+      "topic": "后量子隐私与账户",
+      "title": "Magicians：STVA 的限定能力令牌",
+      "note": "ethresear.ch：STVA 安全交易验证与授权 01:39；Magicians：STVA 的限定能力令牌 12:02。",
+      "url": "https://ethereum-magicians.org/t/scoped-capability-tokens-for-stva/30124",
+      "date": "2026-10-29",
+      "title_en": "Magicians: scoped capability tokens for STVA",
+      "note_en": "Ethresear.ch: STVA, secure transaction verification and authorization, 01:39; Magicians: scoped capability tokens for STVA, 12:02.",
+      "topic_en": "Post-quantum privacy and accounts"
+    },
+    {
+      "topic": "后量子隐私与账户",
+      "title": "Magicians：合约读不到事件，ERC 草案里反复出现的缺口",
+      "note": "01:28，9 月中旬以来至少四个 ERC 讨论帖遇到同一问题：某个事实只存在于事件里，合约却需要它。",
+      "url": "https://ethereum-magicians.org/t/contracts-cant-read-events-a-gap-that-keeps-coming-up-in-erc-drafts/30120",
+      "date": "2026-10-29",
+      "title_en": "Magicians: contracts can't read events, a gap that keeps coming up in ERC drafts",
+      "note_en": "01:28; since mid-September at least four ERC threads hit the same problem, where a fact lives only in an event but a contract needs it.",
+      "topic_en": "Post-quantum privacy and accounts"
+    },
+    {
+      "topic": "ACDC #190",
+      "title": "ACDC #190",
+      "note": "（据 Ethereal news #45 汇总）：Alex Stokes 卸任 ACDC 主持，Ben Edgington 接任，Will Corcoran 任副手。Hegotá 共识层定范围完成：EIP-8015（移除 deposit 和 eth1data 字段）SFI；EIP-8334、EIP-8383、EIP-8148、EIP-8411 CFI；EIP-8205（提款凭证预注册）DFI，改由后量子存款合约解决。",
+      "url": "https://forkcast.org/calls/acdc/190/",
+      "date": "2026-10-29",
+      "title_en": "ACDC #190",
+      "note_en": "(as summarized by Ethereal news #45): Alex Stokes is stepping down as ACDC facilitator, Ben Edgington takes over as lead and Will Corcoran as deputy. Hegotá consensus layer scoping is finished: EIP-8015 (remove deposit and eth1data fields) is SFI; EIP-8334, EIP-8383, EIP-8148 and EIP-8411 are CFI; EIP-8205 (withdrawal credentials preregistration) is DFI, to be solved through a post-quantum deposit contract.",
+      "topic_en": "ACDC #190"
+    },
+    {
+      "topic": "ACDC #190",
+      "title": "Ben Edgington：2017 年 12 月 15 日第一次在 ACD 上发言",
+      "note": "22:51。",
+      "url": "https://x.com/benjaminion_xyz/status/2115833952737116301",
+      "date": "2026-10-29",
+      "title_en": "Ben Edgington: my first speaking appearance on ACD, December 15, 2017",
+      "note_en": "22:51.",
+      "topic_en": "ACDC #190"
+    },
+    {
+      "topic": "ACDC #190",
+      "title": "Barnabé 引述“我们的目标是更快的以太坊、更短的 slot 和后量子安全”",
+      "note": "23:25，并谈新共识客户端应把重点放在哪里。",
+      "url": "https://x.com/barnabemonnot/status/2115842379257172121",
+      "date": "2026-10-29",
+      "title_en": "Barnabé quotes \"our ambition is to see a faster Ethereum with shorter slot times and post-quantum security\"",
+      "note_en": "23:25, and discusses where a new consensus client should put its emphasis.",
+      "topic_en": "ACDC #190"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethlabs：Mihai Alisie 作为锚定资助者加入，payward 和 Gattaca 作为贡献者",
+      "note": "04:01，另有 19 位社区支持者。",
+      "url": "https://x.com/ethlabs_org/status/2115549643505291274",
+      "date": "2026-10-29",
+      "title_en": "Ethlabs: Mihai Alisie joins as an anchor funder, with payward and Gattaca as contributors",
+      "note_en": "04:01, plus 19 community supporters.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ChainSecurity：调研现实中的 MPC 钱包实现",
+      "note": "23:07。",
+      "url": "https://x.com/chain_security/status/2115837947329093807",
+      "date": "2026-10-29",
+      "title_en": "ChainSecurity: investigating MPC wallet implementations in the wild",
+      "note_en": "23:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Bunker Autoresearch，11 月 5 日在孟买与 Devcon 同期举办的 AI 加密研究比赛",
+      "note": "20:18。",
+      "url": "https://x.com/StarkWareLtd/status/2115795300543873172",
+      "date": "2026-10-29",
+      "title_en": "StarkWare: Bunker Autoresearch, an in-person AI cryptography research competition in Mumbai on November 5 alongside Devcon",
+      "note_en": "20:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat：L2BEAT 十月回顾",
+      "note": "20:23，Privacy 页面增加了更多项目和指标。",
+      "url": "https://x.com/ethbeat_org/status/2115796686442267041",
+      "date": "2026-10-29",
+      "title_en": "ethbeat: L2BEAT's October recap",
+      "note_en": "20:23, with more projects and metrics on the Privacy pages.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：calldata 字段格式允许 chainId",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2124",
+      "date": "2026-10-29",
+      "title_en": "ERC-7730: allow chainId in the calldata field format schema",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：Q-day 要来了，每个人都要准备",
+      "note": "19:58。",
+      "url": "https://x.com/EliBenSasson/status/2115790416435892405",
+      "date": "2026-10-29",
+      "title_en": "Eli Ben-Sasson: Q-day is coming, everybody needs to get ready",
+      "note_en": "19:58.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Aztec：“隐私”这个词已经很拥挤",
+      "note": "01:48，Zac 在 2019 年参与写了 PLONK。",
+      "url": "https://x.com/aztecnetwork/status/2115516068106207525",
+      "date": "2026-10-29",
+      "title_en": "Aztec: \"privacy\" is a crowded word now",
+      "note_en": "01:48; Zac co-wrote PLONK in 2019.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/ERCs/pull/2059",
+    "credit": "GitHub, ethereum/ERCs PR #2059",
+    "credit_en": "GitHub, ethereum/ERCs PR #2059"
+  },
+  "keywords_en": [
+    "ACDC #190",
+    "Alex Stokes steps down as facilitator",
+    "Hegotá consensus layer scoping",
+    "ERC-8441 hybrid post-quantum stealth addresses",
+    "leanXMSS",
+    "STVA"
+  ],
+  "summary_en": "At ACDC #190, Alex Stokes stepped down as consensus call facilitator, with Ben Edgington taking over as lead and Will Corcoran as deputy. Hegotá consensus layer scoping finished: EIP-8015 is SFI, and EIP-8205 was declined, to be solved through a post-quantum deposit contract instead. ERC-8441 hybrid post-quantum stealth addresses was merged, and leanXMSS has a first working version in Lean4, planned for EIP-8450."
+}

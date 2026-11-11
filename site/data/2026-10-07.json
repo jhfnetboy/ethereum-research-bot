@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-07",
+  "keywords": [
+    "bunker mode",
+    "哈希隐藏公钥地址",
+    "SETCODEFROM 遗留字节码",
+    "23 个 Glamsterdam EIP 进入 Last Call",
+    "EIP-8250 nonce_type"
+  ],
+  "summary": "Justin Drake 呼吁行业冷静开始规划“bunker mode”，建议有序把资产迁到公钥仍藏在哈希后的新地址，引发大范围讨论。nero_eth 列出进入 Last Call 的 23 个 Glamsterdam EIP，Sepolia gas 用量升到 83M。CPerezz 在 ethresear.ch 讨论 SETCODEFROM 留下的无主字节码。",
+  "items": [
+    {
+      "topic": "抗量子迁移：bunker mode",
+      "title": "Justin Drake：呼吁行业冷静开始规划 bunker mode",
+      "note": "21:14。他的个人建议是启动受控的大规模迁移，把资产转到公钥仍藏在哈希之后的新地址，由大额持有者先做。",
+      "url": "https://x.com/drakefjustin/status/2107837081313505768",
+      "date": "2026-10-07",
+      "title_en": "Justin Drake: calling on the industry to calmly begin planning for bunker mode",
+      "note_en": "21:14. His personal recommendation is a controlled mass migration of assets to fresh addresses whose public keys remain hidden behind a hash, with large holders going first.",
+      "topic_en": "Post-quantum migration: bunker mode"
+    },
+    {
+      "topic": "SETCODEFROM 留下的字节码谁来清理",
+      "title": "ethresear.ch：SETCODEFROM 的遗留字节码与面向未来的设计选择",
+      "note": "04:00（CPerezz）。客户端本来就保存没有账户指向的字节码，EIP-8058 在一个 Cancun 时的全同步节点上数出 27,869 份，过去因为代码不在状态根里而无害。提议进 Hegotá 的 SETCODEFROM 给每笔交易一种新方式留下代码，分区二叉树（PBT）又把代码放进状态根，两者叠加后，全同步和快照同步的节点会在代码库内容上不一致。作者主张趁 EIP-8298 还是草案时定下规则。",
+      "url": "https://ethresear.ch/t/who-cleans-up-the-code-setcodefroms-dangling-bytecode-and-futureproof-design-choices/26127",
+      "date": "2026-10-07",
+      "title_en": "ethresear.ch: who cleans up the code? SETCODEFROM's dangling bytecode and futureproof design choices",
+      "note_en": "04:00 (CPerezz). Clients already keep bytecode that no account points to; EIP-8058 counted 27,869 such entries on a full-synced node as of Cancun, harmless so far because code sits outside the state root. SETCODEFROM, proposed for Hegotá, gives every transaction a new way to leave code behind, and the partitioned binary tree (PBT) moves code inside the state root. Combined, full-synced and snap-synced nodes would disagree on what is in their code databases. The author argues for settling the rules while EIP-8298 is still a draft.",
+      "topic_en": "Who cleans up the bytecode SETCODEFROM leaves behind"
+    },
+    {
+      "topic": "SETCODEFROM 留下的字节码谁来清理",
+      "title": "EIP-8250 PR：把 nonce_type 设为独立的交易字段",
+      "note": "（GottfriedHerold）；EIP-8272 PR：最近根合约部署为标准合约。",
+      "url": "https://github.com/ethereum/EIPs/pull/12441",
+      "date": "2026-10-07",
+      "title_en": "EIP-8250 PR: add nonce_type as a separate transaction field",
+      "note_en": "(GottfriedHerold); EIP-8272 PR: deploy the recent root contract as a standard contract.",
+      "topic_en": "Who cleans up the bytecode SETCODEFROM leaves behind"
+    },
+    {
+      "topic": "SETCODEFROM 留下的字节码谁来清理",
+      "title": "EIP-8272 PR：最近根合约部署为标准合约",
+      "note": "EIP-8250 PR：把 nonce_type 设为独立的交易字段（GottfriedHerold）；EIP-8272 PR：最近根合约部署为标准合约。",
+      "url": "https://github.com/ethereum/EIPs/pull/12443",
+      "date": "2026-10-07",
+      "title_en": "EIP-8272 PR: deploy the recent root contract as a standard contract",
+      "note_en": "EIP-8250 PR: add nonce_type as a separate transaction field (GottfriedHerold); EIP-8272 PR: deploy the recent root contract as a standard contract.",
+      "topic_en": "Who cleans up the bytecode SETCODEFROM leaves behind"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nero_eth：Glamsterdam 的 23 个 EIP 从 Review 进入 Last Call",
+      "note": "12:26。EIP-7773 PR：把 EIP-7495 和 EIP-7916 加入 Glamsterdam。",
+      "url": "https://x.com/nero_eth/status/2107703998408990742",
+      "date": "2026-10-07",
+      "title_en": "nero_eth: 23 Glamsterdam EIPs moved from Review to Last Call",
+      "note_en": "12:26. EIP-7773 PR: add EIP-7495 and EIP-7916 to Glamsterdam.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773 PR：把 EIP-7495 和 EIP-7916 加入 Glamsterdam",
+      "note": "nero_eth：Glamsterdam 的 23 个 EIP 从 Review 进入 Last Call 12:26。EIP-7773 PR：把 EIP-7495 和 EIP-7916 加入 Glamsterdam。",
+      "url": "https://github.com/ethereum/EIPs/pull/12449",
+      "date": "2026-10-07",
+      "title_en": "EIP-7773 PR: add EIP-7495 and EIP-7916 to Glamsterdam",
+      "note_en": "Nero_eth: 23 Glamsterdam EIPs moved from Review to Last Call, 12:26. EIP-7773 PR: add EIP-7495 and EIP-7916 to Glamsterdam.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "potuz：Sepolia 跑到 83M gas 并在上升",
+      "note": "00:39；Trent：Sepolia 预示主网的样子，扩容、客户端大幅改进、gas 重新定价 20:04。",
+      "url": "https://x.com/potuz_eth/status/2107526134497751394",
+      "date": "2026-10-07",
+      "title_en": "potuz: Sepolia is running at 83M gas and rising",
+      "note_en": "00:39; Trent: Sepolia previews mainnet, with scaling, big client improvements and gas repricing, 20:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trent：Sepolia 预示主网的样子，扩容、客户端大幅改进、gas 重新定价",
+      "note": "potuz：Sepolia 跑到 83M gas 并在上升 00:39；Trent：Sepolia 预示主网的样子，扩容、客户端大幅改进、gas 重新定价 20:04。",
+      "url": "https://x.com/trent_vanepps/status/2107819274324902072",
+      "date": "2026-10-07",
+      "title_en": "Trent: Sepolia previews mainnet, with scaling, big client improvements and gas repricing",
+      "note_en": "Potuz: Sepolia is running at 83M gas and rising, 00:39; Trent: Sepolia previews mainnet, with scaling, big client improvements and gas repricing, 20:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Fede：ethrex 再次成为最快的以太坊客户端",
+      "note": "04:43。",
+      "url": "https://x.com/fede_intern/status/2107587537573208216",
+      "date": "2026-10-07",
+      "title_en": "Fede: ethrex is again the fastest Ethereum client",
+      "note_en": "04:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "依赖验证帧的收据",
+      "note": "EIP-8288 两个 PR 合并：依赖验证帧的收据、依赖验证帧不进原子批次。",
+      "url": "https://github.com/ethereum/EIPs/pull/12325",
+      "date": "2026-10-07",
+      "title_en": "the dependency verification frame's receipt",
+      "note_en": "Two EIP-8288 PRs merged: the dependency verification frame's receipt and excluding dependency verification frames from atomic batches.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "依赖验证帧不进原子批次",
+      "note": "EIP-8288 两个 PR 合并：依赖验证帧的收据、依赖验证帧不进原子批次。",
+      "url": "https://github.com/ethereum/EIPs/pull/12326",
+      "date": "2026-10-07",
+      "title_en": "excluding dependency verification frames from atomic batches",
+      "note_en": "Two EIP-8288 PRs merged: the dependency verification frame's receipt and excluding dependency verification frames from atomic batches.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7723 PR：定义 devnet 范围流程与功能 devnet",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12452",
+      "date": "2026-10-07",
+      "title_en": "EIP-7723 PR: define the devnet scope process and feature devnets",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊 PropAMM 的现在与未来",
+      "note": "22:25。",
+      "url": "https://ethresear.ch/t/ethereum-propamms-today-and-tomorrow/26129",
+      "date": "2026-10-07",
+      "title_en": "ethresear.ch: Ethereum PropAMMs today and tomorrow",
+      "note_en": "22:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：Glamsterdam 来了，而 AI 与形式化验证让客户端开发提速十倍",
+      "note": "21:00。",
+      "url": "https://x.com/binji_x/status/2107833381136609475",
+      "date": "2026-10-07",
+      "title_en": "binji: Glamsterdam is coming, while AI and formal verification have 10x'd client development",
+      "note_en": "21:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/who-cleans-up-the-code-setcodefroms-dangling-bytecode-and-futureproof-design-choices/26127",
+    "credit": "ethresear.ch, Who cleans up the code? (CPerezz)",
+    "local_path": "assets/2026-10-07.jpg",
+    "credit_en": "ethresear.ch, Who cleans up the code? (CPerezz)"
+  },
+  "keywords_en": [
+    "bunker mode",
+    "hash-hidden pubkey addresses",
+    "SETCODEFROM dangling bytecode",
+    "23 Glamsterdam EIPs in Last Call",
+    "EIP-8250 nonce_type"
+  ],
+  "summary_en": "Justin Drake called on the industry to calmly start planning for \"bunker mode\", recommending an orderly migration of assets to fresh addresses whose public keys are still hidden behind a hash, which set off a wide debate. nero_eth listed the 23 Glamsterdam EIPs now in Last Call, and Sepolia gas usage climbed to 83M. On ethresear.ch, CPerezz examined the orphaned bytecode that SETCODEFROM leaves behind."
+}

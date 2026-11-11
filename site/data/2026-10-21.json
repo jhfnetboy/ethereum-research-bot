@@ -1,0 +1,207 @@
+{
+  "date": "2026-10-21",
+  "keywords": [
+    "EIP-8037/8038 迫使合约升级",
+    "ChainSecurity",
+    "EIP-8141 帧与签名按下限定价",
+    "EIP-8279",
+    "后量子验证者密钥注册表"
+  ],
+  "summary": "pcaversaccio 转引 ChainSecurity 的新文章：EIP-8037 和 EIP-8038 会迫使某些合约在字节码不变的情况下升级才能恢复原有行为。这为次日 ACDE 推迟 Hoodi 埋下伏笔。规范侧，EIP-8141 的帧和签名条目改按下限定价，EIP-8279 用执行 gas 预算检查下限，后量子验证者密钥注册表合并为草案。",
+  "items": [
+    {
+      "topic": "Glamsterdam 重新定价的副作用",
+      "title": "pcaversaccio：仍认为 EIP-8037/8038 是好主意的人请读 ChainSecurity 最新文章",
+      "note": "23:51。这些 EIP 会迫使某些合约升级才能恢复预期行为，即使字节码零改动。",
+      "url": "https://x.com/pcaversaccio/status/2112949950464270463",
+      "date": "2026-10-21",
+      "title_en": "pcaversaccio: anyone who still thinks EIP-8037/8038 is a good idea should read the latest ChainSecurity article",
+      "note_en": "23:51. These EIPs can force certain contracts to upgrade just to restore their intended behavior, despite zero bytecode changes.",
+      "topic_en": "Side effects of Glamsterdam repricing"
+    },
+    {
+      "topic": "Glamsterdam 重新定价的副作用",
+      "title": "EIP-8279：对照执行 gas 预算检查下限",
+      "note": "、删除不安全的存储值退款 合并（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12560",
+      "date": "2026-10-21",
+      "title_en": "EIP-8279: check the floor against the execution-gas budget",
+      "note_en": "And remove the unsafe storage-value refund were merged (nerolation).",
+      "topic_en": "Side effects of Glamsterdam repricing"
+    },
+    {
+      "topic": "Glamsterdam 重新定价的副作用",
+      "title": "删除不安全的存储值退款",
+      "note": "EIP-8279：对照执行 gas 预算检查下限、删除不安全的存储值退款 合并（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12526",
+      "date": "2026-10-21",
+      "title_en": "remove the unsafe storage-value refund",
+      "note_en": "EIP-8279: check the floor against the execution-gas budget and remove the unsafe storage-value refund were merged (nerolation).",
+      "topic_en": "Side effects of Glamsterdam repricing"
+    },
+    {
+      "topic": "Glamsterdam 重新定价的副作用",
+      "title": "EIP-2780：统一 Glamsterdam EIP 的标题和描述",
+      "note": "EIP-7773 与 EIP-8081 的 Glamsterdam 激活表更正 合并（ralexstokes）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12561",
+      "date": "2026-10-21",
+      "title_en": "EIP-2780: align the titles and descriptions of Glamsterdam EIPs",
+      "note_en": "Corrections to the Glamsterdam activation tables in EIP-7773 and EIP-8081, merged (ralexstokes).",
+      "topic_en": "Side effects of Glamsterdam repricing"
+    },
+    {
+      "topic": "Glamsterdam 重新定价的副作用",
+      "title": "EIP-7773 与 EIP-8081 的 Glamsterdam 激活表更正",
+      "note": "EIP-2780：统一 Glamsterdam EIP 的标题和描述；EIP-7773 与 EIP-8081 的 Glamsterdam 激活表更正 合并（ralexstokes）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12557",
+      "date": "2026-10-21",
+      "title_en": "corrections to the Glamsterdam activation tables in EIP-7773 and EIP-8081",
+      "note_en": "EIP-2780: align the titles and descriptions of Glamsterdam EIPs; corrections to the Glamsterdam activation tables in EIP-7773 and EIP-8081, merged (ralexstokes).",
+      "topic_en": "Side effects of Glamsterdam repricing"
+    },
+    {
+      "topic": "账户与交易规范",
+      "title": "EIP-8141 PR：帧和签名条目按下限定价",
+      "note": "（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12559",
+      "date": "2026-10-21",
+      "title_en": "EIP-8141 PR: price frame and signature entries at the floor",
+      "note_en": "(nerolation).",
+      "topic_en": "Account and transaction specs"
+    },
+    {
+      "topic": "账户与交易规范",
+      "title": "EIP-7906 PR：说明保存在存储中的 nonce 变化出现在哪里",
+      "note": "（AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12562",
+      "date": "2026-10-21",
+      "title_en": "EIP-7906 PR: say where storage-kept nonce changes appear",
+      "note_en": "(AnkushinDaniil).",
+      "topic_en": "Account and transaction specs"
+    },
+    {
+      "topic": "账户与交易规范",
+      "title": "EIP-8298 PR：在安全考量中加入采用指引",
+      "note": "（nezu511）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12564",
+      "date": "2026-10-21",
+      "title_en": "EIP-8298 PR: add adoption guidance to Security Considerations",
+      "note_en": "(nezu511).",
+      "topic_en": "Account and transaction specs"
+    },
+    {
+      "topic": "账户与交易规范",
+      "title": "EIP-8209：REVEAL 交易在没有付款方时如何付费",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12539",
+      "date": "2026-10-21",
+      "title_en": "EIP-8209: how a REVEAL transaction pays without a payer",
+      "note_en": "Merged.",
+      "topic_en": "Account and transaction specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "后量子验证者密钥注册表",
+      "note": "合并为草案。",
+      "url": "https://github.com/ethereum/EIPs/pull/12550",
+      "date": "2026-10-21",
+      "title_en": "The post-quantum validator key registry",
+      "note_en": "Was merged as a draft.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：解耦共识是以太坊下一代共识协议",
+      "note": "13:50，通向后量子共识、更快最终性和更快 slot。",
+      "url": "https://x.com/barnabemonnot/status/2112798756953301147",
+      "date": "2026-10-21",
+      "title_en": "Barnabé: decoupled consensus is Ethereum's next-generation consensus protocol",
+      "note_en": "13:50, unlocking post-quantum consensus, faster finality and faster slots.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：Nyx 在 V6 带来可直接转入私密账户的以太坊收款地址，以及私密 ETH",
+      "note": "04:33。",
+      "url": "https://x.com/aztecnetwork/status/2112658584505024558",
+      "date": "2026-10-21",
+      "title_en": "Aztec: with V6, Nyx brings Ethereum receiver addresses that forward straight into your private account, plus private ETH",
+      "note_en": "04:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：SuperVega 上线私密期权交易",
+      "note": "16:02，基于 Shadow Accounts。",
+      "url": "https://x.com/StarkWareLtd/status/2112831778612457513",
+      "date": "2026-10-21",
+      "title_en": "StarkWare: private options trading is live on SuperVega",
+      "note_en": "16:02, built on Shadow Accounts.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETH Economic Zone：独立证明者客户端与 EEZ composer 端到端跑通",
+      "note": "00:29，与 Nethermind 合作走向公开测试网。",
+      "url": "https://x.com/etheconomiczone/status/2112597148667662466",
+      "date": "2026-10-21",
+      "title_en": "ETH Economic Zone: an independent prover client runs end to end with the EEZ composer",
+      "note_en": "00:29, working with Nethermind toward a public testnet.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zooko：SHA-256 的 39 轮变体安全性最多只有 118.6 位",
+      "note": "00:18。",
+      "url": "https://x.com/zooko/status/2112594329222971409",
+      "date": "2026-10-21",
+      "title_en": "zooko: the 39-round variant of SHA-256 has at most 118.6 bits of security",
+      "note_en": "00:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：SEACAST，带可执行规范和形式化模型的采样广播",
+      "note": "22:48。",
+      "url": "https://ethresear.ch/t/seacast-fast-lean-sampled-broadcast-for-ethereum-with-an-executable-spec-and-a-formal-model/26167",
+      "date": "2026-10-21",
+      "title_en": "ethresear.ch: SEACAST, fast and lean sampled broadcast with an executable spec and a formal model",
+      "note_en": "22:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8451 可锁定代币的永久锁",
+      "note": "03:00。",
+      "url": "https://ethereum-magicians.org/t/erc-8451-permanent-locks-for-lockable-tokens-erc-6982-extension/30030",
+      "date": "2026-10-21",
+      "title_en": "ERC-8451 permanent locks for lockable tokens",
+      "note_en": "03:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：给圈外人的解释，今天曝出一个 PHP 大漏洞",
+      "note": "23:59。",
+      "url": "https://x.com/binji_x/status/2112951984676299116",
+      "date": "2026-10-21",
+      "title_en": "binji: a quick explainer for everyone else, a big PHP security bug dropped today",
+      "note_en": "23:59.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12559",
+    "credit": "GitHub, ethereum/EIPs PR #12559",
+    "local_path": "assets/2026-10-21.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12559"
+  },
+  "keywords_en": [
+    "EIP-8037/8038 force contract upgrades",
+    "ChainSecurity",
+    "EIP-8141 frame and signature entries priced at the floor",
+    "EIP-8279",
+    "post-quantum validator key registry"
+  ],
+  "summary_en": "pcaversaccio pointed to a new ChainSecurity article: EIP-8037 and EIP-8038 can force some contracts to upgrade just to restore their intended behavior, even with no bytecode changes. That set the stage for the next day's ACDE decision to postpone Hoodi. On the spec side, EIP-8141 prices frame and signature entries at the floor, EIP-8279 checks the floor against the execution gas budget, and the post-quantum validator key registry was merged as a draft."
+}

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-03",
+  "keywords": [
+    "Glamsterdam Sepolia 时间表",
+    "Resolution 授权边界",
+    "签名验证工具缺陷",
+    "ERC-7943 冻结余额绕过"
+  ],
+  "summary": "周六较安静。Sigma Prime 重申 Glamsterdam 将于 10 月 6 日 13:53:36 UTC 在 Sepolia 激活。Magicians 出现一个讨论“计算与证据不等于授权”的 Resolution 草案，ethresear.ch 有人复盘一个签名验证工具中找到的六个缺陷。",
+  "items": [
+    {
+      "topic": "账户授权：Resolution 草案",
+      "title": "Magicians：EIP-TBD: Resolution, Non-Self-Authorizing State Transitions",
+      "note": "11:37 发布（作者 chugarchugarr），当天有 11 帖。它把恢复、代理（agent）、溯源、裁决等场景里的共同边界抽出来：候选转换、证据、可采纳性、授权、决议、后继状态，每一步都是单独的转换。不变量是：后继状态拥有的授权不能多于由已采纳证据、既定流程和当前授权状态能推出的授权。",
+      "url": "https://ethereum-magicians.org/t/eip-tbd-resolution-non-self-authorizing-state-transitions/29846",
+      "date": "2026-10-03",
+      "title_en": "Magicians: EIP-TBD: Resolution, Non-Self-Authorizing State Transitions",
+      "note_en": "Posted at 11:37 by chugarchugarr, reached 11 posts the same day. It pulls out a boundary shared by recovery, agents, provenance and adjudication: candidate transition, evidence, admissibility, authority, resolution and successor state, each a separate step. The invariant is that no successor state may hold more authority than can be derived from the admitted evidence, the committed procedure and the current authority state.",
+      "topic_en": "Account authority: the Resolution draft"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Sigma Prime：Glamsterdam 在 Sepolia 的时间表",
+      "note": "10:05。",
+      "url": "https://x.com/sigp_io/status/2106219160489648556",
+      "date": "2026-10-03",
+      "title_en": "Sigma Prime: Glamsterdam schedule on Sepolia",
+      "note_en": "10:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：六轮测试在一个签名验证工具中找到六个缺陷",
+      "note": "00:19，作者先写预测再调用，避免事后自评。对用户的提醒是：验证工具“返回成功”不等于验证了任何东西。",
+      "url": "https://ethresear.ch/t/six-defects-in-one-signature-verification-tool-found-from-outside-in-six-rounds/26109",
+      "date": "2026-10-03",
+      "title_en": "ethresear.ch: six defects in one signature verification tool, found from outside in six rounds",
+      "note_en": "00:19. The author wrote down predictions before each round so they could not grade themselves afterwards. The takeaway for users: a verification tool returning success does not mean anything was verified.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7943 PR：修复 uRWA1155 批量转账重复 id 绕过冻结余额检查",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2045",
+      "date": "2026-10-03",
+      "title_en": "ERC-7943 PR: fix a uRWA1155 duplicate-id batch transfer that bypassed the frozen-balance check",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #189（10 月 15 日）议程帖",
+      "note": "16:18。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-189-october-15-2026/29847",
+      "date": "2026-10-03",
+      "title_en": "ACDC #189 (October 15) agenda thread",
+      "note_en": "16:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "rotki v1.144.1 发布",
+      "note": "15:32，修复大量 bug 并提升性能。",
+      "url": "https://x.com/LefterisJP/status/2106301300426346774",
+      "date": "2026-10-03",
+      "title_en": "rotki v1.144.1 released",
+      "note_en": "15:32, with many bug fixes and performance improvements.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：我们在造一台抗量子的世界计算机",
+      "note": "18:42。",
+      "url": "https://x.com/binji_x/status/2106349042649231664",
+      "date": "2026-10-03",
+      "title_en": "binji: we are shipping a quantum-proof world computer",
+      "note_en": "18:42.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-tbd-resolution-non-self-authorizing-state-transitions/29846",
+    "credit": "Ethereum Magicians, EIP-TBD: Resolution",
+    "local_path": "assets/2026-10-03.jpg",
+    "credit_en": "Ethereum Magicians, EIP-TBD: Resolution"
+  },
+  "keywords_en": [
+    "Glamsterdam Sepolia schedule",
+    "Resolution authority boundary",
+    "signature verification tool defects",
+    "ERC-7943 frozen balance bypass"
+  ],
+  "summary_en": "A quiet Saturday. Sigma Prime restated that Glamsterdam activates on Sepolia at 13:53:36 UTC on October 6. A Resolution draft on Magicians argues that computation and evidence do not imply authority, and an ethresear.ch post walks through six defects found in one signature verification tool."
+}

@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-27",
+  "keywords": [
+    "EF App Enablement",
+    "应用层对 EIP 的输入",
+    "16 个隐私协议评估",
+    "EIP-7906 存储 nonce",
+    "ChainSecurity Devcon 走查",
+    "FOCIL Breakout #45"
+  ],
+  "summary": "EF App Enablement 团队请少参加 ACD 的应用方提供意见，Magicians 上发布了质押和预言机团队对 EIP 与路线图的访谈汇总。ethbeat 评估了 16 个隐私协议到底隐藏了什么、对谁隐藏、还剩什么可见。EIP-7906 明确保存在存储里的 nonce 变化出现在哪里，ChainSecurity 邀请项目在 Devcon 现场走查调用路径。",
+  "items": [
+    {
+      "topic": "隐私和应用层输入",
+      "title": "ethbeat：评估了 16 个隐私协议实际隐藏什么、对谁隐藏、还有什么可见",
+      "note": "21:38，并公开完整方法论征求反馈。",
+      "url": "https://x.com/ethbeat_org/status/2115090782549905429",
+      "date": "2026-10-27",
+      "title_en": "ethbeat: we reviewed 16 privacy protocols to understand what they actually hide, who they hide it from, and what is still visible",
+      "note_en": "21:38, publishing the full methodology for feedback.",
+      "topic_en": "Privacy and app-layer input"
+    },
+    {
+      "topic": "隐私和应用层输入",
+      "title": "EF：谁来决定上线什么，往往取决于谁提供了意见",
+      "note": "22:28，App Enablement 团队主动联系协议方，尤其是较少参加 ACD 的团队。",
+      "url": "https://x.com/ethereumfndn/status/2115103383426384313",
+      "date": "2026-10-27",
+      "title_en": "EF: who shapes what ships is often a question of input",
+      "note_en": "22:28; the App Enablement team is reaching out to protocols, especially those less active on ACD calls.",
+      "topic_en": "Privacy and app-layer input"
+    },
+    {
+      "topic": "隐私和应用层输入",
+      "title": "Magicians：应用层对 EIP 和路线图的输入，质押与预言机",
+      "note": "22:06（CPSTL）。团队被问到：不受商业和技术约束时如何按抗审查、开源、隐私、安全（CROPS）设计，什么在阻碍，哪个改动最有帮助；帖子按主题列出他们点名的 EIP。",
+      "url": "https://ethereum-magicians.org/t/app-layer-input-on-eips-and-the-roadmap-staking-and-oracles/30104",
+      "date": "2026-10-27",
+      "title_en": "Magicians: app-layer input on EIPs and the roadmap, staking and oracles",
+      "note_en": "22:06 (CPSTL). Teams were asked how they would design for censorship resistance, open source, privacy and security (CROPS) without business or technical limits, what stops them, and which single change would help most; the post lists the EIPs they named, grouped by theme.",
+      "topic_en": "Privacy and app-layer input"
+    },
+    {
+      "topic": "隐私和应用层输入",
+      "title": "ethresear.ch：Proof of One，一人一身份的加密投票",
+      "note": "14:42，附参考代码征求审阅。",
+      "url": "https://ethresear.ch/t/proof-of-one-one-person-one-identity-polling-with-encrypted-ballots-design-and-reference-code-requesting-critical-review/26184",
+      "date": "2026-10-27",
+      "title_en": "ethresear.ch: Proof of One, one-person-one-identity polling with encrypted ballots",
+      "note_en": "14:42, with reference code and a request for review.",
+      "topic_en": "Privacy and app-layer input"
+    },
+    {
+      "topic": "账户与 gas 规范",
+      "title": "EIP-7906：说明保存在存储中的 nonce 变化出现在哪里",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12562",
+      "date": "2026-10-27",
+      "title_en": "EIP-7906: say where storage-kept nonce changes appear",
+      "note_en": "Was merged.",
+      "topic_en": "Account and gas specs"
+    },
+    {
+      "topic": "账户与 gas 规范",
+      "title": "EIP-7928：规定 BAL 整数编码",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12571",
+      "date": "2026-10-27",
+      "title_en": "EIP-7928: specify BAL integer encoding",
+      "note_en": "Was merged.",
+      "topic_en": "Account and gas specs"
+    },
+    {
+      "topic": "账户与 gas 规范",
+      "title": "ChainSecurity：Glamsterdam 推迟了，但 Devcon 就在下周",
+      "note": "21:42，带上调用路径，现场讲解升级对你的协议有何改变。",
+      "url": "https://x.com/chain_security/status/2115091885660463242",
+      "date": "2026-10-27",
+      "title_en": "ChainSecurity: Glamsterdam got pushed back, but Devcon is next week",
+      "note_en": "21:42; bring your call paths and they will walk through what the upgrade changes for your protocol on site.",
+      "topic_en": "Account and gas specs"
+    },
+    {
+      "topic": "账户与 gas 规范",
+      "title": "lightclient：可能要等以太坊出现同等严重的漏洞，人们才会认真对待资助协议开发",
+      "note": "22:32。",
+      "url": "https://x.com/lightclients/status/2115104431494799656",
+      "date": "2026-10-27",
+      "title_en": "lightclient: it will probably take an exploit of similar severity on Ethereum before people take funding the protocol seriously",
+      "note_en": "22:32.",
+      "topic_en": "Account and gas specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：共识层后量子 P2P 迁移清单",
+      "note": "14:20。",
+      "url": "https://ethresear.ch/t/inventory-of-pq-p2p-migrations-in-the-consensus-layer/26183",
+      "date": "2026-10-27",
+      "title_en": "ethresear.ch: an inventory of post-quantum P2P migrations in the consensus layer",
+      "note_en": "14:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8297 PBT 状态的物理存储",
+      "note": "14:55。",
+      "url": "https://ethereum-magicians.org/t/physical-storage-for-eip-8297-pbt-state/30092",
+      "date": "2026-10-27",
+      "title_en": "Magicians: physical storage for EIP-8297 PBT state",
+      "note_en": "14:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：ArcX 上线私密积分交易",
+      "note": "20:11；Aztec：ravenhouse 让你收藏、出价、证明社区成员身份而不暴露多余信息 04:07。",
+      "url": "https://x.com/StarkWareLtd/status/2115068790127931398",
+      "date": "2026-10-27",
+      "title_en": "StarkWare: private points trading is live on ArcX",
+      "note_en": "20:11; Aztec: ravenhouse lets you collect, bid and prove community membership without sharing more than you want, 04:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：ravenhouse 让你收藏、出价、证明社区成员身份而不暴露多余信息",
+      "note": "StarkWare：ArcX 上线私密积分交易 20:11；Aztec：ravenhouse 让你收藏、出价、证明社区成员身份而不暴露多余信息 04:07。",
+      "url": "https://x.com/aztecnetwork/status/2114826175545794942",
+      "date": "2026-10-27",
+      "title_en": "Aztec: ravenhouse lets you collect, bid and prove community membership without sharing more than you want",
+      "note_en": "StarkWare: private points trading is live on ArcX, 20:11; Aztec: ravenhouse lets you collect, bid and prove community membership without sharing more than you want, 04:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：修正 submitOrder 示例中规范未定义的格式",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2069",
+      "date": "2026-10-27",
+      "title_en": "ERC-7730: fix the submitOrder example, which used formats the spec does not define",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #46",
+      "note": "FOCIL Breakout #45 今天 20:00 召开；FOCIL Breakout #46 定于 11 月 17 日。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-46-november-17-2026/30100",
+      "date": "2026-10-27",
+      "title_en": "FOCIL Breakout #46",
+      "note_en": "FOCIL Breakout #45 met today at 20:00, and FOCIL Breakout #46 is set for November 17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：给进入生物领域的人，请更重视空气传播疾病的防护",
+      "note": "09:30，3370 赞。",
+      "url": "https://x.com/VitalikButerin/status/2114907587057713455",
+      "date": "2026-10-27",
+      "title_en": "Vitalik: for anyone getting into biology, please take airborne disease resistance more seriously",
+      "note_en": "09:30, with 3,370 likes.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dankrad：比起打破指数时间假设这类理论进展，更担心 AI 找到的具体安全漏洞",
+      "note": "17:24。",
+      "url": "https://x.com/dankrad/status/2115026803244859587",
+      "date": "2026-10-27",
+      "title_en": "dankrad: far more worried about concrete security breaks found by AI than theoretical results like breaking the exponential time hypothesis",
+      "note_en": "17:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/app-layer-input-on-eips-and-the-roadmap-staking-and-oracles/30104",
+    "credit": "Ethereum Magicians, App-layer input on EIPs and the roadmap: staking and oracles",
+    "local_path": "assets/2026-10-27.jpg",
+    "credit_en": "Ethereum Magicians, App-layer input on EIPs and the roadmap: staking and oracles"
+  },
+  "keywords_en": [
+    "EF App Enablement",
+    "app-layer input on EIPs",
+    "review of 16 privacy protocols",
+    "EIP-7906 storage-kept nonces",
+    "ChainSecurity Devcon walkthroughs",
+    "FOCIL Breakout #45"
+  ],
+  "summary_en": "The EF App Enablement team asked app teams that rarely join ACD calls for their input, and a Magicians post summarized interviews with staking and oracle teams about EIPs and the roadmap. ethbeat reviewed 16 privacy protocols for what they actually hide, from whom, and what stays visible. EIP-7906 clarified where storage-kept nonce changes appear, and ChainSecurity invited projects to walk through their call paths at Devcon."
+}

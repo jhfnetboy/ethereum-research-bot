@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-28",
+  "keywords": [
+    "EIP-8455 RESERVOIR",
+    "EIP-8450 改为 BLS 授权",
+    "STVA 防盲签 ERC",
+    "Ephemeral Rollup",
+    "leanSPHINCS",
+    "ERC-7943 冻结绕过修复"
+  ],
+  "summary": "RESERVOIR 操作码正式成为 EIP-8455 并在 Magicians 开帖，当天 12 帖。EIP-8450 后量子验证者密钥注册表改为只由 BLS 签名密钥授权，不再改动执行层。Magicians 上有人针对 Bybit 式多签 UI 攻击提出 STVA 交易验证 ERC；ethresear 提出利用原生 AA 和证明聚合把计算与状态分离的“L1.5”模式。",
+  "items": [
+    {
+      "topic": "gas 预算与账户 AA",
+      "title": "Magicians：EIP-8455 RESERVOIR 操作码",
+      "note": "16:17（ja7ad），当天 12 帖。EIP-8037 把 gas 分成执行 gas 和状态 gas，状态 gas 可以由 `GAS` 不报告的储备支付；EIP-8141 frame 交易也有每帧的 `state_gas_left`。结果是合约看不到完整剩余预算，用两次 `gasleft()` 测子调用会漏算储备付的状态 gas。RESERVOIR 返回这部分，与 `GAS` 一起读出完整预算。",
+      "url": "https://ethereum-magicians.org/t/eip-8455-reservoir-opcode/30116",
+      "date": "2026-10-28",
+      "title_en": "Magicians: EIP-8455 RESERVOIR opcode",
+      "note_en": "16:17 (ja7ad), with 12 posts that day. EIP-8037 splits gas into execution gas and state gas, and state gas can be paid from a reservoir that `GAS` does not report; EIP-8141 frame transactions also have a per-frame `state_gas_left`. As a result, contracts cannot see their full remaining budget, and measuring a sub-call with two `gasleft()` readings under-counts state gas the reservoir paid for. RESERVOIR returns that amount, so together with `GAS` a contract can read its whole budget.",
+      "topic_en": "Gas budgets and account AA"
+    },
+    {
+      "topic": "gas 预算与账户 AA",
+      "title": "ethresear.ch：Ephemeral Rollup，以太坊的新“L1.5”",
+      "note": "09:40（namnc）。rollup 让验证变得简洁，但同时持有用户状态，所以每个 rollup 都需要退出机制；原生 AA（EIP-8141 等）和证明聚合让计算和状态分开变得可行。",
+      "url": "https://ethresear.ch/t/ephemeral-rollup-the-new-l1-5-of-ethereum/26187",
+      "date": "2026-10-28",
+      "title_en": "ethresear.ch: Ephemeral Rollup, the new \"L1.5\" of Ethereum",
+      "note_en": "09:40 (namnc). Rollups made verification succinct but also hold their users' state, which is why every rollup needs an exit; native AA (EIP-8141 and related EIPs) and proof aggregation make keeping compute and state apart practical.",
+      "topic_en": "Gas budgets and account AA"
+    },
+    {
+      "topic": "gas 预算与账户 AA",
+      "title": "EFDevcon：leanSPHINCS，为长期而签名",
+      "note": "18:25，EF 研究员 ncsgy 将在 Devcon 8 讲哈希签名如何保护智能账户、为后量子做准备。",
+      "url": "https://x.com/EFDevcon/status/2115404460138823694",
+      "date": "2026-10-28",
+      "title_en": "EFDevcon: leanSPHINCS, signing for the long run",
+      "note_en": "18:25; EF researcher ncsgy will present at Devcon 8 on how hash-based signatures can secure smart accounts for a post-quantum future.",
+      "topic_en": "Gas budgets and account AA"
+    },
+    {
+      "topic": "签名安全",
+      "title": "Magicians：ERC 草案 STVA，安全交易验证与授权，阻止盲签和多签 UI 攻击",
+      "note": "01:33，当天 13 帖。作者以 2025 年 2 月 Bybit Safe 多签事件为例，指出大额盗窃已不主要依赖合约漏洞，而是利用对不透明数据的盲签；提议标准化验证载荷、独立模拟接口和限定范围的能力，让“所见即所签”可强制执行。",
+      "url": "https://ethereum-magicians.org/t/erc-draft-secure-transaction-verification-and-authorization-stva-stopping-blind-signing-multisig-ui-attacks/30106",
+      "date": "2026-10-28",
+      "title_en": "Magicians: draft ERC STVA, secure transaction verification and authorization to stop blind signing and multisig UI attacks",
+      "note_en": "01:33, with 13 posts that day. Citing the February 2025 Bybit Safe multisig incident, the author argues that most high-value thefts no longer rely only on contract bugs but exploit blind signing of opaque data, and proposes a standard verification payload, an independent simulation interface and scoped capabilities so that \"what you see is what you sign\" becomes enforceable.",
+      "topic_en": "Signing security"
+    },
+    {
+      "topic": "签名安全",
+      "title": "ERC-7943：修复 uRWA1155 重复 id 批量转账绕过冻结",
+      "note": "（xaler5）。在 `safeBatchTransferFrom` 中重复同一 `tokenId` 可以转走被冻结的代币，修复后按 id 检查累计数额。",
+      "url": "https://github.com/ethereum/ERCs/pull/2122",
+      "date": "2026-10-28",
+      "title_en": "ERC-7943: fix the duplicate-id batch freeze bypass in uRWA1155",
+      "note_en": "(xaler5). Repeating a `tokenId` in `safeBatchTransferFrom` let a holder move frozen tokens; transfers now check the running total per id.",
+      "topic_en": "Signing security"
+    },
+    {
+      "topic": "签名安全",
+      "title": "lambdaclass：PropAMM 合约关键漏洞修复披露",
+      "note": "03:48，主网上的 factory 不受影响。",
+      "url": "https://x.com/class_lambda/status/2115183902876909722",
+      "date": "2026-10-28",
+      "title_en": "lambdaclass: security fix disclosure for the PropAMM contract",
+      "note_en": "03:48; its factories on mainnet are not affected.",
+      "topic_en": "Signing security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8450：BLS 授权密钥更换、构建者、密码学接口",
+      "note": "（kevaundray）。删除提款地址路径（EIP-7685 请求类型、执行层请求合约、待授权队列），`requires` 从 7002、7685、7916 改为 7495、7732、7916，不再改执行层；BLS 签名密钥是唯一权限，可注册和替换密钥，更换受 `MIN_PQ_KEY_CHANGE_DELAY = 256` 个 epoch 限制。",
+      "url": "https://github.com/ethereum/EIPs/pull/12592",
+      "date": "2026-10-28",
+      "title_en": "EIP-8450: BLS-authorized key changes, builders, crypto interface",
+      "note_en": "(kevaundray). It removes the withdrawal-address path (the EIP-7685 request type, the execution-layer request contract and the pending-authorization queue), changes `requires` from 7002, 7685, 7916 to 7495, 7732, 7916 so the EIP no longer changes the execution layer, and makes the BLS signing key the only authority that registers and replaces keys, with changes limited by `MIN_PQ_KEY_CHANGE_DELAY = 256` epochs.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7964：在验证方推导主域字段",
+      "note": "合并；ERC-8048 简化规范和示例 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2112",
+      "date": "2026-10-28",
+      "title_en": "ERC-7964: derive main domain fields on the verifier",
+      "note_en": "Merged; ERC-8048: simplify the spec and examples, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048 简化规范和示例",
+      "note": "ERC-7964：在验证方推导主域字段 合并；ERC-8048 简化规范和示例 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2118",
+      "date": "2026-10-28",
+      "title_en": "ERC-8048: simplify the spec and examples",
+      "note_en": "ERC-7964: derive main domain fields on the verifier, merged; ERC-8048: simplify the spec and examples, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：最大的密码学威胁可能是 AI 已经发现了关键漏洞却没人告诉我们",
+      "note": "00:15，密码学敏捷性是 Starknet L1 的核心押注。",
+      "url": "https://x.com/StarkWareLtd/status/2115130178586415210",
+      "date": "2026-10-28",
+      "title_en": "StarkWare: the biggest threat to cryptography may be that AI has already found critical vulnerabilities and nobody is telling us",
+      "note_en": "00:15; crypto agility is a core bet behind Starknet L1.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：V6 发布伙伴 nulo 钱包",
+      "note": "02:30，用户选择每个应用能看到什么并批准每次发送。",
+      "url": "https://x.com/aztecnetwork/status/2115164237001822342",
+      "date": "2026-10-28",
+      "title_en": "Aztec: V6 launch partner nulo wallet",
+      "note_en": "02:30, where users pick what each app sees and approve every send.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Opus 上线私密 LP 质押",
+      "note": "20:08。",
+      "url": "https://x.com/StarkWareLtd/status/2115430586848563256",
+      "date": "2026-10-28",
+      "title_en": "StarkWare: private LP staking is live on Opus",
+      "note_en": "20:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：看来 4 是新的 256 位安全标准",
+      "note": "01:26，2156 赞。",
+      "url": "https://x.com/pcaversaccio/status/2115148267940119039",
+      "date": "2026-10-28",
+      "title_en": "pcaversaccio: apparently 4 is the new 256-bit security standard",
+      "note_en": "01:26, with 2,156 likes.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：链上安全和链上金融赚钱是一回事，定义一个性质，交给 fuzzer 或求解器去打破它",
+      "note": "23:11。",
+      "url": "https://x.com/gakonst/status/2115476600292786642",
+      "date": "2026-10-28",
+      "title_en": "gakonst: making money through onchain security or onchain finance is the same thing; define a property and ask a fuzzer or solver to break it",
+      "note_en": "23:11.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8455-reservoir-opcode/30116",
+    "credit": "Ethereum Magicians, EIP-8455: RESERVOIR Opcode",
+    "local_path": "assets/2026-10-28.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8455: RESERVOIR Opcode"
+  },
+  "keywords_en": [
+    "EIP-8455 RESERVOIR",
+    "EIP-8450 moves to BLS authorization",
+    "STVA anti-blind-signing ERC",
+    "Ephemeral Rollup",
+    "leanSPHINCS",
+    "ERC-7943 freeze bypass fix"
+  ],
+  "summary_en": "The RESERVOIR opcode became EIP-8455 and opened a Magicians thread that drew 12 posts in a day. The EIP-8450 post-quantum validator key registry now relies only on the BLS signing key for authorization and no longer changes the execution layer. On Magicians, an STVA transaction verification ERC was proposed against Bybit-style multisig UI attacks, and on ethresear an \"L1.5\" pattern uses native AA and proof aggregation to separate compute from state."
+}

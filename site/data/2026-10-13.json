@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-13",
+  "keywords": [
+    "Starknet Shadow Accounts",
+    "密码学可替换性评估",
+    "ERC-7562 合并",
+    "Frame Transaction Breakout #7",
+    "Cambridge 密码学研讨"
+  ],
+  "summary": "Starknet 上线 Shadow Accounts，应用可以给用户一个“公开转私密”的开关。StarkWare 按 8 项标准评估以太坊的密码学可替换性，认为只通过 3 项。ERC-7562 禁用 SETCODEFROM 的 PR 合并，EIP-8141 澄清追踪规则里的瞬态存储和部署目标。Justin Drake、EF 和 LambdaClass 等在 Cambridge 与上百名密码学家研讨。",
+  "items": [
+    {
+      "topic": "账户隐私与可替换性",
+      "title": "StarkWare：Shadow Accounts 在 Starknet 上线",
+      "note": "20:58，一个 STRK20 隐私原语，应用可以提供“公开 → 私密”的开关。Eli Ben-Sasson：一键切换，防止外界拼出你完整的 DeFi 活动 21:30。",
+      "url": "https://x.com/StarkWareLtd/status/2110007213331026343",
+      "date": "2026-10-13",
+      "title_en": "StarkWare: Shadow Accounts are live on Starknet",
+      "note_en": "20:58, a STRK20 privacy primitive that lets apps offer a \"public to private\" switch. Eli Ben-Sasson: one click to switch, keeping the world from piecing together your full DeFi activity, 21:30.",
+      "topic_en": "Account privacy and crypto agility"
+    },
+    {
+      "topic": "账户隐私与可替换性",
+      "title": "Eli Ben-Sasson：一键切换，防止外界拼出你完整的 DeFi 活动",
+      "note": "StarkWare：Shadow Accounts 在 Starknet 上线 20:58，一个 STRK20 隐私原语，应用可以提供“公开 → 私密”的开关。Eli Ben-Sasson：一键切换，防止外界拼出你完整的 DeFi 活动 21:30。",
+      "url": "https://x.com/EliBenSasson/status/2110015406819688802",
+      "date": "2026-10-13",
+      "title_en": "Eli Ben-Sasson: one click to switch, keeping the world from piecing together your full DeFi activity",
+      "note_en": "StarkWare: Shadow Accounts are live on Starknet, 20:58, a STRK20 privacy primitive that lets apps offer a \"public to private\" switch. Eli Ben-Sasson: one click to switch, keeping the world from piecing together your full DeFi activity, 21:30.",
+      "topic_en": "Account privacy and crypto agility"
+    },
+    {
+      "topic": "账户隐私与可替换性",
+      "title": "StarkWare：按 8 项标准评估以太坊的密码学可替换性，只通过 3 项",
+      "note": "15:59。Eli Ben-Sasson：与其谈抗量子密码学，不如谈密码学可替换性 18:49。",
+      "url": "https://x.com/StarkWareLtd/status/2109931907396116818",
+      "date": "2026-10-13",
+      "title_en": "StarkWare: assessing Ethereum's cryptographic agility across 8 criteria, it passes only 3",
+      "note_en": "15:59. Eli Ben-Sasson: rather than quantum-resistant cryptography, let's talk about crypto agility, 18:49.",
+      "topic_en": "Account privacy and crypto agility"
+    },
+    {
+      "topic": "账户隐私与可替换性",
+      "title": "Eli Ben-Sasson：与其谈抗量子密码学，不如谈密码学可替换性",
+      "note": "StarkWare：按 8 项标准评估以太坊的密码学可替换性，只通过 3 项 15:59。Eli Ben-Sasson：与其谈抗量子密码学，不如谈密码学可替换性 18:49。",
+      "url": "https://x.com/EliBenSasson/status/2109974728203010131",
+      "date": "2026-10-13",
+      "title_en": "Eli Ben-Sasson: rather than quantum-resistant cryptography, let's talk about crypto agility",
+      "note_en": "StarkWare: assessing Ethereum's cryptographic agility across 8 criteria, it passes only 3, 15:59. Eli Ben-Sasson: rather than quantum-resistant cryptography, let's talk about crypto agility, 18:49.",
+      "topic_en": "Account privacy and crypto agility"
+    },
+    {
+      "topic": "账户隐私与可替换性",
+      "title": "EIP-8141 PR：澄清追踪规则中的瞬态存储和部署目标",
+      "note": "（Marchhill）；ERC-7562 禁用 SETCODEFROM 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12494",
+      "date": "2026-10-13",
+      "title_en": "EIP-8141 PR: clarify transient storage and deploy targets in the trace rules",
+      "note_en": "(Marchhill); ERC-7562 blocking SETCODEFROM was merged.",
+      "topic_en": "Account privacy and crypto agility"
+    },
+    {
+      "topic": "账户隐私与可替换性",
+      "title": "ERC-7562 禁用 SETCODEFROM",
+      "note": "EIP-8141 PR：澄清追踪规则中的瞬态存储和部署目标（Marchhill）；ERC-7562 禁用 SETCODEFROM 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2066",
+      "date": "2026-10-13",
+      "title_en": "ERC-7562 blocking SETCODEFROM",
+      "note_en": "EIP-8141 PR: clarify transient storage and deploy targets in the trace rules (Marchhill); ERC-7562 blocking SETCODEFROM was merged.",
+      "topic_en": "Account privacy and crypto agility"
+    },
+    {
+      "topic": "账户隐私与可替换性",
+      "title": "Magicians：Frame Transaction Breakout #7（10 月 20 日）",
+      "note": "22:35。",
+      "url": "https://ethereum-magicians.org/t/frame-transaction-breakout-7-oct-20-2026/29961",
+      "date": "2026-10-13",
+      "title_en": "Magicians: Frame Transaction Breakout #7 (October 20)",
+      "note_en": "22:35.",
+      "topic_en": "Account privacy and crypto agility"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT：多数隐私协议不是让你隐身，而是帮你混入人群",
+      "note": "19:59，所以匿名集大小很重要；隐私寻宝挑战结束，汇总全部解法 21:56。",
+      "url": "https://x.com/ethbeat_org/status/2109992318526734451",
+      "date": "2026-10-13",
+      "title_en": "L2BEAT: most privacy protocols don't make you invisible, they help you blend in",
+      "note_en": "19:59, which is why the size of the crowd matters; the privacy treasure hunt is over, with all the solutions in one place, 21:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "隐私寻宝挑战结束，汇总全部解法",
+      "note": "L2BEAT：多数隐私协议不是让你隐身，而是帮你混入人群 19:59，所以匿名集大小很重要；隐私寻宝挑战结束，汇总全部解法 21:56。",
+      "url": "https://x.com/ethbeat_org/status/2110021892149256561",
+      "date": "2026-10-13",
+      "title_en": "the privacy treasure hunt is over, with all the solutions in one place",
+      "note_en": "L2BEAT: most privacy protocols don't make you invisible, they help you blend in, 19:59, which is why the size of the crowd matters; the privacy treasure hunt is over, with all the solutions in one place, 21:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Informed Diffusion，让家庭 builder 更快发布",
+      "note": "13:36；Rapidblocks 第二版：独立区块的流水线共识 15:27。",
+      "url": "https://ethresear.ch/t/informed-diffusion-making-home-builders-publish-fast/26151",
+      "date": "2026-10-13",
+      "title_en": "ethresear.ch: Informed Diffusion, making home builders publish fast",
+      "note_en": "13:36; Rapidblocks, take two: a pipelined consensus for independent blocks, 15:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Rapidblocks 第二版：独立区块的流水线共识",
+      "note": "ethresear.ch：Informed Diffusion，让家庭 builder 更快发布 13:36；Rapidblocks 第二版：独立区块的流水线共识 15:27。",
+      "url": "https://ethresear.ch/t/rapidblocks-take-two-a-pipelined-consensus-for-independent-blocks/26152",
+      "date": "2026-10-13",
+      "title_en": "Rapidblocks, take two: a pipelined consensus for independent blocks",
+      "note_en": "Ethresear.ch: Informed Diffusion, making home builders publish fast, 13:36; Rapidblocks, take two: a pipelined consensus for independent blocks, 15:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8253 加入主网 prestate 值与 genesis/devnet 分配",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12495",
+      "date": "2026-10-13",
+      "title_en": "EIP-8253 adds mainnet prestate values and genesis/devnet allocations",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8107 PR：加固与 nonce 保护的 clearDenial",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2067",
+      "date": "2026-10-13",
+      "title_en": "ERC-8107 PR: robustness hardening and a nonce-guarded clearDenial",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Fede：在 Cambridge 与 Justin Drake、LambdaClass、EF 及上百名密码学家学习和辩论",
+      "note": "05:58。",
+      "url": "https://x.com/fede_intern/status/2109780756893401501",
+      "date": "2026-10-13",
+      "title_en": "Fede: in Cambridge with Justin Drake, LambdaClass, the EF and more than a hundred cryptographers",
+      "note_en": "05:58.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：零停机升级去中心化网络，同时扩容 230%，Glamsterdam 值得多聊",
+      "note": "14:52。",
+      "url": "https://x.com/binji_x/status/2109915194935677134",
+      "date": "2026-10-13",
+      "title_en": "binji: upgrading a live network with zero downtime while scaling it 230%, Glamsterdam deserves more attention",
+      "note_en": "14:52.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/frame-transaction-breakout-7-oct-20-2026/29961",
+    "credit": "Ethereum Magicians, Frame Transaction Breakout #7",
+    "local_path": "assets/2026-10-13.jpg",
+    "credit_en": "Ethereum Magicians, Frame Transaction Breakout #7"
+  },
+  "keywords_en": [
+    "Starknet Shadow Accounts",
+    "crypto agility assessment",
+    "ERC-7562 merged",
+    "Frame Transaction Breakout #7",
+    "Cambridge cryptography workshop"
+  ],
+  "summary_en": "Starknet launched Shadow Accounts, which let apps give users a public-to-private switch. StarkWare assessed Ethereum's crypto agility against 8 criteria and says it passes only 3. The ERC-7562 PR banning SETCODEFROM was merged, and EIP-8141 clarified transient storage and deploy targets in its trace rules. Justin Drake, the EF, LambdaClass and others met with more than a hundred cryptographers in Cambridge."
+}

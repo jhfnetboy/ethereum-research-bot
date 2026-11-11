@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-23",
+  "keywords": [
+    "Hoodi 推迟后续",
+    "EIP-8037 安全考量",
+    "EIP-8141 max_fee",
+    "GASPRICE 下界",
+    "ERC-7562 禁用 SLOTNUM",
+    "Starknet 后量子 L1"
+  ],
+  "summary": "推迟决定落到规范和公告：EF 与 Alex Stokes 发帖提醒运营者，EIP-7773 清除 Hoodi 激活时间，EIP-8037 新增 PR 把“花掉的 gas 会在结算前回来”写进安全考量。lightclient 公开表示不喜欢 EIP-8037/8038，认为它们只是让 gas 上限能涨，没有解决状态持续增长。frame 交易改用单一 `max_fee` 约束成本，`GASPRICE` 改为返回下界。",
+  "items": [
+    {
+      "topic": "推迟之后：EIP-8037/8038 的反思",
+      "title": "Alex Stokes：核心开发者在今天的 ACDE 上决定推迟 Hoodi 分叉",
+      "note": "00:50；EF：原定 10 月 26 日的 Hoodi 升级已推迟，新日期待定 22:21。",
+      "url": "https://x.com/ralexstokes/status/2113327089306988960",
+      "date": "2026-10-23",
+      "title_en": "Alex Stokes: core developers decided to delay the upcoming Hoodi hard fork on today's ACDE call",
+      "note_en": "00:50; EF: the Hoodi upgrade previously scheduled for October 26 has been delayed, new date TBA, 22:21.",
+      "topic_en": "After the postponement: second thoughts on EIP-8037/8038"
+    },
+    {
+      "topic": "推迟之后：EIP-8037/8038 的反思",
+      "title": "EF：原定 10 月 26 日的 Hoodi 升级已推迟，新日期待定",
+      "note": "Alex Stokes：核心开发者在今天的 ACDE 上决定推迟 Hoodi 分叉 00:50；EF：原定 10 月 26 日的 Hoodi 升级已推迟，新日期待定 22:21。",
+      "url": "https://x.com/ethereumfndn/status/2113652096717427132",
+      "date": "2026-10-23",
+      "title_en": "EF: the Hoodi upgrade previously scheduled for October 26 has been delayed, new date TBA",
+      "note_en": "Alex Stokes: core developers decided to delay the upcoming Hoodi hard fork on today's ACDE call, 00:50; EF: the Hoodi upgrade previously scheduled for October 26 has been delayed, new date TBA, 22:21.",
+      "topic_en": "After the postponement: second thoughts on EIP-8037/8038"
+    },
+    {
+      "topic": "推迟之后：EIP-8037/8038 的反思",
+      "title": "EIP-7773：清除推迟的 Hoodi 激活",
+      "note": "（ralexstokes），Sepolia 和主网内容不变。",
+      "url": "https://github.com/ethereum/EIPs/pull/12568",
+      "date": "2026-10-23",
+      "title_en": "EIP-7773: clear the postponed Hoodi activation",
+      "note_en": "(ralexstokes), leaving Sepolia and mainnet content unchanged.",
+      "topic_en": "After the postponement: second thoughts on EIP-8037/8038"
+    },
+    {
+      "topic": "推迟之后：EIP-8037/8038 的反思",
+      "title": "EIP-8037 PR：说明结算前 gas 回流和储备传递",
+      "note": "（flcl42，非作者补充）。现行文本只提到“两次 `GAS` 读数相减会得到负数”；PR 补充：清空本交易新建的槽会把最多 97,920 gas 立即退回 `gas_left`，回滚会恢复状态 gas 记账，储备全额传给子调用，因此帧内花掉的 gas 可以在结算前回来。",
+      "url": "https://github.com/ethereum/EIPs/pull/12573",
+      "date": "2026-10-23",
+      "title_en": "EIP-8037 PR: document gas returning before settlement and reservoir forwarding",
+      "note_en": "(flcl42, a non-author addition). The current text only says that \"a contract measuring work as the difference between two `GAS` reads then gets a negative value\". The PR adds that clearing a slot created earlier in the transaction refills up to 97,920 gas into `gas_left` immediately, that reverts restore state gas accounting, and that the reservoir passes to child frames in full, so gas spent within a frame can come back before the transaction settles.",
+      "topic_en": "After the postponement: second thoughts on EIP-8037/8038"
+    },
+    {
+      "topic": "推迟之后：EIP-8037/8038 的反思",
+      "title": "lightclient：个人复盘，我真的不喜欢这些 EIP",
+      "note": "19:19，它们只让 gas 上限能提高，没有解决状态不断增长这一根本问题。",
+      "url": "https://x.com/lightclients/status/2113606207252611307",
+      "date": "2026-10-23",
+      "title_en": "lightclient: personal retro, I really don't like these EIPs",
+      "note_en": "19:19. They only let the gas limit increase without solving the fundamental problem of ever-growing state.",
+      "topic_en": "After the postponement: second thoughts on EIP-8037/8038"
+    },
+    {
+      "topic": "frame 交易的费用模型",
+      "title": "EIP-8141：用 max_fee 约束成本",
+      "note": "合并（lightclient），在 frame 对象里引入 `max_fee`，取代分维度资源上限，改编自 EIP-7999。",
+      "url": "https://github.com/ethereum/EIPs/pull/12414",
+      "date": "2026-10-23",
+      "title_en": "EIP-8141: use max_fee to bound cost",
+      "note_en": "Was merged (lightclient), adding `max_fee` to the frame object instead of per-dimension resource limits, adapted from EIP-7999.",
+      "topic_en": "The frame transaction fee model"
+    },
+    {
+      "topic": "frame 交易的费用模型",
+      "title": "EIP-8141：在 max_fee 预算下规定 GASPRICE",
+      "note": "合并（spencer-tb）。未用 gas 现在也能支撑小费，单价取决于 `gas_used`，`GASPRICE` 无法精确，于是返回下界 `base_fee_per_gas + max_priority_fee // max_gas`；`max_fee` 覆盖全部小费时精确，且不会高于付款方的实际单价，gas 退款合约不会多付。",
+      "url": "https://github.com/ethereum/EIPs/pull/12569",
+      "date": "2026-10-23",
+      "title_en": "EIP-8141: specify GASPRICE under the max_fee budget",
+      "note_en": "Was merged (spencer-tb). Unused gas can now back the tip, so the price per gas depends on `gas_used` and `GASPRICE` cannot be exact. It returns the lower bound `base_fee_per_gas + max_priority_fee // max_gas`, which is exact whenever `max_fee` covers the full tip and never above what the payer pays per gas, so gas refund contracts cannot be overpaid.",
+      "topic_en": "The frame transaction fee model"
+    },
+    {
+      "topic": "frame 交易的费用模型",
+      "title": "EIP-8141：把 mode 章节移到 Frame 定义下",
+      "note": "合并；EIP-7906：删除对 txparam 0x06 的引用 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12236",
+      "date": "2026-10-23",
+      "title_en": "EIP-8141: move the mode section under the Frame definition",
+      "note_en": "Merged; EIP-7906: remove the reference to txparam 0x06, merged.",
+      "topic_en": "The frame transaction fee model"
+    },
+    {
+      "topic": "frame 交易的费用模型",
+      "title": "EIP-7906：删除对 txparam 0x06 的引用",
+      "note": "EIP-8141：把 mode 章节移到 Frame 定义下 合并；EIP-7906：删除对 txparam 0x06 的引用 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12576",
+      "date": "2026-10-23",
+      "title_en": "EIP-7906: remove the reference to txparam 0x06",
+      "note_en": "EIP-8141: move the mode section under the Frame definition, merged; EIP-7906: remove the reference to txparam 0x06, merged.",
+      "topic_en": "The frame transaction fee model"
+    },
+    {
+      "topic": "frame 交易的费用模型",
+      "title": "ERC-7562：禁用 SLOTNUM",
+      "note": "合并，它和 `BLOCKNUM`、`TIMESTAMP` 一样读取环境。",
+      "url": "https://github.com/ethereum/ERCs/pull/2097",
+      "date": "2026-10-23",
+      "title_en": "ERC-7562: ban SLOTNUM",
+      "note_en": "Was merged, since like `BLOCKNUM` and `TIMESTAMP` it reads the environment.",
+      "topic_en": "The frame transaction fee model"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet 下一章，探索独立的后量子 L1，带可编程隐私",
+      "note": "15:19；Eli Ben-Sasson：预测量子计算机两年内到来 14:52。",
+      "url": "https://x.com/StarkWareLtd/status/2113545734817796509",
+      "date": "2026-10-23",
+      "title_en": "StarkWare: Starknet's next chapter, exploring an independent post-quantum L1 with programmable privacy",
+      "note_en": "15:19; Eli Ben-Sasson predicts quantum computers within two years, 14:52.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：预测量子计算机两年内到来",
+      "note": "StarkWare：Starknet 下一章，探索独立的后量子 L1，带可编程隐私 15:19；Eli Ben-Sasson：预测量子计算机两年内到来 14:52。",
+      "url": "https://x.com/EliBenSasson/status/2113538923385561416",
+      "date": "2026-10-23",
+      "title_en": "Eli Ben-Sasson predicts quantum computers within two years",
+      "note_en": "StarkWare: Starknet's next chapter, exploring an independent post-quantum L1 with programmable privacy, 15:19; Eli Ben-Sasson predicts quantum computers within two years, 14:52.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Endur 上整个质押周期私密化",
+      "note": "19:07，基于 STRK20 Shadow Accounts。",
+      "url": "https://x.com/StarkWareLtd/status/2113603094000918800",
+      "date": "2026-10-23",
+      "title_en": "StarkWare: the entire staking cycle is now private on Endur",
+      "note_en": "19:07, built on STRK20 Shadow Accounts.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：Alpha V6 通过治理投票",
+      "note": "02:37，进入执行延迟期。",
+      "url": "https://x.com/aztecnetwork/status/2113354198180155669",
+      "date": "2026-10-23",
+      "title_en": "Aztec: Alpha V6 passed the governance vote",
+      "note_en": "02:37, and enters an execution delay.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #17",
+      "note": "议程发布 15:28。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-17/30058",
+      "date": "2026-10-23",
+      "title_en": "PQTS Breakout #17",
+      "note_en": "The PQTS Breakout #17 agenda was posted at 15:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PR 2101",
+      "note": "ERC-8107 补充活性检查范围和参考协调器（PR 2101 合并）；一批 AI 代理信用 ERC 提交，如 Agent Credit Lines。",
+      "url": "https://github.com/ethereum/ERCs/pull/2101",
+      "date": "2026-10-23",
+      "title_en": "PR 2101",
+      "note_en": "ERC-8107 clarified the scope of its liveness check and added a reference coordinator (PR 2101, merged); a batch of AI agent credit ERCs was submitted, such as Agent Credit Lines.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Agent Credit Lines",
+      "note": "ERC-8107 补充活性检查范围和参考协调器（PR 2101 合并）；一批 AI 代理信用 ERC 提交，如 Agent Credit Lines。",
+      "url": "https://github.com/ethereum/ERCs/pull/2104",
+      "date": "2026-10-23",
+      "title_en": "Agent Credit Lines",
+      "note_en": "ERC-8107 clarified the scope of its liveness check and added a reference coordinator (PR 2101, merged); a batch of AI agent credit ERCs was submitted, such as Agent Credit Lines.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：又一座跨链桥",
+      "note": "17:00，市场在压低延迟和成本，多链世界不可否认。",
+      "url": "https://x.com/barnabemonnot/status/2113571305983287531",
+      "date": "2026-10-23",
+      "title_en": "Barnabé: another day, another bridge",
+      "note_en": "17:00; the market is pushing latency and costs down, and the multi-chain world is undeniable.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12573",
+    "credit": "GitHub, ethereum/EIPs PR #12573",
+    "local_path": "assets/2026-10-23.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12573"
+  },
+  "keywords_en": [
+    "Hoodi postponement follow-up",
+    "EIP-8037 security considerations",
+    "EIP-8141 max_fee",
+    "GASPRICE lower bound",
+    "ERC-7562 bans SLOTNUM",
+    "Starknet post-quantum L1"
+  ],
+  "summary_en": "The postponement reached the specs and announcements: the EF and Alex Stokes posted notices for operators, EIP-7773 cleared the Hoodi activation time, and a new EIP-8037 PR writes \"spent gas can come back before settlement\" into its security considerations. lightclient said publicly that he does not like EIP-8037/8038, since they only let the gas limit rise without solving ever-growing state. Frame transactions now bound cost with a single `max_fee`, and `GASPRICE` returns a lower bound."
+}

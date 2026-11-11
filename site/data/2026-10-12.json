@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-12",
+  "keywords": [
+    "ERC-7562 禁用 SETCODEFROM",
+    "EIP-8141 费用规则",
+    "隐形地址互通",
+    "L2BEAT Blobs 页面",
+    "Gnosis FCR"
+  ],
+  "summary": "CPerezz 提议在 ERC-7562（4337 的验证规则）里禁止 SETCODEFROM，EIP-8141 补上 EIP-1559 费用有效性规则和 effective_gas_price 的定义。Kassandra 把“隐私成为默认”拆成步骤：先让所有钱包互通基础隐形地址，在此之前先要一个后量子私密的方案。L2BEAT 上线 Blobs 页面并停掉 DABEAT，理由是以太坊有大量未用的 blob 容量。",
+  "items": [
+    {
+      "topic": "账户与交易规则：SETCODEFROM 进 4337 黑名单",
+      "title": "ERC-7562 PR：禁止 SETCODEFROM",
+      "note": "（CPerezz，次日合并）。ERC-7562 是 4337 bundler 对 UserOperation 验证阶段的操作码和存储访问限制。",
+      "url": "https://github.com/ethereum/ERCs/pull/2066",
+      "date": "2026-10-12",
+      "title_en": "ERC-7562 PR: block SETCODEFROM",
+      "note_en": "(CPerezz, merged the next day). ERC-7562 sets the opcode and storage access limits that 4337 bundlers apply to UserOperation validation.",
+      "topic_en": "Account and transaction rules: SETCODEFROM on the 4337 ban list"
+    },
+    {
+      "topic": "账户与交易规则：SETCODEFROM 进 4337 黑名单",
+      "title": "EIP-8141 PR：写明 EIP-1559 费用有效性规则并定义 effective_gas_price",
+      "note": "（AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12486",
+      "date": "2026-10-12",
+      "title_en": "EIP-8141 PR: state the EIP-1559 fee validity rules and define effective_gas_price",
+      "note_en": "(AnkushinDaniil).",
+      "topic_en": "Account and transaction rules: SETCODEFROM on the 4337 ban list"
+    },
+    {
+      "topic": "账户与交易规则：SETCODEFROM 进 4337 黑名单",
+      "title": "EIP-8298 补齐规范并分配操作码 0xA7",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12480",
+      "date": "2026-10-12",
+      "title_en": "EIP-8298 closes spec gaps and assigns opcode 0xA7",
+      "note_en": "Merged.",
+      "topic_en": "Account and transaction rules: SETCODEFROM on the 4337 ban list"
+    },
+    {
+      "topic": "隐私成为默认：从隐形地址开始",
+      "title": "Kassandra：目标是让以太坊用户的隐私成为常态",
+      "note": "19:41。第一步是钱包互通基础隐形地址支持，但在那之前需要一个后量子私密的隐形地址方案。",
+      "url": "https://x.com/kassandraETH/status/2109625616156828000",
+      "date": "2026-10-12",
+      "title_en": "Kassandra: the goal is for privacy to be the norm for Ethereum users",
+      "note_en": "19:41. Step one is wallets interoperating on basic stealth address support, but first comes a post-quantum private stealth address scheme.",
+      "topic_en": "Privacy by default, starting with stealth addresses"
+    },
+    {
+      "topic": "隐私成为默认：从隐形地址开始",
+      "title": "Magicians：以 USDC/USDT 为背书的私密稳定币",
+      "note": "07:24，与三天前 ethresear.ch 帖子同一项目，当天 11 帖。",
+      "url": "https://ethereum-magicians.org/t/private-stablecoin-on-ethereum-backed-by-usdc-usdt/29946",
+      "date": "2026-10-12",
+      "title_en": "Magicians: a private stablecoin on Ethereum backed by USDC/USDT",
+      "note_en": "07:24, the same project as the ethresear.ch post three days earlier, with 11 posts that day.",
+      "topic_en": "Privacy by default, starting with stealth addresses"
+    },
+    {
+      "topic": "隐私成为默认：从隐形地址开始",
+      "title": "StarkWare：Europol 关于量子威胁的报告提到账户抽象和 ZK-STARK",
+      "note": "11:59，作为降低钱包量子暴露的工具。",
+      "url": "https://x.com/StarkWareLtd/status/2109509154314518979",
+      "date": "2026-10-12",
+      "title_en": "StarkWare: Europol's report on quantum threats mentions account abstraction and ZK-STARKs",
+      "note_en": "11:59, as tools to reduce wallets' quantum exposure.",
+      "topic_en": "Privacy by default, starting with stealth addresses"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT：上线 Blobs 页面，停用 DABEAT",
+      "note": "20:07，因为以太坊有大量未用的 blob 容量且还会增长。",
+      "url": "https://x.com/ethbeat_org/status/2109632003393925218",
+      "date": "2026-10-12",
+      "title_en": "L2BEAT: launching a Blobs page and retiring DABEAT",
+      "note_en": "20:07, because Ethereum has plenty of unused blob capacity and it will keep growing.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Derek Chiang：Gnosis 上线 FCR，L1 存款从 14 分钟变成 12 到 24 秒",
+      "note": "21:30；Ethlabs：FCR 为更好的链上市场铺路 20:54。",
+      "url": "https://x.com/decentrek/status/2109653029129453709",
+      "date": "2026-10-12",
+      "title_en": "Derek Chiang: Gnosis is live with FCR, and L1 deposits now take 12 to 24 seconds instead of 14 minutes",
+      "note_en": "21:30; Ethlabs: FCR is paving the road to better onchain markets, 20:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethlabs：FCR 为更好的链上市场铺路",
+      "note": "Derek Chiang：Gnosis 上线 FCR，L1 存款从 14 分钟变成 12 到 24 秒 21:30；Ethlabs：FCR 为更好的链上市场铺路 20:54。",
+      "url": "https://x.com/ethlabs_org/status/2109643922926354678",
+      "date": "2026-10-12",
+      "title_en": "Ethlabs: FCR is paving the road to better onchain markets",
+      "note_en": "Derek Chiang: Gnosis is live with FCR, and L1 deposits now take 12 to 24 seconds instead of 14 minutes, 21:30; Ethlabs: FCR is paving the road to better onchain markets, 20:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：8415Wallet beta，原生支持 ERC-8415",
+      "note": "02:53。",
+      "url": "https://ethereum-magicians.org/t/8415wallet-an-erc-8415-based-wallet-now-available-for-beta-testing/29945",
+      "date": "2026-10-12",
+      "title_en": "Magicians: 8415Wallet beta with native ERC-8415 support",
+      "note_en": "02:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-4758（停用 SELFDESTRUCT）移回 Draft",
+      "note": "新 EIP：硬件与带宽建议。",
+      "url": "https://github.com/ethereum/EIPs/pull/12492",
+      "date": "2026-10-12",
+      "title_en": "EIP-4758 (deactivate SELFDESTRUCT) moved back to Draft",
+      "note_en": "New EIP: hardware and bandwidth recommendations.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：硬件与带宽建议",
+      "note": "EIP-4758（停用 SELFDESTRUCT）移回 Draft；新 EIP：硬件与带宽建议。",
+      "url": "https://github.com/ethereum/EIPs/pull/12490",
+      "date": "2026-10-12",
+      "title_en": "new EIP: hardware and bandwidth recommendations",
+      "note_en": "EIP-4758 (deactivate SELFDESTRUCT) moved back to Draft; new EIP: hardware and bandwidth recommendations.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：抗量子比特币交易成本从 320 美元降到约 59 美元",
+      "note": "21:22。",
+      "url": "https://x.com/StarkWareLtd/status/2109651021622354225",
+      "date": "2026-10-12",
+      "title_en": "StarkWare: a quantum-safe Bitcoin transaction now costs about $59, down from $320",
+      "note_en": "21:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：Aztec 收购 ZKPassport 被严重低估",
+      "note": "18:51。",
+      "url": "https://x.com/binji_x/status/2109612936016564300",
+      "date": "2026-10-12",
+      "title_en": "binji: people are vastly underestimating Aztec's acquisition of ZKPassport",
+      "note_en": "18:51.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：此前从未说过那样的话",
+      "note": "21:17，回应关于 Starknet 与以太坊对齐的争议。",
+      "url": "https://x.com/EliBenSasson/status/2109649697929347080",
+      "date": "2026-10-12",
+      "title_en": "Eli Ben-Sasson: until a week ago we never said anything like that",
+      "note_en": "21:17, responding to the debate over Starknet's alignment with Ethereum.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/ERCs/pull/2066",
+    "credit": "GitHub, ethereum/ERCs PR #2066",
+    "credit_en": "GitHub, ethereum/ERCs PR #2066"
+  },
+  "keywords_en": [
+    "ERC-7562 bans SETCODEFROM",
+    "EIP-8141 fee rules",
+    "stealth address interop",
+    "L2BEAT Blobs page",
+    "Gnosis FCR"
+  ],
+  "summary_en": "CPerezz proposed banning SETCODEFROM in ERC-7562 (the 4337 validation rules), and EIP-8141 added EIP-1559 fee validity rules and a definition of effective_gas_price. Kassandra broke \"privacy by default\" into steps: first get every wallet to interoperate on basic stealth addresses, and before that, a post-quantum private scheme. L2BEAT launched a Blobs page and retired DABEAT because Ethereum has plenty of unused blob capacity."
+}

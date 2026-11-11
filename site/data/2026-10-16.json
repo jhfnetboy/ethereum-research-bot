@@ -1,0 +1,207 @@
+{
+  "date": "2026-10-16",
+  "keywords": [
+    "EIP-7906 POST_TX 改名 ASSERT",
+    "去掉 TXDIFF",
+    "Glamsterdam Hoodi 公告",
+    "Vitalik paranoid mode",
+    "ERC-8420"
+  ],
+  "summary": "EF 宣布 Glamsterdam 将于 10 月 26 日 17:42:48 UTC 在 Hoodi 激活，同时把 gas 上限提到 200M。lightclient 提出两项 EIP-7906 改动：frame 模式 POST_TX 改名为 ASSERT，删去 TXDIFF 并把部分功能并入 TXTRACE。Vitalik 把 zkAPI、Tor、掩护流量和本地 LLM 改写提示词组合成代理的“paranoid mode”。",
+  "items": [
+    {
+      "topic": "交易断言 API 收敛：ASSERT 与 TXTRACE",
+      "title": "EIP-7906 PR：把 POST_TX 改名为 ASSERT",
+      "note": "（lightclient）。理由是 EIP-8141 的 frame 模式都用一个词描述“做什么”，POST_TX 描述的是位置，ASSERT 描述意图。",
+      "url": "https://github.com/ethereum/EIPs/pull/12528",
+      "date": "2026-10-16",
+      "title_en": "EIP-7906 PR: rename POST_TX to ASSERT",
+      "note_en": "(lightclient). The reasoning: every EIP-8141 frame mode is one word describing what happens; POST_TX describes where the logic sits, while ASSERT describes what the frame intends to do.",
+      "topic_en": "The transaction assertion API converges: ASSERT and TXTRACE"
+    },
+    {
+      "topic": "交易断言 API 收敛：ASSERT 与 TXTRACE",
+      "title": "EIP-7906 PR：去掉 TXDIFF",
+      "note": "（lightclient），部分功能并入 TXTRACE；`contracts_deployed` 改为 `codes_changed`，也能覆盖 SETCODEFROM 这类未来操作码；新增 `nonces_changes`。",
+      "url": "https://github.com/ethereum/EIPs/pull/12530",
+      "date": "2026-10-16",
+      "title_en": "EIP-7906 PR: remove TXDIFF",
+      "note_en": "(lightclient), moving some of the lost functionality into TXTRACE. `contracts_deployed` becomes `codes_changed`, which can also support future opcodes like SETCODEFROM, and `nonces_changes` is added.",
+      "topic_en": "The transaction assertion API converges: ASSERT and TXTRACE"
+    },
+    {
+      "topic": "交易断言 API 收敛：ASSERT 与 TXTRACE",
+      "title": "EIP-8279 PR：删除不安全的存储值退款",
+      "note": "（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12526",
+      "date": "2026-10-16",
+      "title_en": "EIP-8279 PR: remove the unsafe storage-value refund",
+      "note_en": "(nerolation).",
+      "topic_en": "The transaction assertion API converges: ASSERT and TXTRACE"
+    },
+    {
+      "topic": "交易断言 API 收敛：ASSERT 与 TXTRACE",
+      "title": "新 EIP PR：Non-Self-Authorizing State Transitions",
+      "note": "即 10 月 3 日 Magicians 上的 Resolution 草案。",
+      "url": "https://github.com/ethereum/EIPs/pull/12529",
+      "date": "2026-10-16",
+      "title_en": "New EIP PR: Non-Self-Authorizing State Transitions",
+      "note_en": "The Resolution draft posted on Magicians on October 3.",
+      "topic_en": "The transaction assertion API converges: ASSERT and TXTRACE"
+    },
+    {
+      "topic": "交易断言 API 收敛：ASSERT 与 TXTRACE",
+      "title": "Magicians：ERC-8420 兼容 AA 的 Solver",
+      "note": "15:23，用户提交装有钱包已签交易的 envelope，兼容现有智能钱包，参考了 ERC-7521。",
+      "url": "https://ethereum-magicians.org/t/erc-8420-aa-compatible-solver/29989",
+      "date": "2026-10-16",
+      "title_en": "Magicians: ERC-8420 AA-compatible solver",
+      "note_en": "15:23. Users submit an envelope carrying the wallet's signed transaction, it stays compatible with existing smart wallets, and it draws on ERC-7521.",
+      "topic_en": "The transaction assertion API converges: ASSERT and TXTRACE"
+    },
+    {
+      "topic": "Glamsterdam 上 Hoodi 与隐私工具",
+      "title": "EF 博客：Glamsterdam Hoodi 测试网公告",
+      "note": "激活于 epoch 132,352、slot 4,235,264（10 月 26 日 17:42:48 UTC），同一 epoch Hoodi gas 上限升到 200M。核心是 ePBS（EIP-7732）与 BAL（EIP-7928）；gas 方面 EIP-8037 提高并单独计量状态创建成本，EIP-8038 更新状态访问成本。依赖固定 gas stipend、硬编码 gas 上限或剩余 gas 假设的合约可能需要修改。",
+      "url": "https://blog.ethereum.org/en/2026/10/16/glamsterdam-hoodi-announcement",
+      "date": "2026-10-16",
+      "title_en": "EF Blog: Glamsterdam Hoodi testnet announcement",
+      "note_en": ". Activation is at epoch 132,352, slot 4,235,264 (17:42:48 UTC on October 26), and Hoodi's gas limit rises to 200M at the same epoch. The headliners are ePBS (EIP-7732) and BALs (EIP-7928). On gas, EIP-8037 raises and separately meters the cost of creating state, and EIP-8038 updates state access costs. Contracts that rely on fixed gas stipends, hardcoded gas limits or assumptions about remaining gas may need changes.",
+      "topic_en": "Glamsterdam heads to Hoodi, and privacy tooling"
+    },
+    {
+      "topic": "Glamsterdam 上 Hoodi 与隐私工具",
+      "title": "EIP-8081：加入 Sepolia 和 Hoodi 日期",
+      "note": "、记录 ACDC 189 的决定。EIP-2780 加入基准报告并更新理由 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12522",
+      "date": "2026-10-16",
+      "title_en": "EIP-8081: add Sepolia and Hoodi dates",
+      "note_en": "And record the ACDC 189 decisions. EIP-2780 adds benchmark reports and updates its rationale, merged.",
+      "topic_en": "Glamsterdam heads to Hoodi, and privacy tooling"
+    },
+    {
+      "topic": "Glamsterdam 上 Hoodi 与隐私工具",
+      "title": "记录 ACDC 189 的决定",
+      "note": "EIP-8081：加入 Sepolia 和 Hoodi 日期、记录 ACDC 189 的决定。EIP-2780 加入基准报告并更新理由 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12521",
+      "date": "2026-10-16",
+      "title_en": "record the ACDC 189 decisions",
+      "note_en": "EIP-8081: add Sepolia and Hoodi dates and record the ACDC 189 decisions. EIP-2780 adds benchmark reports and updates its rationale, merged.",
+      "topic_en": "Glamsterdam heads to Hoodi, and privacy tooling"
+    },
+    {
+      "topic": "Glamsterdam 上 Hoodi 与隐私工具",
+      "title": "EIP-2780 加入基准报告并更新理由",
+      "note": "EIP-8081：加入 Sepolia 和 Hoodi 日期、记录 ACDC 189 的决定。EIP-2780 加入基准报告并更新理由 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12525",
+      "date": "2026-10-16",
+      "title_en": "EIP-2780 adds benchmark reports and updates its rationale",
+      "note_en": "EIP-8081: add Sepolia and Hoodi dates and record the ACDC 189 decisions. EIP-2780 adds benchmark reports and updates its rationale, merged.",
+      "topic_en": "Glamsterdam heads to Hoodi, and privacy tooling"
+    },
+    {
+      "topic": "Glamsterdam 上 Hoodi 与隐私工具",
+      "title": "Vitalik：paranoid mode",
+      "note": "17:48，在兼容 OpenAI 接口的守护进程里组合 zkAPI、Tor、掩护流量和本地 LLM 改写提示词。EF：为什么这些新的隐私原语必不可少 23:25。",
+      "url": "https://x.com/VitalikButerin/status/2111046730959433793",
+      "date": "2026-10-16",
+      "title_en": "Vitalik: paranoid mode",
+      "note_en": "17:48, combining zkAPI, Tor, cover traffic and local LLM prompt rewriting in an OpenAI-compatible daemon. EF: why these new privacy primitives are essential, 23:25.",
+      "topic_en": "Glamsterdam heads to Hoodi, and privacy tooling"
+    },
+    {
+      "topic": "Glamsterdam 上 Hoodi 与隐私工具",
+      "title": "EF：为什么这些新的隐私原语必不可少",
+      "note": "Vitalik：paranoid mode 17:48，在兼容 OpenAI 接口的守护进程里组合 zkAPI、Tor、掩护流量和本地 LLM 改写提示词。EF：为什么这些新的隐私原语必不可少 23:25。",
+      "url": "https://x.com/ethereumfndn/status/2111131384832303512",
+      "date": "2026-10-16",
+      "title_en": "EF: why these new privacy primitives are essential",
+      "note_en": "Vitalik: paranoid mode, 17:48, combining zkAPI, Tor, cover traffic and local LLM prompt rewriting in an OpenAI-compatible daemon. EF: why these new privacy primitives are essential, 23:25.",
+      "topic_en": "Glamsterdam heads to Hoodi, and privacy tooling"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：离开 Cambridge 的要点",
+      "note": "12:59，更快的最终性即将到来，研究已成熟。",
+      "url": "https://x.com/barnabemonnot/status/2110973963572535303",
+      "date": "2026-10-16",
+      "title_en": "Barnabé: takeaways on leaving Cambridge",
+      "note_en": "12:59; faster finality is coming and the research is mature.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Francesco D'Amato：AI 让以太坊更有野心",
+      "note": "23:03。",
+      "url": "https://x.com/fradamt/status/2111125999836348498",
+      "date": "2026-10-16",
+      "title_en": "Francesco D'Amato: AI is making Ethereum more ambitious",
+      "note_en": "23:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trent：Glamsterdam 带来并行执行，BAL 让轻量客户端实验成为可能",
+      "note": "03:40。",
+      "url": "https://x.com/trent_vanepps/status/2110833121415340142",
+      "date": "2026-10-16",
+      "title_en": "Trent: Glamsterdam brings parallel execution, and BALs enable lighter-weight client experiments",
+      "note_en": "03:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Georgios：加密领域的终极难题是身份",
+      "note": "12:21。",
+      "url": "https://x.com/gakonst/status/2110964205885206846",
+      "date": "2026-10-16",
+      "title_en": "Georgios: the final boss in crypto is identity",
+      "note_en": "12:21.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8442 64 位 EVM 操作码讨论帖",
+      "note": "05:25。",
+      "url": "https://ethereum-magicians.org/t/eip-8442-64-bit-opcodes-for-the-evm/29982",
+      "date": "2026-10-16",
+      "title_en": "EIP-8442 64-bit EVM opcodes discussion thread",
+      "note_en": "05:25.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：代理正在解决以太坊的千禧难题，找 Sepolia ETH",
+      "note": "14:07。",
+      "url": "https://x.com/barnabemonnot/status/2110990946125095398",
+      "date": "2026-10-16",
+      "title_en": "Barnabé: agents are solving Ethereum's millennium problem, finding Sepolia ETH",
+      "note_en": "14:07.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：如果以太坊不是后量子安全的，L2 能做到完全后量子安全吗",
+      "note": "20:25。",
+      "url": "https://x.com/EliBenSasson/status/2111086040031334872",
+      "date": "2026-10-16",
+      "title_en": "Eli Ben-Sasson: if Ethereum isn't post-quantum secure, can an L2 built on it ever be?",
+      "note_en": "20:25.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/10/16/glamsterdam-hoodi-announcement",
+    "credit": "Ethereum Foundation Blog, Glamsterdam Hoodi Testnet Announcement",
+    "local_path": "assets/2026-10-16.jpg",
+    "credit_en": "Ethereum Foundation Blog, Glamsterdam Hoodi Testnet Announcement"
+  },
+  "keywords_en": [
+    "EIP-7906 renames POST_TX to ASSERT",
+    "TXDIFF removed",
+    "Glamsterdam Hoodi announcement",
+    "Vitalik's paranoid mode",
+    "ERC-8420"
+  ],
+  "summary_en": "The EF announced that Glamsterdam will activate on Hoodi at 17:42:48 UTC on October 26, with the gas limit raised to 200M at the same time. lightclient proposed two EIP-7906 changes: the POST_TX frame mode becomes ASSERT, and TXDIFF is removed with some of its functionality folded into TXTRACE. Vitalik combined zkAPI, Tor, cover traffic and local LLM prompt rewriting into a \"paranoid mode\" for his agent."
+}

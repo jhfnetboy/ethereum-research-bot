@@ -1,0 +1,277 @@
+{
+  "date": "2026-10-08",
+  "keywords": [
+    "EIP-8288 后量子证明",
+    "EIP-8130 收窄为 Keystore",
+    "Frame 交易模式",
+    "ACDE #247",
+    "Starknet 考虑成为 L1"
+  ],
+  "summary": "Vitalik 回应 bunker mode：不建议今天就急着换钱包，但应认真对待 AI 加速数学对密码学的风险。soispoke 发文说明 EIP-8288 如何让隐私应用在用户设备上生成后量子证明、由节点在 EVM 外验证。账户抽象规范大调整：EIP-8130 收窄为 Keystore，交易类型拆到新 EIP；EIP-8141、EIP-7906、EIP-8250 多个 frame 相关 PR 合并。ACDE #247 当晚召开。",
+  "items": [
+    {
+      "topic": "后量子与隐私：EIP-8288 和 Vitalik 的回应",
+      "title": "Vitalik：不建议今天就急着把资金转到新钱包",
+      "note": "06:28，但应认真对待 AI 加速数学带来的密码学风险，不只是量子。更正：多签的理想“安全”规则是每个签名者每次操作后都换密钥 11:07。",
+      "url": "https://x.com/VitalikButerin/status/2107976296320106851",
+      "date": "2026-10-08",
+      "title_en": "Vitalik: I don't recommend anyone scramble to move their funds to new wallets today",
+      "note_en": "06:28, but the risks to cryptography from AI-accelerated math deserve serious attention, not just quantum. Correction: for multisigs, the ideal \"safe\" rule is that each signer changes their key after each operation, 11:07.",
+      "topic_en": "Post-quantum and privacy: EIP-8288 and Vitalik's response"
+    },
+    {
+      "topic": "后量子与隐私：EIP-8288 和 Vitalik 的回应",
+      "title": "更正：多签的理想“安全”规则是每个签名者每次操作后都换密钥",
+      "note": "Vitalik：不建议今天就急着把资金转到新钱包 06:28，但应认真对待 AI 加速数学带来的密码学风险，不只是量子。更正：多签的理想“安全”规则是每个签名者每次操作后都换密钥 11:07。",
+      "url": "https://x.com/VitalikButerin/status/2108046549020557482",
+      "date": "2026-10-08",
+      "title_en": "Correction: for multisigs, the ideal \"safe\" rule is that each signer changes their key after each operation",
+      "note_en": "Vitalik: I don't recommend anyone scramble to move their funds to new wallets today, 06:28, but the risks to cryptography from AI-accelerated math deserve serious attention, not just quantum. Correction: for multisigs, the ideal \"safe\" rule is that each signer changes their key after each operation, 11:07.",
+      "topic_en": "Post-quantum and privacy: EIP-8288 and Vitalik's response"
+    },
+    {
+      "topic": "后量子与隐私：EIP-8288 和 Vitalik 的回应",
+      "title": "ethresear.ch：为以太坊上的后量子证明暴露一个 ISA",
+      "note": "22:34（soispoke，推文 22:59）。EIP-8288 让交易依赖 leanSPHINCS 签名和 leanSTARK 证明，它们写在 EIP-8141 frame 交易的依赖帧里，节点转发前先检查，每个区块带一个证明全部依赖有效的递归 STARK。现在的隐私池在合约里用 BN254 配对预编译验证 Groth16 证明，量子计算机攻破 BN254 就能伪造；有了 EIP-8288，池合约只需检查交易依赖了自己电路的证明和预期公共输入。文章比较 EVM、RISC-V 和专为证明设计的 eISA。",
+      "url": "https://ethresear.ch/t/exposing-an-isa-for-post-quantum-proofs-on-ethereum/26136",
+      "date": "2026-10-08",
+      "title_en": "ethresear.ch: exposing an ISA for post-quantum proofs on Ethereum",
+      "note_en": "22:34 (soispoke, post at 22:59). EIP-8288 lets transactions depend on leanSPHINCS signatures and leanSTARK proofs declared in the dependency frame of an EIP-8141 frame transaction. Nodes check them before forwarding, and each block carries one recursive STARK proving all its dependencies valid. Today's privacy pools verify Groth16 proofs in-contract with the BN254 pairing precompile, which a quantum computer that breaks BN254 could forge. With EIP-8288, the pool contract only checks that the transaction depends on a proof for its own circuit with the expected public inputs. The post compares the EVM, RISC-V and an eISA designed for proving.",
+      "topic_en": "Post-quantum and privacy: EIP-8288 and Vitalik's response"
+    },
+    {
+      "topic": "后量子与隐私：EIP-8288 和 Vitalik 的回应",
+      "title": "推文",
+      "note": "ethresear.ch：为以太坊上的后量子证明暴露一个 ISA 22:34（soispoke，推文 22:59）。EIP-8288 让交易依赖 leanSPHINCS 签名和 leanSTARK 证明，它们写在 EIP-8141 frame 交易的依赖帧里，节点转发前先检查，每个区块带一个证明全部依赖有效的递归 STARK。现在的隐私池在合约里用 BN254 配对预编译验证 Groth16 证明，量子计算机攻破 BN254 就能伪造；有了 EIP-8288，池合约只需检查交易依赖了自己电路的证明和预期公共输入。文章比较 EVM、RISC-V 和专为证明设计的 eISA。",
+      "url": "https://x.com/soispoke/status/2108225737991795099",
+      "date": "2026-10-08",
+      "title_en": "post",
+      "note_en": "Ethresear.ch: exposing an ISA for post-quantum proofs on Ethereum, 22:34 (soispoke, post at 22:59). EIP-8288 lets transactions depend on leanSPHINCS signatures and leanSTARK proofs declared in the dependency frame of an EIP-8141 frame transaction. Nodes check them before forwarding, and each block carries one recursive STARK proving all its dependencies valid. Today's privacy pools verify Groth16 proofs in-contract with the BN254 pairing precompile, which a quantum computer that breaks BN254 could forge. With EIP-8288, the pool contract only checks that the transaction depends on a proof for its own circuit with the expected public inputs. The post compares the EVM, RISC-V and an eISA designed for proving.",
+      "topic_en": "Post-quantum and privacy: EIP-8288 and Vitalik's response"
+    },
+    {
+      "topic": "后量子与隐私：EIP-8288 和 Vitalik 的回应",
+      "title": "binji：Hegotá 的 Frames 让每个账户都能替换密码学，从而都能变成后量子",
+      "note": "06:07。",
+      "url": "https://x.com/binji_x/status/2107971096750305611",
+      "date": "2026-10-08",
+      "title_en": "binji: Hegotá's Frames make every account cryptographically agile, so all of them can become post-quantum",
+      "note_en": "06:07.",
+      "topic_en": "Post-quantum and privacy: EIP-8288 and Vitalik's response"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "EIP-8130 PR：范围收窄为 Keystore，交易类型移到新 EIP",
+      "note": "合并（chunter-cb）。Ethereal news 汇总 02:44 列出新的 EIP-8430 账户抽象交易类型（从 EIP-8130 拆出），以及 EIP-8425 量子冻结与账户恢复。",
+      "url": "https://github.com/ethereum/EIPs/pull/12386",
+      "date": "2026-10-08",
+      "title_en": "EIP-8130 PR: scope to the Keystore and move the transaction type to a new EIP",
+      "note_en": "Was merged (chunter-cb). Ethereal news's roundup, 02:44, lists the new EIP-8430 account abstraction transaction type (split out from EIP-8130) and EIP-8425, quantum freeze and account recovery.",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "Ethereal news 汇总",
+      "note": "EIP-8130 PR：范围收窄为 Keystore，交易类型移到新 EIP 合并（chunter-cb）。Ethereal news 汇总 02:44 列出新的 EIP-8430 账户抽象交易类型（从 EIP-8130 拆出），以及 EIP-8425 量子冻结与账户恢复。",
+      "url": "https://x.com/EtherealnewsHQ/status/2107920083997876441",
+      "date": "2026-10-08",
+      "title_en": "Ethereal news's roundup",
+      "note_en": "EIP-8130 PR: scope to the Keystore and move the transaction type to a new EIP was merged (chunter-cb). Ethereal news's roundup, 02:44, lists the new EIP-8430 account abstraction transaction type (split out from EIP-8130) and EIP-8425, quantum freeze and account recovery.",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "frame 模式按合法值集合校验",
+      "note": "EIP-8141（frame 交易）：frame 模式按合法值集合校验 合并（lightclient）；调用 revert 时回滚 approval 上下文 提交（soispoke）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12453",
+      "date": "2026-10-08",
+      "title_en": "frame modes checked against a set of valid values",
+      "note_en": "EIP-8141 (frame transactions): frame modes checked against a set of valid values was merged (lightclient); roll back the approval context when a call reverts was submitted (soispoke).",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "调用 revert 时回滚 approval 上下文",
+      "note": "EIP-8141（frame 交易）：frame 模式按合法值集合校验 合并（lightclient）；调用 revert 时回滚 approval 上下文 提交（soispoke）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12458",
+      "date": "2026-10-08",
+      "title_en": "roll back the approval context when a call reverts",
+      "note_en": "EIP-8141 (frame transactions): frame modes checked against a set of valid values was merged (lightclient); roll back the approval context when a call reverts was submitted (soispoke).",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "EIP-7906：分配操作码字节，并把 POST_TX 加入合法 frame 模式",
+      "note": "合并；澄清 diff 操作码语义和 gas 计量 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12454",
+      "date": "2026-10-08",
+      "title_en": "EIP-7906: assign opcode bytes and add POST_TX to the valid frame modes",
+      "note_en": "Was merged; clarify diff opcode semantics and gas accounting was submitted.",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "澄清 diff 操作码语义和 gas 计量",
+      "note": "EIP-7906：分配操作码字节，并把 POST_TX 加入合法 frame 模式 合并；澄清 diff 操作码语义和 gas 计量 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12461",
+      "date": "2026-10-08",
+      "title_en": "clarify diff opcode semantics and gas accounting",
+      "note_en": "EIP-7906: assign opcode bytes and add POST_TX to the valid frame modes was merged; clarify diff opcode semantics and gas accounting was submitted.",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "EIP-8250：keyed nonce 记录进区块访问列表",
+      "note": "合并（nerolation）；EIP-3298：frame 交易结算去掉 refund 上限 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12457",
+      "date": "2026-10-08",
+      "title_en": "EIP-8250: record keyed nonces in the block access list",
+      "note_en": "Was merged (nerolation); EIP-3298: remove the refund cap from frame transaction settlement was merged.",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "EIP-3298：frame 交易结算去掉 refund 上限",
+      "note": "EIP-8250：keyed nonce 记录进区块访问列表 合并（nerolation）；EIP-3298：frame 交易结算去掉 refund 上限 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12455",
+      "date": "2026-10-08",
+      "title_en": "EIP-3298: remove the refund cap from frame transaction settlement",
+      "note_en": "EIP-8250: record keyed nonces in the block access list was merged (nerolation); EIP-3298: remove the refund cap from frame transaction settlement was merged.",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "AA 规范：EIP-8130 拆分与 frame 交易收紧",
+      "title": "ERC-7730 的 Descriptor Attestations",
+      "note": "合并，为 Clear Signing 描述文件加证明。",
+      "url": "https://github.com/ethereum/ERCs/pull/1576",
+      "date": "2026-10-08",
+      "title_en": "Descriptor Attestations for ERC-7730",
+      "note_en": "Was merged, adding attestations to Clear Signing descriptor files.",
+      "topic_en": "AA specs: splitting EIP-8130 and tightening frame transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #247",
+      "note": "21:00 召开，议题包括 Glamsterdam 与 Hegotá 进展、Sepolia 分叉排期、gas 上限变化、复杂度评估。EIP-8081 记录 ACDE247 决定 合并。",
+      "url": "https://x.com/ECHInstitute/status/2108192933480686026",
+      "date": "2026-10-08",
+      "title_en": "ACDE #247",
+      "note_en": "Met at 21:00. Topics included Glamsterdam and Hegotá progress, Sepolia fork scheduling, gas limit changes and complexity assessments. EIP-8081 records the ACDE247 decisions, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081 记录 ACDE247 决定",
+      "note": "ACDE #247 21:00 召开，议题包括 Glamsterdam 与 Hegotá 进展、Sepolia 分叉排期、gas 上限变化、复杂度评估。EIP-8081 记录 ACDE247 决定 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12460",
+      "date": "2026-10-08",
+      "title_en": "EIP-8081 records the ACDE247 decisions",
+      "note_en": "ACDE #247 met at 21:00. Topics included Glamsterdam and Hegotá progress, Sepolia fork scheduling, gas limit changes and complexity assessments. EIP-8081 records the ACDE247 decisions, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：认真考虑成为独立 L1，完成向后量子和 AI 安全的过渡",
+      "note": "21:58；Eli Ben-Sasson 发起讨论 15:19。",
+      "url": "https://x.com/StarkWareLtd/status/2108210354492997873",
+      "date": "2026-10-08",
+      "title_en": "StarkWare: seriously considering becoming an independent L1 to complete the transition to post-quantum and AI security",
+      "note_en": "21:58; Eli Ben-Sasson opened the debate, 15:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson 发起讨论",
+      "note": "StarkWare：认真考虑成为独立 L1，完成向后量子和 AI 安全的过渡 21:58；Eli Ben-Sasson 发起讨论 15:19。",
+      "url": "https://x.com/EliBenSasson/status/2108110129572741426",
+      "date": "2026-10-08",
+      "title_en": "Eli Ben-Sasson opened the debate",
+      "note_en": "StarkWare: seriously considering becoming an independent L1 to complete the transition to post-quantum and AI security, 21:58; Eli Ben-Sasson opened the debate, 15:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Koeppelmann：借 FCR 跨到 Gnosis Chain 从 20 分钟缩短到 1 分钟内",
+      "note": "23:56，EEZ 原子交易仍在路上。",
+      "url": "https://x.com/koeppelmann/status/2108240015713059165",
+      "date": "2026-10-08",
+      "title_en": "Koeppelmann: bridging to Gnosis Chain goes from 20 minutes to under 1 minute with FCR",
+      "note_en": "23:56; EEZ atomic transactions are still on the way.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：叠加 EEZ 与 FCR 的效果示例",
+      "note": "15:04。",
+      "url": "https://ethresear.ch/t/the-unleashed-power-of-stacking-eez-fcr-seen-through-an-example/26133",
+      "date": "2026-10-08",
+      "title_en": "ethresear.ch: the power of stacking EEZ and FCR, shown through an example",
+      "note_en": "15:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8167 进入 Final",
+      "note": "、ERC-7945 进入 Final。",
+      "url": "https://github.com/ethereum/ERCs/pull/2007",
+      "date": "2026-10-08",
+      "title_en": "ERC-8167 moved to Final",
+      "note_en": "And ERC-7945 moved to Final.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7945 进入 Final",
+      "note": "ERC-8167 进入 Final、ERC-7945 进入 Final。",
+      "url": "https://github.com/ethereum/ERCs/pull/2043",
+      "date": "2026-10-08",
+      "title_en": "ERC-7945 moved to Final",
+      "note_en": "ERC-8167 moved to Final, and ERC-7945 moved to Final.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Antonio Sanso：如果要攻破前量子密码学，我会选的五个目标",
+      "note": "16:34。",
+      "url": "https://x.com/asanso/status/2108128919387820278",
+      "date": "2026-10-08",
+      "title_en": "Antonio Sanso: the five targets I would pick to break pre-quantum cryptography",
+      "note_en": "16:34.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Kassandra：反过来看，椭圆曲线至今没被攻破很了不起",
+      "note": "15:48。",
+      "url": "https://x.com/kassandraETH/status/2108117374247272676",
+      "date": "2026-10-08",
+      "title_en": "Kassandra: the inverse take, it is incredible that elliptic curve crypto still works",
+      "note_en": "15:48.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Remco：用 ProveKit 写一个把硬件密钥包进零知识证明的钱包合约",
+      "note": "01:36。",
+      "url": "https://x.com/recmo/status/2107902999007994259",
+      "date": "2026-10-08",
+      "title_en": "Remco: a ProveKit idea for a wallet contract that wraps existing hardware keys in ZK proofs",
+      "note_en": "01:36.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/exposing-an-isa-for-post-quantum-proofs-on-ethereum/26136",
+    "credit": "ethresear.ch, Exposing an ISA for post-quantum proofs on Ethereum (soispoke)",
+    "local_path": "assets/2026-10-08.jpg",
+    "credit_en": "ethresear.ch, Exposing an ISA for post-quantum proofs on Ethereum (soispoke)"
+  },
+  "keywords_en": [
+    "EIP-8288 post-quantum proofs",
+    "EIP-8130 narrowed to the Keystore",
+    "frame transaction modes",
+    "ACDE #247",
+    "Starknet weighs becoming an L1"
+  ],
+  "summary_en": "Vitalik responded to bunker mode: he does not recommend scrambling to move funds today, but the risks to cryptography from AI-accelerated math should be taken seriously. soispoke explained how EIP-8288 lets privacy apps generate post-quantum proofs on user devices while nodes verify them outside the EVM. Account abstraction specs were reshaped: EIP-8130 is narrowed to the Keystore with its transaction type moved to a new EIP, and several frame-related PRs to EIP-8141, EIP-7906 and EIP-8250 were merged. ACDE #247 met in the evening."
+}

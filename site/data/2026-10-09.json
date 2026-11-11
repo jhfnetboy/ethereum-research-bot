@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-09",
+  "keywords": [
+    "EIP-7906 断言回滚语义",
+    "EIP-8250 一次性 nonce 标记",
+    "ERC-8441 后量子隐形地址",
+    "Gnosis FCR",
+    "私密稳定币"
+  ],
+  "summary": "Frame 交易和交易断言的规范集中定型：EIP-8141 定义验证前缀与执行体，EIP-7906 规定断言失败会回滚执行体，EIP-8250 提议把 keyed nonce 改成一次性的“已用”标记。隐私方向，ERC-8441 提出混合后量子隐形地址方案，钱包无需协议改动即可接入。Gnosis Chain 成为第一个采用 FCR 的 L2，存款快了 20 到 30 倍。",
+  "items": [
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "EIP-8141：在 Behavior 下定义验证前缀和执行体",
+      "note": "合并，并命名 TXPARAM、FRAMEPARAM、SIGPARAM 参数（spencer-tb）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12471",
+      "date": "2026-10-09",
+      "title_en": "EIP-8141: define the validation prefix and execution body under Behavior",
+      "note_en": "Was merged, along with naming the TXPARAM, FRAMEPARAM and SIGPARAM params (spencer-tb).",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "并命名 TXPARAM、FRAMEPARAM、SIGPARAM 参数",
+      "note": "EIP-8141：在 Behavior 下定义验证前缀和执行体 合并，并命名 TXPARAM、FRAMEPARAM、SIGPARAM 参数（spencer-tb）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12469",
+      "date": "2026-10-09",
+      "title_en": "along with naming the TXPARAM, FRAMEPARAM and SIGPARAM params",
+      "note_en": "EIP-8141: define the validation prefix and execution body under Behavior was merged, along with naming the TXPARAM, FRAMEPARAM and SIGPARAM params (spencer-tb).",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "断言失败会回滚执行体",
+      "note": "EIP-7906：断言失败会回滚执行体（danceratopz）、TXDIFF 与 POST_TX 回滚的 BAL 记录方式（forshtat）均已合并；通过 EIP-8141 的验证前缀说明 POST_TX 回滚点 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12466",
+      "date": "2026-10-09",
+      "title_en": "a failed assertion reverts the execution body",
+      "note_en": "EIP-7906: a failed assertion reverts the execution body (danceratopz) and BAL recording for TXDIFF and POST_TX rollback (forshtat) were both merged; stating the POST_TX rollback point via the EIP-8141 validation prefix was submitted.",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "TXDIFF 与 POST_TX 回滚的 BAL 记录方式",
+      "note": "EIP-7906：断言失败会回滚执行体（danceratopz）、TXDIFF 与 POST_TX 回滚的 BAL 记录方式（forshtat）均已合并；通过 EIP-8141 的验证前缀说明 POST_TX 回滚点 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12463",
+      "date": "2026-10-09",
+      "title_en": "BAL recording for TXDIFF and POST_TX rollback",
+      "note_en": "EIP-7906: a failed assertion reverts the execution body (danceratopz) and BAL recording for TXDIFF and POST_TX rollback (forshtat) were both merged; stating the POST_TX rollback point via the EIP-8141 validation prefix was submitted.",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "通过 EIP-8141 的验证前缀说明 POST_TX 回滚点",
+      "note": "EIP-7906：断言失败会回滚执行体（danceratopz）、TXDIFF 与 POST_TX 回滚的 BAL 记录方式（forshtat）均已合并；通过 EIP-8141 的验证前缀说明 POST_TX 回滚点 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12472",
+      "date": "2026-10-09",
+      "title_en": "stating the POST_TX rollback point via the EIP-8141 validation prefix",
+      "note_en": "EIP-7906: a failed assertion reverts the execution body (danceratopz) and BAL recording for TXDIFF and POST_TX rollback (forshtat) were both merged; stating the POST_TX rollback point via the EIP-8141 validation prefix was submitted.",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "EIP-8250：把 keyed nonce 改为一次性 spent 标记",
+      "note": "提交（nerolation）；EIP-8130：简化 Keystore 提交（chunter-cb）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12467",
+      "date": "2026-10-09",
+      "title_en": "EIP-8250: make keyed nonces single-use spent flags",
+      "note_en": "Was submitted (nerolation); EIP-8130: simplify the Keystore was submitted (chunter-cb).",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "EIP-8130：简化 Keystore",
+      "note": "EIP-8250：把 keyed nonce 改为一次性 spent 标记 提交（nerolation）；EIP-8130：简化 Keystore 提交（chunter-cb）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12462",
+      "date": "2026-10-09",
+      "title_en": "EIP-8130: simplify the Keystore",
+      "note_en": "EIP-8250: make keyed nonces single-use spent flags was submitted (nerolation); EIP-8130: simplify the Keystore was submitted (chunter-cb).",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "Frame 交易与断言：执行语义落定",
+      "title": "EIP-8077：为 frame 交易定义 source 和 nonce",
+      "note": "合并，这是“交易公告附带 nonce”的网络层 EIP。",
+      "url": "https://github.com/ethereum/EIPs/pull/12139",
+      "date": "2026-10-09",
+      "title_en": "EIP-8077: define source and nonce for frame transactions",
+      "note_en": "Was merged; this is the networking EIP for announcing transactions with their nonce.",
+      "topic_en": "Frame transactions and assertions: execution semantics settle"
+    },
+    {
+      "topic": "隐私：后量子隐形地址与私密稳定币",
+      "title": "Magicians：ERC-8441 混合后量子隐形地址方案",
+      "note": "11:18（namncc，PR）。它在 ERC-5564 中定义 schemeId 3：支付密钥由 ML-KEM-768 封装与 secp256k1 ECDH 组合而成，只要 ML-KEM-768 安全，未来有量子计算机的对手也无法从公告日志看出谁收了款。每个隐形地址仍是普通 secp256k1 EOA，不需要协议改动和新合约。",
+      "url": "https://ethereum-magicians.org/t/erc-8441-hybrid-post-quantum-stealth-address-scheme/29923",
+      "date": "2026-10-09",
+      "title_en": "Magicians: ERC-8441 hybrid post-quantum stealth address scheme",
+      "note_en": "11:18 (namncc, PR). It defines schemeId 3 under ERC-5564: the payment secret combines an ML-KEM-768 encapsulation with a secp256k1 ECDH secret, so as long as ML-KEM-768 holds, an adversary with a future quantum computer still cannot tell from the announcement log who was paid. Each stealth address is still an ordinary secp256k1 EOA, with no protocol change and no new contract.",
+      "topic_en": "Privacy: post-quantum stealth addresses and a private stablecoin"
+    },
+    {
+      "topic": "隐私：后量子隐形地址与私密稳定币",
+      "title": "PR",
+      "note": "Magicians：ERC-8441 混合后量子隐形地址方案 11:18（namncc，PR）。它在 ERC-5564 中定义 schemeId 3：支付密钥由 ML-KEM-768 封装与 secp256k1 ECDH 组合而成，只要 ML-KEM-768 安全，未来有量子计算机的对手也无法从公告日志看出谁收了款。每个隐形地址仍是普通 secp256k1 EOA，不需要协议改动和新合约。",
+      "url": "https://github.com/ethereum/ERCs/pull/2059",
+      "date": "2026-10-09",
+      "title_en": "PR",
+      "note_en": "Magicians: ERC-8441 hybrid post-quantum stealth address scheme, 11:18 (namncc, PR). It defines schemeId 3 under ERC-5564: the payment secret combines an ML-KEM-768 encapsulation with a secp256k1 ECDH secret, so as long as ML-KEM-768 holds, an adversary with a future quantum computer still cannot tell from the announcement log who was paid. Each stealth address is still an ordinary secp256k1 EOA, with no protocol change and no new contract.",
+      "topic_en": "Privacy: post-quantum stealth addresses and a private stablecoin"
+    },
+    {
+      "topic": "隐私：后量子隐形地址与私密稳定币",
+      "title": "ethresear.ch：以太坊上的私密稳定币",
+      "note": "19:40，以 USDC/USDT 为背书，由合约强制铸造赎回，交易数据保密或与身份不可关联。",
+      "url": "https://ethresear.ch/t/private-stablecoin-on-ethereum/26140",
+      "date": "2026-10-09",
+      "title_en": "ethresear.ch: a private stablecoin on Ethereum",
+      "note_en": "19:40, backed by USDC/USDT, with minting and redemption enforced by contracts and transactions kept confidential or unlinkable to identities.",
+      "topic_en": "Privacy: post-quantum stealth addresses and a private stablecoin"
+    },
+    {
+      "topic": "隐私：后量子隐形地址与私密稳定币",
+      "title": "Aztec：Nyx 让你在 Rabby 里私密收发，并在 Aave 上无关联地赚收益",
+      "note": "01:10；Aztec：私密推理覆盖支付、身份、内容三层隐私 21:01。",
+      "url": "https://x.com/aztecnetwork/status/2108258672745070621",
+      "date": "2026-10-09",
+      "title_en": "Aztec: Nyx lets you send and receive privately in Rabby and earn on Aave with no link back to you",
+      "note_en": "01:10; Aztec: private inference covers three privacy layers, payment, identity and words, 21:01.",
+      "topic_en": "Privacy: post-quantum stealth addresses and a private stablecoin"
+    },
+    {
+      "topic": "隐私：后量子隐形地址与私密稳定币",
+      "title": "Aztec：私密推理覆盖支付、身份、内容三层隐私",
+      "note": "Aztec：Nyx 让你在 Rabby 里私密收发，并在 Aave 上无关联地赚收益 01:10；Aztec：私密推理覆盖支付、身份、内容三层隐私 21:01。",
+      "url": "https://x.com/aztecnetwork/status/2108558518534177111",
+      "date": "2026-10-09",
+      "title_en": "Aztec: private inference covers three privacy layers, payment, identity and words",
+      "note_en": "Aztec: Nyx lets you send and receive privately in Rabby and earn on Aave with no link back to you, 01:10; Aztec: private inference covers three privacy layers, payment, identity and words, 21:01.",
+      "topic_en": "Privacy: post-quantum stealth addresses and a private stablecoin"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Julian Ma：Gnosis Chain 成为第一个采用 FCR 的 L2，首批 FCR 交易已完成",
+      "note": "FCR：Julian Ma：Gnosis Chain 成为第一个采用 FCR 的 L2，首批 FCR 交易已完成 11:25；Barnabé：Gnosis 跨链桥存款快 20 到 30 倍 02:39；Koeppelmann：跨链桥、支付商和交易所应按 attestation 计数而非固定延迟 14:36。",
+      "url": "https://x.com/_julianma/status/2108413401810792811",
+      "date": "2026-10-09",
+      "title_en": "Julian Ma: Gnosis Chain is the first L2 to adopt FCR, and the first FCR transactions have gone through",
+      "note_en": "FCR: Julian Ma: Gnosis Chain is the first L2 to adopt FCR, and the first FCR transactions have gone through, 11:25; Barnabé: 20 to 30 times faster deposits on the Gnosis bridge, 02:39; Koeppelmann: bridges, payment providers and exchanges should count attestations instead of using a fixed delay, 14:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：Gnosis 跨链桥存款快 20 到 30 倍",
+      "note": "FCR：Julian Ma：Gnosis Chain 成为第一个采用 FCR 的 L2，首批 FCR 交易已完成 11:25；Barnabé：Gnosis 跨链桥存款快 20 到 30 倍 02:39；Koeppelmann：跨链桥、支付商和交易所应按 attestation 计数而非固定延迟 14:36。",
+      "url": "https://x.com/barnabemonnot/status/2108281024149078254",
+      "date": "2026-10-09",
+      "title_en": "Barnabé: 20 to 30 times faster deposits on the Gnosis bridge",
+      "note_en": "FCR: Julian Ma: Gnosis Chain is the first L2 to adopt FCR, and the first FCR transactions have gone through, 11:25; Barnabé: 20 to 30 times faster deposits on the Gnosis bridge, 02:39; Koeppelmann: bridges, payment providers and exchanges should count attestations instead of using a fixed delay, 14:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Koeppelmann：跨链桥、支付商和交易所应按 attestation 计数而非固定延迟",
+      "note": "FCR：Julian Ma：Gnosis Chain 成为第一个采用 FCR 的 L2，首批 FCR 交易已完成 11:25；Barnabé：Gnosis 跨链桥存款快 20 到 30 倍 02:39；Koeppelmann：跨链桥、支付商和交易所应按 attestation 计数而非固定延迟 14:36。",
+      "url": "https://x.com/koeppelmann/status/2108461640400150994",
+      "date": "2026-10-09",
+      "title_en": "Koeppelmann: bridges, payment providers and exchanges should count attestations instead of using a fixed delay",
+      "note_en": "FCR: Julian Ma: Gnosis Chain is the first L2 to adopt FCR, and the first FCR transactions have gone through, 11:25; Barnabé: 20 to 30 times faster deposits on the Gnosis bridge, 02:39; Koeppelmann: bridges, payment providers and exchanges should count attestations instead of using a fixed delay, 14:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Koeppelmann：ETH 要抵消质押增发，每个区块需烧约 1,000 美元",
+      "note": "04:28，按 200M gas 上限、平均 100M 用量算，相当于每 10 万 gas 1 美元。",
+      "url": "https://x.com/koeppelmann/status/2108308672376095122",
+      "date": "2026-10-09",
+      "title_en": "Koeppelmann: to offset staking issuance, ETH needs to burn about $1,000 per block",
+      "note_en": "04:28; with a 200M gas limit and 100M average usage, that is $1 per 100k gas.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8247 Ancestor-Indexed BALs",
+      "note": "合并，Magicians 讨论帖 16:46。",
+      "url": "https://github.com/ethereum/EIPs/pull/11595",
+      "date": "2026-10-09",
+      "title_en": "EIP-8247 Ancestor-Indexed BALs",
+      "note_en": "Was merged, with a Magicians discussion thread at 16:46.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians 讨论帖",
+      "note": "EIP-8247 Ancestor-Indexed BALs 合并，Magicians 讨论帖 16:46。",
+      "url": "https://ethereum-magicians.org/t/eip-8247-ancestor-indexed-bals/29926",
+      "date": "2026-10-09",
+      "title_en": "Magicians discussion thread",
+      "note_en": "EIP-8247 Ancestor-Indexed BALs was merged, with a Magicians discussion thread at 16:46.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7805（FOCIL）rebase 更新",
+      "note": "EIP-8440 Execution Chain Proofs 23:50。",
+      "url": "https://github.com/ethereum/EIPs/pull/12470",
+      "date": "2026-10-09",
+      "title_en": "EIP-7805 (FOCIL) rebased and updated",
+      "note_en": "EIP-8440 Execution Chain Proofs, 23:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8440 Execution Chain Proofs",
+      "note": "EIP-7805（FOCIL）rebase 更新；EIP-8440 Execution Chain Proofs 23:50。",
+      "url": "https://ethereum-magicians.org/t/eip-8440-execution-chain-proofs/29930",
+      "date": "2026-10-09",
+      "title_en": "EIP-8440 Execution Chain Proofs",
+      "note_en": "EIP-7805 (FOCIL) rebased and updated; EIP-8440 Execution Chain Proofs, 23:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Mike Neuder 播客：从基础讲 ePBS",
+      "note": "22:03，Glamsterdam 离主网只差一个测试网。",
+      "url": "https://x.com/mikeneuder/status/2108574078999433365",
+      "date": "2026-10-09",
+      "title_en": "Mike Neuder podcast: ePBS from the basics",
+      "note_en": "22:03; Glamsterdam is one testnet away from mainnet.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：公钥加密被攻破了吗？",
+      "note": "09:25，他强调自己没有任何 AI 实验室的具体信息。",
+      "url": "https://x.com/EliBenSasson/status/2108383378919575849",
+      "date": "2026-10-09",
+      "title_en": "Eli Ben-Sasson: is public key encryption broken?",
+      "note_en": "09:25. He stresses he has no concrete information from any AI lab.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8441-hybrid-post-quantum-stealth-address-scheme/29923",
+    "credit": "Ethereum Magicians, ERC-8441: Hybrid post-quantum stealth address scheme",
+    "local_path": "assets/2026-10-09.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8441: Hybrid post-quantum stealth address scheme"
+  },
+  "keywords_en": [
+    "EIP-7906 assertion rollback semantics",
+    "EIP-8250 single-use nonce flags",
+    "ERC-8441 post-quantum stealth addresses",
+    "Gnosis FCR",
+    "private stablecoin"
+  ],
+  "summary_en": "Frame transaction and transaction assertion specs firmed up: EIP-8141 defines a validation prefix and an execution body, EIP-7906 says a failed assertion reverts the execution body, and EIP-8250 proposes turning keyed nonces into single-use spent flags. On privacy, ERC-8441 proposes a hybrid post-quantum stealth address scheme that wallets can adopt with no protocol change. Gnosis Chain became the first L2 to adopt FCR, with deposits 20 to 30 times faster."
+}

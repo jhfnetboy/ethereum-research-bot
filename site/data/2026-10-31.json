@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-31",
+  "keywords": [
+    "Vitalik 数字极简主义",
+    "ethlambda v1.0.0",
+    "一周两个新共识客户端",
+    "EIP-8141 nonce 边界",
+    "ERC-8481 代理签名前风险报告",
+    "SEAL 应急协调"
+  ],
+  "summary": "Vitalik 发布博客《Digital minimalism》，讲他如何有意识地使用数字技术，比如不离开 X 平台，但改用 Firefly 多端客户端发帖。LambdaClass 发布 Lean Ethereum 共识客户端 ethlambda v1.0.0，与 10 月 29 日 Gattaca 发布的 Silver 一起，一周出现两个新共识客户端。EIP-8141 修正交易 nonce 检查边界。Binance 事件余波中，SEAL 讲述应急响应如何在几分钟内协调。",
+  "items": [
+    {
+      "topic": "账户与签名安全",
+      "title": "EIP-8141：交易 nonce 检查边界",
+      "note": "合并（raxhvl），破坏性修正：发送方 nonce 只接受到 `MAX-1`，因为检查必须给本交易的 nonce 自增留出空间，与 bogota 执行规范一致；实现方需要复查边界检查。",
+      "url": "https://github.com/ethereum/EIPs/pull/12603",
+      "date": "2026-10-31",
+      "title_en": "EIP-8141: transaction nonce check boundary",
+      "note_en": "Was merged (raxhvl). In this breaking fix, the sender nonce is accepted only up to `MAX-1`, because the check must leave room for the nonce increment of this transaction, matching the bogota execution specs; implementers need to review their boundary checks.",
+      "topic_en": "Account and signing security"
+    },
+    {
+      "topic": "账户与签名安全",
+      "title": "ERC-8481：代理签名前风险报告",
+      "note": "20:56（TOLL），当天 34 帖。AI 代理在没人逐笔阅读的情况下准备并签名交易，而损失大多并不罕见、签名前就能看出：无限额授权给普通钱包或一周大的合约、转给首尾字符相同的仿冒地址、买到真代币的仿品。",
+      "url": "https://ethereum-magicians.org/t/erc-8481-agent-pre-sign-risk-report/30145",
+      "date": "2026-10-31",
+      "title_en": "ERC-8481: agent pre-sign risk report",
+      "note_en": "20:56 (TOLL), with 34 posts that day. AI agents now prepare and sign transactions with no person reading each one, and the resulting losses are mostly not exotic and visible before signing: an unlimited approval to a plain wallet or a week-old contract, a transfer to a lookalike address sharing first and last characters, or buying a copy of a real token.",
+      "topic_en": "Account and signing security"
+    },
+    {
+      "topic": "账户与签名安全",
+      "title": "ERC-8478：ERC-8004 代理的 x402 收款方验证",
+      "note": "01:03。",
+      "url": "https://ethereum-magicians.org/t/erc-8478-x402-payee-verification-for-erc-8004-agents/30137",
+      "date": "2026-10-31",
+      "title_en": "ERC-8478: x402 payee verification for ERC-8004 agents",
+      "note_en": "01:03.",
+      "topic_en": "Account and signing security"
+    },
+    {
+      "topic": "账户与签名安全",
+      "title": "Magicians：STVA 的账户权限生命周期 ERC 草案",
+      "note": "12:43；ethresear.ch：STVA 独立模拟结果 04:36。",
+      "url": "https://ethereum-magicians.org/t/erc-draft-account-authority-lifecycle-for-stva/30138",
+      "date": "2026-10-31",
+      "title_en": "Magicians: ERC draft, account authority lifecycle for STVA",
+      "note_en": "12:43; ethresear.ch: independent simulation result for STVA, 04:36.",
+      "topic_en": "Account and signing security"
+    },
+    {
+      "topic": "账户与签名安全",
+      "title": "ethresear.ch：STVA 独立模拟结果",
+      "note": "Magicians：STVA 的账户权限生命周期 ERC 草案 12:43；ethresear.ch：STVA 独立模拟结果 04:36。",
+      "url": "https://ethresear.ch/t/erc-draft-independent-simulation-result-for-stva/26198",
+      "date": "2026-10-31",
+      "title_en": "ethresear.ch: independent simulation result for STVA",
+      "note_en": "Magicians: ERC draft, account authority lifecycle for STVA, 12:43; ethresear.ch: independent simulation result for STVA, 04:36.",
+      "topic_en": "Account and signing security"
+    },
+    {
+      "topic": "账户与签名安全",
+      "title": "SEAL：最初的信号出现在独立安全研究员的群聊里",
+      "note": "21:50，交易所、分析公司、发行方、执法机构和研究员必须足够互信，才能在几分钟内行动。",
+      "url": "https://x.com/_SEAL_Org/status/2116543285141344259",
+      "date": "2026-10-31",
+      "title_en": "SEAL: the first signals came up in a group chat of independent security researchers",
+      "note_en": "21:50; exchanges, analytics firms, issuers, law enforcement and researchers all have to trust each other enough to act in minutes.",
+      "topic_en": "Account and signing security"
+    },
+    {
+      "topic": "共识客户端多样性",
+      "title": "LambdaClass：ethlambda v1.0.0 发布",
+      "note": "00:52。Lean Ethereum 共识客户端，完整支持信标链（含 Gloas），已在主网、Sepolia、Hoodi 和 Platåberget 运行，Sepolia 验证者顺利过渡到 Glamsterdam，用 Rust 编写。",
+      "url": "https://x.com/class_lambda/status/2116226842084692167",
+      "date": "2026-10-31",
+      "title_en": "LambdaClass: ethlambda v1.0.0 is here",
+      "note_en": "00:52. The Lean Ethereum consensus client now has full beacon chain support including Gloas, runs on mainnet, Sepolia, Hoodi and Platåberget, and its Sepolia validators transitioned to Glamsterdam without a single issue. It is built in Rust.",
+      "topic_en": "Consensus client diversity"
+    },
+    {
+      "topic": "共识客户端多样性",
+      "title": "ladislaus0x：昨天 Silver，今天 ethlambda，背靠背的共识客户端发布很少见",
+      "note": "02:23；trent_vanepps：一周两个新共识客户端，lambda 团队还在探索把 EL 和 CL 打包成一个客户端 21:58。",
+      "url": "https://x.com/ladislaus0x/status/2116249603389743583",
+      "date": "2026-10-31",
+      "title_en": "ladislaus0x: back-to-back consensus client announcements are rare, Silver yesterday and ethlambda today",
+      "note_en": "02:23; trent_vanepps: two new consensus clients in one week, and the lambda team is also exploring bundling its EL and CL into a single client, 21:58.",
+      "topic_en": "Consensus client diversity"
+    },
+    {
+      "topic": "共识客户端多样性",
+      "title": "trent_vanepps：一周两个新共识客户端，lambda 团队还在探索把 EL 和 CL 打包成一个客户端",
+      "note": "ladislaus0x：昨天 Silver，今天 ethlambda，背靠背的共识客户端发布很少见 02:23；trent_vanepps：一周两个新共识客户端，lambda 团队还在探索把 EL 和 CL 打包成一个客户端 21:58。",
+      "url": "https://x.com/trent_vanepps/status/2116545398898561205",
+      "date": "2026-10-31",
+      "title_en": "trent_vanepps: two new consensus clients in one week, and the lambda team is also exploring bundling its EL and CL into a single client",
+      "note_en": "Ladislaus0x: back-to-back consensus client announcements are rare, Silver yesterday and ethlambda today, 02:23; trent_vanepps: two new consensus clients in one week, and the lambda team is also exploring bundling its EL and CL into a single client, 21:58.",
+      "topic_en": "Consensus client diversity"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：更小的 STARK 证明、更便宜的抗量子签名，两个研究挑战开放给你和你的 AI 代理",
+      "note": "15:57。",
+      "url": "https://x.com/StarkWareLtd/status/2116454403419058358",
+      "date": "2026-10-31",
+      "title_en": "StarkWare: smaller STARK proofs and cheaper quantum-safe signatures, two research challenges open to you and your AI agent",
+      "note_en": "15:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EFDevcon：World 作为支持方加入 Devcon 8",
+      "note": "11:30，探索在 AI 时代以保护隐私的方式验证唯一真人；Devcon 8 下一批 Impact Projects 16:48。",
+      "url": "https://x.com/EFDevcon/status/2116387185184096583",
+      "date": "2026-10-31",
+      "title_en": "EFDevcon: World joins Devcon 8 as a supporter",
+      "note_en": "11:30, exploring privacy-preserving ways to verify unique humans in the age of AI; the next group of Devcon 8 Impact Projects, 16:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Devcon 8 下一批 Impact Projects",
+      "note": "EFDevcon：World 作为支持方加入 Devcon 8 11:30，探索在 AI 时代以保护隐私的方式验证唯一真人；Devcon 8 下一批 Impact Projects 16:48。",
+      "url": "https://x.com/EFDevcon/status/2116467212659589604",
+      "date": "2026-10-31",
+      "title_en": "the next group of Devcon 8 Impact Projects",
+      "note_en": "EFDevcon: World joins Devcon 8 as a supporter, 11:30, exploring privacy-preserving ways to verify unique humans in the age of AI; the next group of Devcon 8 Impact Projects, 16:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8480 主权多发行方跨链转账",
+      "note": "19:00。",
+      "url": "https://ethereum-magicians.org/t/erc-8480-sovereign-multi-issuer-cross-chain-transfer/30144",
+      "date": "2026-10-31",
+      "title_en": "ERC-8480 sovereign multi-issuer cross-chain transfer",
+      "note_en": "19:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #191 定于 11 月 12 日",
+      "note": "",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-191-november-12-2026/30139",
+      "date": "2026-10-31",
+      "title_en": "ACDC #191 is set for November 12",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：Digital minimalism",
+      "note": "10:15，4419 赞。博客原文：物理极简之外，现代需要数字极简，让每次使用都是有意识的选择；他没有离开 X 平台，但离开了 X 的界面，大部分时间用 Firefly 同时发到 X、BlueSky、Farcaster 和 Lens，以支持去中心化社交、分散网络效应。",
+      "url": "https://x.com/VitalikButerin/status/2116368336842100913",
+      "date": "2026-10-31",
+      "title_en": "Vitalik: Digital minimalism",
+      "note_en": "10:15, with 4,419 likes. In the blog post, he argues that beyond physical minimalism the modern era needs digital minimalism, making each use a conscious choice. He did not leave X the platform but left X the interface, doing most of his posting through Firefly, which posts to X, BlueSky, Farcaster and Lens at once, to support decentralized social media and spread network effects rather than lock them in.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "博客原文",
+      "note": "Vitalik：Digital minimalism 10:15，4419 赞。博客原文：物理极简之外，现代需要数字极简，让每次使用都是有意识的选择；他没有离开 X 平台，但离开了 X 的界面，大部分时间用 Firefly 同时发到 X、BlueSky、Farcaster 和 Lens，以支持去中心化社交、分散网络效应。",
+      "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
+      "date": "2026-10-31",
+      "title_en": "the blog post",
+      "note_en": "Vitalik: Digital minimalism, 10:15, with 4,419 likes. In the blog post, he argues that beyond physical minimalism the modern era needs digital minimalism, making each use a conscious choice. He did not leave X the platform but left X the interface, doing most of his posting through Firefly, which posts to X, BlueSky, Farcaster and Lens at once, to support decentralized social media and spread network effects rather than lock them in.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Martin Köppelmann：L1 上的 ETH 和 USDC、USDT 或 Arbitrum 上的 ETH 是完全不同的东西",
+      "note": "22:28，该问问人们到底想要哪一种。",
+      "url": "https://x.com/koeppelmann/status/2116552841758130526",
+      "date": "2026-10-31",
+      "title_en": "Martin Köppelmann: ETH on Ethereum L1 is a very different beast from USDC, USDT or ETH on Arbitrum",
+      "note_en": "22:28; it is time to ask which one people really want.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12603",
+    "credit": "GitHub, ethereum/EIPs PR #12603",
+    "credit_en": "GitHub, ethereum/EIPs PR #12603"
+  },
+  "keywords_en": [
+    "Vitalik on digital minimalism",
+    "ethlambda v1.0.0",
+    "two new consensus clients in a week",
+    "EIP-8141 nonce boundary",
+    "ERC-8481 agent pre-sign risk report",
+    "SEAL incident coordination"
+  ],
+  "summary_en": "Vitalik published \"Digital minimalism\", on using digital technology intentionally; for example, he has not left X the platform but posts through the Firefly multi-client instead. LambdaClass released ethlambda v1.0.0, a Lean Ethereum consensus client, which together with Gattaca's Silver, announced on October 29, makes two new consensus clients in a week. EIP-8141 fixed its transaction nonce check boundary. In the aftermath of the Binance incident, SEAL described how incident response has to be coordinated within minutes."
+}

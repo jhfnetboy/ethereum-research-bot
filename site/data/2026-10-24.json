@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-24",
+  "keywords": [
+    "EIP-8037 修复方案",
+    "legacy share",
+    "RESERVOIR 操作码",
+    "EIP-8053 合约边界 gas 单位",
+    "EIP-8425 量子冻结与账户恢复"
+  ],
+  "summary": "ChainSecurity 报告两天后，修复方案成形。LukaszRozmej 的 PR 让状态 gas 退还和回滚只记入储备，`gas_left` 在帧内永不增加，并加入 legacy share，让新建存储槽从执行 gas 里仍按 Osaka 价格扣费；同一机制也写入 EIP-8141。另有 PR 提出 RESERVOIR 操作码让合约看到储备余额。EIP-8425 量子冻结与账户恢复合并为草案。",
+  "items": [
+    {
+      "topic": "修补 EIP-8037 的 gas 回流",
+      "title": "PR 12581：状态 gas 退还记入储备并加入 legacy share",
+      "note": "（LukaszRozmej，同时修改 EIP-8037 和 EIP-2780）针对 ChainSecurity 文章的问题：",
+      "url": "https://github.com/ethereum/EIPs/pull/12581",
+      "date": "2026-10-24",
+      "title_en": "PR 12581: credit state gas refills to the reservoir and add a legacy share",
+      "note_en": "(LukaszRozmej, editing both EIP-8037 and EIP-2780) targets the problems in the ChainSecurity article:",
+      "topic_en": "Patching EIP-8037's gas flowback"
+    },
+    {
+      "topic": "修补 EIP-8037 的 gas 回流",
+      "title": "EIP-8141：把 EIP-8037 的 legacy share 作为额外执行 gas 收取",
+      "note": "（LukaszRozmej），否则 frame 交易里被调方用约 12,100 执行 gas 就能写冷新槽。",
+      "url": "https://github.com/ethereum/EIPs/pull/12583",
+      "date": "2026-10-24",
+      "title_en": "EIP-8141: charge the EIP-8037 legacy share as extra execution gas",
+      "note_en": "(LukaszRozmej); otherwise a callee in a frame transaction could write a cold new slot with about 12,100 execution gas.",
+      "topic_en": "Patching EIP-8037's gas flowback"
+    },
+    {
+      "topic": "修补 EIP-8037 的 gas 回流",
+      "title": "新 EIP：RESERVOIR 操作码",
+      "note": "（ja7ad），0x4d，返回当前帧的 `state_gas_reservoir`（frame 交易里是剩余 `state_gas_left`），与 `GAS` 配合可以测量含状态 gas 的净消耗。",
+      "url": "https://github.com/ethereum/EIPs/pull/12577",
+      "date": "2026-10-24",
+      "title_en": "New EIP: RESERVOIR opcode",
+      "note_en": "(ja7ad), 0x4d, returning the current frame's `state_gas_reservoir` (the remaining `state_gas_left` in frame transactions); used with `GAS`, it lets contracts measure net consumption including state gas.",
+      "topic_en": "Patching EIP-8037's gas flowback"
+    },
+    {
+      "topic": "修补 EIP-8037 的 gas 回流",
+      "title": "EIP-8053：合约边界上用 gas 单位",
+      "note": "（LukaszRozmej）。原草案让 `GAS` 返回 milli-gas，而调用参数和 stipend 仍是 gas，`gasleft() - 5000`、`gasleft() < x / 63` 这类代码会差 1000 倍；修改后 milli-gas 只留在 EVM 内部。",
+      "url": "https://github.com/ethereum/EIPs/pull/12584",
+      "date": "2026-10-24",
+      "title_en": "EIP-8053: gas units at the contract boundary",
+      "note_en": "(LukaszRozmej). The draft had `GAS` return milli-gas while call arguments and the stipend stayed in gas, which would make code like `gasleft() - 5000` or `gasleft() < x / 63` off by a factor of 1000; after the change, milli-gas stays inside the EVM.",
+      "topic_en": "Patching EIP-8037's gas flowback"
+    },
+    {
+      "topic": "量子冻结与账户恢复",
+      "title": "新 EIP：量子冻结与账户恢复",
+      "note": "合并（colinlyguo，EIP-8425），提出冻结旧 ECDSA 授权、恢复未迁移账户的最小框架，源自 Magicians 关于 Q-day 冻结与恢复的讨论。",
+      "url": "https://github.com/ethereum/EIPs/pull/12383",
+      "date": "2026-10-24",
+      "title_en": "New EIP: quantum freeze and account recovery",
+      "note_en": "Was merged (colinlyguo, EIP-8425), proposing a minimal framework for freezing legacy ECDSA authorization and recovering unmigrated accounts, building on a Magicians discussion about freezing and recovery for Q-day.",
+      "topic_en": "Quantum freeze and account recovery"
+    },
+    {
+      "topic": "量子冻结与账户恢复",
+      "title": "EIP-8425：明确 ecRecover 移除语义",
+      "note": "合并，规定调用旧地址时的账户状态、普通调用语义、空返回数据和 EIP-2929 访问计费；明确恢复范围和账户访问规则 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12580",
+      "date": "2026-10-24",
+      "title_en": "EIP-8425: clarify ecRecover removal semantics",
+      "note_en": "Was merged, defining account state, ordinary call semantics, empty return data and EIP-2929 access accounting for calls to the old address; clarify recovery scope and account access rules was also merged.",
+      "topic_en": "Quantum freeze and account recovery"
+    },
+    {
+      "topic": "量子冻结与账户恢复",
+      "title": "明确恢复范围和账户访问规则",
+      "note": "EIP-8425：明确 ecRecover 移除语义 合并，规定调用旧地址时的账户状态、普通调用语义、空返回数据和 EIP-2929 访问计费；明确恢复范围和账户访问规则 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12585",
+      "date": "2026-10-24",
+      "title_en": "clarify recovery scope and account access rules",
+      "note_en": "EIP-8425: clarify ecRecover removal semantics was merged, defining account state, ordinary call semantics, empty return data and EIP-2929 access accounting for calls to the old address; clarify recovery scope and account access rules was also merged.",
+      "topic_en": "Quantum freeze and account recovery"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #249 定于 11 月 19 日",
+      "note": "",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-249-november-19-2026/30071",
+      "date": "2026-10-24",
+      "title_en": "ACDE #249 is set for November 19",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8360：定义 TCREATE 账户上下文、操作码规则和 gas 对齐",
+      "note": "合并；PBT 叶子记录最后写入区块 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12370",
+      "date": "2026-10-24",
+      "title_en": "EIP-8360: define TCREATE account context, opcode rules and gas alignment",
+      "note_en": "Merged; last-written block in PBT leaves, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PBT 叶子记录最后写入区块",
+      "note": "EIP-8360：定义 TCREATE 账户上下文、操作码规则和 gas 对齐 合并；PBT 叶子记录最后写入区块 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12420",
+      "date": "2026-10-24",
+      "title_en": "last-written block in PBT leaves",
+      "note_en": "EIP-8360: define TCREATE account context, opcode rules and gas alignment, merged; last-written block in PBT leaves, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：2026 年开始做面向用户的应用",
+      "note": "20:28，首个是给 Polymarket 带来隐私的 OffMarket。",
+      "url": "https://x.com/StarkWareLtd/status/2113985894848061694",
+      "date": "2026-10-24",
+      "title_en": "StarkWare: 2026 is the year the team started building user-facing applications",
+      "note_en": "20:28, starting with OffMarket, which brings privacy to Polymarket.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger：Ready for Merge 播客里 EF 密码学家 asanso 讲以太坊抗量子迁移",
+      "note": "23:59。",
+      "url": "https://x.com/tcoratger/status/2114039160914968662",
+      "date": "2026-10-24",
+      "title_en": "tcoratger: on the Ready for Merge podcast, EF cryptographer asanso explains Ethereum's post-quantum migration",
+      "note_en": "23:59.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：AI 让中间人更容易被攻破，需要重新思考互联网本身",
+      "note": "18:31。",
+      "url": "https://x.com/binji_x/status/2113956437374460258",
+      "date": "2026-10-24",
+      "title_en": "binji: AI makes middlemen easier to hack, so we need to rethink the internet itself",
+      "note_en": "18:31.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12581",
+    "credit": "GitHub, ethereum/EIPs PR #12581",
+    "credit_en": "GitHub, ethereum/EIPs PR #12581"
+  },
+  "keywords_en": [
+    "EIP-8037 fix",
+    "legacy share",
+    "RESERVOIR opcode",
+    "EIP-8053 gas units at the contract boundary",
+    "EIP-8425 quantum freeze and account recovery"
+  ],
+  "summary_en": "Two days after the ChainSecurity report, a fix took shape. A PR from LukaszRozmej credits state gas refills and rollbacks only to the reservoir, so `gas_left` never increases within a frame, and adds a legacy share so a new storage slot still costs its Osaka price in execution gas; the same mechanism goes into EIP-8141. Another PR proposes a RESERVOIR opcode so contracts can see the reservoir balance. EIP-8425 quantum freeze and account recovery was merged as a draft."
+}

@@ -1,0 +1,177 @@
+{
+  "date": "2026-10-05",
+  "keywords": [
+    "原生交易断言 EIP-7906",
+    "Frame 交易与 EIP-8250",
+    "原生 rollup devnet",
+    "加密内存池问责",
+    "手机 ML-DSA 签名"
+  ],
+  "summary": "EF 的 Trillion Dollar Security 计划发文，提出用原生交易断言约束交易最终结果，EIP-7906 是候选方案之一。Frame 交易继续扩展：EIP-8141 为无代码发送方加“设置委托”帧，EIP-8250 让交易把 nonce key 限定到付款方。L2BEAT 的 Luca Donno 基于 frames-devnet-0 跑起半模拟的原生 rollup。",
+  "items": [
+    {
+      "topic": "原生交易断言：签名之外的结果约束",
+      "title": "EF 博客：原生交易断言如何约束交易的最终结果",
+      "note": "文章区分两类失败：意图不符（Bybit、BadgerDAO，被篡改的前端给出与用户以为的不同的签名请求）和结果不符（Aave 与 CoW 的抵押品互换，用户约 5,040 万美元的 aEthUSDT 换到约 3.6 万美元的代币）。共同问题是缺少一条独立于交易构造者、在执行中强制的结果规则。以太坊目前没有通用机制让链上代码检查一笔交易产生的全部净状态变化和事件，EIP-7906 是一种可能方案，与 Clear Signing 配合。",
+      "url": "https://blog.ethereum.org/en/2026/10/05/transaction-assertions",
+      "date": "2026-10-05",
+      "title_en": "EF Blog: how native transaction assertions could enforce a transaction's final outcome",
+      "note_en": ". The post separates two failure modes. In an intent mismatch (Bybit, BadgerDAO), a compromised frontend supplied a signing request that differed from what users believed they were approving. In an outcome mismatch (the Aave and CoW collateral swap), a user swapped about $50.4 million of aEthUSDT and received tokens worth about $36,000. What all cases lacked was a rule over the resulting state, defined independently of the transaction builder and enforced during execution. Ethereum has no general mechanism for onchain code to inspect all the net state changes and events a transaction produces; EIP-7906 is one possible approach, alongside Clear Signing.",
+      "topic_en": "Native transaction assertions: constraining outcomes beyond the signature"
+    },
+    {
+      "topic": "原生交易断言：签名之外的结果约束",
+      "title": "EIP-7906 PR：断言输入由交易控制",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12391",
+      "date": "2026-10-05",
+      "title_en": "EIP-7906 PR: assertion inputs controlled by the transaction",
+      "note_en": "Was merged.",
+      "topic_en": "Native transaction assertions: constraining outcomes beyond the signature"
+    },
+    {
+      "topic": "Frame 交易：委托帧与 keyed nonce",
+      "title": "EIP-8141 PR：为无代码发送方增加 set-delegation 帧",
+      "note": "、EIP-8250 PR：允许交易把 nonce key 限定到付款方（均为 AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12421",
+      "date": "2026-10-05",
+      "title_en": "EIP-8141 PR: add a set-delegation frame for codeless senders",
+      "note_en": "And EIP-8250 PR: let a transaction scope its nonce keys to the payer (both by AnkushinDaniil).",
+      "topic_en": "Frame transactions: delegation frames and keyed nonces"
+    },
+    {
+      "topic": "Frame 交易：委托帧与 keyed nonce",
+      "title": "EIP-8250 PR：允许交易把 nonce key 限定到付款方",
+      "note": "EIP-8141 PR：为无代码发送方增加 set-delegation 帧、EIP-8250 PR：允许交易把 nonce key 限定到付款方（均为 AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12422",
+      "date": "2026-10-05",
+      "title_en": "EIP-8250 PR: let a transaction scope its nonce keys to the payer",
+      "note_en": "EIP-8141 PR: add a set-delegation frame for codeless senders and EIP-8250 PR: let a transaction scope its nonce keys to the payer (both by AnkushinDaniil).",
+      "topic_en": "Frame transactions: delegation frames and keyed nonces"
+    },
+    {
+      "topic": "Frame 交易：委托帧与 keyed nonce",
+      "title": "Luca Donno：基于 frames-devnet-0 的原生 rollup 封闭 devnet",
+      "note": "22:29，原生 rollup 直接继承 L1 的状态转换函数，复杂度、治理和 bug 风险都大幅降低。",
+      "url": "https://x.com/donnoh_eth/status/2107130971095171114",
+      "date": "2026-10-05",
+      "title_en": "Luca Donno: a closed native rollup devnet based on frames-devnet-0",
+      "note_en": "22:29. A native rollup inherits L1's state transition function directly, which greatly reduces complexity, governance and bug risk.",
+      "topic_en": "Frame transactions: delegation frames and keyed nonces"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：加密内存池的问责",
+      "note": "20:32（Aditi Partap、Arantxa Zapico），委员会持有解密密钥分片，讨论如何追责不揭示的一方。",
+      "url": "https://ethresear.ch/t/accountability-for-encrypted-mempools/26123",
+      "date": "2026-10-05",
+      "title_en": "ethresear.ch: accountability for encrypted mempools",
+      "note_en": "20:32 (Aditi Partap, Arantxa Zapico). A committee holds shares of the decryption key, and the post asks how to hold a non-revealing party accountable.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：手机安全硬件里的 NIST ML-DSA 密钥签出抗量子测试网交易",
+      "note": "23:04，链上验证，不需要硬分叉。",
+      "url": "https://x.com/StarkWareLtd/status/2107139847613972590",
+      "date": "2026-10-05",
+      "title_en": "StarkWare: a NIST ML-DSA key in a phone's secure hardware signs a quantum-resistant testnet transaction",
+      "note_en": "23:04, verified onchain without a hard fork.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "eth/73 证明包装传播",
+      "note": "网络层：eth/73 证明包装传播 提交（Marchhill）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12423",
+      "date": "2026-10-05",
+      "title_en": "eth/73 proof wrapper propagation",
+      "note_en": "On the networking side: eth/73 proof wrapper propagation was submitted (Marchhill).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：Ethlabs 第 15 周，第一个 Chainlink FCR 集成，quick slots 被 CFI",
+      "note": "FCR：Barnabé：Ethlabs 第 15 周，第一个 Chainlink FCR 集成，quick slots 被 CFI 05:56；Luca Donno 指出 FCR 尚未在 CCIP 上实际使用 17:44，并演示如何在链上核查。",
+      "url": "https://x.com/barnabemonnot/status/2106881208810631371",
+      "date": "2026-10-05",
+      "title_en": "Barnabé: Ethlabs week 15, the first FCR integration with Chainlink, and quick slots CFI'd",
+      "note_en": "FCR: Barnabé: Ethlabs week 15, the first FCR integration with Chainlink, and quick slots CFI'd, 05:56; Luca Donno points out that FCR is not yet actually used on CCIP, 17:44, and shows how to check onchain.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Luca Donno 指出 FCR 尚未在 CCIP 上实际使用",
+      "note": "FCR：Barnabé：Ethlabs 第 15 周，第一个 Chainlink FCR 集成，quick slots 被 CFI 05:56；Luca Donno 指出 FCR 尚未在 CCIP 上实际使用 17:44，并演示如何在链上核查。",
+      "url": "https://x.com/donnoh_eth/status/2107059228716196077",
+      "date": "2026-10-05",
+      "title_en": "Luca Donno points out that FCR is not yet actually used on CCIP",
+      "note_en": "FCR: Barnabé: Ethlabs week 15, the first FCR integration with Chainlink, and quick slots CFI'd, 05:56; Luca Donno points out that FCR is not yet actually used on CCIP, 17:44, and shows how to check onchain.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT 隐私页收录 zk.money",
+      "note": "21:40，Aztec 上的私密 DAI 钱包，附端到端隐私的取舍分析。",
+      "url": "https://x.com/ethbeat_org/status/2107118792719368619",
+      "date": "2026-10-05",
+      "title_en": "L2BEAT's privacy page adds zk.money",
+      "note_en": "21:40, a private DAI wallet on Aztec, with an analysis of its end-to-end privacy trade-offs.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：Sepolia 节点需在 Glamsterdam 前升级到 2.1.0",
+      "note": "19:49。",
+      "url": "https://x.com/Nethermind/status/2107090814430056633",
+      "date": "2026-10-05",
+      "title_en": "Nethermind: upgrade Sepolia nodes to 2.1.0 before Glamsterdam",
+      "note_en": "19:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trent：blob/DA 用户请联系 Derek Chiang 反馈扩容需求",
+      "note": "23:45。",
+      "url": "https://x.com/trent_vanepps/status/2107150239144485291",
+      "date": "2026-10-05",
+      "title_en": "Trent: blob/DA consumers, contact Derek Chiang with feedback on scaling",
+      "note_en": "23:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko 发布用 AI 加速检验哈希函数安全性的项目",
+      "note": "20:00，上线 23 分钟就有人尝试挑战 SHA3 和 BLAKE3。",
+      "url": "https://x.com/zooko/status/2107093458183713107",
+      "date": "2026-10-05",
+      "title_en": "zooko launches a project to test hash function security with AI",
+      "note_en": "20:00; within 23 minutes there were already attempts to challenge SHA3 and BLAKE3.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Bartek Kiepuszewski：手工追踪 L2BEAT 隐私寻宝的资金来源",
+      "note": "21:44。",
+      "url": "https://x.com/bkiepuszewski/status/2107119689402876181",
+      "date": "2026-10-05",
+      "title_en": "Bartek Kiepuszewski: tracing the source of funds in L2BEAT's privacy treasure hunt by hand",
+      "note_en": "21:44.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/10/05/transaction-assertions",
+    "credit": "Ethereum Foundation Blog, native transaction assertions",
+    "local_path": "assets/2026-10-05.jpg",
+    "credit_en": "Ethereum Foundation Blog, native transaction assertions"
+  },
+  "keywords_en": [
+    "native transaction assertions EIP-7906",
+    "frame transactions and EIP-8250",
+    "native rollup devnet",
+    "encrypted mempool accountability",
+    "ML-DSA signing on a phone"
+  ],
+  "summary_en": "The EF's Trillion Dollar Security initiative published a post proposing native transaction assertions to enforce a transaction's final outcome, with EIP-7906 as one candidate design. Frame transactions kept growing: EIP-8141 adds a set-delegation frame for codeless senders, and EIP-8250 lets a transaction scope its nonce keys to the payer. L2BEAT's Luca Donno ran a half-mocked native rollup on a devnet based on frames-devnet-0."
+}

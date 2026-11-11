@@ -1,0 +1,239 @@
+{
+  "date": "2026-10-26",
+  "keywords": [
+    "EIP-8037 影响评估",
+    "EIP-8053 合并",
+    "EIP-8456 CALLSTATUS",
+    "EIP-8288 递归输入校验",
+    "EF 钱包隐私",
+    "Falcon Challenge"
+  ],
+  "summary": "原定 Hoodi 激活的这一天，讨论转向影响评估：nero_eth 说周末大家试图摸清 EIP-8037 对合约的影响，Barnabé 也说周末让代理跑 gas 重新定价和机制改动。EIP-8053 改为合约边界用 gas 单位并合并，CALLSTATUS 开了 Magicians 讨论帖（EIP-8456）。EF 发文强调隐私和安全不能分开追求。Starknet 的 Falcon-512 验证成本一周降了 50.2%。",
+  "items": [
+    {
+      "topic": "EIP-8037 影响评估与配套规范",
+      "title": "nero_eth：上周核心开发者推迟 Hoodi 分叉以研究 ChainSecurity 报告，周末大家在摸清影响",
+      "note": "15:12。",
+      "url": "https://x.com/nero_eth/status/2114631334526161274",
+      "date": "2026-10-26",
+      "title_en": "nero_eth: last week core devs delayed the Hoodi fork to study the ChainSecurity report, and over the weekend people worked to get a better picture of the impact",
+      "note_en": "15:12.",
+      "topic_en": "EIP-8037 impact assessment and supporting specs"
+    },
+    {
+      "topic": "EIP-8037 影响评估与配套规范",
+      "title": "Barnabé：周末让我们的代理跑 gas 重新定价和机制改动",
+      "note": "00:31。",
+      "url": "https://x.com/barnabemonnot/status/2114409418926465458",
+      "date": "2026-10-26",
+      "title_en": "Barnabé: a busy weekend letting our agents loose on gas repricings and mechanism changes",
+      "note_en": "00:31.",
+      "topic_en": "EIP-8037 impact assessment and supporting specs"
+    },
+    {
+      "topic": "EIP-8037 影响评估与配套规范",
+      "title": "Ethlabs 第 18 周：Glamsterdam 发现漏洞，代理来救场",
+      "note": "（Derek Chiang，以 X 文章发布）。EIP-8037/8038 的目的是控制状态增长：现在每年约增 116GB，gas 上限从 60M 升到 200M 后外推约 387GB/年。ACD 之后 fradamt 和 nero_eth 各自让代理扫描受影响合约，随后建了一个 GitHub 仓库让各家代理认领任务、记录发现，EF 和 Ethlabs 多名研究者加入；发现细节因敏感留到 ACDT 上介绍。第二个协作仓库针对 EIP-8198 quick slots，排查把 12 秒 slot 写死、改成 10 秒后会出问题的项目。",
+      "url": "https://ethlabs.org/updates/week-18.html",
+      "date": "2026-10-26",
+      "title_en": "Ethlabs week 18: vulnerabilities found in Glamsterdam, agents came to the rescue",
+      "note_en": "(Derek Chiang, published as an X article). EIP-8037/8038 exist to limit state growth: state grows about 116GB a year today, and raising the gas limit from 60M to 200M extrapolates to about 387GB a year. After the ACD call, fradamt and nero_eth each had agents scan for affected contracts, then set up a GitHub repo where agents claim tasks and record findings, joined by several EF and Ethlabs researchers; given their sensitivity, the findings were held for the ACDT call. A second coordination repo targets EIP-8198 quick slots, looking for projects that hardcode 12-second slots and would break at 10 seconds.",
+      "topic_en": "EIP-8037 impact assessment and supporting specs"
+    },
+    {
+      "topic": "EIP-8037 影响评估与配套规范",
+      "title": "EIP-8053：合约边界用 gas 单位",
+      "note": "合并，milli-gas 只留在 EVM 内部，并规定它与 EIP-8037、EIP-8141 的配合方式。",
+      "url": "https://github.com/ethereum/EIPs/pull/12584",
+      "date": "2026-10-26",
+      "title_en": "EIP-8053: gas units at the contract boundary",
+      "note_en": "Was merged, keeping milli-gas inside the EVM and specifying how it works with EIP-8037 and EIP-8141.",
+      "topic_en": "EIP-8037 impact assessment and supporting specs"
+    },
+    {
+      "topic": "EIP-8037 影响评估与配套规范",
+      "title": "EIP-8141：把 EIP-8037 legacy share 作为额外执行 gas 收取",
+      "note": "（LukaszRozmej，后续 PR）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12588",
+      "date": "2026-10-26",
+      "title_en": "EIP-8141: charge the EIP-8037 legacy share as extra execution gas",
+      "note_en": "(LukaszRozmej, a follow-up PR).",
+      "topic_en": "EIP-8037 impact assessment and supporting specs"
+    },
+    {
+      "topic": "EIP-8037 影响评估与配套规范",
+      "title": "Magicians：EIP-8456 CALLSTATUS 指令",
+      "note": "21:54 开帖。",
+      "url": "https://ethereum-magicians.org/t/eip-8456-callstatus-instruction/30085",
+      "date": "2026-10-26",
+      "title_en": "Magicians: EIP-8456 CALLSTATUS instruction",
+      "note_en": "Opened at 21:54.",
+      "topic_en": "EIP-8037 impact assessment and supporting specs"
+    },
+    {
+      "topic": "EIP-8037 影响评估与配套规范",
+      "title": "ladislaus0x：Sepolia 已激活 Glamsterdam，ePBS 让验证者在验证载荷执行前就能为信标块投票，给 zkEVM 证明者更多时间",
+      "note": "19:44，Sepolia gas 上限已是 200M。",
+      "url": "https://x.com/ladislaus0x/status/2114699748787572767",
+      "date": "2026-10-26",
+      "title_en": "ladislaus0x: Sepolia has activated Glamsterdam, and with ePBS validators can attest to beacon blocks before verifying payload execution, giving zkEVM provers more time",
+      "note_en": "19:44; Sepolia's gas limit is already 200M.",
+      "topic_en": "EIP-8037 impact assessment and supporting specs"
+    },
+    {
+      "topic": "隐私与后量子",
+      "title": "EF：乐于支持推进隐私的钱包工具",
+      "note": "22:48，经过这一周的攻击和漏洞，隐私和安全不能是孤立的目标；隐私成为默认时，就不必担心攻击者利用你的链上历史。",
+      "url": "https://x.com/ethereumfndn/status/2114746087382851966",
+      "date": "2026-10-26",
+      "title_en": "EF: glad to support wallet tools advancing privacy",
+      "note_en": "22:48. After this past week of attacks and exploits, privacy and security cannot be isolated goals; when privacy is the default, you can worry less about attackers using your onchain history against you.",
+      "topic_en": "Privacy and post-quantum"
+    },
+    {
+      "topic": "隐私与后量子",
+      "title": "lambdaclass：Miden 主网与首批伙伴上线",
+      "note": "22:10。",
+      "url": "https://x.com/class_lambda/status/2114736381209747672",
+      "date": "2026-10-26",
+      "title_en": "lambdaclass: Miden mainnet is live with its first partners",
+      "note_en": "22:10.",
+      "topic_en": "Privacy and post-quantum"
+    },
+    {
+      "topic": "隐私与后量子",
+      "title": "EIP-8288：校验递归输入和内存池包装",
+      "note": "（Marchhill），限制递归证明和列表数量，定义 2 MiB 内的规范包装，blob 交易用省略后的池化形式。",
+      "url": "https://github.com/ethereum/EIPs/pull/12590",
+      "date": "2026-10-26",
+      "title_en": "EIP-8288: validate recursive inputs and mempool wrappers",
+      "note_en": "(Marchhill), bounding recursive proof and list counts, defining canonical wrappers within 2 MiB, and using the elided pooled form for blob transactions.",
+      "topic_en": "Privacy and post-quantum"
+    },
+    {
+      "topic": "隐私与后量子",
+      "title": "StarkWare：Falcon Challenge 不到一周把 Falcon-512 验证成本降低 50.2%",
+      "note": "23:30，从 48.4M gas 降到 24.1M gas。",
+      "url": "https://x.com/StarkWareLtd/status/2114756478301315228",
+      "date": "2026-10-26",
+      "title_en": "StarkWare: in less than a week the Falcon Challenge cut Falcon-512 verification costs by 50.2%",
+      "note_en": "23:30, from 48.4M to 24.1M gas.",
+      "topic_en": "Privacy and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #102",
+      "note": "gas 重新定价调查由 ChainSecurity 和 Dedaub 负责，预计两周后出报告；构建者入驻竞态问题的修复获批；因 Devcon，下次 ACDT 在两周后。",
+      "url": "https://forkcast.org/calls/acdt/102/",
+      "date": "2026-10-26",
+      "title_en": "ACDT #102",
+      "note_en": "ChainSecurity and Dedaub are running the gas repricing investigation and are due to report in two weeks; a fix for the builder onboarding race condition was approved; the next ACDT is in two weeks because of Devcon.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：基于 EIP-2537 的批量 KZG 点求值",
+      "note": "（信息类 EIP，EPF 7 学员）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12589",
+      "date": "2026-10-26",
+      "title_en": "New EIP: batched KZG point evaluation via EIP-2537",
+      "note_en": "(an informational EIP by EPF 7 fellows).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat：原生证明验证让以太坊自己验证 ZK 证明，EIP-8357 草案已合并",
+      "note": "20:48。",
+      "url": "https://x.com/ethbeat_org/status/2114715822820143218",
+      "date": "2026-10-26",
+      "title_en": "ethbeat: native proof verification would let Ethereum verify ZK proofs itself, and the EIP-8357 draft has been merged",
+      "note_en": "20:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "gakonst：solar 的 EVM 代码生成本周发布，比 solc 快 100 倍以上",
+      "note": "01:53。",
+      "url": "https://x.com/gakonst/status/2114430190894117217",
+      "date": "2026-10-26",
+      "title_en": "gakonst: solar's EVM codegen ships this week, more than 100x faster than solc",
+      "note_en": "01:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：V6 发布伙伴 Olla Finance 带来流动性质押",
+      "note": "22:12。",
+      "url": "https://x.com/aztecnetwork/status/2114736826384822373",
+      "date": "2026-10-26",
+      "title_en": "Aztec: V6 launch partner Olla Finance brings liquid staking",
+      "note_en": "22:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：EIP-7002 系统调用成功与 FIFO 请求的 Lean 验证",
+      "note": "23:46。",
+      "url": "https://ethresear.ch/t/lean-verification-of-eip-7002-system-call-success-and-fifo-requests/26180",
+      "date": "2026-10-26",
+      "title_en": "ethresear.ch: Lean verification of EIP-7002 system-call success and FIFO requests",
+      "note_en": "23:46.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #45",
+      "note": "定于 10 月 27 日 20:00；EIPIP #132 定于 11 月 18 日。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-45-october-27-2026/30082",
+      "date": "2026-10-26",
+      "title_en": "FOCIL Breakout #45",
+      "note_en": "Is set for October 27 at 20:00, and EIPIP #132 for November 18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPIP #132",
+      "note": "FOCIL Breakout #45 定于 10 月 27 日 20:00；EIPIP #132 定于 11 月 18 日。",
+      "url": "https://ethereum-magicians.org/t/eipip-meeting-132-nov-18-2026/30084",
+      "date": "2026-10-26",
+      "title_en": "EIPIP #132",
+      "note_en": "FOCIL Breakout #45 is set for October 27 at 20:00, and EIPIP #132 for November 18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：可以接受 Kimi 3.1 刻意不训练顶级攻击性网络能力",
+      "note": "08:46，按用途区别对待比按用户区别对待好得多。2705 赞。",
+      "url": "https://x.com/VitalikButerin/status/2114534202788225513",
+      "date": "2026-10-26",
+      "title_en": "Vitalik: okay with Kimi 3.1 deliberately leaving out top-end offensive cyber capabilities from its training data",
+      "note_en": "08:46; discriminating against use cases is much less bad than discriminating against users. 2,705 likes.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：密码学敏捷性将成为加密项目的必选项",
+      "note": "13:48。",
+      "url": "https://x.com/EliBenSasson/status/2114609978585563410",
+      "date": "2026-10-26",
+      "title_en": "Eli Ben-Sasson: crypto agility will become non-negotiable for crypto projects",
+      "note_en": "13:48.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8456-callstatus-instruction/30085",
+    "credit": "Ethereum Magicians, EIP-8456: CALLSTATUS instruction",
+    "local_path": "assets/2026-10-26.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8456: CALLSTATUS instruction"
+  },
+  "keywords_en": [
+    "EIP-8037 impact assessment",
+    "EIP-8053 merged",
+    "EIP-8456 CALLSTATUS",
+    "EIP-8288 recursive input validation",
+    "EF on wallet privacy",
+    "Falcon Challenge"
+  ],
+  "summary_en": "On the day Hoodi was originally due to fork, the discussion moved to impact assessment: nero_eth said people spent the weekend trying to understand how EIP-8037 affects contracts, and Barnabé said his team let agents loose on gas repricings and mechanism changes. EIP-8053 now keeps gas units at the contract boundary and was merged, and CALLSTATUS opened a Magicians thread as EIP-8456. The EF stressed that privacy and security cannot be pursued separately. Falcon-512 verification on Starknet got 50.2% cheaper in a week."
+}

@@ -1,0 +1,258 @@
+{
+  "date": "2026-10-15",
+  "keywords": [
+    "EIP-8037 状态 gas 实测",
+    "账户变更净 gas 计量",
+    "EIP-8141 签名者授权",
+    "EIP-8250 单次 key",
+    "Daisugi 签名聚合",
+    "ACDC #189"
+  ],
+  "summary": "pcaversaccio 对比 Osaka 和 Amsterdam 下部署一个 ERC-20 的 gas，EIP-8037 让 64 次 SSTORE 多出 97,920 状态 gas，他还质疑 EIP-7997 为何进 Glamsterdam。rakita 的两份 EIP（账户变更的净 gas 计量、跨 revert 保留 warm 访问集）合并为草案。frame 交易继续收紧：检查签名者密钥授权、SENDER 模式默认代码、所有数据字节同价。Vitalik 认为 zkEVM 的速度之争已经结束，重心应完全转向安全。",
+  "items": [
+    {
+      "topic": "Glamsterdam 重新定价：开发者开始实测",
+      "title": "pcaversaccio：一个 CREATE2 部署的 ERC-20 在 Osaka 与 Amsterdam 下的 gas 差异",
+      "note": "21:38。EIP-8037 为 SSTORE 增加的状态 gas 为 64×1,530=97,920，只在 Amsterdam 的 CREATE2 一行可见。他还问 EIP-7997 为什么计划纳入 22:27，他的 CreateX 工厂已部署在 200 多条 EVM 链上，且字节码可验证一致。",
+      "url": "https://x.com/pcaversaccio/status/2110742093861724530",
+      "date": "2026-10-15",
+      "title_en": "pcaversaccio: Osaka vs Amsterdam gas for a simple CREATE2-deployed ERC-20",
+      "note_en": "21:38. The extra state gas EIP-8037 adds for the SSTOREs is 64×1,530=97,920 and shows up only in the Amsterdam CREATE2 line. He also asked why EIP-7997 is planned for inclusion, 22:27; his CreateX factory is deployed on over 200 EVM chains with verifiably identical bytecode.",
+      "topic_en": "Glamsterdam repricing: developers start measuring"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：开发者开始实测",
+      "title": "他还问 EIP-7997 为什么计划纳入",
+      "note": "pcaversaccio：一个 CREATE2 部署的 ERC-20 在 Osaka 与 Amsterdam 下的 gas 差异 21:38。EIP-8037 为 SSTORE 增加的状态 gas 为 64×1,530=97,920，只在 Amsterdam 的 CREATE2 一行可见。他还问 EIP-7997 为什么计划纳入 22:27，他的 CreateX 工厂已部署在 200 多条 EVM 链上，且字节码可验证一致。",
+      "url": "https://x.com/pcaversaccio/status/2110754372397514809",
+      "date": "2026-10-15",
+      "title_en": "He also asked why EIP-7997 is planned for inclusion",
+      "note_en": "Pcaversaccio: Osaka vs Amsterdam gas for a simple CREATE2-deployed ERC-20, 21:38. The extra state gas EIP-8037 adds for the SSTOREs is 64×1,530=97,920 and shows up only in the Amsterdam CREATE2 line. He also asked why EIP-7997 is planned for inclusion, 22:27; his CreateX factory is deployed on over 200 EVM chains with verifiably identical bytecode.",
+      "topic_en": "Glamsterdam repricing: developers start measuring"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：开发者开始实测",
+      "title": "新 EIP：账户变更的净 gas 计量",
+      "note": "、跨 revert 保留 warm 访问集 合并（rakita）；合约存储布局描述格式 合并（forshtat）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12058",
+      "date": "2026-10-15",
+      "title_en": "New EIP: net gas metering for account changes",
+      "note_en": "And persist warm access sets across reverts were merged (rakita), along with a contract storage layout descriptor format (forshtat).",
+      "topic_en": "Glamsterdam repricing: developers start measuring"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：开发者开始实测",
+      "title": "跨 revert 保留 warm 访问集",
+      "note": "新 EIP：账户变更的净 gas 计量、跨 revert 保留 warm 访问集 合并（rakita）；合约存储布局描述格式 合并（forshtat）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12128",
+      "date": "2026-10-15",
+      "title_en": "persist warm access sets across reverts",
+      "note_en": "New EIP: net gas metering for account changes and persist warm access sets across reverts were merged (rakita), along with a contract storage layout descriptor format (forshtat).",
+      "topic_en": "Glamsterdam repricing: developers start measuring"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：开发者开始实测",
+      "title": "合约存储布局描述格式",
+      "note": "新 EIP：账户变更的净 gas 计量、跨 revert 保留 warm 访问集 合并（rakita）；合约存储布局描述格式 合并（forshtat）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12247",
+      "date": "2026-10-15",
+      "title_en": "a contract storage layout descriptor format",
+      "note_en": "New EIP: net gas metering for account changes and persist warm access sets across reverts were merged (rakita), along with a contract storage layout descriptor format (forshtat).",
+      "topic_en": "Glamsterdam repricing: developers start measuring"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：开发者开始实测",
+      "title": "EIP-8038：扩充 gas 估算方法并加入基准报告",
+      "note": "合并（misilva73）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12517",
+      "date": "2026-10-15",
+      "title_en": "EIP-8038: expand the gas estimation methodology and add supporting reports",
+      "note_en": "Was merged (misilva73).",
+      "topic_en": "Glamsterdam repricing: developers start measuring"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "检查签名者密钥授权",
+      "note": "EIP-8141：检查签名者密钥授权（Marchhill）、SENDER 模式从默认代码设置代码、所有数据字节同价（AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12505",
+      "date": "2026-10-15",
+      "title_en": "check signer key authority",
+      "note_en": "EIP-8141: check signer key authority (Marchhill), set code from the default code in SENDER mode and price every data byte the same (AnkushinDaniil).",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "SENDER 模式从默认代码设置代码",
+      "note": "EIP-8141：检查签名者密钥授权（Marchhill）、SENDER 模式从默认代码设置代码、所有数据字节同价（AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12506",
+      "date": "2026-10-15",
+      "title_en": "set code from the default code in SENDER mode",
+      "note_en": "EIP-8141: check signer key authority (Marchhill), set code from the default code in SENDER mode and price every data byte the same (AnkushinDaniil).",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "所有数据字节同价",
+      "note": "EIP-8141：检查签名者密钥授权（Marchhill）、SENDER 模式从默认代码设置代码、所有数据字节同价（AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12512",
+      "date": "2026-10-15",
+      "title_en": "price every data byte the same",
+      "note_en": "EIP-8141: check signer key authority (Marchhill), set code from the default code in SENDER mode and price every data byte the same (AnkushinDaniil).",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "EIP-8250：用 MAX_NONCE_SEQ 标记单次使用的 key",
+      "note": "（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12511",
+      "date": "2026-10-15",
+      "title_en": "EIP-8250: mark single-use keys with MAX_NONCE_SEQ",
+      "note_en": "(nerolation).",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "EIP-8209：COMMIT 与 REVEAL 改为自由 frame 模式并采用 EIP-8141 帧布局",
+      "note": "合并；EIP-7906：通过 EIP-8141 验证前缀说明 POST_TX 回滚点 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12509",
+      "date": "2026-10-15",
+      "title_en": "EIP-8209: move COMMIT and REVEAL to free frame modes and use the EIP-8141 frame layout",
+      "note_en": "Was merged, as was EIP-7906: state the POST_TX rollback point via the EIP-8141 validation prefix.",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "EIP-7906：通过 EIP-8141 验证前缀说明 POST_TX 回滚点",
+      "note": "EIP-8209：COMMIT 与 REVEAL 改为自由 frame 模式并采用 EIP-8141 帧布局 合并；EIP-7906：通过 EIP-8141 验证前缀说明 POST_TX 回滚点 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12516",
+      "date": "2026-10-15",
+      "title_en": "EIP-7906: state the POST_TX rollback point via the EIP-8141 validation prefix",
+      "note_en": "EIP-8209: move COMMIT and REVEAL to free frame modes and use the EIP-8141 frame layout was merged, as was EIP-7906: state the POST_TX rollback point via the EIP-8141 validation prefix.",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "EIP-8288：把 recursive_stark_gas 计入 calldata 下限",
+      "note": "、保留零 data_hash 表示签名哈希。",
+      "url": "https://github.com/ethereum/EIPs/pull/12510",
+      "date": "2026-10-15",
+      "title_en": "EIP-8288: add recursive_stark_gas to the calldata floor",
+      "note_en": "And reserve the zero data_hash for the signature hash.",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "Frame 交易：签名者授权与 nonce",
+      "title": "保留零 data_hash 表示签名哈希",
+      "note": "EIP-8288：把 recursive_stark_gas 计入 calldata 下限、保留零 data_hash 表示签名哈希。",
+      "url": "https://github.com/ethereum/EIPs/pull/12518",
+      "date": "2026-10-15",
+      "title_en": "reserve the zero data_hash for the signature hash",
+      "note_en": "EIP-8288: add recursive_stark_gas to the calldata floor and reserve the zero data_hash for the signature hash.",
+      "topic_en": "Frame transactions: signer authority and nonces"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：祝贺 ZKsync Airbender，速度之争已定，zkEVM 首要任务应完全转向安全",
+      "note": "10:39，即形式化验证。",
+      "url": "https://x.com/VitalikButerin/status/2110576209658548683",
+      "date": "2026-10-15",
+      "title_en": "Vitalik: congratulations to ZKsync Airbender; the speed race is won, and zkEVMs' top priority should shift fully to security",
+      "note_en": "10:39, meaning formal verification.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Antonio Sanso：Daisugi v0.3 聚合 20 个 SPHINCS 签名为一个证明",
+      "note": "20:35，EL 客户端验证需要 LeanVM 验证器和 LeanSPHINCS 程序。",
+      "url": "https://x.com/asanso/status/2110726152192983148",
+      "date": "2026-10-15",
+      "title_en": "Antonio Sanso: Daisugi v0.3 aggregates 20 SPHINCS signatures into one proof",
+      "note_en": "20:35; EL clients need the LeanVM verifier and the LeanSPHINCS guest program to verify.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：后量子路线图",
+      "note": "20:59，防范“先收集、后解密”。",
+      "url": "https://x.com/aztecnetwork/status/2110732309087608967",
+      "date": "2026-10-15",
+      "title_en": "Aztec: its post-quantum roadmap",
+      "note_en": "20:59, guarding against \"harvest now, decrypt later\".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：Starknet 是否成为 L1 的非约束性治理投票开放",
+      "note": "14:47。",
+      "url": "https://x.com/EliBenSasson/status/2110638713390661708",
+      "date": "2026-10-15",
+      "title_en": "Eli Ben-Sasson: a non-binding governance vote on whether Starknet should become an L1 is open",
+      "note_en": "14:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Opus 上线私密借贷",
+      "note": "21:02，基于 Shadow Accounts。",
+      "url": "https://x.com/StarkWareLtd/status/2110733089345282085",
+      "date": "2026-10-15",
+      "title_en": "StarkWare: private borrowing is live on Opus",
+      "note_en": "21:02, built on Shadow Accounts.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETH Economic Zone：10 月 23 日 Jordi Baylina 讲解跨 rollup 同交易调用",
+      "note": "16:44。",
+      "url": "https://x.com/etheconomiczone/status/2110668018153836699",
+      "date": "2026-10-15",
+      "title_en": "ETH Economic Zone: on October 23, Jordi Baylina explains same-transaction calls across rollups",
+      "note_en": "16:44.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Luca Donno：HSKChain 把主 rollup 合约替换了 6 分钟，强制转走 14.2 万 USDT",
+      "note": "17:32。",
+      "url": "https://x.com/donnoh_eth/status/2110680294177021971",
+      "date": "2026-10-15",
+      "title_en": "Luca Donno: HSKChain replaced its main rollup contract for 6 minutes and force-transferred 142K USDT",
+      "note_en": "17:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-7732 下多区块的执行批次",
+      "note": "22:34。",
+      "url": "https://ethereum-magicians.org/t/execution-batches-of-multiple-blocks-under-eip-7732/29981",
+      "date": "2026-10-15",
+      "title_en": "Magicians: execution batches of multiple blocks under EIP-7732",
+      "note_en": "22:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：AI 不只是加快 Q-day，还让攻击门槛降给更多人",
+      "note": "22:20。",
+      "url": "https://x.com/EliBenSasson/status/2110752764842360871",
+      "date": "2026-10-15",
+      "title_en": "Eli Ben-Sasson: AI does not just speed up Q-day, it also lowers the bar for many more attackers",
+      "note_en": "22:20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12058",
+    "credit": "GitHub, ethereum/EIPs PR #12058",
+    "credit_en": "GitHub, ethereum/EIPs PR #12058"
+  },
+  "keywords_en": [
+    "EIP-8037 state gas measured",
+    "net gas metering for account changes",
+    "EIP-8141 signer authority",
+    "EIP-8250 single-use keys",
+    "Daisugi signature aggregation",
+    "ACDC #189"
+  ],
+  "summary_en": "pcaversaccio compared the gas to deploy an ERC-20 under Osaka and Amsterdam: EIP-8037 adds 97,920 state gas for 64 SSTOREs, and he questioned why EIP-7997 is in Glamsterdam. Two EIPs from rakita (net gas metering for account changes, and persisting warm access sets across reverts) were merged as drafts. Frame transactions tightened further: checking signer key authority, default code in SENDER mode, and a single price for every data byte. Vitalik considers the zkEVM speed race won and says the focus should shift fully to security."
+}

@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-11",
+  "keywords": [
+    "ERC-8403 单哈希账户",
+    "后量子密钥",
+    "EIP-8298 操作码 0xA7",
+    "EIP-8288 区块证明进区块头",
+    "Starknet 隐私池"
+  ],
+  "summary": "周日。AnkushinDaniil 在 ethresear.ch 介绍 ERC-8403：账户只存一个根哈希，密钥和规则都是树叶，并讨论叠加 EIP-8288 后的后量子密钥。EIP-8298（SETCODEFROM）按写测试时发现的问题补规范并分配操作码 0xA7。Starknet 统一隐私池存入超过 200 万美元。",
+  "items": [
+    {
+      "topic": "ERC-8403：账户就是一个哈希",
+      "title": "ethresear.ch：ERC-8403，账户作为一个哈希，以及后量子密钥",
+      "note": "11:24（AnkushinDaniil）。账户只存一个 32 字节根；每个授权（签名密钥，或花费上限、解锁时间这类规则）是一片叶子，`leaf = keccak256(authority_id || predicate)`。交易携带两样东西：证明该叶子在账户根下的成员证明，以及该叶子持有者批准了本交易的见证。文章随后讨论在 EIP-8288 之上换成后量子密钥会是什么样。",
+      "url": "https://ethresear.ch/t/erc-8403-an-account-as-one-hash-and-post-quantum-keys/26147",
+      "date": "2026-10-11",
+      "title_en": "ethresear.ch: ERC-8403, an account as one hash, and post-quantum keys",
+      "note_en": "11:24 (AnkushinDaniil). The account stores one 32-byte root. Each authority (a signing key, or a rule such as a spend limit or an unlock time) is a leaf, `leaf = keccak256(authority_id || predicate)`. A transaction carries a membership proof that the leaf is under the account's root, and a witness that the leaf's holder approved the transaction. The post then asks what the account looks like with post-quantum keys on top of EIP-8288.",
+      "topic_en": "ERC-8403: an account as one hash"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8298：补齐写测试时发现的规范缺口，分配操作码 0xA7",
+      "note": "（CPerezz）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12480",
+      "date": "2026-10-11",
+      "title_en": "EIP-8298: close spec gaps found while writing tests and assign opcode 0xA7",
+      "note_en": "(CPerezz).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "区块头承诺区块证明并在区块体携带",
+      "note": "EIP-8288：区块头承诺区块证明并在区块体携带、修正两处超出 EIP 实际内容的表述。",
+      "url": "https://github.com/ethereum/EIPs/pull/12479",
+      "date": "2026-10-11",
+      "title_en": "commit to the block proof in the header and carry it in the body",
+      "note_en": "EIP-8288: commit to the block proof in the header and carry it in the body, and fix two sentences that said more than the EIP does.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "修正两处超出 EIP 实际内容的表述",
+      "note": "EIP-8288：区块头承诺区块证明并在区块体携带、修正两处超出 EIP 实际内容的表述。",
+      "url": "https://github.com/ethereum/EIPs/pull/12477",
+      "date": "2026-10-11",
+      "title_en": "fix two sentences that said more than the EIP does",
+      "note_en": "EIP-8288: commit to the block proof in the header and carry it in the body, and fix two sentences that said more than the EIP does.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet 统一隐私池已存入超过 200 万美元，涵盖 56 种资产",
+      "note": "20:30。",
+      "url": "https://x.com/StarkWareLtd/status/2109275514099646948",
+      "date": "2026-10-11",
+      "title_en": "StarkWare: over $2 million shielded in Starknet's unified privacy pool, across 56 assets",
+      "note_en": "20:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：Ekubo 支持私密兑换后的收入变化",
+      "note": "17:02。",
+      "url": "https://x.com/EliBenSasson/status/2109223226563813798",
+      "date": "2026-10-11",
+      "title_en": "Eli Ben-Sasson: Ekubo's revenue after it added private swaps",
+      "note_en": "17:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8107 PR：区分撤回与拒绝、门名称和 ENSv2 迁移",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2064",
+      "date": "2026-10-11",
+      "title_en": "ERC-8107 PR: withdrawal vs denial, gate names and ENSv2 migration",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：Token2049 的主要结论是世界需要 Starknet 作为抗量子 L1",
+      "note": "18:14；Luca Donno 调侃：抗量子 L1，但资产都来自第三方多签桥 18:59。",
+      "url": "https://x.com/EliBenSasson/status/2109241293213937791",
+      "date": "2026-10-11",
+      "title_en": "Eli Ben-Sasson: the main takeaway from Token2049 is that the world needs Starknet as a quantum-safe L1",
+      "note_en": "18:14; Luca Donno's jab: a quantum-safe L1, but all the assets come from third-party multisig bridges, 18:59.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Luca Donno 调侃：抗量子 L1，但资产都来自第三方多签桥",
+      "note": "Eli Ben-Sasson：Token2049 的主要结论是世界需要 Starknet 作为抗量子 L1 18:14；Luca Donno 调侃：抗量子 L1，但资产都来自第三方多签桥 18:59。",
+      "url": "https://x.com/donnoh_eth/status/2109252516793753847",
+      "date": "2026-10-11",
+      "title_en": "Luca Donno's jab: a quantum-safe L1, but all the assets come from third-party multisig bridges",
+      "note_en": "Eli Ben-Sasson: the main takeaway from Token2049 is that the world needs Starknet as a quantum-safe L1, 18:14; Luca Donno's jab: a quantum-safe L1, but all the assets come from third-party multisig bridges, 18:59.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：后 AI、后量子时代的代码要同时防 AI 攻击代码本身和攻击掌握密钥的人",
+      "note": "20:52。",
+      "url": "https://x.com/binji_x/status/2109280866488983618",
+      "date": "2026-10-11",
+      "title_en": "binji: post-AI, post-quantum code must defend against AI hacking the code itself and against hacking of the people who hold the keys",
+      "note_en": "20:52.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/erc-8403-an-account-as-one-hash-and-post-quantum-keys/26147",
+    "credit": "ethresear.ch, ERC-8403: an account as one hash, and post-quantum keys",
+    "local_path": "assets/2026-10-11.jpg",
+    "credit_en": "ethresear.ch, ERC-8403: an account as one hash, and post-quantum keys"
+  },
+  "keywords_en": [
+    "ERC-8403 one-hash accounts",
+    "post-quantum keys",
+    "EIP-8298 opcode 0xA7",
+    "EIP-8288 block proof in the header",
+    "Starknet privacy pool"
+  ],
+  "summary_en": "A Sunday. On ethresear.ch, AnkushinDaniil introduced ERC-8403, where an account stores only one root hash and keys and rules are leaves, and discussed post-quantum keys on top of EIP-8288. EIP-8298 (SETCODEFROM) closed spec gaps found while writing tests and was assigned opcode 0xA7. Starknet's unified privacy pool passed $2 million shielded."
+}

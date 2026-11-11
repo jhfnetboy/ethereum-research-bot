@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-17",
+  "keywords": [
+    "EIP-8141 退款与区块 gas",
+    "EIP-8250 nonce_keys",
+    "EIP-7951 secp256r1 定价",
+    "ASSERT 合并",
+    "Hoodi 倒计时"
+  ],
+  "summary": "Alex Stokes 和 Trent 宣传 Hoodi 升级：200M gas 上限、更大的合约尺寸、ETH 转账发日志、gas 重新定价。账户与交易规范继续细化：EIP-8141 说明存储退款只降低付款方费用、区块仍按退款前的执行 gas 计；EIP-8266 在 EIP-8250 的 nonce_keys/nonce_seq 下重新定义过期 nonce 模式；POST_TX 改名 ASSERT 已合并。",
+  "items": [
+    {
+      "topic": "frame 交易：退款、nonce 与付款",
+      "title": "EIP-8141 PR：解释 gas 退款与区块上限",
+      "note": "（soispoke）。存储退款降低付款方支付的金额，但区块在退款前就计入执行 gas，原文两段忽略了这个差别；PR 同时说明收据记录的是向付款方收取的 gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/12537",
+      "date": "2026-10-17",
+      "title_en": "EIP-8141 PR: explain gas refunds and block limits",
+      "note_en": "(soispoke). Storage refunds lower what the payer pays, but the block counts execution gas before those refunds, a difference two paragraphs of the spec overlooked. The PR also explains that receipts record the gas charged to the payer.",
+      "topic_en": "Frame transactions: refunds, nonces and payment"
+    },
+    {
+      "topic": "frame 交易：退款、nonce 与付款",
+      "title": "EIP-8266 PR：在 EIP-8250 下选择过期 nonce 模式",
+      "note": "（AnkushinDaniil）。EIP-8250 把 `nonce` 换成 `nonce_keys` 和 `nonce_seq`，并赋予 `MAX_NONCE_SEQ` 单次使用的含义，EIP-8266 原来的哨兵值写法需要对齐。",
+      "url": "https://github.com/ethereum/EIPs/pull/12538",
+      "date": "2026-10-17",
+      "title_en": "EIP-8266 PR: select expiring-nonce mode under EIP-8250",
+      "note_en": "(AnkushinDaniil). EIP-8250 replaces `nonce` with `nonce_keys` and `nonce_seq` and gives `MAX_NONCE_SEQ` a single-use meaning, so EIP-8266's sentinel value needs to line up.",
+      "topic_en": "Frame transactions: refunds, nonces and payment"
+    },
+    {
+      "topic": "frame 交易：退款、nonce 与付款",
+      "title": "EIP-8250 PR：单次使用序列免除数据定价",
+      "note": "（nerolation）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12534",
+      "date": "2026-10-17",
+      "title_en": "EIP-8250 PR: exempt single-use sequences from data pricing",
+      "note_en": "(nerolation).",
+      "topic_en": "Frame transactions: refunds, nonces and payment"
+    },
+    {
+      "topic": "frame 交易：退款、nonce 与付款",
+      "title": "REVEAL 交易在没有付款方时如何付费",
+      "note": "EIP-8209：REVEAL 交易在没有付款方时如何付费；修正最大 base fee 上界和 REVEAL 调用者 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12539",
+      "date": "2026-10-17",
+      "title_en": "how a REVEAL transaction pays without a payer",
+      "note_en": "EIP-8209: how a REVEAL transaction pays without a payer; fix the max base fee bound and the REVEAL caller, merged.",
+      "topic_en": "Frame transactions: refunds, nonces and payment"
+    },
+    {
+      "topic": "frame 交易：退款、nonce 与付款",
+      "title": "修正最大 base fee 上界和 REVEAL 调用者",
+      "note": "EIP-8209：REVEAL 交易在没有付款方时如何付费；修正最大 base fee 上界和 REVEAL 调用者 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12532",
+      "date": "2026-10-17",
+      "title_en": "fix the max base fee bound and the REVEAL caller",
+      "note_en": "EIP-8209: how a REVEAL transaction pays without a payer; fix the max base fee bound and the REVEAL caller, merged.",
+      "topic_en": "Frame transactions: refunds, nonces and payment"
+    },
+    {
+      "topic": "frame 交易：退款、nonce 与付款",
+      "title": "EIP-7906：POST_TX 改名 ASSERT",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12528",
+      "date": "2026-10-17",
+      "title_en": "EIP-7906: rename POST_TX to ASSERT",
+      "note_en": "Merged.",
+      "topic_en": "Frame transactions: refunds, nonces and payment"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Alex Stokes：Hoodi 升级定于 10 月 26 日，主网日期另行公布",
+      "note": "01:39；Trent：200M gas 上限、更大合约尺寸、ETH 转账发日志、gas 重新定价 03:02。",
+      "url": "https://x.com/ralexstokes/status/2111165223780454451",
+      "date": "2026-10-17",
+      "title_en": "Alex Stokes: the Hoodi upgrade is scheduled for October 26, with the mainnet date announced separately",
+      "note_en": "01:39; Trent: a 200M gas limit, larger contract size, ETH transfers emit logs, gas repricing, 03:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trent：200M gas 上限、更大合约尺寸、ETH 转账发日志、gas 重新定价",
+      "note": "Alex Stokes：Hoodi 升级定于 10 月 26 日，主网日期另行公布 01:39；Trent：200M gas 上限、更大合约尺寸、ETH 转账发日志、gas 重新定价 03:02。",
+      "url": "https://x.com/trent_vanepps/status/2111185987128664424",
+      "date": "2026-10-17",
+      "title_en": "Trent: a 200M gas limit, larger contract size, ETH transfers emit logs, gas repricing",
+      "note_en": "Alex Stokes: the Hoodi upgrade is scheduled for October 26, with the mainnet date announced separately, 01:39; Trent: a 200M gas limit, larger contract size, ETH transfers emit logs, gas repricing, 03:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7951 PR：测试向量改用 6900 gas",
+      "note": "EIP-7951 是 secp256r1 签名验证预编译，passkey 钱包依赖它。",
+      "url": "https://github.com/ethereum/EIPs/pull/12536",
+      "date": "2026-10-17",
+      "title_en": "EIP-7951 PR: use 6900 gas in test vectors",
+      "note_en": ". EIP-7951 is the secp256r1 signature verification precompile that passkey wallets rely on.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-6466 PR：澄清 authority 恢复与创建失败",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12531",
+      "date": "2026-10-17",
+      "title_en": "EIP-6466 PR: clarify authority recovery and failed creation",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：Xochi 成为 V6 发布伙伴",
+      "note": "23:21，签无 gas 意图、solver 竞价成交，不经过公共内存池。",
+      "url": "https://x.com/aztecnetwork/status/2111492722234462593",
+      "date": "2026-10-17",
+      "title_en": "Aztec: Xochi is an official V6 launch partner",
+      "note_en": "23:21; you sign a gasless intent, solvers compete to fill it, and nothing hits the public mempool.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：直播评审 Octant Epoch 13 隐私轮的 13 个项目",
+      "note": "00:05。",
+      "url": "https://x.com/ethereumfndn/status/2111141608892883400",
+      "date": "2026-10-17",
+      "title_en": "EF: live review of all 13 projects in Octant's Epoch 13 privacy round",
+      "note_en": "00:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #190（10 月 29 日）议程帖",
+      "note": "16:16。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-190-october-29-2026/29994",
+      "date": "2026-10-17",
+      "title_en": "ACDC #190 (October 29) agenda thread",
+      "note_en": "16:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：CCIP-Read 跨链客户端网关",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2078",
+      "date": "2026-10-17",
+      "title_en": "New ERC: a cross-chain client gateway for CCIP-Read",
+      "note_en": ".",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：比特币挖矿成本算力与电力约各半，AI 推理几乎全是算力资本支出",
+      "note": "12:50。",
+      "url": "https://x.com/VitalikButerin/status/2111334091354251615",
+      "date": "2026-10-17",
+      "title_en": "Vitalik: Bitcoin mining cost splits about 50/50 between compute capex and electricity, while AI inference is almost entirely compute capex",
+      "note_en": "12:50.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Francesco D'Amato：I* 中的快速最终性看起来不错",
+      "note": "00:27。",
+      "url": "https://x.com/fradamt/status/2111147000851050922",
+      "date": "2026-10-17",
+      "title_en": "Francesco D'Amato: fast finality in I* is looking good",
+      "note_en": "00:27.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12537",
+    "credit": "GitHub, ethereum/EIPs PR #12537",
+    "local_path": "assets/2026-10-17.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12537"
+  },
+  "keywords_en": [
+    "EIP-8141 refunds and block gas",
+    "EIP-8250 nonce_keys",
+    "EIP-7951 secp256r1 pricing",
+    "ASSERT merged",
+    "Hoodi countdown"
+  ],
+  "summary_en": "Alex Stokes and Trent promoted the Hoodi upgrade: a 200M gas limit, larger contract size, ETH transfers emitting logs and gas repricing. Account and transaction specs kept getting refined. EIP-8141 explains that storage refunds only lower what the payer pays, while the block still counts execution gas before refunds; EIP-8266 redefines its expiring-nonce mode under EIP-8250's nonce_keys/nonce_seq; and the POST_TX to ASSERT rename was merged."
+}

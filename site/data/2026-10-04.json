@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-04",
+  "keywords": [
+    "本地模型隐私实验",
+    "EIP-8288 聚合电路",
+    "EIP-7928",
+    "ERC-8436",
+    "Aztec"
+  ],
+  "summary": "周日内容少。Vitalik 记录一个自我实验：用本地模型处理个人健康和出行数据，只把不含隐私的部分交给前沿模型。规范侧，EIP-8288 把区块依赖哈希绑定到聚合电路摘要，EIP-7928 对齐 EXT 类指令的前置状态验证成本。",
+  "items": [
+    {
+      "topic": "隐私：本地模型与 EIP-8288",
+      "title": "Vitalik：一次自我实验",
+      "note": "07:11，目标是用个人健康和出行数据得到个性化建议，同时不向前沿模型泄露隐私信息，做法是先用本地模型。",
+      "url": "https://x.com/VitalikButerin/status/2106537633056969024",
+      "date": "2026-10-04",
+      "title_en": "Vitalik: a self-experiment",
+      "note_en": "07:11. The goal is personalized recommendations from his health and travel data without leaking private information to frontier models, starting with a local model.",
+      "topic_en": "Privacy: local models and EIP-8288"
+    },
+    {
+      "topic": "隐私：本地模型与 EIP-8288",
+      "title": "EIP-8288 PR：把 block_deps_hash 绑定到聚合电路的摘要",
+      "note": "（AnkushinDaniil）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12417",
+      "date": "2026-10-04",
+      "title_en": "EIP-8288 PR: bind block_deps_hash to the aggregation circuit's digest",
+      "note_en": "(AnkushinDaniil).",
+      "topic_en": "Privacy: local models and EIP-8288"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928 PR：对齐 EXT 类前置状态验证成本",
+      "note": "EIP-7495 不活跃字段的 merkle 化澄清 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12418",
+      "date": "2026-10-04",
+      "title_en": "EIP-7928 PR: align EXT pre-state validation costs",
+      "note_en": "EIP-7495 clarification of inactive field merkleization was merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7495 不活跃字段的 merkle 化澄清",
+      "note": "EIP-7928 PR：对齐 EXT 类前置状态验证成本；EIP-7495 不活跃字段的 merkle 化澄清 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12419",
+      "date": "2026-10-04",
+      "title_en": "EIP-7495 clarification of inactive field merkleization",
+      "note_en": "EIP-7928 PR: align EXT pre-state validation costs; EIP-7495 clarification of inactive field merkleization was merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8436 Agent Collective Decision Framework",
+      "note": "07:55。",
+      "url": "https://ethereum-magicians.org/t/erc-8436-agent-collective-decision-framework/29850",
+      "date": "2026-10-04",
+      "title_en": "Magicians: ERC-8436 Agent Collective Decision Framework",
+      "note_en": "07:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：无许可、可编程、不可阻止的隐私",
+      "note": "23:40。",
+      "url": "https://x.com/aztecnetwork/status/2106786639515410533",
+      "date": "2026-10-04",
+      "title_en": "Aztec: permissionless, programmable, unstoppable privacy",
+      "note_en": "23:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Koeppelmann：同样的隐私技术也能让未对齐的 AI 代理隐藏自己是查询的最终受益人",
+      "note": "18:55。",
+      "url": "https://x.com/koeppelmann/status/2106714889255542992",
+      "date": "2026-10-04",
+      "title_en": "Koeppelmann: the same privacy techniques could let an unaligned AI agent hide that it is the ultimate beneficial owner of a query",
+      "note_en": "18:55.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：扩容、隐私、后量子安全",
+      "note": "14:02。",
+      "url": "https://x.com/EliBenSasson/status/2106641020859404312",
+      "date": "2026-10-04",
+      "title_en": "Eli Ben-Sasson: scale, privacy, post-quantum security",
+      "note_en": "14:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12417",
+    "credit": "GitHub, ethereum/EIPs PR #12417",
+    "credit_en": "GitHub, ethereum/EIPs PR #12417"
+  },
+  "keywords_en": [
+    "local model privacy experiment",
+    "EIP-8288 aggregation circuit",
+    "EIP-7928",
+    "ERC-8436",
+    "Aztec"
+  ],
+  "summary_en": "A light Sunday. Vitalik described a self-experiment: a local model handles his personal health and travel data, and only the parts with no private information go to frontier models. On the spec side, EIP-8288 binds the block dependency hash to the aggregation circuit digest, and EIP-7928 aligns pre-state validation costs for EXT-style opcodes."
+}
