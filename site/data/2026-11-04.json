@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-04",
+  "keywords": [
+    "EIP-8477",
+    "EIP-8141",
+    "MAX_VERIFY_GAS",
+    "Glamsterdam 规范勘误",
+    "ETHBEAT"
+  ],
+  "summary": "针对 Binance 事件中被保存后回放的 7702 授权，EIP-8477 提议让每个授权绑定最近 256 个区块之一，过期作废。Frame Transaction 有两处修订：lightclient 加入 lean SPHINCS 后量子签名，nerolation 提议签名的 calldata 成本不计入 MAX_VERIFY_GAS。一批非作者 PR 集中修正 EIP-2780、EIP-8037、EIP-8038 等 Glamsterdam 规范文字。L2BEAT 更名为 ETHBEAT。",
+  "items": [
+    {
+      "topic": "EIP-8477：带新鲜度的 7702 委托授权",
+      "title": "EIP-8477 Recent Block Bound Delegation Authorizations 讨论帖",
+      "note": "00:39 开帖（作者 dangerousfood），动机直接写的是 Binance 事件中的 7702 清扫。每个授权除了链 ID、委托地址和 nonce，还要签入一个最近的执行区块号和区块头哈希。被包含进区块 N 时，签入的区块必须是 N 之前 256 个祖先之一且哈希匹配；正好 256 个区块前仍有效，257 个就失效，当前和未来区块都不行。新鲜度在签名恢复之前检查，过期或不匹配的授权直接跳过。",
+      "url": "https://ethereum-magicians.org/t/eip-8477-recent-block-bound-delegation-authorizations/30269",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "EIP-8141 Frame Transaction：为后量子签名调整验证预算",
+      "title": "EIPs PR #12616：Update EIP-8141 add lean sphincs",
+      "note": "12:26 由 lightclient 提交，把 lean SPHINCS（基于哈希的后量子签名）加进 frame transaction 的签名方案。",
+      "url": "https://github.com/ethereum/EIPs/pull/12616",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "EIP-8141 Frame Transaction：为后量子签名调整验证预算",
+      "title": "EIPs PR #12617：EIP-8141 不把 calldata 成本算进 MAX_VERIFY_GAS",
+      "note": "15:59 由 nerolation 提交。内存池规则 6 原文“验证 `tx.signatures` 的固有成本”可能被理解为包含签名字节的 calldata 成本。修订改为 `signature_verification_cost`，并写明 `frame_data_cost`、`signature_data_cost` 不计入。理由：MAX_VERIFY_GAS 限制的是节点验证工作量，calldata 成本付的是带宽和区块空间；如果计入，PQ 签名光凭体积就会超过 10 万的上限。",
+      "url": "https://github.com/ethereum/EIPs/pull/12617",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "EIP-8141 Frame Transaction：为后量子签名调整验证预算",
+      "title": "Frame Transaction Breakout #8 定于 11 月 17 日",
+      "note": "17:17 建立议程（Magicians 公告）。",
+      "url": "https://github.com/ethereum/pm/issues/2295",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "EIP-8141 Frame Transaction：为后量子签名调整验证预算",
+      "title": "Magicians 公告",
+      "note": "Frame Transaction Breakout #8 定于 11 月 17 日 17:17 建立议程（Magicians 公告）。",
+      "url": "https://ethereum-magicians.org/t/frame-transaction-breakout-8-nov-17-2026/30274",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "Glamsterdam 规范勘误：EIP-2780、EIP-8037、EIP-8038 等",
+      "title": "EIPs PR #12622：EIP-2780 修正 floor 引用并写明委托目标预热规则",
+      "note": "flcl42 在 21:26 同时提交 7 个非作者修订：EIPs PR #12622：EIP-2780 修正 floor 引用并写明委托目标预热规则（Glamsterdam 中 floor 用 EIP-7976 的 `floor_tokens_in_calldata`，每字节 4 个 token、每 token 16 gas，加 EIP-7981 访问列表数据附加费；execution-specs 已按修正后的文字实现）、EIPs PR #12624：EIP-8037 修正与规范矛盾的表述、EIPs PR #12626：EIP-8038 限定 ACCOUNT_WRITE 规则与最坏情况客户端说法、EIPs PR #12623：EIP-7708 修正 gas 数字与创建交易规则、EIPs PR #12625：EIP-7778 删除矛盾的恢复原值折扣示例，以及 EIP-7928、EIP-7843 各一处。",
+      "url": "https://github.com/ethereum/EIPs/pull/12622",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "Glamsterdam 规范勘误：EIP-2780、EIP-8037、EIP-8038 等",
+      "title": "EIPs PR #12624：EIP-8037 修正与规范矛盾的表述",
+      "note": "flcl42 在 21:26 同时提交 7 个非作者修订：EIPs PR #12622：EIP-2780 修正 floor 引用并写明委托目标预热规则（Glamsterdam 中 floor 用 EIP-7976 的 `floor_tokens_in_calldata`，每字节 4 个 token、每 token 16 gas，加 EIP-7981 访问列表数据附加费；execution-specs 已按修正后的文字实现）、EIPs PR #12624：EIP-8037 修正与规范矛盾的表述、EIPs PR #12626：EIP-8038 限定 ACCOUNT_WRITE 规则与最坏情况客户端说法、EIPs PR #12623：EIP-7708 修正 gas 数字与创建交易规则、EIPs PR #12625：EIP-7778 删除矛盾的恢复原值折扣示例，以及 EIP-7928、EIP-7843 各一处。",
+      "url": "https://github.com/ethereum/EIPs/pull/12624",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "Glamsterdam 规范勘误：EIP-2780、EIP-8037、EIP-8038 等",
+      "title": "EIPs PR #12626：EIP-8038 限定 ACCOUNT_WRITE 规则与最坏情况客户端说法",
+      "note": "flcl42 在 21:26 同时提交 7 个非作者修订：EIPs PR #12622：EIP-2780 修正 floor 引用并写明委托目标预热规则（Glamsterdam 中 floor 用 EIP-7976 的 `floor_tokens_in_calldata`，每字节 4 个 token、每 token 16 gas，加 EIP-7981 访问列表数据附加费；execution-specs 已按修正后的文字实现）、EIPs PR #12624：EIP-8037 修正与规范矛盾的表述、EIPs PR #12626：EIP-8038 限定 ACCOUNT_WRITE 规则与最坏情况客户端说法、EIPs PR #12623：EIP-7708 修正 gas 数字与创建交易规则、EIPs PR #12625：EIP-7778 删除矛盾的恢复原值折扣示例，以及 EIP-7928、EIP-7843 各一处。",
+      "url": "https://github.com/ethereum/EIPs/pull/12626",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "Glamsterdam 规范勘误：EIP-2780、EIP-8037、EIP-8038 等",
+      "title": "EIPs PR #12623：EIP-7708 修正 gas 数字与创建交易规则",
+      "note": "flcl42 在 21:26 同时提交 7 个非作者修订：EIPs PR #12622：EIP-2780 修正 floor 引用并写明委托目标预热规则（Glamsterdam 中 floor 用 EIP-7976 的 `floor_tokens_in_calldata`，每字节 4 个 token、每 token 16 gas，加 EIP-7981 访问列表数据附加费；execution-specs 已按修正后的文字实现）、EIPs PR #12624：EIP-8037 修正与规范矛盾的表述、EIPs PR #12626：EIP-8038 限定 ACCOUNT_WRITE 规则与最坏情况客户端说法、EIPs PR #12623：EIP-7708 修正 gas 数字与创建交易规则、EIPs PR #12625：EIP-7778 删除矛盾的恢复原值折扣示例，以及 EIP-7928、EIP-7843 各一处。",
+      "url": "https://github.com/ethereum/EIPs/pull/12623",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "Glamsterdam 规范勘误：EIP-2780、EIP-8037、EIP-8038 等",
+      "title": "EIPs PR #12625：EIP-7778 删除矛盾的恢复原值折扣示例",
+      "note": "flcl42 在 21:26 同时提交 7 个非作者修订：EIPs PR #12622：EIP-2780 修正 floor 引用并写明委托目标预热规则（Glamsterdam 中 floor 用 EIP-7976 的 `floor_tokens_in_calldata`，每字节 4 个 token、每 token 16 gas，加 EIP-7981 访问列表数据附加费；execution-specs 已按修正后的文字实现）、EIPs PR #12624：EIP-8037 修正与规范矛盾的表述、EIPs PR #12626：EIP-8038 限定 ACCOUNT_WRITE 规则与最坏情况客户端说法、EIPs PR #12623：EIP-7708 修正 gas 数字与创建交易规则、EIPs PR #12625：EIP-7778 删除矛盾的恢复原值折扣示例，以及 EIP-7928、EIP-7843 各一处。",
+      "url": "https://github.com/ethereum/EIPs/pull/12625",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs PR #12547：Add EIP Engine API Proposal Lookahead",
+      "note": "06:14 合并；EIPs PR #12589：Add EIP-8457 Batched KZG Point Evaluation via EIP-2537 03:05 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12547",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs PR #12589：Add EIP-8457 Batched KZG Point Evaluation via EIP-2537",
+      "note": "EIPs PR #12547：Add EIP Engine API Proposal Lookahead 06:14 合并；EIPs PR #12589：Add EIP-8457 Batched KZG Point Evaluation via EIP-2537 03:05 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12589",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs PR #12619：Add EIP-8484 SLOTDURATION Opcode",
+      "note": "20:37 提交（Magicians：EIP-8484 SLOTDURATION 操作码讨论帖），为缩短 slot 后合约读取 slot 时长做准备。",
+      "url": "https://github.com/ethereum/EIPs/pull/12619",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8484 SLOTDURATION 操作码讨论帖",
+      "note": "EIPs PR #12619：Add EIP-8484 SLOTDURATION Opcode 20:37 提交（Magicians：EIP-8484 SLOTDURATION 操作码讨论帖），为缩短 slot 后合约读取 slot 时长做准备。",
+      "url": "https://ethereum-magicians.org/t/eip-8484-slotduration-opcode/30276",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news：#45 期 EIP 汇总",
+      "note": "06:35，含 EIP-8455 RESERVOIR 操作码、EIP-8456 CALLSTATUS 指令。",
+      "url": "https://x.com/EtherealnewsHQ/status/2117762639518654691",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT 更名为 ETHBEAT",
+      "note": "16:36，覆盖范围扩展到隐私、互操作、质押。EF：ETHBEAT 的 CROPS 覆盖 23:47。",
+      "url": "https://x.com/ethbeat_org/status/2117913893796225035",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：ETHBEAT 的 CROPS 覆盖",
+      "note": "L2BEAT 更名为 ETHBEAT 16:36，覆盖范围扩展到隐私、互操作、质押。EF：ETHBEAT 的 CROPS 覆盖 23:47。",
+      "url": "https://x.com/ethereumfndn/status/2118022288130163155",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EEZ：rollup 与主网同步可组合的三项首次演示",
+      "note": "13:28；Barnabé：演示包括用 L1 流动性成交 CoW 订单、以 L1 为信任根修改 Safe owner、从 rollup 授权 L1 转账 15:58。",
+      "url": "https://x.com/etheconomiczone/status/2117866567685849443",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：演示包括用 L1 流动性成交 CoW 订单、以 L1 为信任根修改 Safe owner、从 rollup 授权 L1 转账",
+      "note": "EEZ：rollup 与主网同步可组合的三项首次演示 13:28；Barnabé：演示包括用 L1 流动性成交 CoW 订单、以 L1 为信任根修改 Safe owner、从 rollup 授权 L1 转账 15:58。",
+      "url": "https://x.com/barnabemonnot/status/2117904182175023507",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Julian Ma：Quicknode 支持 FCR，L2 和桥的采用不再受阻",
+      "note": "23:01。",
+      "url": "https://x.com/_julianma/status/2118010717811163514",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Justin Drake 谈 Q-day 提前与 leanVM 端到端形式化验证",
+      "note": "03:35。",
+      "url": "https://x.com/ethereumfndn/status/2117717427920498698",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：形式化验证的开源钱包协议是普及隐私的基础",
+      "note": "06:30。",
+      "url": "https://x.com/ethereumfndn/status/2117761239787151807",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Tim Beiko：ETH 是以太坊区块链最重要的用例",
+      "note": "05:16。",
+      "url": "https://x.com/TimBeiko/status/2117742830450102468",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Georgios Konstantopoulos 批评 Devcon 主题演讲",
+      "note": "00:22，问“问责在哪里”；Fede 的回应推文 21:54，认为以太坊的问题主要是文化上的，近年在性能和 UX 上已在改；binji 长文回应 23:18。",
+      "url": "https://x.com/gakonst/status/2117668817082155157",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Fede 的回应推文",
+      "note": "Georgios Konstantopoulos 批评 Devcon 主题演讲 00:22，问“问责在哪里”；Fede 的回应推文 21:54，认为以太坊的问题主要是文化上的，近年在性能和 UX 上已在改；binji 长文回应 23:18。",
+      "url": "https://x.com/fede_intern/status/2117993844159438993",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji 长文回应",
+      "note": "Georgios Konstantopoulos 批评 Devcon 主题演讲 00:22，问“问责在哪里”；Fede 的回应推文 21:54，认为以太坊的问题主要是文化上的，近年在性能和 UX 上已在改；binji 长文回应 23:18。",
+      "url": "https://x.com/binji_x/status/2118015120567619871",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：以太坊因拒绝迎合而改变世界",
+      "note": "05:50。",
+      "url": "https://x.com/pcaversaccio/status/2117751411429474701",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dapplion 采访 Ansgar：“L2 已死是假新闻”",
+      "note": "02:49。",
+      "url": "https://x.com/dapplion/status/2117705722410459146",
+      "date": "2026-11-04"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8477-recent-block-bound-delegation-authorizations/30269",
+    "credit": "Ethereum Magicians, EIP-8477: Recent Block Bound Delegation Authorizations",
+    "local_path": "assets/2026-11-04.jpg"
+  }
+}

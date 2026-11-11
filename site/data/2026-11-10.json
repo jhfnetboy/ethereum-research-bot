@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-10",
+  "keywords": [
+    "MAX_VERIFY_GAS 300k",
+    "EIP-8141 GASPRICE",
+    "Glamsterdam 时间表",
+    "EIP-8488",
+    "CROPS 指南"
+  ],
+  "summary": "EIP-8141 收到把 MAX_VERIFY_GAS 从 10 万提高到 30 万的 PR，依据是 Nethermind 的 DoS 基准和隐私池、后量子签名的实测 gas。另一个 PR 澄清 blob 费用会压低 frame transaction 的 GASPRICE。Marius 和 Ethlabs 同步 Glamsterdam 进展：目标是 11-16 ACDT 前拿到审计报告，规范修改和 Hoodi 都还没定。Versioned Opcodes 编号为 EIP-8488 并开讨论帖。ETHBEAT 上线 CROPS 指南。",
+  "items": [
+    {
+      "topic": "EIP-8141：验证预算和费用语义",
+      "title": "EIPs PR #12644：Update EIP-8141: raise MAX_VERIFY_GAS to 300_000",
+      "note": "08:58 提交。理由：100k 装不下真实应用需要的验证。Groth16 隐私池在 VERIFY 帧里花 236,285 gas（其中证明校验 216,463），Nethermind 和 ethrex 结果一致到 gas 单位；后量子签名需 94k 到 276k。基准（ethresear.ch 26224）测了 100k 到 500k：在每秒失败 gas 相同时，不同上限对节点的伤害相同，上限只放大单个 peer 能推的量；每个 peer 约 100 笔失败交易/秒时，300k 在本地 builder 硬件上把额外出块延迟控制在 25ms 内。Nethermind 已对自己的内存池默认 300k。PR 与 #12301（这个值是下限还是上限）相互独立。",
+      "url": "https://github.com/ethereum/EIPs/pull/12644",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "EIP-8141：验证预算和费用语义",
+      "title": "ethresear.ch 26224",
+      "note": "EIPs PR #12644：Update EIP-8141: raise MAX_VERIFY_GAS to 300_000 08:58 提交。理由：100k 装不下真实应用需要的验证。Groth16 隐私池在 VERIFY 帧里花 236,285 gas（其中证明校验 216,463），Nethermind 和 ethrex 结果一致到 gas 单位；后量子签名需 94k 到 276k。基准（ethresear.ch 26224）测了 100k 到 500k：在每秒失败 gas 相同时，不同上限对节点的伤害相同，上限只放大单个 peer 能推的量；每个 peer 约 100 笔失败交易/秒时，300k 在本地 builder 硬件上把额外出块延迟控制在 25ms 内。Nethermind 已对自己的内存池默认 300k。PR 与 #12301（这个值是下限还是上限）相互独立。",
+      "url": "https://ethresear.ch/t/how-large-can-eip-8141s-validation-budget-be-a-mempool-dos-benchmark/26224",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "EIP-8141：验证预算和费用语义",
+      "title": "EIPs PR #12642：Update EIP-8141: note that the blob fee can lower GASPRICE",
+      "note": "07:45 提交。费用预算一节说 GASPRICE 不含 blob 费，读起来像 blob 费不会影响它；实际上当 `max_fee` 不够付全部小费时，`max_priority_fee` 取 `required_max_fee` 之后的余额，而 `required_max_fee` 包含 `blob_gas * blob_base_fee`，所以 blob base fee 越高，同一笔交易的 GASPRICE 越低。这是核对 Nethermind 的 frame tx `effectiveGasPrice` 时发现的。",
+      "url": "https://github.com/ethereum/EIPs/pull/12642",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam：本周时间表与对账户的影响",
+      "title": "Marius：Glamsterdam 与 8037/8038 进展",
+      "note": "14:10。目标是在 11-16 ACDT 前拿到审计报告；规范修改和 Hoodi 都还没有决定，继续收集意见；11-16 ACDT 讲结果并开放问答，欢迎应用开发者。",
+      "url": "https://x.com/vdWijden/status/2120051444900339798",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam：本周时间表与对账户的影响",
+      "title": "Ethlabs：以太坊因人们提出难题而更强",
+      "note": "16:13，由 Barnabé 撰写：Glamsterdam 能把以太坊容量提升 3 倍以上，但开发者对部分改动提出了重要担忧，Ethlabs 过去一周在和 EF、审计方、核心开发者一起处理。",
+      "url": "https://x.com/ethlabs_org/status/2120082366685454428",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam：本周时间表与对账户的影响",
+      "title": "Barnabé 撰写",
+      "note": "Ethlabs：以太坊因人们提出难题而更强 16:13，由 Barnabé 撰写：Glamsterdam 能把以太坊容量提升 3 倍以上，但开发者对部分改动提出了重要担忧，Ethlabs 过去一周在和 EF、审计方、核心开发者一起处理。",
+      "url": "https://x.com/barnabemonnot/status/2120084651343753250",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam：本周时间表与对账户的影响",
+      "title": "Toni Wahrstätter：带着问题来 ACDT",
+      "note": "15:25，应用开发者和核心开发者要能心平气和地讨论。",
+      "url": "https://x.com/nero_eth/status/2120070435836485826",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam：本周时间表与对账户的影响",
+      "title": "Magicians：EIP-8488 Versioned Opcodes for Gas Repricing 讨论帖",
+      "note": "23:04 开帖，即前一天 PR #12638 的方案，已拿到编号。",
+      "url": "https://ethereum-magicians.org/t/eip-8488-versioned-opcodes-for-gas-repricing/30332",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam：本周时间表与对账户的影响",
+      "title": "Francesco：关于重新定价和扩容的更多背景",
+      "note": "08:22。",
+      "url": "https://x.com/fradamt/status/2119963962016202783",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT：CROPS 指南上线",
+      "note": "21:16，入选 Tornado Cash、Uniswap（V2 与 V3）、Safe。ETHBEAT：隐私协议页面列出检查过的应用 18:32，评分按能找到的最私密的应用来算。怎么用：选隐私工具时看 ETHBEAT 页面上的应用列表，而不只看协议本身。",
+      "url": "https://x.com/ethbeat_org/status/2120158769740935472",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT：隐私协议页面列出检查过的应用",
+      "note": "ETHBEAT：CROPS 指南上线 21:16，入选 Tornado Cash、Uniswap（V2 与 V3）、Safe。ETHBEAT：隐私协议页面列出检查过的应用 18:32，评分按能找到的最私密的应用来算。怎么用：选隐私工具时看 ETHBEAT 页面上的应用列表，而不只看协议本身。",
+      "url": "https://x.com/ethbeat_org/status/2120117347348357426",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Verity 形式化验证 EIP-8282 并发现真实差异",
+      "note": "23:43。",
+      "url": "https://x.com/ethereumfndn/status/2120195696808829030",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs PR #12646：Add EIP: LUCID Key Publisher Priority Lists",
+      "note": "21:43 提交，Magicians 讨论帖 EIP-8491；配套 Encrypt The Mempool #12（11-11）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12646",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians 讨论帖 EIP-8491",
+      "note": "EIPs PR #12646：Add EIP: LUCID Key Publisher Priority Lists 21:43 提交，Magicians 讨论帖 EIP-8491；配套 Encrypt The Mempool #12（11-11）。",
+      "url": "https://ethereum-magicians.org/t/eip-8491-lucid-key-publisher-priority-lists/30330",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Encrypt The Mempool #12（11-11）",
+      "note": "EIPs PR #12646：Add EIP: LUCID Key Publisher Priority Lists 21:43 提交，Magicians 讨论帖 EIP-8491；配套 Encrypt The Mempool #12（11-11）。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-12-november-11-2026/30334",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs PR #12647：回滚 EIP-8355 的 ML-DSA-65/87 验证向量",
+      "note": "23:35 提交，撤回 11-08 合并的 #12610。",
+      "url": "https://github.com/ethereum/EIPs/pull/12647",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs PR #12643：EIP-1 增加 EIP Coordinator 说明",
+      "note": "08:39 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12643",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8325 移至 Final",
+      "note": "ERC 状态：ERC-8325 移至 Final、ERC-8326 移至 Final、ERC-8327 移至 Final 23:41 到 23:53 移至 Final；ERCs PR #2156：ERC-8049 去掉 diamond storage 和 hooks 09:02 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2086",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8326 移至 Final",
+      "note": "ERC 状态：ERC-8325 移至 Final、ERC-8326 移至 Final、ERC-8327 移至 Final 23:41 到 23:53 移至 Final；ERCs PR #2156：ERC-8049 去掉 diamond storage 和 hooks 09:02 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2087",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8327 移至 Final",
+      "note": "ERC 状态：ERC-8325 移至 Final、ERC-8326 移至 Final、ERC-8327 移至 Final 23:41 到 23:53 移至 Final；ERCs PR #2156：ERC-8049 去掉 diamond storage 和 hooks 09:02 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2088",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2156：ERC-8049 去掉 diamond storage 和 hooks",
+      "note": "ERC 状态：ERC-8325 移至 Final、ERC-8326 移至 Final、ERC-8327 移至 Final 23:41 到 23:53 移至 Final；ERCs PR #2156：ERC-8049 去掉 diamond storage 和 hooks 09:02 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2156",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #18",
+      "note": "会议：PQTS Breakout #18 02:55 发布；ACDT #103（11-16） 16:19 发布；RPC Standards #38（11-16） 22:42 发布。",
+      "url": "https://github.com/ethereum/pm/issues/2298",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #103（11-16）",
+      "note": "会议：PQTS Breakout #18 02:55 发布；ACDT #103（11-16） 16:19 发布；RPC Standards #38（11-16） 22:42 发布。",
+      "url": "https://github.com/ethereum/pm/issues/2299",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #38（11-16）",
+      "note": "会议：PQTS Breakout #18 02:55 发布；ACDT #103（11-16） 16:19 发布；RPC Standards #38（11-16） 22:42 发布。",
+      "url": "https://github.com/ethereum/pm/issues/2301",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Phylax 上线",
+      "note": "22:39，Julian Ma 认为它让应用更容易获得保险。",
+      "url": "https://x.com/_julianma/status/2120179482678137206",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Consensys 的 SNI 将接入 Ethereum Economic Zone",
+      "note": "19:59，原子地连接机构账本和以太坊。",
+      "url": "https://x.com/etheconomiczone/status/2120139408301269184",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：11-18 新加坡与 EthSystems 和银行的闭门会",
+      "note": "17:24，主题是银行对发送内容的控制和对他人的保密。",
+      "url": "https://x.com/Nethermind/status/2120100331363143750",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Lefteris：Ledger 最新固件默认把每个签名发回服务器？",
+      "note": "23:08。这是一个指控，当天未见 Ledger 回应。",
+      "url": "https://x.com/LefterisJP/status/2120186841626497392",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "abcoathup：推荐阅读 potuz 关于转向专注 PQ 开发的看法",
+      "note": "11:02。",
+      "url": "https://x.com/abcoathup/status/2120004031808786773",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hasufl：用结果评判计划",
+      "note": "15:26，谈 EF 的缩编和生态多样性。",
+      "url": "https://x.com/hasufl/status/2120070620817809917",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Toni Wahrstätter：Devcon 2026 扩容演讲",
+      "note": "00:43（Toni 的 Devcon 扩容演讲视频）。",
+      "url": "https://x.com/nero_eth/status/2119848287226515648",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Toni 的 Devcon 扩容演讲视频",
+      "note": "Toni Wahrstätter：Devcon 2026 扩容演讲 00:43（Toni 的 Devcon 扩容演讲视频）。",
+      "url": "https://youtu.be/Jvc_mZM6SJY",
+      "date": "2026-11-10"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12644",
+    "credit": "GitHub, ethereum/EIPs PR #12644 Update EIP-8141: raise MAX_VERIFY_GAS to 300_000",
+    "local_path": "assets/2026-11-10.jpg"
+  }
+}

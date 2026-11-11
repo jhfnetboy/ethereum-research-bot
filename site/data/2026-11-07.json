@@ -1,0 +1,151 @@
+{
+  "date": "2026-11-07",
+  "keywords": [
+    "EIP-8141 验证预算",
+    "MAX_VERIFY_GAS",
+    "Binance 后的签名安全",
+    "Protected Accounts",
+    "gas 重新定价"
+  ],
+  "summary": "Nethermind 实测 frame transaction 的验证预算：在客户端加入“处理区块时暂停验证”的保护后，MAX_VERIFY_GAS 提到 300k 可行，这正是隐私转账和后量子账户需要的量级。Trail of Bits 发布 Binance 事件后的签名系统四步指南，强调 7702 委托应按管理员权限对待。Magicians 出现代币层的 Protected Accounts 提案。Francesco 和 Barnabé 讨论 gas 重新定价的真实影响。",
+  "items": [
+    {
+      "topic": "EIP-8141 的验证预算能有多大：内存池 DoS 基准测试",
+      "title": "ethresear.ch：EIP-8141 验证预算的内存池 DoS 基准",
+      "note": "06:26 发布（Nethermind 的 Stefano De Angelis、Daniil Ankushin、Manuel Arto）。frame transaction 的签名检查是 VERIFY 帧里的任意 EVM 代码，节点入池前要模拟验证前缀；如果验证失败，没人为这部分计算付费，构成 DoS 向量。",
+      "url": "https://ethresear.ch/t/how-large-can-eip-8141s-validation-budget-be-a-mempool-dos-benchmark/26224",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "Binance 之后：签名系统和账户层防护",
+      "title": "Trail of Bits：Binance 之后，检查你的签名系统能批准什么",
+      "note": "（美国时间 11-06 发布，Trail of Bits 发布推文 00:53）。核心观点：有权请求签名的服务器被攻破，不需要导出私钥也能滥用私钥。7702 委托相当于钱包签了一条常设指令“账户被调用时用这段代码”，在用钱包私钥修改或清除之前一直有效，所以首次盗窃之后存入的资金也被转走。四步建议：减少对签名基础设施的访问；把委托当作管理员权限；即使签名被攻破也要限制损失；监控钱包权限变化。文章还提醒，7702 授权不在普通 calldata 里，会话密钥、恢复路径、Safe 模块、ERC-4337 UserOp 也都要纳入监控。",
+      "url": "https://blog.trailofbits.com/2026/11/06/after-binance-check-what-your-signing-systems-can-approve/",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "Binance 之后：签名系统和账户层防护",
+      "title": "Trail of Bits 发布推文",
+      "note": "Trail of Bits：Binance 之后，检查你的签名系统能批准什么（美国时间 11-06 发布，Trail of Bits 发布推文 00:53）。核心观点：有权请求签名的服务器被攻破，不需要导出私钥也能滥用私钥。7702 委托相当于钱包签了一条常设指令“账户被调用时用这段代码”，在用钱包私钥修改或清除之前一直有效，所以首次盗窃之后存入的资金也被转走。四步建议：减少对签名基础设施的访问；把委托当作管理员权限；即使签名被攻破也要限制损失；监控钱包权限变化。文章还提醒，7702 授权不在普通 calldata 里，会话密钥、恢复路径、Safe 模块、ERC-4337 UserOp 也都要纳入监控。",
+      "url": "https://x.com/trailofbits/status/2118763769593741553",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "Binance 之后：签名系统和账户层防护",
+      "title": "Magicians：ERC 草案 Protected Accounts for Fungible Tokens",
+      "note": "14:28 开帖。ERC-20 的可选“保护”标记：小额转账即时，超过限额的转账排队，可由预先登记的备用钱包取消；“stress”操作取消所有排队转账、把余额转到备用钱包并锁定一段预设时间（调用者不能自选时长），也能对付胁迫。超限的 `transferFrom` 直接 revert，路由和借贷协议不会被骗。参考实现是 Base Sepolia 上的 1:1 USDC 包装（pUSDC），在 ETHGlobal Mumbai 完成。开启保护即时生效，削弱保护（关闭、提高限额、缩短等待、换备用钱包）要等持有者自己设定的延迟。",
+      "url": "https://ethereum-magicians.org/t/erc-xxxx-protected-accounts-for-fungible-tokens/30297",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "Gas 重新定价的真实影响",
+      "title": "Francesco：关于 gas 重新定价及其影响的一些想法",
+      "note": "18:57。状态操作的 gas 涨了，不代表它们按比例变贵，因为 gas 上限也在提高。",
+      "url": "https://x.com/fradamt/status/2119036408006594634",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "Gas 重新定价的真实影响",
+      "title": "Barnabé：两类“不变量”",
+      "note": "16:20，评论一篇外部分析：不同意部分假设，但认可“Glamsterdam 应该继续推进”的结论；他认为“不变量”其实有两类，第一类是“参数”，例如某个操作的 gas 成本（推文正文在此截断）。",
+      "url": "https://x.com/barnabemonnot/status/2118997007465324770",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：RollingChat 上线",
+      "note": "00:35，Aztec Tierra 上的私密留言板，连接以太坊钱包后可用任意名字或匿名发帖，帖子不附钱包地址；基于 Vitalik 的实验，由 Zac 完成（Aztec 博客：RollingChat 私密留言板）。",
+      "url": "https://x.com/aztecnetwork/status/2118759280895737887",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec 博客：RollingChat 私密留言板",
+      "note": "Aztec：RollingChat 上线 00:35，Aztec Tierra 上的私密留言板，连接以太坊钱包后可用任意名字或匿名发帖，帖子不附钱包地址；基于 Vitalik 的实验，由 Zac 完成（Aztec 博客：RollingChat 私密留言板）。",
+      "url": "https://aztec.network/blog/rolling-chat-private-messaging-board",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Nym SDK 在浏览器里跑混合网络",
+      "note": "05:51。即使交易本身私密，网络层流量也会泄露发送者；钱包和 dapp 可以把流量走 Nym 隐藏来源。",
+      "url": "https://x.com/ethereumfndn/status/2118838695314989071",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news weekly #46 正式发布",
+      "note": "04:43。",
+      "url": "https://x.com/EtherealnewsHQ/status/2118821551118401599",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：机器检查核心的 GKR 与更快的稀疏证明器",
+      "note": "22:08。",
+      "url": "https://ethresear.ch/t/gkr-with-a-machine-checked-core-and-a-sparse-prover-made-faster-with-byte-identical-proofs/26226",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2151：ERC-8350 澄清中继空签名的注释",
+      "note": "20:50 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2151",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2150：ERC-8049 元数据命名与 ERC-8048 对齐",
+      "note": "18:39 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/2150",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Tim Roughgarden：a16z crypto 研究实习生招聘",
+      "note": "02:08，11 月 20 日截止。",
+      "url": "https://x.com/Tim_Roughgarden/status/2118782481801347583",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：ethereum:native 会是后量子的价值储存",
+      "note": "01:32；Caspar：以太坊会是后量子、后 AI 的价值储存 18:49。",
+      "url": "https://x.com/barnabemonnot/status/2118773434851205565",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Caspar：以太坊会是后量子、后 AI 的价值储存",
+      "note": "Barnabé：ethereum:native 会是后量子的价值储存 01:32；Caspar：以太坊会是后量子、后 AI 的价值储存 18:49。",
+      "url": "https://x.com/casparschwa/status/2119034498109026336",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Caspar：AI 网络攻击能力上升，客户端多样性的价值显现",
+      "note": "18:48。",
+      "url": "https://x.com/casparschwa/status/2119034192180715845",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Toni Wahrstätter：Devcon 孟买总结",
+      "note": "12:58。",
+      "url": "https://x.com/nero_eth/status/2118946183720616368",
+      "date": "2026-11-07"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "bartek：任何要求 KYC 的服务都应假定数据终将公开",
+      "note": "11:49，隐私理念会因此复兴。",
+      "url": "https://x.com/bkiepuszewski/status/2118928764612841615",
+      "date": "2026-11-07"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.trailofbits.com/2026/11/06/after-binance-check-what-your-signing-systems-can-approve/",
+    "credit": "Trail of Bits, After Binance, check what your signing systems can approve",
+    "local_path": "assets/2026-11-07.jpg"
+  }
+}

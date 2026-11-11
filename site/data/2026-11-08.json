@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-08",
+  "keywords": [
+    "Glamsterdam 争论",
+    "不破坏合约",
+    "EIP-8487 双计数器",
+    "ETH 价值储存",
+    "FCR"
+  ],
+  "summary": "围绕 Glamsterdam gas 调价会不会打破已部署合约，核心开发者在 X 上争论了一整天：一方主张“永远不破坏能用的东西”，另一方认为这等于永远不能改 gas 表。当天出现一份针对性方案 EIP-8487：用旧 gas 表管执行、新 gas 表管计费。Vitalik 长文解释为什么 ETH 应聚焦价值储存而不是烧费代币。Ethlabs 第 20 周周报：Quicknode 已支持 FCR。",
+  "items": [
+    {
+      "topic": "Glamsterdam 调价与“不破坏已部署合约”",
+      "title": "fede：如果真的会打破合约，这就是错的",
+      "note": "05:15，“永远不要破坏用户正在用的东西”，并请人指出具体会坏的合约。",
+      "url": "https://x.com/fede_intern/status/2119191942734975150",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 调价与“不破坏已部署合约”",
+      "title": "lightclient：我很早以前就请大家检查过这件事",
+      "note": "13:01，在 ACD 上也提过。",
+      "url": "https://x.com/lightclients/status/2119309199788360045",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 调价与“不破坏已部署合约”",
+      "title": "Marius van der Wijden：先读那篇 20 行的博客再发言",
+      "note": "14:16，团队正在内部和审计方调查，并开放联系渠道，之后再决定怎么推进。",
+      "url": "https://x.com/vdWijden/status/2119328227365707994",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 调价与“不破坏已部署合约”",
+      "title": "dankrad：“永不破坏现有合约”不可行",
+      "note": "14:31。那意味着永远不能改 gas 表，将来也不能弃用签名方案（很可能必须做）；应该明确哪些类型的合约不会坏。",
+      "url": "https://x.com/dankrad/status/2119332003610776025",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 调价与“不破坏已部署合约”",
+      "title": "Eli Ben-Sasson：Glamsterdam 推迟，我的看法",
+      "note": "19:34，认为 Starknet 成为独立 L1 更加紧迫，“升级区块链很难”。",
+      "url": "https://x.com/EliBenSasson/status/2119408292581748897",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 调价与“不破坏已部署合约”",
+      "title": "kassandra：反过来做调价？",
+      "note": "21:54，不提高 gas 上限、少数操作码涨价，而是把大多数操作码降价。",
+      "url": "https://x.com/kassandraETH/status/2119443330673054009",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "EIP-8487：分开执行额度和计费额度",
+      "title": "EIPs PR #12637：Separate execution credits and billing credits",
+      "note": "22:58 提交。两个计数器都从 `tx.gasLimit` 初始化：credits 用旧 gas 表，决定 EVM 可见的执行额度（包括 CALL 和合约创建）；billing 用新 gas 表，决定交易费。billing 不足时整笔交易中止且不可捕获，即使 credits 还有剩余。",
+      "url": "https://github.com/ethereum/EIPs/pull/12637",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存，而不是烧费代币",
+      "title": "Vitalik：为什么“ETH 作为价值储存”比“ETH 作为烧费代币”更值得聚焦",
+      "note": "19:06，三条理由：烧费叙事从来没有看上去那么强；为烧费优化会要求牺牲去中心化和抗捕获（要撑起约 2,700 亿美元市值，以太坊得变成世界级的收费平台）；为价值储存优化与去中心化和 CROPS 一致。",
+      "url": "https://x.com/VitalikButerin/status/2119401255919604064",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存，而不是烧费代币",
+      "title": "为烧费优化会要求牺牲去中心化和抗捕获",
+      "note": "Vitalik：为什么“ETH 作为价值储存”比“ETH 作为烧费代币”更值得聚焦 19:06，三条理由：烧费叙事从来没有看上去那么强；为烧费优化会要求牺牲去中心化和抗捕获（要撑起约 2,700 亿美元市值，以太坊得变成世界级的收费平台）；为价值储存优化与去中心化和 CROPS 一致。",
+      "url": "https://x.com/VitalikButerin/status/2119401338375430542",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存，而不是烧费代币",
+      "title": "为价值储存优化与去中心化和 CROPS 一致",
+      "note": "Vitalik：为什么“ETH 作为价值储存”比“ETH 作为烧费代币”更值得聚焦 19:06，三条理由：烧费叙事从来没有看上去那么强；为烧费优化会要求牺牲去中心化和抗捕获（要撑起约 2,700 亿美元市值，以太坊得变成世界级的收费平台）；为价值储存优化与去中心化和 CROPS 一致。",
+      "url": "https://x.com/VitalikButerin/status/2119401376753262713",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存，而不是烧费代币",
+      "title": "Barnabé：可编程价值储存的安全与效用",
+      "note": "20:20。",
+      "url": "https://x.com/barnabemonnot/status/2119419778842472822",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethlabs 第 20 周周报",
+      "note": "（X 文章 22:45）：Devcon L1 研发日讨论 Glamsterdam、Hegotá、I-star；后量子是最重要的话题（Justin Drake 介绍 2028 年全面抗量子路线）；FCR 把 L1 到 L2 和交易所的入金时间降到 12 到 24 秒，Gnosis 采用约一个月已为用户省下 12 天以上的等待，周报引用 Quicknode 11-04 的公告：FCR beta 已对其所有客户开放，其他 RPC 服务商也已支持。怎么用：在 Quicknode 主网端点开启 FCR，继续调用 `safe` 标签，无需改代码。",
+      "url": "https://ethlabs.org/updates/week-20.html",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs PR #12610：EIP-8355 增加 ML-DSA-65/87 验证向量和拒绝用例",
+      "note": "04:56 合并，后量子签名预编译的测试数据更完整。",
+      "url": "https://github.com/ethereum/EIPs/pull/12610",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：leanVM 中 PQ 签名聚合，folding 与完整验证器递归的对比（含负面结果）",
+      "note": "19:33。在 8GB M2 上，基于哈希的累加没有赢过 leanVM 的完整验证器递归；直接 folding leanXMSS 每个签名至少要 710 万个 R1CS 约束，约为 leanVM 的 450 倍。",
+      "url": "https://ethresear.ch/t/folding-vs-full-verifier-recursion-for-pq-signature-aggregation-in-leanvm-measurements-and-negative-results/26227",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8489 Agent Information Flow Paradigm",
+      "note": "18:26，对应 ERCs PR #2152。",
+      "url": "https://ethereum-magicians.org/t/erc-8489-agent-information-flow-paradigm/30300",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2152",
+      "note": "Magicians：ERC-8489 Agent Information Flow Paradigm 18:26，对应 ERCs PR #2152。",
+      "url": "https://github.com/ethereum/ERCs/pull/2152",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Georgios：Ethereum Acceleration 即将两周年",
+      "note": "10:35，Paradigm 继续写以太坊和 EVM 生态需要的代码（Paradigm：Ethereum Acceleration 原文）。",
+      "url": "https://x.com/gakonst/status/2119272535842034093",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Paradigm：Ethereum Acceleration 原文",
+      "note": "Georgios：Ethereum Acceleration 即将两周年 10:35，Paradigm 继续写以太坊和 EVM 生态需要的代码（Paradigm：Ethereum Acceleration 原文）。",
+      "url": "https://www.paradigm.xyz/writing/ethereum-acceleration-1",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：不同意本周对反数据中心运动的强烈情绪反应",
+      "note": "17:34。",
+      "url": "https://x.com/VitalikButerin/status/2119377918875079163",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：这一周路线图加速超出想象，“你还没准备好 Ethlabs season 2”",
+      "note": "23:48。",
+      "url": "https://x.com/barnabemonnot/status/2119472035285869047",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dapplion：问 Coinbase 若质押量足以在 attester 层审查会怎么做",
+      "note": "22:29，回答是“会对抗我们不认同的政策”。",
+      "url": "https://x.com/dapplion/status/2119452255887798620",
+      "date": "2026-11-08"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethlabs.org/updates/week-20.html",
+    "credit": "Ethlabs, Devcon Mumbai: Ethlabs is online. Week 20.",
+    "local_path": "assets/2026-11-08.jpg"
+  }
+}

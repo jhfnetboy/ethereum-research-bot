@@ -1,0 +1,144 @@
+{
+  "date": "2026-11-01",
+  "keywords": [
+    "EIP-7702 退出机制",
+    "EIP-8141",
+    "Binance 事件",
+    "后量子",
+    "Devcon 8"
+  ],
+  "summary": "Binance 被盗事件后，账户安全成为焦点：一项 EIP-8151 修订提议让通过 EIP-8476 永久关闭 7702 委托的 EOA 仍能使用 permit 签名，Ethlabs 周报强调 7702 本身没有被攻破。Frame Transaction（EIP-8141）合并一项 nonce 边界修复，属于破坏性变更。后量子方面，EIP-8479 提交，@ethereum 发布剑桥 PQ 研讨会视频。",
+  "items": [
+    {
+      "topic": "EIP-7702 委托的安全边界：永久退出与 permit 兼容",
+      "title": "EIPs PR #12605：EIP-8151 把 0xef0200 退出标记视为合格 EOA",
+      "note": "16:01 提交。EIP-8151（Account Code Restricted ecRecover）目前只允许空代码或 `0xef0100 || delegate` 委托指示符的账户使用 `ecrecover`。如果和 EIP-8476 一起上线，选择退出 7702 的账户签的 permit 会返回空结果，与“只关闭委托能力、保留普通 EOA 能力”的本意矛盾。这个 PR 只把 EIP-8476 的标记加进合格集合。",
+      "url": "https://github.com/ethereum/EIPs/pull/12605",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "EIP-7702 委托的安全边界：永久退出与 permit 兼容",
+      "title": "EIPs PR #12600：Add EIP-8476 Permanent EOA Delegation Opt-Out",
+      "note": "背景：EIPs PR #12600：Add EIP-8476 Permanent EOA Delegation Opt-Out（2026-10-30 提交）。账户代码写成精确标记后，未来的授权（包括清除授权）都会被拒绝；EVM 把标记当作空代码处理（`EXTCODESIZE` 为 0，`EXTCODEHASH` 为空代码哈希）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12600",
+      "date": "2026-10-30"
+    },
+    {
+      "topic": "EIP-7702 委托的安全边界：永久退出与 permit 兼容",
+      "title": "Ethlabs 第 19 周周报",
+      "note": "18:33 发布，引用 Derek Chiang 10-30 的说明：7702 本身没有被攻破，使用支持 7702 的钱包（MetaMask、Uniswap、Ambire 等）不必恐慌。Barnabé 预期链上会出现更多由新账户能力承载、由 agent 管理的限速和熔断机制。",
+      "url": "https://ethlabs.org/updates/week-19.html",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "EIP-8141 Frame Transaction：nonce 边界修复",
+      "title": "EIPs PR #12603：Update EIP-8141 Transaction nonce check boundary",
+      "note": "18:20 合并。规范改为发送方 nonce 最大只接受 `MAX-1`，与 execution-specs 中 bogota 分叉的 frame transaction 实现一致。PR 标注为 Bugfix、Breaking Change、需要实现方 Action Required。",
+      "url": "https://github.com/ethereum/EIPs/pull/12603",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "后量子：剑桥研讨会与 PQ PeerDAS",
+      "title": "@ethereum：剑桥后量子研讨会视频",
+      "note": "00:03 发布，称 AI 进展正在压缩量子威胁时间线的估计，专家在剑桥协调把密码学升级到抗量子。研讨会页面见 剑桥后量子研讨会页面。",
+      "url": "https://x.com/ethereum/status/2116576765506437319",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "后量子：剑桥研讨会与 PQ PeerDAS",
+      "title": "剑桥后量子研讨会页面",
+      "note": "@ethereum：剑桥后量子研讨会视频 00:03 发布，称 AI 进展正在压缩量子威胁时间线的估计，专家在剑桥协调把密码学升级到抗量子。研讨会页面见 剑桥后量子研讨会页面。",
+      "url": "https://pq.ethereum.org/cambridge/",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "后量子：剑桥研讨会与 PQ PeerDAS",
+      "title": "EIPs PR #12604：Add EIP-8479 Post-Quantum PeerDAS and Variable-Size Blobs",
+      "note": "10:51 提交，把数据可用性采样也纳入 PQ 改造范围。",
+      "url": "https://github.com/ethereum/EIPs/pull/12604",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2135：ERC-7730 v3 schema 要求 chainId 为正",
+      "note": "00:09 提交。ERC-7730 是钱包“清晰签名”的结构化描述格式，这个修订防止签名展示里出现无效链 ID。",
+      "url": "https://github.com/ethereum/ERCs/pull/2135",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8482 Autonomous Self-Refunding Merchant Settlement 讨论帖",
+      "note": "20:13 开帖（对应 ERCs PR #2136：Add ERC-8482），属于 agent 支付类 ERC。",
+      "url": "https://ethereum-magicians.org/t/erc-8482-autonomous-self-refunding-merchant-settlement/30162",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2136：Add ERC-8482",
+      "note": "ERC-8482 Autonomous Self-Refunding Merchant Settlement 讨论帖 20:13 开帖（对应 ERCs PR #2136：Add ERC-8482），属于 agent 支付类 ERC。",
+      "url": "https://github.com/ethereum/ERCs/pull/2136",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：PropAMM 在主网的成交与 TEMBRI 工具箱",
+      "note": "04:25 发布，研究同区块报价的做市行为。",
+      "url": "https://ethresear.ch/t/propamm-fills-on-ethereum-mainnet-and-propamm-support-for-tembri-toolbox-same-block-quotes-a-small-spread-and-flow-taken-from-lagging-amms/26201",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie：10 月按交易数排名的应用",
+      "note": "21:09 发布：Polymarket 约 5,942 万笔，ETH 转账约 4,378 万笔，Uniswap 约 3,744 万笔。另一条称链上用作抵押的 ETH 超过 400 亿美元（growthepie：链上抵押 ETH 超过 400 亿美元，18:42）。",
+      "url": "https://x.com/growthepie_eth/status/2116895283363881419",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie：链上抵押 ETH 超过 400 亿美元",
+      "note": "growthepie：10 月按交易数排名的应用 21:09 发布：Polymarket 约 5,942 万笔，ETH 转账约 4,378 万笔，Uniswap 约 3,744 万笔。另一条称链上用作抵押的 ETH 超过 400 亿美元（growthepie：链上抵押 ETH 超过 400 亿美元，18:42）。",
+      "url": "https://x.com/growthepie_eth/status/2116858289459995080",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Kassandra：kohaku-cli 使用截图",
+      "note": "20:11，Kohaku 隐私钱包工具的命令行版本开始有人实际使用。",
+      "url": "https://x.com/kassandraETH/status/2116880762574168273",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik 抵达孟买",
+      "note": "02:52；Devcon 8 公布新一批 Impact Projects 17:00。",
+      "url": "https://x.com/VitalikButerin/status/2116619251440341276",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Devcon 8 公布新一批 Impact Projects",
+      "note": "Vitalik 抵达孟买 02:52；Devcon 8 公布新一批 Impact Projects 17:00。",
+      "url": "https://x.com/EFDevcon/status/2116832635221643640",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dapplion 征集要问核心开发者的问题",
+      "note": "10:57，准备在 Devcon 期间做即兴采访。",
+      "url": "https://x.com/dapplion/status/2116741514642768214",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji 谈 AI 对中心化信任体系的冲击",
+      "note": "04:01。",
+      "url": "https://x.com/binji_x/status/2116636750546374731",
+      "date": "2026-11-01"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethlabs.org/updates/week-19.html",
+    "credit": "Ethlabs, Ethlabs on tour. Week 19.",
+    "local_path": "assets/2026-11-01.jpg"
+  }
+}

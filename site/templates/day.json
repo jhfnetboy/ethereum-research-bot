@@ -1,0 +1,23 @@
+{
+  "date": "YYYY-MM-DD",
+  "keywords": [
+    "关键词一",
+    "关键词二",
+    "关键词三"
+  ],
+  "summary": "两三句关键信息，概括当天最重要的协议或研究动态。",
+  "image": {
+    "local_path": "assets/YYYY-MM-DD.jpg",
+    "source_url": "https://example.com/original-article-or-image",
+    "credit": "来源媒体或作者"
+  },
+  "items": [
+    {
+      "topic": "话题名称",
+      "title": "条目标题",
+      "note": "一句说明，帮助读者判断为什么收入这一条。",
+      "url": "https://source.example/path",
+      "date": "YYYY-MM-DD"
+    }
+  ]
+}

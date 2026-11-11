@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-06",
+  "keywords": [
+    "EIP-8037/8038 不变量",
+    "Glamsterdam",
+    "隐私池与 Frame Transaction",
+    "交易断言",
+    "PBT 状态迁移"
+  ],
+  "summary": "EF 发文列出 EIP-8037 和 EIP-8038 会打破的 8 条合约不变量，并给出自查仓库，Glamsterdam 的 Hoodi 分叉在问题解决前不排期。Nethermind 用 frame transaction 跑通一个自付 gas 的隐私池，提款约 67.9 万 gas，但证明验证超过了验证 gas 上限。EF 介绍 Hegotá 候选的交易断言，以及 I* 的 Partitioned Binary Tree 状态迁移。",
+  "items": [
+    {
+      "topic": "EIP-8037/8038：会被打破的 8 条不变量",
+      "title": "EF Blog：EIP-8037/EIP-8038 Glamsterdam",
+      "note": "发布（Marius van der Wijden 署名）。Glamsterdam 测试期间，ChainSecurity 发现一些项目依赖的不变量会被 EIP-8037（状态创建涨价）和 EIP-8038（状态访问调价）打破，因为两者改变了部分操作的收费和状态收费方式。ACD 因此推迟硬分叉流程，问题解决前不分叉 Hoodi；Hegotá 的工作不受影响，全力并行。",
+      "url": "https://blog.ethereum.org/en/2026/11/06/glamsterdam-8037-8038",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "EIP-8037/8038：会被打破的 8 条不变量",
+      "title": "glamsterdam-gas-invariants 自查仓库",
+      "note": "EF 正与 ChainSecurity、Dedaub 两家审计公司合作并做内部审计，但覆盖不了所有项目，所以发出号召：glamsterdam-gas-invariants 自查仓库列出每条不变量的解释、例子，以及可以直接用来检查项目的提示词；受影响请联系 glamsterdam@ethereum.org。",
+      "url": "https://github.com/ethereum/glamsterdam-gas-invariants",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "EIP-8037/8038：会被打破的 8 条不变量",
+      "title": "Marius：请确认你的合约在 Glamsterdam 后仍能工作",
+      "note": "17:22；ralexstokes：所有以太坊开发者请看一下 18:23。",
+      "url": "https://x.com/vdWijden/status/2118650300706046299",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "EIP-8037/8038：会被打破的 8 条不变量",
+      "title": "ralexstokes：所有以太坊开发者请看一下",
+      "note": "Marius：请确认你的合约在 Glamsterdam 后仍能工作 17:22；ralexstokes：所有以太坊开发者请看一下 18:23。",
+      "url": "https://x.com/ralexstokes/status/2118665659043455460",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "Frame Transaction 上的隐私池：能做什么、还差什么",
+      "title": "ethresear.ch：基于 frame transaction 的隐私池",
+      "note": "20:00 发布（Nethermind 的 Daniil Ankushin，测量由 Manuel Arto 完成）。在 frame transaction 上，隐私池自己支付 gas，私密提款不需要中继者。他们在当前 Nethermind master 上跑了一个真实的 BN254 Groth16 池（soispoke 的 minimal-shielded-pool）：一次提款 679,322 gas。提款时池合约是发送方，它的 VERIFY 代码检查 zk 证明并批准执行和付款，用户不需要有余额的账户，也不出现在交易里。配合 EIP-8250 keyed nonce，可以从同一个池地址并发多笔提款。",
+      "url": "https://ethresear.ch/t/a-privacy-pool-on-frame-transactions-what-works-and-the-case-that-does-not-yet/26223",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "Frame Transaction 上的隐私池：能做什么、还差什么",
+      "title": "EIPs PR #12632：EIP-8288 把依赖帧放在协议验证帧周围",
+      "note": "12:52 提交，调整公共内存池里各类验证帧的位置规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/12632",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "交易断言与 PBT 状态迁移",
+      "title": "EF：如果断言随 Hegotá 上线，用户签名会更有信心",
+      "note": "06:04。用户访谈反复提到不确定自己签的是什么；有了断言，钱包展示确切效果，要么照预期执行，要么整笔回滚。背景见 EF Blog：原生交易断言如何强制交易的最终结果（2026-10-05）。",
+      "url": "https://x.com/ethereumfndn/status/2118479704412045627",
+      "date": "2026-10-05"
+    },
+    {
+      "topic": "交易断言与 PBT 状态迁移",
+      "title": "EF Blog：原生交易断言如何强制交易的最终结果",
+      "note": "EF：如果断言随 Hegotá 上线，用户签名会更有信心 06:04。用户访谈反复提到不确定自己签的是什么；有了断言，钱包展示确切效果，要么照预期执行，要么整笔回滚。背景见 EF Blog：原生交易断言如何强制交易的最终结果（2026-10-05）。",
+      "url": "https://blog.ethereum.org/en/2026/10/05/transaction-assertions",
+      "date": "2026-10-05"
+    },
+    {
+      "topic": "交易断言与 PBT 状态迁移",
+      "title": "EF：I* 准备在不停机的情况下改造状态结构",
+      "note": "08:05。Partitioned Binary Tree（PBT）会缩小状态证明，让钱包能验证而不是信任，并为状态过期铺路。EIPs PR #12633：EIP-8347 规定激活时的就绪与迟到迁移 16:58 提交，处理节点在激活块到来时 PBT 尚未就绪的情况（应返回 SYNCING 而不是判块无效）。",
+      "url": "https://x.com/ethereumfndn/status/2118510132854460793",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "交易断言与 PBT 状态迁移",
+      "title": "EIPs PR #12633：EIP-8347 规定激活时的就绪与迟到迁移",
+      "note": "EF：I* 准备在不停机的情况下改造状态结构 08:05。Partitioned Binary Tree（PBT）会缩小状态证明，让钱包能验证而不是信任，并为状态过期铺路。EIPs PR #12633：EIP-8347 规定激活时的就绪与迟到迁移 16:58 提交，处理节点在激活块到来时 PBT 尚未就绪的情况（应返回 SYNCING 而不是判块无效）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12633",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：Devcon 回到欧洲，下一届在里斯本",
+      "note": "19:39。",
+      "url": "https://x.com/barnabemonnot/status/2118684610485772674",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Georgios：Reth v2.10.0、OP Reth v2.8.1、Base v1.5.3 修复",
+      "note": "05:17，依赖 Reth 的节点、桥和状态证明系统请升级。",
+      "url": "https://x.com/gakonst/status/2118467839116063082",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT：Base Denim 上线，协议内 200ms 区块",
+      "note": "20:48，代价是排序器最多可落后 L1 存款 6 小时（原来 30 分钟）。",
+      "url": "https://x.com/ethbeat_org/status/2118702003958210934",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT：zkLink Nova 损失约 80 万美元",
+      "note": "21:22，原因是托管合约信任自家中继合约，而不是检查证明。",
+      "url": "https://x.com/ethbeat_org/status/2118710597567054317",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news weekly #46",
+      "note": "19:32：Justin Drake 的后量子与后 AI 迁移目标 2028 年 12 月；Solar v0.3 和 Slang alpha 两个 Solidity 编译器。周报引用 ultrasound.money 的本周平均 gas 为 0.2 gwei。",
+      "url": "https://x.com/EtherealnewsHQ/status/2118683049500234203",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Fede：ethlambda 与 Gattaca 的 Silver 是最快的共识客户端",
+      "note": "07:32。",
+      "url": "https://x.com/fede_intern/status/2118501749832962379",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Lefteris：Gnosis Pay 泄露用户住址、卡号和关联钱包地址",
+      "note": "21:25，KYC 数据泄露的又一例。",
+      "url": "https://x.com/LefterisJP/status/2118711419658977773",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dapplion 采访 Griff Green：“私钥是中本聪最糟的主意”",
+      "note": "01:42，与账户抽象和社交恢复的讨论呼应。",
+      "url": "https://x.com/dapplion/status/2118413612582686771",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dapplion 采访 Scott Bürgel：让钱包被 VC 拿走是个错误",
+      "note": "15:37。",
+      "url": "https://x.com/dapplion/status/2118623789416079499",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：扩容、后量子、个人隐私、机构诚信要同时做到",
+      "note": "20:03。",
+      "url": "https://x.com/EliBenSasson/status/2118690832014328223",
+      "date": "2026-11-06"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/a-privacy-pool-on-frame-transactions-what-works-and-the-case-that-does-not-yet/26223",
+    "credit": "ethresear.ch, A privacy pool on frame transactions",
+    "local_path": "assets/2026-11-06.jpg"
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "date": "2026-11-11",
+  "keywords": [
+    "Glamsterdam",
+    "ETH SoV",
+    "后量子",
+    "EIP-8483",
+    "EIP-8037"
+  ],
+  "summary": "Glamsterdam 仍在暂停。EIP-8037 与 EIP-8038 的 gas 重新定价可能破坏已部署合约，Hoodi 分叉已推迟，下一步看 11 月 16 日 ACDT 与 11 月 19 日 ACDE。Vitalik 主张 ETH 应优先作为价值储存，而不是烧费代币；后量子迁移继续推进，EIP-8483 被提议纳入 Hegotá。",
+  "image": {
+    "local_path": "assets/2026-11-11.png",
+    "source_url": "https://ethlabs.org/writings/tracking-glamsterdam.html",
+    "credit": "Ethlabs, Tracking the Glamsterdam discussion"
+  },
+  "items": [
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "Ethlabs 时间线：跟踪 Glamsterdam 讨论",
+      "note": "记录 Hoodi 分叉取消、审计进展，以及重新定价与记账机制改动的区分。",
+      "url": "https://ethlabs.org/writings/tracking-glamsterdam.html",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "EF Blog：Glamsterdam 在 Hoodi 上推迟",
+      "note": "原定 10 月 26 日的 Hoodi 分叉于 10 月 22 日取消。",
+      "url": "https://blog.ethereum.org/en/2026/10/22/glamsterdam-hoodi-delay",
+      "date": "2026-10-22"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "EF Blog：EIP-8037/8038 将打破的不变量",
+      "note": "Marius van der Wijden 署名发布 8 条不变量清单；11 月 9 日更新称已收到 4 份涉及已部署合约的报告。",
+      "url": "https://blog.ethereum.org/en/2026/11/06/glamsterdam-8037-8038",
+      "date": "2026-11-06"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "glamsterdam-gas-invariants 自查仓库",
+      "note": "供合约开发者检查 EIP-8037/8038 可能破坏的不变量。",
+      "url": "https://github.com/ethereum/glamsterdam-gas-invariants",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "Ethlabs：若影响面过大，愿意考虑改规范",
+      "note": "区分单纯重新定价与记账机制改动；Glamsterdam 目标是把区块 gas 上限从 60M 提到 200M。",
+      "url": "https://x.com/ethlabs_org/status/2120082366685454428",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "EIP-8488：Versioned Opcodes for Gas Repricing",
+      "note": "提议新合约用 V2 操作码并去掉 GAS/GASLIMIT，旧合约保留旧表。",
+      "url": "https://github.com/ethereum/EIPs/pull/12638",
+      "date": "2026-11-09"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "Magicians 讨论 EIP-8488",
+      "note": "Sam Wilson 等人指出 CREATE/DELEGATECALL 与工厂、代理合约的兼容难题。",
+      "url": "https://ethereum-magicians.org/t/eip-8488-versioned-opcodes-for-gas-repricing/30332",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "Dankrad：永远不破坏现有合约并不可行",
+      "note": "核心开发者对 Glamsterdam 兼容性约束的立场之一。",
+      "url": "https://x.com/dankrad/status/2119332003610776025",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "Marius van der Wijden：团队正与审计方调查",
+      "note": "回应外界对 8037/8038 兼容性问题的批评。",
+      "url": "https://x.com/vdWijden/status/2119328227365707994",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "Kassandra：建议降低大多数操作码成本",
+      "note": "主张用降价而不是提价来处理 gas 重新定价。",
+      "url": "https://x.com/kassandraETH/status/2119443330673054009",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "ACDC #191：11 月 12 日只做 8037/8038 简短更新",
+      "note": "按 EF 时间表，这两项不在正式议程。",
+      "url": "https://github.com/ethereum/pm/issues/2291",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "ACDT #103：11 月 16 日公布审计结果",
+      "note": "审计方与 EF 开放问答，鼓励应用开发者参加。",
+      "url": "https://github.com/ethereum/pm/issues/2299",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "nero_eth：提醒参加 11 月 16 日 ACDT",
+      "note": "与 ACDT #103 审计结果公布相关。",
+      "url": "https://x.com/nero_eth/status/2120070435836485826",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "Glamsterdam 与 EIP-8037/8038",
+      "title": "ACDE #249：11 月 19 日讨论下一步",
+      "note": "讨论审计结果与后续安排，不预设结论。",
+      "url": "https://github.com/ethereum/pm/issues/2285",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Vitalik 主帖：ETH 应优先作为价值储存",
+      "note": "主张 SoV 优先于烧费代币叙事，同时保留 EIP-1559 燃烧。",
+      "url": "https://x.com/VitalikButerin/status/2119401255919604064",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Vitalik：烧费估值的地板从来不牢",
+      "note": "指出 2021 至 2023 年的烧费大多来自加密内部用例。",
+      "url": "https://x.com/VitalikButerin/status/2119401300723118086",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Vitalik：为烧费优化会与去中心化冲突",
+      "note": "认为支撑当前市值去优化烧费，会要求大额研发支出和强干预治理。",
+      "url": "https://x.com/VitalikButerin/status/2119401338375430542",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Vitalik：把 SoV 落到后量子、隐私和抗审查",
+      "note": "提到形式化验证、ossification、Kohaku、FOCIL 与轻量节点等具体工作。",
+      "url": "https://x.com/VitalikButerin/status/2119401376753262713",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Francesco：技术与货币叙事不是二选一",
+      "note": "认为 Vitalik 的表述接近社区已基本形成的共识。",
+      "url": "https://x.com/fradamt/status/2119516974825005214",
+      "date": "2026-11-09"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Barnabé：快 slot 与 SoV 并不矛盾",
+      "note": "跟进 Vitalik 的价值储存论述。",
+      "url": "https://x.com/barnabemonnot/status/2119410779350872138",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Barnabé：完成后量子迁移后，看不到属性更好的资产",
+      "note": "把 SoV 论证与后量子路线联系起来。",
+      "url": "https://x.com/barnabemonnot/status/2120127994710876490",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "Julian Ma：ETH is the sanctuary asset in the AI age",
+      "note": "跟进本周 SoV 叙事。",
+      "url": "https://x.com/_julianma/status/2120198500919161258",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "ETH 作为价值储存",
+      "title": "binji：预告将发表长而有争议的回应",
+      "note": "Ethlabs 研究员计划回应 Vitalik 的 SoV 论述。",
+      "url": "https://x.com/binji_x/status/2119416671924273169",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "后量子路线",
+      "title": "EIP-8483：Post-Quantum Material Registration",
+      "note": "让验证者提款地址注册 32 字节后量子材料，为未来 PQ 迁移分叉做准备。",
+      "url": "https://github.com/ethereum/EIPs/pull/12609",
+      "date": "2026-11-02"
+    },
+    {
+      "topic": "后量子路线",
+      "title": "jtraglia 请求在 ACDC #191 讨论将 EIP-8483 纳入 Hegotá",
+      "note": "评论时间为 2026-11-11 03:54。",
+      "url": "https://github.com/ethereum/pm/issues/2291",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "后量子路线",
+      "title": "EIP-8479：Post-Quantum PeerDAS and Variable-Size Blobs",
+      "note": "后量子数据层与可变大小 blob 的提案。",
+      "url": "https://github.com/ethereum/EIPs/pull/12604",
+      "date": "2026-11-01"
+    },
+    {
+      "topic": "后量子路线",
+      "title": "Ethereal news #46：本周 EIP 汇总",
+      "note": "收录了 EIP-8479 等后量子相关提案。",
+      "url": "https://x.com/EtherealnewsHQ/status/2120254586766426457",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "后量子路线",
+      "title": "Vitalik：当前 PQ 路线本身就能带来效率提升",
+      "note": "提到热路径验证者减少、纠删码 P2P，以及 PQ 签名聚合下更快的最终性。",
+      "url": "https://x.com/VitalikButerin/status/2119694446136844637",
+      "date": "2026-11-09"
+    },
+    {
+      "topic": "后量子路线",
+      "title": "ethresear.ch：leanVM 中 PQ 签名聚合的实测",
+      "note": "hash-based folding 没有跑赢 leanVM 的完整验证者递归。",
+      "url": "https://ethresear.ch/t/folding-vs-full-verifier-recursion-for-pq-signature-aggregation-in-leanvm-measur/26227",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "后量子路线",
+      "title": "PQ Transaction Signatures Breakout #18",
+      "note": "议程见 ethereum/pm #2298，时间是 11 月 11 日 21:00。",
+      "url": "https://github.com/ethereum/pm/issues/2298",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Devcon 8（孟买）落幕，下一届在里斯本",
+      "note": "",
+      "url": "https://x.com/EFDevcon/status/2119461867483693314",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 上线 CROPS 指南",
+      "note": "首批评级包括 Tornado Cash、Uniswap V2/V3、Safe。",
+      "url": "https://x.com/ethbeat_org/status/2120158769740935472",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT：隐私协议页面将显示审查过的前端应用",
+      "note": "与 CROPS 指南同一天发布的补充说明。",
+      "url": "https://x.com/ethbeat_org/status/2120117347348357426",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 改名公告（原 L2BEAT）",
+      "note": "11 月 4 日发布，Vitalik 于 11 月 7 日转推。",
+      "url": "https://x.com/ethbeat_org/status/2117913893796225035",
+      "date": "2026-11-04"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：形式化验证在 EIP-8282 上发现规范差异",
+      "note": "由 Veritylab 完成。",
+      "url": "https://x.com/ethereumfndn/status/2120195696808829030",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8141 修订：提高 MAX_VERIFY_GAS",
+      "note": "提议把 MAX_VERIFY_GAS 提高到 300,000。",
+      "url": "https://github.com/ethereum/EIPs/pull/12644",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8141 修订：补充 blob fee 与 GASPRICE",
+      "note": "说明 blob fee 可降低 GASPRICE。",
+      "url": "https://github.com/ethereum/EIPs/pull/12642",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Frame Transaction Breakout #8，定于 11 月 17 日",
+      "note": "继续讨论 EIP-8141。",
+      "url": "https://github.com/ethereum/pm/issues/2295",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8491：LUCID Key Publisher Priority Lists",
+      "note": "加密内存池相关新提案。",
+      "url": "https://github.com/ethereum/EIPs/pull/12646",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Encrypt The Mempool #12，议题含 EIP-8184",
+      "note": "时间为 11 月 11 日 22:00。",
+      "url": "https://github.com/ethereum/pm/issues/2300",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8487：分离执行额度与计费额度",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12637",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8484：SLOTDURATION 操作码",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12619",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-1：增加 EIP Coordinator 说明",
+      "note": "",
+      "url": "https://github.com/ethereum/EIPs/pull/12643",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8325 Asset Anchor Registry 进入 Final",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2086",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8326 进入 Final",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2087",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8327 进入 Final",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2088",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8330 提交进入 Last Call",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2164",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7962 提交进入 Last Call",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2063",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8107 提交进入 Last Call",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2099",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048 新增 ens endpoint 类型",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2161",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8049 新增 ens endpoint 类型",
+      "note": "",
+      "url": "https://github.com/ethereum/ERCs/pull/2162",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "征集 Heze 之后共识层升级的 I-star 名称",
+      "note": "仅作信号，由核心开发者决定。",
+      "url": "https://github.com/ethereum/pm/issues/2291",
+      "date": "2026-11-03"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Phylax 上线，Barnabé 与 Julian Ma 推荐",
+      "note": "应用安全与可保险性工具。",
+      "url": "https://x.com/_julianma/status/2120179482678137206",
+      "date": "2026-11-10"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec Tierra 上线私密留言板 RollingChat",
+      "note": "基于 Vitalik 的想法。",
+      "url": "https://x.com/aztecnetwork/status/2119538473774530885",
+      "date": "2026-11-09"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：Glamsterdam 延期让独立 L1 更紧迫",
+      "note": "借延期说明区块链升级有多难，并谈到 Starknet。",
+      "url": "https://x.com/EliBenSasson/status/2119408292581748897",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "lightclient：此前曾在 ACD 上提醒过此类问题",
+      "note": "回应 Glamsterdam 兼容性风波。",
+      "url": "https://x.com/lightclients/status/2119309199788360045",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：应看他用隐私协议的支付",
+      "note": "回应有人讨论他本人链上用 ETH 支付的情况。",
+      "url": "https://x.com/VitalikButerin/status/2119687568879231319",
+      "date": "2026-11-09"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：放缓算力扩张总体是好事",
+      "note": "关于 AI 与数据中心的讨论。",
+      "url": "https://x.com/VitalikButerin/status/2119377918875079163",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：AI 不会放缓，应提前采用更安全的密码学",
+      "note": "回应 Vitalik 关于算力扩张的观点。",
+      "url": "https://x.com/EliBenSasson/status/2119428666258075757",
+      "date": "2026-11-08"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians：ERC-8489 Agent Information Flow Paradigm",
+      "note": "本周较活跃的新帖之一。",
+      "url": "https://ethereum-magicians.org/t/erc-8489-agent-information-flow-paradigm/30300",
+      "date": "2026-11-11"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians：Protected Accounts for Fungible Tokens",
+      "note": "本周较活跃的新帖之一。",
+      "url": "https://ethereum-magicians.org/t/erc-xxxx-protected-accounts-for-fungible-tokens/30297",
+      "date": "2026-11-11"
+    }
+  ]
+}

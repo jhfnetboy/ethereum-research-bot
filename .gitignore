@@ -1,0 +1,19 @@
+# Whitelist: only the site source and the daily reports are published.
+/*
+!/.gitignore
+!/site/
+!/reports/
+
+# Never commit build output, secrets, or private notes.
+/site/dist/
+/site/docs/
+/site/workers/
+/site/__pycache__/
+/site/preview.png
+**/__pycache__/
+.env
+.env.*
+*.pem
+*.key
+.wrangler/
+node_modules/
