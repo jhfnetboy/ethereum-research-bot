@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
-"""Build a static card site from data/*.json into dist/.
+"""Build a bilingual static card site from data/*.json into dist/.
 
-Default links are relative, so the same dist/ works at the site root
-or under a subpath. Blog domain forwarding is handled by the user and
-is out of scope for this project.
+Chinese is the default language at the site root (/). English pages live
+under /en/ with the same structure. Every page links to its counterpart
+(language switch, hreflang), and the build writes sitemap.xml and robots.txt.
+
+Default links are relative, so the same dist/ works at the site root or under
+a subpath. Absolute URLs (canonical, hreflang, Open Graph, sitemap) use
+--site-url. Blog domain forwarding is handled by the user and is out of scope.
 
 Optional: python3 build.py --base-path /ethereum
-  writes root-absolute links prefixed with /ethereum, for the case
-  where files themselves live under that path and no prefix is stripped.
 """
 
 from __future__ import annotations
 
 import argparse
-import math
 import html
 import json
+import math
 import re
 import shutil
 import sys
@@ -24,44 +26,186 @@ from pathlib import Path
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PAGE_SIZE = 7
-SITE_TITLE = "以太坊研究日报"
-SITE_LEDE = "按日收录协议、研究和生态的重要动态。"
-SITE_INTRO = (
-    "本页每天早上根据当天日报自动生成。系统从日报中提取关键词、要点、配图和每条来源链接，"
-    "建成卡片并部署到 Cloudflare Pages。每天一张卡片，点开后按话题列出信息和链接。"
-    "重点话题深入写，其他动态只简要说明影响和用法。内容覆盖自上一期以来的变化，"
-    "每条都附来源和日期，不编造数据。"
-)
-SITE_INTRO_EMAIL_TEXT = "想建议增加来源，请发邮件到"
+DEFAULT_SITE_URL = "https://ethereum-research-bot.pages.dev"
 SITE_CONTACT_EMAIL = "jason@idoris.ai"
-SITE_SOURCES = [
-    "Vitalik Buterin 及按相关度筛选的 Top 100 X 账号",
-    "ethereum.org 和 @ethereum",
-    "Ethereum Magicians",
-    "GitHub ethereum/EIPs 和 ethereum/ERCs",
-    "ethresear.ch",
-    "Vitalik 博客",
-    "EF Blog",
-    "ethereum/pm ACD 会议",
-    "Week in Ethereum News",
-    "L2BEAT / ETHBEAT",
-    "ultrasound.money",
-    "growthepie",
-]
+LANG_ORDER = ("zh", "en")
+
+STRINGS = {
+    "zh": {
+        "html_lang": "zh-CN",
+        "hreflang": "zh-CN",
+        "og_locale": "zh_CN",
+        "prefix": "",
+        "site_title": "以太坊研究日报",
+        "brand": "以太坊研究日报 | Ethereum Research Daily",
+        "brand_short": "以太坊研究日报 Ethereum Research Daily",
+        "eyebrow": "Ethereum Research Daily",
+        "lede": "按日收录以太坊协议、研究和生态的重要动态。",
+        "intro": (
+            "本页每天早上根据当天日报自动生成。系统从日报中提取关键词、要点、配图和每条来源链接，"
+            "建成卡片并部署到 Cloudflare Pages。每天一张卡片，点开后按话题列出信息和链接。"
+            "重点话题深入写，其他动态只简要说明影响和用法。内容覆盖自上一期以来的变化，"
+            "每条都附来源和日期，不编造数据。"
+        ),
+        "email_text": "想建议增加来源，请发邮件到",
+        "sentence_end": "。",
+        "sources_title": "研究来源",
+        "sources": [
+            "Vitalik Buterin 及按相关度筛选的 Top 100 X 账号",
+            "ethereum.org 和 @ethereum",
+            "Ethereum Magicians",
+            "GitHub ethereum/EIPs 和 ethereum/ERCs",
+            "ethresear.ch",
+            "Vitalik 博客",
+            "EF Blog",
+            "ethereum/pm ACD 会议",
+            "Week in Ethereum News（及其后继 Ethereal news）",
+            "L2BEAT / ETHBEAT",
+            "ultrasound.money",
+            "growthepie",
+        ],
+        "about_heading": "关于本页",
+        "sources_link_pre": "完整研究来源见",
+        "sources_link": "关于页",
+        "nav_label": "站点导航",
+        "nav_home": "目录",
+        "nav_archive": "归档",
+        "nav_about": "关于",
+        "switch_label": "English",
+        "switch_title": "Read this page in English",
+        "list_label": "日报列表",
+        "empty_title": "暂无日报",
+        "empty_text": "把当天的数据文件放进 data 目录后重新构建即可。",
+        "pager_label": "分页",
+        "prev": "上一页",
+        "next": "下一页",
+        "page_status": "第 {page} / {total} 页 · {start} 至 {end}",
+        "page_title": "第 {page} 页",
+        "count_note": "共 {days} 天，每页 {size} 天。更早的日报见分页或<a href=\"{href}\">按月归档</a>。",
+        "archive_title": "按月归档",
+        "archive_lede": "共 {days} 天日报，按月份倒序排列。",
+        "archive_desc": "按月浏览以太坊研究日报的全部日期和关键词。",
+        "archive_count": "{n} 天",
+        "archive_empty": "暂无日报。",
+        "back": "返回目录",
+        "image_alt": "{date} 配图",
+        "credit_label": "配图来源：",
+        "credit_fallback": "配图来源",
+        "untitled": "未命名条目",
+        "other_topic": "其他",
+        "no_items": "这一天还没有收录条目。",
+        "day_nav_label": "前后日报",
+        "kw_sep": "、",
+        "example": "示例",
+    },
+    "en": {
+        "html_lang": "en",
+        "hreflang": "en",
+        "og_locale": "en_US",
+        "prefix": "en/",
+        "site_title": "Ethereum Research Daily",
+        "brand": "Ethereum Research Daily | 以太坊研究日报",
+        "brand_short": "Ethereum Research Daily 以太坊研究日报",
+        "eyebrow": "以太坊研究日报",
+        "lede": "A daily record of what changed in Ethereum protocol work, research and the ecosystem.",
+        "intro": (
+            "This site is rebuilt every morning from that day's report. The pipeline pulls out the keywords, "
+            "highlights, an image and every source link, turns them into a card and deploys it to Cloudflare Pages. "
+            "There is one card per day; open it to see the items and links grouped by topic. Priority topics get "
+            "in-depth coverage, and everything else is a short note on what it means for users and how to use it. "
+            "Each issue covers what changed since the previous one, every item carries its source and date, "
+            "and nothing is made up."
+        ),
+        "email_text": "To suggest a source, email",
+        "sentence_end": ".",
+        "sources_title": "Sources",
+        "sources": [
+            "Vitalik Buterin and a relevance-ranked list of the top 100 X accounts",
+            "ethereum.org and @ethereum",
+            "Ethereum Magicians",
+            "GitHub ethereum/EIPs and ethereum/ERCs",
+            "ethresear.ch",
+            "Vitalik's blog",
+            "EF Blog",
+            "ethereum/pm All Core Devs calls",
+            "Week in Ethereum News (and its successor, Ethereal news)",
+            "L2BEAT / ETHBEAT",
+            "ultrasound.money",
+            "growthepie",
+        ],
+        "about_heading": "About",
+        "sources_link_pre": "The full list of sources is on the ",
+        "sources_link": "About page",
+        "nav_label": "Site navigation",
+        "nav_home": "Home",
+        "nav_archive": "Archive",
+        "nav_about": "About",
+        "switch_label": "中文",
+        "switch_title": "阅读中文版",
+        "list_label": "Daily reports",
+        "empty_title": "No reports yet",
+        "empty_text": "Add a day's data file to the data directory and rebuild.",
+        "pager_label": "Pagination",
+        "prev": "Previous",
+        "next": "Next",
+        "page_status": "Page {page} of {total} · {start} to {end}",
+        "page_title": "Page {page}",
+        "count_note": "{days} days in total, {size} per page. Older reports are on the following pages and in the <a href=\"{href}\">monthly archive</a>.",
+        "archive_title": "Monthly archive",
+        "archive_lede": "{days} daily reports, newest month first.",
+        "archive_desc": "Browse every Ethereum Research Daily report by month, with its keywords.",
+        "archive_count": "{n} days",
+        "archive_empty": "No reports yet.",
+        "back": "Back to all reports",
+        "image_alt": "Image for {date}",
+        "credit_label": "Image: ",
+        "credit_fallback": "Image source",
+        "untitled": "Untitled item",
+        "other_topic": "Other",
+        "no_items": "No items have been recorded for this day yet.",
+        "day_nav_label": "Previous and next reports",
+        "kw_sep": ", ",
+        "example": "Example",
+    },
+}
+
+EN_MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+             "August", "September", "October", "November", "December"]
 
 
 def esc(value) -> str:
     return html.escape("" if value is None else str(value), quote=True)
 
 
-def format_cn_date(iso: str) -> str:
+def fmt_date(iso: str, lang: str) -> str:
     dt = datetime.strptime(iso, "%Y-%m-%d")
+    if lang == "en":
+        return f"{EN_MONTHS[dt.month - 1]} {dt.day}, {dt.year}"
     return f"{dt.year}年{dt.month}月{dt.day}日"
 
 
-def format_cn_month(ym: str) -> str:
+def fmt_month(ym: str, lang: str) -> str:
     dt = datetime.strptime(ym, "%Y-%m")
+    if lang == "en":
+        return f"{EN_MONTHS[dt.month - 1]} {dt.year}"
     return f"{dt.year}年{dt.month}月"
+
+
+def tr(obj: dict, key: str, lang: str, default=""):
+    """Field in the requested language, falling back to the Chinese field."""
+    if not isinstance(obj, dict):
+        return default
+    if lang == "en":
+        val = obj.get(f"{key}_en")
+        if val:
+            return val
+    val = obj.get(key)
+    return val if val else default
+
+
+def day_keywords(day: dict, lang: str, limit: int = 5) -> list[str]:
+    raw = tr(day, "keywords", lang, []) or []
+    return [str(k).strip() for k in raw if str(k).strip()][:limit]
 
 
 def normalize_base_path(raw: str) -> str:
@@ -73,18 +217,35 @@ def normalize_base_path(raw: str) -> str:
     return path.rstrip("/")
 
 
-def root_for(base: str, depth: int) -> str:
-    """Prefix that points at the site root from a page `depth` directories deep.
+class Ctx:
+    """Where a page sits: its language, its path inside the language tree,
+    and how to reach the site root and the language root from it."""
 
-    With a base path every link is root-absolute (/ethereum/...). Without one,
-    links stay relative so the same dist/ works anywhere. depth < 0 means
-    "served from an unknown path" (404.html) and uses root-absolute links.
-    """
-    if base:
-        return f"{base}/"
-    if depth < 0:
-        return "/"
-    return "./" if depth == 0 else "../" * depth
+    def __init__(self, lang: str, path: str, base: str, site_url: str):
+        self.lang = lang
+        self.s = STRINGS[lang]
+        self.path = path  # e.g. "", "page/2/", "days/2026-11-10/"
+        self.base = base
+        self.site_url = site_url.rstrip("/") + base
+        depth = path.count("/") + (1 if lang == "en" else 0)
+        if base:
+            self.root = f"{base}/"
+        elif depth < 0:
+            self.root = "/"
+        else:
+            self.root = "./" if depth == 0 else "../" * depth
+        self.lroot = self.root + self.s["prefix"]
+
+    def href(self, path: str) -> str:
+        return self.lroot + path
+
+    def other_href(self, lang: str) -> str:
+        return self.root + STRINGS[lang]["prefix"] + self.path
+
+    def abs_url(self, lang: str | None = None, path: str | None = None) -> str:
+        lang = lang or self.lang
+        path = self.path if path is None else path
+        return f"{self.site_url}/{STRINGS[lang]['prefix']}{path}"
 
 
 def load_days(data_dir: Path) -> list[dict]:
@@ -108,13 +269,14 @@ def load_days(data_dir: Path) -> list[dict]:
     return days
 
 
-def item_groups(items: list) -> list[tuple[str, list]]:
+def item_groups(items: list, lang: str) -> list[tuple[str, list]]:
     groups: list[tuple[str, list]] = []
     index: dict[str, list] = {}
+    other = STRINGS[lang]["other_topic"]
     for item in items or []:
         if not isinstance(item, dict):
             continue
-        topic = (item.get("topic") or "其他").strip() or "其他"
+        topic = (tr(item, "topic", lang) or other).strip() or other
         if topic not in index:
             bucket: list = []
             index[topic] = bucket
@@ -131,108 +293,144 @@ def image_name(day: dict) -> str:
     return Path(local).name if local else ""
 
 
-def page_href(root: str, n: int) -> str:
-    return root if n <= 1 else f"{root}page/{n}/"
+def page_path(n: int) -> str:
+    return "" if n <= 1 else f"page/{n}/"
 
 
-def nav_html(root: str, current: str) -> str:
-    links = [("home", "目录", root), ("archive", "归档", f"{root}archive/"), ("about", "关于", f"{root}about/")]
+def nav_html(c: Ctx, current: str) -> str:
+    s = c.s
+    links = [("home", s["nav_home"], c.href("")), ("archive", s["nav_archive"], c.href("archive/")),
+             ("about", s["nav_about"], c.href("about/"))]
     parts = []
     for key, label, href in links:
         cls = ' class="current"' if key == current else ""
-        parts.append(f'<a href="{esc(href)}"{cls}>{label}</a>')
-    return f'<nav class="site-nav" aria-label="站点导航">{"".join(parts)}</nav>'
-
-
-def suggest_html() -> str:
-    mail = esc(SITE_CONTACT_EMAIL)
-    return (
-        f'<p class="suggest">{esc(SITE_INTRO_EMAIL_TEXT)} '
-        f'<a href="mailto:{mail}">{mail}</a>。</p>'
+        parts.append(f'<a href="{esc(href)}"{cls}>{esc(label)}</a>')
+    other = "en" if c.lang == "zh" else "zh"
+    parts.append(
+        f'<a class="lang-switch" href="{esc(c.other_href(other))}" hreflang="{STRINGS[other]["hreflang"]}" '
+        f'lang="{STRINGS[other]["html_lang"]}" title="{esc(s["switch_title"])}">{esc(s["switch_label"])}</a>'
     )
+    return f'<nav class="site-nav" aria-label="{esc(s["nav_label"])}">{"".join(parts)}</nav>'
 
 
-def intro_block_html(include_sources: bool, about_url: str = "") -> str:
-    sources = ""
+def suggest_html(c: Ctx) -> str:
+    mail = esc(SITE_CONTACT_EMAIL)
+    return f'<p class="suggest">{esc(c.s["email_text"])} <a href="mailto:{mail}">{mail}</a>{c.s["sentence_end"]}</p>'
+
+
+def intro_block_html(c: Ctx, include_sources: bool) -> str:
+    s = c.s
     if include_sources:
-        items = "".join(f"<li>{esc(s)}</li>" for s in SITE_SOURCES)
-        sources = f'<h3 id="sources">研究来源</h3><ul class="source-list">{items}</ul>'
-    elif about_url:
+        items = "".join(f"<li>{esc(x)}</li>" for x in s["sources"])
+        sources = f'<h3 id="sources">{esc(s["sources_title"])}</h3><ul class="source-list">{items}</ul>'
+    else:
         sources = (
-            f'<p class="sources-link-note">完整研究来源见'
-            f'<a href="{esc(about_url)}">关于页</a>。</p>'
+            f'<p class="sources-link-note">{esc(s["sources_link_pre"])}'
+            f'<a href="{esc(c.href("about/"))}">{esc(s["sources_link"])}</a>{s["sentence_end"]}</p>'
         )
     return (
-        f'<section class="about-intro">'
-        f"<h2>关于本页</h2>"
-        f"<p>{esc(SITE_INTRO)}</p>"
-        f"{sources}"
-        f"{suggest_html()}"
-        f"</section>"
+        f'<section class="about-intro"><h2>{esc(s["about_heading"])}</h2>'
+        f"<p>{esc(s['intro'])}</p>{sources}{suggest_html(c)}</section>"
     )
 
 
-def footer_html(root: str) -> str:
+def footer_html(c: Ctx) -> str:
+    s = c.s
     mail = esc(SITE_CONTACT_EMAIL)
+    other = "en" if c.lang == "zh" else "zh"
     return (
-        f'<footer class="site-footer">'
-        f"<p>{esc(SITE_TITLE)}"
-        f' · <a href="{esc(root)}">目录</a>'
-        f' · <a href="{esc(root)}archive/">归档</a>'
-        f' · <a href="{esc(root)}about/">关于</a>'
-        f' · <a href="mailto:{mail}">{mail}</a></p>'
-        f"</footer>"
+        f'<footer class="site-footer"><p>{esc(s["site_title"])}'
+        f' · <a href="{esc(c.href(""))}">{esc(s["nav_home"])}</a>'
+        f' · <a href="{esc(c.href("archive/"))}">{esc(s["nav_archive"])}</a>'
+        f' · <a href="{esc(c.href("about/"))}">{esc(s["nav_about"])}</a>'
+        f' · <a href="{esc(c.other_href(other))}" hreflang="{STRINGS[other]["hreflang"]}">{esc(s["switch_label"])}</a>'
+        f' · <a href="mailto:{mail}">{mail}</a></p></footer>'
     )
 
 
-def head_html(root: str, title: str, description: str) -> str:
+def head_html(c: Ctx, title: str, description: str, *, og_type: str = "website",
+              image_abs: str = "", keywords: list[str] | None = None, published: str = "") -> str:
+    s = c.s
+    desc = re.sub(r"\s+", " ", description or s["lede"]).strip()
+    if len(desc) > 300:
+        desc = desc[:297].rstrip() + "..."
+    alternates = "".join(
+        f'\n  <link rel="alternate" hreflang="{STRINGS[l]["hreflang"]}" href="{esc(c.abs_url(l))}">'
+        for l in LANG_ORDER
+    )
+    alternates += f'\n  <link rel="alternate" hreflang="x-default" href="{esc(c.abs_url("zh"))}">'
+    other = "en" if c.lang == "zh" else "zh"
+    og = [
+        f'<meta property="og:type" content="{og_type}">',
+        f'<meta property="og:site_name" content="{esc(s["brand"])}">',
+        f'<meta property="og:title" content="{esc(title)}">',
+        f'<meta property="og:description" content="{esc(desc)}">',
+        f'<meta property="og:url" content="{esc(c.abs_url())}">',
+        f'<meta property="og:locale" content="{s["og_locale"]}">',
+        f'<meta property="og:locale:alternate" content="{STRINGS[other]["og_locale"]}">',
+        f'<meta name="twitter:card" content="{"summary_large_image" if image_abs else "summary"}">',
+        f'<meta name="twitter:title" content="{esc(title)}">',
+        f'<meta name="twitter:description" content="{esc(desc)}">',
+    ]
+    if image_abs:
+        og.append(f'<meta property="og:image" content="{esc(image_abs)}">')
+        og.append(f'<meta name="twitter:image" content="{esc(image_abs)}">')
+    if published:
+        og.append(f'<meta property="article:published_time" content="{esc(published)}">')
+    kw = f'\n  <meta name="keywords" content="{esc(", ".join(keywords))}">' if keywords else ""
+    og_html = "".join(f"\n  {x}" for x in og)
     return f"""<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{s['html_lang']}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{esc(title)}</title>
-  <meta name="description" content="{esc(description)}">
-  <link rel="stylesheet" href="{esc(root)}styles.css">
+  <meta name="description" content="{esc(desc)}">{kw}
+  <link rel="canonical" href="{esc(c.abs_url())}">{alternates}{og_html}
+  <link rel="sitemap" type="application/xml" href="{esc(c.root)}sitemap.xml">
+  <link rel="stylesheet" href="{esc(c.root)}styles.css">
 </head>"""
 
 
-def media_block(day: dict, root: str, img_exists: bool, eager: bool = False) -> tuple[str, str, str]:
+def image_abs(c: Ctx, day: dict | None, existing: set[str]) -> str:
+    if not day:
+        return ""
+    name = image_name(day)
+    return f"{c.site_url}/assets/{name}" if name and name in existing else ""
+
+
+def media_block(c: Ctx, day: dict, img_exists: bool, eager: bool = False) -> tuple[str, str, str]:
     name = image_name(day) if img_exists else ""
     image = day.get("image") if isinstance(day.get("image"), dict) else {}
-    credit = (image.get("credit") or "").strip()
+    credit = (tr(image, "credit", c.lang) or "").strip()
     source_url = (image.get("source_url") or "").strip()
-    alt = f"{format_cn_date(day['date'])} 配图"
+    alt = c.s["image_alt"].format(date=fmt_date(day["date"], c.lang))
     if name:
         loading = "eager" if eager else "lazy"
         fig = (
-            f'<div class="media"><img src="{esc(root)}assets/{esc(name)}" alt="{esc(alt)}" '
+            f'<div class="media"><img src="{esc(c.root)}assets/{esc(name)}" alt="{esc(alt)}" '
             f'width="1200" height="675" loading="{loading}" decoding="async"></div>'
         )
     else:
         fig = (
-            f'<div class="media placeholder" aria-hidden="true">'
-            f'<div class="placeholder-mark"></div>'
-            f'<div class="placeholder-date">{esc(format_cn_date(day["date"]))}</div>'
-            f"</div>"
+            f'<div class="media placeholder" aria-hidden="true"><div class="placeholder-mark"></div>'
+            f'<div class="placeholder-date">{esc(fmt_date(day["date"], c.lang))}</div></div>'
         )
     return fig, credit, source_url
 
 
-def render_card(day: dict, root: str, img_exists: bool, eager: bool) -> str:
-    fig, _, _ = media_block(day, root, img_exists, eager)
-    keywords = [str(k).strip() for k in (day.get("keywords") or []) if str(k).strip()][:5]
-    tags = "".join(f"<li>{esc(k)}</li>" for k in keywords)
-    badge = '<p class="badge">示例</p>' if day.get("example") else ""
-    href = f"{root}days/{day['date']}/"
-    summary = (day.get("summary") or "").strip()
+def render_card(c: Ctx, day: dict, img_exists: bool, eager: bool) -> str:
+    fig, _, _ = media_block(c, day, img_exists, eager)
+    tags = "".join(f"<li>{esc(k)}</li>" for k in day_keywords(day, c.lang))
+    badge = f'<p class="badge">{esc(c.s["example"])}</p>' if day.get("example") else ""
+    summary = (tr(day, "summary", c.lang) or "").strip()
     return f"""
 <article class="card">
-  <a class="card-link" href="{esc(href)}">
+  <a class="card-link" href="{esc(c.href("days/" + day["date"] + "/"))}">
     {fig}
     <div class="card-body">
       {badge}
-      <time datetime="{esc(day["date"])}">{esc(format_cn_date(day["date"]))}</time>
+      <time datetime="{esc(day["date"])}">{esc(fmt_date(day["date"], c.lang))}</time>
       <ul class="tags">{tags}</ul>
       <p class="summary">{esc(summary)}</p>
     </div>
@@ -241,14 +439,15 @@ def render_card(day: dict, root: str, img_exists: bool, eager: bool) -> str:
 """
 
 
-def pager_html(root: str, page: int, total: int) -> str:
+def pager_html(c: Ctx, page: int, total: int) -> str:
     if total <= 1:
         return ""
+    s = c.s
     parts = []
     if page > 1:
-        parts.append(f'<a class="prev" rel="prev" href="{esc(page_href(root, page - 1))}">上一页</a>')
+        parts.append(f'<a class="prev" rel="prev" href="{esc(c.href(page_path(page - 1)))}">{esc(s["prev"])}</a>')
     else:
-        parts.append('<span class="prev disabled">上一页</span>')
+        parts.append(f'<span class="prev disabled">{esc(s["prev"])}</span>')
     shown = sorted({1, total, page - 2, page - 1, page, page + 1, page + 2})
     last = 0
     for n in shown:
@@ -259,60 +458,63 @@ def pager_html(root: str, page: int, total: int) -> str:
         if n == page:
             parts.append(f'<span class="current" aria-current="page">{n}</span>')
         else:
-            parts.append(f'<a href="{esc(page_href(root, n))}">{n}</a>')
+            parts.append(f'<a href="{esc(c.href(page_path(n)))}">{n}</a>')
         last = n
     if page < total:
-        parts.append(f'<a class="next" rel="next" href="{esc(page_href(root, page + 1))}">下一页</a>')
+        parts.append(f'<a class="next" rel="next" href="{esc(c.href(page_path(page + 1)))}">{esc(s["next"])}</a>')
     else:
-        parts.append('<span class="next disabled">下一页</span>')
-    return f'<nav class="pager" aria-label="分页">{"".join(parts)}</nav>'
+        parts.append(f'<span class="next disabled">{esc(s["next"])}</span>')
+    return f'<nav class="pager" aria-label="{esc(s["pager_label"])}">{"".join(parts)}</nav>'
 
 
-def render_index_page(days: list[dict], page: int, total: int, root: str, existing: set[str], total_days: int) -> str:
+def render_index_page(c: Ctx, days: list[dict], page: int, total: int, existing: set[str], total_days: int) -> str:
+    s = c.s
     if days:
-        cards = [render_card(d, root, image_name(d) in existing, eager=(page == 1 and i == 0)) for i, d in enumerate(days)]
-        main = f'<section class="card-list" aria-label="日报列表">{"".join(cards)}</section>'
+        cards = [render_card(c, d, image_name(d) in existing, eager=(page == 1 and i == 0)) for i, d in enumerate(days)]
+        main = f'<section class="card-list" aria-label="{esc(s["list_label"])}">{"".join(cards)}</section>'
     else:
-        main = (
-            '<section class="empty">'
-            "<h2>暂无日报</h2>"
-            "<p>把当天的数据文件放进 data 目录后重新构建即可。</p>"
-            "</section>"
-        )
+        main = f'<section class="empty"><h2>{esc(s["empty_title"])}</h2><p>{esc(s["empty_text"])}</p></section>'
     if page == 1:
-        intro = intro_block_html(include_sources=False, about_url=f"{root}about/")
+        intro = intro_block_html(c, include_sources=False)
         status = ""
-        title = SITE_TITLE
+        title = s["brand"]
+        desc = f'{s["lede"]} {s["intro"]}'
     else:
         intro = ""
         first, last = days[0]["date"], days[-1]["date"]
-        status = (
-            f'<p class="page-status">第 {page} / {total} 页 · '
-            f"{esc(format_cn_date(last))} 至 {esc(format_cn_date(first))}</p>"
-        )
-        title = f"第 {page} 页 · {SITE_TITLE}"
-    count_note = f'<p class="page-status">共 {total_days} 天，每页 {PAGE_SIZE} 天。更早的日报见分页或<a href="{esc(root)}archive/">按月归档</a>。</p>' if page == 1 and total > 1 else ""
-    return f"""{head_html(root, title, SITE_LEDE)}
+        span = s["page_status"].format(page=page, total=total, start=fmt_date(last, c.lang), end=fmt_date(first, c.lang))
+        status = f'<p class="page-status">{esc(span)}</p>'
+        title = f'{s["page_title"].format(page=page)} · {s["brand"]}'
+        desc = f'{s["site_title"]}: {span}.'
+    count_note = (
+        f'<p class="page-status">{s["count_note"].format(days=total_days, size=PAGE_SIZE, href=esc(c.href("archive/")))}</p>'
+        if page == 1 and total > 1 else ""
+    )
+    kws = []
+    for d in days[:3]:
+        kws += day_keywords(d, c.lang, 3)
+    return f"""{head_html(c, title, desc, image_abs=image_abs(c, days[0] if days else None, existing), keywords=kws)}
 <body>
   <header class="site-header">
-    {nav_html(root, "home")}
-    <p class="eyebrow">Ethereum Research Digest</p>
-    <h1>{esc(SITE_TITLE)}</h1>
-    <p class="lede">{esc(SITE_LEDE)}</p>
+    {nav_html(c, "home")}
+    <p class="eyebrow">{esc(s["eyebrow"])}</p>
+    <h1>{esc(s["site_title"])}</h1>
+    <p class="lede">{esc(s["lede"])}</p>
   </header>
   {intro}
   <main>
     {status}{count_note}
     {main}
-    {pager_html(root, page, total)}
+    {pager_html(c, page, total)}
   </main>
-  {footer_html(root)}
+  {footer_html(c)}
 </body>
 </html>
 """
 
 
-def render_archive(days: list[dict], root: str) -> str:
+def render_archive(c: Ctx, days: list[dict]) -> str:
+    s = c.s
     months: dict[str, list[dict]] = {}
     for d in days:
         months.setdefault(d["date"][:7], []).append(d)
@@ -320,96 +522,100 @@ def render_archive(days: list[dict], root: str) -> str:
     for ym in sorted(months, reverse=True):
         rows = []
         for d in months[ym]:
-            kws = "、".join(str(k).strip() for k in (d.get("keywords") or [])[:5] if str(k).strip())
+            kws = s["kw_sep"].join(day_keywords(d, c.lang))
             rows.append(
-                f'<li><a class="day" href="{esc(root)}days/{esc(d["date"])}/">{esc(format_cn_date(d["date"]))}</a>'
+                f'<li><a class="day" href="{esc(c.href("days/" + d["date"] + "/"))}">{esc(fmt_date(d["date"], c.lang))}</a>'
                 f'<span class="kw">{esc(kws)}</span></li>'
             )
         sections.append(
-            f'<section class="archive-month" id="m{esc(ym)}"><h2>{esc(format_cn_month(ym))}'
-            f'<span class="count">{len(months[ym])} 天</span></h2>'
+            f'<section class="archive-month" id="m{esc(ym)}"><h2>{esc(fmt_month(ym, c.lang))}'
+            f'<span class="count">{esc(s["archive_count"].format(n=len(months[ym])))}</span></h2>'
             f'<ul class="archive-list">{"".join(rows)}</ul></section>'
         )
-    body = "".join(sections) or "<p>暂无日报。</p>"
-    return f"""{head_html(root, f"归档 · {SITE_TITLE}", "按月浏览全部日报。")}
+    body = "".join(sections) or f"<p>{esc(s['archive_empty'])}</p>"
+    return f"""{head_html(c, f'{s["archive_title"]} · {s["brand"]}', s["archive_desc"])}
 <body>
   <header class="site-header">
-    {nav_html(root, "archive")}
-    <p class="eyebrow">Ethereum Research Digest</p>
-    <h1>按月归档</h1>
-    <p class="lede">共 {len(days)} 天日报，按月份倒序排列。</p>
+    {nav_html(c, "archive")}
+    <p class="eyebrow">{esc(s["eyebrow"])}</p>
+    <h1>{esc(s["archive_title"])}</h1>
+    <p class="lede">{esc(s["archive_lede"].format(days=len(days)))}</p>
   </header>
   <main class="archive-main">
     {body}
   </main>
-  {footer_html(root)}
+  {footer_html(c)}
 </body>
 </html>
 """
 
 
-def render_day(day: dict, root: str, img_exists: bool, newer: dict | None, older: dict | None) -> str:
-    fig, credit, source_url = media_block(day, root, img_exists, eager=True)
-    keywords = [str(k).strip() for k in (day.get("keywords") or []) if str(k).strip()][:5]
-    tags = "".join(f"<li>{esc(k)}</li>" for k in keywords)
-    badge = '<p class="badge">示例</p>' if day.get("example") else ""
-    summary = (day.get("summary") or "").strip()
+def day_title(day: dict, lang: str) -> str:
+    """Title that carries the date and keywords in both languages."""
+    other = "en" if lang == "zh" else "zh"
+    sep = STRINGS[lang]["kw_sep"]
+    osep = STRINGS[other]["kw_sep"]
+    first = f'{fmt_date(day["date"], lang)} {sep.join(day_keywords(day, lang, 3))}'
+    other_kw = [k for k in day_keywords(day, other, 3) if k not in day_keywords(day, lang, 3)]
+    second = f'{fmt_date(day["date"], other)} {osep.join(other_kw)}'.strip()
+    return f"{first} · {second} | {STRINGS[lang]['brand_short']}"
+
+
+def render_day(c: Ctx, day: dict, img_exists: bool, newer: dict | None, older: dict | None, existing: set[str]) -> str:
+    s = c.s
+    fig, credit, source_url = media_block(c, day, img_exists, eager=True)
+    kw = day_keywords(day, c.lang)
+    tags = "".join(f"<li>{esc(k)}</li>" for k in kw)
+    badge = f'<p class="badge">{esc(s["example"])}</p>' if day.get("example") else ""
+    summary = (tr(day, "summary", c.lang) or "").strip()
     groups_html = []
-    for topic, items in item_groups(day.get("items") or []):
+    for topic, items in item_groups(day.get("items") or [], c.lang):
         entries = []
         for item in items:
-            title = (item.get("title") or "").strip() or "未命名条目"
-            note = (item.get("note") or "").strip()
+            title = (tr(item, "title", c.lang) or "").strip() or s["untitled"]
+            note = (tr(item, "note", c.lang) or "").strip()
             url = (item.get("url") or "").strip()
             item_date = (item.get("date") or day["date"]).strip()
             title_html = (
-                f'<h3><a href="{esc(url)}" rel="noopener noreferrer">{esc(title)}</a></h3>'
-                if url
-                else f"<h3>{esc(title)}</h3>"
+                f'<h3><a href="{esc(url)}" rel="noopener noreferrer">{esc(title)}</a></h3>' if url else f"<h3>{esc(title)}</h3>"
             )
-            note_html = f"<p class=\"note\">{esc(note)}</p>" if note else ""
+            note_html = f'<p class="note">{esc(note)}</p>' if note else ""
             meta_bits = []
             if url:
-                meta_bits.append(
-                    f'<a class="source" href="{esc(url)}" rel="noopener noreferrer">{esc(url)}</a>'
-                )
+                meta_bits.append(f'<a class="source" href="{esc(url)}" rel="noopener noreferrer">{esc(url)}</a>')
             if item_date:
                 meta_bits.append(f'<time datetime="{esc(item_date)}">{esc(item_date)}</time>')
             meta_html = f'<p class="meta">{" ".join(meta_bits)}</p>' if meta_bits else ""
             entries.append(f'<article class="item">{title_html}{note_html}{meta_html}</article>')
-        groups_html.append(
-            f'<section class="topic"><h2>{esc(topic)}</h2>{"".join(entries)}</section>'
-        )
-    topics = "".join(groups_html) or '<p class="empty-items">这一天还没有收录条目。</p>'
+        groups_html.append(f'<section class="topic"><h2>{esc(topic)}</h2>{"".join(entries)}</section>')
+    topics = "".join(groups_html) or f'<p class="empty-items">{esc(s["no_items"])}</p>'
     credit_html = ""
     if credit or source_url:
-        label = esc(credit or "配图来源")
-        if source_url:
-            credit_html = (
-                f'<p class="credit">配图来源：'
-                f'<a href="{esc(source_url)}" rel="noopener noreferrer">{label}</a></p>'
-            )
-        else:
-            credit_html = f'<p class="credit">配图来源：{label}</p>'
+        label = esc(credit or s["credit_fallback"])
+        inner = f'<a href="{esc(source_url)}" rel="noopener noreferrer">{label}</a>' if source_url else label
+        credit_html = f'<p class="credit">{esc(s["credit_label"])}{inner}</p>'
     left = (
-        f'<a rel="prev" href="{esc(root)}days/{esc(older["date"])}/">← {esc(format_cn_date(older["date"]))}</a>'
+        f'<a rel="prev" href="{esc(c.href("days/" + older["date"] + "/"))}">← {esc(fmt_date(older["date"], c.lang))}</a>'
         if older else "<span></span>"
     )
     right = (
-        f'<a rel="next" href="{esc(root)}days/{esc(newer["date"])}/">{esc(format_cn_date(newer["date"]))} →</a>'
+        f'<a rel="next" href="{esc(c.href("days/" + newer["date"] + "/"))}">{esc(fmt_date(newer["date"], c.lang))} →</a>'
         if newer else "<span></span>"
     )
-    day_nav = f'<nav class="day-nav" aria-label="前后日报">{left}{right}</nav>'
-    title = f"{format_cn_date(day['date'])} · {SITE_TITLE}"
-    return f"""{head_html(root, title, summary or SITE_LEDE)}
+    day_nav = f'<nav class="day-nav" aria-label="{esc(s["day_nav_label"])}">{left}{right}</nav>'
+    other = "en" if c.lang == "zh" else "zh"
+    all_kw = kw + [k for k in day_keywords(day, other) if k not in kw]
+    head = head_html(c, day_title(day, c.lang), summary or s["lede"], og_type="article",
+                     image_abs=image_abs(c, day, existing), keywords=all_kw, published=day["date"])
+    return f"""{head}
 <body>
   <header class="day-header">
-    {nav_html(root, "day")}
-    <a class="back" href="{esc(root)}">返回目录</a>
+    {nav_html(c, "day")}
+    <a class="back" href="{esc(c.href(""))}">{esc(s["back"])}</a>
     {badge}
-    <p class="eyebrow">Ethereum Research Digest</p>
-    <time datetime="{esc(day["date"])}">{esc(format_cn_date(day["date"]))}</time>
-    <h1>{esc(SITE_TITLE)}</h1>
+    <p class="eyebrow">{esc(s["eyebrow"])}</p>
+    <time datetime="{esc(day["date"])}">{esc(fmt_date(day["date"], c.lang))}</time>
+    <h1>{esc(s["site_title"])}</h1>
     <ul class="tags">{tags}</ul>
     <p class="lede">{esc(summary)}</p>
   </header>
@@ -421,43 +627,72 @@ def render_day(day: dict, root: str, img_exists: bool, newer: dict | None, older
     {topics}
     {day_nav}
   </main>
-  {footer_html(root)}
+  {footer_html(c)}
 </body>
 </html>
 """
 
 
-def render_404(root: str) -> str:
-    return f"""{head_html(root, f"页面不存在 · {SITE_TITLE}", SITE_LEDE)}
-<body>
-  <main class="empty">
-    {nav_html(root, "")}
-    <h1>页面不存在</h1>
-    <p>这条地址没有对应的日报。</p>
-    <p><a href="{esc(root)}">回到首页</a> · <a href="{esc(root)}archive/">归档</a> · <a href="{esc(root)}about/">关于</a></p>
-  </main>
-</body>
-</html>
-"""
-
-
-def render_about(root: str) -> str:
-    intro = intro_block_html(include_sources=True)
-    return f"""{head_html(root, f"关于 · {SITE_TITLE}", SITE_INTRO)}
+def render_about(c: Ctx) -> str:
+    s = c.s
+    return f"""{head_html(c, f'{s["about_heading"]} · {s["brand"]}', s["intro"])}
 <body>
   <header class="site-header">
-    {nav_html(root, "about")}
-    <p class="eyebrow">Ethereum Research Digest</p>
-    <h1>关于本页</h1>
-    <p class="lede">{esc(SITE_LEDE)}</p>
+    {nav_html(c, "about")}
+    <p class="eyebrow">{esc(s["eyebrow"])}</p>
+    <h1>{esc(s["about_heading"])}</h1>
+    <p class="lede">{esc(s["lede"])}</p>
   </header>
   <main class="about-page">
-    {intro}
+    {intro_block_html(c, include_sources=True)}
   </main>
-  {footer_html(root)}
+  {footer_html(c)}
 </body>
 </html>
 """
+
+
+def render_404(base: str) -> str:
+    root = f"{base}/" if base else "/"
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>页面不存在 · Page not found | 以太坊研究日报 Ethereum Research Daily</title>
+  <link rel="stylesheet" href="{root}styles.css">
+</head>
+<body>
+  <main class="empty">
+    <h1>页面不存在</h1>
+    <p>这条地址没有对应的日报。<a href="{root}">回到首页</a> · <a href="{root}archive/">归档</a> · <a href="{root}about/">关于</a></p>
+    <h2 lang="en">Page not found</h2>
+    <p lang="en">There is no report at this address. <a href="{root}en/">Home</a> · <a href="{root}en/archive/">Archive</a> · <a href="{root}en/about/">About</a></p>
+  </main>
+</body>
+</html>
+"""
+
+
+def render_sitemap(site_url: str, paths: list[tuple[str, str]]) -> str:
+    def loc(lang: str, path: str) -> str:
+        return f"{site_url}/{STRINGS[lang]['prefix']}{path}"
+
+    rows = []
+    for path, lastmod in paths:
+        alts = "".join(
+            f'\n    <xhtml:link rel="alternate" hreflang="{STRINGS[l]["hreflang"]}" href="{esc(loc(l, path))}"/>'
+            for l in LANG_ORDER
+        ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{esc(loc("zh", path))}"/>'
+        lm = f"\n    <lastmod>{lastmod}</lastmod>" if lastmod else ""
+        for lang in LANG_ORDER:
+            rows.append(f"  <url>\n    <loc>{esc(loc(lang, path))}</loc>{lm}{alts}\n  </url>")
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        + "\n".join(rows) + "\n</urlset>\n"
+    )
 
 
 STYLES = """
@@ -739,6 +974,14 @@ img { max-width: 100%; display: block; }
 @media (max-width: 600px) { .archive-list li { grid-template-columns: 1fr; gap: 0.1rem; } }
 """
 
+EXTRA_STYLES = """
+.page-status { text-align: center; margin-left: auto; margin-right: auto; max-width: 46rem; }
+.site-nav { flex-wrap: wrap; align-items: baseline; }
+.site-nav a.lang-switch { margin-left: auto; border: 1px solid var(--line); border-radius: 999px; padding: 0 0.7rem; }
+.site-nav a.lang-switch:hover { border-color: var(--accent); }
+html[lang="en"] body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans CJK SC", sans-serif; }
+"""
+
 
 def copy_images(days: list[dict], site_root: Path, dist_assets: Path) -> set[str]:
     dist_assets.mkdir(parents=True, exist_ok=True)
@@ -757,8 +1000,7 @@ def copy_images(days: list[dict], site_root: Path, dist_assets: Path) -> set[str
         if not src.is_file():
             print(f"warning: image not found for {day['date']}: {local}", file=sys.stderr)
             continue
-        dest = dist_assets / src.name
-        shutil.copyfile(src, dest)
+        shutil.copyfile(src, dist_assets / src.name)
         present.add(src.name)
     return present
 
@@ -770,58 +1012,65 @@ def write(path: Path, text: str) -> None:
 
 def main() -> int:
     here = Path(__file__).resolve().parent
-    parser = argparse.ArgumentParser(description="Build the Ethereum daily digest static site.")
+    parser = argparse.ArgumentParser(description="Build the bilingual Ethereum daily digest static site.")
     parser.add_argument("--data-dir", default=str(here / "data"))
     parser.add_argument("--out-dir", default=str(here / "dist"))
-    parser.add_argument(
-        "--base-path",
-        default="",
-        help="Optional root-absolute prefix such as /ethereum. Leave empty (default) to use relative links.",
-    )
+    parser.add_argument("--base-path", default="",
+                        help="Optional root-absolute prefix such as /ethereum. Leave empty (default) for relative links.")
+    parser.add_argument("--site-url", default=DEFAULT_SITE_URL,
+                        help="Public origin used for canonical, hreflang, Open Graph and sitemap URLs.")
     args = parser.parse_args()
 
-    data_dir = Path(args.data_dir)
-    out_dir = Path(args.out_dir)
+    data_dir, out_dir = Path(args.data_dir), Path(args.out_dir)
     base = normalize_base_path(args.base_path)
-
+    site_url = args.site_url.rstrip("/")
     days = load_days(data_dir)
 
     if out_dir.exists():
         shutil.rmtree(out_dir)
     out_dir.mkdir(parents=True)
-
     existing = copy_images(days, here, out_dir / "assets")
-    write(out_dir / "styles.css", STYLES.strip() + "\n")
+    write(out_dir / "styles.css", STYLES.strip() + "\n" + EXTRA_STYLES.strip() + "\n")
 
     total_pages = max(1, math.ceil(len(days) / PAGE_SIZE))
-    for page in range(1, total_pages + 1):
-        chunk = days[(page - 1) * PAGE_SIZE : page * PAGE_SIZE]
-        if page == 1:
-            write(out_dir / "index.html", render_index_page(chunk, 1, total_pages, root_for(base, 0), existing, len(days)))
-        else:
-            write(
-                out_dir / "page" / str(page) / "index.html",
-                render_index_page(chunk, page, total_pages, root_for(base, 2), existing, len(days)),
-            )
-    write(out_dir / "archive" / "index.html", render_archive(days, root_for(base, 1)))
-    write(out_dir / "about" / "index.html", render_about(root_for(base, 1)))
-    write(out_dir / "404.html", render_404(root_for(base, -1)))
-    write(
-        out_dir / "_redirects",
-        "/page/1 / 301\n/page/1/ / 301\n",
-    )
-    for i, day in enumerate(days):
-        newer = days[i - 1] if i > 0 else None
-        older = days[i + 1] if i + 1 < len(days) else None
-        write(
-            out_dir / "days" / day["date"] / "index.html",
-            render_day(day, root_for(base, 2), image_name(day) in existing, newer, older),
-        )
+    missing_en = [d["date"] for d in days if not d.get("summary_en")]
+    sitemap_paths: list[tuple[str, str]] = []
+    newest = days[0]["date"] if days else ""
+
+    for lang in LANG_ORDER:
+        lang_dir = out_dir / STRINGS[lang]["prefix"]
+        for page in range(1, total_pages + 1):
+            chunk = days[(page - 1) * PAGE_SIZE: page * PAGE_SIZE]
+            c = Ctx(lang, page_path(page), base, site_url)
+            write(lang_dir / page_path(page) / "index.html",
+                  render_index_page(c, chunk, page, total_pages, existing, len(days)))
+            if lang == "zh":
+                sitemap_paths.append((page_path(page), chunk[0]["date"] if chunk else newest))
+        write(lang_dir / "archive" / "index.html", render_archive(Ctx(lang, "archive/", base, site_url), days))
+        write(lang_dir / "about" / "index.html", render_about(Ctx(lang, "about/", base, site_url)))
+        for i, day in enumerate(days):
+            newer = days[i - 1] if i > 0 else None
+            older = days[i + 1] if i + 1 < len(days) else None
+            path = f"days/{day['date']}/"
+            write(lang_dir / path / "index.html",
+                  render_day(Ctx(lang, path, base, site_url), day, image_name(day) in existing, newer, older, existing))
+            if lang == "zh":
+                sitemap_paths.append((path, day["date"]))
+    sitemap_paths[1:1] = [("archive/", newest), ("about/", "")]
+
+    write(out_dir / "404.html", render_404(base))
+    write(out_dir / "_redirects", "/page/1 / 301\n/page/1/ / 301\n/en/page/1 /en/ 301\n/en/page/1/ /en/ 301\n/en /en/ 301\n")
+    public = site_url + base
+    write(out_dir / "sitemap.xml", render_sitemap(public, sitemap_paths))
+    write(out_dir / "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {public}/sitemap.xml\n")
 
     files = sum(1 for p in out_dir.rglob("*") if p.is_file())
     size = sum(p.stat().st_size for p in out_dir.rglob("*") if p.is_file())
-    print(f"built {len(days)} day(s), {total_pages} index page(s), {files} file(s), {size / 1024:.0f} KiB -> {out_dir}")
-    print(f"base path: {base or 'relative links'}")
+    print(f"built {len(days)} day(s) x {len(LANG_ORDER)} languages, {total_pages} index page(s) each, "
+          f"{files} file(s), {size / 1024:.0f} KiB -> {out_dir}")
+    print(f"base path: {base or 'relative links'}; site url: {public}")
+    if missing_en:
+        print(f"warning: no English summary for {len(missing_en)} day(s): {', '.join(missing_en[:10])}", file=sys.stderr)
     return 0
 
 

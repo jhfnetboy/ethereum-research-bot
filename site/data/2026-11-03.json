@@ -14,166 +14,244 @@
       "title": "Aztec：发布 Aztec Tierra（Alpha V6）",
       "note": "21:01 宣布（@aztecnetwork 推文）。官方博客：修复此前版本已知漏洞（包括 V5 发现的严重问题），证明系统核心组件做了形式化验证；本地设备上客户端证明约 1 秒，比上一版快一倍；以太坊到 Aztec 的消息投递从平均约 2 分钟降到最快约 12 秒；网络有 3,000 多个验证者，没有特权查看密钥和中心化排序器。",
       "url": "https://aztec.network/blog/introducing-aztec-tierra",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Aztec: Aztec Tierra (Alpha V6) launches",
+      "note_en": "Announced at 21:01 (@aztecnetwork post). According to the blog, it fixes known vulnerabilities from earlier versions (including a critical issue found in V5), and core components of the proof system are formally verified. Client-side proving on a local device takes about 1 second, twice as fast as the previous version. Message delivery from Ethereum to Aztec drops from about 2 minutes on average to as little as about 12 seconds. The network has more than 3,000 validators, with no privileged viewing keys and no centralized sequencer.",
+      "topic_en": "Privacy: Aztec Tierra, Privacy Pools v2, Kohaku"
     },
     {
       "topic": "隐私：Aztec Tierra、Privacy Pools v2、Kohaku",
       "title": "@aztecnetwork 推文",
       "note": "Aztec：发布 Aztec Tierra（Alpha V6） 21:01 宣布（@aztecnetwork 推文）。官方博客：修复此前版本已知漏洞（包括 V5 发现的严重问题），证明系统核心组件做了形式化验证；本地设备上客户端证明约 1 秒，比上一版快一倍；以太坊到 Aztec 的消息投递从平均约 2 分钟降到最快约 12 秒；网络有 3,000 多个验证者，没有特权查看密钥和中心化排序器。",
       "url": "https://x.com/aztecnetwork/status/2117618265723912555",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "@aztecnetwork post",
+      "note_en": "Aztec: Aztec Tierra (Alpha V6) launches, announced at 21:01 (@aztecnetwork post). According to the blog, it fixes known vulnerabilities from earlier versions (including a critical issue found in V5), and core components of the proof system are formally verified. Client-side proving on a local device takes about 1 second, twice as fast as the previous version. Message delivery from Ethereum to Aztec drops from about 2 minutes on average to as little as about 12 seconds. The network has more than 3,000 validators, with no privileged viewing keys and no centralized sequencer.",
+      "topic_en": "Privacy: Aztec Tierra, Privacy Pools v2, Kohaku"
     },
     {
       "topic": "隐私：Aztec Tierra、Privacy Pools v2、Kohaku",
       "title": "Ameen Soleimani：Privacy Pools v2 在 Devcon 推出",
       "note": "16:13，本人签证被拒未能到场，由团队讲解。",
       "url": "https://x.com/ameensol/status/2117545674233217157",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Ameen Soleimani: Privacy Pools v2 launches at Devcon",
+      "note_en": "16:13. His visa was refused, so the team presented it.",
+      "topic_en": "Privacy: Aztec Tierra, Privacy Pools v2, Kohaku"
     },
     {
       "topic": "隐私：Aztec Tierra、Privacy Pools v2、Kohaku",
       "title": "Kassandra：让以太坊隐私更实用，可日常使用",
       "note": "18:43，配合 Kohaku 工具链；前一天她发布了 kohaku-cli v0.1.0。",
       "url": "https://x.com/kassandraETH/status/2117583445555822852",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Kassandra: making Ethereum privacy practical for everyday use",
+      "note_en": "18:43, together with the Kohaku toolchain. She released kohaku-cli v0.1.0 the day before.",
+      "topic_en": "Privacy: Aztec Tierra, Privacy Pools v2, Kohaku"
     },
     {
       "topic": "隐私：Aztec Tierra、Privacy Pools v2、Kohaku",
       "title": "Aztec：可编程隐私让银行在自家 app 里放查看密钥",
       "note": "22:32，网络本身不持有密钥。",
       "url": "https://x.com/aztecnetwork/status/2117641151486496772",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Aztec: programmable privacy lets banks keep viewing keys in their own apps",
+      "note_en": "22:32; the network itself holds no keys.",
+      "topic_en": "Privacy: Aztec Tierra, Privacy Pools v2, Kohaku"
     },
     {
       "topic": "Binance 初步报告：7702 授权如何让止损变慢",
       "title": "Binance：10 月 29 日安全事件初步调查",
       "note": "21:33 发布。约 63.4 亿美元资产受影响，约 28.5 亿美元已冻结或拦截。攻击者先控制了内部钱包签名服务，在正常提现流程之外发起交易。之后用签名服务利用 EIP-7702：发出 50 笔签名交易操纵账户 nonce，建立恶意委托授权，让攻击者控制的合约获得热钱包的部分执行权。",
       "url": "https://x.com/binance/status/2117626126214504729",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Binance: preliminary investigation of the October 29 security incident",
+      "note_en": "Published at 21:33. About $6.34 billion of assets were affected and about $2.85 billion has been frozen or intercepted. The attacker first took control of the internal wallet signing service and sent transactions outside the normal withdrawal flow. It then used the signing service to exploit EIP-7702: 50 signed transactions manipulated account nonces and set up a malicious delegation, giving an attacker-controlled contract partial execution rights over hot wallets.",
+      "topic_en": "Binance preliminary report: how 7702 authorizations slowed the response"
     },
     {
       "topic": "Binance 初步报告：7702 授权如何让止损变慢",
       "title": "dapplion 采访 lightclient：Binance 被盗用到了 EIP-7702",
       "note": "04:05，lightclient（7702 作者之一）的回答是“7702 只是已有攻击的加速剂”。",
       "url": "https://x.com/dapplion/status/2117362449942708670",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "dapplion interviews lightclient: the Binance theft used EIP-7702",
+      "note_en": "04:05. lightclient, one of the 7702 authors, answers that \"7702 is just an accelerant for an existing attack\".",
+      "topic_en": "Binance preliminary report: how 7702 authorizations slowed the response"
     },
     {
       "topic": "Binance 初步报告：7702 授权如何让止损变慢",
       "title": "Eli Ben-Sasson：安全取决于 UX，Starknet 的原生 AA 是好设计",
       "note": "13:05。",
       "url": "https://x.com/EliBenSasson/status/2117498362153075115",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Eli Ben-Sasson: security depends on UX, and Starknet's native AA is good design",
+      "note_en": "13:05.",
+      "topic_en": "Binance preliminary report: how 7702 authorizations slowed the response"
     },
     {
       "topic": "重放保护与 nonce 的存储成本",
       "title": "ethresear.ch：存储优化的重放保护",
       "note": "04:15 发布（作者 dlebee）。隐私池每次提款写一个 nullifier，Permit2 的 `nonceBitmap` 和 EIP-4337 式二维 nonce 要写重放标记，机器结算每个会话写一个标记。最常见的 `mapping(bytes32 => bool)` 每个标记约 22,100 gas（20,000 来自零到非零写入）。ZK 批处理让计算几乎免费，但这些标记无法压缩。文章比较打包标记位等做法，并问协议能否提供原生原语。",
       "url": "https://ethresear.ch/t/storage-optimized-replay-protection-from-hash-bool-to-packed-flag-lanes-and-can-the-protocol-offer-better/26212",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "ethresear.ch: storage-optimized replay protection",
+      "note_en": "Posted at 04:15 by dlebee. A privacy pool writes a nullifier on every withdrawal, Permit2's `nonceBitmap` and EIP-4337-style 2D nonces write replay flags, and machine settlement writes one flag per session. The most common `mapping(bytes32 => bool)` costs about 22,100 gas per flag (20,000 of it from the zero to non-zero write). ZK batching makes computation nearly free, but these flags cannot be compressed. The post compares packed flag lanes and other approaches and asks whether the protocol could provide a native primitive.",
+      "topic_en": "Replay protection and the storage cost of nonces"
     },
     {
       "topic": "其他动态",
       "title": "EF：Vitalik 开幕演讲定调",
       "note": "13:13，形式化验证的 OS、开放硅片、自主健康技术、自由言论、私密通信、可信 AI。EF：开放可验证的硬件 17:30。",
       "url": "https://x.com/ethereumfndn/status/2117500382977102044",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "EF: Vitalik's opening talk sets the tone",
+      "note_en": "13:13: formally verified operating systems, open silicon, self-sovereign health tech, free speech, private communication and trustworthy AI. EF: open, verifiable hardware, 17:30.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EF：开放可验证的硬件",
       "note": "EF：Vitalik 开幕演讲定调 13:13，形式化验证的 OS、开放硅片、自主健康技术、自由言论、私密通信、可信 AI。EF：开放可验证的硬件 17:30。",
       "url": "https://x.com/ethereumfndn/status/2117564949950030117",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "EF: open, verifiable hardware",
+      "note_en": "EF: Vitalik's opening talk sets the tone, 13:13: formally verified operating systems, open silicon, self-sovereign health tech, free speech, private communication and trustworthy AI. EF: open, verifiable hardware, 17:30.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EF Blog：为主权而设计，以太坊用于数字公共基础设施",
       "note": "以及 EF：人道援助协调网络概念验证 10:20（去中心化身份配私密支付通道）。",
       "url": "https://blog.ethereum.org/en/2026/11/03/digital-pub-infra",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "EF Blog: designed for sovereignty, Ethereum for digital public infrastructure",
+      "note_en": "And EF: a proof of concept for a humanitarian aid coordination network, 10:20 (decentralized identity paired with private payment channels).",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EF：人道援助协调网络概念验证",
       "note": "EF Blog：为主权而设计，以太坊用于数字公共基础设施，以及 EF：人道援助协调网络概念验证 10:20（去中心化身份配私密支付通道）。",
       "url": "https://x.com/ethereumfndn/status/2117456736202440771",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "EF: a proof of concept for a humanitarian aid coordination network",
+      "note_en": "EF Blog: designed for sovereignty, Ethereum for digital public infrastructure, and EF: a proof of concept for a humanitarian aid coordination network, 10:20 (decentralized identity paired with private payment channels).",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EF：区块验证最坏工作量公开挑战",
       "note": "11:30，参赛者在排行榜上竞争找出验证一个区块最多要做多少工作。",
       "url": "https://x.com/ethereumfndn/status/2117474349792006258",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "EF: a public challenge on worst-case block validation work",
+      "note_en": "11:30. Participants compete on a leaderboard to find the most work needed to validate one block.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Paradigm：Solar v0.3，比 solc 快 100 倍以上",
       "note": "01:41，生成的字节码更省 gas，暂不建议生产使用；Foundry v1.9 04:35 内置 Solar。",
       "url": "https://x.com/gakonst/status/2117326277363597751",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Paradigm: Solar v0.3, more than 100x faster than solc",
+      "note_en": "01:41. Its bytecode uses less gas, but it is not yet recommended for production. Foundry v1.9, 04:35, ships with Solar built in.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Foundry v1.9",
       "note": "Paradigm：Solar v0.3，比 solc 快 100 倍以上 01:41，生成的字节码更省 gas，暂不建议生产使用；Foundry v1.9 04:35 内置 Solar。",
       "url": "https://x.com/gakonst/status/2117370011203596480",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Foundry v1.9",
+      "note_en": "Paradigm: Solar v0.3, more than 100x faster than solc, 01:41. Its bytecode uses less gas, but it is not yet recommended for production. Foundry v1.9, 04:35, ships with Solar built in.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "dapplion 转述 ralexstokes：Glamsterdam 卡在 EIP-8037",
       "note": "15:22，“也许 AI 辅助开发走得有点太快”。",
       "url": "https://x.com/dapplion/status/2117532820264366223",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "dapplion relays ralexstokes: Glamsterdam is stuck on EIP-8037",
+      "note_en": "15:22, \"maybe AI-assisted development moved a bit too fast\".",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ChainSecurity：11 月 5 日在 Security Hub 解答 Glamsterdam 问题",
       "note": "23:56。",
       "url": "https://x.com/chain_security/status/2117662266397008243",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "ChainSecurity: answering Glamsterdam questions at the Security Hub on November 5",
+      "note_en": "23:56.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Magicians：Bogotá 之后执行层升级的 Devcon 城市名征集",
       "note": "07:17。",
       "url": "https://ethereum-magicians.org/t/devcon-city-name-for-execution-layer-upgrade-after-bogota/30195",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Magicians: picking a Devcon city name for the execution layer upgrade after Bogotá",
+      "note_en": "07:17.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ERC-8485 NFT Controlled Application Spaces 讨论帖",
       "note": "10:35。",
       "url": "https://ethereum-magicians.org/t/erc-8485-nft-controlled-application-spaces/30258",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "ERC-8485 NFT Controlled Application Spaces discussion thread",
+      "note_en": "10:35.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "社区讨论",
       "title": "dapplion 转述 Justin Drake：最激进的 Q-day 估计是 2029 年",
       "note": "13:57，理由是数学超级智能可能先于量子计算机攻破离散对数。",
       "url": "https://x.com/dapplion/status/2117511452533645579",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "dapplion relays Justin Drake: the most aggressive Q-day estimate is 2029",
+      "note_en": "13:57, on the grounds that mathematical superintelligence might break discrete logarithms before quantum computers do.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "dapplion：Vitalik 在 4TB 笔记本上跑 geth 和 lighthouse",
       "note": "21:04，让 AI 给 geth 加了只保留四个月数据的激进裁剪。",
       "url": "https://x.com/dapplion/status/2117618894768591322",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "dapplion: Vitalik runs geth and lighthouse on a 4TB laptop",
+      "note_en": "21:04, having had AI add aggressive pruning to geth that keeps only four months of data.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "Eli Ben-Sasson：本周会深入讲 Starknet 作为 L1",
       "note": "22:46。",
       "url": "https://x.com/EliBenSasson/status/2117644676585111953",
-      "date": "2026-11-03"
+      "date": "2026-11-03",
+      "title_en": "Eli Ben-Sasson: a deep dive on Starknet as an L1 this week",
+      "note_en": "22:46.",
+      "topic_en": "Community"
     }
   ],
   "image": {
     "source_url": "https://aztec.network/blog/introducing-aztec-tierra",
     "credit": "Aztec Network, Introducing Aztec Tierra",
-    "local_path": "assets/2026-11-03.jpg"
-  }
+    "local_path": "assets/2026-11-03.jpg",
+    "credit_en": "Aztec Network, Introducing Aztec Tierra"
+  },
+  "keywords_en": [
+    "Devcon 8 opens",
+    "Aztec Tierra",
+    "Privacy Pools v2",
+    "EIP-7702 and Binance",
+    "replay-protection storage"
+  ],
+  "summary_en": "Devcon 8 opened in Mumbai, and Vitalik's opening talk placed formal verification, open hardware and private communication within Ethereum's mission. Privacy shipped in a cluster: Aztec Tierra (Alpha V6) launched and Privacy Pools v2 was released during Devcon. Binance's preliminary report says that once the attacker controlled its signing service, it set up delegation with EIP-7702 authorizations, and pausing withdrawals could not invalidate them. ethresear.ch looked at the storage cost of nonces and nullifiers."
 }

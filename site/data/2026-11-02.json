@@ -14,159 +14,234 @@
       "title": "ethresear.ch：资产级的支出限额与恢复",
       "note": "00:15 发布（作者 dlebee）。观点：智能钱包、ERC-7579 模块、社交恢复和 EIP-7702 委托都把策略写在账户代码里，但有两个缺口。一是已有 `transferFrom` 授权的合约可以绕过钱包的每日限额；二是在 7702 下，被盗的 EOA 私钥可以重新委托，把原来的防护策略换掉。资产级检查能覆盖所有减少余额的路径，长期甚至可以由协议对原生 ETH 做。",
       "url": "https://ethresear.ch/t/asset-level-spending-limits-and-recovery-should-rate-limiting-live-in-the-asset-rather-than-the-account/26205",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "ethresear.ch: asset-level spending limits and recovery",
+      "note_en": "Posted at 00:15 by dlebee. Smart wallets, ERC-7579 modules, social recovery and EIP-7702 delegation all put policy in account code, and that leaves two gaps. First, a contract that already holds a `transferFrom` approval can bypass the wallet's daily limit. Second, under 7702 a stolen EOA key can re-delegate and replace the original protection. Asset-level checks cover every path that reduces a balance, and in the long run the protocol could even apply them to native ETH.",
+      "topic_en": "Account protection after Binance: the account layer or the asset layer"
     },
     {
       "topic": "Binance 事件后的账户防护：账户层还是资产层",
       "title": "ERC-8474 ERC-20 Delayed Unlock 讨论帖",
       "note": "与 ERC-8475 ERC-20 Outgoing Window Limits 讨论帖 15:55 开帖，都是在代币层面做延迟解锁和时间窗口限额。",
       "url": "https://ethereum-magicians.org/t/erc-8474-erc-20-delayed-unlock/30177",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "ERC-8474 ERC-20 Delayed Unlock discussion thread",
+      "note_en": "And ERC-8475 ERC-20 Outgoing Window Limits discussion thread, both opened at 15:55, add delayed unlocks and time-window limits at the token level.",
+      "topic_en": "Account protection after Binance: the account layer or the asset layer"
     },
     {
       "topic": "Binance 事件后的账户防护：账户层还是资产层",
       "title": "ERC-8475 ERC-20 Outgoing Window Limits 讨论帖",
       "note": "ERC-8474 ERC-20 Delayed Unlock 讨论帖 与 ERC-8475 ERC-20 Outgoing Window Limits 讨论帖 15:55 开帖，都是在代币层面做延迟解锁和时间窗口限额。",
       "url": "https://ethereum-magicians.org/t/erc-8475-erc-20-outgoing-window-limits/30178",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "ERC-8475 ERC-20 Outgoing Window Limits discussion thread",
+      "note_en": "ERC-8474 ERC-20 Delayed Unlock discussion thread and ERC-8475 ERC-20 Outgoing Window Limits discussion thread, both opened at 15:55, add delayed unlocks and time-window limits at the token level.",
+      "topic_en": "Account protection after Binance: the account layer or the asset layer"
     },
     {
       "topic": "Binance 事件后的账户防护：账户层还是资产层",
       "title": "Magicians：ERC-8415 与 Binance 劫案，哪些资产能冻结",
       "note": "01:35 发帖，讨论 RWA 需要资产状态层。",
       "url": "https://ethereum-magicians.org/t/erc-8415-and-the-binance-heist-what-can-be-frozen-and-why-rwas-need-an-asset-state-layer/30170",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "Magicians: ERC-8415 and the Binance heist, what can be frozen",
+      "note_en": "Posted at 01:35, argues that RWAs need an asset state layer.",
+      "topic_en": "Account protection after Binance: the account layer or the asset layer"
     },
     {
       "topic": "Binance 事件后的账户防护：账户层还是资产层",
       "title": "Magicians：Arbitrum 的冻结如何不用私钥从地址发出交易",
       "note": "13:48 发帖，拆解 10 月 30 日 Arbitrum 安全委员会冻结与 Binance 事件相关地址上 8,425 ETH 和约 7,456 万 ARB 的那笔 L1 交易：9/12 的 Safe 调用 UpgradeExecutor，临时替换 Inbox 实现后发出消息。",
       "url": "https://ethereum-magicians.org/t/how-arbitrums-freezes-send-transactions-from-an-address-without-its-key/30175",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "Magicians: how Arbitrum's freezes send transactions from an address without its key",
+      "note_en": "Posted at 13:48, breaks down the L1 transaction in which the Arbitrum Security Council froze 8,425 ETH and about 74.56 million ARB on addresses linked to the Binance incident on October 30: a 9-of-12 Safe called the UpgradeExecutor, temporarily swapped the Inbox implementation and sent the message.",
+      "topic_en": "Account protection after Binance: the account layer or the asset layer"
     },
     {
       "topic": "交易费：钱包默认小费过高",
       "title": "potuz：质疑 MetaMask 和 Rabby 默认优先费",
       "note": "05:23 发帖：钱包默认给接近 1 gwei 的优先费，而按 wei 级别给小费就够；扩容让上链更便宜，结果一半费用是小费，扩容就白做了。",
       "url": "https://x.com/potuz_eth/status/2117019625296961727",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "potuz questions MetaMask and Rabby default priority fees",
+      "note_en": "05:23: wallets default to a priority fee close to 1 gwei when a tip measured in wei would do. Scaling makes transactions cheaper, but if half the fee is the tip, the scaling work is wasted.",
+      "topic_en": "Transaction fees: wallet default tips are too high"
     },
     {
       "topic": "后量子：验证者 PQ 材料登记与 L2 签名聚合",
       "title": "EIPs PR #12609：Add EIP-8483 Post-Quantum Material Registration",
       "note": "22:16 提交（作者 potuz），新增 EIP-7685 请求类型和预部署合约，让验证者的提款地址登记 32 字节 PQ 材料，存进信标状态，为将来的 PQ 迁移分叉做准备。EIP-8483 讨论帖 22:52 开帖。",
       "url": "https://github.com/ethereum/EIPs/pull/12609",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "EIPs PR #12609: Add EIP-8483 Post-Quantum Material Registration",
+      "note_en": "Opened at 22:16 by potuz. It adds an EIP-7685 request type and a predeployed contract so a validator's withdrawal address can register 32 bytes of PQ material in the beacon state, preparing for a future PQ migration fork. The EIP-8483 discussion thread opened at 22:52.",
+      "topic_en": "Post-quantum: validator PQ material registration and L2 signature aggregation"
     },
     {
       "topic": "后量子：验证者 PQ 材料登记与 L2 签名聚合",
       "title": "EIP-8483 讨论帖",
       "note": "EIPs PR #12609：Add EIP-8483 Post-Quantum Material Registration 22:16 提交（作者 potuz），新增 EIP-7685 请求类型和预部署合约，让验证者的提款地址登记 32 字节 PQ 材料，存进信标状态，为将来的 PQ 迁移分叉做准备。EIP-8483 讨论帖 22:52 开帖。",
       "url": "https://ethereum-magicians.org/t/eip-8483-post-quantum-material-registration/30186",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "EIP-8483 discussion thread",
+      "note_en": "EIPs PR #12609: Add EIP-8483 Post-Quantum Material Registration, opened at 22:16 by potuz. It adds an EIP-7685 request type and a predeployed contract so a validator's withdrawal address can register 32 bytes of PQ material in the beacon state, preparing for a future PQ migration fork. The EIP-8483 discussion thread opened at 22:52.",
+      "topic_en": "Post-quantum: validator PQ material registration and L2 signature aggregation"
     },
     {
       "topic": "后量子：验证者 PQ 材料登记与 L2 签名聚合",
       "title": "EIPs PR #12608：EIP-8148 请求类型改为 0x06",
       "note": "同时提交 EIPs PR #12608：EIP-8148 请求类型改为 0x06（EIP-8148 是验证者自定义提款阈值），避免与新请求类型冲突。",
       "url": "https://github.com/ethereum/EIPs/pull/12608",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "EIPs PR #12608: EIP-8148 request type moves to 0x06",
+      "note_en": "Alongside it, EIPs PR #12608: EIP-8148 request type moves to 0x06 (EIP-8148 is custom validator withdrawal thresholds) to avoid clashing with the new request type.",
+      "topic_en": "Post-quantum: validator PQ material registration and L2 signature aggregation"
     },
     {
       "topic": "后量子：验证者 PQ 材料登记与 L2 签名聚合",
       "title": "EIPs PR #12610：为 EIP-8355 补充 ML-DSA 65/87 验证向量",
       "note": "22:47 提交。EIP-8355 是 ML-DSA 签名验证预编译，属于账户层 PQ 签名的候选方案。",
       "url": "https://github.com/ethereum/EIPs/pull/12610",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "EIPs PR #12610: ML-DSA 65/87 verification vectors for EIP-8355",
+      "note_en": "Opened at 22:47. EIP-8355 is an ML-DSA signature verification precompile, one of the candidates for PQ signatures at the account layer.",
+      "topic_en": "Post-quantum: validator PQ material registration and L2 signature aggregation"
     },
     {
       "topic": "后量子：验证者 PQ 材料登记与 L2 签名聚合",
       "title": "ethresear.ch：EIP-8288 在 OP Stack 上扩展信任",
       "note": "09:05 发布。如果每个 L2 用户都换成 PQ 签名，签名会占交易数据的 99%，6 个 blob 能装的转账从约 6,600 笔降到约 155 笔。采用 EIP-8288（内存池签名与证明聚合）后，签名移出交易，由 leanVM 聚合证明统一上链，用 leanSPHINCS 签名的交易可压到 100 到 129 字节。",
       "url": "https://ethresear.ch/t/its-time-to-scale-the-trust-eip-8288-on-op-stack/26208",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "ethresear.ch: scaling the trust with EIP-8288 on OP Stack",
+      "note_en": "Posted at 09:05. If every L2 user switched to PQ signatures, signatures would take 99% of transaction data and the transfers that fit in 6 blobs would fall from about 6,600 to about 155. With EIP-8288 (mempool signature and proof aggregation), signatures move out of the transaction and a single leanVM aggregate proof goes onchain, bringing a transaction signed with leanSPHINCS down to 100 to 129 bytes.",
+      "topic_en": "Post-quantum: validator PQ material registration and L2 signature aggregation"
     },
     {
       "topic": "其他动态",
       "title": "EIPs PR #12612：EIP-8038 把 EIP-7928 的预状态 gas 表映射到新常量",
       "note": "22:54 提交，同批还有 EIPs PR #12611：EIP-7928 静态上下文在预状态校验前停止 和 EIPs PR #12613：EIP-7708 覆盖合约创建交易与回滚帧。都是 Glamsterdam 内容的规范修补，不改变用法。",
       "url": "https://github.com/ethereum/EIPs/pull/12612",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "EIPs PR #12612: EIP-8038 maps the EIP-7928 pre-state gas table to new constants",
+      "note_en": "Opened at 22:54, together with EIPs PR #12611: EIP-7928 static context stops before pre-state checks and EIPs PR #12613: EIP-7708 covers contract creation transactions and reverted frames. All are spec fixes for Glamsterdam content and do not change how anything is used.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EIPs PR #12611：EIP-7928 静态上下文在预状态校验前停止",
       "note": "EIPs PR #12612：EIP-8038 把 EIP-7928 的预状态 gas 表映射到新常量 22:54 提交，同批还有 EIPs PR #12611：EIP-7928 静态上下文在预状态校验前停止 和 EIPs PR #12613：EIP-7708 覆盖合约创建交易与回滚帧。都是 Glamsterdam 内容的规范修补，不改变用法。",
       "url": "https://github.com/ethereum/EIPs/pull/12611",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "EIPs PR #12611: EIP-7928 static context stops before pre-state checks",
+      "note_en": "EIPs PR #12612: EIP-8038 maps the EIP-7928 pre-state gas table to new constants, opened at 22:54, together with EIPs PR #12611: EIP-7928 static context stops before pre-state checks and EIPs PR #12613: EIP-7708 covers contract creation transactions and reverted frames. All are spec fixes for Glamsterdam content and do not change how anything is used.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EIPs PR #12613：EIP-7708 覆盖合约创建交易与回滚帧",
       "note": "EIPs PR #12612：EIP-8038 把 EIP-7928 的预状态 gas 表映射到新常量 22:54 提交，同批还有 EIPs PR #12611：EIP-7928 静态上下文在预状态校验前停止 和 EIPs PR #12613：EIP-7708 覆盖合约创建交易与回滚帧。都是 Glamsterdam 内容的规范修补，不改变用法。",
       "url": "https://github.com/ethereum/EIPs/pull/12613",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "EIPs PR #12613: EIP-7708 covers contract creation transactions and reverted frames",
+      "note_en": "EIPs PR #12612: EIP-8038 maps the EIP-7928 pre-state gas table to new constants, opened at 22:54, together with EIPs PR #12611: EIP-7928 static context stops before pre-state checks and EIPs PR #12613: EIP-7708 covers contract creation transactions and reverted frames. All are spec fixes for Glamsterdam content and do not change how anything is used.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ethresear.ch：为什么搜索者和构建者喜欢 candle auction",
       "note": "20:00 发布，讨论 Glamsterdam 之后的构建者市场。",
       "url": "https://ethresear.ch/t/why-searchers-and-builders-like-candle-auctions-and-why-it-matters-for-the-builder-market-post-glamsterdam/26211",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "ethresear.ch: why searchers and builders like candle auctions",
+      "note_en": "Posted at 20:00, on the builder market after Glamsterdam.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Draft EIP：BLS 签名的更高安全曲线",
       "note": "21:21 开帖。",
       "url": "https://ethereum-magicians.org/t/draft-eip-higher-security-curve-for-bls-signatures/30184",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "Draft EIP: a higher-security curve for BLS signatures",
+      "note_en": "Opened at 21:21.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Julian Ma：Fast Confirmation Rule 能防止的浅层重组事故",
       "note": "18:33。FCR 让跨链桥按真正的证明票数确认，而不是数区块。",
       "url": "https://x.com/_julianma/status/2117218609609011217",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "Julian Ma: the shallow reorg incidents the Fast Confirmation Rule prevents",
+      "note_en": "18:33. FCR lets bridges confirm by actual attestation weight instead of counting blocks.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "SEAL：朝鲜 IT 人员登记库更新",
       "note": "20:30，近 400 个档案，招聘前可查姓名、邮箱、钱包。",
       "url": "https://x.com/_SEAL_Org/status/2117247856595648996",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "SEAL: update to the DPRK IT worker registry",
+      "note_en": "20:30. Close to 400 profiles; check names, emails and wallets before hiring.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ERCs PR #2137：ERC-8259 进入 Review",
       "note": "07:17 合并（AI Agent Identity & Threat Registry），当天还有两处后续修订合并。",
       "url": "https://github.com/ethereum/ERCs/pull/2137",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "ERCs PR #2137: ERC-8259 moves to Review",
+      "note_en": "Merged at 07:17 (AI Agent Identity & Threat Registry), with two follow-up revisions merged the same day.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Devcon 8 公布 14 个社区 Hub",
       "note": "16:40，包括 EIP Hub、Privacy Hub、Security Hub。",
       "url": "https://x.com/EFDevcon/status/2117189975494304251",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "Devcon 8 announces 14 community hubs",
+      "note_en": "16:40, including an EIP Hub, a Privacy Hub and a Security Hub.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "社区讨论",
       "title": "Ethlabs：跨链桥“花了不存在的钱”",
       "note": "22:47，解释跨链桥“一边看到存款、另一边就放款”时可能出现的问题，并预告他们的应对工具。",
       "url": "https://x.com/ethlabs_org/status/2117282471729672682",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "Ethlabs: bridges \"spending money that does not exist\"",
+      "note_en": "22:47, explains what can go wrong when a bridge releases funds on one side as soon as it sees a deposit on the other, and previews their tooling for it.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "Eli Ben-Sasson：后量子安全不等于后 AI 安全",
       "note": "19:14。",
       "url": "https://x.com/EliBenSasson/status/2117228878691201166",
-      "date": "2026-11-02"
+      "date": "2026-11-02",
+      "title_en": "Eli Ben-Sasson: post-quantum security is not post-AI security",
+      "note_en": "19:14.",
+      "topic_en": "Community"
     }
   ],
   "image": {
     "source_url": "https://ethresear.ch/t/its-time-to-scale-the-trust-eip-8288-on-op-stack/26208",
     "credit": "ethresear.ch, It's time to scale the trust: EIP-8288 on OP Stack",
-    "local_path": "assets/2026-11-02.jpg"
-  }
+    "local_path": "assets/2026-11-02.jpg",
+    "credit_en": "ethresear.ch, It's time to scale the trust: EIP-8288 on OP Stack"
+  },
+  "keywords_en": [
+    "account-level vs asset-level protection",
+    "priority fees",
+    "EIP-8483",
+    "EIP-8288",
+    "Glamsterdam spec fixes"
+  ],
+  "summary_en": "After the Binance incident, researchers began asking whether rate limits and recovery should live in the asset (the token contract) rather than only in account code, and two ERC-20 limit proposals, ERC-8474 and ERC-8475, appeared on Magicians. potuz publicly questioned MetaMask and Rabby for defaulting to a priority fee close to 1 gwei. potuz also submitted EIP-8483 so validators can register post-quantum material, and EIP-8288 was proposed for compressing PQ signature data on the OP Stack."
 }

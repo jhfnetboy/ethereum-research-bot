@@ -157,9 +157,13 @@ def _note_from_line(line: str, title: str) -> str:
     return "" if note == title else note
 
 
+POINT_HEADINGS = {"今日要点", "Highlights"}
+KEY_TOPIC_HEADINGS = {"重点话题", "Key topics"}
+
+
 def parse_digest_style(body: str, date: str) -> tuple[str, list[dict]]:
     """Parse reports that use 今日要点 / 重点话题 / 其他动态 headings."""
-    body = re.split(r"\n来源说明：", body, maxsplit=1)[0]
+    body = re.split(r"\n(?:来源说明：|Source notes:)", body, maxsplit=1)[0]
     summary_parts: list[str] = []
     items: list[dict] = []
     topic = ""
@@ -167,10 +171,10 @@ def parse_digest_style(body: str, date: str) -> tuple[str, list[dict]]:
     for line in body.splitlines():
         if line.startswith("## "):
             heading = _clean_heading(line)
-            in_points = heading == "今日要点"
-            if heading in {"今日要点", "重点话题"}:
+            in_points = heading in POINT_HEADINGS
+            if heading in POINT_HEADINGS or heading in KEY_TOPIC_HEADINGS:
                 topic = ""
-            elif heading.startswith("以太坊日报") or heading.startswith("以太坊研究日报"):
+            elif heading.startswith(("以太坊日报", "以太坊研究日报", "Ethereum Daily", "Ethereum Research Daily")):
                 topic = ""
                 in_points = False
             else:
@@ -245,13 +249,13 @@ def parse_markdown(text: str, filename: str = "") -> dict:
             i = hit[1] + 1
             continue
 
-        hit = labeled_block(lines, i, ("配图来源：", "配图来源:", "配图：", "配图:", "image:", "Image:"))
+        hit = labeled_block(lines, i, ("配图来源：", "配图来源:", "配图：", "配图:", "Image source:", "image:", "Image:"))
         if hit and not image.get("source_url"):
             image["source_url"] = hit[0].strip()
             i = hit[1] + 1
             continue
 
-        hit = labeled_block(lines, i, ("配图版权：", "配图版权:", "配图出处：", "配图出处:", "credit:", "Credit:"))
+        hit = labeled_block(lines, i, ("配图版权：", "配图版权:", "配图出处：", "配图出处:", "Image credit:", "credit:", "Credit:"))
         if hit and not image.get("credit"):
             image["credit"] = hit[0].strip()
             i = hit[1] + 1
@@ -319,7 +323,7 @@ def parse_markdown(text: str, filename: str = "") -> dict:
     flush_pending()
 
     date = first_date(str(fm.get("date") or ""), title, filename) or ""
-    if re.search(r"^## 今日要点", body, re.M) or re.search(r"^## 重点话题", body, re.M):
+    if re.search(r"^## (?:今日要点|重点话题|Highlights|Key topics)\s*$", body, re.M):
         digest_summary, digest_items = parse_digest_style(body, date)
         if digest_items:
             items = digest_items
@@ -435,6 +439,48 @@ def optimize_image(path: Path) -> Path:
     return out
 
 
+def merge_english(data: dict, en: dict) -> list[str]:
+    """Copy the English report's text onto the Chinese data as *_en fields.
+
+    Items are paired by URL in order of appearance, so the English report must
+    cite the same links (dates and URLs always come from the Chinese side).
+    Returns a list of problems; empty means every item got an English version.
+    """
+    problems: list[str] = []
+    if en.get("keywords"):
+        data["keywords_en"] = en["keywords"]
+    else:
+        problems.append("English report has no Keywords line")
+    if en.get("summary"):
+        data["summary_en"] = en["summary"]
+    else:
+        problems.append("English report has no Summary line")
+    en_credit = (en.get("image") or {}).get("credit")
+    if en_credit and isinstance(data.get("image"), dict):
+        data["image"]["credit_en"] = en_credit
+    pool: dict[str, list[dict]] = {}
+    for item in en.get("items") or []:
+        pool.setdefault(item.get("url") or "", []).append(item)
+    for item in data.get("items") or []:
+        for key in ("title_en", "note_en", "topic_en"):
+            item.pop(key, None)
+        bucket = pool.get(item.get("url") or "")
+        if not bucket:
+            problems.append(f"no English item for {item.get('url')}")
+            continue
+        match = bucket.pop(0)
+        item["title_en"] = match.get("title") or ""
+        note = (match.get("note") or "").strip()
+        if note:
+            item["note_en"] = note[0].upper() + note[1:] if note[0].islower() else note
+        if match.get("topic"):
+            item["topic_en"] = match["topic"]
+    for url, rest in pool.items():
+        for _ in rest:
+            problems.append(f"English item not in Chinese report: {url}")
+    return problems
+
+
 def write_json(path: Path, data: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -450,10 +496,26 @@ def main() -> int:
     parser.add_argument("--fetch-image", action="store_true", help="Download og:image or a direct image URL into site/assets/")
     parser.add_argument("--image-url", help="Optional explicit article or image URL, overriding the report field.")
     parser.add_argument("--image-credit", help="Optional credit text for the image, overriding the report field.")
+    parser.add_argument("--en-report", help="English version of the report (default: ../reports/en/<date>.md if it exists).")
+    parser.add_argument("--en-only", action="store_true",
+                        help="Only merge the English report into the existing data/<date>.json; keep the Chinese fields as they are.")
     args = parser.parse_args()
 
-    if not args.report and not args.date:
-        parser.error("provide --report or --date")
+    if not args.report and not args.date and not args.en_report:
+        parser.error("provide --report, --date or --en-report")
+
+    if args.en_only:
+        en_path = Path(args.en_report) if args.en_report else repo / "reports" / "en" / f"{args.date}.md"
+        en = parse_markdown(en_path.read_text(encoding="utf-8"), en_path.name)
+        date = args.date or en.get("date")
+        out = Path(args.out) if args.out else here / "data" / f"{date}.json"
+        data = json.loads(out.read_text(encoding="utf-8"))
+        problems = merge_english(data, en)
+        write_json(out, data)
+        print(f"merged English into {out}")
+        for p in problems:
+            print(f"  en: {p}", file=sys.stderr)
+        return 2 if problems else 0
 
     report_path = Path(args.report) if args.report else repo / "reports" / f"{args.date}.md"
     if not report_path.is_file():
@@ -511,10 +573,21 @@ def main() -> int:
                 data.setdefault("image", {})["local_path"] = f"assets/{existing.name}"
                 break
 
+    en_path = Path(args.en_report) if args.en_report else repo / "reports" / "en" / f"{data['date']}.md"
+    problems: list[str] = []
+    if en_path.is_file():
+        en = parse_markdown(en_path.read_text(encoding="utf-8"), en_path.name)
+        problems = merge_english(data, en)
+        print(f"merged English from {en_path}")
+    else:
+        print(f"no English report at {en_path}; English pages will fall back to Chinese", file=sys.stderr)
+
     out = Path(args.out) if args.out else here / "data" / f"{data['date']}.json"
     write_json(out, data)
     print(f"wrote {out}")
-    return 0
+    for p in problems:
+        print(f"  en: {p}", file=sys.stderr)
+    return 2 if problems else 0
 
 
 if __name__ == "__main__":

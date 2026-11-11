@@ -2,6 +2,8 @@
 
 把每天的日报做成卡片式静态页：首页按日期倒序，一天一张卡片；点进去是当天的收集页，按话题列出条目和来源链接。
 
+站点是中英双语：中文是默认语言，在根路径 `/`；英文版在 `/en/` 下，结构完全相同。每页都有语言切换。
+
 页面默认使用相对路径。如需把同一套文件挂在子路径下，可以用 `--base-path` 生成带前缀的绝对路径。
 
 ## 目录
@@ -13,27 +15,33 @@
 - `ingest.py`：从 `../reports/YYYY-MM-DD.md` 生成 JSON，可选下载配图
 - 首页和关于页的介绍文案写在 `build.py` 的模板常量里，每次构建都会生成
 
-日报 Markdown 在上一级目录 `../reports/`。
+日报 Markdown 在上一级目录 `../reports/`（中文）和 `../reports/en/`（英文）。
 
 ## 数据格式
 
-`data/YYYY-MM-DD.json` 字段：
+`data/YYYY-MM-DD.json` 字段（`_en` 是英文版字段，缺省时英文页回退到中文）：
 
 ```json
 {
   "date": "2026-11-11",
   "keywords": ["关键词一", "关键词二", "关键词三"],
+  "keywords_en": ["keyword one", "keyword two", "keyword three"],
   "summary": "两三句关键信息。",
+  "summary_en": "Two or three sentences in natural English.",
   "image": {
     "local_path": "assets/2026-11-11.jpg",
     "source_url": "https://example.com/article",
-    "credit": "来源媒体或作者"
+    "credit": "来源媒体或作者",
+    "credit_en": "Source outlet or author (optional)"
   },
   "items": [
     {
       "topic": "话题名称",
+      "topic_en": "Topic name",
       "title": "条目标题",
+      "title_en": "Item title",
       "note": "一句说明。",
+      "note_en": "One-sentence note.",
       "url": "https://source.example/path",
       "date": "2026-11-11"
     }
@@ -43,36 +51,48 @@
 
 说明：
 
-- `keywords` 建议 3 到 5 个，首页卡片会显示。
-- `summary` 是卡片上的关键信息，写两三句即可。
+- `keywords` / `keywords_en` 建议 3 到 5 个，首页卡片会显示，详情页标题会同时带两种语言的日期和前 3 个关键词。
+- `summary` / `summary_en` 是卡片上的关键信息，也用作各语言页面的 meta description 和 Open Graph 描述。
+- `url` 和 `date` 只有一份，两种语言共用，保证链接和日期完全一致。
 - `image` 可省略。没有配图时，构建脚本用简洁占位样式，不会编造或生成假图。
 - `image.local_path` 相对站点根目录，通常是 `assets/` 下的文件。
 - `image.source_url` 和 `image.credit` 必须记录真实出处。
-- `items` 会按 `topic` 分组出现在详情页。
+- `items` 会按 `topic`（英文页按 `topic_en`）分组出现在详情页。
 - 文件名以 `_` 开头的 JSON 会被构建脚本忽略。
 
-## 从当天 reports 生成 JSON
+## 从当天 reports 生成双语 JSON
 
-建议的 Markdown 形状（字段都可以缺，解析器会尽量识别）：
+每天写两份 Markdown，事实相同、链接相同：
+
+- 中文：`../reports/YYYY-MM-DD.md`
+- 英文：`../reports/en/YYYY-MM-DD.md`（自然英文表达，不增加中文版没有的事实，不用 em dash）
+
+中文形状：
 
 ```markdown
-# 以太坊研究日报 2026-11-11
+# 以太坊日报 2026-11-11
 
 关键词：Fusaka、PeerDAS、Based Rollup
 
-摘要：
-两三句关键信息。
+摘要：两三句关键信息。
 
 配图来源：https://example.com/article
 配图版权：媒体或作者名称
 
-## 话题名称
+## 今日要点
+1. ...
 
-- [条目标题](https://source.example/path)
-  一句说明。
+## 重点话题
+### 1. 话题名称
+- [条目标题](https://source.example/path) 一句说明。
+
+## 其他动态
+- [条目标题](https://source.example/path) 一句说明。
+
+来源说明：……
 ```
 
-也支持 YAML front matter（`date`、`keywords`、`summary`、`image.source_url`、`image.credit`）。
+英文形状对应：`Keywords:`、`Summary:`、`Image source:`、`Image credit:`，标题用 `## Highlights`、`## Key topics`、`## Other updates`、`## Community`，结尾 `Source notes:`。
 
 在 `site/` 目录下运行：
 
@@ -80,7 +100,15 @@
 python3 ingest.py --report ../reports/2026-11-11.md --fetch-image
 ```
 
-`--fetch-image` 会访问「配图来源」页面（或条目里的第一个链接），抓取 `og:image` 或直接的图片地址，保存到 `assets/YYYY-MM-DD.ext`，并写入 `local_path`、`source_url`、`credit`。找不到配图就跳过，不要手工补假图。
+如果 `../reports/en/2026-11-11.md` 存在，会自动合并成 `_en` 字段：条目按 URL（同一 URL 多次出现时按出现顺序）配对，日期和链接始终取中文版。英文缺条目或多出条目会在 stderr 列出并以退出码 2 结束，方便发现漏译。
+
+只补英文、不重新解析中文（例如中文 JSON 是手工整理的）：
+
+```bash
+python3 ingest.py --en-only --en-report ../reports/en/2026-11-11.md --date 2026-11-11
+```
+
+`--fetch-image` 会访问「配图来源」页面（或条目里的第一个链接），抓取 `og:image` 或直接的图片地址，压缩后保存到 `assets/YYYY-MM-DD.jpg`，并写入 `local_path`、`source_url`、`credit`。找不到配图就跳过，不要手工补假图。不带 `--fetch-image` 重跑时会保留已下载的配图。
 
 ## 构建
 
@@ -106,15 +134,24 @@ python3 -m http.server 8765 --directory dist
 
 然后打开 `http://127.0.0.1:8765/`。介绍文案在首页顶部，完整研究来源在 `about/` 关于页，首页有明显入口。
 
-## 页面结构（分页与归档）
+## 页面结构（双语、分页与归档）
 
-- `/`：最近 7 天，按日期倒序，一天一张卡片；顶部是「关于」简介。
-- `/page/2/`、`/page/3/` …：更早的日报，每页 7 天，底部有上一页、下一页和页码。`/page/1/` 301 跳回首页（`_redirects`）。
-- `/archive/`：按月归档（YYYY年M月，附天数），列出全部日期。
-- `/days/YYYY-MM-DD/`：当天收集页，按话题分组，底部有前一天、后一天链接。
-- `/about/`：研究来源与联系方式（jason@idoris.ai）。
+中文在根路径，英文在 `/en/` 下，结构一致：
 
-每页条数由 `build.py` 的 `PAGE_SIZE = 7` 控制。纯静态，不需要数据库。按 365 天估算：约 788 个文件、约 22 MiB（配图经 `ingest.py` 压缩到宽 1200、JPEG 质量 78），本地构建不到 1 秒，远低于 Cloudflare Pages 的 20,000 文件和单文件 25 MiB 限制。
+| 页面 | 中文 | 英文 |
+|---|---|---|
+| 首页（最近 7 天，顶部有关于简介） | `/` | `/en/` |
+| 更早的日报，每页 7 天 | `/page/2/` … | `/en/page/2/` … |
+| 按月归档 | `/archive/` | `/en/archive/` |
+| 当天详情 | `/days/YYYY-MM-DD/` | `/en/days/YYYY-MM-DD/` |
+| 关于（来源与 jason@idoris.ai） | `/about/` | `/en/about/` |
+
+- `/page/1/` 和 `/en/page/1/` 301 跳回各自首页（`_redirects`）。
+- 每页：`<html lang>` 为 `zh-CN` 或 `en`；`canonical` 指向本页；`hreflang` 互指 `zh-CN`、`en`，`x-default` 指向中文；Open Graph 和 Twitter 卡片用本语言的标题和描述，`og:locale` 与 `og:locale:alternate` 互指；详情页带 `og:image` 和 `article:published_time`。
+- 标题双语：首页「以太坊研究日报 | Ethereum Research Daily」，详情页含两种语言的日期和关键词。
+- 根目录生成 `sitemap.xml`（每个页面的两种语言，附 `xhtml:link` 互指）和 `robots.txt`。公开地址用 `--site-url` 指定，默认 `https://ethereum-research-bot.pages.dev`。
+
+每页条数由 `build.py` 的 `PAGE_SIZE = 7` 控制。纯静态，不需要数据库。按 365 天估算：双语约 1,210 个文件、约 31 MiB（配图两种语言共用，经 `ingest.py` 压缩到宽 1200、JPEG 质量 78），远低于 Cloudflare Pages 的 20,000 文件和单文件 25 MiB 限制。
 
 ## 部署目标
 

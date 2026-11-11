@@ -14,166 +14,244 @@
       "title": "EF：Lean Ethereum 的逐个分叉计划",
       "note": "08:15 发布。strawmap 定的目标是 2029 年完成 Lean Ethereum；H* 是最后一个没有 lean 特性的分叉，I* 上线 leanVM 和 lean transactions，J* 加入 lean attestations、DA 采样和 PCS，到 L* 全部完成。",
       "url": "https://x.com/ethereumfndn/status/2118150051574747523",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EF: the Lean Ethereum plan, fork by fork",
+      "note_en": "Posted at 08:15. The strawmap targets completing Lean Ethereum by 2029. H* is the last fork without lean features, I* ships leanVM and lean transactions, J* adds lean attestations, DA sampling and PCS, and everything is done by L*.",
+      "topic_en": "The Lean Ethereum fork roadmap and lean transactions"
     },
     {
       "topic": "Lean Ethereum 分叉路线与 lean transactions",
       "title": "Thomas Coratger：Mission 2028 以形式化验证为核心，EthLib 在推进",
       "note": "15:47。",
       "url": "https://x.com/tcoratger/status/2118264044930932851",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Thomas Coratger: Mission 2028 is built around formal verification, and EthLib is moving forward",
+      "note_en": "15:47.",
+      "topic_en": "The Lean Ethereum fork roadmap and lean transactions"
     },
     {
       "topic": "账户与签名聚合：EIP-7851、EIP-8288",
       "title": "EIPs PR #12630：EIP-7851 在归档前同步 EIP-8298 的相关澄清",
       "note": "22:26 合并。EIP-7851 是“代码控制的 EOA 委托”，EIP-8298 是 SETCODEFROM 代码复用指令；标题写明是“归档前”的同步。",
       "url": "https://github.com/ethereum/EIPs/pull/12630",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EIPs PR #12630: EIP-7851 syncs related clarifications from EIP-8298 before archiving",
+      "note_en": "Merged at 22:26. EIP-7851 is \"code-controlled EOA delegation\" and EIP-8298 is the SETCODEFROM code reuse instruction; the title says the sync happens \"before archiving\".",
+      "topic_en": "Accounts and signature aggregation: EIP-7851, EIP-8288"
     },
     {
       "topic": "账户与签名聚合：EIP-7851、EIP-8288",
       "title": "EIPs PR #12628：EIP-8288 只聚合当前可执行的交易",
       "note": "15:06 提交。建议聚合者只证明在当前链头可执行的交易，构建者优先选覆盖更多依赖的递归输入。起因是核心开发者担心，内存池里大量低于 base fee 的交易会产生大部分被丢弃的聚合证明。",
       "url": "https://github.com/ethereum/EIPs/pull/12628",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EIPs PR #12628: EIP-8288 aggregates only currently executable transactions",
+      "note_en": "Opened at 15:06. It recommends that aggregators prove only transactions executable at the current head, and that builders prefer recursive inputs that cover more dependencies. The trigger was core developer concern that the many mempool transactions below the base fee would produce aggregate proofs that are mostly thrown away.",
+      "topic_en": "Accounts and signature aggregation: EIP-7851, EIP-8288"
     },
     {
       "topic": "账户与签名聚合：EIP-7851、EIP-8288",
       "title": "EIPs PR #12599：EIP-8450 处理合并后评审意见",
       "note": "14:43 合并（EIP-8450：Post-Quantum Consensus Key Registry，作者 kevaundray）。",
       "url": "https://github.com/ethereum/EIPs/pull/12599",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EIPs PR #12599: EIP-8450 addresses post-merge review comments",
+      "note_en": "Merged at 14:43 (EIP-8450: Post-Quantum Consensus Key Registry, by kevaundray).",
+      "topic_en": "Accounts and signature aggregation: EIP-7851, EIP-8288"
     },
     {
       "topic": "隐私工具：密钥派生互通、Nulo 钱包、Privacy Pools v2",
       "title": "Kassandra：公开 Tornado Cash 与 Privacy Pools V1 的助记词派生方案",
       "note": "00:47，这就是 kohaku-cli 和 Ambire 钱包能从同一助记词找到相同隐私协议记录的原因。kohaku-cli 已更新到 v0.1.5 18:51，她呼吁把隐私原语用在几乎所有 L1 操作上。",
       "url": "https://x.com/kassandraETH/status/2118037514061750720",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Kassandra publishes the seed phrase derivation scheme for Tornado Cash and Privacy Pools V1",
+      "note_en": "00:47. This is why kohaku-cli and the Ambire wallet find the same privacy protocol records from the same seed phrase. kohaku-cli has been updated to v0.1.5, 18:51, and she calls for using privacy primitives in almost every L1 action.",
+      "topic_en": "Privacy tooling: interoperable key derivation, the Nulo wallet, Privacy Pools v2"
     },
     {
       "topic": "隐私工具：密钥派生互通、Nulo 钱包、Privacy Pools v2",
       "title": "kohaku-cli 已更新到 v0.1.5",
       "note": "Kassandra：公开 Tornado Cash 与 Privacy Pools V1 的助记词派生方案 00:47，这就是 kohaku-cli 和 Ambire 钱包能从同一助记词找到相同隐私协议记录的原因。kohaku-cli 已更新到 v0.1.5 18:51，她呼吁把隐私原语用在几乎所有 L1 操作上。",
       "url": "https://x.com/kassandraETH/status/2118310181993885759",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "kohaku-cli has been updated to v0.1.5",
+      "note_en": "Kassandra publishes the seed phrase derivation scheme for Tornado Cash and Privacy Pools V1, 00:47. This is why kohaku-cli and the Ambire wallet find the same privacy protocol records from the same seed phrase. kohaku-cli has been updated to v0.1.5, 18:51, and she calls for using privacy primitives in almost every L1 action.",
+      "topic_en": "Privacy tooling: interoperable key derivation, the Nulo wallet, Privacy Pools v2"
     },
     {
       "topic": "隐私工具：密钥派生互通、Nulo 钱包、Privacy Pools v2",
       "title": "Aztec：Nulo 钱包上线 Chrome 和 Firefox",
       "note": "00:55，开源，发送前显示每笔转账的隐私状态；可通过 Shield 把 ETH 和 USDC 桥入 Aztec。",
       "url": "https://x.com/aztecnetwork/status/2118039435493376125",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Aztec: the Nulo wallet launches on Chrome and Firefox",
+      "note_en": "00:55. It is open source and shows the privacy status of each transfer before sending; ETH and USDC can be bridged into Aztec through Shield.",
+      "topic_en": "Privacy tooling: interoperable key derivation, the Nulo wallet, Privacy Pools v2"
     },
     {
       "topic": "隐私工具：密钥派生互通、Nulo 钱包、Privacy Pools v2",
       "title": "EF：Privacy Pools v2 让用户能私下做公开地址能做的任何事",
       "note": "12:15。",
       "url": "https://x.com/ethereumfndn/status/2118210449292329203",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EF: Privacy Pools v2 lets users do privately anything a public address can do",
+      "note_en": "12:15.",
+      "topic_en": "Privacy tooling: interoperable key derivation, the Nulo wallet, Privacy Pools v2"
     },
     {
       "topic": "隐私工具：密钥派生互通、Nulo 钱包、Privacy Pools v2",
       "title": "Magicians：基于 BLS12-381 的 Stealth ABBE，通过 4844 blob 广播私密合约状态",
       "note": "03:58 开帖。",
       "url": "https://ethereum-magicians.org/t/stealth-abbe-over-bls12-381-zero-metadata-broadcast-of-private-contracts-encrypted-state-via-eip-4844-blobs/30282",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Magicians: Stealth ABBE over BLS12-381, broadcasting private contract state through 4844 blobs",
+      "note_en": "Opened at 03:58.",
+      "topic_en": "Privacy tooling: interoperable key derivation, the Nulo wallet, Privacy Pools v2"
     },
     {
       "topic": "其他动态",
       "title": "ETHBEAT：CROPS 指南上线",
       "note": "21:22，首批 Uniswap、Safe、Tornado Cash，按抗审查、开源、隐私、安全四项原则评审。",
       "url": "https://x.com/ethbeat_org/status/2118348131318268305",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "ETHBEAT: the CROPS guide goes live",
+      "note_en": "21:22, starting with Uniswap, Safe and Tornado Cash, reviewed against four principles: censorship resistance, open source, privacy and security.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EEZ：Remix 新增 EEZ 标签页",
       "note": "17:13，部署合约后给它一个跨链代理，就能在另一条链上同块调用。Jordi Baylina 讲 EEZ 如何用 blob 交换同步调用信息 14:36。EF：EEZ 在中立基础设施上重新连接流动性 06:21。",
       "url": "https://x.com/etheconomiczone/status/2118285457616433343",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EEZ: a new EEZ tab in Remix",
+      "note_en": "17:13. Deploy a contract, give it a cross-chain proxy, and it can be called in the same block from another chain. Jordi Baylina on how EEZ uses blobs to exchange synchronous call data, 14:36. EF: EEZ reconnects liquidity on neutral infrastructure, 06:21.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Jordi Baylina 讲 EEZ 如何用 blob 交换同步调用信息",
       "note": "EEZ：Remix 新增 EEZ 标签页 17:13，部署合约后给它一个跨链代理，就能在另一条链上同块调用。Jordi Baylina 讲 EEZ 如何用 blob 交换同步调用信息 14:36。EF：EEZ 在中立基础设施上重新连接流动性 06:21。",
       "url": "https://x.com/etheconomiczone/status/2118246160066326611",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Jordi Baylina on how EEZ uses blobs to exchange synchronous call data",
+      "note_en": "EEZ: a new EEZ tab in Remix, 17:13. Deploy a contract, give it a cross-chain proxy, and it can be called in the same block from another chain. Jordi Baylina on how EEZ uses blobs to exchange synchronous call data, 14:36. EF: EEZ reconnects liquidity on neutral infrastructure, 06:21.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EF：EEZ 在中立基础设施上重新连接流动性",
       "note": "EEZ：Remix 新增 EEZ 标签页 17:13，部署合约后给它一个跨链代理，就能在另一条链上同块调用。Jordi Baylina 讲 EEZ 如何用 blob 交换同步调用信息 14:36。EF：EEZ 在中立基础设施上重新连接流动性 06:21。",
       "url": "https://x.com/ethereumfndn/status/2118121549924552897",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EF: EEZ reconnects liquidity on neutral infrastructure",
+      "note_en": "EEZ: a new EEZ tab in Remix, 17:13. Deploy a contract, give it a cross-chain proxy, and it can be called in the same block from another chain. Jordi Baylina on how EEZ uses blobs to exchange synchronous call data, 14:36. EF: EEZ reconnects liquidity on neutral infrastructure, 06:21.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Barnabé：FCR 继续推进，RPC 接入后桥可以跟进",
       "note": "00:13。",
       "url": "https://x.com/barnabemonnot/status/2118028792048341316",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Barnabé: FCR keeps moving, and bridges can follow once RPCs support it",
+      "note_en": "00:13.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "growthepie：新增应用稳定币余额",
       "note": "04:18，可看到 Binance 被盗后稳定币余额下降。",
       "url": "https://x.com/growthepie_eth/status/2118090408362131827",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "growthepie: stablecoin balances per app are now available",
+      "note_en": "04:18, showing the drop in stablecoin balances after the Binance theft.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ERC-8486 Flash Loan Proxy 讨论帖",
       "note": "20:13；J-star 共识层升级命名征集 06:24。",
       "url": "https://ethereum-magicians.org/t/erc-8486-flash-loan-proxy/30289",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "ERC-8486 Flash Loan Proxy discussion thread",
+      "note_en": "20:13; naming the J-star consensus layer upgrade, 06:24.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "J-star 共识层升级命名征集",
       "note": "ERC-8486 Flash Loan Proxy 讨论帖 20:13；J-star 共识层升级命名征集 06:24。",
       "url": "https://ethereum-magicians.org/t/j-star-name-for-consensus-layer-upgrade/30285",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "naming the J-star consensus layer upgrade",
+      "note_en": "ERC-8486 Flash Loan Proxy discussion thread, 20:13; naming the J-star consensus layer upgrade, 06:24.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EF：2026 年以太坊社会层的去中心化",
       "note": "11:00，提到 Ethlabs 等新组织。",
       "url": "https://x.com/ethereumfndn/status/2118191582226599991",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "EF: decentralizing Ethereum's social layer in 2026",
+      "note_en": "11:00, mentioning Ethlabs and other new organizations.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "pcaversaccio：要让以太坊赢，必须为安全付费",
       "note": "18:52，介绍 TheDAO Security Fund。",
       "url": "https://x.com/pcaversaccio/status/2118310410680230035",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "pcaversaccio: for Ethereum to win, we must pay for security",
+      "note_en": "18:52, introducing the TheDAO Security Fund.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Georgios：Tempo 的 Zig 零依赖重写版跑赢 Rust 版",
       "note": "05:46。",
       "url": "https://x.com/gakonst/status/2118112656628629663",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Georgios: Tempo's zero-dependency Zig rewrite beats the Rust version",
+      "note_en": "05:46.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "社区讨论",
       "title": "Caspar：“pq makes you feel alive”",
       "note": "22:48，Devcon 期间后量子成为研究者最常提的话题。",
       "url": "https://x.com/casparschwa/status/2118369777907388542",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Caspar: \"pq makes you feel alive\"",
+      "note_en": "22:48. During Devcon, post-quantum is the topic researchers bring up most.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "Protolambda：AI 训练放缓可能让固化权重的 AI 硬件更有竞争力",
       "note": "22:41。",
       "url": "https://x.com/protolambda/status/2118368090081702111",
-      "date": "2026-11-05"
+      "date": "2026-11-05",
+      "title_en": "Protolambda: slower AI training could make AI hardware with fixed weights more competitive",
+      "note_en": "22:41.",
+      "topic_en": "Community"
     }
   ],
   "image": {
     "source_url": "https://ethbeat.org/crops",
     "credit": "ETHBEAT, The CROPS Guide",
-    "local_path": "assets/2026-11-05.jpg"
-  }
+    "local_path": "assets/2026-11-05.jpg",
+    "credit_en": "ETHBEAT, The CROPS Guide"
+  },
+  "keywords_en": [
+    "Lean Ethereum roadmap",
+    "lean transactions",
+    "EIP-7851",
+    "privacy wallet interoperability",
+    "CROPS guide"
+  ],
+  "summary_en": "The EF laid out Lean Ethereum fork by fork: H* is the last fork without lean features, I* brings leanVM and lean transactions, and J* adds lean attestations, DA sampling and PCS. On accounts, EIP-7851 (code-controlled EOA delegation) synced a clarification from EIP-8298 ahead of being archived, and EIP-8288 revised its aggregation policy. On privacy, Kassandra published the key derivation scheme for Tornado Cash and Privacy Pools, the Aztec wallet Nulo launched, and ETHBEAT released its CROPS guide."
 }

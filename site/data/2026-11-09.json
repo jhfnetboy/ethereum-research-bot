@@ -14,159 +14,234 @@
       "title": "EIPs PR #12638：Add EIP: Versioned Opcodes for Gas Repricing",
       "note": "02:40 提交。新合约必须使用 V2 操作码集，按 EIP-8037/8038 的新 gas 表计费；已部署合约保持旧 gas 表；`DELEGATECALL_V2` 要求目标也是 V2；V2 中去掉 gas 自省操作码 `GAS` 和 `GASLIMIT`。讨论来自 Leo Glisic 的推文。",
       "url": "https://github.com/ethereum/EIPs/pull/12638",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "EIPs PR #12638: Add EIP: Versioned Opcodes for Gas Repricing",
+      "note_en": "Opened at 02:40. New contracts must use the V2 opcode set, charged by the new EIP-8037/8038 gas schedule; deployed contracts keep the legacy schedule; `DELEGATECALL_V2` requires the target to be V2 as well; and the gas introspection opcodes `GAS` and `GASLIMIT` are left out of V2. The discussion started from Leo Glisic's post.",
+      "topic_en": "Glamsterdam compatibility: two alternatives and the EF timeline"
     },
     {
       "topic": "Glamsterdam 兼容性：两条备选方案和 EF 的时间表",
       "title": "Leo Glisic 的推文",
       "note": "EIPs PR #12638：Add EIP: Versioned Opcodes for Gas Repricing 02:40 提交。新合约必须使用 V2 操作码集，按 EIP-8037/8038 的新 gas 表计费；已部署合约保持旧 gas 表；`DELEGATECALL_V2` 要求目标也是 V2；V2 中去掉 gas 自省操作码 `GAS` 和 `GASLIMIT`。讨论来自 Leo Glisic 的推文。",
       "url": "https://x.com/Leo_Glisic/status/2118884109393215604",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Leo Glisic's post",
+      "note_en": "EIPs PR #12638: Add EIP: Versioned Opcodes for Gas Repricing, opened at 02:40. New contracts must use the V2 opcode set, charged by the new EIP-8037/8038 gas schedule; deployed contracts keep the legacy schedule; `DELEGATECALL_V2` requires the target to be V2 as well; and the gas introspection opcodes `GAS` and `GASLIMIT` are left out of V2. The discussion started from Leo Glisic's post.",
+      "topic_en": "Glamsterdam compatibility: two alternatives and the EF timeline"
     },
     {
       "topic": "Glamsterdam 兼容性：两条备选方案和 EF 的时间表",
       "title": "Magicians：EIP-8487 Separate execution credits and billing credits 讨论帖",
       "note": "22:07 开帖，对应前一天的 PR #12637。",
       "url": "https://ethereum-magicians.org/t/eip-8487-separate-execution-credits-and-billing-credits/30320",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Magicians: EIP-8487 Separate execution credits and billing credits discussion thread",
+      "note_en": "Opened at 22:07, for the previous day's PR #12637.",
+      "topic_en": "Glamsterdam compatibility: two alternatives and the EF timeline"
     },
     {
       "topic": "Glamsterdam 兼容性：两条备选方案和 EF 的时间表",
       "title": "EF 博客 11-09 更新：Glamsterdam 的 gas 改动与已部署合约",
       "note": "周五发文后收到 4 份报告，指出部署中的合约可能在 EIP-8037/8038 下出问题，EF 正在逐一审查并联系受影响协议。也听到更广的担忧：影响不可变合约的改动没有得到足够审视。EF 建议 ACD 等审计结果公开、留出审阅时间，再决定是否修改规范或何时安排 Hoodi 升级；已在原型化几种修订方案，并记录每种方案解决什么问题、又会打破哪些其他不变量，11-19 ACDE 上展示。",
       "url": "https://blog.ethereum.org/en/2026/11/06/glamsterdam-8037-8038",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "EF Blog update of 11-09: Glamsterdam gas changes and deployed contracts",
+      "note_en": "Since Friday's post the EF has received 4 reports pointing to deployed contracts that could break under EIP-8037/8038, and it is reviewing each one and contacting the protocols that may be affected. It has also heard a broader concern that changes affecting immutable contracts are not getting the scrutiny they deserve. The EF recommends that ACD wait until the audit findings are public and there has been time to review them before deciding whether to revise the specs or when to schedule the Hoodi upgrade. Several possible revisions are already being prototyped, with notes on which problems each solves and which other invariants it would break, to be presented at ACDE on 11-19.",
+      "topic_en": "Glamsterdam compatibility: two alternatives and the EF timeline"
     },
     {
       "topic": "Glamsterdam 兼容性：两条备选方案和 EF 的时间表",
       "title": "invariants 仓库",
       "note": "怎么用：如果你维护合约或委托实现，对照 invariants 仓库 自查，有问题写信给 glamsterdam@ethereum.org；11-16 ACDT 欢迎应用开发者参加。",
       "url": "https://github.com/ethereum/glamsterdam-gas-invariants",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "invariants repository",
+      "note_en": "What to do: if you maintain contracts or delegate implementations, check them against the invariants repository and write to glamsterdam@ethereum.org if you find a problem. App developers are welcome at ACDT on 11-16.",
+      "topic_en": "Glamsterdam compatibility: two alternatives and the EF timeline"
     },
     {
       "topic": "后量子：用户账户和共识层的排序",
       "title": "Barnabé：ethereum:native 会是后量子价值储存，而且有人在做",
       "note": "19:10。如果能形成共识，这可能是明年大家最重要的交付；Ethlabs 已在 PQ 用户账户上投入一段时间，并会继续支持。",
       "url": "https://x.com/barnabemonnot/status/2119764586870038684",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Barnabé: ethereum:native will be a post-quantum store of value, and there is work to make it so",
+      "note_en": "19:10. If alignment is reached, this may be everyone's most important delivery next year; Ethlabs has engaged on PQ user accounts for some time and will keep supporting it.",
+      "topic_en": "Post-quantum: user accounts and consensus-layer priorities"
     },
     {
       "topic": "后量子：用户账户和共识层的排序",
       "title": "Ben Edgington：PQDC 被提到了",
       "note": "14:46。PQDC 即 Post-Quantum Decoupled Consensus，是 Devcon 后修订的更快最终性路线：先让共识层抗量子（和抗 AI），同时保留以后走向更快最终性的路径，“只是重新排了优先级，但眼下很审慎”。",
       "url": "https://x.com/benjaminion_xyz/status/2119698227272253505",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Ben Edgington: PQDC mentioned",
+      "note_en": "14:46. PQDC stands for Post-Quantum Decoupled Consensus, the post-Devcon revision of the faster finality roadmap: make the consensus layer quantum (and AI) safe first while keeping the route to faster finality open. \"It's just a reprioritisation, but seems prudent at this time.\"",
+      "topic_en": "Post-quantum: user accounts and consensus-layer priorities"
     },
     {
       "topic": "后量子：用户账户和共识层的排序",
       "title": "Ethlabs 第 20 周周报推文",
       "note": "15:10。",
       "url": "https://x.com/ethlabs_org/status/2119704090318188926",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Ethlabs week 20 update post",
+      "note_en": "15:10.",
+      "topic_en": "Post-quantum: user accounts and consensus-layer priorities"
     },
     {
       "topic": "其他动态",
       "title": "Magicians：检查已部署合约是否仍运行审计过的 commit",
       "note": "15:43。浏览器的“已验证”标记只说明某份源码能编译出该地址的代码，不说明来自哪个 commit；对代理合约则完全不说明逻辑合约。怎么用：用相同的 solc 版本、optimizer runs、viaIR、evmVersion 重建审计 commit，对比运行时字节码。",
       "url": "https://ethereum-magicians.org/t/checking-that-a-deployed-contract-still-runs-the-audited-commit/30318",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Magicians: checking that a deployed contract still runs the audited commit",
+      "note_en": "15:43. An explorer's \"verified\" badge only shows that some source compiles to the code at an address, not which commit it came from, and for a proxy it says nothing about the logic contract. How to do it: rebuild the audited commit with the same solc version, optimizer runs, viaIR and evmVersion, and compare the runtime bytecode.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Magicians：谁能升级 7 个代币化国债和黄金代币",
       "note": "10:47。截至 11-09 的链上只读快照：3 个的升级权在单个 EOA 且无链上延迟，2 个是 4-of-7 Safe，1 个是 3-of-6 旧多签，1 个有 24 小时 timelock。作者强调这不代表资产有风险。",
       "url": "https://ethereum-magicians.org/t/who-can-upgrade-7-tokenized-treasury-gold-tokens-on-ethereum-a-read-only-look-at-upgrade-control/30313",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Magicians: who can upgrade 7 tokenized treasury and gold tokens",
+      "note_en": "10:47. A read-only onchain snapshot as of 11-09: for 3 tokens the upgrade owner is a single EOA with no onchain delay, 2 use a 4-of-7 Safe, 1 an older 3-of-6 multisig, and 1 has a 24-hour timelock. The author stresses this does not mean the assets are at risk.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "EIPs PR #12639：EIP-7976 更新参数名",
       "note": "20:32 提交。",
       "url": "https://github.com/ethereum/EIPs/pull/12639",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "EIPs PR #12639: EIP-7976 updates parameter names",
+      "note_en": "Opened at 20:32.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ERCs PR #2150：ERC-8049 元数据命名与 ERC-8048 对齐",
       "note": "09:28 合并。",
       "url": "https://github.com/ethereum/ERCs/pull/2150",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "ERCs PR #2150: ERC-8049 aligns metadata names with ERC-8048",
+      "note_en": "Merged at 09:28.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "pm #2297：EIP Editing Office Hour #119（11-10）",
       "note": "21:56 发布。",
       "url": "https://github.com/ethereum/pm/issues/2297",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "pm #2297: EIP Editing Office Hour #119 (11-10)",
+      "note_en": "Posted at 21:56.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ETHBEAT：Whitechain 上线",
       "note": "21:39，基于 OP Stack 的 optimistic rollup，由独立 PoA 网络转为以太坊 L2。",
       "url": "https://x.com/ethbeat_org/status/2119801986732474446",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "ETHBEAT: Whitechain added",
+      "note_en": "21:39, an optimistic rollup on the OP Stack moving from an independent PoA network to an Ethereum L2.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "ETHBEAT：为什么去中介化重要",
       "note": "19:37。",
       "url": "https://x.com/ethbeat_org/status/2119771446536712500",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "ETHBEAT: why disintermediation matters",
+      "note_en": "19:37.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "其他动态",
       "title": "Ethereum Economic Zone：Devcon 一周回顾，发布 Rollup X",
       "note": "01:59。",
       "url": "https://x.com/etheconomiczone/status/2119504990205026725",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Ethereum Economic Zone: Devcon week recap and the launch of Rollup X",
+      "note_en": "01:59.",
+      "topic_en": "Other updates"
     },
     {
       "topic": "社区讨论",
       "title": "Francesco：Vitalik 的 SoV 观点是在说出已在形成的共识",
       "note": "02:46；dankrad：这是 Vitalik 多年前开始的路径的结果 14:39；Julian Ma：ETH 在 AI 攻击时代的位置 16:08。",
       "url": "https://x.com/fradamt/status/2119516974825005214",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Francesco: Vitalik's SoV take voices a consensus that was already forming",
+      "note_en": "02:46; dankrad: it follows from the path Vitalik started on years ago, 14:39; Julian Ma: where ETH stands in an age of AI-driven attacks, 16:08.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "dankrad：这是 Vitalik 多年前开始的路径的结果",
       "note": "Francesco：Vitalik 的 SoV 观点是在说出已在形成的共识 02:46；dankrad：这是 Vitalik 多年前开始的路径的结果 14:39；Julian Ma：ETH 在 AI 攻击时代的位置 16:08。",
       "url": "https://x.com/dankrad/status/2119696284621611500",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "dankrad: it follows from the path Vitalik started on years ago",
+      "note_en": "Francesco: Vitalik's SoV take voices a consensus that was already forming, 02:46; dankrad: it follows from the path Vitalik started on years ago, 14:39; Julian Ma: where ETH stands in an age of AI-driven attacks, 16:08.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "Julian Ma：ETH 在 AI 攻击时代的位置",
       "note": "Francesco：Vitalik 的 SoV 观点是在说出已在形成的共识 02:46；dankrad：这是 Vitalik 多年前开始的路径的结果 14:39；Julian Ma：ETH 在 AI 攻击时代的位置 16:08。",
       "url": "https://x.com/_julianma/status/2119718834466648351",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Julian Ma: where ETH stands in an age of AI-driven attacks",
+      "note_en": "Francesco: Vitalik's SoV take voices a consensus that was already forming, 02:46; dankrad: it follows from the path Vitalik started on years ago, 14:39; Julian Ma: where ETH stands in an age of AI-driven attacks, 16:08.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "Vitalik：要问的是我最近一次用隐私协议付了什么",
       "note": "14:04，回应有人在 Etherscan 查 vitalik.eth 地址。",
       "url": "https://x.com/VitalikButerin/status/2119687568879231319",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Vitalik: the question is what I last paid for using a privacy protocol",
+      "note_en": "14:04, replying to someone looking up the vitalik.eth address on Etherscan.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "Ben Edgington：如果只看一个 Devcon 演讲，就看 dapplion 的",
       "note": "17:21（dapplion 的 Devcon 演讲视频），他将担任 ACDC 主持。",
       "url": "https://x.com/benjaminion_xyz/status/2119737174740341095",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "Ben Edgington: if you watch one Devcon talk, make it dapplion's",
+      "note_en": "17:21 (dapplion's Devcon talk video). He is taking on the ACDC chair.",
+      "topic_en": "Community"
     },
     {
       "topic": "社区讨论",
       "title": "dapplion 的 Devcon 演讲视频",
       "note": "Ben Edgington：如果只看一个 Devcon 演讲，就看 dapplion 的 17:21（dapplion 的 Devcon 演讲视频），他将担任 ACDC 主持。",
       "url": "https://www.youtube.com/watch?v=xKdjSjz01cE",
-      "date": "2026-11-09"
+      "date": "2026-11-09",
+      "title_en": "dapplion's Devcon talk video",
+      "note_en": "Ben Edgington: if you watch one Devcon talk, make it dapplion's, 17:21 (dapplion's Devcon talk video). He is taking on the ACDC chair.",
+      "topic_en": "Community"
     }
   ],
   "image": {
     "source_url": "https://github.com/ethereum/EIPs/pull/12638",
     "credit": "GitHub, ethereum/EIPs PR #12638 Add EIP: Versioned Opcodes for Gas Repricing",
-    "local_path": "assets/2026-11-09.jpg"
-  }
+    "local_path": "assets/2026-11-09.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12638 Add EIP: Versioned Opcodes for Gas Repricing"
+  },
+  "keywords_en": [
+    "Versioned Opcodes",
+    "EIP-8487 thread",
+    "EF receives 4 reports",
+    "PQDC",
+    "post-quantum user accounts"
+  ],
+  "summary_en": "Another answer to Glamsterdam compatibility: the Versioned Opcodes draft has new contracts use V2 opcodes that carry the new gas schedule, while old contracts keep the old one, and V2 drops gas introspection opcodes such as GAS. The EF updated its blog post: it has received 4 reports of deployed contracts that could break, recommends that ACD wait until the audit results are public before deciding whether to change the specs or schedule Hoodi, and published a timeline from 11-12 to 11-19. Barnabé said Ethlabs supports work on post-quantum user accounts, and Ben Edgington explained PQDC."
 }
