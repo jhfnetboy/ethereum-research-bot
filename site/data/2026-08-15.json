@@ -1,0 +1,105 @@
+{
+  "date": "2026-08-15",
+  "keywords": [
+    "EIP-8141 原子批量禁用 approval 合并",
+    "EIP-8130 actorId 右对齐",
+    "EIP-8164 转换账户",
+    "Hegotá 排名"
+  ],
+  "summary": "周六。8 月 5 日提交的 EIP-8141 PR 合并：原子批量中任何 frame 都不能声明 approval 作用域。EIP-8130 修正地址派生的 `actorId` 编码，改为与 Keystore 规范实现一致的右对齐，并合并。EIP-8164 补充说明账户转换后会发生什么变化。donnoh 公布自己的 Hegotá 排名。",
+  "items": [
+    {
+      "topic": "原生 AA 规范落定细节",
+      "title": "EIP-8141：静态禁止原子批量 frame 的 approval 作用域",
+      "note": "（Marchhill）合并，内容见 8 月 5 日。",
+      "url": "https://github.com/ethereum/EIPs/pull/12109",
+      "date": "2026-08-15",
+      "title_en": "EIP-8141: statically disallow approval scope on atomic-batch frames",
+      "note_en": "(Marchhill), merged; see August 5 for the content.",
+      "topic_en": "Settling details in the native AA specs"
+    },
+    {
+      "topic": "原生 AA 规范落定细节",
+      "title": "EIP-8130：地址派生的 actorId 右对齐",
+      "note": "（chunter-cb）提交并合并。原文所有地址派生的 `actorId` 公式写成左对齐的 `bytes32(bytes20(x))`，而参考 Keystore（`ActorId.fromAddress`）是右对齐的 `bytes32(uint256(uint160(x)))`，地址在低 20 字节。",
+      "url": "https://github.com/ethereum/EIPs/pull/12173",
+      "date": "2026-08-15",
+      "title_en": "EIP-8130: right-align address-derived actorIds",
+      "note_en": "(chunter-cb), submitted and merged. Every address-derived `actorId` formula was written as the left-aligned `bytes32(bytes20(x))`, while the reference Keystore (`ActorId.fromAddress`) right-aligns as `bytes32(uint256(uint160(x)))`, with the address in the low 20 bytes.",
+      "topic_en": "Settling details in the native AA specs"
+    },
+    {
+      "topic": "原生 AA 规范落定细节",
+      "title": "EIP-8164：说明对已转换账户的影响",
+      "note": "（nezu511）提交。原有四项只说明其他账户不受影响，章节开头的“除非账户所有者主动转换”所指的情形没有在任何地方描述，PR 补上，不改规范行为。",
+      "url": "https://github.com/ethereum/EIPs/pull/12174",
+      "date": "2026-08-15",
+      "title_en": "EIP-8164: document effects on converted accounts",
+      "note_en": "(nezu511), submitted. The four existing items explain why other accounts are unaffected, but the case named by the opening clause \"unless the account owner explicitly converts\" was not described anywhere; the PR fills it in with no normative change.",
+      "topic_en": "Settling details in the native AA specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8333：增加处理分叉过渡的辅助函数",
+      "note": "（jihoonsong）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12172",
+      "date": "2026-08-15",
+      "title_en": "EIP-8333: add a helper to handle the fork transition",
+      "note_en": "(jihoonsong), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048：修正地址编码并增加可选的账户密钥",
+      "note": "与 ERC-8049 同类修正（nxt3d）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1948",
+      "date": "2026-08-15",
+      "title_en": "ERC-8048: correct address encoding and add an optional account key",
+      "note_en": "And the same fix for ERC-8049 (nxt3d), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8049 同类修正",
+      "note": "ERC-8048：修正地址编码并增加可选的账户密钥 与 ERC-8049 同类修正（nxt3d）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1949",
+      "date": "2026-08-15",
+      "title_en": "the same fix for ERC-8049",
+      "note_en": "ERC-8048: correct address encoding and add an optional account key and the same fix for ERC-8049 (nxt3d), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh：我的 Hegotá 排名",
+      "note": "05:27。",
+      "url": "https://x.com/donnoh_eth/status/2088392008024903973",
+      "date": "2026-08-15",
+      "title_en": "donnoh: my Hegotá ranking",
+      "note_en": "05:27.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：在 Starknet 上能做的一切",
+      "note": "20:00，包括私密兑换、私密转账和屏蔽任意 ERC-20。",
+      "url": "https://x.com/StarkWareLtd/status/2088611675398431208",
+      "date": "2026-08-15",
+      "title_en": "StarkWare: everything you can do on Starknet",
+      "note_en": "20:00, including private swaps, private transfers and shielding any ERC-20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12173",
+    "credit": "GitHub, ethereum/EIPs PR #12173",
+    "local_path": "assets/2026-08-15.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12173"
+  },
+  "keywords_en": [
+    "EIP-8141 no approval in atomic batches merged",
+    "EIP-8130 right-aligned actorIds",
+    "EIP-8164 converted accounts",
+    "Hegotá rankings"
+  ],
+  "summary_en": "Saturday. The EIP-8141 PR submitted on August 5 was merged: no frame in an atomic batch may declare approval scope. EIP-8130 corrected its address-derived `actorId` encoding to the right alignment used by the canonical Keystore implementation, merged. EIP-8164 now spells out what changes once an account converts. donnoh published his Hegotá ranking."
+}

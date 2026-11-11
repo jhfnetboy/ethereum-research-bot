@@ -1,0 +1,179 @@
+{
+  "date": "2026-08-14",
+  "keywords": [
+    "EIP-8141 frame 状态 gas 第二维度",
+    "SIGPARAM 与已撤销密钥",
+    "EIP-8151",
+    "重定价基准",
+    "FOCIL 与验证者合并",
+    "Poseidon 转向争议"
+  ],
+  "summary": "lightclient 把 frame 的 `gas_limit` 拆成 `execution_gas_limit` 和 `state_gas_limit` 并合并，执行 gas 仍是调用帧层面的概念，状态 gas 改按 frame 处理。另一组 PR 关注已迁移账户：EIP-8151 阻止撤销的 ECDSA 密钥通过 `ecRecover` 授权，而 EIP-8141 的 `SIGPARAM` 会在另一处重开这个缺口。Jochem Brouwer 的基准确认 Glamsterdam 重定价数值安全且最终。Eli Ben-Sasson 对 EF 放弃 Poseidon 的决定提出批评。",
+  "items": [
+    {
+      "topic": "EIP-8141 的 gas 和签名语义",
+      "title": "EIP-8141：为 frame 加入显式的状态 gas 第二维度",
+      "note": "（lightclient）合并。把 frame 的 `gas_limit` 拆成 `execution_gas_limit` 和 `state_gas_limit`：执行 gas 仍基本是调用帧层面的概念，状态 gas 则按 frame 处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/12062",
+      "date": "2026-08-14",
+      "title_en": "EIP-8141: add an explicit second dimension for state gas to frames",
+      "note_en": "(lightclient), merged. It splits a frame's `gas_limit` into `execution_gas_limit` and `state_gas_limit`: execution gas continues to be (generally) a call-frame concept, while state gas is treated as a frame-level concept.",
+      "topic_en": "Gas and signature semantics in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 和签名语义",
+      "title": "EIP-8141：澄清 floor 重定价、签名验证和 frame.value 的 gas",
+      "note": "（AnkushinDaniil）合并。作者在 Nethermind 实现 EIP-8141 并与 ethrex 在 devnet 交叉测试，文本有三处可多种理解，其中两处已造成真实分歧。同日合并的还有 frame 收据不带交易级状态。",
+      "url": "https://github.com/ethereum/EIPs/pull/12026",
+      "date": "2026-08-14",
+      "title_en": "EIP-8141: clarify floor repricing, signature validation and frame.value gas",
+      "note_en": "(AnkushinDaniil), merged. The author is implementing EIP-8141 in Nethermind and cross-testing against ethrex on a devnet; three places in the text could be read more than one way, and two had already caused real divergences. Also merged that day: a frame receipt carries no transaction-level status.",
+      "topic_en": "Gas and signature semantics in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 和签名语义",
+      "title": "frame 收据不带交易级状态",
+      "note": "EIP-8141：澄清 floor 重定价、签名验证和 frame.value 的 gas（AnkushinDaniil）合并。作者在 Nethermind 实现 EIP-8141 并与 ethrex 在 devnet 交叉测试，文本有三处可多种理解，其中两处已造成真实分歧。同日合并的还有 frame 收据不带交易级状态。",
+      "url": "https://github.com/ethereum/EIPs/pull/12061",
+      "date": "2026-08-14",
+      "title_en": "a frame receipt carries no transaction-level status",
+      "note_en": "EIP-8141: clarify floor repricing, signature validation and frame.value gas (AnkushinDaniil), merged. The author is implementing EIP-8141 in Nethermind and cross-testing against ethrex on a devnet; three places in the text could be read more than one way, and two had already caused real divergences. Also merged that day: a frame receipt carries no transaction-level status.",
+      "topic_en": "Gas and signature semantics in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 和签名语义",
+      "title": "EIP-8141：限制 SIGPARAM 签名者内省仅用于空代码或委托代码的账户",
+      "note": "（Marchhill）提交。EIP-8151 阻止已迁移账户被撤销的 ECDSA 密钥经 `ecRecover` 作为授权出示，而 `SIGPARAM(0x00)` 把 `resolved_signer` 交给 EVM 代码，消费方无法区分有效密钥和已撤销密钥。配套的 EIP-8151：写明已撤销密钥不变式 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12168",
+      "date": "2026-08-14",
+      "title_en": "EIP-8141: restrict SIGPARAM signer introspection to accounts with empty or delegated code",
+      "note_en": "(Marchhill), submitted. EIP-8151 stops a migrated account's revoked ECDSA key being presented as authorization through `ecRecover`, but `SIGPARAM(0x00)` hands `resolved_signer` to EVM code with no way for the consumer to tell a live key from a revoked one. The companion EIP-8151: state the revoked-key invariant was submitted.",
+      "topic_en": "Gas and signature semantics in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 和签名语义",
+      "title": "EIP-8151：写明已撤销密钥不变式",
+      "note": "EIP-8141：限制 SIGPARAM 签名者内省仅用于空代码或委托代码的账户（Marchhill）提交。EIP-8151 阻止已迁移账户被撤销的 ECDSA 密钥经 `ecRecover` 作为授权出示，而 `SIGPARAM(0x00)` 把 `resolved_signer` 交给 EVM 代码，消费方无法区分有效密钥和已撤销密钥。配套的 EIP-8151：写明已撤销密钥不变式 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12169",
+      "date": "2026-08-14",
+      "title_en": "EIP-8151: state the revoked-key invariant",
+      "note_en": "EIP-8141: restrict SIGPARAM signer introspection to accounts with empty or delegated code (Marchhill), submitted. EIP-8151 stops a migrated account's revoked ECDSA key being presented as authorization through `ecRecover`, but `SIGPARAM(0x00)` hands `resolved_signer` to EVM code with no way for the consumer to tell a live key from a revoked one. The companion EIP-8151: state the revoked-key invariant was submitted.",
+      "topic_en": "Gas and signature semantics in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 和签名语义",
+      "title": "EIP-8141：放宽禁用操作码列表",
+      "note": "（Marchhill）提交。验证规则允许第一个 `deploy` frame 对 `tx.sender` 存储做 `SSTORE`，禁用列表却全面禁用 `SSTORE`，只给 `CREATE`、`CREATE2`、`SETDELEGATE` 例外，PR 补上对应例外。",
+      "url": "https://github.com/ethereum/EIPs/pull/12167",
+      "date": "2026-08-14",
+      "title_en": "EIP-8141: relax the banned opcode list",
+      "note_en": "(Marchhill), submitted. The trace rules permit `SSTORE` to `tx.sender`'s storage inside the first `deploy` frame, but the banned list bans `SSTORE` outright while carving out `CREATE`, `CREATE2` and `SETDELEGATE`; the PR adds the matching carve-out.",
+      "topic_en": "Gas and signature semantics in EIP-8141"
+    },
+    {
+      "topic": "Glamsterdam 重定价与多维费用",
+      "title": "ECH：Jochem Brouwer 讲解 EIP-2780、EIP-8037、EIP-8038 的基准结果，确认重定价数值安全且最终",
+      "note": "01:52。",
+      "url": "https://x.com/ECHInstitute/status/2087975498102264068",
+      "date": "2026-08-14",
+      "title_en": "ECH: Jochem Brouwer walks through benchmark results for EIP-2780, EIP-8037 and EIP-8038, confirming the repricing numbers are safe and final",
+      "note_en": "01:52.",
+      "topic_en": "Glamsterdam repricing and multidimensional fees"
+    },
+    {
+      "topic": "Glamsterdam 重定价与多维费用",
+      "title": "EIP-7999 更新",
+      "note": "（anderselowsson）合并；Magicians：在 EIP-7999 中保持 BAL 数据的抗审查 20:05，EIP-7999 把数据视为 FOCIL 下的无条件资源，构建者不能因区块数据资源已满而略过 IL 交易，这依赖每个 IL 限 8 KiB。",
+      "url": "https://github.com/ethereum/EIPs/pull/12170",
+      "date": "2026-08-14",
+      "title_en": "An EIP-7999 update",
+      "note_en": "(anderselowsson), merged; Magicians: preserving censorship resistance for BAL data in EIP-7999, 20:05. EIP-7999 treats data as an unconditional resource under FOCIL, so a builder may not skip an IL transaction just because the block's data resource is full, which relies on each IL being capped at 8 KiB.",
+      "topic_en": "Glamsterdam repricing and multidimensional fees"
+    },
+    {
+      "topic": "Glamsterdam 重定价与多维费用",
+      "title": "Magicians：在 EIP-7999 中保持 BAL 数据的抗审查",
+      "note": "EIP-7999 更新（anderselowsson）合并；Magicians：在 EIP-7999 中保持 BAL 数据的抗审查 20:05，EIP-7999 把数据视为 FOCIL 下的无条件资源，构建者不能因区块数据资源已满而略过 IL 交易，这依赖每个 IL 限 8 KiB。",
+      "url": "https://ethereum-magicians.org/t/preserving-censorship-resistance-for-bal-data-in-eip-7999/29427",
+      "date": "2026-08-14",
+      "title_en": "Magicians: preserving censorship resistance for BAL data in EIP-7999",
+      "note_en": "An EIP-7999 update (anderselowsson), merged; Magicians: preserving censorship resistance for BAL data in EIP-7999, 20:05. EIP-7999 treats data as an unconditional resource under FOCIL, so a builder may not skip an IL transaction just because the block's data resource is full, which relies on each IL being capped at 8 KiB.",
+      "topic_en": "Glamsterdam repricing and multidimensional fees"
+    },
+    {
+      "topic": "Glamsterdam 重定价与多维费用",
+      "title": "EIP-8261 进入 Review",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12164",
+      "date": "2026-08-14",
+      "title_en": "EIP-8261 moved to Review",
+      "note_en": "Merged.",
+      "topic_en": "Glamsterdam repricing and multidimensional fees"
+    },
+    {
+      "topic": "其他动态",
+      "title": "soispoke：验证者合并对抗审查有好处",
+      "note": "21:20，FOCIL 上线后 includer 不论质押多少都随机选取，大运营商合并后单人质押者被选中的比例更高。",
+      "url": "https://x.com/soispoke/status/2088269579537514843",
+      "date": "2026-08-14",
+      "title_en": "soispoke: validator consolidation is good for censorship resistance",
+      "note_en": "21:20; once FOCIL ships, includers are chosen at random regardless of stake, so consolidation by large operators raises the share of solo stakers selected.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "kassandra：kohaku-cli 功能 #4，查看网络流量",
+      "note": "20:11，除以太坊 RPC 外所有 HTTP 请求默认经 Tor，RPC 可以也应该是本地节点。",
+      "url": "https://x.com/kassandraETH/status/2088252045891416332",
+      "date": "2026-08-14",
+      "title_en": "kassandra: kohaku-cli feature #4, view network traffic",
+      "note_en": "20:11; apart from the Ethereum RPC, all HTTP calls go through Tor by default, and the RPC can and should be a local node.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EFDevcon：Tor 联合创始人 Roger Dingledine 将在 Devcon 8 演讲",
+      "note": "00:08，主题包括网络隐私和元数据。",
+      "url": "https://x.com/EFDevcon/status/2087949464283558177",
+      "date": "2026-08-14",
+      "title_en": "EFDevcon: Tor co-founder Roger Dingledine will speak at Devcon 8",
+      "note_en": "00:08, on network privacy and metadata among other topics.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：对 EF 转向的一点称赞、两处遗漏、一个误导和一个错误",
+      "note": "20:11，称赞选择 STARK（基于哈希的 SNARK）是对的。",
+      "url": "https://x.com/EliBenSasson/status/2088252294861119776",
+      "date": "2026-08-14",
+      "title_en": "Eli Ben-Sasson: one compliment, two omissions, one misleading claim and one mistake in the EF pivot",
+      "note_en": "20:11, praising the move to STARKs (hash-based SNARKs).",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：Binius 的遗产会延续，人们退回到基于哈希的系统",
+      "note": "23:16。",
+      "url": "https://x.com/gakonst/status/2088298796459634816",
+      "date": "2026-08-14",
+      "title_en": "gakonst: the legacy of Binius will continue as people retreat to hash-based systems",
+      "note_en": "23:16.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12062",
+    "credit": "GitHub, ethereum/EIPs PR #12062",
+    "local_path": "assets/2026-08-14.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12062"
+  },
+  "keywords_en": [
+    "EIP-8141 second state gas dimension for frames",
+    "SIGPARAM and revoked keys",
+    "EIP-8151",
+    "repricing benchmarks",
+    "FOCIL and validator consolidation",
+    "Poseidon pivot debate"
+  ],
+  "summary_en": "lightclient split a frame's `gas_limit` into `execution_gas_limit` and `state_gas_limit`, merged: execution gas stays a call-frame concept while state gas is handled per frame. Another set of PRs looks at migrated accounts: EIP-8151 stops a revoked ECDSA key from authorizing through `ecRecover`, but EIP-8141's `SIGPARAM` would reopen that gap elsewhere. Jochem Brouwer's benchmarks confirmed the Glamsterdam repricing numbers are safe and final. Eli Ben-Sasson criticized the EF's decision to drop Poseidon."
+}

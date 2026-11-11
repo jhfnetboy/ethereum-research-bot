@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-03",
+  "keywords": [
+    "EIP-8250 keyed nonce 地址固定",
+    "EIP-8272 recent root",
+    "ACDT #90",
+    "Glamsterdam 重定价锚点",
+    "EIP-8361 交易有效性证明"
+  ],
+  "summary": "两个与账户和隐私相关的 EIP 把系统合约地址写进规范：EIP-8250 的 `NONCE_MANAGER` 固定为 `0x...8250`，EIP-8272 的 `RECENT_ROOT_ADDRESS` 固定为 `0x...8272`，让 devnet 可以按规范互通。Marchhill 提交 EIP-8361 交易有效性证明，用证明抬高公共内存池对 frame 交易验证工作的上限。晚上 ACDT #90 讨论 Glamsterdam 重定价，锚点从 100 降到 75 Mgas/s。",
+  "items": [
+    {
+      "topic": "keyed nonce 与 recent root 系统合约地址落地",
+      "title": "EIP-8250：固定 NONCE_MANAGER 为 0x...8250",
+      "note": "（AnkushinDaniil）合并。PR 说明 `NONCE_MANAGER` 的地址决定 keyed nonce 所在的存储槽，两个客户端选了不同的值就不在同一条链上；此前地址是 `0xTBD`，而合约代码已经固定。已知的两个实现都独立选择了与 EIP 编号相同的地址，这与 EIP-8141 中 `EXPIRY_VERIFIER = 0x...8141` 的惯例一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12067",
+      "date": "2026-08-03",
+      "title_en": "EIP-8250: pin NONCE_MANAGER to 0x...8250",
+      "note_en": "(AnkushinDaniil), merged. The PR explains that `NONCE_MANAGER`'s address determines the storage slots keyed nonces live in, so two clients that pick different values do not share a chain; the address was `0xTBD` while the contract code was already pinned. Both known implementations independently chose the address equal to the EIP number, matching the `EXPIRY_VERIFIER = 0x...8141` convention in EIP-8141.",
+      "topic_en": "System contract addresses for keyed nonces and recent roots"
+    },
+    {
+      "topic": "keyed nonce 与 recent root 系统合约地址落地",
+      "title": "EIP-8272：固定 RECENT_ROOT_ADDRESS 为 0x...8272",
+      "note": "（AnkushinDaniil）同日合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12068",
+      "date": "2026-08-03",
+      "title_en": "EIP-8272: pin RECENT_ROOT_ADDRESS to 0x...8272",
+      "note_en": "(AnkushinDaniil), merged the same day.",
+      "topic_en": "System contract addresses for keyed nonces and recent roots"
+    },
+    {
+      "topic": "用证明扩展 frame 交易的内存池预算",
+      "title": "EIP-8361：交易有效性证明",
+      "note": "（Marchhill）提交。PR 说明：对 EIP-8141 验证前缀生成证明，可以抬高公共内存池的验证工作上限，并扩展 FOCIL 资格，而不改变交易执行和 gas 收费；包括递归批量、受限的 fee-bump 复用、有界的证书获取，以及每个 IL 一份经认证的证书。目标是本地消费级证明和未来能验证证明的节点。",
+      "url": "https://github.com/ethereum/EIPs/pull/12075",
+      "date": "2026-08-03",
+      "title_en": "EIP-8361: transaction validity proofs",
+      "note_en": "(Marchhill), submitted. Per the PR, proofs of EIP-8141 validation prefixes raise the public mempool's validation-work ceiling and extend FOCIL eligibility without changing transaction execution or gas charges. It includes recursive batching, restricted fee-bump reuse, bounded certificate retrieval and one authenticated certificate per IL, and targets local consumer proving and future proof-verifying nodes.",
+      "topic_en": "Using proofs to extend the mempool budget for frame transactions"
+    },
+    {
+      "topic": "用证明扩展 frame 交易的内存池预算",
+      "title": "新 EIP：TCREATE 操作码",
+      "note": "（abc-123-c）提交，提供临时合约部署机制；EIP-8081：PFI EIP-8360 同日提交，提议将其纳入 Hegotá。",
+      "url": "https://github.com/ethereum/EIPs/pull/12073",
+      "date": "2026-08-03",
+      "title_en": "New EIP: TCREATE opcode",
+      "note_en": "(abc-123-c), submitted, a mechanism for deploying temporary contracts; EIP-8081: PFI EIP-8360 was submitted the same day to propose it for Hegotá.",
+      "topic_en": "Using proofs to extend the mempool budget for frame transactions"
+    },
+    {
+      "topic": "用证明扩展 frame 交易的内存池预算",
+      "title": "EIP-8081：PFI EIP-8360",
+      "note": "新 EIP：TCREATE 操作码（abc-123-c）提交，提供临时合约部署机制；EIP-8081：PFI EIP-8360 同日提交，提议将其纳入 Hegotá。",
+      "url": "https://github.com/ethereum/EIPs/pull/12074",
+      "date": "2026-08-03",
+      "title_en": "EIP-8081: PFI EIP-8360",
+      "note_en": "New EIP: TCREATE opcode (abc-123-c), submitted, a mechanism for deploying temporary contracts; EIP-8081: PFI EIP-8360 was submitted the same day to propose it for Hegotá.",
+      "topic_en": "Using proofs to extend the mempool budget for frame transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：把 mustMatch 推广为带约束的 boundaries 对象",
+      "note": "（forshtat），超出约束时自动拒签；同作者提交 ERC-8362 ERC-7730 自定义编码布局。",
+      "url": "https://github.com/ethereum/ERCs/pull/1923",
+      "date": "2026-08-03",
+      "title_en": "ERC-7730: generalize mustMatch into a boundaries object with constraints",
+      "note_en": "(forshtat), refusing to sign automatically when a constraint is violated; the same author submitted ERC-8362 custom encoding layout for ERC-7730.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8362 ERC-7730 自定义编码布局",
+      "note": "ERC-7730：把 mustMatch 推广为带约束的 boundaries 对象（forshtat），超出约束时自动拒签；同作者提交 ERC-8362 ERC-7730 自定义编码布局。",
+      "url": "https://github.com/ethereum/ERCs/pull/1925",
+      "date": "2026-08-03",
+      "title_en": "ERC-8362 custom encoding layout for ERC-7730",
+      "note_en": "ERC-7730: generalize mustMatch into a boundaries object with constraints (forshtat), refusing to sign automatically when a constraint is violated; the same author submitted ERC-8362 custom encoding layout for ERC-7730.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8142：Bib 列传播",
+      "note": "（kamilsa）、EIP-8081：PFI EIP-8359（hanniabu）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12072",
+      "date": "2026-08-03",
+      "title_en": "EIP-8142: Bib columns propagation",
+      "note_en": "(kamilsa) and EIP-8081: PFI EIP-8359 (hanniabu), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：PFI EIP-8359",
+      "note": "EIP-8142：Bib 列传播（kamilsa）、EIP-8081：PFI EIP-8359（hanniabu）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12071",
+      "date": "2026-08-03",
+      "title_en": "EIP-8081: PFI EIP-8359",
+      "note_en": "EIP-8142: Bib columns propagation (kamilsa) and EIP-8081: PFI EIP-8359 (hanniabu), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #39 议程帖",
+      "note": "16:01 发布，会议在 8 月 4 日。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-39-august-4-2026/29249",
+      "date": "2026-08-03",
+      "title_en": "FOCIL Breakout #39 agenda",
+      "note_en": "Posted at 16:01; the call is on August 4.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：ZK 已成为区块链扩容的共识方案，哪些 ZK 话题值得解释",
+      "note": "14:30。",
+      "url": "https://x.com/EliBenSasson/status/2084180015709614556",
+      "date": "2026-08-03",
+      "title_en": "Eli Ben-Sasson: ZK is now the consensus answer for scaling blockchains, so which ZK topics are worth explaining",
+      "note_en": "14:30.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12067",
+    "credit": "GitHub, ethereum/EIPs PR #12067",
+    "local_path": "assets/2026-08-03.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12067"
+  },
+  "keywords_en": [
+    "EIP-8250 keyed nonce address pinned",
+    "EIP-8272 recent root",
+    "ACDT #90",
+    "Glamsterdam repricing anchor",
+    "EIP-8361 transaction validity proofs"
+  ],
+  "summary_en": "Two account and privacy EIPs wrote their system contract addresses into the spec: EIP-8250's `NONCE_MANAGER` is pinned to `0x...8250` and EIP-8272's `RECENT_ROOT_ADDRESS` to `0x...8272`, so devnets can interoperate by reading the spec. Marchhill submitted EIP-8361 transaction validity proofs, which use proofs to raise the public mempool's ceiling on validation work for frame transactions. In the evening ACDT #90 discussed Glamsterdam repricing, with the anchor lowered from 100 to 75 Mgas/s."
+}

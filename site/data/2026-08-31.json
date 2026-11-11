@@ -1,0 +1,153 @@
+{
+  "date": "2026-08-31",
+  "keywords": [
+    "Ethlabs Week 10",
+    "8141 是平台而 8130 是一站式方案",
+    "Hegotá 提议 10 秒区块",
+    "decoupled consensus 形式化",
+    "ACDT #94",
+    "8250 与 8272 编号冲突修复合并",
+    "EIP-7999 多维费用市场均衡",
+    "L2BEAT 活跃中继者指标"
+  ],
+  "summary": "Barnabé 的 Ethlabs Week 10 回顾 AA 之周：8130 更像为钱包提供强默认值、限制功能的一站式方案，8141 更像账户平台，提供让协议无需干预即可扩展的原料；8141 被 SFI 后仍有机会吸收 8130 的想法。Ethlabs 提议在 Hegotá 完成缩短出块时间所需的改造，并先从 12 秒降到 10 秒。fradamt 发布 decoupled consensus 形式化的大更新。EIP-8250 和 EIP-8272 移开冲突编号的 PR 合并。当晚召开 ACDT #94。",
+  "items": [
+    {
+      "topic": "Ethlabs Week 10：L1 账户抽象",
+      "title": "EIP-8250：把 TXPARAM_LEGACY_NONCE 移出 0x0C",
+      "note": "合并；EIP-8272：把 RECENTROOTREFLOAD 移出 0xB5 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12219",
+      "date": "2026-08-31",
+      "title_en": "EIP-8250: move TXPARAM_LEGACY_NONCE off 0x0C",
+      "note_en": "Merged; EIP-8272: move RECENTROOTREFLOAD off 0xB5, merged.",
+      "topic_en": "Ethlabs Week 10: account abstraction on L1"
+    },
+    {
+      "topic": "Ethlabs Week 10：L1 账户抽象",
+      "title": "EIP-8272：把 RECENTROOTREFLOAD 移出 0xB5",
+      "note": "EIP-8250：把 TXPARAM_LEGACY_NONCE 移出 0x0C 合并；EIP-8272：把 RECENTROOTREFLOAD 移出 0xB5 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12220",
+      "date": "2026-08-31",
+      "title_en": "EIP-8272: move RECENTROOTREFLOAD off 0xB5",
+      "note_en": "EIP-8250: move TXPARAM_LEGACY_NONCE off 0x0C, merged; EIP-8272: move RECENTROOTREFLOAD off 0xB5, merged.",
+      "topic_en": "Ethlabs Week 10: account abstraction on L1"
+    },
+    {
+      "topic": "Ethlabs Week 10：L1 账户抽象",
+      "title": "EIP-8146：重构和简化",
+      "note": "（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12274",
+      "date": "2026-08-31",
+      "title_en": "EIP-8146: restructure and simplify",
+      "note_en": "(nerolation), submitted and merged.",
+      "topic_en": "Ethlabs Week 10: account abstraction on L1"
+    },
+    {
+      "topic": "更快的区块与最终性",
+      "title": "议程",
+      "note": "ACDT #94 当晚召开（议程），无可引用纪要。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-94-august-31-2026/29519",
+      "date": "2026-08-31",
+      "title_en": "agenda",
+      "note_en": "ACDT #94 was held in the evening (agenda), with no notes to cite.",
+      "topic_en": "Faster blocks and finality"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：EIP-7999 多维费用市场的均衡，执行与数据费用底价的前沿",
+      "note": "18:33（M1kuW1ll，EF 实习成果）：执行、数据、状态各有目标、上限和基础费，但运行时 BAL 消耗数据 gas，市场相互耦合。",
+      "url": "https://ethresear.ch/t/equilibrium-in-eip-7999-s-multidimensional-fee-market-the-execution-data-fee-floor-frontier/25868",
+      "date": "2026-08-31",
+      "title_en": "ethresear.ch: equilibrium in EIP-7999's multidimensional fee market, the execution and data fee-floor frontier",
+      "note_en": "18:33 (M1kuW1ll, from an EF internship): execution, data and state each have their own targets, limits and base fees, but runtime BALs consume data gas, so the markets are coupled.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Poseidon2b 是安全的",
+      "note": "13:55，指出评价哈希安全必须固定域、宽度、容量、轮数等参数。",
+      "url": "https://ethresear.ch/t/poseidon2b-is-secure/25865",
+      "date": "2026-08-31",
+      "title_en": "ethresear.ch: Poseidon2b is secure",
+      "note_en": "13:55, arguing that hash security can only be judged once field, width, capacity, rounds and other parameters are fixed.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8037：存在地址的描述加入非零余额",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12246",
+      "date": "2026-08-31",
+      "title_en": "EIP-8037: include non-zero balance in the description of an existent address",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8070：明确 size_i 指向本 EIP 规定的编码",
+      "note": "（qu0b）提交：`NewPooledTransactionHashes` 中的 `size_i` 沿用 `eth/71`，但本 EIP 改变了 type 3 交易的返回编码，读者无法判断 `size_i` 指哪种大小。",
+      "url": "https://github.com/ethereum/EIPs/pull/12275",
+      "date": "2026-08-31",
+      "title_en": "EIP-8070: point size_i at the encoding this EIP specifies",
+      "note_en": "(qu0b), submitted: `size_i` in `NewPooledTransactionHashes` is carried over from `eth/71`, but the EIP changes the encoding returned for type 3 transactions, so a reader cannot tell which size `size_i` denotes.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：FOCIL Breakout #41 议程",
+      "note": "19:52。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-41-september-1-2026/29547",
+      "date": "2026-08-31",
+      "title_en": "Magicians: FOCIL Breakout #41 agenda",
+      "note_en": "19:52.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #37",
+      "note": "05:13 再次推送。",
+      "url": "https://x.com/EtherealnewsHQ/status/2094186847304118592",
+      "date": "2026-08-31",
+      "title_en": "Ethereal news #37",
+      "note_en": "Reposted at 05:13.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT：隐私协议页面加入活跃中继者指标",
+      "note": "21:35，统计过去 30 天中继提款中出现的不同中继者地址，Tornado Cash 和 Privacy Pools 已上线，Railgun 即将支持。",
+      "url": "https://x.com/ethbeat_org/status/2094433796661588153",
+      "date": "2026-08-31",
+      "title_en": "L2BEAT: an Active Relayers metric on privacy protocol pages",
+      "note_en": "21:35, counting unique relayer addresses in relayed withdrawals over the past 30 days; live for Tornado Cash and Privacy Pools, with Railgun coming soon.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：代币化本身不有趣，代币化之后发生的事才有趣",
+      "note": "19:48，谈股票代币溢价交易与注意力经济。",
+      "url": "https://x.com/binji_x/status/2094407099052704184",
+      "date": "2026-08-31",
+      "title_en": "binji: tokenization is not interesting, what happens after tokenization is",
+      "note_en": "19:48, on stock tokens trading at a premium and attention economics.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/equilibrium-in-eip-7999-s-multidimensional-fee-market-the-execution-data-fee-floor-frontier/25868",
+    "credit": "ethresear.ch, Equilibrium in EIP-7999's Multidimensional Fee Market (M1kuW1ll)",
+    "local_path": "assets/2026-08-31.jpg",
+    "credit_en": "ethresear.ch, Equilibrium in EIP-7999's Multidimensional Fee Market (M1kuW1ll)"
+  },
+  "keywords_en": [
+    "Ethlabs Week 10",
+    "8141 as a platform and 8130 as a turnkey solution",
+    "10-second blocks proposed for Hegotá",
+    "decoupled consensus formalization",
+    "ACDT #94",
+    "8250 and 8272 number clash fixes merged",
+    "EIP-7999 multidimensional fee market equilibrium",
+    "L2BEAT active relayers metric"
+  ],
+  "summary_en": "Barnabé's Ethlabs Week 10 looked back on a week of AA: 8130 is more of a turnkey solution that gives wallets strong defaults and restricts functionality, while 8141 is a platform for accounts with the raw ingredients to extend the protocol without intervention; 8141 being SFI does not end the chance to fold in ideas from 8130. Ethlabs proposes doing the work in Hegotá to let the chain lower its block time, starting with 12 seconds to 10. fradamt shipped a big update to the decoupled consensus formalization. The PRs moving EIP-8250 and EIP-8272 off clashing numbers were merged. ACDT #94 was held in the evening."
+}

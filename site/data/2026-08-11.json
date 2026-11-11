@@ -1,0 +1,177 @@
+{
+  "date": "2026-08-11",
+  "keywords": [
+    "EIP-8077 frame 交易的 source 与 nonce",
+    "EIP-8363 合并为草案",
+    "EIP-8261 改为信息性 gas limit 时间表",
+    "ACD Fund",
+    "FOCIL 与分布式出块"
+  ],
+  "summary": "nerolation 提交 EIP-8077 更新，为 frame 交易定义 source 和 nonce，理清它与 EIP-8141、EIP-8250 的交互，让带 nonce 宣告交易的 P2P 协议能处理原生 AA 交易。EIP-8261 从共识强制规则改为信息性的、仅 CL 配置的分叉 gas limit 时间表并合并。EIP-8363 递减发行销毁以草案合并。Protocol Guild 宣布 ACD Fund，首笔资助 nixorokish 的 ACDE 协调工作。",
+  "items": [
+    {
+      "topic": "frame 交易与 gas limit",
+      "title": "EIP-8077：为 frame 交易定义 source 和 nonce",
+      "note": "（nerolation）提交，说明与 EIP-8141 和 EIP-8250 的交互。EIP-8077 是在交易宣告中附带 nonce 的 eth 协议扩展。",
+      "url": "https://github.com/ethereum/EIPs/pull/12139",
+      "date": "2026-08-11",
+      "title_en": "EIP-8077: define source and nonce for frame transactions",
+      "note_en": "(nerolation), submitted, clarifying the interaction with EIP-8141 and EIP-8250. EIP-8077 is the eth protocol extension that announces transactions together with their nonce.",
+      "topic_en": "Frame transactions and the gas limit"
+    },
+    {
+      "topic": "frame 交易与 gas limit",
+      "title": "EIP-8261：改为信息性的 gas limit 时间表建议",
+      "note": "（barnabasbusa）合并。不改共识、不强制执行，EIP-1559 的 ±1/1024 弹性规则仍是唯一的 gas limit 有效性规则，高于或低于时间表的区块都有效；时间表是 CL `config.yaml` 中可选的 `GAS_LIMIT_SCHEDULE` 字段，仿照 EIP-7892 的 `BLOB_SCHEDULE`。按 epoch 激活的澄清（nflaig）同日合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12140",
+      "date": "2026-08-11",
+      "title_en": "EIP-8261: convert to an informational gas limit schedule recommendation",
+      "note_en": "(barnabasbusa), merged. There are no consensus changes and no enforcement; the EIP-1559 ±1/1024 elasticity rule remains the only gas limit validity rule, and blocks above or below the schedule stay valid. The schedule is an optional `GAS_LIMIT_SCHEDULE` field in the CL `config.yaml`, mirroring EIP-7892's `BLOB_SCHEDULE`. A clarification of epoch-based activation (nflaig) was merged the same day.",
+      "topic_en": "Frame transactions and the gas limit"
+    },
+    {
+      "topic": "frame 交易与 gas limit",
+      "title": "按 epoch 激活的澄清",
+      "note": "EIP-8261：改为信息性的 gas limit 时间表建议（barnabasbusa）合并。不改共识、不强制执行，EIP-1559 的 ±1/1024 弹性规则仍是唯一的 gas limit 有效性规则，高于或低于时间表的区块都有效；时间表是 CL `config.yaml` 中可选的 `GAS_LIMIT_SCHEDULE` 字段，仿照 EIP-7892 的 `BLOB_SCHEDULE`。按 epoch 激活的澄清（nflaig）同日合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12142",
+      "date": "2026-08-11",
+      "title_en": "A clarification of epoch-based activation",
+      "note_en": "EIP-8261: convert to an informational gas limit schedule recommendation (barnabasbusa), merged. There are no consensus changes and no enforcement; the EIP-1559 ±1/1024 elasticity rule remains the only gas limit validity rule, and blocks above or below the schedule stay valid. The schedule is an optional `GAS_LIMIT_SCHEDULE` field in the CL `config.yaml`, mirroring EIP-7892's `BLOB_SCHEDULE`. A clarification of epoch-based activation (nflaig) was merged the same day.",
+      "topic_en": "Frame transactions and the gas limit"
+    },
+    {
+      "topic": "发行与 DA 相关 EIP 合并",
+      "title": "新 EIP：Tapered Issuance Burn",
+      "note": "（pintail-xyz）合并，EIP-8363 以草案进入仓库。",
+      "url": "https://github.com/ethereum/EIPs/pull/12081",
+      "date": "2026-08-11",
+      "title_en": "New EIP: Tapered Issuance Burn",
+      "note_en": "(pintail-xyz), merged, so EIP-8363 is in the repository as a draft.",
+      "topic_en": "Issuance and DA EIPs merged"
+    },
+    {
+      "topic": "发行与 DA 相关 EIP 合并",
+      "title": "dapplion：本希望看到辩论，结果是三方都强烈反对该 EIP",
+      "note": "03:05。",
+      "url": "https://x.com/dapplion/status/2086906878089453807",
+      "date": "2026-08-11",
+      "title_en": "dapplion: it would have been nice to see a debate instead of three parties strongly against the EIP",
+      "note_en": "03:05.",
+      "topic_en": "Issuance and DA EIPs merged"
+    },
+    {
+      "topic": "发行与 DA 相关 EIP 合并",
+      "title": "新 EIP：RowDAS 分布式 blob 重建",
+      "note": "合并，随后 角色划分、分阶段重建与安全分析 同日合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12118",
+      "date": "2026-08-11",
+      "title_en": "New EIP: RowDAS distributed blob reconstruction",
+      "note_en": "Merged, followed the same day by role split, phased reconstruction and security analysis.",
+      "topic_en": "Issuance and DA EIPs merged"
+    },
+    {
+      "topic": "发行与 DA 相关 EIP 合并",
+      "title": "角色划分、分阶段重建与安全分析",
+      "note": "新 EIP：RowDAS 分布式 blob 重建 合并，随后 角色划分、分阶段重建与安全分析 同日合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12138",
+      "date": "2026-08-11",
+      "title_en": "role split, phased reconstruction and security analysis",
+      "note_en": "New EIP: RowDAS distributed blob reconstruction, merged, followed the same day by role split, phased reconstruction and security analysis.",
+      "topic_en": "Issuance and DA EIPs merged"
+    },
+    {
+      "topic": "发行与 DA 相关 EIP 合并",
+      "title": "新 EIP：Hash-Chain RANDAO",
+      "note": "（kevaundray）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11861",
+      "date": "2026-08-11",
+      "title_en": "New EIP: Hash-Chain RANDAO",
+      "note_en": "(kevaundray), merged.",
+      "topic_en": "Issuance and DA EIPs merged"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Protocol Guild：宣布 ACD Fund，专门资助关键的核心开发者角色",
+      "note": "21:19，首笔资助 nixorokish 的 ACDE 协调，与 EthCoordinate（原 EthStaker）合作；nixorokish：今年 4 月已离开 EF，但不会离开 20:08。",
+      "url": "https://x.com/ProtocolGuild/status/2087182024620601591",
+      "date": "2026-08-11",
+      "title_en": "Protocol Guild: announcing the ACD Fund, an allocation for critical core dev roles",
+      "note_en": "21:19; the first allocation funds nixorokish's ACDE coordination in partnership with EthCoordinate (formerly EthStaker). nixorokish: I left the EF in April but I'm not going anywhere, 20:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nixorokish：今年 4 月已离开 EF，但不会离开",
+      "note": "Protocol Guild：宣布 ACD Fund，专门资助关键的核心开发者角色 21:19，首笔资助 nixorokish 的 ACDE 协调，与 EthCoordinate（原 EthStaker）合作；nixorokish：今年 4 月已离开 EF，但不会离开 20:08。",
+      "url": "https://x.com/nixorokish/status/2087164297306595557",
+      "date": "2026-08-11",
+      "title_en": "nixorokish: I left the EF in April but I'm not going anywhere",
+      "note_en": "Protocol Guild: announcing the ACD Fund, an allocation for critical core dev roles, 21:19; the first allocation funds nixorokish's ACDE coordination in partnership with EthCoordinate (formerly EthStaker). nixorokish: I left the EF in April but I'm not going anywhere, 20:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：越来越把 FOCIL 视为更广泛的分布式区块构建的一部分，而不是绑定质押和分叉选择的共识服务",
+      "note": "18:12。",
+      "url": "https://x.com/barnabemonnot/status/2087134960125693964",
+      "date": "2026-08-11",
+      "title_en": "Barnabé: I increasingly see FOCIL as part of a broader distributed block building process rather than a consensus service tied to staking and fork choice",
+      "note_en": "18:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "binji：Strawmap 的目标是把一切扩展到与世界其他系统匹配，同时不失去以太坊的价值所在",
+      "note": "01:16。",
+      "url": "https://x.com/binji_x/status/2086879287039115579",
+      "date": "2026-08-11",
+      "title_en": "binji: the Strawmap exists to scale everything to match the rest of the world without losing what makes Ethereum valuable",
+      "note_en": "01:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "议程帖",
+      "note": "ACDC #185（8 月 20 日）议程帖 21:10 发布。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-185-august-20-2026/29391",
+      "date": "2026-08-11",
+      "title_en": "ACDC #185 agenda",
+      "note_en": "The ACDC #185 agenda (August 20) was posted at 21:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：我们需要的不只是后量子密码学，还要后 AI、后漏洞的密码学",
+      "note": "00:29。",
+      "url": "https://x.com/zooko/status/2086867632872137092",
+      "date": "2026-08-11",
+      "title_en": "zooko: we need not just post-quantum cryptography but post-AI and post-bugs cryptography too",
+      "note_en": "00:29.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：在 Starknet 构建的 10 个理由",
+      "note": "19:34，首条是每个 ERC-20 的原生隐私。",
+      "url": "https://x.com/StarkWareLtd/status/2087155572349231153",
+      "date": "2026-08-11",
+      "title_en": "StarkWare: 10 reasons to build on Starknet",
+      "note_en": "19:34, starting with native privacy for every ERC-20.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12140",
+    "credit": "GitHub, ethereum/EIPs PR #12140",
+    "local_path": "assets/2026-08-11.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12140"
+  },
+  "keywords_en": [
+    "EIP-8077 source and nonce for frame transactions",
+    "EIP-8363 merged as draft",
+    "EIP-8261 becomes an informational gas limit schedule",
+    "ACD Fund",
+    "FOCIL and distributed block building"
+  ],
+  "summary_en": "nerolation submitted an EIP-8077 update that defines the source and nonce of frame transactions and clarifies its interaction with EIP-8141 and EIP-8250, so the P2P protocol that announces transactions with nonces can handle native AA transactions. EIP-8261 was turned from a consensus-enforced rule into an informational, CL-config-only per-fork gas limit schedule and merged. EIP-8363 tapered issuance burn was merged as a draft. Protocol Guild announced the ACD Fund, whose first allocation funds nixorokish's ACDE coordination."
+}

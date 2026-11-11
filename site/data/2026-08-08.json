@@ -1,0 +1,117 @@
+{
+  "date": "2026-08-08",
+  "keywords": [
+    "EIP-8250 与 EIP-8272 隐私收益",
+    "RECENT_ROOT_CODE",
+    "x402 零知识结算",
+    "基础设施隐私",
+    "钱包通行证 NFT"
+  ],
+  "summary": "周六较安静。EIP-8250（keyed nonce）和 EIP-8272（recent root）在摘要开头写明隐私收益的 PR 合并；另有 PR 为 EIP-8272 的 recent root 合约填入代码，使这条路径可以端到端测试。ethresear 上有人发布 x402 代理支付的零知识证明门控结算参考设计，AndyGuzman 认为 RPC、索引器、bundler 等基础设施需要隐私来规避监管压力。",
+  "items": [
+    {
+      "topic": "keyed nonce 与 recent root 的规范推进",
+      "title": "EIP-8250：在摘要突出隐私收益",
+      "note": "和 EIP-8272：在摘要突出隐私收益（nerolation）合并，简要说明两者的动机。",
+      "url": "https://github.com/ethereum/EIPs/pull/12126",
+      "date": "2026-08-08",
+      "title_en": "EIP-8250: highlight privacy benefit upfront",
+      "note_en": "And EIP-8272: highlight privacy benefit upfront (nerolation), merged, briefly stating the motivation for each.",
+      "topic_en": "Moving the keyed nonce and recent root specs forward"
+    },
+    {
+      "topic": "keyed nonce 与 recent root 的规范推进",
+      "title": "EIP-8272：在摘要突出隐私收益",
+      "note": "EIP-8250：在摘要突出隐私收益 和 EIP-8272：在摘要突出隐私收益（nerolation）合并，简要说明两者的动机。",
+      "url": "https://github.com/ethereum/EIPs/pull/12125",
+      "date": "2026-08-08",
+      "title_en": "EIP-8272: highlight privacy benefit upfront",
+      "note_en": "EIP-8250: highlight privacy benefit upfront and EIP-8272: highlight privacy benefit upfront (nerolation), merged, briefly stating the motivation for each.",
+      "topic_en": "Moving the keyed nonce and recent root specs forward"
+    },
+    {
+      "topic": "keyed nonce 与 recent root 的规范推进",
+      "title": "EIP-8272：规定 RECENT_ROOT_CODE",
+      "note": "（AnkushinDaniil）提交。PR 说明：`RECENT_ROOT_CODE` 目前是 TBD，recent root 合约的行为已完整规定却没有实现它的代码；今天安装预部署的客户端只会得到空账户，每次写入只是普通转账、什么也不承诺，之后每次引用都会校验失败。PR 直接按规范组装代码填入常量。",
+      "url": "https://github.com/ethereum/EIPs/pull/12131",
+      "date": "2026-08-08",
+      "title_en": "EIP-8272: specify RECENT_ROOT_CODE",
+      "note_en": "(AnkushinDaniil), submitted. Per the PR, `RECENT_ROOT_CODE` is currently TBD, so the recent root contract has fully specified behavior and no code implementing it; a client installing the predeploy today installs an empty account, every write is a plain value transfer that commits nothing, and every later reference fails its check. The PR assembles the code directly from the spec and fills in the constant.",
+      "topic_en": "Moving the keyed nonce and recent root specs forward"
+    },
+    {
+      "topic": "支付与基础设施隐私",
+      "title": "ethresear.ch：x402 代理支付的原子零知识证明门控结算",
+      "note": "01:47。作者指出 x402 让代理为资源调用付款，却不把付款和执行正确性绑定；其参考设计 ZkInferenceEscrow 让 AI 推理调用的付款在一笔交易内结算，前提是链上零知识证明验证该调用由指定的固定电路执行。",
+      "url": "https://ethresear.ch/t/atomic-zk-proof-gated-settlement-for-x402-agent-payments-a-measured-reference-design/25660",
+      "date": "2026-08-08",
+      "title_en": "ethresear.ch: atomic ZK-proof-gated settlement for x402 agent payments",
+      "note_en": "01:47. The author notes that x402 lets an agent pay for a resource call but never binds payment to correct execution; the ZkInferenceEscrow reference design settles payment for an AI inference call in one transaction, only when an onchain zero-knowledge proof verifies the call ran on a specific pinned circuit.",
+      "topic_en": "Payments and infrastructure privacy"
+    },
+    {
+      "topic": "支付与基础设施隐私",
+      "title": "AndyGuzman：RPC、索引器、bundler 等基础设施需要隐私来规避监管风险",
+      "note": "00:14，能记录日志就会成为施压点。",
+      "url": "https://x.com/AndyGuzmanEth/status/2085776716404871391",
+      "date": "2026-08-08",
+      "title_en": "AndyGuzman: infrastructure providers such as RPCs, indexers and bundlers need privacy to avoid regulatory risk",
+      "note_en": "00:14; anything that can log becomes a pressure point.",
+      "topic_en": "Payments and infrastructure privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8426 NFT 的钱包通行证扩展",
+      "note": "03:58，把 NFT 展示到 Apple Wallet 和 Google Wallet。",
+      "url": "https://ethereum-magicians.org/t/erc-8426-wallet-pass-extension-for-nfts/29358",
+      "date": "2026-08-08",
+      "title_en": "Magicians: ERC-8426 wallet pass extension for NFTs",
+      "note_en": "03:58, showing NFTs in Apple Wallet and Google Wallet.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：代币发行滥用检测与补救",
+      "note": "、参考价相对滑点界限 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1934",
+      "date": "2026-08-08",
+      "title_en": "New ERC: token launch abuse detection and remediation",
+      "note_en": "And reference-relative slippage bounds, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "参考价相对滑点界限",
+      "note": "新 ERC：代币发行滥用检测与补救、参考价相对滑点界限 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1935",
+      "date": "2026-08-08",
+      "title_en": "reference-relative slippage bounds",
+      "note_en": "New ERC: token launch abuse detection and remediation and reference-relative slippage bounds, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：Starknet 是对后量子安全的押注",
+      "note": "15:58。",
+      "url": "https://x.com/StarkWareLtd/status/2086014050065162601",
+      "date": "2026-08-08",
+      "title_en": "StarkWare: Starknet is a bet on post-quantum security",
+      "note_en": "15:58.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/atomic-zk-proof-gated-settlement-for-x402-agent-payments-a-measured-reference-design/25660",
+    "credit": "ethresear.ch, Atomic ZK-Proof-Gated Settlement for x402 Agent Payments",
+    "local_path": "assets/2026-08-08.jpg",
+    "credit_en": "ethresear.ch, Atomic ZK-Proof-Gated Settlement for x402 Agent Payments"
+  },
+  "keywords_en": [
+    "EIP-8250 and EIP-8272 privacy benefits",
+    "RECENT_ROOT_CODE",
+    "zero-knowledge settlement for x402",
+    "infrastructure privacy",
+    "wallet pass NFTs"
+  ],
+  "summary_en": "A quiet Saturday. PRs that open the abstracts of EIP-8250 (keyed nonces) and EIP-8272 (recent roots) with their privacy benefit were merged, and another PR fills in code for EIP-8272's recent root contract so the path can be tested end to end. On ethresear someone posted a reference design for zero-knowledge-proof-gated settlement of x402 agent payments, and AndyGuzman argued that infrastructure such as RPCs, indexers and bundlers needs privacy to avoid regulatory pressure."
+}

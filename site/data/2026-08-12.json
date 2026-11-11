@@ -1,0 +1,157 @@
+{
+  "date": "2026-08-12",
+  "keywords": [
+    "EIP-8141 验证前缀禁用 SLOTNUM",
+    "EIP-8130 审计对齐",
+    "地址投毒与 gas limit",
+    "Encrypt The Mempool #8",
+    "Octant 隐私轮"
+  ],
+  "summary": "EIP-8141 的验证前缀把 `SLOTNUM` 加入禁用操作码列表并合并，理由与 `TIMESTAMP`、`NUMBER` 相同：其值在节点接收交易和交易被打包之间会变，前缀据此分支就可能模拟通过、上链回滚。EIP-8130 先后合并 Keystore 对齐和审计对齐两份 PR。当天有 Encrypt The Mempool #8、L1-zkEVM breakout #07、PQTS breakout #13 和 P2P networking #6 四场会议。",
+  "items": [
+    {
+      "topic": "原生 AA 规范修补",
+      "title": "EIP-8141：验证前缀执行期间禁用 SLOTNUM",
+      "note": "（AnkushinDaniil）合并。验证前缀已禁用在接收与打包之间会变值的操作码：`TIMESTAMP`、`NUMBER`、`PREVRANDAO`、`BASEFEE`、`BLOBBASEFEE`，依赖它们分支的前缀可能在接收时模拟通过、上链时回滚；`SLOTNUM` 具有同样性质，但列表写于它出现之前。",
+      "url": "https://github.com/ethereum/EIPs/pull/12066",
+      "date": "2026-08-12",
+      "title_en": "EIP-8141: ban SLOTNUM during validation-prefix execution",
+      "note_en": "(AnkushinDaniil), merged. The validation prefix already bans opcodes whose value changes between admission and inclusion: `TIMESTAMP`, `NUMBER`, `PREVRANDAO`, `BASEFEE`, `BLOBBASEFEE`; a prefix branching on them can pass simulation at admission and revert on inclusion. `SLOTNUM` has exactly that property but was missing because the list predates it.",
+      "topic_en": "Patching the native AA specs"
+    },
+    {
+      "topic": "原生 AA 规范修补",
+      "title": "EIP-8130：与 Keystore 合约对齐",
+      "note": "合并，随后 审计对齐（自身 actor 撤销、认证器白名单）（chunter-cb）同日提交并合并，仅改规范、不改合约，`RevokeActor` 语义简化为统一删除 actor 配置及其策略。",
+      "url": "https://github.com/ethereum/EIPs/pull/12135",
+      "date": "2026-08-12",
+      "title_en": "EIP-8130: align with Keystore contract",
+      "note_en": "Merged, followed by audit reconciliation (self-actor revoke, authenticator allowlist) (chunter-cb), submitted and merged the same day. It changes only the spec, not the contract, and simplifies `RevokeActor` to uniformly delete the actor config and its policy.",
+      "topic_en": "Patching the native AA specs"
+    },
+    {
+      "topic": "原生 AA 规范修补",
+      "title": "审计对齐（自身 actor 撤销、认证器白名单）",
+      "note": "EIP-8130：与 Keystore 合约对齐 合并，随后 审计对齐（自身 actor 撤销、认证器白名单）（chunter-cb）同日提交并合并，仅改规范、不改合约，`RevokeActor` 语义简化为统一删除 actor 配置及其策略。",
+      "url": "https://github.com/ethereum/EIPs/pull/12148",
+      "date": "2026-08-12",
+      "title_en": "audit reconciliation (self-actor revoke, authenticator allowlist)",
+      "note_en": "EIP-8130: align with Keystore contract, merged, followed by audit reconciliation (self-actor revoke, authenticator allowlist) (chunter-cb), submitted and merged the same day. It changes only the spec, not the contract, and simplifies `RevokeActor` to uniformly delete the actor config and its policy.",
+      "topic_en": "Patching the native AA specs"
+    },
+    {
+      "topic": "原生 AA 规范修补",
+      "title": "EIP-8141：为首次引用的提案加链接",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12121",
+      "date": "2026-08-12",
+      "title_en": "EIP-8141: link the first reference to each cited proposal",
+      "note_en": "Merged.",
+      "topic_en": "Patching the native AA specs"
+    },
+    {
+      "topic": "gas limit 与地址投毒",
+      "title": "trent_vanepps：一度想在需求跟上之前不再提升 gas limit，让地址投毒交易不划算",
+      "note": "01:23，但随即认为这可能是无解的问题。",
+      "url": "https://x.com/trent_vanepps/status/2087243471132266865",
+      "date": "2026-08-12",
+      "title_en": "trent_vanepps: part of me thinks we should not scale the gas limit further until demand catches up enough to make address poisoning uneconomical",
+      "note_en": "01:23, before concluding it is probably an impossible problem.",
+      "topic_en": "The gas limit and address poisoning"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #13",
+      "note": "当天会议：Encrypt The Mempool #8、L1-zkEVM breakout #07、PQTS Breakout #13、P2P networking #6，暂无可引用的会议纪要。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-13/29403",
+      "date": "2026-08-12",
+      "title_en": "PQTS Breakout #13",
+      "note_en": "Calls today: Encrypt The Mempool #8, L1-zkEVM breakout #07, PQTS Breakout #13 and P2P networking #6, with no citable notes available.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "P2P networking #6",
+      "note": "当天会议：Encrypt The Mempool #8、L1-zkEVM breakout #07、PQTS Breakout #13、P2P networking #6，暂无可引用的会议纪要。",
+      "url": "https://ethereum-magicians.org/t/p2p-networking-6-august-12-2026/29404",
+      "date": "2026-08-12",
+      "title_en": "P2P networking #6",
+      "note_en": "Calls today: Encrypt The Mempool #8, L1-zkEVM breakout #07, PQTS Breakout #13 and P2P networking #6, with no citable notes available.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8379 Top-up Sync",
+      "note": "20:57。",
+      "url": "https://ethereum-magicians.org/t/eip-8379-top-up-sync/29405",
+      "date": "2026-08-12",
+      "title_en": "Magicians: EIP-8379 Top-up Sync",
+      "note_en": "20:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8148：允许在存款时设定 sweep 阈值",
+      "note": "（nalepae）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12146",
+      "date": "2026-08-12",
+      "title_en": "EIP-8148: allow setting the sweep threshold at deposit time",
+      "note_en": "(nalepae), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Ethereum Builders Live 介绍 Octant 第 13 轮，100 ETH 配捐聚焦隐私",
+      "note": "23:01。",
+      "url": "https://x.com/ethereumfndn/status/2087570223280849311",
+      "date": "2026-08-12",
+      "title_en": "EF: Ethereum Builders Live on Octant's Epoch 13, a 100 ETH matching round focused on privacy",
+      "note_en": "23:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Tim Roughgarden：第二天讲座，含两轮最终性等",
+      "note": "21:24。",
+      "url": "https://x.com/Tim_Roughgarden/status/2087545712133173743",
+      "date": "2026-08-12",
+      "title_en": "Tim Roughgarden: day 2 lectures, including 2-round finality",
+      "note_en": "21:24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Nethermind：稳定币正在成为支付轨道，但以太坊签名仍扛不住量子计算机，隐私也还不到位",
+      "note": "17:16。",
+      "url": "https://x.com/Nethermind/status/2087483263929438578",
+      "date": "2026-08-12",
+      "title_en": "Nethermind: stablecoins are becoming payment rails, but Ethereum's signatures still would not survive a quantum computer and privacy is not there yet",
+      "note_en": "17:16.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：Qubes 最大的安全特性是假设软件会被攻破",
+      "note": "01:52。",
+      "url": "https://x.com/pcaversaccio/status/2087250855733113167",
+      "date": "2026-08-12",
+      "title_en": "pcaversaccio: Qubes' biggest security feature is assuming your software will be compromised",
+      "note_en": "01:52.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12066",
+    "credit": "GitHub, ethereum/EIPs PR #12066",
+    "local_path": "assets/2026-08-12.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12066"
+  },
+  "keywords_en": [
+    "EIP-8141 bans SLOTNUM in validation prefixes",
+    "EIP-8130 audit reconciliation",
+    "address poisoning and the gas limit",
+    "Encrypt The Mempool #8",
+    "Octant privacy round"
+  ],
+  "summary_en": "EIP-8141's validation prefix added `SLOTNUM` to its banned opcodes, merged, for the same reason as `TIMESTAMP` and `NUMBER`: its value changes between a node admitting a transaction and its inclusion, so a prefix branching on it can pass simulation and revert onchain. EIP-8130 merged both its Keystore alignment PR and an audit reconciliation PR. Four calls took place: Encrypt The Mempool #8, L1-zkEVM breakout #07, PQTS breakout #13 and P2P networking #6."
+}

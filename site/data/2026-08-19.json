@@ -1,0 +1,159 @@
+{
+  "date": "2026-08-19",
+  "keywords": [
+    "EIP-8141 到期机制改为 frame 模式",
+    "到期验证器 nonce",
+    "EIP-8131 与 EIP-8279 底价与 gas limit 解耦",
+    "Base 跨链桥",
+    "隐私资金发现",
+    "Glamsterdam 信息图 v3"
+  ],
+  "summary": "nerolation 提交 EIP-8141 PR，试验把到期机制从特殊目标的 VERIFY frame 改回新的 frame 模式；Marchhill 指出到期验证器安装时没有规定 nonce。nero 还把 EIP-8131 的数据底价和 EIP-8279 的 BAL 底价写成与 gas limit 无关。Derek Chiang 指出 Base 到以太坊的多证明者桥要 1 天，比到 Solana 还慢。L2BEAT 隐私页新增“资金发现”板块。",
+  "items": [
+    {
+      "topic": "frame 交易的到期机制",
+      "title": "EIP-8141：把到期 frame 改为新模式",
+      "note": "（nerolation）提交。PR 说明这是若从特殊目标的 VERIFY frame 改回新 frame 模式时规范会是什么样子。",
+      "url": "https://github.com/ethereum/EIPs/pull/12198",
+      "date": "2026-08-19",
+      "title_en": "EIP-8141: make the expiry frame a new mode",
+      "note_en": "(nerolation), submitted. The PR says this is what the spec would look like if expiry reverted from a special-target VERIFY frame to a new frame mode.",
+      "topic_en": "The expiry mechanism for frame transactions"
+    },
+    {
+      "topic": "frame 交易的到期机制",
+      "title": "EIP-8141：说明安装到期验证器不改变 nonce",
+      "note": "（Marchhill）提交。规范只要求在激活时把到期验证器的运行时代码装到 `EXPIRY_VERIFIER`，账户 nonce 没有规定；其他系统合约预部署的 nonce 为 1，但那是部署机制的结果而非刻意选择，EIP-2935 对此有明确说明。",
+      "url": "https://github.com/ethereum/EIPs/pull/12203",
+      "date": "2026-08-19",
+      "title_en": "EIP-8141: state that installing the expiry verifier leaves the nonce",
+      "note_en": "(Marchhill), submitted. The spec only requires installing the expiry verifier runtime code at `EXPIRY_VERIFIER` at activation, leaving the account nonce open; other system contract predeploys sit at nonce 1, but there it follows from the deployment mechanism rather than being a chosen value, as EIP-2935 says directly.",
+      "topic_en": "The expiry mechanism for frame transactions"
+    },
+    {
+      "topic": "frame 交易的到期机制",
+      "title": "EIP-8130：采用档位、有界认证 gas 和时间戳归一化",
+      "note": "（chunter-cb）再次提交新版本。",
+      "url": "https://github.com/ethereum/EIPs/pull/12204",
+      "date": "2026-08-19",
+      "title_en": "EIP-8130: adoption profiles, bounded auth gas and timestamp normalization",
+      "note_en": "(chunter-cb), resubmitted as a new version.",
+      "topic_en": "The expiry mechanism for frame transactions"
+    },
+    {
+      "topic": "数据底价与跨链确认",
+      "title": "EIP-8131：数据底价独立于 gas limit",
+      "note": "与 EIP-8279：BAL 底价独立于 gas limit（nerolation）提交，说明它们使提高 gas limit 成为可能，但本身不依赖更高的 gas limit。",
+      "url": "https://github.com/ethereum/EIPs/pull/12200",
+      "date": "2026-08-19",
+      "title_en": "EIP-8131: data floor independent from the gas limit",
+      "note_en": "And EIP-8279: BAL floor independent from the gas limit (nerolation), submitted, clarifying that they enable a gas limit increase but do not depend on one.",
+      "topic_en": "Data floors and cross-chain confirmation"
+    },
+    {
+      "topic": "数据底价与跨链确认",
+      "title": "EIP-8279：BAL 底价独立于 gas limit",
+      "note": "EIP-8131：数据底价独立于 gas limit 与 EIP-8279：BAL 底价独立于 gas limit（nerolation）提交，说明它们使提高 gas limit 成为可能，但本身不依赖更高的 gas limit。",
+      "url": "https://github.com/ethereum/EIPs/pull/12201",
+      "date": "2026-08-19",
+      "title_en": "EIP-8279: BAL floor independent from the gas limit",
+      "note_en": "EIP-8131: data floor independent from the gas limit and EIP-8279: BAL floor independent from the gas limit (nerolation), submitted, clarifying that they enable a gas limit increase but do not depend on one.",
+      "topic_en": "Data floors and cross-chain confirmation"
+    },
+    {
+      "topic": "数据底价与跨链确认",
+      "title": "Derek Chiang：讽刺的是 Base 跨到 Solana 比跨到以太坊更快",
+      "note": "20:44。Base 到以太坊的桥采用多证明者模型，TEE 与 ZK 证明者一致时 Base 状态更新 1 天后可在以太坊结算。",
+      "url": "https://x.com/decentrek/status/2090072410376769750",
+      "date": "2026-08-19",
+      "title_en": "Derek Chiang: it is ironic that Base bridges faster to Solana than to Ethereum",
+      "note_en": "20:44. The Base to Ethereum bridge runs a multi-prover model where, if a TEE and a ZK prover agree on Base's state transitions, a state update settles on Ethereum in one day.",
+      "topic_en": "Data floors and cross-chain confirmation"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT：隐私页面新增资金发现板块",
+      "note": "21:19，回答如何找到私下收到和存入的资金。",
+      "url": "https://x.com/ethbeat_org/status/2090081150832193794",
+      "date": "2026-08-19",
+      "title_en": "L2BEAT: a new note discovery section on the privacy pages",
+      "note_en": "21:19, answering how to find privately received and deposited funds.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "colludingnode：在以太坊这类通用链上，任何以智能合约构建的应用或隐私基础设施都不可能做 ironwood 式修复",
+      "note": "22:55。",
+      "url": "https://x.com/colludingnode/status/2090105272282894503",
+      "date": "2026-08-19",
+      "title_en": "colludingnode: it would not be possible to ship an ironwood-style fix to any application or privacy infrastructure built as a smart contract on a general-purpose chain like Ethereum",
+      "note_en": "22:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps：Glamsterdam 信息图 v3",
+      "note": "01:07，共 26 个 EIP，公共测试网开始，主网目标第四季度。",
+      "url": "https://x.com/trent_vanepps/status/2089776265490219275",
+      "date": "2026-08-19",
+      "title_en": "trent_vanepps: Glamsterdam infographic v3",
+      "note_en": "01:07, with 26 EIPs, public testnets starting and mainnet targeted for Q4.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-3298 移除退款",
+      "note": "和 EIP-5920 PAY 操作码 改回 Draft（jochem-brouwer）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12194",
+      "date": "2026-08-19",
+      "title_en": "EIP-3298 removal of refunds",
+      "note_en": "And EIP-5920 PAY opcode moved back to Draft (jochem-brouwer), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-5920 PAY 操作码",
+      "note": "EIP-3298 移除退款 和 EIP-5920 PAY 操作码 改回 Draft（jochem-brouwer）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12196",
+      "date": "2026-08-19",
+      "title_en": "EIP-5920 PAY opcode",
+      "note_en": "EIP-3298 removal of refunds and EIP-5920 PAY opcode moved back to Draft (jochem-brouwer), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：SEC 提议大幅改变美国加密融资规则的通俗解读",
+      "note": "03:08。",
+      "url": "https://x.com/binji_x/status/2089806609673498933",
+      "date": "2026-08-19",
+      "title_en": "binji: an ELI5 on the SEC's proposed overhaul of US crypto fundraising rules",
+      "note_en": "03:08.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Aztec：Dark Forest Aztec 让坐标和游戏动作对其他玩家隐藏",
+      "note": "01:50，100 多个账户进入。",
+      "url": "https://x.com/aztecnetwork/status/2089787042993713476",
+      "date": "2026-08-19",
+      "title_en": "Aztec: Dark Forest Aztec hides coordinates and in-game moves from other players",
+      "note_en": "01:50, with 100+ accounts in the universe.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12198",
+    "credit": "GitHub, ethereum/EIPs PR #12198",
+    "local_path": "assets/2026-08-19.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12198"
+  },
+  "keywords_en": [
+    "EIP-8141 expiry as a frame mode",
+    "expiry verifier nonce",
+    "EIP-8131 and EIP-8279 floors decoupled from the gas limit",
+    "Base bridge",
+    "private fund discovery",
+    "Glamsterdam infographic v3"
+  ],
+  "summary_en": "nerolation submitted an EIP-8141 PR sketching the expiry mechanism as a new frame mode instead of a special-target VERIFY frame, and Marchhill noted that installing the expiry verifier leaves its nonce unspecified. nero also wrote EIP-8131's data floor and EIP-8279's BAL floor as independent of the gas limit. Derek Chiang pointed out that Base's multi-prover bridge to Ethereum takes a day, slower than bridging to Solana. L2BEAT's privacy pages added a \"note discovery\" section."
+}

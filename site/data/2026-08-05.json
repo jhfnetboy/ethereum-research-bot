@@ -1,0 +1,237 @@
+{
+  "date": "2026-08-05",
+  "keywords": [
+    "EIP-8363 发行争议",
+    "ERC-8366 零知识支出策略",
+    "EIP-8141 原子批量禁用 approval",
+    "EIP-8369 VOPS 与 FOCIL",
+    "WEBCAT 资助"
+  ],
+  "summary": "EIP-8363 引发的发行讨论扩散，Pooja、trent_vanepps 和 nero_eth 解释 Hegotá 的流程：8 月 6 日截止的是提案，不是入选，选定在 11 月 8 日结束。账户侧，ERC-8366 提出零知识支出策略，ERC-4337 账户、EIP-7702 委托 EOA 等都可按预先登记的策略凭证明放款；EIP-8141 PR 静态禁止原子批量中的 approval 作用域。EF 的 Trillion Dollar Security 资助 WEBCAT 前端校验。",
+  "items": [
+    {
+      "topic": "账户侧的支出策略和代理授权",
+      "title": "Magicians：ERC-8366 零知识支出策略",
+      "note": "12:37（junbeomlee），对应 ERC PR 1929。标准化一组可组合函数，任何持有用户资金的合约（专用托管、智能钱包、ERC-4337 账户或 EIP-7702 委托的 EOA）都能实现，只在零知识证明表明这笔付款满足所有者预先登记的支出策略时才放款。",
+      "url": "https://ethereum-magicians.org/t/erc-8366-zero-knowledge-spending-policies/29281",
+      "date": "2026-08-05",
+      "title_en": "Magicians: ERC-8366 zero-knowledge spending policies",
+      "note_en": "12:37 (junbeomlee), with ERC PR 1929. It standardizes a composable function set that any contract holding a user's funds (a dedicated escrow, a smart wallet, an ERC-4337 account or an EIP-7702-delegated EOA) can implement to release those funds only against a zero-knowledge proof that the payment satisfies a spending policy the owner registered in advance.",
+      "topic_en": "Spending policies and agent mandates on the account side"
+    },
+    {
+      "topic": "账户侧的支出策略和代理授权",
+      "title": "ERC PR 1929",
+      "note": "Magicians：ERC-8366 零知识支出策略 12:37（junbeomlee），对应 ERC PR 1929。标准化一组可组合函数，任何持有用户资金的合约（专用托管、智能钱包、ERC-4337 账户或 EIP-7702 委托的 EOA）都能实现，只在零知识证明表明这笔付款满足所有者预先登记的支出策略时才放款。",
+      "url": "https://github.com/ethereum/ERCs/pull/1929",
+      "date": "2026-08-05",
+      "title_en": "ERC PR 1929",
+      "note_en": "Magicians: ERC-8366 zero-knowledge spending policies, 12:37 (junbeomlee), with ERC PR 1929. It standardizes a composable function set that any contract holding a user's funds (a dedicated escrow, a smart wallet, an ERC-4337 account or an EIP-7702-delegated EOA) can implement to release those funds only against a zero-knowledge proof that the payment satisfies a spending policy the owner registered in advance.",
+      "topic_en": "Spending policies and agent mandates on the account side"
+    },
+    {
+      "topic": "账户侧的支出策略和代理授权",
+      "title": "Magicians：ERC-8370 可继承的代理授权",
+      "note": "04:39，指出 AI 代理开始持有链上资金并复制自身并行工作，而签名时策略引擎、session key、单钱包额度等护栏几乎都绑定在单个账户上；ERC PR 1930 同日提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8370-inheritable-agent-mandates/29275",
+      "date": "2026-08-05",
+      "title_en": "Magicians: ERC-8370 inheritable agent mandates",
+      "note_en": "04:39, noting that AI agents are starting to hold money onchain and spawn copies of themselves, while almost every guardrail (signing-time policy engines, session keys, per-wallet caps) is attached to a single account; ERC PR 1930 was submitted the same day.",
+      "topic_en": "Spending policies and agent mandates on the account side"
+    },
+    {
+      "topic": "账户侧的支出策略和代理授权",
+      "title": "ERC PR 1930",
+      "note": "Magicians：ERC-8370 可继承的代理授权 04:39，指出 AI 代理开始持有链上资金并复制自身并行工作，而签名时策略引擎、session key、单钱包额度等护栏几乎都绑定在单个账户上；ERC PR 1930 同日提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1930",
+      "date": "2026-08-05",
+      "title_en": "ERC PR 1930",
+      "note_en": "Magicians: ERC-8370 inheritable agent mandates, 04:39, noting that AI agents are starting to hold money onchain and spawn copies of themselves, while almost every guardrail (signing-time policy engines, session keys, per-wallet caps) is attached to a single account; ERC PR 1930 was submitted the same day.",
+      "topic_en": "Spending policies and agent mandates on the account side"
+    },
+    {
+      "topic": "账户侧的支出策略和代理授权",
+      "title": "Magicians：ERC-8380 不可克隆的代理执行凭证",
+      "note": "04:38。",
+      "url": "https://ethereum-magicians.org/t/erc-8380-unclonable-agent-execution-credentials/29274",
+      "date": "2026-08-05",
+      "title_en": "Magicians: ERC-8380 unclonable agent execution credentials",
+      "note_en": "04:38.",
+      "topic_en": "Spending policies and agent mandates on the account side"
+    },
+    {
+      "topic": "EIP-8141 与 FOCIL 的细化",
+      "title": "EIP-8141：静态禁止原子批量 frame 的 approval 作用域",
+      "note": "（Marchhill）提交。对原子批量的任何 frame（包括终止 frame）静态禁止 approval 作用域，在执行前就消除批内 `APPROVE_PAYMENT` 分歧，不需要回滚 nonce、`max_cost` 或 `sender_approved`；由于 `APPROVE` 要求作用域写在 `frame.flags` 中，检查可以静态完成，退款归最终的 `payer`。",
+      "url": "https://github.com/ethereum/EIPs/pull/12109",
+      "date": "2026-08-05",
+      "title_en": "EIP-8141: statically disallow approval scope on atomic-batch frames",
+      "note_en": "(Marchhill), submitted. It statically disallows approval scope on any frame of an atomic batch, including its terminating frame, closing the in-batch `APPROVE_PAYMENT` divergence before execution with no rollback of the nonce, `max_cost` or `sender_approved`; because `APPROVE` requires the scope in `frame.flags`, the check is static, and the refund goes to the final `payer`.",
+      "topic_en": "Refining EIP-8141 and FOCIL"
+    },
+    {
+      "topic": "EIP-8141 与 FOCIL 的细化",
+      "title": "新 EIP：FOCIL 资格的 VOPS 档位",
+      "note": "（soispoke）提交，即 EIP-8369。档位 1 保留普通非 blob 交易的现有载荷末尾检查，档位 2 为合格的 frame 交易加入有界的验证重放；PR 说明它取代前一天的 12086。",
+      "url": "https://github.com/ethereum/EIPs/pull/12110",
+      "date": "2026-08-05",
+      "title_en": "New EIP: VOPS profiles for FOCIL eligibility",
+      "note_en": "(soispoke), submitted, now EIP-8369. Profile 1 keeps the existing end-of-payload check for regular non-blob transactions, and Profile 2 adds bounded validation replay for eligible frame transactions; the PR says it supersedes the previous day's 12086.",
+      "topic_en": "Refining EIP-8141 and FOCIL"
+    },
+    {
+      "topic": "发行提案的流程之争",
+      "title": "Pooja Ranjan：需要更好地向社区解释 EIP 和升级流程",
+      "note": "04:05，回应对该提案的担忧，称还不必恐慌。",
+      "url": "https://x.com/poojaranjan19/status/2084747695462174828",
+      "date": "2026-08-05",
+      "title_en": "Pooja Ranjan: we need to do a better job explaining the EIP and upgrade process",
+      "note_en": "04:05, answering concerns about the proposal and saying there is no need to panic yet.",
+      "topic_en": "A process fight over the issuance proposal"
+    },
+    {
+      "topic": "发行提案的流程之争",
+      "title": "trent_vanepps：8 月 6 日截止的是提案，不是入选；选定流程在 11 月 8 日结束，Hegotá 上线可能在 2027 年第二季度前后",
+      "note": "02:18。",
+      "url": "https://x.com/trent_vanepps/status/2084720653266006247",
+      "date": "2026-08-05",
+      "title_en": "trent_vanepps: the August 6 deadline is for proposals, not selection for inclusion; selection ends November 8 and Hegotá likely goes live around Q2 2027",
+      "note_en": "02:18.",
+      "topic_en": "A process fight over the issuance proposal"
+    },
+    {
+      "topic": "发行提案的流程之争",
+      "title": "nero_eth：这项提案并不是在流程后期提出的",
+      "note": "13:28，PFI、CFI、SFI 到主网的流程已用了两个分叉，它和约 40 个其他 EIP 一起按时提出。",
+      "url": "https://x.com/nero_eth/status/2084889235425800396",
+      "date": "2026-08-05",
+      "title_en": "nero_eth: the proposal did not come late in the process",
+      "note_en": "13:28; the PFI, CFI, SFI to mainnet pipeline has run for two forks, and it was proposed on time alongside about 40 other EIPs.",
+      "topic_en": "A process fight over the issuance proposal"
+    },
+    {
+      "topic": "发行提案的流程之争",
+      "title": "LefterisJP：这不是减少发行，而是增加销毁",
+      "note": "04:22，在某些税务辖区若按每个 epoch 计收入，可能被不利地解释。",
+      "url": "https://x.com/LefterisJP/status/2084751767531843949",
+      "date": "2026-08-05",
+      "title_en": "LefterisJP: it is not an issuance reduction but an added burn",
+      "note_en": "04:22, which in some tax jurisdictions could be read badly if rewards are counted every epoch.",
+      "topic_en": "A process fight over the issuance proposal"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Trillion Dollar Security 资助 Freedom of the Press 的 WEBCAT",
+      "note": "19:35，目标是把前端校验带到以太坊钱包和应用；EF 博客。",
+      "url": "https://x.com/ethereumfndn/status/2084981622919549362",
+      "date": "2026-08-05",
+      "title_en": "EF: a Trillion Dollar Security grant for Freedom of the Press's WEBCAT",
+      "note_en": "19:35, aiming to bring front-end verification to Ethereum wallets and apps; EF blog.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF 博客",
+      "note": "EF：Trillion Dollar Security 资助 Freedom of the Press 的 WEBCAT 19:35，目标是把前端校验带到以太坊钱包和应用；EF 博客。",
+      "url": "https://blog.ethereum.org/en/2026/08/05/1ts-grant",
+      "date": "2026-08-05",
+      "title_en": "EF blog",
+      "note_en": "EF: a Trillion Dollar Security grant for Freedom of the Press's WEBCAT, 19:35, aiming to bring front-end verification to Ethereum wallets and apps; EF blog.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：CPSB 按新 gas limit 重新校准",
+      "note": "（misilva73）提交，作为占位，待参考 gas limit 确定后重新推导 EIP-8037 的每状态字节成本；Magicians 讨论帖 23:19。",
+      "url": "https://github.com/ethereum/EIPs/pull/12107",
+      "date": "2026-08-05",
+      "title_en": "New EIP: CPSB recalibration for new gas limit",
+      "note_en": "(misilva73), submitted as a placeholder to re-derive EIP-8037's cost per state byte once a reference gas limit is final; Magicians thread at 23:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：CPSB 按新 gas limit 重新校准（misilva73）提交，作为占位，待参考 gas limit 确定后重新推导 EIP-8037 的每状态字节成本；Magicians 讨论帖 23:19。",
+      "url": "https://ethereum-magicians.org/t/eip-8368-cpsb-recalibration-for-new-gas-limit/29293",
+      "date": "2026-08-05",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: CPSB recalibration for new gas limit (misilva73), submitted as a placeholder to re-derive EIP-8037's cost per state byte once a reference gas limit is final; Magicians thread at 23:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：BLS 提款凭证退役",
+      "note": "与 退役 BLS 验证者余额日落（ensi321）提交，即 EIP-8365 和 EIP-8367。",
+      "url": "https://github.com/ethereum/EIPs/pull/12097",
+      "date": "2026-08-05",
+      "title_en": "New EIP: BLS withdrawal credential retirement",
+      "note_en": "And balance sunset for retired BLS validators (ensi321), submitted, now EIP-8365 and EIP-8367.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "退役 BLS 验证者余额日落",
+      "note": "新 EIP：BLS 提款凭证退役 与 退役 BLS 验证者余额日落（ensi321）提交，即 EIP-8365 和 EIP-8367。",
+      "url": "https://github.com/ethereum/EIPs/pull/12099",
+      "date": "2026-08-05",
+      "title_en": "balance sunset for retired BLS validators",
+      "note_en": "New EIP: BLS withdrawal credential retirement and balance sunset for retired BLS validators (ensi321), submitted, now EIP-8365 and EIP-8367.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：SSZ 紧凑多重证明",
+      "note": "（wemeetagain）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12093",
+      "date": "2026-08-05",
+      "title_en": "New EIP: SSZ compact multiproofs",
+      "note_en": "(wemeetagain), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8377 参考价相对滑点界限",
+      "note": "21:50，用 ERC-7726 报价预言机和最大偏差代替签名时固定的 `minAmountOut`。",
+      "url": "https://ethereum-magicians.org/t/erc-8377-reference-relative-slippage-bounds/29292",
+      "date": "2026-08-05",
+      "title_en": "ERC-8377 reference-relative slippage bounds",
+      "note_en": "21:50, replacing a static `minAmountOut` fixed at signing time with an ERC-7726 quote oracle and a maximum deviation.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：Cloudflare 钱包上线后任何人都能抢注名称，很奇怪",
+      "note": "04:52。",
+      "url": "https://x.com/gakonst/status/2084759482094194753",
+      "date": "2026-08-05",
+      "title_en": "gakonst: it is strange that the Cloudflare wallets launch lets anyone squat any name",
+      "note_en": "04:52.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：DPRK 主要仍靠社会工程攻击，因为有效又免费",
+      "note": "06:26。",
+      "url": "https://x.com/tayvano_/status/2084783119832633614",
+      "date": "2026-08-05",
+      "title_en": "tayvano: DPRK still mainly relies on social engineering because it is effective and free",
+      "note_en": "06:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8366-zero-knowledge-spending-policies/29281",
+    "credit": "Ethereum Magicians, ERC-8366: Zero-Knowledge Spending Policies",
+    "local_path": "assets/2026-08-05.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8366: Zero-Knowledge Spending Policies"
+  },
+  "keywords_en": [
+    "EIP-8363 issuance debate",
+    "ERC-8366 zero-knowledge spending policies",
+    "EIP-8141 no approval in atomic batches",
+    "EIP-8369 VOPS and FOCIL",
+    "WEBCAT grant"
+  ],
+  "summary_en": "The issuance debate around EIP-8363 widened, and Pooja, trent_vanepps and nero_eth explained Hegotá's process: the August 6 deadline is for proposals, not inclusion, and selection ends on November 8. On accounts, ERC-8366 proposes zero-knowledge spending policies, so ERC-4337 accounts, EIP-7702-delegated EOAs and other fund holders can release funds against a proof that meets a preregistered policy, and an EIP-8141 PR statically disallows approval scope in atomic batches. The EF's Trillion Dollar Security initiative funded WEBCAT front-end verification."
+}

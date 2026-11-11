@@ -1,0 +1,107 @@
+{
+  "date": "2026-08-29",
+  "keywords": [
+    "EIP-8130 绕过时间锁 PoC",
+    "ERC 账户权限生命周期",
+    "EIP-8037 子调用合并时退还状态 gas",
+    "Kohaku CLI v0.0.5",
+    "Frame Tx Breakout #3 议程"
+  ],
+  "summary": "周六，donnoh_eth 发布 PoC，展示在 Base 测试网上利用 EIP-8130 绕过带时间锁智能钱包的时间锁，在 8130 之前做不到，他认为这是漏洞，至少需要非常小心。AnkushinDaniil 提交账户权限生命周期 ERC，规定账户的密钥和规则如何添加、轮换和撤销，并绑定 EIP-8141。chfast 指出 EIP-8037 在 4337 bundle 这样的兄弟调用中会把执行 gas 困在状态 gas 池里。",
+  "items": [
+    {
+      "topic": "原生 AA 的安全边界",
+      "title": "donnoh_eth：用 EIP-8130 绕过时间锁智能钱包的最小 PoC",
+      "note": "01:35，在 Base 测试网测试，8130 之前无法绕过。",
+      "url": "https://x.com/donnoh_eth/status/2093407080581353796",
+      "date": "2026-08-29",
+      "title_en": "donnoh_eth: a minimal PoC bypassing a timelocked smart wallet's timelock using EIP-8130",
+      "note_en": "01:35, tested on Base testnet; before 8130 it cannot be bypassed.",
+      "topic_en": "Security boundaries of native AA"
+    },
+    {
+      "topic": "原生 AA 的安全边界",
+      "title": "新 ERC：账户权限生命周期",
+      "note": "（AnkushinDaniil）提交。账户把权限承诺为一个根或保存为记录；授权检查只接受当前权限状态中的权限，且见证须覆盖整笔交易；被撤销的权限最迟在下一个区块被拒绝。提供与 EIP-8141 的绑定和发现接口（`authorityRoot`、`AuthorityStateChanged`），16 槽恢复方案 `SLOTS16`，以及同一账户在另一条链上的 `SLOTS16_SYNC`。",
+      "url": "https://github.com/ethereum/ERCs/pull/1979",
+      "date": "2026-08-29",
+      "title_en": "New ERC: account authority lifecycle",
+      "note_en": "(AnkushinDaniil), submitted. An account commits to its authorities as one root or keeps them as records; its authorization check accepts an authority only if it is in the current authority state and a witness covers the whole transaction, and a revoked authority is rejected no later than the next block. It gives a binding to EIP-8141 with a discovery interface (`authorityRoot`, `AuthorityStateChanged`), `SLOTS16`, a 16-slot recovery scheme, and `SLOTS16_SYNC` for the same account on another chain.",
+      "topic_en": "Security boundaries of native AA"
+    },
+    {
+      "topic": "原生 AA 的安全边界",
+      "title": "Frame Transaction Breakout #3 议程",
+      "note": "22:21，9 月 1 日 21:00，客户端进展和 AA 提案更新。",
+      "url": "https://ethereum-magicians.org/t/frame-transaction-breakout-3-sep-1-2026/29539",
+      "date": "2026-08-29",
+      "title_en": "Frame Transaction Breakout #3 agenda",
+      "note_en": "22:21, for September 1 at 21:00: client progress and AA proposal updates.",
+      "topic_en": "Security boundaries of native AA"
+    },
+    {
+      "topic": "gas 记账",
+      "title": "EIP-8037：子调用合并时把状态 gas 还给 gas_left",
+      "note": "（chfast）提交。`state_gas_from_gas_left` 是 frame 局部的，而存储槽原值是交易开始时的值，退还的 frame 不一定是收费的 frame：在 reservoir 为空时，第一个调用 `SSTORE` 新槽从 `gas_left` 溢出 97,920，第二个调用清空该槽，抵扣却进了 reservoir，这正是 ERC-4337 bundle 的形态。",
+      "url": "https://github.com/ethereum/EIPs/pull/12265",
+      "date": "2026-08-29",
+      "title_en": "EIP-8037: return state gas to gas_left when a child merges",
+      "note_en": "(chfast), submitted. `state_gas_from_gas_left` is frame-local while a slot's original value is its value at transaction start, so the refilling frame need not be the charging frame: with the reservoir empty, a first call's `SSTORE` to a fresh slot spills 97,920 from `gas_left`, a second call clears the slot, and the credit lands in the reservoir, the shape an ERC-4337 bundle takes.",
+      "topic_en": "Gas accounting"
+    },
+    {
+      "topic": "gas 记账",
+      "title": "EIP-8337 定义、约束、验证和代码的大量修改",
+      "note": "gcolvin 合并 EIP-8337 定义、约束、验证和代码的大量修改、EIP-7979 清理 和 EIP-8173 术语统一。",
+      "url": "https://github.com/ethereum/EIPs/pull/12262",
+      "date": "2026-08-29",
+      "title_en": "extensive work on EIP-8337 definitions, constraints, validation and code",
+      "note_en": "Gcolvin merged extensive work on EIP-8337 definitions, constraints, validation and code, an EIP-7979 cleanup and consistent EIP-8173 terminology.",
+      "topic_en": "Gas accounting"
+    },
+    {
+      "topic": "gas 记账",
+      "title": "EIP-7979 清理",
+      "note": "gcolvin 合并 EIP-8337 定义、约束、验证和代码的大量修改、EIP-7979 清理 和 EIP-8173 术语统一。",
+      "url": "https://github.com/ethereum/EIPs/pull/12263",
+      "date": "2026-08-29",
+      "title_en": "an EIP-7979 cleanup",
+      "note_en": "Gcolvin merged extensive work on EIP-8337 definitions, constraints, validation and code, an EIP-7979 cleanup and consistent EIP-8173 terminology.",
+      "topic_en": "Gas accounting"
+    },
+    {
+      "topic": "gas 记账",
+      "title": "EIP-8173 术语统一",
+      "note": "gcolvin 合并 EIP-8337 定义、约束、验证和代码的大量修改、EIP-7979 清理 和 EIP-8173 术语统一。",
+      "url": "https://github.com/ethereum/EIPs/pull/12264",
+      "date": "2026-08-29",
+      "title_en": "consistent EIP-8173 terminology",
+      "note_en": "Gcolvin merged extensive work on EIP-8337 definitions, constraints, validation and code, an EIP-7979 cleanup and consistent EIP-8173 terminology.",
+      "topic_en": "Gas accounting"
+    },
+    {
+      "topic": "其他动态",
+      "title": "kassandraETH：kohaku-cli v0.0.5",
+      "note": "20:59，`shield` 命令加入 `--amount-max` 和 `--no-sim`，后者可在账户尚未持有资金时生成 shield payload。",
+      "url": "https://x.com/kassandraETH/status/2093700164753985922",
+      "date": "2026-08-29",
+      "title_en": "kassandraETH: kohaku-cli v0.0.5",
+      "note_en": "20:59, adding `--amount-max` and `--no-sim` to the `shield` command, the latter producing shield payloads before the account holds the funds.",
+      "topic_en": "Other updates"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/frame-transaction-breakout-3-sep-1-2026/29539",
+    "credit": "Ethereum Magicians, Frame Transaction Breakout #3",
+    "local_path": "assets/2026-08-29.jpg",
+    "credit_en": "Ethereum Magicians, Frame Transaction Breakout #3"
+  },
+  "keywords_en": [
+    "EIP-8130 timelock bypass PoC",
+    "ERC account authority lifecycle",
+    "EIP-8037 returning state gas when a child merges",
+    "Kohaku CLI v0.0.5",
+    "Frame Tx Breakout #3 agenda"
+  ],
+  "summary_en": "On Saturday donnoh_eth published a PoC on Base testnet showing how EIP-8130 can bypass the timelock of a timelocked smart wallet, which could not be bypassed before 8130; he sees it as a vulnerability, or at least something to be very careful about. AnkushinDaniil submitted an account authority lifecycle ERC defining how an account's keys and rules are added, rotated and revoked, with a binding to EIP-8141. chfast showed that EIP-8037 strands execution gas in the state gas reservoir for sibling calls like those in a 4337 bundle."
+}

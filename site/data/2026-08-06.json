@@ -1,0 +1,189 @@
+{
+  "date": "2026-08-06",
+  "keywords": [
+    "ACDC #184",
+    "quick slots（EIP-8198）",
+    "frame 交易初始 warm 集合",
+    "EIP-7702 委托标识进账户头",
+    "EIP-8358 账户变更净 gas 计量",
+    "多维费用市场需求模型"
+  ],
+  "summary": "晚上 ACDC #184 收集 Hegotá 非头条提案，Barnabé Monnot 提出把 slot 从 12 秒降到 10 秒的 quick slots，另有 VOPS、block in blobs、RowDAS、发行销毁等陈述。账户与 gas 方面，EIP-8141 PR 补上 frame 交易的初始 warm 地址集合，EIP-8297 把 EIP-7702 委托标识存进账户头并合并，rakita 发起 EIP-8358 账户变更净 gas 计量讨论。",
+  "items": [
+    {
+      "topic": "账户与交易的 gas 细节",
+      "title": "EIP-8141：固定 frame 交易的初始 accessed_addresses 集合",
+      "note": "（Marchhill）提交。规范没写 frame 交易处理时的初始 warm 集合，导致首次访问 `tx.sender` 时 `gas_used` 可能分歧（有客户端按 COLD 收费，EIP-2929/3651 则视为 warm）；PR 把集合定为 EIP-2929/EIP-3651 集合（`tx.sender`、coinbase、预编译）减去任何 frame 目标。",
+      "url": "https://github.com/ethereum/EIPs/pull/12113",
+      "date": "2026-08-06",
+      "title_en": "EIP-8141: pin the initial accessed_addresses set for frame transactions",
+      "note_en": "(Marchhill), submitted. The spec did not define the initial warm set for frame transaction processing, so `gas_used` could diverge at the first `tx.sender` access (some clients charge it COLD, while EIP-2929/3651 warm it); the PR pins the set to the EIP-2929/EIP-3651 set (`tx.sender`, coinbase, precompiles) minus any frame target.",
+      "topic_en": "Gas details for accounts and transactions"
+    },
+    {
+      "topic": "账户与交易的 gas 细节",
+      "title": "EIP-8297：把委托标识存进账户头",
+      "note": "（CPerezz）合并，配套的 EIP-8347 PR 同日合并。原设计中 EIP-7702 委托标识是 `CODE_ZONE` 里按内容寻址的代码块，委托同一目标的账户共享一个叶子；清除或替换委托时，客户端必须判断全状态里是否还有账户委托该目标，这无法在区块局部回答。",
+      "url": "https://github.com/ethereum/EIPs/pull/12114",
+      "date": "2026-08-06",
+      "title_en": "EIP-8297: store delegation indicators in the account header",
+      "note_en": "(CPerezz), merged, with the companion EIP-8347 PR merged the same day. Previously EIP-7702 delegation indicators were content-addressed code chunks in `CODE_ZONE`, so every account delegating to the same target shared one leaf; clearing or replacing a delegation forced a client to determine whether any account anywhere still delegated to that target, which cannot be answered block-locally.",
+      "topic_en": "Gas details for accounts and transactions"
+    },
+    {
+      "topic": "账户与交易的 gas 细节",
+      "title": "EIP-8347 PR",
+      "note": "EIP-8297：把委托标识存进账户头（CPerezz）合并，配套的 EIP-8347 PR 同日合并。原设计中 EIP-7702 委托标识是 `CODE_ZONE` 里按内容寻址的代码块，委托同一目标的账户共享一个叶子；清除或替换委托时，客户端必须判断全状态里是否还有账户委托该目标，这无法在区块局部回答。",
+      "url": "https://github.com/ethereum/EIPs/pull/12115",
+      "date": "2026-08-06",
+      "title_en": "EIP-8347 PR",
+      "note_en": "EIP-8297: store delegation indicators in the account header (CPerezz), merged, with the companion EIP-8347 PR merged the same day. Previously EIP-7702 delegation indicators were content-addressed code chunks in `CODE_ZONE`, so every account delegating to the same target shared one leaf; clearing or replacing a delegation forced a client to determine whether any account anywhere still delegated to that target, which cannot be answered block-locally.",
+      "topic_en": "Gas details for accounts and transactions"
+    },
+    {
+      "topic": "账户与交易的 gas 细节",
+      "title": "Magicians：EIP-8358 账户变更的净 gas 计量",
+      "note": "04:40（rakita）。仿照 EIP-2200 的存储方案，账户在余额或 nonce 与交易开始时不同时才算变更，CALL 和 CALLCODE 的转账成本据此调整。",
+      "url": "https://ethereum-magicians.org/t/eip-8358-net-gas-metering-for-account-changes/29304",
+      "date": "2026-08-06",
+      "title_en": "Magicians: EIP-8358 net gas metering for account changes",
+      "note_en": "04:40 (rakita). Mirroring the EIP-2200 scheme for storage, an account counts as changed only once its balance or nonce differs from its value at the start of the transaction, and the value transfer cost of CALL and CALLCODE follows from that.",
+      "topic_en": "Gas details for accounts and transactions"
+    },
+    {
+      "topic": "账户与交易的 gas 细节",
+      "title": "Magicians：原生 ETH 操作的优惠 gas 成本草案",
+      "note": "02:37，待定的 0.75 系数需客户端在 EIP-8038 等改动下基准测试确认。",
+      "url": "https://ethereum-magicians.org/t/eip-0000-preferential-gas-costs-for-native-eth-operations-draft-for-feedback/29302",
+      "date": "2026-08-06",
+      "title_en": "Magicians: draft for preferential gas costs on native ETH operations",
+      "note_en": "02:37; its 0.75 factor still needs client benchmarking against concurrent changes such as EIP-8038.",
+      "topic_en": "Gas details for accounts and transactions"
+    },
+    {
+      "topic": "ACDC #184 与 quick slots",
+      "title": "Barnabé Monnot：今天向 All Core Devs 提议把更快的 slot 纳入 Hegotá",
+      "note": "14:15，理由是更快的 slot 提升以太坊区块空间的价值，这部分价值归于用户、网络和 ETH。",
+      "url": "https://x.com/barnabemonnot/status/2085263518425661447",
+      "date": "2026-08-06",
+      "title_en": "Barnabé Monnot: today I will propose faster slots for inclusion in Hegotá to All Core Devs",
+      "note_en": "14:15, arguing that faster slots raise the value of Ethereum blockspace, which accrues to users, the network and ETH.",
+      "topic_en": "ACDC #184 and quick slots"
+    },
+    {
+      "topic": "ACDC #184 与 quick slots",
+      "title": "EIP-8081：PFI ACDC 183 和 184 的 EIP",
+      "note": "（nixorokish）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12112",
+      "date": "2026-08-06",
+      "title_en": "EIP-8081: PFI EIPs from ACDC 183 and 184",
+      "note_en": "(nixorokish), submitted.",
+      "topic_en": "ACDC #184 and quick slots"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊状态、数据与执行的弹性需求模型及 Glamsterdam 费用市场分析",
+      "note": "23:52（M1kuW1ll），背景是 EIP-8037 单独计量状态创建 gas，EIP-7999 进一步引入分资源基础费。",
+      "url": "https://ethresear.ch/t/demand-model-with-elasticities-for-ethereum-state-data-and-execution-and-glamsterdam-fee-market-analysis/25644",
+      "date": "2026-08-06",
+      "title_en": "ethresear.ch: a demand model with elasticities for Ethereum state, data and execution, with a Glamsterdam fee market analysis",
+      "note_en": "23:52 (M1kuW1ll), set against EIP-8037 metering state creation gas separately and EIP-7999 adding per-resource base fees.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：归一化状态 gas limit",
+      "note": "（anderselowsson）、RowDAS 分布式 blob 重建（cskiraly）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12119",
+      "date": "2026-08-06",
+      "title_en": "New EIP: normalized state gas limit",
+      "note_en": "(anderselowsson) and RowDAS distributed blob reconstruction (cskiraly), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RowDAS 分布式 blob 重建",
+      "note": "新 EIP：归一化状态 gas limit（anderselowsson）、RowDAS 分布式 blob 重建（cskiraly）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12118",
+      "date": "2026-08-06",
+      "title_en": "RowDAS distributed blob reconstruction",
+      "note_en": "New EIP: normalized state gas limit (anderselowsson) and RowDAS distributed blob reconstruction (cskiraly), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：LeanDA 设计与基准",
+      "note": "21:32，用哈希承诺替代 KZG 的后量子 DAS 方案。",
+      "url": "https://ethresear.ch/t/leanda-design-and-benchmark/25642",
+      "date": "2026-08-06",
+      "title_en": "ethresear.ch: LeanDA design and benchmark",
+      "note_en": "21:32, a post-quantum DAS design using hash-based commitments instead of KZG.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps：Glamsterdam 信息图 v2",
+      "note": "19:28，24 个 EIP，测试网即将开始，主网目标第四季度。",
+      "url": "https://x.com/trent_vanepps/status/2085342296220766307",
+      "date": "2026-08-06",
+      "title_en": "trent_vanepps: Glamsterdam infographic v2",
+      "note_en": "19:28, with 24 EIPs, testnets soon and mainnet targeted for Q4.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zkSecurity：发布 zk-skills，首个是 circom-auditor",
+      "note": "21:32，供 AI 编程代理审查 Circom 电路。",
+      "url": "https://x.com/zksecurityXYZ/status/2085373545501139215",
+      "date": "2026-08-06",
+      "title_en": "zkSecurity: zk-skills released, starting with circom-auditor",
+      "note_en": "21:32, for AI coding agents reviewing Circom circuits.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "kassandra：想要强链上隐私，运行自己的节点是关键",
+      "note": "19:24，可避免中心化 RPC 知道你读了什么。",
+      "url": "https://x.com/kassandraETH/status/2085341262643638457",
+      "date": "2026-08-06",
+      "title_en": "kassandra: for strong onchain privacy, running your own node is key",
+      "note_en": "19:24, since it keeps a centralized RPC from knowing your reads.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "auryn_macmillan：发行率的张力在于既要让单人质押有利可图，又不能因大型质押商涌入而多付安全费用",
+      "note": "01:54。",
+      "url": "https://x.com/auryn_macmillan/status/2085076986742100033",
+      "date": "2026-08-06",
+      "title_en": "auryn_macmillan: the issuance tension is wanting rates high enough for solo staking without overpaying for security as large providers pile in",
+      "note_en": "01:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EFDevcon：Devcon 8 演讲申请截止延长到 8 月 12 日",
+      "note": "19:39。",
+      "url": "https://x.com/EFDevcon/status/2085345099852988927",
+      "date": "2026-08-06",
+      "title_en": "EFDevcon: the Devcon 8 speaker application deadline is extended to August 12",
+      "note_en": "19:39.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/demand-model-with-elasticities-for-ethereum-state-data-and-execution-and-glamsterdam-fee-market-analysis/25644",
+    "credit": "ethresear.ch, Demand Model with Elasticities for Ethereum State, Data, and Execution",
+    "local_path": "assets/2026-08-06.jpg",
+    "credit_en": "ethresear.ch, Demand Model with Elasticities for Ethereum State, Data, and Execution"
+  },
+  "keywords_en": [
+    "ACDC #184",
+    "quick slots (EIP-8198)",
+    "initial warm set for frame transactions",
+    "EIP-7702 delegation indicators in the account header",
+    "EIP-8358 net gas metering for account changes",
+    "fee market demand model"
+  ],
+  "summary_en": "In the evening ACDC #184 collected Hegotá non-headliner proposals: Barnabé Monnot pitched quick slots, cutting slots from 12 to 10 seconds, alongside presentations on VOPS, block in blobs, RowDAS and the issuance burn. On account and gas details, an EIP-8141 PR fills in the initial warm address set for frame transactions, EIP-8297 now stores EIP-7702 delegation indicators in the account header (merged), and rakita opened discussion of EIP-8358 net gas metering for account changes."
+}

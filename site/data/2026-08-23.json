@@ -1,0 +1,85 @@
+{
+  "date": "2026-08-23",
+  "keywords": [
+    "EIP-8390 讨论帖",
+    "ERC-8391 执行委托框架",
+    "后量子账户成本",
+    "区块大小之争回顾"
+  ],
+  "summary": "周日较安静。dapplion 发布 EIP-8390 移除同步委员会的 Magicians 讨论帖，`SYNC_REWARD_WEIGHT` 移除且不重新分配。账户侧有一份新 ERC，执行委托框架，即 ERC-8391。hasufl 回顾比特币区块大小之争，认为活动迁往其他链的主因是可编程性而非区块大小。",
+  "items": [
+    {
+      "topic": "同步委员会的去留",
+      "title": "Magicians：EIP-8390 移除同步委员会",
+      "note": "16:30（dapplion）。移除同步委员会、聚合、子网、域和奖励，以及基于它的 Altair 轻客户端协议；`SYNC_REWARD_WEIGHT` 被移除且不重新分配。",
+      "url": "https://ethereum-magicians.org/t/eip-8390-remove-the-sync-committee/29486",
+      "date": "2026-08-23",
+      "title_en": "Magicians: EIP-8390 remove the sync committee",
+      "note_en": "16:30 (dapplion). It removes the sync committee, its aggregate, subnets, domains and rewards, and the Altair light client protocol built on it; `SYNC_REWARD_WEIGHT` is removed and not redistributed.",
+      "topic_en": "Whether to keep the sync committee"
+    },
+    {
+      "topic": "账户委托",
+      "title": "新 ERC：执行委托框架",
+      "note": "（F4ever）提交，据 Ethereal news #37 为 ERC-8391。",
+      "url": "https://github.com/ethereum/ERCs/pull/1962",
+      "date": "2026-08-23",
+      "title_en": "New ERC: execution delegation framework",
+      "note_en": "(F4ever), submitted; per Ethereal news #37 it is ERC-8391.",
+      "topic_en": "Account delegation"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7939：把零值 PUSH32 操作数补足 32 字节",
+      "note": "（BhariGowda）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12230",
+      "date": "2026-08-23",
+      "title_en": "EIP-7939: pad the zero PUSH32 operand to 32 bytes",
+      "note_en": "(BhariGowda), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hasufl：事后看比特币输掉了区块大小之争，但活动迁移的主因是可编程性",
+      "note": "16:53。",
+      "url": "https://x.com/hasufl/status/2091463799484100957",
+      "date": "2026-08-23",
+      "title_en": "hasufl: in hindsight Bitcoin lost the block size wars, but programmability was the main reason activity moved",
+      "note_en": "16:53.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：后量子安全的一个好数字是 0.06 美元",
+      "note": "16:24，量子就绪正成为基线，但必须实用。",
+      "url": "https://x.com/EliBenSasson/status/2091456443488575936",
+      "date": "2026-08-23",
+      "title_en": "Eli Ben-Sasson: a good number for post-quantum fans is $0.06",
+      "note_en": "16:24; quantum readiness is becoming the baseline but has to be practical.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：请有 Zen 5 架构 AMD 芯片的人帮忙跑基准",
+      "note": "12:13。",
+      "url": "https://x.com/zooko/status/2091393484166959346",
+      "date": "2026-08-23",
+      "title_en": "zooko: asking people with Zen 5 AMD chips to run a benchmark",
+      "note_en": "12:13.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8390-remove-the-sync-committee/29486",
+    "credit": "Ethereum Magicians, EIP-8390: Remove the Sync Committee",
+    "local_path": "assets/2026-08-23.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8390: Remove the Sync Committee"
+  },
+  "keywords_en": [
+    "EIP-8390 discussion thread",
+    "ERC-8391 execution delegation framework",
+    "post-quantum account costs",
+    "looking back at the block size wars"
+  ],
+  "summary_en": "A quiet Sunday. dapplion posted the Magicians thread for EIP-8390, removing the sync committee, with `SYNC_REWARD_WEIGHT` removed and not redistributed. On accounts there was one new ERC, an execution delegation framework, ERC-8391. hasufl looked back at Bitcoin's block size wars and argued that activity moved to other chains mainly because of programmability, not block size."
+}

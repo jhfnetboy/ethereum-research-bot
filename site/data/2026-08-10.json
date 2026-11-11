@@ -1,0 +1,157 @@
+{
+  "date": "2026-08-10",
+  "keywords": [
+    "Vitalik 路线图对照 Strawmap",
+    "EIP-8130 Keystore 合约",
+    "EIP-7906 交易断言",
+    "kohaku 隐身转账",
+    "发行讨论"
+  ],
+  "summary": "Vitalik 把 2023 年路线图叠加到当前 Strawmap 上，总体重合度高，但量子安全被提前，部分事项降级。Base 的 chunter-cb 提交 EIP-8130 大改：账户配置合约更名为 Keystore 合约，与 base/eip-8130 规范实现对齐，规范只保留共识层面。Marchhill 为 EIP-7906 补三处会导致客户端分歧的定义并当天合并。kassandra 展示 kohaku-cli 用一个 4337 UserOp 完成隐身地址转账和公告。",
+  "items": [
+    {
+      "topic": "原生 AA 的两条路线都在推进",
+      "title": "EIP-8130：与 Keystore 合约对齐、交易有效期窗口、精简规范",
+      "note": "（chunter-cb）提交。账户配置合约更名为 Keystore 合约（`KEYSTORE_ADDRESS`、`IKeystore`），与规范实现 `base/eip-8130` 对齐，存储布局、typehash、事件 ABI、函数体等合约内部细节交给该仓库，EIP 只保留协议共识层面。",
+      "url": "https://github.com/ethereum/EIPs/pull/12135",
+      "date": "2026-08-10",
+      "title_en": "EIP-8130: align with Keystore contract, transaction validity window, slim spec",
+      "note_en": "(chunter-cb), submitted. The Account Configuration contract is renamed the Keystore contract (`KEYSTORE_ADDRESS`, `IKeystore`) and aligned with the canonical `base/eip-8130` implementation; contract internals such as storage layout, typehashes, event ABIs and function bodies are deferred to that repository, and the EIP keeps only the protocol consensus surface.",
+      "topic_en": "Both native AA tracks move forward"
+    },
+    {
+      "topic": "原生 AA 的两条路线都在推进",
+      "title": "EIP-7906：规定保留的“必须为 0”输入的处理",
+      "note": "（Marchhill）合并。`TXTRACE`/`TXDIFF` 有若干操作数标为必须为 0，但没规定非零时怎么办；它们运行在 `POST_TX` frame，分歧会改变交易后状态进而影响区块有效性，PR 规定非零即异常终止。同日合并的还有 按 EIP-7928 记录 TXDIFF 状态读取 和 精确定义 contracts_deployed。",
+      "url": "https://github.com/ethereum/EIPs/pull/12132",
+      "date": "2026-08-10",
+      "title_en": "EIP-7906: specify handling of reserved \"must be 0\" inputs",
+      "note_en": "(Marchhill), merged. Several `TXTRACE`/`TXDIFF` operands are marked must be 0, but the spec never said what happens on a non-zero value; since these run in a `POST_TX` frame, a divergence changes post-transaction state and so block validity, and the PR makes a non-zero value an exceptional halt. Also merged that day: record TXDIFF state reads per EIP-7928 and define contracts_deployed precisely.",
+      "topic_en": "Both native AA tracks move forward"
+    },
+    {
+      "topic": "原生 AA 的两条路线都在推进",
+      "title": "按 EIP-7928 记录 TXDIFF 状态读取",
+      "note": "EIP-7906：规定保留的“必须为 0”输入的处理（Marchhill）合并。`TXTRACE`/`TXDIFF` 有若干操作数标为必须为 0，但没规定非零时怎么办；它们运行在 `POST_TX` frame，分歧会改变交易后状态进而影响区块有效性，PR 规定非零即异常终止。同日合并的还有 按 EIP-7928 记录 TXDIFF 状态读取 和 精确定义 contracts_deployed。",
+      "url": "https://github.com/ethereum/EIPs/pull/12133",
+      "date": "2026-08-10",
+      "title_en": "record TXDIFF state reads per EIP-7928",
+      "note_en": "EIP-7906: specify handling of reserved \"must be 0\" inputs (Marchhill), merged. Several `TXTRACE`/`TXDIFF` operands are marked must be 0, but the spec never said what happens on a non-zero value; since these run in a `POST_TX` frame, a divergence changes post-transaction state and so block validity, and the PR makes a non-zero value an exceptional halt. Also merged that day: record TXDIFF state reads per EIP-7928 and define contracts_deployed precisely.",
+      "topic_en": "Both native AA tracks move forward"
+    },
+    {
+      "topic": "原生 AA 的两条路线都在推进",
+      "title": "精确定义 contracts_deployed",
+      "note": "EIP-7906：规定保留的“必须为 0”输入的处理（Marchhill）合并。`TXTRACE`/`TXDIFF` 有若干操作数标为必须为 0，但没规定非零时怎么办；它们运行在 `POST_TX` frame，分歧会改变交易后状态进而影响区块有效性，PR 规定非零即异常终止。同日合并的还有 按 EIP-7928 记录 TXDIFF 状态读取 和 精确定义 contracts_deployed。",
+      "url": "https://github.com/ethereum/EIPs/pull/12134",
+      "date": "2026-08-10",
+      "title_en": "define contracts_deployed precisely",
+      "note_en": "EIP-7906: specify handling of reserved \"must be 0\" inputs (Marchhill), merged. Several `TXTRACE`/`TXDIFF` operands are marked must be 0, but the spec never said what happens on a non-zero value; since these run in a `POST_TX` frame, a divergence changes post-transaction state and so block validity, and the PR makes a non-zero value an exceptional halt. Also merged that day: record TXDIFF state reads per EIP-7928 and define contracts_deployed precisely.",
+      "topic_en": "Both native AA tracks move forward"
+    },
+    {
+      "topic": "隐私：协议优先事项和钱包实践",
+      "title": "soispoke 引用的优先事项：一等关注强隐私，涵盖 keyed nonce 与 recent root、FOCIL 的部分内容、lean 隐私池和 wormhole",
+      "note": "21:45。",
+      "url": "https://x.com/soispoke/status/2086826227071910299",
+      "date": "2026-08-10",
+      "title_en": "The priorities soispoke quoted: first-class attention to strong privacy, covering keyed nonces and recent roots, aspects of FOCIL, lean privacy pools and wormholes",
+      "note_en": "21:45.",
+      "topic_en": "Privacy: protocol priorities and wallet practice"
+    },
+    {
+      "topic": "隐私：协议优先事项和钱包实践",
+      "title": "kassandra：kohaku-cli 功能 #1，隐身转账",
+      "note": "22:49。`kohaku transfer --to tatsumaki.gwei --stealth` 会把以太坊名称解析为“隐身收件箱”，再按隐身地址协议派生新地址，资金转账和公告打包进一个 4337 UserOp。",
+      "url": "https://x.com/kassandraETH/status/2086842348323872918",
+      "date": "2026-08-10",
+      "title_en": "kassandra: kohaku-cli feature #1, stealth transfers",
+      "note_en": "22:49. `kohaku transfer --to tatsumaki.gwei --stealth` resolves the Ethereum name to a \"stealth inbox\", derives a fresh address via the stealth address protocol, and bundles the transfer and the announcement into one 4337 UserOp.",
+      "topic_en": "Privacy: protocol priorities and wallet practice"
+    },
+    {
+      "topic": "隐私：协议优先事项和钱包实践",
+      "title": "kassandra：kohaku-cli v0.0.2 合并测试中",
+      "note": "19:07，支持导入 Tornado note、Railgun unshield 支持尾调用等。",
+      "url": "https://x.com/kassandraETH/status/2086786389316624495",
+      "date": "2026-08-10",
+      "title_en": "kassandra: kohaku-cli v0.0.2 being merged and tested",
+      "note_en": "19:07, with Tornado note import and tail calls for Railgun unshields.",
+      "topic_en": "Privacy: protocol priorities and wallet practice"
+    },
+    {
+      "topic": "其他动态",
+      "title": "adietrichs：对发行的看法，问题是真的，EIP 方向成立，但改变发行有重大弊端，最重要的是决定权必须在社区",
+      "note": "02:49。",
+      "url": "https://x.com/adietrichs/status/2086540292153540986",
+      "date": "2026-08-10",
+      "title_en": "adietrichs: on issuance, the problem is real and the EIP's direction is valid, but changing issuance has major downsides and the decision must rest with the community",
+      "note_en": "02:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zengjiajun：发行政治 101，你不必否决一个 EIP，只要拖到推动者精疲力尽",
+      "note": "04:19。",
+      "url": "https://x.com/zengjiajun_eth/status/2086563028649300324",
+      "date": "2026-08-10",
+      "title_en": "zengjiajun: issuance politics 101, you never have to kill an EIP, you just postpone it until its backers burn out",
+      "note_en": "04:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8375 eMBER，ePBS 强制销毁执行奖励",
+      "note": "17:47。",
+      "url": "https://ethereum-magicians.org/t/eip-8375-ember-epbs-mandatory-burn-of-execution-rewards/29380",
+      "date": "2026-08-10",
+      "title_en": "Magicians: EIP-8375 eMBER, ePBS mandatory burn of execution rewards",
+      "note_en": "17:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT 新首页",
+      "note": "21:30，覆盖范围扩展到互操作、隐私和 ZK。",
+      "url": "https://x.com/ethbeat_org/status/2086822382992326923",
+      "date": "2026-08-10",
+      "title_en": "L2BEAT's new home page",
+      "note_en": "21:30, now covering interop, privacy and ZK as well.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：把 2023 年路线图图示叠加到当前 Strawmap",
+      "note": "21:39，总体高度重合，但顺序有调整（如量子安全被提前），有些事项被降级。",
+      "url": "https://x.com/VitalikButerin/status/2086824673556467938",
+      "date": "2026-08-10",
+      "title_en": "Vitalik: my 2023 roadmap diagram overlaid onto the current Strawmap",
+      "note_en": "21:39; overlap is high, but some items were reordered (quantum safety moved up) and some deprioritized.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Ethlabs Week 7：Hegotá 提案截止",
+      "note": "03:13。",
+      "url": "https://x.com/ethlabs_org/status/2086546462251385135",
+      "date": "2026-08-10",
+      "title_en": "Ethlabs Week 7: the Hegotá proposal deadline",
+      "note_en": "03:13.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12135",
+    "credit": "GitHub, ethereum/EIPs PR #12135",
+    "local_path": "assets/2026-08-10.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12135"
+  },
+  "keywords_en": [
+    "Vitalik's roadmap mapped onto the Strawmap",
+    "EIP-8130 Keystore contract",
+    "EIP-7906 transaction assertions",
+    "kohaku stealth transfers",
+    "issuance debate"
+  ],
+  "summary_en": "Vitalik overlaid his 2023 roadmap onto the current Strawmap: overlap is high, but quantum safety moved up and some items were deprioritized. Base's chunter-cb submitted a major EIP-8130 rewrite: the account configuration contract becomes the Keystore contract, aligned with the base/eip-8130 canonical implementation, and the spec keeps only the consensus surface. Marchhill filled three gaps in EIP-7906 that would have made clients diverge, all merged the same day. kassandra showed kohaku-cli doing a stealth-address transfer and its announcement in a single 4337 UserOp."
+}

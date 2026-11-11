@@ -1,0 +1,85 @@
+{
+  "date": "2026-08-30",
+  "keywords": [
+    "EIP-8250 验证前缀恢复不得回滚批准效果",
+    "ERC-8404 可重算验证收据",
+    "RISC-V 解释器执行预算",
+    "加密敏捷性与原生 AA"
+  ],
+  "summary": "周日较安静。AnkushinDaniil 补上 EIP-8250 的一处列举缺口：`POST_TX` 断言失败执行的验证前缀恢复不得回滚付款范围 `APPROVE` 的效果，保证 nonce 只消费一次。ethresear.ch 上有研究测量确定性 RISC-V 解释器中，相同步数的墙钟时间可相差 23 倍。Eli Ben-Sasson 认为加密敏捷性最重要的成分是原生账户抽象。",
+  "items": [
+    {
+      "topic": "keyed nonce 的一次性保证",
+      "title": "EIP-8250：禁止验证前缀恢复回滚批准效果",
+      "note": "（AnkushinDaniil）提交。Nonce 消费一节列出不得撤销付款范围 `APPROVE` 效果的回滚：后续 frame 回滚、跳过后续 frame、恢复原子批快照；但没有列出 `POST_TX` 断言失败时的验证前缀恢复，它丢弃交易体但交易仍有效且被打包。PR 把这一情况加入 MUST NOT 列表，对合规客户端无行为变化。",
+      "url": "https://github.com/ethereum/EIPs/pull/12266",
+      "date": "2026-08-30",
+      "title_en": "EIP-8250: forbid reverting approval effects on validation-prefix restore",
+      "note_en": "(AnkushinDaniil), submitted. The nonce consumption section lists the rollbacks that must not revert a payment-scoped `APPROVE`'s effects: a later frame revert, skipping later frames, and restoring an atomic-batch snapshot; it did not name the validation-prefix restore after a `POST_TX` assertion failure, which discards the transaction body while keeping the transaction valid and included. The PR adds that case to the MUST NOT list, with no behavior change for conforming clients.",
+      "topic_en": "The spent-once guarantee for keyed nonces"
+    },
+    {
+      "topic": "研究",
+      "title": "ethresear.ch：相同指令数，23 倍墙钟时间",
+      "note": "10:30（cristiandkzk），在确定性 RISC-V 解释器中测量执行成本，目标是给出在异构机器上都安全的协议级执行预算；结论是步数对墙钟时间的约束比预期宽松，工作集效应是主因。",
+      "url": "https://ethresear.ch/t/same-instruction-count-23x-the-wall-clock-working-set-effects-in-a-deterministic-risc-v-interpreter/25856",
+      "date": "2026-08-30",
+      "title_en": "ethresear.ch: same instruction count, 23x the wall clock",
+      "note_en": "10:30 (cristiandkzk), measuring execution cost in a deterministic RISC-V interpreter in search of a protocol-level execution budget that stays safe across heterogeneous machines; a step count bounds wall clock more loosely than expected, with working-set effects to blame.",
+      "topic_en": "Research"
+    },
+    {
+      "topic": "研究",
+      "title": "新 ERC：可重算验证收据",
+      "note": "（pipavlo82）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1980",
+      "date": "2026-08-30",
+      "title_en": "New ERC: recomputable verification receipts",
+      "note_en": "(pipavlo82), submitted.",
+      "topic_en": "Research"
+    },
+    {
+      "topic": "研究",
+      "title": "EIP-7979 更新控制流图",
+      "note": "gcolvin 为 EIP-7979、8173、8337 补充资产和图表，多份 PR 合并，如 EIP-7979 更新控制流图。",
+      "url": "https://github.com/ethereum/EIPs/pull/12271",
+      "date": "2026-08-30",
+      "title_en": "EIP-7979: update the control-flow diagram",
+      "note_en": "Gcolvin added assets and diagrams for EIP-7979, 8173 and 8337 in several merged PRs, such as EIP-7979: update the control-flow diagram.",
+      "topic_en": "Research"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：加密敏捷性最重要的成分是原生账户抽象",
+      "note": "22:49，强调不是一般的 AA，而是原生 AA。",
+      "url": "https://x.com/EliBenSasson/status/2094090219276448166",
+      "date": "2026-08-30",
+      "title_en": "Eli Ben-Sasson: the most important ingredient of crypto agility is native account abstraction",
+      "note_en": "22:49, stressing native AA rather than AA in general.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：AI 威胁已经来了，想象等到真正的量子计算机出现才准备",
+      "note": "18:19。",
+      "url": "https://x.com/EliBenSasson/status/2094022206552482263",
+      "date": "2026-08-30",
+      "title_en": "Eli Ben-Sasson: AI threats are here now; imagine waiting for an actual quantum computer before preparing",
+      "note_en": "18:19.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/same-instruction-count-23x-the-wall-clock-working-set-effects-in-a-deterministic-risc-v-interpreter/25856",
+    "credit": "ethresear.ch, Same instruction count, 23x the wall clock (cristiandkzk)",
+    "local_path": "assets/2026-08-30.jpg",
+    "credit_en": "ethresear.ch, Same instruction count, 23x the wall clock (cristiandkzk)"
+  },
+  "keywords_en": [
+    "EIP-8250 validation-prefix restore must not revert approval effects",
+    "ERC-8404 recomputable verification receipts",
+    "RISC-V interpreter execution budgets",
+    "crypto agility and native AA"
+  ],
+  "summary_en": "A quiet Sunday. AnkushinDaniil closed an enumeration gap in EIP-8250: the validation-prefix restore performed on a `POST_TX` assertion failure must not revert a payment-scoped `APPROVE`'s effects, keeping nonces spent once. A post on ethresear.ch measured wall clock in a deterministic RISC-V interpreter varying by 23x for the same step count. Eli Ben-Sasson argued that native account abstraction is the most important ingredient of crypto agility."
+}

@@ -556,7 +556,9 @@ def day_title(day: dict, lang: str) -> str:
     sep = STRINGS[lang]["kw_sep"]
     osep = STRINGS[other]["kw_sep"]
     first = f'{fmt_date(day["date"], lang)} {sep.join(day_keywords(day, lang, 3))}'
-    other_kw = [k for k in day_keywords(day, other, 3) if k not in day_keywords(day, lang, 3)]
+    # Keep the other language's keywords whole: dropping the ones shared with
+    # this language removed meeting codes such as "ACDE #246" from the second half.
+    other_kw = day_keywords(day, other, 3)
     second = f'{fmt_date(day["date"], other)} {osep.join(other_kw)}'.strip()
     return f"{first} · {second} | {STRINGS[lang]['brand_short']}"
 

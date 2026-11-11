@@ -1,0 +1,173 @@
+{
+  "date": "2026-08-27",
+  "keywords": [
+    "ACDE #244",
+    "EIP-8141 列为 Hegotá SFI",
+    "原生 AA 每周 breakout",
+    "Sepolia 9 月 28 日与 Hoodi 10 月 26 日提议",
+    "EIP-4444 修剪窗口",
+    "可组合原生 AA EIP",
+    "临时账户",
+    "EIP-8130 移除 CONTRACT_ESTABLISHED"
+  ],
+  "summary": "ACDE #244 决定把 Frame 交易 EIP-8141 列为 Hegotá 的 Scheduled for Inclusion，前提是 AA 一定在 Hegotá 上线、具体实现乃至 EIP 编号仍可能改变，每周 AA breakout 尝试收敛 8141 与 8130。Glamsterdam 公共测试网提议 Sepolia 9 月 28 日、Hoodi 10 月 26 日，待下周 ACDC 确认，主网可能在 12 月初。EIP-8360 作为 PFI 保留，但它要求对 EIP-8037 的改动因太晚被拒；EIP-7609 和 EIP-8058 因无人推动被拒。同日 pedrouid 提交三个可组合原生 AA EIP，Helkomine 发帖论证临时账户。",
+  "items": [
+    {
+      "topic": "ACDE #244：原生 AA 列入 Hegotá",
+      "title": "ECH Institute：ACDE #244 21:00 召开",
+      "note": "20:40，议题为 Glamsterdam 更新、存款合约后量子就绪和 Hegotá。",
+      "url": "https://x.com/ECHInstitute/status/2092970596607066269",
+      "date": "2026-08-27",
+      "title_en": "ECH Institute: ACDE #244 at 21:00",
+      "note_en": "20:40, with Glamsterdam updates, deposit contract PQ readiness and Hegotá on the agenda.",
+      "topic_en": "ACDE #244: native AA scheduled for Hegotá"
+    },
+    {
+      "topic": "ACDE #244：原生 AA 列入 Hegotá",
+      "title": "EIP-8081：SFI EIP-8141",
+      "note": "（nixorokish）提交并合并，依据 ACDE 244 的决定：在 AA 将于 Hegotá 上线的共识下 SFI Frames，具体实现可能改变，包括 EIP 编号。",
+      "url": "https://github.com/ethereum/EIPs/pull/12251",
+      "date": "2026-08-27",
+      "title_en": "EIP-8081: SFI EIP-8141",
+      "note_en": "(nixorokish), submitted and merged, per the ACDE 244 decision: SFI Frames with the understanding that AA will ship in Hegotá and the specific implementation may change, including the EIP number.",
+      "topic_en": "ACDE #244: native AA scheduled for Hegotá"
+    },
+    {
+      "topic": "原生 AA 的新提案",
+      "title": "新 EIP：原生 AA 交易",
+      "note": "（pedrouid）提交，Magicians：可组合原生账户抽象 20:16。三个可组合 Core EIP，保持 EIP-8130 不变：可移植 Keystore 定义 actor、认证器、账户创建和配置；基础原生 AA 交易支持批处理、代付和 keyed nonce；可选高级控制加入策略、账户锁定和无 nonce 交易，共用同一交易信封（PR 中为 `0x79`）。编号在 PR 与论坛帖中不一致，Ethereal news #37 记为 EIP-8398、8401、8402。",
+      "url": "https://github.com/ethereum/EIPs/pull/12248",
+      "date": "2026-08-27",
+      "title_en": "New EIP: native account abstraction transactions",
+      "note_en": "(pedrouid), submitted, with Magicians: composable native account abstraction at 20:16. Three composable Core EIPs that leave EIP-8130 unchanged: a portable Keystore defining actors, authenticators, account creation and configuration; a basic native AA transaction with batching, sponsorship and keyed nonces; and optional advanced controls adding policies, account locking and nonce-free transactions in the same envelope (`0x79` in the PR). The numbering differs between the PR and the forum thread; Ethereal news #37 lists them as EIP-8398, 8401 and 8402.",
+      "topic_en": "New native AA proposals"
+    },
+    {
+      "topic": "原生 AA 的新提案",
+      "title": "Magicians：可组合原生账户抽象",
+      "note": "新 EIP：原生 AA 交易（pedrouid）提交，Magicians：可组合原生账户抽象 20:16。三个可组合 Core EIP，保持 EIP-8130 不变：可移植 Keystore 定义 actor、认证器、账户创建和配置；基础原生 AA 交易支持批处理、代付和 keyed nonce；可选高级控制加入策略、账户锁定和无 nonce 交易，共用同一交易信封（PR 中为 `0x79`）。编号在 PR 与论坛帖中不一致，Ethereal news #37 记为 EIP-8398、8401、8402。",
+      "url": "https://ethereum-magicians.org/t/composable-native-account-abstraction/29526",
+      "date": "2026-08-27",
+      "title_en": "Magicians: composable native account abstraction",
+      "note_en": "New EIP: native account abstraction transactions (pedrouid), submitted, with Magicians: composable native account abstraction at 20:16. Three composable Core EIPs that leave EIP-8130 unchanged: a portable Keystore defining actors, authenticators, account creation and configuration; a basic native AA transaction with batching, sponsorship and keyed nonces; and optional advanced controls adding policies, account locking and nonce-free transactions in the same envelope (`0x79` in the PR). The numbering differs between the PR and the forum thread; Ethereal news #37 lists them as EIP-8398, 8401 and 8402.",
+      "topic_en": "New native AA proposals"
+    },
+    {
+      "topic": "原生 AA 的新提案",
+      "title": "Magicians：临时账户的理由和实现方式",
+      "note": "13:44（Helkomine）。临时账户只作执行容器，交易结束即删除；目前可用 CREATE/CREATE2 加 SELFDESTRUCT 实现，但账户创建成本过高。",
+      "url": "https://ethereum-magicians.org/t/arguments-for-ephemeral-accounts-and-implementation-approaches/29524",
+      "date": "2026-08-27",
+      "title_en": "Magicians: arguments for ephemeral accounts and implementation approaches",
+      "note_en": "13:44 (Helkomine). Ephemeral accounts are pure execution containers deleted at the end of the transaction; today they can be built with CREATE/CREATE2 plus SELFDESTRUCT, but account creation is prohibitively expensive.",
+      "topic_en": "New native AA proposals"
+    },
+    {
+      "topic": "原生 AA 的新提案",
+      "title": "EIP-8130：移除 CONTRACT_ESTABLISHED 标志",
+      "note": "（chunter-cb）提交并合并，其余账户状态标志下移一位：`DEFAULT_EOA_REVOKED` `0x02` 改为 `0x01`，`LOCKED` `0x04` 改为 `0x02`，`UNLOCK_INITIATED` `0x08` 改为 `0x04`。",
+      "url": "https://github.com/ethereum/EIPs/pull/12250",
+      "date": "2026-08-27",
+      "title_en": "EIP-8130: remove the CONTRACT_ESTABLISHED flag",
+      "note_en": "(chunter-cb), submitted and merged, shifting the remaining account-state flags down one bit: `DEFAULT_EOA_REVOKED` `0x02` to `0x01`, `LOCKED` `0x04` to `0x02`, and `UNLOCK_INITIATED` `0x08` to `0x04`.",
+      "topic_en": "New native AA proposals"
+    },
+    {
+      "topic": "原生 AA 的新提案",
+      "title": "EIP-8141：expiry 验证 frame 加入 valid_after",
+      "note": "（nerolation）提交。frame 数据从 8 字节变为 16 字节 `valid_after || expiry_timestamp`，要求 `valid_after <= block.timestamp <= expiry_timestamp`；内存池不保留尚未生效的交易，窗口打开后需重新提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12252",
+      "date": "2026-08-27",
+      "title_en": "EIP-8141: add valid_after to the expiry verifier frame",
+      "note_en": "(nerolation), submitted. Frame data grows from 8 to 16 bytes, `valid_after || expiry_timestamp`, and requires `valid_after <= block.timestamp <= expiry_timestamp`; the mempool does not hold not-yet-valid transactions, which must be resubmitted once the window opens.",
+      "topic_en": "New native AA proposals"
+    },
+    {
+      "topic": "原生 AA 的新提案",
+      "title": "EIP-8037：为 SELFDESTRUCT 的账户退还状态 gas",
+      "note": "（chfast）提交：同一交易内创建并自毁的账户，1 kB 部署约支付 170 万状态 gas，但状态并未落地。",
+      "url": "https://github.com/ethereum/EIPs/pull/12249",
+      "date": "2026-08-27",
+      "title_en": "EIP-8037: refill state gas for a SELFDESTRUCTed account",
+      "note_en": "(chfast), submitted: an account created and self-destructed in the same transaction pays about 1.7M state gas for a 1 kB deployment, for state that never lands.",
+      "topic_en": "New native AA proposals"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：用 EIP-8304 和 UTXO 证明表实现可认证的 UTXO 发现",
+      "note": "18:00，钱包不必信任 RPC 返回完整日志。",
+      "url": "https://ethresear.ch/t/an-evaluation-of-authenticated-utxo-discovery-with-eip-8304-and-utxo-proof-tables/25828",
+      "date": "2026-08-27",
+      "title_en": "ethresear.ch: authenticated UTXO discovery with EIP-8304 and UTXO proof tables",
+      "note_en": "18:00, so wallets need not trust an RPC to return complete logs.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8391 执行委托框架",
+      "note": "22:27；ERC-8404 可重算的验证收据 07:08。",
+      "url": "https://ethereum-magicians.org/t/erc-8391-execution-delegation-framework/29527",
+      "date": "2026-08-27",
+      "title_en": "Magicians: ERC-8391 execution delegation framework",
+      "note_en": "22:27; ERC-8404 recomputable verification receipts, 07:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8404 可重算的验证收据",
+      "note": "Magicians：ERC-8391 执行委托框架 22:27；ERC-8404 可重算的验证收据 07:08。",
+      "url": "https://ethereum-magicians.org/t/erc-8404-recomputable-verification-receipts/29521",
+      "date": "2026-08-27",
+      "title_en": "ERC-8404 recomputable verification receipts",
+      "note_en": "Magicians: ERC-8391 execution delegation framework, 22:27; ERC-8404 recomputable verification receipts, 07:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8153 进入 Review",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1969",
+      "date": "2026-08-27",
+      "title_en": "ERC-8153 moved to Review",
+      "note_en": "Submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：首笔量子安全的比特币交易在主网被打包",
+      "note": "05:35，由 avihu28 设计，与 MARA Foundation 合作；Eli Ben-Sasson 10:35 说明打包这笔交易花了很多工作。",
+      "url": "https://x.com/StarkWareLtd/status/2092742830170968205",
+      "date": "2026-08-27",
+      "title_en": "StarkWare: the first quantum-safe Bitcoin transaction was mined on mainnet",
+      "note_en": "05:35, designed by avihu28 with the MARA Foundation; Eli Ben-Sasson, 10:35, noted it took a lot of work to get it mined.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson",
+      "note": "StarkWare：首笔量子安全的比特币交易在主网被打包 05:35，由 avihu28 设计，与 MARA Foundation 合作；Eli Ben-Sasson 10:35 说明打包这笔交易花了很多工作。",
+      "url": "https://x.com/EliBenSasson/status/2092818178027970613",
+      "date": "2026-08-27",
+      "title_en": "Eli Ben-Sasson",
+      "note_en": "StarkWare: the first quantum-safe Bitcoin transaction was mined on mainnet, 05:35, designed by avihu28 with the MARA Foundation; Eli Ben-Sasson, 10:35, noted it took a lot of work to get it mined.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/composable-native-account-abstraction/29526",
+    "credit": "Ethereum Magicians, Composable Native Account Abstraction",
+    "local_path": "assets/2026-08-27.jpg",
+    "credit_en": "Ethereum Magicians, Composable Native Account Abstraction"
+  },
+  "keywords_en": [
+    "ACDE #244",
+    "EIP-8141 SFI for Hegotá",
+    "weekly native AA breakouts",
+    "Sepolia September 28 and Hoodi October 26 proposal",
+    "EIP-4444 pruning window",
+    "composable native AA EIPs",
+    "ephemeral accounts",
+    "EIP-8130 drops CONTRACT_ESTABLISHED"
+  ],
+  "summary_en": "ACDE #244 moved the Frame transaction EIP-8141 to Scheduled for Inclusion in Hegotá, on the understanding that AA will ship in Hegotá while the specific implementation, even the EIP number, may change; weekly AA breakouts will try to converge 8141 and 8130. Glamsterdam public testnets are proposed for Sepolia on September 28 and Hoodi on October 26, to be confirmed at next week's ACDC, with mainnet potentially in early December. EIP-8360 stays PFI, but its requested change to EIP-8037 was rejected as too late; EIP-7609 and EIP-8058 were declined with no champion. The same day pedrouid submitted three composable native AA EIPs, and Helkomine argued for ephemeral accounts."
+}

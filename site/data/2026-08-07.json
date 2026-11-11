@@ -1,0 +1,187 @@
+{
+  "date": "2026-08-07",
+  "keywords": [
+    "EIP-8374 回滚后保留 warm 访问集",
+    "EIP-8375 ePBS 强制销毁",
+    "quick slots 后续",
+    "隐私与中立性",
+    "Ethereal news #34"
+  ],
+  "summary": "rakita 提交 EIP-8374：调用帧回滚或异常终止时不再回滚 `accessed_addresses` 和 `accessed_storage_keys`，一旦 warm 就在整笔交易内保持 warm，让 gas 定价与客户端实际成本一致。Ben Adams 提交 EIP-8375，为 ePBS 统一 MEV 销毁。Barnabé 回顾 quick slots 陈述，下一步与 Sourcify 排查依赖 slot 时间的已部署合约。以太坊官方账号转发 Coin Center 关于隐私的长帖，Vitalik 评论 Signal 免手机号注册。",
+  "items": [
+    {
+      "topic": "访问集与 gas 计价",
+      "title": "新 EIP：回滚时保留 warm 访问集",
+      "note": "（rakita）提交，Magicians 讨论帖 16:00。修改 EIP-2929 行为，调用帧回滚或异常终止时不再回滚 `accessed_addresses` 与 `accessed_storage_keys`。PR 的理由：回滚并不会把已经加载进客户端缓存的数据清掉，定价应与实际成本一致；访问集变成只追加，也不再需要日志回滚，实现更简单。",
+      "url": "https://github.com/ethereum/EIPs/pull/12128",
+      "date": "2026-08-07",
+      "title_en": "New EIP: persist warm access sets across reverts",
+      "note_en": "(rakita), submitted, with a Magicians thread at 16:00. It amends EIP-2929 so `accessed_addresses` and `accessed_storage_keys` are not rolled back on call-frame revert or exceptional halt. The PR's reasoning: a revert does not evict data already loaded into client caches, so pricing should match actual cost, and append-only access sets remove the need for journal rollback, simplifying implementations.",
+      "topic_en": "Access sets and gas pricing"
+    },
+    {
+      "topic": "访问集与 gas 计价",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：回滚时保留 warm 访问集（rakita）提交，Magicians 讨论帖 16:00。修改 EIP-2929 行为，调用帧回滚或异常终止时不再回滚 `accessed_addresses` 与 `accessed_storage_keys`。PR 的理由：回滚并不会把已经加载进客户端缓存的数据清掉，定价应与实际成本一致；访问集变成只追加，也不再需要日志回滚，实现更简单。",
+      "url": "https://ethereum-magicians.org/t/eip-8374-persist-warm-access-sets-across-reverts/29341",
+      "date": "2026-08-07",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: persist warm access sets across reverts (rakita), submitted, with a Magicians thread at 16:00. It amends EIP-2929 so `accessed_addresses` and `accessed_storage_keys` are not rolled back on call-frame revert or exceptional halt. The PR's reasoning: a revert does not evict data already loaded into client caches, so pricing should match actual cost, and append-only access sets remove the need for journal rollback, simplifying implementations.",
+      "topic_en": "Access sets and gas pricing"
+    },
+    {
+      "topic": "访问集与 gas 计价",
+      "title": "EIP-8141：为首次引用的提案加链接",
+      "note": "（AnkushinDaniil）提交，修复 `eipw` 的 19 个链接错误，无规范变化。",
+      "url": "https://github.com/ethereum/EIPs/pull/12121",
+      "date": "2026-08-07",
+      "title_en": "EIP-8141: link the first reference to each cited proposal",
+      "note_en": "(AnkushinDaniil), submitted, fixing 19 `eipw` link errors with no normative change.",
+      "topic_en": "Access sets and gas pricing"
+    },
+    {
+      "topic": "访问集与 gas 计价",
+      "title": "归一化状态 gas limit",
+      "note": "（anderselowsson）合并，成为 EIP-8372；PFI PR 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12119",
+      "date": "2026-08-07",
+      "title_en": "Normalized state gas limit",
+      "note_en": "(anderselowsson), merged as EIP-8372; its PFI PR was submitted the same day.",
+      "topic_en": "Access sets and gas pricing"
+    },
+    {
+      "topic": "访问集与 gas 计价",
+      "title": "PFI PR",
+      "note": "归一化状态 gas limit（anderselowsson）合并，成为 EIP-8372；PFI PR 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12122",
+      "date": "2026-08-07",
+      "title_en": "PFI PR",
+      "note_en": "Normalized state gas limit (anderselowsson), merged as EIP-8372; its PFI PR was submitted the same day.",
+      "topic_en": "Access sets and gas pricing"
+    },
+    {
+      "topic": "ePBS 与 slot 时间",
+      "title": "新 EIP：ePBS 强制销毁执行奖励",
+      "note": "（benaadams）提交，即 EIP-8375。对每个执行载荷（包括自建块）按配置比例销毁总优先费，并把外部构建者 `gross_value` 的同一比例作为拍卖销毁目标。",
+      "url": "https://github.com/ethereum/EIPs/pull/12130",
+      "date": "2026-08-07",
+      "title_en": "New EIP: ePBS mandatory burn of execution rewards",
+      "note_en": "(benaadams), submitted, now EIP-8375. It burns a configured fraction of aggregate priority fees on every executed payload, including self-builds, and treats the same fraction of an external builder's `gross_value` as an auction burn target.",
+      "topic_en": "ePBS and slot time"
+    },
+    {
+      "topic": "ePBS 与 slot 时间",
+      "title": "Barnabé Monnot：感谢昨天陈述时的提问和支持",
+      "note": "14:50。被重点提到的一项是识别依赖 slot 时间的已部署合约，将与 Sourcify 合作推进。",
+      "url": "https://x.com/barnabemonnot/status/2085634797083165179",
+      "date": "2026-08-07",
+      "title_en": "Barnabé Monnot: thanks for the questions and support during yesterday's presentation",
+      "note_en": "14:50. One highlighted point is identifying deployed contracts that rely on slot time, in joint work with Sourcify.",
+      "topic_en": "ePBS and slot time"
+    },
+    {
+      "topic": "ePBS 与 slot 时间",
+      "title": "nero_eth 的系列 PR",
+      "note": "在摘要中突出各 EIP 的收益，包括 EIP-8131 区块大小上限、EIP-8146 sidecar 等，均于当日合并；EIP-8250 和 EIP-8272 突出隐私收益的 PR 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12123",
+      "date": "2026-08-07",
+      "title_en": "A series of PRs from nero_eth",
+      "note_en": "Highlights each EIP's benefit up front, including the EIP-8131 block-size cap and EIP-8146 sidecars, all merged that day; PRs putting the privacy benefit first in EIP-8250 and EIP-8272 were submitted the same day.",
+      "topic_en": "ePBS and slot time"
+    },
+    {
+      "topic": "ePBS 与 slot 时间",
+      "title": "EIP-8146 sidecar",
+      "note": "nero_eth 的系列 PR 在摘要中突出各 EIP 的收益，包括 EIP-8131 区块大小上限、EIP-8146 sidecar 等，均于当日合并；EIP-8250 和 EIP-8272 突出隐私收益的 PR 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12124",
+      "date": "2026-08-07",
+      "title_en": "EIP-8146 sidecars",
+      "note_en": "A series of PRs from nero_eth highlights each EIP's benefit up front, including the EIP-8131 block-size cap and EIP-8146 sidecars, all merged that day; PRs putting the privacy benefit first in EIP-8250 and EIP-8272 were submitted the same day.",
+      "topic_en": "ePBS and slot time"
+    },
+    {
+      "topic": "ePBS 与 slot 时间",
+      "title": "EIP-8250",
+      "note": "nero_eth 的系列 PR 在摘要中突出各 EIP 的收益，包括 EIP-8131 区块大小上限、EIP-8146 sidecar 等，均于当日合并；EIP-8250 和 EIP-8272 突出隐私收益的 PR 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12126",
+      "date": "2026-08-07",
+      "title_en": "EIP-8250",
+      "note_en": "A series of PRs from nero_eth highlights each EIP's benefit up front, including the EIP-8131 block-size cap and EIP-8146 sidecars, all merged that day; PRs putting the privacy benefit first in EIP-8250 and EIP-8272 were submitted the same day.",
+      "topic_en": "ePBS and slot time"
+    },
+    {
+      "topic": "ePBS 与 slot 时间",
+      "title": "EIP-8272",
+      "note": "nero_eth 的系列 PR 在摘要中突出各 EIP 的收益，包括 EIP-8131 区块大小上限、EIP-8146 sidecar 等，均于当日合并；EIP-8250 和 EIP-8272 突出隐私收益的 PR 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12125",
+      "date": "2026-08-07",
+      "title_en": "EIP-8272",
+      "note_en": "A series of PRs from nero_eth highlights each EIP's benefit up front, including the EIP-8131 block-size cap and EIP-8146 sidecars, all merged that day; PRs putting the privacy benefit first in EIP-8250 and EIP-8272 were submitted the same day.",
+      "topic_en": "ePBS and slot time"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #34",
+      "note": "20:57：EIP-8363 递减发行销毁、Dark Forest 移植到 Aztec、MetaMask Agent Wallet。",
+      "url": "https://x.com/EtherealnewsHQ/status/2085726923590869003",
+      "date": "2026-08-07",
+      "title_en": "Ethereal news #34",
+      "note_en": "20:57: the EIP-8363 tapered issuance burn proposal, Dark Forest ported to Aztec, and the MetaMask Agent Wallet.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：STRK20 为每个 ERC-20 提供隐私",
+      "note": "15:15，包括 avnu 代付的私密支付和私密兑换、Endur 私密流动性质押。",
+      "url": "https://x.com/StarkWareLtd/status/2085640841088118922",
+      "date": "2026-08-07",
+      "title_en": "StarkWare: STRK20s bring privacy to every ERC-20",
+      "note_en": "15:15, including private payments through avnu's paymaster, private swaps, and private liquid staking with Endur.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "benjaminion：讨论“多付安全费用”应区分质量和数量",
+      "note": "19:04，质押在 CEX 或 LST 的 32 ETH 和远方家中单人质押的 32 ETH 价值不同。",
+      "url": "https://x.com/benjaminion_xyz/status/2085698653063102548",
+      "date": "2026-08-07",
+      "title_en": "benjaminion: the \"overpaying for security\" debate should separate quality from quantity",
+      "note_en": "19:04; 32 ETH staked in a CEX or LST is worth less than 32 ETH solo-staked in an enthusiast's distant living room.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：Signal 正在支持不用手机号注册，非常欢迎",
+      "note": "19:55，同时列出这能做到和做不到什么。",
+      "url": "https://x.com/VitalikButerin/status/2085711515152527400",
+      "date": "2026-08-07",
+      "title_en": "Vitalik: very welcome news that Signal is working on registration without a phone number",
+      "note_en": "19:55, with notes on what it would and would not accomplish.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：Coin Center 的 Peter Van Valkenburgh 客座长帖",
+      "note": "20:10，认为隐私常被视为政治风险，现实恰恰相反，隐私是以太坊金融自由和中立性的根本。",
+      "url": "https://x.com/ethereum/status/2085715176515321919",
+      "date": "2026-08-07",
+      "title_en": "ethereum: a guest thread by Coin Center's Peter Van Valkenburgh",
+      "note_en": "20:10, arguing that privacy is often seen as politically risky but is in fact essential to Ethereum's financial freedom and neutrality.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8374-persist-warm-access-sets-across-reverts/29341",
+    "credit": "Ethereum Magicians, EIP-8374: Persist Warm Access Sets Across Reverts",
+    "local_path": "assets/2026-08-07.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8374: Persist Warm Access Sets Across Reverts"
+  },
+  "keywords_en": [
+    "EIP-8374 persist warm access sets across reverts",
+    "EIP-8375 ePBS mandatory burn",
+    "quick slots follow-up",
+    "privacy and neutrality",
+    "Ethereal news #34"
+  ],
+  "summary_en": "rakita submitted EIP-8374: when a call frame reverts or halts exceptionally, `accessed_addresses` and `accessed_storage_keys` are no longer rolled back, so anything warmed stays warm for the rest of the transaction and gas pricing matches what clients actually pay. Ben Adams submitted EIP-8375, a unified MEV burn for ePBS. Barnabé reviewed his quick slots presentation; the next step is working with Sourcify to find deployed contracts that rely on slot time. The official Ethereum account ran a Coin Center guest thread on privacy, and Vitalik commented on Signal registration without a phone number."
+}

@@ -1,0 +1,137 @@
+{
+  "date": "2026-08-22",
+  "keywords": [
+    "8141 与 8130 之争",
+    "AA 战争回顾",
+    "EIP-8141 区块执行 gas 先于退款计算",
+    "移除同步委员会",
+    "calldata 底价修正合并"
+  ],
+  "summary": "周六的讨论集中在原生 AA。lightclient 回应 Base 上线 8130 的消息：8130 有一半是不该写进协议的应用层细节，8141 支持无许可创新，不强迫钱包和用户采用特定模式。Hudson Jameson 问 AA 之争最后得到了什么，用 AA 的智能钱包似乎并没有普及。规范上，提交了 EIP-8141 区块执行 gas 在退款前计算的修改，calldata 底价修正合并。dapplion 提交 EIP 移除同步委员会，发行减少约 3%。",
+  "items": [
+    {
+      "topic": "原生 AA 设计分歧公开化",
+      "title": "lightclient：8130 有一半是不该在协议中定义的应用层细节",
+      "note": "01:03。8141 支持无许可创新，不强迫钱包和用户采用特定使用模式，这很重要，因为不能假设我们会一直在场调整账户系统。",
+      "url": "https://x.com/lightclients/status/2090862398928552188",
+      "date": "2026-08-22",
+      "title_en": "lightclient: half of 8130 is application-layer specifics that should not be defined in the protocol",
+      "note_en": "01:03. 8141 supports permissionless innovation and does not force wallets and users into specific use patterns, which matters because we cannot assume we will always be around to tweak the account system.",
+      "topic_en": "The native AA design split goes public"
+    },
+    {
+      "topic": "原生 AA 设计分歧公开化",
+      "title": "Hudson Jameson：还记得账户抽象战争吗，结果如何",
+      "note": "02:04。一些折中 EIP 被接受，但使用 AA 的智能钱包似乎没有起飞；是争论冲掉了最好的 EIP，还是采用的问题。",
+      "url": "https://x.com/hudsonjameson/status/2090877651024036330",
+      "date": "2026-08-22",
+      "title_en": "Hudson Jameson: remember the account abstraction wars, what came of that",
+      "note_en": "02:04. Some compromise EIPs were accepted, but smart wallets using AA do not seem to have taken off; did the fighting wash away the best EIPs, or is it an adoption issue.",
+      "topic_en": "The native AA design split goes public"
+    },
+    {
+      "topic": "原生 AA 设计分歧公开化",
+      "title": "EIP-8141：区块执行 gas 在退款前计算（EIP-7778）",
+      "note": "（AnkushinDaniil）提交。EIP-8141 采用 EIP-8037 的二维 gas 模型，并与 EIP-7778 在同一分叉激活；EIP-8037 在退款前计算区块执行维度，退款降低付款方成本但不释放交易占用的区块容量，这是 EIP-7778 要守住的 DoS 边界。",
+      "url": "https://github.com/ethereum/EIPs/pull/12226",
+      "date": "2026-08-22",
+      "title_en": "EIP-8141: account block execution gas before refund (EIP-7778)",
+      "note_en": "(AnkushinDaniil), submitted. EIP-8141 adopts EIP-8037's two-dimensional gas model and activates in the same fork as EIP-7778; EIP-8037 accounts the block execution dimension before the storage refund, so a refund lowers the payer's cost without freeing the block capacity the transaction occupied, the DoS bound EIP-7778 exists to keep.",
+      "topic_en": "The native AA design split goes public"
+    },
+    {
+      "topic": "原生 AA 设计分歧公开化",
+      "title": "EIP-8141：用 EIP-7976 统一 token 计数修正 calldata 底价",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12209",
+      "date": "2026-08-22",
+      "title_en": "EIP-8141: fix the calldata floor to use the EIP-7976 uniform token count",
+      "note_en": "Merged.",
+      "topic_en": "The native AA design split goes public"
+    },
+    {
+      "topic": "发行与同步委员会",
+      "title": "dapplion：写了一个 EIP，通过移除同步委员会把 ETH 发行减少 3%",
+      "note": "18:54，对应 PR 12228。移除同步委员会及其聚合、子网、域、奖励，以及建立在其上的 Altair 轻客户端协议；`SYNC_REWARD_WEIGHT` 被移除且不重新分配，共识层发行下降 2/64。",
+      "url": "https://x.com/dapplion/status/2091132020013375982",
+      "date": "2026-08-22",
+      "title_en": "dapplion: just wrote an EIP to reduce ETH issuance by 3% by removing the sync committee",
+      "note_en": "18:54, with PR 12228. It removes the sync committee, its aggregate, subnets, domains and rewards, and the Altair light client protocol built on it; `SYNC_REWARD_WEIGHT` is removed and not redistributed, so consensus issuance falls by 2/64.",
+      "topic_en": "Issuance and the sync committee"
+    },
+    {
+      "topic": "发行与同步委员会",
+      "title": "PR 12228",
+      "note": "dapplion：写了一个 EIP，通过移除同步委员会把 ETH 发行减少 3% 18:54，对应 PR 12228。移除同步委员会及其聚合、子网、域、奖励，以及建立在其上的 Altair 轻客户端协议；`SYNC_REWARD_WEIGHT` 被移除且不重新分配，共识层发行下降 2/64。",
+      "url": "https://github.com/ethereum/EIPs/pull/12228",
+      "date": "2026-08-22",
+      "title_en": "PR 12228",
+      "note_en": "Dapplion: just wrote an EIP to reduce ETH issuance by 3% by removing the sync committee, 18:54, with PR 12228. It removes the sync committee, its aggregate, subnets, domains and rewards, and the Altair light client protocol built on it; `SYNC_REWARD_WEIGHT` is removed and not redistributed, so consensus issuance falls by 2/64.",
+      "topic_en": "Issuance and the sync committee"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7906：修正规范中不清楚或有歧义的表述",
+      "note": "（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12227",
+      "date": "2026-08-22",
+      "title_en": "EIP-7906: fix unclear or ambiguous phrases in the specification",
+      "note_en": "(forshtat), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8153 进入 Review",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1959",
+      "date": "2026-08-22",
+      "title_en": "ERC-8153 moved to Review",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Derek Chiang：从 Ethlabs 第一次 5 天线下聚会回来",
+      "note": "00:28，分享对同事的印象。",
+      "url": "https://x.com/decentrek/status/2090853540323619070",
+      "date": "2026-08-22",
+      "title_en": "Derek Chiang: back from Ethlabs' first 5-day offsite",
+      "note_en": "00:28, sharing impressions of his colleagues.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "jessepollak：隐私属于每一个人",
+      "note": "00:05。",
+      "url": "https://x.com/jessepollak/status/2090847860338397657",
+      "date": "2026-08-22",
+      "title_en": "jessepollak: privacy is for everyone",
+      "note_en": "00:05.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：15 倍的优化结果，利用密码学安全归约，应能改善 Zcash 用户体验",
+      "note": "02:22。",
+      "url": "https://x.com/zooko/status/2090882353031713013",
+      "date": "2026-08-22",
+      "title_en": "zooko: a 15x optimization that leverages a cryptographic security reduction and should improve UX for Zcash users",
+      "note_en": "02:22.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12226",
+    "credit": "GitHub, ethereum/EIPs PR #12226",
+    "local_path": "assets/2026-08-22.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12226"
+  },
+  "keywords_en": [
+    "the 8141 versus 8130 debate",
+    "looking back at the AA wars",
+    "EIP-8141 block execution gas before refunds",
+    "removing the sync committee",
+    "calldata floor fix merged"
+  ],
+  "summary_en": "Saturday's discussion centered on native AA. Responding to Base's plan to ship 8130, lightclient said half of 8130 is application-layer detail that does not belong in the protocol, while 8141 supports permissionless innovation without forcing wallets and users into specific patterns. Hudson Jameson asked what came of the AA wars, since smart wallets using AA do not seem to have taken off. In the spec, EIP-8141 gets a PR accounting block execution gas before refunds (submitted), and the calldata floor fix was merged. dapplion submitted an EIP removing the sync committee, cutting issuance by about 3%."
+}

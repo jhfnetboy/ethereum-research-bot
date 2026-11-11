@@ -1,0 +1,221 @@
+{
+  "date": "2026-08-26",
+  "keywords": [
+    "EIP-8397 Frame 认证器签名",
+    "EIP Coordinator 角色",
+    "合约存储布局描述格式",
+    "EF 重定价提醒",
+    "fast Ethereum",
+    "P2P #7",
+    "Cloaked 隐身地址钱包"
+  ],
+  "summary": "leekt（taek）提交 EIP-8141 的配套 EIP，加入有界的 `AUTHENTICATOR` 签名方案：任意密码学由协议在与状态无关、gas 固定的环境中执行，账户授权仍留在普通 `VERIFY` frame。jochem-brouwer 提议在 EIP-5069 中加入 EIP Coordinator 角色。forshtat 把合约存储布局描述格式从 ERC 改为 EIP 提交。EF 再次提醒 L1 合约维护者检查重定价影响。Barnabé 发文谈 fast Ethereum。当晚召开 P2P networking #7。",
+  "items": [
+    {
+      "topic": "8141 的自定义签名路径",
+      "title": "新 EIP：Frame 认证器签名",
+      "note": "（leekt）提交，Magicians 讨论帖 15:52，即 EIP-8397。frame 交易可以携带自定义认证证明，昂贵的密码学验证由协议在有界、与状态无关的环境中执行；签名对象为 `[scheme, signer, msg, signature]`，`scheme = AUTHENTICATOR (0x03)`，`signer` 为认证器地址。每次认证受固定 `AUTHENTICATOR_GAS_LIMIT` 限制，没有按交易或按密钥的预算。",
+      "url": "https://github.com/ethereum/EIPs/pull/12244",
+      "date": "2026-08-26",
+      "title_en": "New EIP: Frame authenticator signatures",
+      "note_en": "(leekt), submitted, with a Magicians thread at 15:52; this is EIP-8397. A frame transaction can carry a custom authentication proof whose expensive cryptographic verification the protocol executes in a bounded, state-independent context; the signature object is `[scheme, signer, msg, signature]` with `scheme = AUTHENTICATOR (0x03)` and `signer` as the authenticator address. Each authentication is bounded by a fixed `AUTHENTICATOR_GAS_LIMIT`, with no per-transaction or per-key budget.",
+      "topic_en": "A custom signature path for 8141"
+    },
+    {
+      "topic": "8141 的自定义签名路径",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：Frame 认证器签名（leekt）提交，Magicians 讨论帖 15:52，即 EIP-8397。frame 交易可以携带自定义认证证明，昂贵的密码学验证由协议在有界、与状态无关的环境中执行；签名对象为 `[scheme, signer, msg, signature]`，`scheme = AUTHENTICATOR (0x03)`，`signer` 为认证器地址。每次认证受固定 `AUTHENTICATOR_GAS_LIMIT` 限制，没有按交易或按密钥的预算。",
+      "url": "https://ethereum-magicians.org/t/eip-8397-frame-authenticator-signatures/29517",
+      "date": "2026-08-26",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: Frame authenticator signatures (leekt), submitted, with a Magicians thread at 15:52; this is EIP-8397. A frame transaction can carry a custom authentication proof whose expensive cryptographic verification the protocol executes in a bounded, state-independent context; the signature object is `[scheme, signer, msg, signature]` with `scheme = AUTHENTICATOR (0x03)` and `signer` as the authenticator address. Each authentication is bounded by a fixed `AUTHENTICATOR_GAS_LIMIT`, with no per-transaction or per-key budget.",
+      "topic_en": "A custom signature path for 8141"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "EF：L1 合约维护者注意",
+      "note": "01:18，Glamsterdam 包含 EIP-8037、EIP-8038 重定价，多数合约不受影响，少数可能损坏或退化。",
+      "url": "https://x.com/ethereumfndn/status/2092315755240906878",
+      "date": "2026-08-26",
+      "title_en": "EF: heads-up for anyone maintaining L1 contracts",
+      "note_en": "01:18: Glamsterdam includes the EIP-8037 and EIP-8038 repricings; most contracts are unaffected, but a small set may break or degrade.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "新 EIP：合约存储布局描述格式",
+      "note": "（forshtat）提交，原为 ERCs#1841，因接口标准应为 EIP 而重开。语言中立、可扩展的 JSON 格式，让浏览器、调试器、源码验证、安全工具以及做明文签名、交易模拟和交易断言的钱包把原始存储槽映射回源码变量。",
+      "url": "https://github.com/ethereum/EIPs/pull/12247",
+      "date": "2026-08-26",
+      "title_en": "New EIP: contract storage layout descriptor format",
+      "note_en": "(forshtat), submitted; originally ERCs#1841, reopened because interface standards should be EIPs. A language-neutral, extensible JSON format so explorers, debuggers, source verification, security tooling and wallets doing clear signing, transaction simulation and transaction assertions can map raw storage slots back to source-level variables.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "EIP-5069：加入 EIP Coordinator",
+      "note": "合并后被 回滚，随后重新提交 PR 12243。",
+      "url": "https://github.com/ethereum/EIPs/pull/12241",
+      "date": "2026-08-26",
+      "title_en": "EIP-5069: add EIP coordinator",
+      "note_en": "Was merged and then rolled back, then resubmitted as PR 12243.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "回滚",
+      "note": "EIP-5069：加入 EIP Coordinator 合并后被 回滚，随后重新提交 PR 12243。",
+      "url": "https://github.com/ethereum/EIPs/pull/12242",
+      "date": "2026-08-26",
+      "title_en": "rolled back",
+      "note_en": "EIP-5069: add EIP coordinator was merged and then rolled back, then resubmitted as PR 12243.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "PR 12243",
+      "note": "EIP-5069：加入 EIP Coordinator 合并后被 回滚，随后重新提交 PR 12243。",
+      "url": "https://github.com/ethereum/EIPs/pull/12243",
+      "date": "2026-08-26",
+      "title_en": "PR 12243",
+      "note_en": "EIP-5069: add EIP coordinator was merged and then rolled back, then resubmitted as PR 12243.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "EIP-8037：存在地址的描述加入非零余额",
+      "note": "（awskii）提交；EIP-8148：按最新规范更新 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12246",
+      "date": "2026-08-26",
+      "title_en": "EIP-8037: include non-zero balance in the description of an existent address",
+      "note_en": "(awskii), submitted; EIP-8148: update to match recent spec changes, submitted and merged.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "EIP-8148：按最新规范更新",
+      "note": "EIP-8037：存在地址的描述加入非零余额（awskii）提交；EIP-8148：按最新规范更新 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12245",
+      "date": "2026-08-26",
+      "title_en": "EIP-8148: update to match recent spec changes",
+      "note_en": "EIP-8037: include non-zero balance in the description of an existent address (awskii), submitted; EIP-8148: update to match recent spec changes, submitted and merged.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "合约、工具与流程",
+      "title": "议程",
+      "note": "P2P networking #7 当晚召开（议程 19:08），无可引用纪要。",
+      "url": "https://ethereum-magicians.org/t/p2p-networking-7-august-26-2026/29518",
+      "date": "2026-08-26",
+      "title_en": "agenda",
+      "note_en": "P2P networking #7 was held in the evening (agenda, 19:08), with no notes to cite.",
+      "topic_en": "Contracts, tooling and process"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #94 议程",
+      "note": "23:14；EIP 编辑 office hour #112 议程 03:27。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-94-august-31-2026/29519",
+      "date": "2026-08-26",
+      "title_en": "ACDT #94 agenda",
+      "note_en": "23:14; EIP editing office hour #112 agenda, 03:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP 编辑 office hour #112 议程",
+      "note": "ACDT #94 议程 23:14；EIP 编辑 office hour #112 议程 03:27。",
+      "url": "https://ethereum-magicians.org/t/eip-editing-office-hour-eip-erc-meeting-112-sep-01-2026/29507",
+      "date": "2026-08-26",
+      "title_en": "EIP editing office hour #112 agenda",
+      "note_en": "ACDT #94 agenda, 23:14; EIP editing office hour #112 agenda, 03:27.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Thomas Coratger 介绍以太坊后量子密码研究",
+      "note": "21:46。",
+      "url": "https://x.com/ethereumfndn/status/2092624765269795089",
+      "date": "2026-08-26",
+      "title_en": "EF: Thomas Coratger on Ethereum's post-quantum cryptography research",
+      "note_en": "21:46.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT：Privacy 分类加入 Cloaked",
+      "note": "21:41，用隐身地址把收款分散到新的以太坊地址，同时显示为一个账户。",
+      "url": "https://x.com/ethbeat_org/status/2092623493313466820",
+      "date": "2026-08-26",
+      "title_en": "L2BEAT: Cloaked added to the Privacy section",
+      "note_en": "21:41; it spreads incoming payments across fresh Ethereum addresses with stealth addresses while presenting them as one account.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：以太坊应该快得多",
+      "note": "18:28，更快的以太坊对以太坊和 ETH 都更好，offsite 讨论多围绕 fast Ethereum。",
+      "url": "https://x.com/barnabemonnot/status/2092574823939461247",
+      "date": "2026-08-26",
+      "title_en": "Barnabé: Ethereum should be much faster",
+      "note_en": "18:28; a faster Ethereum is better for both Ethereum and ETH, and many offsite discussions were about fast Ethereum.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Julian Ma：有了证明，硬件要求由吞吐量决定",
+      "note": "16:22，主网吞吐量目前取决于 EIP-7870 设定的固定节点硬件要求，而 Lighter 的证明集群可以弹性扩容。",
+      "url": "https://x.com/_julianma/status/2092543289186533505",
+      "date": "2026-08-26",
+      "title_en": "Julian Ma: with proofs, hardware requirements are set by throughput",
+      "note_en": "16:22; mainnet throughput today depends on the fixed node hardware requirements set by EIP-7870, while Lighter's proving fleet scales elastically.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Ethlabs：新金融资产希望在流动性和安全性最强的地方发行",
+      "note": "21:59。",
+      "url": "https://x.com/ethlabs_org/status/2092627881059098716",
+      "date": "2026-08-26",
+      "title_en": "Ethlabs: new financial assets want to launch where liquidity and security are greatest",
+      "note_en": "21:59.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Trail of Bits：AI 代理三次逃出沙箱 VM，最后一次自己找到并串联三个 0-day",
+      "note": "18:15。",
+      "url": "https://x.com/trailofbits/status/2092571523450114277",
+      "date": "2026-08-26",
+      "title_en": "Trail of Bits: an AI agent escaped a sandbox VM three times, the last time finding and chaining three 0-days on its own",
+      "note_en": "18:15.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Nethermind：2022 年以来以太坊经历四次重大压力事件，没有永久失去最终性",
+      "note": "20:00。",
+      "url": "https://x.com/Nethermind/status/2092597934722334931",
+      "date": "2026-08-26",
+      "title_en": "Nethermind: Ethereum has come through four major stress events since 2022 with no permanent loss of finality",
+      "note_en": "20:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8397-frame-authenticator-signatures/29517",
+    "credit": "Ethereum Magicians, EIP-8397: Frame Authenticator Signatures",
+    "local_path": "assets/2026-08-26.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8397: Frame Authenticator Signatures"
+  },
+  "keywords_en": [
+    "EIP-8397 Frame authenticator signatures",
+    "EIP Coordinator role",
+    "contract storage layout descriptor format",
+    "EF repricing reminder",
+    "fast Ethereum",
+    "P2P #7",
+    "Cloaked stealth-address wallet"
+  ],
+  "summary_en": "leekt (taek) submitted a companion EIP to EIP-8141 adding a bounded `AUTHENTICATOR` signature scheme: arbitrary cryptography is executed by protocol in a state-independent, gas-fixed context, while account authorization stays in the ordinary `VERIFY` frame. jochem-brouwer proposed adding an EIP Coordinator role to EIP-5069. forshtat resubmitted the contract storage layout descriptor format as an EIP instead of an ERC. The EF again reminded L1 contract maintainers to check repricing impact. Barnabé wrote about fast Ethereum. P2P networking #7 was held in the evening."
+}

@@ -1,0 +1,201 @@
+{
+  "date": "2026-08-25",
+  "keywords": [
+    "EIP-8396 Keystore 过期 actor 清理",
+    "ePBS distilled",
+    "Frame Tx Breakout #2",
+    "EIP-8037 系统调用存储上限",
+    "ERC-8395 签名 HTTP 请求",
+    "后量子账户",
+    "L2BEAT 隐私分类"
+  ],
+  "summary": "chunter-cb 提交 EIP-8130 的配套 EIP，由共识驱动清理过期 actor，限制会话密钥、订阅等短期 actor 带来的 Keystore 状态增长。Mike Neuder 发布 ePBS distilled，概述 ePBS 最终形态和对 MEV 市场的影响。EIP-8037 系统调用存储写入上限的理由被修正并合并。当晚召开 AA（Frame Tx）breakout #2。",
+  "items": [
+    {
+      "topic": "8130 Keystore 的状态增长",
+      "title": "新 EIP：Keystore 过期 actor 清理",
+      "note": "（chunter-cb）提交，标注 WIP，据 Ethereal news #37 为 EIP-8396。两部分：布局在上线时就写死，actor 的 `actor_config`、`policy_manager`、`policy_commitment` 作为共置、步长对齐的 3 字记录，`actor_config` 预留区设 `CLEANABLE` 标记位；清理器尽力而为，每个区块从按区块种子确定的位置扫描有限数量的记录头，清理过期 actor。",
+      "url": "https://github.com/ethereum/EIPs/pull/12240",
+      "date": "2026-08-25",
+      "title_en": "New EIP: Keystore expired actor pruning",
+      "note_en": "(chunter-cb), submitted and marked WIP; EIP-8396 per Ethereal news #37. It has two parts: a layout enshrined at launch, fixing an actor's `actor_config`, `policy_manager` and `policy_commitment` as a co-located, stride-aligned 3-word record with a `CLEANABLE` marker bit in the `actor_config` reserved region; and a best-effort reaper that, each block, walks a bounded number of record heads from a deterministic block-seeded position and clears expired actors.",
+      "topic_en": "State growth in the 8130 Keystore"
+    },
+    {
+      "topic": "ePBS 与 gas",
+      "title": "ethresear.ch：ePBS, distilled",
+      "note": "00:28（mikeneuder），列出 Gloas builder、validator、beacon chain 规范链接，作者推文 00:38 说明它展示 ePBS 最终形态以及上线后 MEV 市场的演变。",
+      "url": "https://ethresear.ch/t/epbs-distilled/25800",
+      "date": "2026-08-25",
+      "title_en": "ethresear.ch: ePBS, distilled",
+      "note_en": "00:28 (mikeneuder), linking the Gloas builder, validator and beacon chain specs; the author's post at 00:38 says it shows ePBS in its final form and how MEV markets will evolve once it goes live.",
+      "topic_en": "ePBS and gas"
+    },
+    {
+      "topic": "ePBS 与 gas",
+      "title": "作者推文",
+      "note": "ethresear.ch：ePBS, distilled 00:28（mikeneuder），列出 Gloas builder、validator、beacon chain 规范链接，作者推文 00:38 说明它展示 ePBS 最终形态以及上线后 MEV 市场的演变。",
+      "url": "https://x.com/mikeneuder/status/2091943286554657224",
+      "date": "2026-08-25",
+      "title_en": "author's post",
+      "note_en": "Ethresear.ch: ePBS, distilled, 00:28 (mikeneuder), linking the Gloas builder, validator and beacon chain specs; the author's post at 00:38 says it shows ePBS in its final form and how MEV markets will evolve once it goes live.",
+      "topic_en": "ePBS and gas"
+    },
+    {
+      "topic": "ePBS 与 gas",
+      "title": "EIP-8037：SYSTEM_MAX_SSTORES_PER_CALL 与请求上限解耦",
+      "note": "（chfast）提交并合并。原理由是等于 `MAX_WITHDRAWAL_REQUESTS_PER_BLOCK`，但该常量计的是出队记录，出队并不写记录槽，且 EIP-8282 新增的系统合约每块上限更大；改为声明余量并写明重新推导的条件。",
+      "url": "https://github.com/ethereum/EIPs/pull/12238",
+      "date": "2026-08-25",
+      "title_en": "EIP-8037: decouple SYSTEM_MAX_SSTORES_PER_CALL from request bounds",
+      "note_en": "(chfast), submitted and merged. The value was justified as matching `MAX_WITHDRAWAL_REQUESTS_PER_BLOCK`, but that constant counts records dequeued, dequeuing writes no record slots, and the system contract added by EIP-8282 has a larger per-block bound; the value is now stated as a margin with an explicit re-derivation condition.",
+      "topic_en": "ePBS and gas"
+    },
+    {
+      "topic": "ePBS 与 gas",
+      "title": "EIP-8246：L2 销毁用法的具体例子",
+      "note": "（chfast）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12237",
+      "date": "2026-08-25",
+      "title_en": "EIP-8246: a concrete example of L2 burn usage",
+      "note_en": "(chfast), submitted.",
+      "topic_en": "ePBS and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：委托签名 HTTP 请求",
+      "note": "（jacopo-eth）提交，据 Ethereal news #37 为 ERC-8395。",
+      "url": "https://github.com/ethereum/ERCs/pull/1967",
+      "date": "2026-08-25",
+      "title_en": "New ERC: delegated signed HTTP requests",
+      "note_en": "(jacopo-eth), submitted; ERC-8395 per Ethereal news #37.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-5516 进入 Final",
+      "note": "合并；ERC：基于索引的多 facet 代理 和 ERC：机密代理策略裁决 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1956",
+      "date": "2026-08-25",
+      "title_en": "ERC-5516 moved to Final",
+      "note_en": "Merged; ERC: index-based multi-facet proxy and ERC: confidential agent policy verdicts, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：基于索引的多 facet 代理",
+      "note": "ERC-5516 进入 Final 合并；ERC：基于索引的多 facet 代理 和 ERC：机密代理策略裁决 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1909",
+      "date": "2026-08-25",
+      "title_en": "ERC: index-based multi-facet proxy",
+      "note_en": "ERC-5516 moved to Final, merged; ERC: index-based multi-facet proxy and ERC: confidential agent policy verdicts, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：机密代理策略裁决",
+      "note": "ERC-5516 进入 Final 合并；ERC：基于索引的多 facet 代理 和 ERC：机密代理策略裁决 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1919",
+      "date": "2026-08-25",
+      "title_en": "ERC: confidential agent policy verdicts",
+      "note_en": "ERC-5516 moved to Final, merged; ERC: index-based multi-facet proxy and ERC: confidential agent policy verdicts, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：PFI EIP-8368",
+      "note": "合并；EIP-8347：requires 加入 EIP-7523 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12117",
+      "date": "2026-08-25",
+      "title_en": "EIP-8081: PFI EIP-8368",
+      "note_en": "Merged; EIP-8347: add EIP-7523 to requires, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8347：requires 加入 EIP-7523",
+      "note": "EIP-8081：PFI EIP-8368 合并；EIP-8347：requires 加入 EIP-7523 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12239",
+      "date": "2026-08-25",
+      "title_en": "EIP-8347: add EIP-7523 to requires",
+      "note_en": "EIP-8081: PFI EIP-8368, merged; EIP-8347: add EIP-7523 to requires, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ACDC #186 议程",
+      "note": "00:07，会议在 9 月 3 日。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-186-september-3-2026/29496",
+      "date": "2026-08-25",
+      "title_en": "Magicians: ACDC #186 agenda",
+      "note_en": "00:07, for the September 3 call.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT：Privacy 分类加入 PrivacyBoost",
+      "note": "22:30，OP Mainnet 上面向机构的 ERC-20 屏蔽池，首个以 TEE 为核心属性的协议。",
+      "url": "https://x.com/ethbeat_org/status/2092273436479431132",
+      "date": "2026-08-25",
+      "title_en": "L2BEAT: PrivacyBoost added to the Privacy section",
+      "note_en": "22:30, a shielded pool for ERC-20s on OP Mainnet aimed at institutions and the first protocol there with TEE as a core attribute.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "asanso：以太坊用户，欢迎来到后量子时代",
+      "note": "22:27。",
+      "url": "https://x.com/asanso/status/2092272568812085566",
+      "date": "2026-08-25",
+      "title_en": "asanso: dear Ethereum users, welcome to the post-quantum era",
+      "note_en": "22:27.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：后量子竞赛看三点，能否实现、多快、用户能否无缝迁移",
+      "note": "21:53。",
+      "url": "https://x.com/EliBenSasson/status/2092264143168340103",
+      "date": "2026-08-25",
+      "title_en": "Eli Ben-Sasson: three things to watch in the race to post-quantum security: can a chain get there, how fast, and can users migrate seamlessly",
+      "note_en": "21:53.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：Monad 与 CT 在 2026 年发现后量子账户",
+      "note": "23:51。",
+      "url": "https://x.com/StarkWareLtd/status/2092293756603204094",
+      "date": "2026-08-25",
+      "title_en": "StarkWare: Monad and CT are discovering post-quantum accounts in 2026",
+      "note_en": "23:51.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "growthepie：FWA 前一天产生超过 14 万美元以太坊 gas 费",
+      "note": "18:33。",
+      "url": "https://x.com/growthepie_eth/status/2092213650098631041",
+      "date": "2026-08-25",
+      "title_en": "growthepie: FWA generated over $140k in Ethereum gas fees the previous day",
+      "note_en": "18:33.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/epbs-distilled/25800",
+    "credit": "ethresear.ch, ePBS, distilled (mikeneuder)",
+    "local_path": "assets/2026-08-25.jpg",
+    "credit_en": "ethresear.ch, ePBS, distilled (mikeneuder)"
+  },
+  "keywords_en": [
+    "EIP-8396 Keystore expired actor pruning",
+    "ePBS distilled",
+    "Frame Tx Breakout #2",
+    "EIP-8037 system call storage bound",
+    "ERC-8395 signed HTTP requests",
+    "post-quantum accounts",
+    "L2BEAT privacy section"
+  ],
+  "summary_en": "chunter-cb submitted a companion EIP to EIP-8130 for consensus-driven pruning of expired actors, bounding Keystore state growth from short-lived actors such as session keys and subscriptions. Mike Neuder published \"ePBS, distilled\", outlining ePBS in its final form and its effect on MEV markets. The justification for EIP-8037's system call storage write bound was corrected and merged. AA (Frame Tx) breakout #2 was held in the evening."
+}

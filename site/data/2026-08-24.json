@@ -1,0 +1,171 @@
+{
+  "date": "2026-08-24",
+  "keywords": [
+    "Glamsterdam gas 重定价影响",
+    "受影响合约查询",
+    "后量子存款合约 EIP-8394",
+    "ACDT #93",
+    "EIP-8141 区块执行 gas 合并",
+    "移除同步委员会合并为 Draft",
+    "blob 目标何时提高"
+  ],
+  "summary": "EF 发布 Glamsterdam 重定价影响说明：EIP-8037 和 EIP-8038 调整状态创建和访问成本，回放历史主网交易显示少数合约依赖被改变的 gas 假设，多数问题提高 gas limit 即可修复，合约维护者可在 repricing-impact 页面查询地址并在 Platåberget 上测试。EIP-8141 区块执行 gas 先于退款计算的修改合并，EIP-8390 以 Draft 合并。kevaundray 提交后量子就绪的存款合约 EIP。当晚召开 ACDT #93。",
+  "items": [
+    {
+      "topic": "Glamsterdam 重定价对合约的影响",
+      "title": "EF 博客：Glamsterdam 重定价影响",
+      "note": "EIP-8037 提高并统一新状态（新账户、新存储槽、部署字节码）的成本并单独计量；EIP-8038 提高 `SSTORE`、`SLOAD`、冷账户访问、`EXTCODESIZE`/`EXTCODECOPY` 的成本。状态操作 gas 上次调整是 2021 年 Berlin；新价格表按支持约 3 倍基础吞吐量的性能目标推导，是继续提高 gas limit 的前提。",
+      "url": "https://blog.ethereum.org/en/2026/08/24/glamsterdam-repricing-testing",
+      "date": "2026-08-24",
+      "title_en": "EF blog: Glamsterdam repricing impact",
+      "note_en": ". EIP-8037 raises and harmonizes the cost of new state (new accounts, new storage slots, deployed bytecode) and meters it separately; EIP-8038 raises the cost of `SSTORE`, `SLOAD`, cold account access and `EXTCODESIZE`/`EXTCODECOPY`. State operation gas was last adjusted in Berlin in 2021; the new schedule is derived from a performance target supporting roughly 3x base throughput and is a prerequisite for raising the gas limit further.",
+      "topic_en": "What Glamsterdam repricing does to contracts"
+    },
+    {
+      "topic": "AA 与共识层规范",
+      "title": "EIP-8141：区块执行 gas 在退款前计算（EIP-7778）",
+      "note": "合并。EIP-8141：把 mode 章节移到 Frame 定义下（raxhvl）提交，属编辑性修改。",
+      "url": "https://github.com/ethereum/EIPs/pull/12226",
+      "date": "2026-08-24",
+      "title_en": "EIP-8141: account block execution gas before refund (EIP-7778)",
+      "note_en": "Merged. EIP-8141: move the mode section under the Frame definition (raxhvl), submitted, an editorial change.",
+      "topic_en": "AA and consensus specs"
+    },
+    {
+      "topic": "AA 与共识层规范",
+      "title": "EIP-8141：把 mode 章节移到 Frame 定义下",
+      "note": "EIP-8141：区块执行 gas 在退款前计算（EIP-7778） 合并。EIP-8141：把 mode 章节移到 Frame 定义下（raxhvl）提交，属编辑性修改。",
+      "url": "https://github.com/ethereum/EIPs/pull/12236",
+      "date": "2026-08-24",
+      "title_en": "EIP-8141: move the mode section under the Frame definition",
+      "note_en": "EIP-8141: account block execution gas before refund (EIP-7778), merged. EIP-8141: move the mode section under the Frame definition (raxhvl), submitted, an editorial change.",
+      "topic_en": "AA and consensus specs"
+    },
+    {
+      "topic": "AA 与共识层规范",
+      "title": "新 EIP：移除同步委员会",
+      "note": "合并为 Draft。",
+      "url": "https://github.com/ethereum/EIPs/pull/12228",
+      "date": "2026-08-24",
+      "title_en": "New EIP: remove the sync committee",
+      "note_en": "Merged as a Draft.",
+      "topic_en": "AA and consensus specs"
+    },
+    {
+      "topic": "AA 与共识层规范",
+      "title": "新 EIP：后量子就绪的存款合约",
+      "note": "（kevaundray）提交，作者说明大部分内容是 EIP-7685 机制的样板和解释。",
+      "url": "https://github.com/ethereum/EIPs/pull/12235",
+      "date": "2026-08-24",
+      "title_en": "New EIP: post-quantum-ready deposit contract",
+      "note_en": "(kevaundray), submitted; the author notes much of it is boilerplate and explanation of EIP-7685 mechanics.",
+      "topic_en": "AA and consensus specs"
+    },
+    {
+      "topic": "AA 与共识层规范",
+      "title": "EIP-8246：说明有余额残留地址可被 CREATE2 重新部署",
+      "note": "（chfast）提交：清空 nonce、代码和存储而保留余额，会让该地址重新成为 CREATE2 目标。",
+      "url": "https://github.com/ethereum/EIPs/pull/12234",
+      "date": "2026-08-24",
+      "title_en": "EIP-8246: note the CREATE2 redeploy of a funded remnant",
+      "note_en": "(chfast), submitted: clearing nonce, code and storage while keeping the balance reopens the address as a CREATE2 target.",
+      "topic_en": "AA and consensus specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #36",
+      "note": "06:20 再次推送。",
+      "url": "https://x.com/EtherealnewsHQ/status/2091666855564022189",
+      "date": "2026-08-24",
+      "title_en": "Ethereal news #36",
+      "note_en": "Reposted at 06:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8070：澄清 RLP 空列表编码",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12079",
+      "date": "2026-08-24",
+      "title_en": "EIP-8070: clarify RLP empty-list encoding",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8392 代币化资产状态接口",
+      "note": "09:09；ERC-8393 可注销的代币化碳信用 08:44。",
+      "url": "https://ethereum-magicians.org/t/erc-8392-asset-status-interface-for-tokenized-assets/29489",
+      "date": "2026-08-24",
+      "title_en": "Magicians: ERC-8392 asset status interface for tokenized assets",
+      "note_en": "09:09; ERC-8393 tokenized carbon credits with retirement, 08:44.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8393 可注销的代币化碳信用",
+      "note": "Magicians：ERC-8392 代币化资产状态接口 09:09；ERC-8393 可注销的代币化碳信用 08:44。",
+      "url": "https://ethereum-magicians.org/t/erc-8393-tokenized-carbon-credits-with-retirement/29488",
+      "date": "2026-08-24",
+      "title_en": "ERC-8393 tokenized carbon credits with retirement",
+      "note_en": "Magicians: ERC-8392 asset status interface for tokenized assets, 09:09; ERC-8393 tokenized carbon credits with retirement, 08:44.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：客户端回放主网区块，区块处理在 AMD 上快 20%、ARM 上快 28%",
+      "note": "23:47，`eth_call` 批量延迟分别降低 28% 和 34%。",
+      "url": "https://x.com/Nethermind/status/2091930503116898735",
+      "date": "2026-08-24",
+      "title_en": "Nethermind: replaying mainnet blocks, block processing is 20% faster on AMD and 28% faster on ARM",
+      "note_en": "23:47, with batched `eth_call` latency down 28% and 34%.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：赞助 Asiacrypt 2026 附属的首届隐私保护技术研讨会 WPPT 2026",
+      "note": "12:22，12 月在香港，征集 ZK、MPC、FHE、PIR、私密身份等报告。",
+      "url": "https://x.com/ethereumfndn/status/2091757898955214976",
+      "date": "2026-08-24",
+      "title_en": "EF: sponsoring WPPT 2026, the first Workshop on Privacy-Preserving Technologies, affiliated with Asiacrypt 2026",
+      "note_en": "12:22, in Hong Kong in December, calling for talks on ZK, MPC, FHE, PIR, private identity and more.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trent_vanepps：最新达到 blob target/max 的区块比例，何时提高到 21/32",
+      "note": "22:15，需要平衡与 Glamsterdam 2 亿 gas 区块争用带宽、L2 用户费用以及 L1 费用和 ETH 的效用。",
+      "url": "https://x.com/trent_vanepps/status/2091907333135671399",
+      "date": "2026-08-24",
+      "title_en": "trent_vanepps: the latest share of blocks at blob target/max, and when to raise to 21/32",
+      "note_en": "22:15, balancing bandwidth competing with Glamsterdam's 200M gas blocks, L2 user fees, and L1 fees and the utility of ETH.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "brucexu_eth：聚合器中一种交易成功但收到金额变少的攻击",
+      "note": "21:00，认为危害不亚于 MEV 夹子且更隐蔽。",
+      "url": "https://x.com/brucexu_eth/status/2091888306049220613",
+      "date": "2026-08-24",
+      "title_en": "brucexu_eth: an aggregator attack where the transaction succeeds but you receive less",
+      "note_en": "21:00, which he sees as no less harmful than MEV sandwiches and harder to spot.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/08/24/glamsterdam-repricing-testing",
+    "credit": "Ethereum Foundation Blog, Glamsterdam repricing impact",
+    "local_path": "assets/2026-08-24.jpg",
+    "credit_en": "Ethereum Foundation Blog, Glamsterdam repricing impact"
+  },
+  "keywords_en": [
+    "Glamsterdam gas repricing impact",
+    "affected contracts lookup",
+    "post-quantum deposit contract EIP-8394",
+    "ACDT #93",
+    "EIP-8141 block execution gas merged",
+    "remove sync committee merged as Draft",
+    "when to raise the blob target"
+  ],
+  "summary_en": "The EF published the Glamsterdam repricing impact note: EIP-8037 and EIP-8038 change the cost of creating and accessing state; replaying historical mainnet transactions shows a small set of contracts rely on gas assumptions that shift, most issues are fixed by a gas-limit increase, and maintainers can look up their address on the repricing-impact page and test on Platåberget. The EIP-8141 change accounting block execution gas before refunds was merged, and EIP-8390 merged as a Draft. kevaundray submitted a post-quantum-ready deposit contract EIP. ACDT #93 was held in the evening."
+}

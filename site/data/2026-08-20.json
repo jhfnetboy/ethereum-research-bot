@@ -1,0 +1,199 @@
+{
+  "date": "2026-08-20",
+  "keywords": [
+    "ACDC #185",
+    "Platåberget 激活 Glamsterdam",
+    "Sepolia 9 月 28 日与 Hoodi 10 月 26 日提案",
+    "EIP-8130 四级认证器分类",
+    "EIP-8141 验证前缀重执行上限",
+    "better.codes"
+  ],
+  "summary": "Platåberget 测试网激活 Glamsterdam，但升级过渡时的构建者存款缓存问题导致无法最终确定；晚上 ACDC #185 提议 Sepolia 9 月 28 日、Hoodi 10 月 26 日升级。账户侧，chunter-cb 把 EIP-8130 的认证器分为 CANONICAL、PURE、BOUNDED、ARBITRARY 四级，用于内存池传播而不改变共识有效性；AnkushinDaniil 为不批准的验证前缀给出出块方重执行上限。EF 形式化验证团队上线 better.codes 自动研究挑战。",
+  "items": [
+    {
+      "topic": "原生 AA 的内存池与 gas 语义",
+      "title": "EIP-8130：四级认证器分类",
+      "note": "（chunter-cb）提交。把原来的规范/宽松二分改为按代码哈希分类的 CANONICAL、PURE、BOUNDED、ARBITRARY 四级；共识有效性不变，L1 档位下任何在 `MAX_AUTHENTICATION_GAS` 内返回的认证器在区块中仍有效，分级只决定内存池传播和重新验证。",
+      "url": "https://github.com/ethereum/EIPs/pull/12210",
+      "date": "2026-08-20",
+      "title_en": "EIP-8130: add a four-tier authenticator classification",
+      "note_en": "(chunter-cb), submitted. It replaces the binary canonical/permissive description with four tiers, CANONICAL, PURE, BOUNDED and ARBITRARY, that classify a declared authenticator by code hash; consensus validity is unchanged, and under the L1 profile any authenticator returning within `MAX_AUTHENTICATION_GAS` remains valid in a block, while the tiers govern mempool propagation and revalidation.",
+      "topic_en": "Mempool and gas semantics for native AA"
+    },
+    {
+      "topic": "原生 AA 的内存池与 gas 语义",
+      "title": "EIP-8130：采用档位、有界认证 gas 和时间戳归一化",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12204",
+      "date": "2026-08-20",
+      "title_en": "EIP-8130: adoption profiles, bounded auth gas and timestamp normalization",
+      "note_en": "Merged.",
+      "topic_en": "Mempool and gas semantics for native AA"
+    },
+    {
+      "topic": "原生 AA 的内存池与 gas 语义",
+      "title": "EIP-8141：在 frame 入口收取解析目标的访问费",
+      "note": "（gurukamath）提交。规范说在 frame 自己的 `limits.execution` 内收取 `resolved_target` 的冷热访问费，却没说何时收，也没为默认代码 frame 定义执行成本，实现可能在 `gas_used.execution`、warm 状态乃至有效性上分歧。同作者的 把 APPROVE 失败模式限定在当前调用帧 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12211",
+      "date": "2026-08-20",
+      "title_en": "EIP-8141: charge the resolved target's access at frame entry",
+      "note_en": "(gurukamath), submitted. The spec charges a `resolved_target`'s warm/cold access within the frame's own `limits.execution` but never says when, and defines no execution cost for frames dispatched to the default code, so implementations can diverge on `gas_used.execution`, on warmth and even on validity. The same author's scope APPROVE failure modes to the current call frame was submitted the same day.",
+      "topic_en": "Mempool and gas semantics for native AA"
+    },
+    {
+      "topic": "原生 AA 的内存池与 gas 语义",
+      "title": "把 APPROVE 失败模式限定在当前调用帧",
+      "note": "EIP-8141：在 frame 入口收取解析目标的访问费（gurukamath）提交。规范说在 frame 自己的 `limits.execution` 内收取 `resolved_target` 的冷热访问费，却没说何时收，也没为默认代码 frame 定义执行成本，实现可能在 `gas_used.execution`、warm 状态乃至有效性上分歧。同作者的 把 APPROVE 失败模式限定在当前调用帧 同日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12212",
+      "date": "2026-08-20",
+      "title_en": "scope APPROVE failure modes to the current call frame",
+      "note_en": "EIP-8141: charge the resolved target's access at frame entry (gurukamath), submitted. The spec charges a `resolved_target`'s warm/cold access within the frame's own `limits.execution` but never says when, and defines no execution cost for frames dispatched to the default code, so implementations can diverge on `gas_used.execution`, on warmth and even on validity. The same author's scope APPROVE failure modes to the current call frame was submitted the same day.",
+      "topic_en": "Mempool and gas semantics for native AA"
+    },
+    {
+      "topic": "原生 AA 的内存池与 gas 语义",
+      "title": "EIP-8141：约束出块方对不批准验证前缀的重执行",
+      "note": "（AnkushinDaniil）提交。内存池一节已约束接收和换头时的重新验证，但没有约束出块方的重执行。",
+      "url": "https://github.com/ethereum/EIPs/pull/12213",
+      "date": "2026-08-20",
+      "title_en": "EIP-8141: bound producer-side re-execution of an unapproving validation prefix",
+      "note_en": "(AnkushinDaniil), submitted. The mempool section already bounds admission and head-change revalidation but not re-execution by the block producer.",
+      "topic_en": "Mempool and gas semantics for native AA"
+    },
+    {
+      "topic": "原生 AA 的内存池与 gas 语义",
+      "title": "EIP-8141：用 EIP-7976 统一 token 计数修正 calldata 底价",
+      "note": "（ilitteri）提交。原公式按加权计数乘以 16，等于零字节 16 gas、非零字节 64 gas，既不符合 EIP-7623（10/40）也不符合 EIP-7976（64/64）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12209",
+      "date": "2026-08-20",
+      "title_en": "EIP-8141: fix the calldata floor to use the EIP-7976 uniform token count",
+      "note_en": "(ilitteri), submitted. The formula multiplied a weighted count by 16, which prices zero bytes at 16 gas and nonzero bytes at 64, matching neither EIP-7623 (10/40) nor EIP-7976 (64/64).",
+      "topic_en": "Mempool and gas semantics for native AA"
+    },
+    {
+      "topic": "ACDC #185 与 Glamsterdam 测试网",
+      "title": "terencechain：Platåberget 约六小时后升级 Glamsterdam，这是第一个公共测试网",
+      "note": "07:59。",
+      "url": "https://x.com/terencechain/status/2090242248038637736",
+      "date": "2026-08-20",
+      "title_en": "terencechain: Platåberget upgrades to Glamsterdam in about six hours, the first public testnet to do so",
+      "note_en": "07:59.",
+      "topic_en": "ACDC #185 and the Glamsterdam testnets"
+    },
+    {
+      "topic": "ACDC #185 与 Glamsterdam 测试网",
+      "title": "EIP-7773：从 Glamsterdam 移除 EIP-7610",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12189",
+      "date": "2026-08-20",
+      "title_en": "EIP-7773: remove EIP-7610 from Glamsterdam",
+      "note_en": "Merged.",
+      "topic_en": "ACDC #185 and the Glamsterdam testnets"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF 博客：better.codes 自动研究挑战上线",
+      "note": "参与者用自己的 AI 代理提高 koalaIRS12（Reed-Solomon 邻近问题）经 Lean 机器检验的可靠性下界，目标 128 位，服务于基于哈希的 SNARK。",
+      "url": "https://blog.ethereum.org/en/2026/08/20/better-codes-challenge",
+      "date": "2026-08-20",
+      "title_en": "EF blog: the better.codes autoresearch challenge is live",
+      "note_en": "Participants point their own AI agents at raising the Lean machine-checked soundness bound of koalaIRS12, a Reed-Solomon proximity problem, toward a 128-bit target, in service of hash-based SNARKs.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereum Economic Zone：GnosisDAO 以压倒性多数通过 GIP-153",
+      "note": "03:11，Gnosis Chain 走向结算到以太坊的 EEZ rollup。",
+      "url": "https://x.com/etheconomiczone/status/2090169770091880779",
+      "date": "2026-08-20",
+      "title_en": "Ethereum Economic Zone: GnosisDAO approved GIP-153 by a landslide",
+      "note_en": "03:11, putting Gnosis Chain on a path to an EEZ rollup settling on Ethereum.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8131 数据底价",
+      "note": "和 EIP-8279 BAL 底价 独立于 gas limit 的 PR 合并；EIP-8146：CL 必须在载荷前把 BAL 交给 EL 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12200",
+      "date": "2026-08-20",
+      "title_en": "EIP-8131 data floor",
+      "note_en": "PRs making the EIP-8131 data floor and the EIP-8279 BAL floor independent of the gas limit were merged; EIP-8146: the CL must deliver the BAL to the EL before the payload was submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8279 BAL 底价",
+      "note": "EIP-8131 数据底价 和 EIP-8279 BAL 底价 独立于 gas limit 的 PR 合并；EIP-8146：CL 必须在载荷前把 BAL 交给 EL 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12201",
+      "date": "2026-08-20",
+      "title_en": "EIP-8279 BAL floor",
+      "note_en": "PRs making the EIP-8131 data floor and the EIP-8279 BAL floor independent of the gas limit were merged; EIP-8146: the CL must deliver the BAL to the EL before the payload was submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8146：CL 必须在载荷前把 BAL 交给 EL",
+      "note": "EIP-8131 数据底价 和 EIP-8279 BAL 底价 独立于 gas limit 的 PR 合并；EIP-8146：CL 必须在载荷前把 BAL 交给 EL 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12216",
+      "date": "2026-08-20",
+      "title_en": "EIP-8146: the CL must deliver the BAL to the EL before the payload",
+      "note_en": "PRs making the EIP-8131 data floor and the EIP-8279 BAL floor independent of the gas limit were merged; EIP-8146: the CL must deliver the BAL to the EL before the payload was submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：以太坊 PoS 中的链头时序",
+      "note": "10:50。",
+      "url": "https://ethresear.ch/t/timing-the-head-in-ethereum-pos/25766",
+      "date": "2026-08-20",
+      "title_en": "ethresear.ch: timing the head in Ethereum PoS",
+      "note_en": "10:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #244 议程帖",
+      "note": "21:06 发布。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-244-august-27-2026/29468",
+      "date": "2026-08-20",
+      "title_en": "ACDE #244 agenda",
+      "note_en": "The ACDE #244 agenda was posted at 21:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：没有隐私，加密行业无法走向大众",
+      "note": "16:28。",
+      "url": "https://x.com/EliBenSasson/status/2090370494927102024",
+      "date": "2026-08-20",
+      "title_en": "Eli Ben-Sasson: crypto cannot reach mass adoption without privacy",
+      "note_en": "16:28.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：为 PR 审查做了“人类证明” Voight-Kampff",
+      "note": "07:53，在扩大 AI 代理部署时守住安全标准。",
+      "url": "https://x.com/gakonst/status/2090240852191002718",
+      "date": "2026-08-20",
+      "title_en": "gakonst: we built \"proof of human\" for PR reviews, Voight-Kampff",
+      "note_en": "07:53, to keep the security bar while scaling agent deployment.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/08/20/better-codes-challenge",
+    "credit": "Ethereum Foundation Blog, better.codes challenge",
+    "local_path": "assets/2026-08-20.jpg",
+    "credit_en": "Ethereum Foundation Blog, better.codes challenge"
+  },
+  "keywords_en": [
+    "ACDC #185",
+    "Platåberget activates Glamsterdam",
+    "Sepolia September 28 and Hoodi October 26 proposal",
+    "EIP-8130 four-tier authenticator classification",
+    "EIP-8141 bound on validation prefix re-execution",
+    "better.codes"
+  ],
+  "summary_en": "The Platåberget testnet activated Glamsterdam, but a builder deposit caching issue at the upgrade transition caused non-finality; in the evening ACDC #185 proposed upgrading Sepolia on September 28 and Hoodi on October 26. On accounts, chunter-cb split EIP-8130 authenticators into four tiers, CANONICAL, PURE, BOUNDED and ARBITRARY, which govern mempool propagation without changing consensus validity, and AnkushinDaniil proposed a bound on producer-side re-execution of non-approving validation prefixes. The EF Formal Verification team launched the better.codes autoresearch challenge."
+}

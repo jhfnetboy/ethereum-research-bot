@@ -1,0 +1,169 @@
+{
+  "date": "2026-08-18",
+  "keywords": [
+    "EIP-8141 SIGDATACOPY",
+    "frame 交易初始 warm 集合合并",
+    "EIP-8130 采用档位与有界认证 gas",
+    "普通转账不再固定 21",
+    "000 gas",
+    "FOCIL Breakout #40"
+  ],
+  "summary": "lightclient 为 EIP-8141 新增 `SIGDATACOPY` 指令，把复制 `ARBITRARY` 签名数据的行为从 `SIGPARAM` 中拆出，让 `SIGPARAM` 的栈需求变成静态，当天合并；8 月 6 日提交的初始 warm 集合 PR 和 8 月 14 日的禁用操作码放宽 PR 也同日合并。chunter-cb 为 EIP-8130 提出 L1 与 L2 两种采用档位。ladislaus 提醒 Glamsterdam 后普通 ETH 转账不再总是 21,000 gas。晚上 FOCIL Breakout #40 定下 focil-devnet-0 目标 8 月 31 日。",
+  "items": [
+    {
+      "topic": "原生 AA 两条路线同日推进",
+      "title": "EIP-8141：新增 SIGDATACOPY，使 SIGPARAM 的栈需求为静态",
+      "note": "（lightclient）提交并合并。复制 `ARBITRARY` 签名数据时 `SIGPARAM` 的栈大小是动态的，多次被指出有问题，PR 把这部分拆成单独指令。",
+      "url": "https://github.com/ethereum/EIPs/pull/12187",
+      "date": "2026-08-18",
+      "title_en": "EIP-8141: add SIGDATACOPY so the stack requirement for SIGPARAM is static",
+      "note_en": "(lightclient), submitted and merged. A dynamic stack size for `SIGPARAM` when copying `ARBITRARY` sigdata had been flagged as problematic several times, so the PR splits that behavior into a separate instruction.",
+      "topic_en": "Both native AA tracks move on the same day"
+    },
+    {
+      "topic": "原生 AA 两条路线同日推进",
+      "title": "EIP-8141：固定 frame 交易的初始 accessed_addresses 集合",
+      "note": "与 放宽禁用操作码列表（Marchhill）合并，内容见 8 月 6 日和 8 月 14 日。",
+      "url": "https://github.com/ethereum/EIPs/pull/12113",
+      "date": "2026-08-18",
+      "title_en": "EIP-8141: pin the initial accessed_addresses set for frame transactions",
+      "note_en": "And relax the banned opcode list (Marchhill), merged; see August 6 and August 14 for the content.",
+      "topic_en": "Both native AA tracks move on the same day"
+    },
+    {
+      "topic": "原生 AA 两条路线同日推进",
+      "title": "放宽禁用操作码列表",
+      "note": "EIP-8141：固定 frame 交易的初始 accessed_addresses 集合 与 放宽禁用操作码列表（Marchhill）合并，内容见 8 月 6 日和 8 月 14 日。",
+      "url": "https://github.com/ethereum/EIPs/pull/12167",
+      "date": "2026-08-18",
+      "title_en": "relax the banned opcode list",
+      "note_en": "EIP-8141: pin the initial accessed_addresses set for frame transactions and relax the banned opcode list (Marchhill), merged; see August 6 and August 14 for the content.",
+      "topic_en": "Both native AA tracks move on the same day"
+    },
+    {
+      "topic": "原生 AA 两条路线同日推进",
+      "title": "EIP-8130：采用档位、有界认证 gas 和时间戳归一化",
+      "note": "（chunter-cb）提交。8130 只写一份规范，但按两种档位之一采用：L1 档位把固有 gas 表定为规范（gas 表就是规范，只能经硬分叉修改），对认证器采用宽松的接受策略。",
+      "url": "https://github.com/ethereum/EIPs/pull/12185",
+      "date": "2026-08-18",
+      "title_en": "EIP-8130: adoption profiles, bounded auth gas and timestamp normalization",
+      "note_en": "(chunter-cb), submitted. 8130 is specified once but adopted under one of two profiles: the L1 profile makes the intrinsic gas schedule normative (the gas schedule is the spec, changeable only by hard fork) and uses a permissive authenticator acceptance policy.",
+      "topic_en": "Both native AA tracks move on the same day"
+    },
+    {
+      "topic": "Glamsterdam 下的 gas 变化",
+      "title": "ladislaus：普通 ETH 转账不再总是固定 21,000 gas",
+      "note": "15:09，呼吁在 Glamsterdam 上线前测试。",
+      "url": "https://x.com/ladislaus0x/status/2089625767835492613",
+      "date": "2026-08-18",
+      "title_en": "ladislaus: a plain ETH transfer is no longer always a flat 21,000 gas",
+      "note_en": "15:09, urging testing before Glamsterdam goes live.",
+      "topic_en": "Gas changes under Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 下的 gas 变化",
+      "title": "nero_eth：65 个以上 EIP 的 Hegotá 听起来很夸张，但并非没做过",
+      "note": "20:27，当前分叉已进行 258 天，合并以来平均每 294 天一次分叉。",
+      "url": "https://x.com/nero_eth/status/2089705644999745553",
+      "date": "2026-08-18",
+      "title_en": "nero_eth: a Hegotá with 65+ EIPs sounds wild, but it is nothing we have not done before",
+      "note_en": "20:27; the current fork is 258 days in, and since the Merge forks have shipped every 294 days on average.",
+      "topic_en": "Gas changes under Glamsterdam"
+    },
+    {
+      "topic": "Glamsterdam 下的 gas 变化",
+      "title": "ethresear.ch：EIP-7999 下的数据计量、BAL 分解与打包定价",
+      "note": "23:40（M1kuW1ll），EIP-7928 的区块级访问列表在 Glamsterdam 中不计费，文章基于 EIP-7999 的开放 PR 分析其计量。",
+      "url": "https://ethresear.ch/t/data-metering-bal-decomposition-and-bundle-pricing-under-eip-7999/25747",
+      "date": "2026-08-18",
+      "title_en": "ethresear.ch: data metering, BAL decomposition and bundle pricing under EIP-7999",
+      "note_en": "23:40 (M1kuW1ll); EIP-7928 block-level access lists sit outside fee accounting in Glamsterdam, and the analysis builds on an open EIP-7999 PR.",
+      "topic_en": "Gas changes under Glamsterdam"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：PQ-DAS / leanDA 的形式化验证安全性",
+      "note": "22:35（Benedikt Wagner）。",
+      "url": "https://ethresear.ch/t/formally-verified-security-for-pq-das-leanda/25746",
+      "date": "2026-08-18",
+      "title_en": "ethresear.ch: formally verified security for PQ-DAS / leanDA",
+      "note_en": "22:35 (Benedikt Wagner).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：缩短 CL 区块保留窗口",
+      "note": "（kevaundray）提交，即 EIP-8383。",
+      "url": "https://github.com/ethereum/EIPs/pull/12188",
+      "date": "2026-08-18",
+      "title_en": "New EIP: reduce the CL block retention window",
+      "note_en": "(kevaundray), submitted, now EIP-8383.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：从 Glamsterdam 移除 EIP-7610",
+      "note": "（jochem-brouwer）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12189",
+      "date": "2026-08-18",
+      "title_en": "EIP-7773: remove EIP-7610 from Glamsterdam",
+      "note_en": "(jochem-brouwer), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF 博客：ESP 2026 年第二季度资助",
+      "note": "本季度共资助约 550 万美元，重点是零知识证明、客户端多样性、形式化验证和开源工具。",
+      "url": "https://blog.ethereum.org/en/2026/08/18/allocation-q2-26",
+      "date": "2026-08-18",
+      "title_en": "EF blog: ESP allocation update for Q2 2026",
+      "note_en": "About $5.5M awarded this quarter, focused on zero-knowledge proofs, client diversity, formal verification and open-source tooling.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：quick slots 正在讨论纳入 Hegotá，Julian Ma 讲解工作与取舍",
+      "note": "19:20。",
+      "url": "https://x.com/barnabemonnot/status/2089688979524227460",
+      "date": "2026-08-18",
+      "title_en": "Barnabé: quick slots are being discussed for Hegotá, with Julian Ma explaining the work and tradeoffs",
+      "note_en": "19:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Derek Chiang：以太坊常被批评在安全和去中心化上过度投入，可以把它看作“系统的系统”",
+      "note": "18:35。",
+      "url": "https://x.com/decentrek/status/2089677439924662609",
+      "date": "2026-08-18",
+      "title_en": "Derek Chiang: Ethereum is often criticized for overinvesting in security and decentralization; one way to see it is as \"the system of systems\"",
+      "note_en": "18:35.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：世界各地独立计算机每 12 秒（很快更短）就共享一个现实版本",
+      "note": "10:09。",
+      "url": "https://x.com/binji_x/status/2089550131783676413",
+      "date": "2026-08-18",
+      "title_en": "binji: independent computers around the world agree on a shared version of reality every 12 seconds, soon less",
+      "note_en": "10:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12187",
+    "credit": "GitHub, ethereum/EIPs PR #12187",
+    "local_path": "assets/2026-08-18.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12187"
+  },
+  "keywords_en": [
+    "EIP-8141 SIGDATACOPY",
+    "initial warm set for frame transactions merged",
+    "EIP-8130 adoption profiles and bounded auth gas",
+    "plain transfers no longer a flat 21",
+    "000 gas",
+    "FOCIL Breakout #40"
+  ],
+  "summary_en": "lightclient added a `SIGDATACOPY` instruction to EIP-8141, splitting the copying of `ARBITRARY` signature data out of `SIGPARAM` so that `SIGPARAM`'s stack requirement becomes static, merged the same day; the August 6 initial warm set PR and the August 14 banned-opcode relaxation were also merged. chunter-cb proposed L1 and L2 adoption profiles for EIP-8130. ladislaus warned that a plain ETH transfer is no longer always 21,000 gas after Glamsterdam. In the evening FOCIL Breakout #40 set focil-devnet-0 for August 31."
+}

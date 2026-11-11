@@ -1,0 +1,167 @@
+{
+  "date": "2026-08-04",
+  "keywords": [
+    "EIP-8363 递减发行销毁",
+    "frame 交易与 FOCIL",
+    "EIP-8141 区块打包与付款方偿付能力",
+    "EIP-8038 存储访问定价",
+    "原生 rollup"
+  ],
+  "summary": "pintail 提交 EIP-8363 Tapered Issuance Burn，用部分销毁验证者奖励的方式修改 ETH 发行曲线，Magicians 讨论帖当天成为热帖。账户侧，两份 EIP-8141 PR 补规范：一份让 FOCIL 对 frame 交易检查验证前缀而不是 nonce 和余额，另一份写明区块构建者必须检查的 gas 预留和付款方偿付能力。EIP-8038 的 `ACCOUNT_WRITE` 定为 9,000 并合并。",
+  "items": [
+    {
+      "topic": "EIP-8141 补上内存池之外的规则",
+      "title": "EIP-8141：frame 感知的 inclusion list（FOCIL）有效性",
+      "note": "（Marchhill）提交。要求 EIP-7805 的 inclusion list 有效性检查评估 frame 交易的验证前缀，而不是 nonce 和余额，并新增 `MAX_IL_VERIFY_GAS`。",
+      "url": "https://github.com/ethereum/EIPs/pull/12086",
+      "date": "2026-08-04",
+      "title_en": "EIP-8141: frame-aware inclusion list (FOCIL) validity",
+      "note_en": "(Marchhill), submitted. It requires EIP-7805 inclusion list validity checks to evaluate a frame transaction's validation prefix instead of its nonce and balance, and adds `MAX_IL_VERIFY_GAS`.",
+      "topic_en": "EIP-8141 rules beyond the mempool"
+    },
+    {
+      "topic": "EIP-8141 补上内存池之外的规则",
+      "title": "EIP-8141：规定区块打包门槛和付款方偿付能力",
+      "note": "（AnkushinDaniil）提交。PR 指出两点目前只是隐含的：区块 gas 预留是 `max_gas`，偿付能力属于 `payer`，而后者只出现在内存池章节，区块构建者并不必遵守；复用现有交易选择路径的实现会因此继承缺陷。",
+      "url": "https://github.com/ethereum/EIPs/pull/12091",
+      "date": "2026-08-04",
+      "title_en": "EIP-8141: specify block inclusion gating and payer solvency",
+      "note_en": "(AnkushinDaniil), submitted. The PR notes two facts that are only implied today: the block gas reservation is `max_gas`, and solvency belongs to `payer`, which appears only in the Mempool section that a block builder is not required to follow; an implementation reusing its existing transaction selection path inherits the resulting defects.",
+      "topic_en": "EIP-8141 rules beyond the mempool"
+    },
+    {
+      "topic": "EIP-8141 补上内存池之外的规则",
+      "title": "donnoh：提议通过携带 STARK 的 frame 交易（8141 + 8288）实现原生 rollup",
+      "note": "21:16，借注册表让原生 rollup 强制执行遵循 L1 语义的证明，可随 L1 自动升级或固定某个分叉。",
+      "url": "https://x.com/donnoh_eth/status/2084644526828761203",
+      "date": "2026-08-04",
+      "title_en": "donnoh: a proposal for native rollups via STARK-carrying frame transactions (8141 + 8288)",
+      "note_en": "21:16. With a registry, native rollups can enforce proofs that follow L1 semantics and either upgrade automatically with L1 or pin a specific fork.",
+      "topic_en": "EIP-8141 rules beyond the mempool"
+    },
+    {
+      "topic": "Glamsterdam 存储访问定价",
+      "title": "EIP-2780：修订 COLD_STORAGE_ACCESS 和 ACCOUNT_WRITE 取值",
+      "note": "（misilva73）合并。PR 说明在 EIP-8038 中把 `COLD_STORAGE_ACCESS` 定为 2,100（与现值相同），`ACCOUNT_WRITE` 定为 9,000，并重新计算 `CREATE_ACCESS`、`STORAGE_CLEAR_REFUND`、`ACCESS_LIST_STORAGE_KEY_COST`。",
+      "url": "https://github.com/ethereum/EIPs/pull/12083",
+      "date": "2026-08-04",
+      "title_en": "EIP-2780: revise COLD_STORAGE_ACCESS and ACCOUNT_WRITE values",
+      "note_en": "(misilva73), merged. Per the PR, EIP-8038 sets `COLD_STORAGE_ACCESS` to 2,100 (unchanged from today) and `ACCOUNT_WRITE` to 9,000, and recomputes `CREATE_ACCESS`, `STORAGE_CLEAR_REFUND` and `ACCESS_LIST_STORAGE_KEY_COST`.",
+      "topic_en": "Glamsterdam storage access pricing"
+    },
+    {
+      "topic": "Glamsterdam 存储访问定价",
+      "title": "EIP-2780：对齐运行时收费和参考用例",
+      "note": "（spencer-tb）提交。原文对自转账免除全部接收方运行时收费，与 EIP 自己的“EIP-7702 委托账户向自己转 ETH”参考行和各实现不一致，各实现都收取委托目标的访问费。",
+      "url": "https://github.com/ethereum/EIPs/pull/12080",
+      "date": "2026-08-04",
+      "title_en": "EIP-2780: align runtime charging and reference cases",
+      "note_en": "(spencer-tb), submitted. The text exempted self-transfers from all runtime recipient charges, contradicting the EIP's own \"ETH transfer to self, sender 7702 delegated\" reference row and the implementations, which all charge the delegation-target access.",
+      "topic_en": "Glamsterdam storage access pricing"
+    },
+    {
+      "topic": "EIP-8363 递减发行销毁",
+      "title": "Magicians：EIP-8363 Tapered Issuance Burn",
+      "note": "16:30（pintail），对应 PR 12081。通过部分销毁验证者奖励修改发行曲线，按职责销毁的设计来自 Anders Elowsson。据 Ethereal news #34，净质押收益在质押率 50% 时线性降到零，升级后 18 个月逐步生效。",
+      "url": "https://ethereum-magicians.org/t/eip-8363-tapered-issuance-burn/29263",
+      "date": "2026-08-04",
+      "title_en": "Magicians: EIP-8363 Tapered Issuance Burn",
+      "note_en": "16:30 (pintail), with PR 12081. It modifies the issuance curve by partly burning validator rewards, with the per-duty burn design credited to Anders Elowsson. Per Ethereal news #34, net staking yield tapers linearly to zero at a 50% staking ratio, phased in over 18 months after the upgrade.",
+      "topic_en": "EIP-8363 tapered issuance burn"
+    },
+    {
+      "topic": "EIP-8363 递减发行销毁",
+      "title": "PR 12081",
+      "note": "Magicians：EIP-8363 Tapered Issuance Burn 16:30（pintail），对应 PR 12081。通过部分销毁验证者奖励修改发行曲线，按职责销毁的设计来自 Anders Elowsson。据 Ethereal news #34，净质押收益在质押率 50% 时线性降到零，升级后 18 个月逐步生效。",
+      "url": "https://github.com/ethereum/EIPs/pull/12081",
+      "date": "2026-08-04",
+      "title_en": "PR 12081",
+      "note_en": "Magicians: EIP-8363 Tapered Issuance Burn, 16:30 (pintail), with PR 12081. It modifies the issuance curve by partly burning validator rewards, with the per-duty burn design credited to Anders Elowsson. Per Ethereal news #34, net staking yield tapers linearly to zero at a 50% staking ratio, phased in over 18 months after the upgrade.",
+      "topic_en": "EIP-8363 tapered issuance burn"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8360 TCREATE 操作码",
+      "note": "07:31，提供官方、省 gas、感知状态的临时合约部署机制。",
+      "url": "https://ethereum-magicians.org/t/eip-8360-tcreate-opcode/29258",
+      "date": "2026-08-04",
+      "title_en": "Magicians: EIP-8360 TCREATE opcode",
+      "note_en": "07:31, an official, gas-efficient and state-aware way to deploy temporary contracts.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：为什么去中心化状态对以太坊重要",
+      "note": "21:24（morph-dev）。",
+      "url": "https://ethresear.ch/t/why-decentralized-state-is-important-for-ethereum/25622",
+      "date": "2026-08-04",
+      "title_en": "ethresear.ch: why decentralized state is important for Ethereum",
+      "note_en": "21:24 (morph-dev).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：PFI EIP-8200 和 EIP-7666",
+      "note": "（nixorokish）合并；PFI EIP-5920 和 EIP-7923（jochem-brouwer）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12088",
+      "date": "2026-08-04",
+      "title_en": "EIP-8081: PFI EIP-8200 and EIP-7666",
+      "note_en": "(nixorokish), merged; PFI EIP-5920 and EIP-7923 (jochem-brouwer), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PFI EIP-5920 和 EIP-7923",
+      "note": "EIP-8081：PFI EIP-8200 和 EIP-7666（nixorokish）合并；PFI EIP-5920 和 EIP-7923（jochem-brouwer）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12078",
+      "date": "2026-08-04",
+      "title_en": "PFI EIP-5920 and EIP-7923",
+      "note_en": "EIP-8081: PFI EIP-8200 and EIP-7666 (nixorokish), merged; PFI EIP-5920 and EIP-7923 (jochem-brouwer), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2BEAT：Umbra 成为隐私页面上第一个隐身地址协议",
+      "note": "19:12，每次转账收款方隐藏在新地址后，累计约 1.28 亿美元。",
+      "url": "https://x.com/ethbeat_org/status/2084613461804208430",
+      "date": "2026-08-04",
+      "title_en": "L2BEAT: Umbra is the first stealth-address protocol on its privacy page",
+      "note_en": "19:12; each transfer hides the recipient behind a fresh address, and about $128M has moved through it.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：Starknet 正在成为后量子安全的一次真实押注",
+      "note": "18:43。",
+      "url": "https://x.com/StarkWareLtd/status/2084606148863230191",
+      "date": "2026-08-04",
+      "title_en": "StarkWare: Starknet is becoming a real bet on post-quantum security",
+      "note_en": "18:43.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EFDevcon：征集 Devcon 8 Privacy Hub 的建设者和组织者",
+      "note": "21:01。",
+      "url": "https://x.com/EFDevcon/status/2084640815624638671",
+      "date": "2026-08-04",
+      "title_en": "EFDevcon: calling builders and organizers for the Devcon 8 Privacy Hub",
+      "note_en": "21:01.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8363-tapered-issuance-burn/29263",
+    "credit": "Ethereum Magicians, EIP-8363: Tapered Issuance Burn",
+    "local_path": "assets/2026-08-04.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8363: Tapered Issuance Burn"
+  },
+  "keywords_en": [
+    "EIP-8363 tapered issuance burn",
+    "frame transactions and FOCIL",
+    "EIP-8141 block inclusion and payer solvency",
+    "EIP-8038 storage access pricing",
+    "native rollups"
+  ],
+  "summary_en": "pintail submitted EIP-8363 Tapered Issuance Burn, which changes the ETH issuance curve by partly burning validator rewards, and its Magicians thread became the day's hot topic. On accounts, two EIP-8141 PRs filled gaps in the spec: one makes FOCIL check a frame transaction's validation prefix instead of its nonce and balance, and the other spells out the gas reservation and payer solvency a block builder must check. EIP-8038's `ACCOUNT_WRITE` was set to 9,000 and merged."
+}

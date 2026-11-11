@@ -1,0 +1,75 @@
+{
+  "date": "2026-08-09",
+  "keywords": [
+    "leanDA 后量子 DAS",
+    "发行与生态资助",
+    "加密金融安全",
+    "Starknet 私密 TPS"
+  ],
+  "summary": "周日没有新的 EIP 或论坛提案。tcoratger 介绍 ethresear 上的 leanDA：现有 DAS 依赖不抗量子的 KZG 承诺，leanDA 采用“编码加证明”的后量子构造。hasufl 就发行争论表态，认为向被动持有者收费、资助投资生态的项目是好事。gakonst 谈加密金融基础设施长期面对的攻击压力。",
+  "items": [
+    {
+      "topic": "leanDA",
+      "title": "tcoratger：以太坊用 DAS 安全扩展 blob 数据，但现有 DAS 依赖不抗量子的 KZG 承诺",
+      "note": "01:11，介绍 ethresear 上的 leanDA，一种“编码加证明”的后量子 DAS 构造。原帖见 ethresear.ch：LeanDA 设计与基准（8 月 6 日发布），作者 Long Meng、Benedikt Wagner、George Kadianakis、Francesco Risitano。",
+      "url": "https://x.com/tcoratger/status/2086153234880594007",
+      "date": "2026-08-09",
+      "title_en": "tcoratger: Ethereum uses DAS to scale blob data securely, but current DAS relies on KZG commitments that are not post-quantum secure",
+      "note_en": "01:11, introducing leanDA from ethresear, an \"encode plus prove\" post-quantum DAS construction. The original is ethresear.ch: LeanDA design and benchmark (posted August 6) by Long Meng, Benedikt Wagner, George Kadianakis and Francesco Risitano.",
+      "topic_en": "leanDA"
+    },
+    {
+      "topic": "leanDA",
+      "title": "ethresear.ch：LeanDA 设计与基准",
+      "note": "tcoratger：以太坊用 DAS 安全扩展 blob 数据，但现有 DAS 依赖不抗量子的 KZG 承诺 01:11，介绍 ethresear 上的 leanDA，一种“编码加证明”的后量子 DAS 构造。原帖见 ethresear.ch：LeanDA 设计与基准（8 月 6 日发布），作者 Long Meng、Benedikt Wagner、George Kadianakis、Francesco Risitano。",
+      "url": "https://ethresear.ch/t/leanda-design-and-benchmark/25642",
+      "date": "2026-08-09",
+      "title_en": "ethresear.ch: LeanDA design and benchmark",
+      "note_en": "Tcoratger: Ethereum uses DAS to scale blob data securely, but current DAS relies on KZG commitments that are not post-quantum secure, 01:11, introducing leanDA from ethresear, an \"encode plus prove\" post-quantum DAS construction. The original is ethresear.ch: LeanDA design and benchmark (posted August 6) by Long Meng, Benedikt Wagner, George Kadianakis and Francesco Risitano.",
+      "topic_en": "leanDA"
+    },
+    {
+      "topic": "发行与安全讨论",
+      "title": "hasufl：向被动持有者收费来资助投资生态的项目，比如 Lido、Aave 和 DAT，其实很好",
+      "note": "09:32，这些项目合起来资助客户端团队、多个 EF 衍生团队和 DeFi 建设；问题从来不是通胀太多，而是太少。",
+      "url": "https://x.com/hasufl/status/2086279352975597692",
+      "date": "2026-08-09",
+      "title_en": "hasufl: charging passive holders to fund projects that invest in the ecosystem, like Lido, Aave and the DATs, is actually very good",
+      "note_en": "09:32; together they fund client teams, several EF spinouts and the DeFi buildout, and the problem was never too much inflation but too little.",
+      "topic_en": "Issuance and security"
+    },
+    {
+      "topic": "发行与安全讨论",
+      "title": "gakonst：加密金融基础设施一直在极度警惕 24 小时攻击机器人的状态下运行",
+      "note": "01:34，因为它对任何人开放、开源且基本不可变。",
+      "url": "https://x.com/gakonst/status/2086159051621363913",
+      "date": "2026-08-09",
+      "title_en": "gakonst: crypto financial infrastructure has been operating under extreme paranoia about 24/7 bots trying to hack it",
+      "note_en": "01:34, because it is open to anyone, open source and largely immutable.",
+      "topic_en": "Issuance and security"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：Starknet 今天能处理 1,000 私密 TPS，将达到 10,000 并完全后量子安全",
+      "note": "14:58。",
+      "url": "https://x.com/StarkWareLtd/status/2086361338834829360",
+      "date": "2026-08-09",
+      "title_en": "StarkWare: Starknet handles 1,000 private TPS today and will reach 10,000 while being fully post-quantum secure",
+      "note_en": "14:58.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/leanda-design-and-benchmark/25642",
+    "credit": "ethresear.ch, LeanDA: Design and Benchmark",
+    "local_path": "assets/2026-08-09.jpg",
+    "credit_en": "ethresear.ch, LeanDA: Design and Benchmark"
+  },
+  "keywords_en": [
+    "leanDA post-quantum DAS",
+    "issuance and ecosystem funding",
+    "crypto finance security",
+    "Starknet private TPS"
+  ],
+  "summary_en": "Sunday brought no new EIPs or forum proposals. tcoratger introduced leanDA from ethresear: today's DAS relies on KZG commitments that are not post-quantum secure, and leanDA uses an \"encode plus prove\" post-quantum construction. hasufl weighed in on the issuance debate, arguing that charging passive holders to fund projects that invest in the ecosystem is good. gakonst described the constant attack pressure on crypto financial infrastructure."
+}

@@ -1,0 +1,205 @@
+{
+  "date": "2026-08-28",
+  "keywords": [
+    "EIP-8141 SFI 的含义",
+    "Frame 交易与隐私池",
+    "ecrecover 后量子升级",
+    "frame 交易家族操作码注册表",
+    "EIP-8037 回滚时的状态 gas",
+    "EIP-4444 移至 Draft",
+    "Hegotá 主角",
+    "Sordino 加密内存池",
+    "Ethereal news #37"
+  ],
+  "summary": "nixorokish 说明 Frame 交易 EIP 已列为 Hegotá Scheduled，Derek Chiang 强调 SFI 只表示以太坊会在 Hegotá 上线 AA，8141 的现有文本甚至编号都没有定下来，他在 ACDE 上反对现在就做 SFI 决定。nero_eth 指出 8141 让隐私池能直接从提款金额中代付，无需中继者。Circle 研究者提议让 ecrecover 读取 8141 交易中的后量子签名，为不可升级合约提供迁移路径。AnkushinDaniil 提议为 frame 交易家族建立统一的操作码和 frame mode 注册表。",
+  "items": [
+    {
+      "topic": "SFI 之后：8141 定了什么，没定什么",
+      "title": "nixorokish：AA 更新，Frame 交易 EIP 今天列为 Hegotá Scheduled",
+      "note": "00:04。它曾被提议为主角，3 月进入 Considered，会上强烈共识认为 AA 在 Hegotá 上线很重要。",
+      "url": "https://x.com/nixorokish/status/2093021853036228665",
+      "date": "2026-08-28",
+      "title_en": "nixorokish: AA update, the Frame Transactions EIP was moved today to Scheduled for Hegotá",
+      "note_en": "00:04. It was proposed as a headliner and moved to Considered in March, and there was strong consensus that shipping AA in Hegotá matters.",
+      "topic_en": "After the SFI: what is settled for 8141 and what is not"
+    },
+    {
+      "topic": "SFI 之后：8141 定了什么，没定什么",
+      "title": "Derek Chiang：Frames（8141）被 SFI 只是表示以太坊会在 Hegotá 上线 AA",
+      "note": "00:21，不代表现有写法乃至最终 EIP 编号已定；他在 ACDE 上反对现在做 SFI 决定。",
+      "url": "https://x.com/decentrek/status/2093026086552752141",
+      "date": "2026-08-28",
+      "title_en": "Derek Chiang: Frames (8141) was SFI-ed only to signal that Ethereum will ship AA in Hegotá",
+      "note_en": "00:21; it does not mean Frames as written, or even the final EIP number, is set in stone, and he pushed back at ACDE against making the SFI decision now.",
+      "topic_en": "After the SFI: what is settled for 8141 and what is not"
+    },
+    {
+      "topic": "SFI 之后：8141 定了什么，没定什么",
+      "title": "nero_eth：EIP-8141 一个被忽视的方面是隐私",
+      "note": "14:59。Frame 交易让隐私池直接从提款金额中代付提款，去掉现在所需的中继者；下一步是 STARK 聚合，把隐私池交互成本压到接近零。",
+      "url": "https://x.com/nero_eth/status/2093246965555269899",
+      "date": "2026-08-28",
+      "title_en": "nero_eth: one overlooked aspect of EIP-8141 is privacy",
+      "note_en": "14:59. Frame transactions let privacy pools sponsor withdrawals directly from the withdrawal amount, removing the relayer needed today; the next step is STARK aggregation, which can push the cost of privacy pool interactions close to zero.",
+      "topic_en": "After the SFI: what is settled for 8141 and what is not"
+    },
+    {
+      "topic": "SFI 之后：8141 定了什么，没定什么",
+      "title": "EIP-8141：frame 交易家族的操作码和 frame mode 注册表",
+      "note": "（AnkushinDaniil）提交。8141 家族（8141、8250、8272、7906、8288、8312）各自分配操作码和 frame mode，已出现两处冲突：`0xB5` 被 EIP-8272 分给 `RECENTROOTREFLOAD`，8141 后来又把 `SIGDATACOPY` 放在同一字节；frame mode `3` 被 EIP-7906 分给 `POST_TX`，EIP-8312（UTXO）也占用 `3`。由 8141 维护权威分配，依赖 EIP 从中取号。",
+      "url": "https://github.com/ethereum/EIPs/pull/12253",
+      "date": "2026-08-28",
+      "title_en": "EIP-8141: an opcode and frame-mode registry for the frame transaction family",
+      "note_en": "(AnkushinDaniil), submitted. The 8141 family (8141, 8250, 8272, 7906, 8288, 8312) allocates opcodes and frame modes per draft, which has already caused two collisions: `0xB5`, assigned by EIP-8272 to `RECENTROOTREFLOAD` and later used by 8141 for `SIGDATACOPY`; and frame mode `3`, assigned by EIP-7906 to `POST_TX` and also claimed by EIP-8312 (UTXO). 8141 would hold the authoritative allocation that dependent EIPs draw from.",
+      "topic_en": "After the SFI: what is settled for 8141 and what is not"
+    },
+    {
+      "topic": "SFI 之后：8141 定了什么，没定什么",
+      "title": "EIP-8037：回滚时恢复 frame 的状态 gas",
+      "note": "（chfast）提交，回滚规则所说的“frame 内收取的状态 gas”没有计数器对应，应为 `L0 - L1 + S1`，而 `L0` 从未定义。",
+      "url": "https://github.com/ethereum/EIPs/pull/12256",
+      "date": "2026-08-28",
+      "title_en": "EIP-8037: restore a frame's state gas on rollback",
+      "note_en": "(chfast), submitted: the \"state gas charged within the frame\" in the rollback rules has no counter; it is `L0 - L1 + S1`, and `L0` was never defined.",
+      "topic_en": "After the SFI: what is settled for 8141 and what is not"
+    },
+    {
+      "topic": "后量子迁移：ecrecover",
+      "title": "ethresear.ch：ecrecover 的后量子升级提议",
+      "note": "22:08（mirabelenkiy-circle）。许多合约用 ecrecover 验证 ECDSA 签名，面临量子攻击；与其完全禁用，不如让 ecrecover 读取 EIP-8141 frame 交易中的后量子签名：65 字节 `(v, r, s)` 用来编码查找值，哨兵值触发新路径。目标是不可变合约的平滑迁移，不解决 EOA 本身。作者也指出 EVM 把 ecrecover 定义为纯函数，任何公钥查找都牵涉向后兼容。",
+      "url": "https://ethresear.ch/t/proposed-pq-upgrade-for-ecrecover/25844",
+      "date": "2026-08-28",
+      "title_en": "ethresear.ch: proposed PQ upgrade for ecrecover",
+      "note_en": "22:08 (mirabelenkiy-circle). Many contracts verify ECDSA signatures with ecrecover and are exposed to quantum attacks; rather than disable it, ecrecover could read post-quantum signatures from EIP-8141 frame transactions, with the 65-byte `(v, r, s)` encoding lookup values and a sentinel value triggering the new path. The aim is a graceful migration for immutable contracts, not a fix for EOAs themselves. The author notes the EVM defines ecrecover as a pure function, so any public key lookup raises backward compatibility questions.",
+      "topic_en": "Post-quantum migration: ecrecover"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #37",
+      "note": "20:50：Glamsterdam 重定价对合约开发者的影响、Revolut 欧元稳定币上线、原生 AA 列入 Hegotá。安全事件：Term Finance 治理事件约 850 万美元被提走，The Sandbox 约 150 万美元桥漏洞，Ledger 明文签名流程 bug 已在以太坊 app 修复。",
+      "url": "https://x.com/EtherealnewsHQ/status/2093335450903843192",
+      "date": "2026-08-28",
+      "title_en": "Ethereal news #37",
+      "note_en": "20:50: Glamsterdam repricing impact for contract developers, the Revolut euro stablecoin rolling out, and native AA scheduled for Hegotá. Security: about $8.5M drained in the Term Finance governance incident, a roughly $1.5M Sandbox bridge exploit, and a Ledger clear signing flow bug fixed in the Ethereum app.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-4444：移至 Draft",
+      "note": "提交并合并，执行层区块保留窗口与共识层一致；移至 Review 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12257",
+      "date": "2026-08-28",
+      "title_en": "EIP-4444: move to Draft",
+      "note_en": "Submitted and merged, aligning the execution layer block retention window with the consensus layer's; move to Review, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "移至 Review",
+      "note": "EIP-4444：移至 Draft 提交并合并，执行层区块保留窗口与共识层一致；移至 Review 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12258",
+      "date": "2026-08-28",
+      "title_en": "move to Review",
+      "note_en": "EIP-4444: move to Draft, submitted and merged, aligning the execution layer block retention window with the consensus layer's; move to Review, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8298：澄清代码生命周期和 gas 定价",
+      "note": "提交并合并，`SETCODEFROM` gas 成本与 Glamsterdam 定价对齐。",
+      "url": "https://github.com/ethereum/EIPs/pull/12259",
+      "date": "2026-08-28",
+      "title_en": "EIP-8298: clarify code lifecycle and gas pricing",
+      "note_en": "Submitted and merged, aligning `SETCODEFROM` gas costs with Glamsterdam pricing.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：移至 Review",
+      "note": "合并；abcoathup 提交 EIP-7773 标明 Glamsterdam 主角（ePBS、BALs）和 EIP-8081 标明 Hegotá 主角（FOCIL、Frame 交易）。",
+      "url": "https://github.com/ethereum/EIPs/pull/11855",
+      "date": "2026-08-28",
+      "title_en": "EIP-7773: move to Review",
+      "note_en": "Merged; abcoathup submitted EIP-7773: call out the Glamsterdam headliners (ePBS, BALs) and EIP-8081: call out the Hegotá headliners (FOCIL, Frame transactions).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773 标明 Glamsterdam 主角",
+      "note": "EIP-7773：移至 Review 合并；abcoathup 提交 EIP-7773 标明 Glamsterdam 主角（ePBS、BALs）和 EIP-8081 标明 Hegotá 主角（FOCIL、Frame 交易）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12254",
+      "date": "2026-08-28",
+      "title_en": "EIP-7773: call out the Glamsterdam headliners",
+      "note_en": "EIP-7773: move to Review, merged; abcoathup submitted EIP-7773: call out the Glamsterdam headliners (ePBS, BALs) and EIP-8081: call out the Hegotá headliners (FOCIL, Frame transactions).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081 标明 Hegotá 主角",
+      "note": "EIP-7773：移至 Review 合并；abcoathup 提交 EIP-7773 标明 Glamsterdam 主角（ePBS、BALs）和 EIP-8081 标明 Hegotá 主角（FOCIL、Frame 交易）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12255",
+      "date": "2026-08-28",
+      "title_en": "EIP-8081: call out the Hegotá headliners",
+      "note_en": "EIP-7773: move to Review, merged; abcoathup submitted EIP-7773: call out the Glamsterdam headliners (ePBS, BALs) and EIP-8081: call out the Hegotá headliners (FOCIL, Frame transactions).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：定义非零原生币值时的钱包行为",
+      "note": "（soyrubio）提交，函数选择器只编码参数类型，不编码 payable。",
+      "url": "https://github.com/ethereum/ERCs/pull/1974",
+      "date": "2026-08-28",
+      "title_en": "ERC-7730: define wallet behavior for non-zero native value",
+      "note_en": "(soyrubio), submitted, since function selectors encode parameter types but not payability.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：Sordino，OP Stack 的信任最小化加密内存池",
+      "note": "01:24，交易门限加密后送达排序器，排序固定后再由 t-of-n keyper 释放解密份额。",
+      "url": "https://ethereum-magicians.org/t/sordino-a-trust-minimized-encrypted-mempool-for-the-op-stack-working-prototype-seeking-feedback/29529",
+      "date": "2026-08-28",
+      "title_en": "Magicians: Sordino, a trust-minimized encrypted mempool for the OP Stack",
+      "note_en": "01:24: transactions are threshold-encrypted before reaching the sequencer, and t-of-n keypers release decryption shares only after ordering is fixed.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：以太坊协议开发若不与应用层紧密合作就完了",
+      "note": "14:05，网络不能变成大家喜欢却没人用的艺术项目。",
+      "url": "https://x.com/binji_x/status/2093233571485925395",
+      "date": "2026-08-28",
+      "title_en": "binji: if Ethereum protocol development does not work closely with the app layer, we are cooked",
+      "note_en": "14:05; the network must not become an art project people like but no one uses.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Péter Szilágyi：Fable 在他的加密库中引入回归（源自依赖），fuzzer 发现后 Fable 拒绝再修改",
+      "note": "20:27。",
+      "url": "https://x.com/peter_szilagyi/status/2093329710394577077",
+      "date": "2026-08-28",
+      "title_en": "Péter Szilágyi: Fable introduced a regression into one of his crypto libs (from a dependency), and after his fuzzer flagged it, Fable refused to touch it",
+      "note_en": "20:27.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/proposed-pq-upgrade-for-ecrecover/25844",
+    "credit": "ethresear.ch, Proposed PQ upgrade for ecrecover (mirabelenkiy-circle)",
+    "local_path": "assets/2026-08-28.jpg",
+    "credit_en": "ethresear.ch, Proposed PQ upgrade for ecrecover (mirabelenkiy-circle)"
+  },
+  "keywords_en": [
+    "what the EIP-8141 SFI means",
+    "Frame transactions and privacy pools",
+    "a post-quantum upgrade for ecrecover",
+    "an opcode registry for the frame transaction family",
+    "EIP-8037 state gas on rollback",
+    "EIP-4444 moved to Draft",
+    "Hegotá headliners",
+    "Sordino encrypted mempool",
+    "Ethereal news #37"
+  ],
+  "summary_en": "nixorokish explained that the Frame transaction EIP is now Scheduled for Hegotá, while Derek Chiang stressed that the SFI only signals that Ethereum will ship AA in Hegotá, not that 8141 as written or even its number is settled; he argued at ACDE against making the SFI decision now. nero_eth pointed out that 8141 lets privacy pools sponsor withdrawals directly from the withdrawal amount, with no relayer. A Circle researcher proposed letting ecrecover read post-quantum signatures from 8141 transactions, giving immutable contracts a migration path. AnkushinDaniil proposed a single opcode and frame-mode registry for the frame transaction family."
+}

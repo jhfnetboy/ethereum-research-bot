@@ -1,0 +1,239 @@
+{
+  "date": "2026-08-21",
+  "keywords": [
+    "Base 将上线 EIP-8130",
+    "EIP-8387 无状态账户",
+    "EIP-8389 Keystore 签名用于普通交易",
+    "quick slots 改为 10 秒",
+    "keyed nonce 与 recent root 操作码让位",
+    "Vitalik iO 系列"
+  ],
+  "summary": "jessepollak 宣布 Base 将上线 EIP-8130 原生账户，并愿与以太坊和其他 EVM 团队合作推广；同日 chunter-cb 提交三个依赖 8130 的 EIP：无状态账户、交易事件视图、用 Keystore 为 EIP-2930/1559 交易做认证，后者让这些交易可以使用后量子和可聚合签名。Barnabé 提交 PR，把 EIP-8198 改为目标 10 秒 slot。EIP-8250 和 EIP-8272 的 PR 把与 8141 冲突的编号挪开。StarkWare 称一个 Falcon-512 账户在 Starknet 主网交易只花 0.06 美元。",
+  "items": [
+    {
+      "topic": "EIP-8130 的扩展与 Base 的承诺",
+      "title": "jessepollak：EIP-8130 是简单、高回报的原生账户，Base 将上线",
+      "note": "23:51，并期待与以太坊和其他 EVM 团队合作推广。",
+      "url": "https://x.com/jessepollak/status/2090844327748796902",
+      "date": "2026-08-21",
+      "title_en": "jessepollak: EIP-8130 is a simple, high-ROI native account, and Base will roll it out",
+      "note_en": "23:51, looking forward to working with Ethereum and other EVM teams to do the same.",
+      "topic_en": "Extending EIP-8130, and Base's commitment"
+    },
+    {
+      "topic": "EIP-8130 的扩展与 Base 的承诺",
+      "title": "新 EIP：无状态账户",
+      "note": "（chunter-cb）提交，Magicians 讨论帖 18:41。依赖 8130，定义 `account_changes` 类型 `0x03`：只在本交易内存在的账户，带 8130 创建时的 `initial_actors` 数组和仅本交易有效的 7702 委托，不写 Keystore。同一机制两种用法，唯一盐值为一次性账户，复用同一参数并提交配置变更则为长期账户。",
+      "url": "https://github.com/ethereum/EIPs/pull/12221",
+      "date": "2026-08-21",
+      "title_en": "New EIP: stateless accounts",
+      "note_en": "(chunter-cb), submitted, with a Magicians thread at 18:41. It requires 8130 and defines `account_changes` type `0x03`: a transaction-scoped account with 8130 create's `initial_actors` array, a 7702 delegation for this transaction only, and no Keystore write. One mechanism has two uses: a unique salt gives an ephemeral account, and reusing the same parameters with a config change gives a long-lived one.",
+      "topic_en": "Extending EIP-8130, and Base's commitment"
+    },
+    {
+      "topic": "EIP-8130 的扩展与 Base 的承诺",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：无状态账户（chunter-cb）提交，Magicians 讨论帖 18:41。依赖 8130，定义 `account_changes` 类型 `0x03`：只在本交易内存在的账户，带 8130 创建时的 `initial_actors` 数组和仅本交易有效的 7702 委托，不写 Keystore。同一机制两种用法，唯一盐值为一次性账户，复用同一参数并提交配置变更则为长期账户。",
+      "url": "https://ethereum-magicians.org/t/eip-8387-stateless-accounts/29473",
+      "date": "2026-08-21",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: stateless accounts (chunter-cb), submitted, with a Magicians thread at 18:41. It requires 8130 and defines `account_changes` type `0x03`: a transaction-scoped account with 8130 create's `initial_actors` array, a 7702 delegation for this transaction only, and no Keystore write. One mechanism has two uses: a unique salt gives an ephemeral account, and reusing the same parameters with a config change gives a long-lived one.",
+      "topic_en": "Extending EIP-8130, and Base's commitment"
+    },
+    {
+      "topic": "EIP-8130 的扩展与 Base 的承诺",
+      "title": "新 EIP：执行交易的 Keystore 签名",
+      "note": "（chunter-cb）提交。让 EIP-2930 和 EIP-1559 交易通过 Keystore 认证，而不是把 secp256k1 `ecrecover` 当作权威；65 字节签名仍走 k1 默认 EOA 路径，其他签名格式为 `account || authenticator || data`，因此这些交易类型可以使用后量子和可聚合签名。",
+      "url": "https://github.com/ethereum/EIPs/pull/12222",
+      "date": "2026-08-21",
+      "title_en": "New EIP: Keystore signatures for execution transactions",
+      "note_en": "(chunter-cb), submitted. It authenticates EIP-2930 and EIP-1559 transactions through the Keystore instead of treating secp256k1 `ecrecover` as the authority; 65-byte signatures stay on the k1 default-EOA path, and any other signature is `account || authenticator || data`, so those transaction types can be post-quantum and aggregatable.",
+      "topic_en": "Extending EIP-8130, and Base's commitment"
+    },
+    {
+      "topic": "EIP-8130 的扩展与 Base 的承诺",
+      "title": "新 EIP：交易事件视图",
+      "note": "（chunter-cb）提交，Magicians 讨论帖 18:17。",
+      "url": "https://github.com/ethereum/EIPs/pull/12218",
+      "date": "2026-08-21",
+      "title_en": "New EIP: transaction events view",
+      "note_en": "(chunter-cb), submitted, with a Magicians thread at 18:17.",
+      "topic_en": "Extending EIP-8130, and Base's commitment"
+    },
+    {
+      "topic": "EIP-8130 的扩展与 Base 的承诺",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：交易事件视图（chunter-cb）提交，Magicians 讨论帖 18:17。",
+      "url": "https://ethereum-magicians.org/t/eip-8386-transaction-events-view/29472",
+      "date": "2026-08-21",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: transaction events view (chunter-cb), submitted, with a Magicians thread at 18:17.",
+      "topic_en": "Extending EIP-8130, and Base's commitment"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "EIP-8250：把 TXPARAM_LEGACY_NONCE 移出 0x0C",
+      "note": "（AnkushinDaniil）提交。EIP-8141 已把 `TXPARAM` 索引 `0x0C` 分给 `state_gas_left`，同时启用两者的链上会冲突，PR 把它移到空闲的 `0x11`。同作者提交 EIP-8272：把 RECENTROOTREFLOAD 移出 0xB5。",
+      "url": "https://github.com/ethereum/EIPs/pull/12219",
+      "date": "2026-08-21",
+      "title_en": "EIP-8250: move TXPARAM_LEGACY_NONCE off 0x0C",
+      "note_en": "(AnkushinDaniil), submitted. EIP-8141 already assigns `TXPARAM` index `0x0C` to `state_gas_left`, so a chain enabling both would have two claims on one index; the PR moves it to the free `0x11`. The same author submitted EIP-8272: move RECENTROOTREFLOAD off 0xB5.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "EIP-8272：把 RECENTROOTREFLOAD 移出 0xB5",
+      "note": "EIP-8250：把 TXPARAM_LEGACY_NONCE 移出 0x0C（AnkushinDaniil）提交。EIP-8141 已把 `TXPARAM` 索引 `0x0C` 分给 `state_gas_left`，同时启用两者的链上会冲突，PR 把它移到空闲的 `0x11`。同作者提交 EIP-8272：把 RECENTROOTREFLOAD 移出 0xB5。",
+      "url": "https://github.com/ethereum/EIPs/pull/12220",
+      "date": "2026-08-21",
+      "title_en": "EIP-8272: move RECENTROOTREFLOAD off 0xB5",
+      "note_en": "EIP-8250: move TXPARAM_LEGACY_NONCE off 0x0C (AnkushinDaniil), submitted. EIP-8141 already assigns `TXPARAM` index `0x0C` to `state_gas_left`, so a chain enabling both would have two claims on one index; the PR moves it to the free `0x11`. The same author submitted EIP-8272: move RECENTROOTREFLOAD off 0xB5.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "EIP-8141：把 chain_id 限制在 2**64 以内",
+      "note": "（Marchhill）提交；EIP-7805：跳过需要 IL 无法携带的数据的交易（Marchhill）提交，IL 只携带规范交易编码，blob 交易的 blob、承诺和证明不在其中。",
+      "url": "https://github.com/ethereum/EIPs/pull/12223",
+      "date": "2026-08-21",
+      "title_en": "EIP-8141: bound chain_id to 2**64",
+      "note_en": "(Marchhill), submitted; EIP-7805: skip IL transactions needing data the IL cannot carry (Marchhill), submitted, since an IL carries only canonical transaction encodings and not a blob transaction's blobs, commitments and proofs.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "EIP-7805：跳过需要 IL 无法携带的数据的交易",
+      "note": "EIP-8141：把 chain_id 限制在 2**64 以内（Marchhill）提交；EIP-7805：跳过需要 IL 无法携带的数据的交易（Marchhill）提交，IL 只携带规范交易编码，blob 交易的 blob、承诺和证明不在其中。",
+      "url": "https://github.com/ethereum/EIPs/pull/12224",
+      "date": "2026-08-21",
+      "title_en": "EIP-7805: skip IL transactions needing data the IL cannot carry",
+      "note_en": "EIP-8141: bound chain_id to 2**64 (Marchhill), submitted; EIP-7805: skip IL transactions needing data the IL cannot carry (Marchhill), submitted, since an IL carries only canonical transaction encodings and not a blob transaction's blobs, commitments and proofs.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "EIP-8198：目标 10 秒 slot 并与参考规范对齐",
+      "note": "（barnabemonnot）提交。用仿照 EIP-7892 `BLOB_SCHEDULE` 的 `SLOT_DURATION_SCHEDULE` 取代单一的 `SLOT_DURATION_MS` 变更，并按精确比例缩放奖励等参数。",
+      "url": "https://github.com/ethereum/EIPs/pull/12217",
+      "date": "2026-08-21",
+      "title_en": "EIP-8198: target 10-second slots and align with the reference specs",
+      "note_en": "(barnabemonnot), submitted. It replaces the single `SLOT_DURATION_MS` change with a `SLOT_DURATION_SCHEDULE` modeled on EIP-7892's `BLOB_SCHEDULE`, with exact ratio scaling of rewards and other parameters.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "frame 入口收取解析目标访问费",
+      "note": "EIP-8141 两份 PR 合并：frame 入口收取解析目标访问费 和 APPROVE 失败模式限定在当前调用帧，另有 frame 目标为预编译时的分派 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12211",
+      "date": "2026-08-21",
+      "title_en": "charge the resolved target's access at frame entry",
+      "note_en": "Two EIP-8141 PRs merged: charge the resolved target's access at frame entry and scope APPROVE failure modes to the current call frame, along with dispatch a precompile targeted by a frame.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "APPROVE 失败模式限定在当前调用帧",
+      "note": "EIP-8141 两份 PR 合并：frame 入口收取解析目标访问费 和 APPROVE 失败模式限定在当前调用帧，另有 frame 目标为预编译时的分派 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12212",
+      "date": "2026-08-21",
+      "title_en": "scope APPROVE failure modes to the current call frame",
+      "note_en": "Two EIP-8141 PRs merged: charge the resolved target's access at frame entry and scope APPROVE failure modes to the current call frame, along with dispatch a precompile targeted by a frame.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "规范冲突与 slot 时间",
+      "title": "frame 目标为预编译时的分派",
+      "note": "EIP-8141 两份 PR 合并：frame 入口收取解析目标访问费 和 APPROVE 失败模式限定在当前调用帧，另有 frame 目标为预编译时的分派 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12157",
+      "date": "2026-08-21",
+      "title_en": "dispatch a precompile targeted by a frame",
+      "note_en": "Two EIP-8141 PRs merged: charge the resolved target's access at frame entry and scope APPROVE failure modes to the current call frame, along with dispatch a precompile targeted by a frame.",
+      "topic_en": "Spec clashes and slot time"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：better.codes 上线",
+      "note": "00:06，提交由 Lean 4 证明验证。",
+      "url": "https://x.com/ethereumfndn/status/2090485714660302877",
+      "date": "2026-08-21",
+      "title_en": "EF: better.codes is live",
+      "note_en": "00:06, with submissions verified by Lean 4 proofs.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news #36",
+      "note": "23:30：SEC 的 Regulation Crypto Assets 提案、Glamsterdam 公共测试网提议 9 月底和 10 月、focil-devnet-0 目标 8 月 31 日。",
+      "url": "https://x.com/EtherealnewsHQ/status/2090838904564043923",
+      "date": "2026-08-21",
+      "title_en": "Ethereal news #36",
+      "note_en": "23:30: the SEC's proposed Regulation Crypto Assets, Glamsterdam on public testnets proposed for late September and October, and focil-devnet-0 targeting August 31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：移除 8268，加入 8077、8094、8372",
+      "note": "（nixorokish）提交并合并；PFI EIP-8361 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12225",
+      "date": "2026-08-21",
+      "title_en": "EIP-8081: remove 8268, add 8077, 8094 and 8372",
+      "note_en": "(nixorokish), submitted and merged; PFI EIP-8361, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PFI EIP-8361",
+      "note": "EIP-8081：移除 8268，加入 8077、8094、8372（nixorokish）提交并合并；PFI EIP-8361 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12087",
+      "date": "2026-08-21",
+      "title_en": "PFI EIP-8361",
+      "note_en": "EIP-8081: remove 8268, add 8077, 8094 and 8372 (nixorokish), submitted and merged; PFI EIP-8361, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：iO 系列第三篇也是最后一篇，局部混合",
+      "note": "19:39，与前两篇思路很不同，不需要格密码背景。",
+      "url": "https://x.com/VitalikButerin/status/2090780765076455919",
+      "date": "2026-08-21",
+      "title_en": "Vitalik: the third and last post in my series on obfuscation (iO), local mixing",
+      "note_en": "19:39, a very different philosophy from the first two that needs no lattice background.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：一个完全符合规范的 Falcon-512 账户在 Starknet 主网交易花了 0.06 美元",
+      "note": "20:42。",
+      "url": "https://x.com/StarkWareLtd/status/2090796757374456009",
+      "date": "2026-08-21",
+      "title_en": "StarkWare: a fully spec-compliant Falcon-512 account paid $0.06 to transact on Starknet mainnet",
+      "note_en": "20:42.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dankrad：几个月前的 bug 还在的软件，如今是重大危险信号",
+      "note": "21:56。",
+      "url": "https://x.com/dankrad/status/2090815307996705236",
+      "date": "2026-08-21",
+      "title_en": "dankrad: software that still has the bugs it had a couple of months ago is now a massive red flag",
+      "note_en": "21:56.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8387-stateless-accounts/29473",
+    "credit": "Ethereum Magicians, EIP-8387: Stateless Accounts",
+    "local_path": "assets/2026-08-21.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8387: Stateless Accounts"
+  },
+  "keywords_en": [
+    "Base to ship EIP-8130",
+    "EIP-8387 stateless accounts",
+    "EIP-8389 Keystore signatures for ordinary transactions",
+    "quick slots set to 10 seconds",
+    "keyed nonce and recent root opcodes moved",
+    "Vitalik's iO series"
+  ],
+  "summary_en": "jessepollak announced that Base will roll out EIP-8130 native accounts and wants to work with Ethereum and other EVM teams to do the same; the same day chunter-cb submitted three EIPs built on 8130: stateless accounts, a transaction events view, and Keystore authentication for EIP-2930/1559 transactions, which would let those transactions use post-quantum and aggregatable signatures. Barnabé submitted a PR retargeting EIP-8198 to 10-second slots. PRs for EIP-8250 and EIP-8272 moved numbers that clashed with 8141. StarkWare said a Falcon-512 account transacted on Starknet mainnet for $0.06."
+}

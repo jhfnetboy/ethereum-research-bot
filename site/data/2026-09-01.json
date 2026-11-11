@@ -1,0 +1,140 @@
+{
+  "date": "2026-09-01",
+  "keywords": [
+    "ML-DSA 验证预编译合并为 Draft",
+    "ethrex 的 frame 交易实现",
+    "FOCIL Breakout #41",
+    "Frame Tx Breakout #3",
+    "EIP-8141 状态 gas 边界检查简化",
+    "EIP-8070 size_i 定义",
+    "ACDE #245 与 PQTS #14 议程"
+  ],
+  "summary": "shemnon 的 ML-DSA 验证预编译 EIP 合并为 Draft，按 FIPS 覆盖全部参数集，是后量子签名在 EVM 中的又一条路径。ethrex 团队表示自 8141 被提议为主角起就在 ethrex 上构建参考实现，现在其他客户端也已跟进。当晚召开 FOCIL Breakout #41 和 Frame Tx Breakout #3，两者均无可引用纪要。",
+  "items": [
+    {
+      "topic": "后量子签名与 frame 交易实现",
+      "title": "新 EIP：ML-DSA 验证预编译",
+      "note": "（shemnon）合并为 Draft，“Just the FIPS”，把 ML-DSA 算法的全部参数集做成一组预编译。",
+      "url": "https://github.com/ethereum/EIPs/pull/12048",
+      "date": "2026-09-01",
+      "title_en": "New EIP: precompiles for ML-DSA verification",
+      "note_en": "(shemnon), merged as a Draft: a \"just the FIPS\" set of precompiles for all ML-DSA parameter sets.",
+      "topic_en": "Post-quantum signatures and frame transaction implementation"
+    },
+    {
+      "topic": "后量子签名与 frame 交易实现",
+      "title": "ethrex：EIP-8141 在上次 ACDE 被 SFI",
+      "note": "20:36，自 8141 被提议为主角起就在 ethrex 上构建参考实现，此后其他客户端也采用了 frames。",
+      "url": "https://x.com/ethrex_client/status/2094781529817768050",
+      "date": "2026-09-01",
+      "title_en": "ethrex: EIP-8141 was SFI'd in the last ACDE",
+      "note_en": "20:36; the team has been building a reference implementation on ethrex since 8141 was first proposed as a headliner, and other clients have since picked frames up.",
+      "topic_en": "Post-quantum signatures and frame transaction implementation"
+    },
+    {
+      "topic": "后量子签名与 frame 交易实现",
+      "title": "EIP-8141：移除多余的 frame 状态 gas 上限检查",
+      "note": "（raxhvl）提交，总 gas 已有 `total_frame_gas < 264` 约束，单独检查状态 gas 分量多余，边界条件统一为 `< 264`。",
+      "url": "https://github.com/ethereum/EIPs/pull/12276",
+      "date": "2026-09-01",
+      "title_en": "EIP-8141: remove a redundant check for a frame's state gas limit",
+      "note_en": "(raxhvl), submitted: total gas is already bounded by `total_frame_gas < 264`, so a separate check on the state gas component is redundant, and the boundary is made consistent as `< 264`.",
+      "topic_en": "Post-quantum signatures and frame transaction implementation"
+    },
+    {
+      "topic": "会议",
+      "title": "ACDT #95 议程",
+      "note": "02:45；ACDE #245 议程 23:59；PQTS Breakout #14 议程 19:55，9 月 2 日 20:00。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-95-september-7th-2026/29548",
+      "date": "2026-09-01",
+      "title_en": "ACDT #95 agenda",
+      "note_en": "02:45; ACDE #245 agenda, 23:59; PQTS Breakout #14 agenda, 19:55, for September 2 at 20:00.",
+      "topic_en": "Calls"
+    },
+    {
+      "topic": "会议",
+      "title": "ACDE #245 议程",
+      "note": "ACDT #95 议程 02:45；ACDE #245 议程 23:59；PQTS Breakout #14 议程 19:55，9 月 2 日 20:00。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-245-september-10-2026/29558",
+      "date": "2026-09-01",
+      "title_en": "ACDE #245 agenda",
+      "note_en": "ACDT #95 agenda, 02:45; ACDE #245 agenda, 23:59; PQTS Breakout #14 agenda, 19:55, for September 2 at 20:00.",
+      "topic_en": "Calls"
+    },
+    {
+      "topic": "会议",
+      "title": "PQTS Breakout #14 议程",
+      "note": "ACDT #95 议程 02:45；ACDE #245 议程 23:59；PQTS Breakout #14 议程 19:55，9 月 2 日 20:00。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-14/29552",
+      "date": "2026-09-01",
+      "title_en": "PQTS Breakout #14 agenda",
+      "note_en": "ACDT #95 agenda, 02:45; ACDE #245 agenda, 23:59; PQTS Breakout #14 agenda, 19:55, for September 2 at 20:00.",
+      "topic_en": "Calls"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：同质化代理代币",
+      "note": "（AshtonMagic）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1984",
+      "date": "2026-09-01",
+      "title_en": "New ERC: fungible agent tokens",
+      "note_en": "(AshtonMagic), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7573：异步 incept 转账",
+      "note": "和 ERC-8167：规范之外不设要求 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1983",
+      "date": "2026-09-01",
+      "title_en": "ERC-7573: async incept transfer",
+      "note_en": "And ERC-8167: no requirements outside specifications, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8167：规范之外不设要求",
+      "note": "ERC-7573：异步 incept 转账 和 ERC-8167：规范之外不设要求 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1986",
+      "date": "2026-09-01",
+      "title_en": "ERC-8167: no requirements outside specifications",
+      "note_en": "ERC-7573: async incept transfer and ERC-8167: no requirements outside specifications, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Ethereum Builders Live 介绍 Web3Privacy Now",
+      "note": "22:24，次日 21:00 播出，包括全球活动和 Privacy Explorer。",
+      "url": "https://x.com/ethereumfndn/status/2094808656302723296",
+      "date": "2026-09-01",
+      "title_en": "EF: Ethereum Builders Live on Web3Privacy Now",
+      "note_en": "22:24, airing the next day at 21:00, covering its global events and the Privacy Explorer.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：首笔量子安全比特币交易无需修改比特币协议",
+      "note": "19:43。",
+      "url": "https://x.com/StarkWareLtd/status/2094768014335824281",
+      "date": "2026-09-01",
+      "title_en": "StarkWare: the first quantum-safe Bitcoin transaction was mined without changing the Bitcoin protocol",
+      "note_en": "19:43.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12048",
+    "credit": "GitHub, ethereum/EIPs PR #12048",
+    "local_path": "assets/2026-09-01.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12048"
+  },
+  "keywords_en": [
+    "ML-DSA verification precompiles merged as Draft",
+    "ethrex's frame transaction implementation",
+    "FOCIL Breakout #41",
+    "Frame Tx Breakout #3",
+    "simpler EIP-8141 state gas bound check",
+    "ACDE #245 and PQTS #14 agendas"
+  ],
+  "summary_en": "shemnon's EIP for ML-DSA verification precompiles merged as a Draft, covering every FIPS parameter set, another path for post-quantum signatures in the EVM. The ethrex team said it has been building a reference implementation of 8141 since it was first proposed as a headliner, and other clients have since followed. FOCIL Breakout #41 and Frame Tx Breakout #3 were held in the evening, neither with notes to cite."
+}
