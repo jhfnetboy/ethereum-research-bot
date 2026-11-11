@@ -1,0 +1,107 @@
+{
+  "date": "2026-03-21",
+  "keywords": [
+    "EVMification EIP-8200 用字节码替换预编译",
+    "EIP-8175 加入 Falcon-512 后量子签名",
+    "RISC-V zkVM 严重漏洞披露",
+    "VitalikButerin 确认 EF Mandate",
+    "哈希签名资料"
+  ],
+  "summary": "kevaundray 提交 EVMification（EIP-8200），用等价字节码替换 RIPEMD-160、BLAKE2f 与 BLS12 map to curve 等预编译。Giulio2002 为 EIP-8175 可组合交易加入 Falcon-512 作为第三种签名类型，提交。fede_intern 的团队披露一个主流 RISC-V zkVM 的严重安全漏洞并公开 PoC。",
+  "items": [
+    {
+      "topic": "交易与签名：EIP-8175 加入 Falcon-512",
+      "title": "EIP-8175：加入 Falcon-512 后量子签名方案",
+      "note": "（Giulio2002）提交：把 NIST FIPS 206 标准化的 Falcon-512 作为可组合交易的第三种签名类型 SIG_FALCON512（0x03），补充参数表与签名格式说明。",
+      "url": "https://github.com/ethereum/EIPs/pull/11431",
+      "date": "2026-03-21",
+      "title_en": "EIP-8175: add the Falcon-512 post-quantum signature scheme",
+      "note_en": "(Giulio2002), submitted: adds Falcon-512 (NIST FIPS 206) as a third signature type for composable transactions, SIG_FALCON512 (0x03), with parameter table and signature format entries.",
+      "topic_en": "Transactions and signatures: Falcon-512 in EIP-8175"
+    },
+    {
+      "topic": "交易与签名：EIP-8175 加入 Falcon-512",
+      "title": "tcoratger：推荐 Blockstream Research 的比特币哈希签名方案资料",
+      "note": "07:04。",
+      "url": "https://x.com/tcoratger/status/2035145555546948027",
+      "date": "2026-03-21",
+      "title_en": "tcoratger: recommending Blockstream Research material on hash based signature schemes for Bitcoin",
+      "note_en": "07:04.",
+      "topic_en": "Transactions and signatures: Falcon-512 in EIP-8175"
+    },
+    {
+      "topic": "EVM：EVMification",
+      "title": "新增 EIP：EVMification",
+      "note": "（kevaundray）提交；Magicians 讨论帖 EIP-8200 07:51：用等价字节码替换 blake2f、ripemd160 与 BLS12 map to curve 等预编译。",
+      "url": "https://github.com/ethereum/EIPs/pull/11432",
+      "date": "2026-03-21",
+      "title_en": "Add EIP: EVMification",
+      "note_en": "(kevaundray), submitted; Magicians thread EIP-8200, 07:51: replace precompiles such as blake2f, ripemd160 and the BLS12 map to curve precompiles with equivalent bytecode.",
+      "topic_en": "EVM: EVMification"
+    },
+    {
+      "topic": "EVM：EVMification",
+      "title": "Magicians 讨论帖 EIP-8200",
+      "note": "新增 EIP：EVMification（kevaundray）提交；Magicians 讨论帖 EIP-8200 07:51：用等价字节码替换 blake2f、ripemd160 与 BLS12 map to curve 等预编译。",
+      "url": "https://ethereum-magicians.org/t/eip-8200-evmification/28036",
+      "date": "2026-03-21",
+      "title_en": "Magicians thread EIP-8200",
+      "note_en": "Add EIP: EVMification (kevaundray), submitted; Magicians thread EIP-8200, 07:51: replace precompiles such as blake2f, ripemd160 and the BLS12 map to curve precompiles with equivalent bytecode.",
+      "topic_en": "EVM: EVMification"
+    },
+    {
+      "topic": "其他动态",
+      "title": "fede_intern：alignedlayer 与 class_lambda 在一个主流 RISC-V zkVM 中发现又一严重漏洞，发布完整 PoC 并完成负责任披露",
+      "note": "01:23。",
+      "url": "https://x.com/fede_intern/status/2035059617210700275",
+      "date": "2026-03-21",
+      "title_en": "fede_intern: alignedlayer and class_lambda found another critical vulnerability in a leading RISC-V zkVM, releasing the full PoC after responsible disclosure",
+      "note_en": "01:23.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8152 进入 Review",
+      "note": "（radeksvarz）提交；Ethproofs Community Call #8（Poseidon）。",
+      "url": "https://github.com/ethereum/ERCs/pull/1613",
+      "date": "2026-03-21",
+      "title_en": "ERC-8152: move to Review",
+      "note_en": "(radeksvarz), submitted; Ethproofs Community Call #8 (Poseidon).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethproofs Community Call #8（Poseidon）",
+      "note": "ERC-8152 进入 Review（radeksvarz）提交；Ethproofs Community Call #8（Poseidon）。",
+      "url": "https://github.com/ethereum/pm/issues/1979",
+      "date": "2026-03-21",
+      "title_en": "Ethproofs Community Call #8 (Poseidon)",
+      "note_en": "ERC-8152: move to Review (radeksvarz), submitted; Ethproofs Community Call #8 (Poseidon).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：确认支持 EF Mandate 的方向，并将其转化为自己领域的策略",
+      "note": "20:25。",
+      "url": "https://x.com/VitalikButerin/status/2035346973134409929",
+      "date": "2026-03-21",
+      "title_en": "VitalikButerin: affirming the direction of the EF Mandate and committing to turn it into strategy for his domain",
+      "note_en": "20:25.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8200-evmification/28036",
+    "credit": "Ethereum Magicians, EIP-8200: EVMification",
+    "local_path": "assets/2026-03-21.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8200: EVMification"
+  },
+  "keywords_en": [
+    "EVMification EIP-8200 replaces precompiles with bytecode",
+    "EIP-8175 adds Falcon-512 post-quantum signatures",
+    "a critical RISC-V zkVM vulnerability disclosed",
+    "VitalikButerin affirms the EF Mandate",
+    "hash based signature material"
+  ],
+  "summary_en": "kevaundray submitted EVMification (EIP-8200), replacing precompiles such as RIPEMD-160, BLAKE2f and BLS12 map to curve with equivalent bytecode. Giulio2002 submitted Falcon-512 as a third signature type for EIP-8175 composable transactions. fede_intern's team disclosed a critical vulnerability in a leading RISC-V zkVM and released the PoC."
+}

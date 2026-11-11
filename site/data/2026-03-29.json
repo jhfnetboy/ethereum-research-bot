@@ -1,0 +1,127 @@
+{
+  "date": "2026-03-29",
+  "keywords": [
+    "提交揭示交易 frame EIP-8209",
+    "合约大小上限提高到 64KiB",
+    "解耦共识以加快最终性",
+    "延迟降低对质押收益的影响",
+    "EIP-8025 执行层需配合"
+  ],
+  "summary": "forshtat 提交 Commit-Reveal Transaction Frames（EIP-8209），在 frame 交易中加入提交揭示以处理包含时隐私。Giulio2002 提议把合约代码上限从 24KiB 提高到 64KiB。fradamt 在 ethresear.ch 提出解耦出块与最终性时间线，让 slot 更快而最终性不变慢。",
+  "items": [
+    {
+      "topic": "原生 AA 与隐私：提交揭示 frame",
+      "title": "新增 EIP：Commit-Reveal Transaction Frames",
+      "note": "（forshtat）提交；据 Magicians 讨论帖 EIP-8209，提案针对长期讨论的包含时隐私问题，在 EIP-8141 frame 交易中先提交后揭示交易内容。",
+      "url": "https://github.com/ethereum/EIPs/pull/11466",
+      "date": "2026-03-29",
+      "title_en": "Add EIP: Commit-Reveal Transaction Frames",
+      "note_en": "(forshtat), submitted; per the Magicians thread EIP-8209, it targets the long discussed inclusion time privacy problem by committing to and later revealing transaction contents inside EIP-8141 frame transactions.",
+      "topic_en": "Native AA and privacy: commit reveal frames"
+    },
+    {
+      "topic": "原生 AA 与隐私：提交揭示 frame",
+      "title": "Magicians 讨论帖 EIP-8209",
+      "note": "新增 EIP：Commit-Reveal Transaction Frames（forshtat）提交；据 Magicians 讨论帖 EIP-8209，提案针对长期讨论的包含时隐私问题，在 EIP-8141 frame 交易中先提交后揭示交易内容。",
+      "url": "https://ethereum-magicians.org/t/eip-8209-commit-reveal-transaction-frames/28105",
+      "date": "2026-03-29",
+      "title_en": "Magicians thread EIP-8209",
+      "note_en": "Add EIP: Commit-Reveal Transaction Frames (forshtat), submitted; per the Magicians thread EIP-8209, it targets the long discussed inclusion time privacy problem by committing to and later revealing transaction contents inside EIP-8141 frame transactions.",
+      "topic_en": "Native AA and privacy: commit reveal frames"
+    },
+    {
+      "topic": "合约与执行",
+      "title": "新增 EIP：把合约最大大小提高到 64KiB",
+      "note": "（Giulio2002）提交：代码上限由 24KiB 升至 64KiB，initcode 由 48KiB 升至 128KiB，保留 EIP-3860 的 2:1 比例，INITCODE_WORD_COST 不变。",
+      "url": "https://github.com/ethereum/EIPs/pull/11462",
+      "date": "2026-03-29",
+      "title_en": "Add EIP: Increase Maximum Contract Size to 64KiB",
+      "note_en": "(Giulio2002), submitted: code size from 24KiB to 64KiB and initcode from 48KiB to 128KiB, keeping EIP-3860's 2:1 ratio with INITCODE_WORD_COST unchanged.",
+      "topic_en": "Contracts and execution"
+    },
+    {
+      "topic": "合约与执行",
+      "title": "ladislaus0x：EIP-8025 可选 zkEVM 证明也需要执行层配合，包括被证明的无状态 guest 程序与标准化的无状态验证数据包",
+      "note": "05:23。",
+      "url": "https://x.com/ladislaus0x/status/2038019146718339228",
+      "date": "2026-03-29",
+      "title_en": "ladislaus0x: EIP-8025 optional zkEVM proofs need execution layer work too, including a proven stateless guest program and a standard data package for stateless validation",
+      "note_en": "05:23.",
+      "topic_en": "Contracts and execution"
+    },
+    {
+      "topic": "共识研究",
+      "title": "ethresear.ch：用解耦共识加快最终性",
+      "note": "（fradamt）02:56：当前每个 slot 有占验证者 1/32 的大委员会在关键路径上投票，缩小委员会能加快 slot 却会拖慢最终性，文章提出把两条时间线分开；ethresear.ch：延迟降低对质押收益的影响 03:09。",
+      "url": "https://ethresear.ch/t/unblocking-faster-finality-with-decoupled-consensus/24527",
+      "date": "2026-03-29",
+      "title_en": "ethresear.ch: Unblocking faster finality with decoupled consensus",
+      "note_en": "(fradamt), 02:56: today a committee of 1/32 of validators votes in the critical path each slot, and shrinking it speeds slots but slows finality, so the post separates the two timelines; ethresear.ch: Effects of Latency Reduction on Staking Revenue, 03:09.",
+      "topic_en": "Consensus research"
+    },
+    {
+      "topic": "共识研究",
+      "title": "ethresear.ch：延迟降低对质押收益的影响",
+      "note": "ethresear.ch：用解耦共识加快最终性（fradamt）02:56：当前每个 slot 有占验证者 1/32 的大委员会在关键路径上投票，缩小委员会能加快 slot 却会拖慢最终性，文章提出把两条时间线分开；ethresear.ch：延迟降低对质押收益的影响 03:09。",
+      "url": "https://ethresear.ch/t/effects-of-latency-reduction-on-staking-revenue/24528",
+      "date": "2026-03-29",
+      "title_en": "ethresear.ch: Effects of Latency Reduction on Staking Revenue",
+      "note_en": "Ethresear.ch: Unblocking faster finality with decoupled consensus (fradamt), 02:56: today a committee of 1/32 of validators votes in the critical path each slot, and shrinking it speeds slots but slows finality, so the post separates the two timelines; ethresear.ch: Effects of Latency Reduction on Staking Revenue, 03:09.",
+      "topic_en": "Consensus research"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：只依靠交易本身的确定性执行排序",
+      "note": "03:04；新增 ERC：链上 Agent 的 H3 空间身份扩展（brienteth）提交。",
+      "url": "https://ethereum-magicians.org/t/deterministic-transaction-execution-ordering-using-only-the-transactions-no-external-randomness-no-bundles/28098",
+      "date": "2026-03-29",
+      "title_en": "Magicians: deterministic transaction execution ordering using only the transactions",
+      "note_en": "03:04; Add ERC: H3 Spatial Identity Extension for On-Chain Agents (brienteth), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：链上 Agent 的 H3 空间身份扩展",
+      "note": "Magicians：只依靠交易本身的确定性执行排序 03:04；新增 ERC：链上 Agent 的 H3 空间身份扩展（brienteth）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1634",
+      "date": "2026-03-29",
+      "title_en": "Add ERC: H3 Spatial Identity Extension for On-Chain Agents",
+      "note_en": "Magicians: deterministic transaction execution ordering using only the transactions, 03:04; Add ERC: H3 Spatial Identity Extension for On-Chain Agents (brienteth), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：明天 Cannes 有 leanEthereum 团队主办的后量子密码学专场",
+      "note": "06:35；EliBenSasson：哪种 ZK 技术可以托付美元 20:26。",
+      "url": "https://x.com/binji_x/status/2038037265876721932",
+      "date": "2026-03-29",
+      "title_en": "binji_x: tomorrow in Cannes the leanEthereum team hosts a full day on post-quantum cryptography",
+      "note_en": "06:35; EliBenSasson: which ZK tech can you trust with your dollars, 20:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：哪种 ZK 技术可以托付美元",
+      "note": "binji_x：明天 Cannes 有 leanEthereum 团队主办的后量子密码学专场 06:35；EliBenSasson：哪种 ZK 技术可以托付美元 20:26。",
+      "url": "https://x.com/EliBenSasson/status/2038246435888509120",
+      "date": "2026-03-29",
+      "title_en": "EliBenSasson: which ZK tech can you trust with your dollars",
+      "note_en": "Binji_x: tomorrow in Cannes the leanEthereum team hosts a full day on post-quantum cryptography, 06:35; EliBenSasson: which ZK tech can you trust with your dollars, 20:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/unblocking-faster-finality-with-decoupled-consensus/24527",
+    "credit": "ethresear.ch, Unblocking faster finality with decoupled consensus",
+    "local_path": "assets/2026-03-29.jpg",
+    "credit_en": "ethresear.ch, Unblocking faster finality with decoupled consensus"
+  },
+  "keywords_en": [
+    "Commit-Reveal Transaction Frames EIP-8209",
+    "raising the contract size limit to 64KiB",
+    "decoupled consensus for faster finality",
+    "effects of latency reduction on staking revenue",
+    "EIP-8025 needs execution layer work"
+  ],
+  "summary_en": "forshtat submitted Commit-Reveal Transaction Frames (EIP-8209), adding commit reveal to frame transactions to address inclusion time privacy. Giulio2002 proposed raising the contract code limit from 24KiB to 64KiB. fradamt proposed on ethresear.ch decoupling the block production and finality timelines so slots get faster without slowing finality."
+}

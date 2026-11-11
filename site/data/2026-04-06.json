@@ -1,0 +1,137 @@
+{
+  "date": "2026-04-06",
+  "keywords": [
+    "EIP-8175 改为纯费用与授权容器并加入 fee_auth 赞助",
+    "EIP-8141 APPROVE 范围与默认代码修正",
+    "交易等待时间网站上线",
+    "VEIL 零知识编译器",
+    "Drift 后呼吁支持 SEAL"
+  ],
+  "summary": "rakita 重构 EIP-8175，把 to、value、data 移入 CALL 与 CREATE 能力，交易外壳只负责费用与授权，加入 fee_auth 可编程赞助与三个新操作码，提交并合并。chiranjeev13 提交 EIP-8141 规范修正，包括 VERIFY frame 数量检查与允许任意 EOA 作 paymaster。nero_eth 上线交易平均上链等待时间网站。",
+  "items": [
+    {
+      "topic": "交易格式：EIP-8175 能力化",
+      "title": "EIP-8175：CALL 与 CREATE 能力、fee_auth 与新操作码",
+      "note": "（rakita）提交并合并：把 to、value、data 移入有类型的 CALL 与 CREATE 能力，交易外壳成为纯费用与授权容器；通过 fee_auth 字段实现可编程的费用代付；新增 RETURNETH、SIG（签名自省）与 SIGHASH 三个操作码。",
+      "url": "https://github.com/ethereum/EIPs/pull/11490",
+      "date": "2026-04-06",
+      "title_en": "EIP-8175: CALL/CREATE capabilities, fee_auth and new opcodes",
+      "note_en": "(rakita), submitted and merged: moves to, value and data into typed CALL and CREATE capabilities so the envelope becomes a pure fee and auth container, adds programmable fee delegation through a fee_auth field, and adds three opcodes, RETURNETH, SIG (signature introspection) and SIGHASH.",
+      "topic_en": "Transaction format: EIP-8175 capabilities"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 修正",
+      "title": "EIP-8141：修正 APPROVE 范围、默认代码与 VERIFY frame 数量检查",
+      "note": "（chiranjeev13）提交：因 sender_approved 与 payer_approved 只能设置一次，增加 VERIFY frame 不超过 2 个的静态检查；修正结构规则中过时的 APPROVE 范围值；默认 VERIFY 代码去掉 frame.target 不等于 tx.sender 的检查，允许任意 EOA 充当 paymaster。",
+      "url": "https://github.com/ethereum/EIPs/pull/11488",
+      "date": "2026-04-06",
+      "title_en": "EIP-8141: fix APPROVE scopes, default code and add a VERIFY frame count check",
+      "note_en": "(chiranjeev13), submitted: since sender_approved and payer_approved are one shot flags, adds a static check of at most 2 VERIFY frames; fixes stale APPROVE scope values in the structural rules; removes the frame.target != tx.sender check from default VERIFY code so any EOA can act as paymaster.",
+      "topic_en": "Native AA: EIP-8141 fixes"
+    },
+    {
+      "topic": "交易体验",
+      "title": "nero_eth：交易上链平均等待时间网站上线，并解释 Glamsterdam 的 ePBS（EIP-7732）将带来的变化",
+      "note": "14:44。",
+      "url": "https://x.com/nero_eth/status/2041059488606613770",
+      "date": "2026-04-06",
+      "title_en": "nero_eth: a site showing how long Ethereum transactions wait to land onchain is live, with context on what Glamsterdam's ePBS (EIP-7732) changes",
+      "note_en": "14:44.",
+      "topic_en": "Transaction experience"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger：Succinct 的 VEIL 为哈希多线性证明系统加入零知识，证明开销仅约 3%",
+      "note": "17:11；EIP-8182 资源更新（RogerPodacter）提交并合并；FOCIL Breakout #32 议程 21:49。",
+      "url": "https://x.com/tcoratger/status/2041096571257802779",
+      "date": "2026-04-06",
+      "title_en": "tcoratger: Succinct's VEIL adds zero knowledge to hash based multilinear proof systems with about 3% prover overhead",
+      "note_en": "17:11; EIP-8182 assets update (RogerPodacter), submitted and merged; FOCIL Breakout #32 agenda, 21:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8182 资源更新",
+      "note": "tcoratger：Succinct 的 VEIL 为哈希多线性证明系统加入零知识，证明开销仅约 3% 17:11；EIP-8182 资源更新（RogerPodacter）提交并合并；FOCIL Breakout #32 议程 21:49。",
+      "url": "https://github.com/ethereum/EIPs/pull/11487",
+      "date": "2026-04-06",
+      "title_en": "EIP-8182 assets update",
+      "note_en": "Tcoratger: Succinct's VEIL adds zero knowledge to hash based multilinear proof systems with about 3% prover overhead, 17:11; EIP-8182 assets update (RogerPodacter), submitted and merged; FOCIL Breakout #32 agenda, 21:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #32 议程",
+      "note": "tcoratger：Succinct 的 VEIL 为哈希多线性证明系统加入零知识，证明开销仅约 3% 17:11；EIP-8182 资源更新（RogerPodacter）提交并合并；FOCIL Breakout #32 议程 21:49。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-32-april-07-2026/28151",
+      "date": "2026-04-06",
+      "title_en": "FOCIL Breakout #32 agenda",
+      "note_en": "Tcoratger: Succinct's VEIL adds zero knowledge to hash based multilinear proof systems with about 3% prover overhead, 17:11; EIP-8182 assets update (RogerPodacter), submitted and merged; FOCIL Breakout #32 agenda, 21:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Agent NFT 身份绑定",
+      "note": "（nxt3d）提交；ethresear.ch：观察承诺协议 OCP v1.0.0 08:30。",
+      "url": "https://github.com/ethereum/ERCs/pull/1648",
+      "date": "2026-04-06",
+      "title_en": "Add ERC: Agent NFT Identity Bindings",
+      "note_en": "(nxt3d), submitted; ethresear.ch: Observation Commitment Protocol (OCP) v1.0.0, 08:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：观察承诺协议 OCP v1.0.0",
+      "note": "新增 ERC：Agent NFT 身份绑定（nxt3d）提交；ethresear.ch：观察承诺协议 OCP v1.0.0 08:30。",
+      "url": "https://ethresear.ch/t/observation-commitment-protocol-ocp-v1-0-0/24602",
+      "date": "2026-04-06",
+      "title_en": "ethresear.ch: Observation Commitment Protocol (OCP) v1.0.0",
+      "note_en": "Add ERC: Agent NFT Identity Bindings (nxt3d), submitted; ethresear.ch: Observation Commitment Protocol (OCP) v1.0.0, 08:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "samczsun：如果 Drift 被黑让你害怕，请捐助 SEAL 以支持安全基础设施",
+      "note": "00:27；hasufl：朝鲜有上千人时刻想黑你 19:28；binji_x：2026 年做密码朋克就是想要基本人权 23:40。",
+      "url": "https://x.com/samczsun/status/2040843662368678222",
+      "date": "2026-04-06",
+      "title_en": "samczsun: if the Drift hack scares you, donate to SEAL to keep building security infrastructure",
+      "note_en": "00:27; hasufl: North Korea has 1000 people trying to hack you at all times, 19:28; binji_x: being cypherpunk in 2026 is just wanting basic human rights, 23:40.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hasufl：朝鲜有上千人时刻想黑你",
+      "note": "samczsun：如果 Drift 被黑让你害怕，请捐助 SEAL 以支持安全基础设施 00:27；hasufl：朝鲜有上千人时刻想黑你 19:28；binji_x：2026 年做密码朋克就是想要基本人权 23:40。",
+      "url": "https://x.com/hasufl/status/2041131035207799147",
+      "date": "2026-04-06",
+      "title_en": "hasufl: North Korea has 1000 people trying to hack you at all times",
+      "note_en": "Samczsun: if the Drift hack scares you, donate to SEAL to keep building security infrastructure, 00:27; hasufl: North Korea has 1000 people trying to hack you at all times, 19:28; binji_x: being cypherpunk in 2026 is just wanting basic human rights, 23:40.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：2026 年做密码朋克就是想要基本人权",
+      "note": "samczsun：如果 Drift 被黑让你害怕，请捐助 SEAL 以支持安全基础设施 00:27；hasufl：朝鲜有上千人时刻想黑你 19:28；binji_x：2026 年做密码朋克就是想要基本人权 23:40。",
+      "url": "https://x.com/binji_x/status/2041194284586561850",
+      "date": "2026-04-06",
+      "title_en": "binji_x: being cypherpunk in 2026 is just wanting basic human rights",
+      "note_en": "Samczsun: if the Drift hack scares you, donate to SEAL to keep building security infrastructure, 00:27; hasufl: North Korea has 1000 people trying to hack you at all times, 19:28; binji_x: being cypherpunk in 2026 is just wanting basic human rights, 23:40.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/focil-breakout-32-april-07-2026/28151",
+    "credit": "Ethereum Magicians, FOCIL Breakout #32, April 07, 2026",
+    "local_path": "assets/2026-04-06.jpg",
+    "credit_en": "Ethereum Magicians, FOCIL Breakout #32, April 07, 2026"
+  },
+  "keywords_en": [
+    "EIP-8175 becomes a pure fee and auth container with fee_auth sponsorship",
+    "EIP-8141 APPROVE scope and default code fixes",
+    "a transaction wait time site goes live",
+    "the VEIL zero knowledge compiler",
+    "calls to support SEAL after Drift"
+  ],
+  "summary_en": "rakita restructured EIP-8175, moving to, value and data into CALL and CREATE capabilities so the envelope only carries fee and auth, adding fee_auth programmable sponsorship and three new opcodes, submitted and merged. chiranjeev13 submitted EIP-8141 spec fixes, including a VERIFY frame count check and allowing any EOA as paymaster. nero_eth launched a site showing average transaction wait times."
+}

@@ -1,0 +1,109 @@
+{
+  "date": "2026-04-05",
+  "keywords": [
+    "EIP-8130 合约更新合并",
+    "钱包隐私才是关键",
+    "Kohaku 全栈隐私仍有长路",
+    "同步可组合性",
+    "L1 zkEVM 专场 #03 议程",
+    "Agent Assurance 测试向量"
+  ],
+  "summary": "周日较安静。chunter-cb 的 EIP-8130 合约更新合并。binji_x 强调钱包本身不安全时链上隐私毫无意义，kassandraETH 回应 Kohaku 想解决这个问题，但兼顾好 UX 与通用标准的全栈链上隐私仍很难。",
+  "items": [
+    {
+      "topic": "隐私：钱包层",
+      "title": "binji_x：必须推动钱包隐私，钱包本身可被攻破时链上隐私再好也没用",
+      "note": "15:11；kassandraETH：Kohaku 很想解决这个问题，但兼顾好 UX 与通用标准的全栈链上隐私非常难 15:27。",
+      "url": "https://x.com/binji_x/status/2040703905378546038",
+      "date": "2026-04-05",
+      "title_en": "binji_x: we must push for wallet privacy, since onchain privacy is useless if the wallet itself can be compromised",
+      "note_en": "15:11; kassandraETH: Kohaku really wants to fix this, but full stack onchain privacy with good UX as a common standard is very hard, 15:27.",
+      "topic_en": "Privacy: the wallet layer"
+    },
+    {
+      "topic": "隐私：钱包层",
+      "title": "kassandraETH：Kohaku 很想解决这个问题，但兼顾好 UX 与通用标准的全栈链上隐私非常难",
+      "note": "binji_x：必须推动钱包隐私，钱包本身可被攻破时链上隐私再好也没用 15:11；kassandraETH：Kohaku 很想解决这个问题，但兼顾好 UX 与通用标准的全栈链上隐私非常难 15:27。",
+      "url": "https://x.com/kassandraETH/status/2040707869444628638",
+      "date": "2026-04-05",
+      "title_en": "kassandraETH: Kohaku really wants to fix this, but full stack onchain privacy with good UX as a common standard is very hard",
+      "note_en": "Binji_x: we must push for wallet privacy, since onchain privacy is useless if the wallet itself can be compromised, 15:11; kassandraETH: Kohaku really wants to fix this, but full stack onchain privacy with good UX as a common standard is very hard, 15:27.",
+      "topic_en": "Privacy: the wallet layer"
+    },
+    {
+      "topic": "原生 AA：EIP-8130",
+      "title": "EIP-8130：合约更新",
+      "note": "（chunter-cb）合并，4 月 3 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11483",
+      "date": "2026-04-05",
+      "title_en": "EIP-8130: contract updates",
+      "note_en": "(chunter-cb), merged after submission on April 3.",
+      "topic_en": "Native AA: EIP-8130"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L1-zkEVM breakout #03 议程",
+      "note": "21:40；ERC-8210：Agent Assurance 测试向量（cmayorga）提交；ERC-7913 回到 Draft（Aigen-Protocol）提交。",
+      "url": "https://ethereum-magicians.org/t/l1-zkevm-breakout-03-april-8-2026/28148",
+      "date": "2026-04-05",
+      "title_en": "L1-zkEVM breakout #03 agenda",
+      "note_en": "21:40; ERC-8210: Agent Assurance test vectors (cmayorga), submitted; ERC-7913: move to Draft (Aigen-Protocol), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8210：Agent Assurance 测试向量",
+      "note": "L1-zkEVM breakout #03 议程 21:40；ERC-8210：Agent Assurance 测试向量（cmayorga）提交；ERC-7913 回到 Draft（Aigen-Protocol）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1647",
+      "date": "2026-04-05",
+      "title_en": "ERC-8210: Agent Assurance test vectors",
+      "note_en": "L1-zkEVM breakout #03 agenda, 21:40; ERC-8210: Agent Assurance test vectors (cmayorga), submitted; ERC-7913: move to Draft (Aigen-Protocol), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7913 回到 Draft",
+      "note": "L1-zkEVM breakout #03 议程 21:40；ERC-8210：Agent Assurance 测试向量（cmayorga）提交；ERC-7913 回到 Draft（Aigen-Protocol）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1646",
+      "date": "2026-04-05",
+      "title_en": "ERC-7913: move to Draft",
+      "note_en": "L1-zkEVM breakout #03 agenda, 21:40; ERC-8210: Agent Assurance test vectors (cmayorga), submitted; ERC-7913: move to Draft (Aigen-Protocol), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "etheconomiczone：同步可组合性除解决碎片化外还带来跨链身份等新能力",
+      "note": "23:30；EliBenSasson：即便用户不在乎量子准备，构建者也应在乎 00:33。",
+      "url": "https://x.com/etheconomiczone/status/2040829422757196157",
+      "date": "2026-04-05",
+      "title_en": "etheconomiczone: besides fixing fragmentation, synchronous composability unlocks new capabilities such as global identity",
+      "note_en": "23:30; EliBenSasson: even if users do not care about quantum readiness, builders should, 00:33.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：即便用户不在乎量子准备，构建者也应在乎",
+      "note": "etheconomiczone：同步可组合性除解决碎片化外还带来跨链身份等新能力 23:30；EliBenSasson：即便用户不在乎量子准备，构建者也应在乎 00:33。",
+      "url": "https://x.com/EliBenSasson/status/2040482822293475829",
+      "date": "2026-04-05",
+      "title_en": "EliBenSasson: even if users do not care about quantum readiness, builders should",
+      "note_en": "Etheconomiczone: besides fixing fragmentation, synchronous composability unlocks new capabilities such as global identity, 23:30; EliBenSasson: even if users do not care about quantum readiness, builders should, 00:33.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/l1-zkevm-breakout-03-april-8-2026/28148",
+    "credit": "Ethereum Magicians, L1-zkEVM breakout #03, April 8, 2026",
+    "local_path": "assets/2026-04-05.jpg",
+    "credit_en": "Ethereum Magicians, L1-zkEVM breakout #03, April 8, 2026"
+  },
+  "keywords_en": [
+    "EIP-8130 contract updates merged",
+    "wallet privacy is what matters",
+    "Kohaku's long road to full stack privacy",
+    "synchronous composability",
+    "L1-zkEVM breakout #03 agenda",
+    "Agent Assurance test vectors"
+  ],
+  "summary_en": "A quiet Sunday. chunter-cb's EIP-8130 contract updates merged. binji_x stressed that onchain privacy is meaningless if the wallet itself can be compromised, and kassandraETH replied that Kohaku wants to fix this but full stack onchain privacy with good UX and a common standard is still very hard."
+}

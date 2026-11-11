@@ -1,0 +1,87 @@
+{
+  "date": "2026-04-04",
+  "keywords": [
+    "EIP-8182 私密转账更新合并",
+    "EIP-7864 去掉冗余代码",
+    "ACDE #234 议程",
+    "Google 与 Oratomic 论文改写 Q day 时间表",
+    "Ledger 量子安全钓鱼邮件"
+  ],
+  "summary": "周六较安静。RogerPodacter 继续更新 EIP-8182 协议内私密转账，提交并合并。ACDE #234 议程发布。tcoratger 解读 nic_carter 对 Google 与 Oratomic 两篇量子论文的分析，认为 Q day 可能比预想更近。",
+  "items": [
+    {
+      "topic": "隐私：EIP-8182",
+      "title": "EIP-8182 更新",
+      "note": "（RogerPodacter）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11485",
+      "date": "2026-04-04",
+      "title_en": "EIP-8182 update",
+      "note_en": "(RogerPodacter), submitted and merged.",
+      "topic_en": "Privacy: EIP-8182"
+    },
+    {
+      "topic": "隐私：EIP-8182",
+      "title": "StarkWareLtd：可扩展性是第一步，现在要彻底解决链上隐私",
+      "note": "20:05。",
+      "url": "https://x.com/StarkWareLtd/status/2040415394582646981",
+      "date": "2026-04-04",
+      "title_en": "StarkWareLtd: scalability was step one, now fixing onchain privacy for good",
+      "note_en": "20:05.",
+      "topic_en": "Privacy: EIP-8182"
+    },
+    {
+      "topic": "后量子",
+      "title": "tcoratger：Google 与 Oratomic 的两篇论文改写了 Q day 时间表，解读 nic_carter 的分析",
+      "note": "05:12；peter_szilagyi：新一轮以量子安全为名冒充 Ledger 的钓鱼邮件 16:42。",
+      "url": "https://x.com/tcoratger/status/2040190625602056216",
+      "date": "2026-04-04",
+      "title_en": "tcoratger: two papers from Google and Oratomic shattered Q day timelines, summarizing nic_carter's analysis",
+      "note_en": "05:12; peter_szilagyi: a new round of Ledger impersonation emails about quantum safety, 16:42.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "后量子",
+      "title": "peter_szilagyi：新一轮以量子安全为名冒充 Ledger 的钓鱼邮件",
+      "note": "tcoratger：Google 与 Oratomic 的两篇论文改写了 Q day 时间表，解读 nic_carter 的分析 05:12；peter_szilagyi：新一轮以量子安全为名冒充 Ledger 的钓鱼邮件 16:42。",
+      "url": "https://x.com/peter_szilagyi/status/2040364253618622534",
+      "date": "2026-04-04",
+      "title_en": "peter_szilagyi: a new round of Ledger impersonation emails about quantum safety",
+      "note_en": "Tcoratger: two papers from Google and Oratomic shattered Q day timelines, summarizing nic_carter's analysis, 05:12; peter_szilagyi: a new round of Ledger impersonation emails about quantum safety, 16:42.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #234 议程",
+      "note": "07:02；EIP-7864：去掉冗余代码（derekchiang）提交。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-234-april-9-2026/28142",
+      "date": "2026-04-04",
+      "title_en": "ACDE #234 agenda",
+      "note_en": "07:02; EIP-7864: remove redundant code (derekchiang), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7864：去掉冗余代码",
+      "note": "ACDE #234 议程 07:02；EIP-7864：去掉冗余代码（derekchiang）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11484",
+      "date": "2026-04-04",
+      "title_en": "EIP-7864: remove redundant code",
+      "note_en": "ACDE #234 agenda, 07:02; EIP-7864: remove redundant code (derekchiang), submitted.",
+      "topic_en": "Other updates"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-234-april-9-2026/28142",
+    "credit": "Ethereum Magicians, All Core Devs - Execution (ACDE) #234, April 9, 2026",
+    "local_path": "assets/2026-04-04.jpg",
+    "credit_en": "Ethereum Magicians, All Core Devs - Execution (ACDE) #234, April 9, 2026"
+  },
+  "keywords_en": [
+    "EIP-8182 private transfers update merged",
+    "EIP-7864 redundant code removed",
+    "ACDE #234 agenda",
+    "Google and Oratomic papers reshape the Q day timeline",
+    "Ledger quantum safety phishing emails"
+  ],
+  "summary_en": "A quiet Saturday. RogerPodacter kept updating EIP-8182 enshrined private transfers, submitted and merged. The ACDE #234 agenda was posted. tcoratger summarized nic_carter's analysis of the Google and Oratomic quantum papers, suggesting Q day may be closer than thought."
+}

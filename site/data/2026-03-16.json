@@ -1,0 +1,139 @@
+{
+  "date": "2026-03-16",
+  "keywords": [
+    "FOCIL 与原生 AA 如何配合",
+    "加密敏捷交易 CATX EIP",
+    "EIP-8037 对齐 EIP-7928 gas 校验阶段",
+    "snap/2 基于 BAL 的状态修复 EIP 合并",
+    "ACDT #74",
+    "L2 角色在演变"
+  ],
+  "summary": "soispoke 发文说明 FOCIL 与 frame 交易如何配合：FOCIL 用廉价的 nonce 与余额检查判断被遗漏的包含列表交易，这对 EOA 有效，但原生 AA 的有效性需要执行 VERIFY frame，因此要定义一个可进公共内存池的 FrameTx 子集。shemnon 提交 CATX，把交易体与签名分离以便迁移后量子签名。ACDT #74 讨论 ePBS 与 BAL 的 devnet。",
+  "items": [
+    {
+      "topic": "原生 AA：FOCIL 与 frame 交易",
+      "title": "soispoke：鉴于 Hegotá 讨论哪个执行层头号提案与 FOCIL 一起上线，发文说明 FOCIL 与 frame 交易如何配合",
+      "note": "18:08；Magicians 原文：FOCIL 用基于执行后状态的 nonce 与余额检查判断被遗漏的包含列表交易，这对 EOA 有效，但原生 AA 交易需执行 VERIFY frame 才能判定有效，因此定义可进公共内存池的 FrameTx 子集，在执行后状态上限定 VERIFY 执行，并为每个包含列表设 VERIFY gas 预算以限制 attester 工作量。",
+      "url": "https://x.com/soispoke/status/2033500624742916136",
+      "date": "2026-03-16",
+      "title_en": "soispoke: given the Hegotá discussion on which EL headliner ships with FOCIL, a post on how FOCIL and frame transactions interact",
+      "note_en": "18:08; the Magicians post: FOCIL checks omitted inclusion list transactions with a nonce and balance check against post state, which works for EOAs, but native AA transactions need VERIFY frames executed to judge validity, so it defines a public mempool eligible FrameTx subset with bounded VERIFY execution against post state and a per list VERIFY gas budget to cap attester work.",
+      "topic_en": "Native AA: FOCIL and frame transactions"
+    },
+    {
+      "topic": "原生 AA：FOCIL 与 frame 交易",
+      "title": "Magicians 原文",
+      "note": "soispoke：鉴于 Hegotá 讨论哪个执行层头号提案与 FOCIL 一起上线，发文说明 FOCIL 与 frame 交易如何配合 18:08；Magicians 原文：FOCIL 用基于执行后状态的 nonce 与余额检查判断被遗漏的包含列表交易，这对 EOA 有效，但原生 AA 交易需执行 VERIFY frame 才能判定有效，因此定义可进公共内存池的 FrameTx 子集，在执行后状态上限定 VERIFY 执行，并为每个包含列表设 VERIFY gas 预算以限制 attester 工作量。",
+      "url": "https://ethereum-magicians.org/t/focil-native-account-abstraction/27999",
+      "date": "2026-03-16",
+      "title_en": "the Magicians post",
+      "note_en": "Soispoke: given the Hegotá discussion on which EL headliner ships with FOCIL, a post on how FOCIL and frame transactions interact, 18:08; the Magicians post: FOCIL checks omitted inclusion list transactions with a nonce and balance check against post state, which works for EOAs, but native AA transactions need VERIFY frames executed to judge validity, so it defines a public mempool eligible FrameTx subset with bounded VERIFY execution against post state and a per list VERIFY gas budget to cap attester work.",
+      "topic_en": "Native AA: FOCIL and frame transactions"
+    },
+    {
+      "topic": "交易与签名",
+      "title": "新增 EIP：加密敏捷交易",
+      "note": "（shemnon）提交；Magicians：EIP-8197 CATX 23:11：EIP-2718 交易格式，把交易体与签名分开，签名按位置承诺，支持多签与未来的 ZK 签名聚合，也适用于 EIP-8141 frame 交易。",
+      "url": "https://github.com/ethereum/EIPs/pull/11413",
+      "date": "2026-03-16",
+      "title_en": "Add EIP: Cryptographically Agile Transactions",
+      "note_en": "(shemnon), submitted; Magicians: EIP-8197 CATX, 23:11: an EIP-2718 format separating the body from signatures, with each signature committing to its position, supporting multisig and future ZK signature aggregation, and usable for EIP-8141 frame transactions.",
+      "topic_en": "Transactions and signatures"
+    },
+    {
+      "topic": "交易与签名",
+      "title": "Magicians：EIP-8197 CATX",
+      "note": "新增 EIP：加密敏捷交易（shemnon）提交；Magicians：EIP-8197 CATX 23:11：EIP-2718 交易格式，把交易体与签名分开，签名按位置承诺，支持多签与未来的 ZK 签名聚合，也适用于 EIP-8141 frame 交易。",
+      "url": "https://ethereum-magicians.org/t/eip-8197-cryptographically-agile-transactions-catx/28003",
+      "date": "2026-03-16",
+      "title_en": "Magicians: EIP-8197 CATX",
+      "note_en": "Add EIP: Cryptographically Agile Transactions (shemnon), submitted; Magicians: EIP-8197 CATX, 23:11: an EIP-2718 format separating the body from signatures, with each signature committing to its position, supporting multisig and future ZK signature aggregation, and usable for EIP-8141 frame transactions.",
+      "topic_en": "Transactions and signatures"
+    },
+    {
+      "topic": "交易与签名",
+      "title": "EIP-8037：与 EIP-7928 的 gas 校验阶段对齐",
+      "note": "（nerolation）提交：按执行前与执行后校验阶段划分成本参数，并修正 CREATE 路径的公式。",
+      "url": "https://github.com/ethereum/EIPs/pull/11414",
+      "date": "2026-03-16",
+      "title_en": "EIP-8037: align with EIP-7928 gas validation phases",
+      "note_en": "(nerolation), submitted: classifies cost parameters by pre and post state validation phases and fixes the CREATE path formula.",
+      "topic_en": "Transactions and signatures"
+    },
+    {
+      "topic": "交易与签名",
+      "title": "新增 EIP：snap/2 基于 BAL 的状态修复",
+      "note": "（nerolation）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11391",
+      "date": "2026-03-16",
+      "title_en": "Add EIP: snap/2 BAL based state healing",
+      "note_en": "(nerolation), merged.",
+      "topic_en": "Transactions and signatures"
+    },
+    {
+      "topic": "ACDT #74",
+      "title": "Ethereal news #16",
+      "note": "会议内容引自 Ethereal news #16：Glamsterdam 的 devnet 为 epbs-devnet-0 与 bal-devnet-2，ePBS 与区块级访问列表分别开设分组讨论。",
+      "url": "https://ethereal.news/ethereal-news-weekly-16/",
+      "date": "2026-03-16",
+      "title_en": "Ethereal news #16",
+      "note_en": "Call notes are from Ethereal news #16: Glamsterdam devnets are epbs-devnet-0 and bal-devnet-2, with breakout rooms for ePBS and block level access lists.",
+      "topic_en": "ACDT #74"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat_org：以太坊并非远离 L2，而是 L2 的角色在演变，基础层扩容后 L2 可在定制化上竞争",
+      "note": "23:46。",
+      "url": "https://x.com/ethbeat_org/status/2033585597713973606",
+      "date": "2026-03-16",
+      "title_en": "ethbeat_org: Ethereum is not moving away from L2s; their role is evolving, and as L1 scales L2s can compete on customization",
+      "note_en": "23:46.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：EF Mandate 写入了机构采购本就评估的属性，即安全、隐私与无供应商锁定",
+      "note": "18:30；ERC-7945：移至 Review（andrewcoder666）提交。",
+      "url": "https://x.com/Nethermind/status/2033506185597603895",
+      "date": "2026-03-16",
+      "title_en": "Nethermind: the EF Mandate codifies what institutional procurement already evaluates, security, privacy and no vendor lock in",
+      "note_en": "18:30; ERC-7945: Move to Review (andrewcoder666), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7945：移至 Review",
+      "note": "Nethermind：EF Mandate 写入了机构采购本就评估的属性，即安全、隐私与无供应商锁定 18:30；ERC-7945：移至 Review（andrewcoder666）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1607",
+      "date": "2026-03-16",
+      "title_en": "ERC-7945: Move to Review",
+      "note_en": "Nethermind: the EF Mandate codifies what institutional procurement already evaluates, security, privacy and no vendor lock in, 18:30; ERC-7945: Move to Review (andrewcoder666), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：rollup 本为信任最小化跨链而生，结果却偏离了初衷",
+      "note": "01:47。",
+      "url": "https://x.com/donnoh_eth/status/2033253845610983588",
+      "date": "2026-03-16",
+      "title_en": "donnoh_eth: rollups were invented to bridge assets in a trust minimized way, then drifted from that promise",
+      "note_en": "01:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/focil-native-account-abstraction/27999",
+    "credit": "Ethereum Magicians, FOCIL 🤝 Native Account Abstraction",
+    "local_path": "assets/2026-03-16.jpg",
+    "credit_en": "Ethereum Magicians, FOCIL 🤝 Native Account Abstraction"
+  },
+  "keywords_en": [
+    "How FOCIL and native AA work together",
+    "Cryptographically Agile Transactions (CATX) EIP",
+    "EIP-8037 aligned with EIP-7928 gas validation phases",
+    "snap/2 BAL based state healing EIP merged",
+    "ACDT #74",
+    "the evolving role of L2s"
+  ],
+  "summary_en": "soispoke explained how FOCIL and frame transactions interact: FOCIL judges omitted inclusion list transactions with a cheap nonce and balance check, which works for EOAs but not native AA, where validity requires executing VERIFY frames, so a public mempool eligible FrameTx subset is defined. shemnon submitted CATX, separating the transaction body from signatures to ease post-quantum migration. ACDT #74 covered the ePBS and BAL devnets."
+}

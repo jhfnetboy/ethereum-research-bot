@@ -1,0 +1,149 @@
+{
+  "date": "2026-03-14",
+  "keywords": [
+    "EF Mandate 引发争论",
+    "ACD 决策者与真实使用脱节之辩",
+    "EIP-8141 默认代码迁移到 EIP-7932 注册表",
+    "derekchiang 成为 EIP-8141 共同作者",
+    "EIP-7906 理由",
+    "付费门控交易中继 ERC"
+  ],
+  "summary": "周六。dankrad 批评 EF Mandate 让基金会回到只做密码朋克的老路。decentrek 表示，参与 EIP-8141 的 ACD 流程后，他也感到客户端开发者与以太坊的真实使用有些脱节。SirSpudlington 提议把 EIP-8141 的 EOA 默认代码迁移到 EIP-7932 签名算法注册表。",
+  "items": [
+    {
+      "topic": "治理：围绕 EF Mandate 的争论",
+      "title": "dankrad：EF 去年说要倾听用户，现在却说只回去做密码朋克的东西，这是回到老路",
+      "note": "01:59。",
+      "url": "https://x.com/dankrad/status/2032532067527856216",
+      "date": "2026-03-14",
+      "title_en": "dankrad: last year the EF said it would listen to users, now it says it will go back to building only cypherpunk stuff, returning to its old ways",
+      "note_en": "01:59.",
+      "topic_en": "Governance: the EF Mandate debate"
+    },
+    {
+      "topic": "治理：围绕 EF Mandate 的争论",
+      "title": "decentrek：因为 EIP-8141 深度参与 ACD 后，感到有决策权的客户端开发者与以太坊的真实使用有些脱节",
+      "note": "10:32。",
+      "url": "https://x.com/decentrek/status/2032661242255736913",
+      "date": "2026-03-14",
+      "title_en": "decentrek: after engaging deeply in ACD for EIP-8141, he feels the client developers who hold decision power are somewhat detached from real world usage",
+      "note_en": "10:32.",
+      "topic_en": "Governance: the EF Mandate debate"
+    },
+    {
+      "topic": "治理：围绕 EF Mandate 的争论",
+      "title": "barnabemonnot：“以太坊是不是产品”是稻草人，更重要的是如何让以太坊开发更以用户和产品为中心",
+      "note": "15:54；protolambda：Mandate 似乎忘了以太坊的沙盒能力 05:43。",
+      "url": "https://x.com/barnabemonnot/status/2032742046570631494",
+      "date": "2026-03-14",
+      "title_en": "barnabemonnot: \"Ethereum is or is not a product\" is a strawman; what matters is making development more user and product centric",
+      "note_en": "15:54; protolambda: the Mandate seems to forget Ethereum's sandboxing power, 05:43.",
+      "topic_en": "Governance: the EF Mandate debate"
+    },
+    {
+      "topic": "治理：围绕 EF Mandate 的争论",
+      "title": "protolambda：Mandate 似乎忘了以太坊的沙盒能力",
+      "note": "barnabemonnot：“以太坊是不是产品”是稻草人，更重要的是如何让以太坊开发更以用户和产品为中心 15:54；protolambda：Mandate 似乎忘了以太坊的沙盒能力 05:43。",
+      "url": "https://x.com/protolambda/status/2032588495051493806",
+      "date": "2026-03-14",
+      "title_en": "protolambda: the Mandate seems to forget Ethereum's sandboxing power",
+      "note_en": "Barnabemonnot: \"Ethereum is or is not a product\" is a strawman; what matters is making development more user and product centric, 15:54; protolambda: the Mandate seems to forget Ethereum's sandboxing power, 05:43.",
+      "topic_en": "Governance: the EF Mandate debate"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与签名注册表",
+      "title": "EIP-8141：把 EOA 默认代码迁移到 EIP-7932 注册表",
+      "note": "（SirSpudlington）提交：理由之一是 EIP-8141 的 P256 支持没有考虑 EIP-7951 不处理签名可延展性的问题。",
+      "url": "https://github.com/ethereum/EIPs/pull/11408",
+      "date": "2026-03-14",
+      "title_en": "EIP-8141: migrate EOA default code to the EIP-7932 registry",
+      "note_en": "(SirSpudlington), submitted: one reason is that EIP-8141's P256 support overlooks that EIP-7951 does not handle signature malleability.",
+      "topic_en": "Native AA: EIP-8141 and the signature registry"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与签名注册表",
+      "title": "EIP-8141：加入 derekchiang 为共同作者",
+      "note": "（derekchiang）提交并合并；EIP-7906：理由部分（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11406",
+      "date": "2026-03-14",
+      "title_en": "EIP-8141: add derekchiang as a coauthor",
+      "note_en": "(derekchiang), submitted and merged; EIP-7906: rationale (forshtat), submitted and merged.",
+      "topic_en": "Native AA: EIP-8141 and the signature registry"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 与签名注册表",
+      "title": "EIP-7906：理由部分",
+      "note": "EIP-8141：加入 derekchiang 为共同作者（derekchiang）提交并合并；EIP-7906：理由部分（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11405",
+      "date": "2026-03-14",
+      "title_en": "EIP-7906: rationale",
+      "note_en": "EIP-8141: add derekchiang as a coauthor (derekchiang), submitted and merged; EIP-7906: rationale (forshtat), submitted and merged.",
+      "topic_en": "Native AA: EIP-8141 and the signature registry"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：付费门控交易中继（PGTR）",
+      "note": "（beauwilliams）提交；新增 ERC：任务市场协议（beauwilliams）提交；ERC-8126：移至 Review（Cybercentry）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1603",
+      "date": "2026-03-14",
+      "title_en": "Add ERC: Payment-Gated Transaction Relay (PGTR)",
+      "note_en": "(beauwilliams), submitted; Add ERC: Task Market Protocol (beauwilliams), submitted; ERC-8126: Move to Review (Cybercentry), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：任务市场协议",
+      "note": "新增 ERC：付费门控交易中继（PGTR）（beauwilliams）提交；新增 ERC：任务市场协议（beauwilliams）提交；ERC-8126：移至 Review（Cybercentry）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1604",
+      "date": "2026-03-14",
+      "title_en": "Add ERC: Task Market Protocol",
+      "note_en": "Add ERC: Payment-Gated Transaction Relay (PGTR) (beauwilliams), submitted; Add ERC: Task Market Protocol (beauwilliams), submitted; ERC-8126: Move to Review (Cybercentry), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8126：移至 Review",
+      "note": "新增 ERC：付费门控交易中继（PGTR）（beauwilliams）提交；新增 ERC：任务市场协议（beauwilliams）提交；ERC-8126：移至 Review（Cybercentry）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1605",
+      "date": "2026-03-14",
+      "title_en": "ERC-8126: Move to Review",
+      "note_en": "Add ERC: Payment-Gated Transaction Relay (PGTR) (beauwilliams), submitted; Add ERC: Task Market Protocol (beauwilliams), submitted; ERC-8126: Move to Review (Cybercentry), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8183：新增参考实现链接",
+      "note": "（ai-virtual-b）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1601",
+      "date": "2026-03-14",
+      "title_en": "ERC-8183: add reference implementation links",
+      "note_en": "(ai-virtual-b), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：进入区块链的正规金融机构最想要的是最小化对手方风险与隐私",
+      "note": "04:52。",
+      "url": "https://x.com/binji_x/status/2032575459926618426",
+      "date": "2026-03-14",
+      "title_en": "binji_x: what a legitimate financial institution entering blockchain most wants is minimized counterparty risk and privacy",
+      "note_en": "04:52.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/decentrek/status/2032661242255736913",
+    "credit": "X @decentrek",
+    "local_path": "assets/2026-03-14.jpg",
+    "credit_en": "X @decentrek"
+  },
+  "keywords_en": [
+    "The EF Mandate sparks debate",
+    "are ACD decision makers detached from real usage",
+    "EIP-8141 default code moves to the EIP-7932 registry",
+    "derekchiang becomes EIP-8141 coauthor",
+    "EIP-7906 rationale",
+    "Payment-Gated Transaction Relay ERC"
+  ],
+  "summary_en": "A Saturday. dankrad criticized the EF Mandate as the foundation returning to building only cypherpunk things. decentrek said that after working through ACD on EIP-8141 he also feels client developers are somewhat detached from real Ethereum usage. SirSpudlington proposed moving EIP-8141's EOA default code to the EIP-7932 signature algorithm registry."
+}

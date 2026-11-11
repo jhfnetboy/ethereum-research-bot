@@ -1,0 +1,139 @@
+{
+  "date": "2026-04-10",
+  "keywords": [
+    "EF Checkpoint #9",
+    "Hegotá 以 FOCIL 为头号功能并承诺账户抽象",
+    "提议 EIP-7819 SETDELEGATE 进入 Hegotá",
+    "提议 EIP-7851 与 EIP-8151 停用委托 EOA 密钥",
+    "Glamsterdam 首个 devnet 下周",
+    "无需软分叉的比特币后量子方案"
+  ],
+  "summary": "EF 发布 Checkpoint #9：Glamsterdam 进展慢而稳，ePBS 实现比预期更难；Hegotá 选定 FOCIL 为头号功能，并承诺把账户抽象纳入次要功能。非头号提案开放首日，Amxx 提议 EIP-7819 SETDELEGATE，nconsigny 提议 EIP-7851 与 EIP-8151，让 EIP-7702 委托后的 EOA 可停用原私钥。",
+  "items": [
+    {
+      "topic": "路线：EF Checkpoint #9",
+      "title": "EF 博客：Checkpoint #9",
+      "note": "（Protocol Support Team）：Glamsterdam 进展慢而稳，ePBS 把出块拆成共识内先后行动的两方，协议须处理两方分歧或失败，几乎触及整个技术栈；gas 重定价作为一组优先推进，提高合约大小上限的 EIP-7954 也可能被优先；Hegotá 选定 FOCIL 为头号功能，并承诺把账户抽象作为次要功能之一，非头号 EIP 自 4 月 9 日起可提交。",
+      "url": "https://blog.ethereum.org/en/2026/04/10/checkpoint-9",
+      "date": "2026-04-10",
+      "title_en": "EF blog: Checkpoint #9",
+      "note_en": "(Protocol Support Team): Glamsterdam is slow but steady; ePBS splits block production into two parties acting in sequence inside consensus, so the protocol must handle disagreement or failure between them, touching nearly the whole stack; gas repricings are prioritized as a bundle and EIP-7954, raising the contract size limit, is likely prioritized too; Hegotá chose FOCIL as headliner and committed to account abstraction as a minor feature, with non headliner EIPs open from April 9.",
+      "topic_en": "Roadmap: EF Checkpoint #9"
+    },
+    {
+      "topic": "路线：EF Checkpoint #9",
+      "title": "nixorokish：核心开发者目标下周上线首个 Glamsterdam devnet，ePBS 结构极其复杂",
+      "note": "23:21。",
+      "url": "https://x.com/nixorokish/status/2042639203352322486",
+      "date": "2026-04-10",
+      "title_en": "nixorokish: core devs are targeting next week for the first Glamsterdam devnet, with ePBS a structurally complex change",
+      "note_en": "23:21.",
+      "topic_en": "Roadmap: EF Checkpoint #9"
+    },
+    {
+      "topic": "账户：Hegotá 的 EOA 与委托提案",
+      "title": "EIP-8081：提议 EIP-7819 进入 Hegotá",
+      "note": "（Amxx）提交，EIP-7819 是 SETDELEGATE 指令；EIP-7819 更新（Amxx）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11505",
+      "date": "2026-04-10",
+      "title_en": "EIP-8081: propose EIP-7819 for inclusion in Hegota",
+      "note_en": "(Amxx), submitted; EIP-7819 is the SETDELEGATE instruction; EIP-7819 update (Amxx), submitted and merged.",
+      "topic_en": "Accounts: EOA and delegation proposals for Hegotá"
+    },
+    {
+      "topic": "账户：Hegotá 的 EOA 与委托提案",
+      "title": "EIP-7819 更新",
+      "note": "EIP-8081：提议 EIP-7819 进入 Hegotá（Amxx）提交，EIP-7819 是 SETDELEGATE 指令；EIP-7819 更新（Amxx）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11504",
+      "date": "2026-04-10",
+      "title_en": "EIP-7819 update",
+      "note_en": "EIP-8081: propose EIP-7819 for inclusion in Hegota (Amxx), submitted; EIP-7819 is the SETDELEGATE instruction; EIP-7819 update (Amxx), submitted and merged.",
+      "topic_en": "Accounts: EOA and delegation proposals for Hegotá"
+    },
+    {
+      "topic": "账户：Hegotá 的 EOA 与委托提案",
+      "title": "EIP-8081：提议 EIP-7851 与 EIP-8151 进入 Hegotá",
+      "note": "（nconsigny）提交：EIP-7851 为已委托代码的 EOA 提供停用私钥的预编译合约，EIP-8151 让 ecRecover 感知私钥已停用，两者互补。",
+      "url": "https://github.com/ethereum/EIPs/pull/11506",
+      "date": "2026-04-10",
+      "title_en": "EIP-8081: propose EIP-7851 and EIP-8151 for inclusion in Hegotá",
+      "note_en": "(nconsigny), submitted: EIP-7851 adds a precompile for EOAs with delegated code to deactivate their key, and EIP-8151 makes ecRecover aware of the deactivation; the two are complementary.",
+      "topic_en": "Accounts: EOA and delegation proposals for Hegotá"
+    },
+    {
+      "topic": "网络与后量子",
+      "title": "raulvk：Hegotá 非头号提案期开放，计划为网络栈提出至少 4 个 EIP，首个是 ethp2p 纠删码广播，让 2MiB payload 的 p95 送达快 6 倍（9 秒到 1.5 秒）且带宽减半",
+      "note": "00:17。",
+      "url": "https://x.com/raulvk/status/2042290725711212907",
+      "date": "2026-04-10",
+      "title_en": "raulvk: the Hegotá non headliner period is open, with at least 4 networking EIPs planned, first ethp2p erasure coded broadcast that speeds p95 delivery of 2MiB payloads 6x (9 s to 1.5 s) at half the bandwidth",
+      "note_en": "00:17.",
+      "topic_en": "Networking and post-quantum"
+    },
+    {
+      "topic": "网络与后量子",
+      "title": "StarkWareLtd：Avihu 提出无需软分叉即可让比特币交易抗量子的方法",
+      "note": "15:58；Magicians：基于 EVM 事件日志的混合后量子端到端加密消息 22:42。",
+      "url": "https://x.com/StarkWareLtd/status/2042527645292700096",
+      "date": "2026-04-10",
+      "title_en": "StarkWareLtd: Avihu introduced a way to make Bitcoin transactions quantum safe without a soft fork",
+      "note_en": "15:58; Magicians: Hybrid post-quantum E2EE messaging over EVM event logs, 22:42.",
+      "topic_en": "Networking and post-quantum"
+    },
+    {
+      "topic": "网络与后量子",
+      "title": "Magicians：基于 EVM 事件日志的混合后量子端到端加密消息",
+      "note": "StarkWareLtd：Avihu 提出无需软分叉即可让比特币交易抗量子的方法 15:58；Magicians：基于 EVM 事件日志的混合后量子端到端加密消息 22:42。",
+      "url": "https://ethereum-magicians.org/t/hybrid-post-quantum-e2ee-messaging-over-evm-event-logs/28198",
+      "date": "2026-04-10",
+      "title_en": "Magicians: Hybrid post-quantum E2EE messaging over EVM event logs",
+      "note_en": "StarkWareLtd: Avihu introduced a way to make Bitcoin transactions quantum safe without a soft fork, 15:58; Magicians: Hybrid post-quantum E2EE messaging over EVM event logs, 22:42.",
+      "topic_en": "Networking and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8222 Lean Staking",
+      "note": "11:28；ERC-8048 把 getMetadata 改名为 metadata（rabuawad）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/eip-8222-lean-staking/28196",
+      "date": "2026-04-10",
+      "title_en": "Magicians: EIP-8222 Lean Staking",
+      "note_en": "11:28; ERC-8048: rename getMetadata to metadata (rabuawad), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048 把 getMetadata 改名为 metadata",
+      "note": "Magicians：EIP-8222 Lean Staking 11:28；ERC-8048 把 getMetadata 改名为 metadata（rabuawad）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1659",
+      "date": "2026-04-10",
+      "title_en": "ERC-8048: rename getMetadata to metadata",
+      "note_en": "Magicians: EIP-8222 Lean Staking, 11:28; ERC-8048: rename getMetadata to metadata (rabuawad), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：看好以太坊的理由，一年多次升级、后量子路线、隐私路线",
+      "note": "18:03。",
+      "url": "https://x.com/binji_x/status/2042559008850972686",
+      "date": "2026-04-10",
+      "title_en": "binji_x: reasons to be excited about Ethereum, multiple upgrades a year, a post-quantum roadmap and a privacy roadmap",
+      "note_en": "18:03.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/04/10/checkpoint-9",
+    "credit": "Ethereum Foundation Blog, Checkpoint #9: Apr 2026",
+    "local_path": "assets/2026-04-10.jpg",
+    "credit_en": "Ethereum Foundation Blog, Checkpoint #9: Apr 2026"
+  },
+  "keywords_en": [
+    "EF Checkpoint #9",
+    "Hegotá picks FOCIL as headliner with an AA commitment",
+    "EIP-7819 SETDELEGATE proposed for Hegotá",
+    "EIP-7851 and EIP-8151 proposed for deactivating delegated EOA keys",
+    "the first Glamsterdam devnet next week",
+    "post-quantum Bitcoin without a soft fork"
+  ],
+  "summary_en": "The EF published Checkpoint #9: Glamsterdam progress is slow but steady with ePBS harder than expected; Hegotá chose FOCIL as its headliner and committed to account abstraction among the minor features. On the first day of non headliner proposals, Amxx proposed EIP-7819 SETDELEGATE and nconsigny proposed EIP-7851 and EIP-8151 to let EIP-7702 delegated EOAs deactivate their original key."
+}

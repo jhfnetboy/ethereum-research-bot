@@ -1,0 +1,191 @@
+{
+  "date": "2026-03-19",
+  "keywords": [
+    "ACDC #176",
+    "Alice 在 L1 私密兑换",
+    "EIP-8182 增加投递密钥注册表与 X-Wing",
+    "后量子对隐私的威胁",
+    "沙盒智能钱包 ERC",
+    "Quick Slots EIP",
+    "开放与密封 MEV 拍卖"
+  ],
+  "summary": "ACDC #176 确认 glamsterdam-devnet-0 目标 4 月中，讨论 ePBS 的 PTC 回看与 Engine API 可选 SSZ。soispoke 发布 Alice swaps privately on L1，说明 EIP-8141 原生 AA、2D nonce 等四项升级如何逐步消除隐私协议对广播者的依赖。RogerPodacter 为 EIP-8182 加入投递密钥注册表与 X-Wing 基线方案，提交并合并。ethresear.ch 指出对隐私而言，后量子迁移比认证迁移更紧迫。",
+  "items": [
+    {
+      "topic": "隐私：从广播者到协议",
+      "title": "soispoke：Alice swaps privately on L1",
+      "note": "18:07：如今隐私协议用户依赖能看到、抢跑并审查其交易的广播者，线程说明四项未来协议升级如何一步步去掉这一依赖，起点是原生 AA（EIP-8141）与 2D nonce。",
+      "url": "https://x.com/soispoke/status/2034587465382514773",
+      "date": "2026-03-19",
+      "title_en": "soispoke: Alice swaps privately on L1",
+      "note_en": "18:07: privacy protocol users today rely on broadcasters that can see, frontrun and censor their transactions; the thread shows how four future protocol upgrades remove that dependency step by step, starting with native AA (EIP-8141) and 2D nonces.",
+      "topic_en": "Privacy: from broadcasters to the protocol"
+    },
+    {
+      "topic": "隐私：从广播者到协议",
+      "title": "EIP-8182：增加投递密钥注册表、X-Wing 基线方案，去掉委托注册",
+      "note": "（RogerPodacter）提交并合并，更新 3 月 17 日合并的协议内私密转账 EIP。",
+      "url": "https://github.com/ethereum/EIPs/pull/11423",
+      "date": "2026-03-19",
+      "title_en": "EIP-8182: add a delivery key registry, X-Wing baseline scheme, remove delegated registration",
+      "note_en": "(RogerPodacter), submitted and merged, updating the enshrined private transfers EIP merged on March 17.",
+      "topic_en": "Privacy: from broadcasters to the protocol"
+    },
+    {
+      "topic": "隐私：从广播者到协议",
+      "title": "ethresear.ch：后量子对以太坊隐私的威胁",
+      "note": "16:29：面对先收集后解密，长期保密数据的迁移比认证迁移更紧迫，因为签名伪造还能靠硬分叉与密钥迁移部分补救，被收集的密文则无法挽回。",
+      "url": "https://ethresear.ch/t/post-quantum-threats-to-ethereum-privacy/24450",
+      "date": "2026-03-19",
+      "title_en": "ethresear.ch: Post-Quantum Threats to Ethereum Privacy",
+      "note_en": "16:29: under harvest now decrypt later, migrating long lived confidential data is more urgent than migrating authentication, since signature forgery can be partly remedied by hard forks and key migration while harvested ciphertexts cannot be recovered.",
+      "topic_en": "Privacy: from broadcasters to the protocol"
+    },
+    {
+      "topic": "账户：沙盒智能钱包",
+      "title": "新增 ERC：沙盒智能钱包",
+      "note": "（PowerStream3604）提交：为安全的 Agent 自动化定义沙盒智能钱包的接口与行为；Magicians 讨论帖 ERC-8199 22:31。",
+      "url": "https://github.com/ethereum/ERCs/pull/1609",
+      "date": "2026-03-19",
+      "title_en": "Add ERC: Sandboxed Smart Wallet",
+      "note_en": "(PowerStream3604), submitted: interfaces and behavior for a sandboxed smart wallet for secure agentic automation; Magicians thread ERC-8199, 22:31.",
+      "topic_en": "Accounts: Sandboxed Smart Wallet"
+    },
+    {
+      "topic": "账户：沙盒智能钱包",
+      "title": "Magicians 讨论帖 ERC-8199",
+      "note": "新增 ERC：沙盒智能钱包（PowerStream3604）提交：为安全的 Agent 自动化定义沙盒智能钱包的接口与行为；Magicians 讨论帖 ERC-8199 22:31。",
+      "url": "https://ethereum-magicians.org/t/erc-8199-sandboxed-smart-wallet/28029",
+      "date": "2026-03-19",
+      "title_en": "Magicians thread ERC-8199",
+      "note_en": "Add ERC: Sandboxed Smart Wallet (PowerStream3604), submitted: interfaces and behavior for a sandboxed smart wallet for secure agentic automation; Magicians thread ERC-8199, 22:31.",
+      "topic_en": "Accounts: Sandboxed Smart Wallet"
+    },
+    {
+      "topic": "ACDC #176",
+      "title": "ACDC #176",
+      "note": "21:00，据 Ethereal news #16：Glamsterdam 的 glamsterdam-devnet-0 目标 4 月中，讨论 ePBS 的 PTC 回看与缺失的父信标区块根；Engine API 讨论可选 SSZ、重新设计与版本管理；Hegotá 的非头号 EIP 待执行层头号提案选定后可提出，已有提案 EIP-8148 自定义验证者 sweep 阈值。",
+      "url": "https://forkcast.org/calls/acdc/176/",
+      "date": "2026-03-19",
+      "title_en": "ACDC #176",
+      "note_en": "21:00, per Ethereal news #16: glamsterdam-devnet-0 targeted for mid April, with ePBS discussion of the PTC look behind and missing parent beacon block roots; the Engine API discussion covered optional SSZ, a redesign and versioning; Hegotá non headliner EIPs can be proposed once the execution layer headliner is chosen, with EIP-8148 custom sweep threshold for validators already proposed.",
+      "topic_en": "ACDC #176"
+    },
+    {
+      "topic": "ACDC #176",
+      "title": "Ethereal news #16",
+      "note": "ACDC #176 21:00，据 Ethereal news #16：Glamsterdam 的 glamsterdam-devnet-0 目标 4 月中，讨论 ePBS 的 PTC 回看与缺失的父信标区块根；Engine API 讨论可选 SSZ、重新设计与版本管理；Hegotá 的非头号 EIP 待执行层头号提案选定后可提出，已有提案 EIP-8148 自定义验证者 sweep 阈值。",
+      "url": "https://ethereal.news/ethereal-news-weekly-16/",
+      "date": "2026-03-19",
+      "title_en": "Ethereal news #16",
+      "note_en": "ACDC #176, 21:00, per Ethereal news #16: glamsterdam-devnet-0 targeted for mid April, with ePBS discussion of the PTC look behind and missing parent beacon block roots; the Engine API discussion covered optional SSZ, a redesign and versioning; Hegotá non headliner EIPs can be proposed once the execution layer headliner is chosen, with EIP-8148 custom sweep threshold for validators already proposed.",
+      "topic_en": "ACDC #176"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：Quick Slots",
+      "note": "（CarlBeek）提交；EIP-7928：修正关于 fee recipient 的矛盾表述（nerolation）合并；EIP-8037：常规 gas 先于状态 gas 扣除（spencer-tb）合并；EIP-7979 约束逻辑与校验代码更新（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11426",
+      "date": "2026-03-19",
+      "title_en": "Add EIP: Quick Slots",
+      "note_en": "(CarlBeek), submitted; EIP-7928: fix a contradicting claim about the fee recipient (nerolation), merged; EIP-8037: regular gas charged before state gas (spencer-tb), merged; EIP-7979 constraint logic and validation code update (gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：修正关于 fee recipient 的矛盾表述",
+      "note": "新增 EIP：Quick Slots（CarlBeek）提交；EIP-7928：修正关于 fee recipient 的矛盾表述（nerolation）合并；EIP-8037：常规 gas 先于状态 gas 扣除（spencer-tb）合并；EIP-7979 约束逻辑与校验代码更新（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11420",
+      "date": "2026-03-19",
+      "title_en": "EIP-7928: fix a contradicting claim about the fee recipient",
+      "note_en": "Add EIP: Quick Slots (CarlBeek), submitted; EIP-7928: fix a contradicting claim about the fee recipient (nerolation), merged; EIP-8037: regular gas charged before state gas (spencer-tb), merged; EIP-7979 constraint logic and validation code update (gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8037：常规 gas 先于状态 gas 扣除",
+      "note": "新增 EIP：Quick Slots（CarlBeek）提交；EIP-7928：修正关于 fee recipient 的矛盾表述（nerolation）合并；EIP-8037：常规 gas 先于状态 gas 扣除（spencer-tb）合并；EIP-7979 约束逻辑与校验代码更新（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11421",
+      "date": "2026-03-19",
+      "title_en": "EIP-8037: regular gas charged before state gas",
+      "note_en": "Add EIP: Quick Slots (CarlBeek), submitted; EIP-7928: fix a contradicting claim about the fee recipient (nerolation), merged; EIP-8037: regular gas charged before state gas (spencer-tb), merged; EIP-7979 constraint logic and validation code update (gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979 约束逻辑与校验代码更新",
+      "note": "新增 EIP：Quick Slots（CarlBeek）提交；EIP-7928：修正关于 fee recipient 的矛盾表述（nerolation）合并；EIP-8037：常规 gas 先于状态 gas 扣除（spencer-tb）合并；EIP-7979 约束逻辑与校验代码更新（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11424",
+      "date": "2026-03-19",
+      "title_en": "EIP-7979 constraint logic and validation code update",
+      "note_en": "Add EIP: Quick Slots (CarlBeek), submitted; EIP-7928: fix a contradicting claim about the fee recipient (nerolation), merged; EIP-8037: regular gas charged before state gas (spencer-tb), merged; EIP-7979 constraint logic and validation code update (gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：开放还是密封，MEV 的拍卖形式选择",
+      "note": "20:29；ethresear.ch：通往二进制 trie 之路 1，最优分组深度 21:41。",
+      "url": "https://ethresear.ch/t/open-vs-sealed-auction-format-choice-for-maximal-extractable-value/24454",
+      "date": "2026-03-19",
+      "title_en": "ethresear.ch: Open vs. Sealed, auction format choice for MEV",
+      "note_en": "20:29; ethresear.ch: The path towards Binary Tries 1, optimal group depth, 21:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：通往二进制 trie 之路 1，最优分组深度",
+      "note": "ethresear.ch：开放还是密封，MEV 的拍卖形式选择 20:29；ethresear.ch：通往二进制 trie 之路 1，最优分组深度 21:41。",
+      "url": "https://ethresear.ch/t/the-path-towards-binary-tries-1-optimal-group-depth-for-ethereums-binary-trie/24455",
+      "date": "2026-03-19",
+      "title_en": "ethresear.ch: The path towards Binary Tries 1, optimal group depth",
+      "note_en": "Ethresear.ch: Open vs. Sealed, auction format choice for MEV, 20:29; ethresear.ch: The path towards Binary Tries 1, optimal group depth, 21:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hudsonjameson：一笔以太坊交易如何穿过内存池",
+      "note": "06:31；soispoke：与 parithosh_j、fredrik0x 共同牵头 hardness 方向，未来 6 到 12 个月关注后量子、网络韧性、隐私与抗审查 04:19；kassandraETH：必须解决以太坊用户体验 01:27。",
+      "url": "https://x.com/hudsonjameson/status/2034412330751033766",
+      "date": "2026-03-19",
+      "title_en": "hudsonjameson: how an Ethereum transaction travels across the mempool",
+      "note_en": "06:31; soispoke: co leading the hardness track with parithosh_j and fredrik0x, focusing on PQ, network resilience, privacy and censorship resistance for 6 to 12 months, 04:19; kassandraETH: we absolutely need to solve Ethereum user experience, 01:27.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "soispoke：与 parithosh_j、fredrik0x 共同牵头 hardness 方向，未来 6 到 12 个月关注后量子、网络韧性、隐私与抗审查",
+      "note": "hudsonjameson：一笔以太坊交易如何穿过内存池 06:31；soispoke：与 parithosh_j、fredrik0x 共同牵头 hardness 方向，未来 6 到 12 个月关注后量子、网络韧性、隐私与抗审查 04:19；kassandraETH：必须解决以太坊用户体验 01:27。",
+      "url": "https://x.com/soispoke/status/2034379132918738981",
+      "date": "2026-03-19",
+      "title_en": "soispoke: co leading the hardness track with parithosh_j and fredrik0x, focusing on PQ, network resilience, privacy and censorship resistance for 6 to 12 months",
+      "note_en": "Hudsonjameson: how an Ethereum transaction travels across the mempool, 06:31; soispoke: co leading the hardness track with parithosh_j and fredrik0x, focusing on PQ, network resilience, privacy and censorship resistance for 6 to 12 months, 04:19; kassandraETH: we absolutely need to solve Ethereum user experience, 01:27.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "kassandraETH：必须解决以太坊用户体验",
+      "note": "hudsonjameson：一笔以太坊交易如何穿过内存池 06:31；soispoke：与 parithosh_j、fredrik0x 共同牵头 hardness 方向，未来 6 到 12 个月关注后量子、网络韧性、隐私与抗审查 04:19；kassandraETH：必须解决以太坊用户体验 01:27。",
+      "url": "https://x.com/kassandraETH/status/2034335855804829963",
+      "date": "2026-03-19",
+      "title_en": "kassandraETH: we absolutely need to solve Ethereum user experience",
+      "note_en": "Hudsonjameson: how an Ethereum transaction travels across the mempool, 06:31; soispoke: co leading the hardness track with parithosh_j and fredrik0x, focusing on PQ, network resilience, privacy and censorship resistance for 6 to 12 months, 04:19; kassandraETH: we absolutely need to solve Ethereum user experience, 01:27.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/post-quantum-threats-to-ethereum-privacy/24450",
+    "credit": "ethresear.ch, Post-Quantum Threats to Ethereum Privacy",
+    "local_path": "assets/2026-03-19.jpg",
+    "credit_en": "ethresear.ch, Post-Quantum Threats to Ethereum Privacy"
+  },
+  "keywords_en": [
+    "ACDC #176",
+    "Alice swaps privately on L1",
+    "EIP-8182 adds a delivery key registry and X-Wing",
+    "post-quantum threats to Ethereum privacy",
+    "Sandboxed Smart Wallet ERC",
+    "Quick Slots EIP",
+    "open vs sealed MEV auctions"
+  ],
+  "summary_en": "ACDC #176 set glamsterdam-devnet-0 for mid April and discussed the ePBS PTC look behind and optional SSZ in the Engine API. soispoke posted Alice swaps privately on L1, showing how four upgrades including EIP-8141 native AA and 2D nonces remove privacy protocols' dependence on broadcasters. RogerPodacter added a delivery key registry and an X-Wing baseline scheme to EIP-8182, submitted and merged. An ethresear.ch post argued that post-quantum migration is more urgent for privacy than for authentication."
+}

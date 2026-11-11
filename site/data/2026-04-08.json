@@ -1,0 +1,149 @@
+{
+  "date": "2026-04-08",
+  "keywords": [
+    "EOA 原生密钥委托 EIP 合并",
+    "EIP-2780 加入转账日志成本并移除 PAY",
+    "ERC-8211 智能批处理",
+    "账户能力的可扩展执行交易",
+    "受检算术操作码",
+    "ETH 供应上限 1.28 亿之争"
+  ],
+  "summary": "prestwich 的 EOA 原生密钥委托 EIP 合并，把 EIP-7702 委托扩展到 ed25519 等非 ECDSA 密钥。benaadams 为 EIP-2780 加入 1,756 gas 的转账日志成本并移除已被否决的 PAY 操作码，提交并合并。ethereum 账号介绍 ERC-8211，让用户与 Agent 用链下脚本表达多步组合操作。",
+  "items": [
+    {
+      "topic": "账户：EOA 原生密钥委托",
+      "title": "新增 EIP：EOA 原生密钥委托",
+      "note": "（prestwich）合并，2 月 18 日提交：把 EIP-7702 委托扩展到非 ECDSA 密钥类型，新增同时支持原生密钥委托与原生密钥签名的交易类型，首个非 ECDSA 类型为 ed25519。",
+      "url": "https://github.com/ethereum/EIPs/pull/11330",
+      "date": "2026-04-08",
+      "title_en": "Add EIP: Native Key Delegation for EOAs",
+      "note_en": "(prestwich), merged after submission on February 18: extends EIP-7702 delegation to non ECDSA key types, adds a transaction type supporting both native key delegation and native key signing, with ed25519 as the first non ECDSA type.",
+      "topic_en": "Accounts: native key delegation for EOAs"
+    },
+    {
+      "topic": "账户：EOA 原生密钥委托",
+      "title": "Magicians：面向账户能力的可扩展执行交易",
+      "note": "15:32；ethereum：ERC-8211 让用户与 Agent 以带内置安全的链下脚本表达多步组合操作 00:46。",
+      "url": "https://ethereum-magicians.org/t/extensible-execution-transaction-for-account-capabilities/28168",
+      "date": "2026-04-08",
+      "title_en": "Magicians: Extensible Execution Transaction for Account Capabilities",
+      "note_en": "15:32; ethereum: ERC-8211 lets users and agents express multi step composable actions as a simple off chain script with built in safety, 00:46.",
+      "topic_en": "Accounts: native key delegation for EOAs"
+    },
+    {
+      "topic": "账户：EOA 原生密钥委托",
+      "title": "ethereum：ERC-8211 让用户与 Agent 以带内置安全的链下脚本表达多步组合操作",
+      "note": "Magicians：面向账户能力的可扩展执行交易 15:32；ethereum：ERC-8211 让用户与 Agent 以带内置安全的链下脚本表达多步组合操作 00:46。",
+      "url": "https://x.com/ethereum/status/2041573357695459379",
+      "date": "2026-04-08",
+      "title_en": "ethereum: ERC-8211 lets users and agents express multi step composable actions as a simple off chain script with built in safety",
+      "note_en": "Magicians: Extensible Execution Transaction for Account Capabilities, 15:32; ethereum: ERC-8211 lets users and agents express multi step composable actions as a simple off chain script with built in safety, 00:46.",
+      "topic_en": "Accounts: native key delegation for EOAs"
+    },
+    {
+      "topic": "Gas：EIP-2780",
+      "title": "EIP-2780：加入转账日志成本并移除 PAY",
+      "note": "（benaadams）提交并合并：去掉本次分叉已否决的 PAY 操作码；由于降低后的基础成本不再覆盖 EIP-7708 的 LOG3 转账事件，新增 TRANSFER_LOG_COST = 1,756，并更新所有派生 gas 总额与容量表。",
+      "url": "https://github.com/ethereum/EIPs/pull/11493",
+      "date": "2026-04-08",
+      "title_en": "EIP-2780: add a transfer log cost, remove PAY",
+      "note_en": "(benaadams), submitted and merged: removes the PAY opcode rejected for this fork; since the reduced base cost no longer absorbs EIP-7708's LOG3 transfer event, adds TRANSFER_LOG_COST = 1,756 and updates derived gas totals and capacity tables.",
+      "topic_en": "Gas: EIP-2780"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：受检算术操作码",
+      "note": "（ritzdorf）提交；ERC-8199 语法与图片更新（PowerStream3604）提交并合并；PQ Interop #34 议程 18:08。",
+      "url": "https://github.com/ethereum/EIPs/pull/11495",
+      "date": "2026-04-08",
+      "title_en": "Add EIP: Checked Arithmetic Opcodes",
+      "note_en": "(ritzdorf), submitted; ERC-8199 syntax and images update (PowerStream3604), submitted and merged; PQ Interop #34 agenda, 18:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8199 语法与图片更新",
+      "note": "新增 EIP：受检算术操作码（ritzdorf）提交；ERC-8199 语法与图片更新（PowerStream3604）提交并合并；PQ Interop #34 议程 18:08。",
+      "url": "https://github.com/ethereum/ERCs/pull/1654",
+      "date": "2026-04-08",
+      "title_en": "ERC-8199 syntax and images update",
+      "note_en": "Add EIP: Checked Arithmetic Opcodes (ritzdorf), submitted; ERC-8199 syntax and images update (PowerStream3604), submitted and merged; PQ Interop #34 agenda, 18:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #34 议程",
+      "note": "新增 EIP：受检算术操作码（ritzdorf）提交；ERC-8199 语法与图片更新（PowerStream3604）提交并合并；PQ Interop #34 议程 18:08。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-34-april-8-2026/28170",
+      "date": "2026-04-08",
+      "title_en": "PQ Interop #34 agenda",
+      "note_en": "Add EIP: Checked Arithmetic Opcodes (ritzdorf), submitted; ERC-8199 syntax and images update (PowerStream3604), submitted and merged; PQ Interop #34 agenda, 18:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：ETH 需要 1.28 亿的供应上限",
+      "note": "15:00；ERC-8220：链上 AI 治理 00:06。",
+      "url": "https://ethresear.ch/t/eth-needs-a-supply-cap-at-128-million/24618",
+      "date": "2026-04-08",
+      "title_en": "ethresear.ch: ETH needs a supply cap at 128 million",
+      "note_en": "15:00; ERC-8220: Onchain AI Governance, 00:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8220：链上 AI 治理",
+      "note": "ethresear.ch：ETH 需要 1.28 亿的供应上限 15:00；ERC-8220：链上 AI 治理 00:06。",
+      "url": "https://ethereum-magicians.org/t/erc-8220-onchain-ai-governance/28162",
+      "date": "2026-04-08",
+      "title_en": "ERC-8220: Onchain AI Governance",
+      "note_en": "Ethresear.ch: ETH needs a supply cap at 128 million, 15:00; ERC-8220: Onchain AI Governance, 00:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dankrad：模型擅长安全对加密有利，未来一两年可把协议加固到前所未有的水平",
+      "note": "17:41；hasufl：希望你的协议至少有时间锁与安全委员会 04:31；sassal0x：地缘与技术不确定时期以太坊是坚固堡垒 06:51。",
+      "url": "https://x.com/dankrad/status/2041828742004130173",
+      "date": "2026-04-08",
+      "title_en": "dankrad: models getting good at security is good for crypto, and protocols can be hardened as never before in the next 1 to 2 years",
+      "note_en": "17:41; hasufl: I hope your protocol has at least timelocks and a security council, 04:31; sassal0x: amid geopolitical and technological uncertainty Ethereum stands strong, 06:51.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hasufl：希望你的协议至少有时间锁与安全委员会",
+      "note": "dankrad：模型擅长安全对加密有利，未来一两年可把协议加固到前所未有的水平 17:41；hasufl：希望你的协议至少有时间锁与安全委员会 04:31；sassal0x：地缘与技术不确定时期以太坊是坚固堡垒 06:51。",
+      "url": "https://x.com/hasufl/status/2041630080594489347",
+      "date": "2026-04-08",
+      "title_en": "hasufl: I hope your protocol has at least timelocks and a security council",
+      "note_en": "Dankrad: models getting good at security is good for crypto, and protocols can be hardened as never before in the next 1 to 2 years, 17:41; hasufl: I hope your protocol has at least timelocks and a security council, 04:31; sassal0x: amid geopolitical and technological uncertainty Ethereum stands strong, 06:51.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "sassal0x：地缘与技术不确定时期以太坊是坚固堡垒",
+      "note": "dankrad：模型擅长安全对加密有利，未来一两年可把协议加固到前所未有的水平 17:41；hasufl：希望你的协议至少有时间锁与安全委员会 04:31；sassal0x：地缘与技术不确定时期以太坊是坚固堡垒 06:51。",
+      "url": "https://x.com/sassal0x/status/2041665082573386067",
+      "date": "2026-04-08",
+      "title_en": "sassal0x: amid geopolitical and technological uncertainty Ethereum stands strong",
+      "note_en": "Dankrad: models getting good at security is good for crypto, and protocols can be hardened as never before in the next 1 to 2 years, 17:41; hasufl: I hope your protocol has at least timelocks and a security council, 04:31; sassal0x: amid geopolitical and technological uncertainty Ethereum stands strong, 06:51.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/extensible-execution-transaction-for-account-capabilities/28168",
+    "credit": "Ethereum Magicians, Extensible Execution Transaction for Account Capabilities",
+    "local_path": "assets/2026-04-08.jpg",
+    "credit_en": "Ethereum Magicians, Extensible Execution Transaction for Account Capabilities"
+  },
+  "keywords_en": [
+    "Native Key Delegation for EOAs EIP merged",
+    "EIP-2780 adds a transfer log cost and drops PAY",
+    "ERC-8211 smart batching",
+    "an extensible execution transaction for account capabilities",
+    "checked arithmetic opcodes",
+    "the ETH supply cap at 128 million debate"
+  ],
+  "summary_en": "prestwich's Native Key Delegation for EOAs EIP merged, extending EIP-7702 delegation to non ECDSA keys such as ed25519. benaadams added a 1,756 gas transfer log cost to EIP-2780 and removed the rejected PAY opcode, submitted and merged. The ethereum account highlighted ERC-8211, letting users and agents express multi step composable actions as an off chain script."
+}

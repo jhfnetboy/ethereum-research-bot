@@ -1,0 +1,141 @@
+{
+  "date": "2026-04-03",
+  "keywords": [
+    "EIP-8141 外层交易加入签名列表以支持后量子签名聚合",
+    "VERIFY frame 可调用预编译",
+    "EIP-8130 合约更新",
+    "Smart Batching ERC-8211",
+    "区块级瞬时存储 EIP-8212",
+    "多数 ZK 并不 ZK",
+    "Nethermind 日志索引"
+  ],
+  "summary": "lightclient 提议在 EIP-8141 外层交易加入 signatures 字段，为体积庞大的后量子签名聚合做前向兼容。derekchiang 提议让合约账户的 VERIFY frame 也能用预编译验证。L2BEAT 指出其 ZK 目录中多数证明系统并不具备零知识性质。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 签名与验证",
+      "title": "EIP-8141：外层交易加入签名列表",
+      "note": "（lightclient）提交：8141 的重要目标是对签名聚合前向兼容，后量子签名体积大，大量用户迁移时聚合可能非常关键，因此在外层交易对象新增 signatures 字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/11481",
+      "date": "2026-04-03",
+      "title_en": "EIP-8141: add a signatures list to the outer tx",
+      "note_en": "(lightclient), submitted: a key goal of 8141 is forward compatibility with signature aggregation, which may become crucial as many users migrate to large post-quantum signatures, so a signatures field is added to the outer transaction object.",
+      "topic_en": "Native AA: EIP-8141 signatures and verification"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 签名与验证",
+      "title": "EIP-8141：允许 VERIFY frame 使用预编译",
+      "note": "（derekchiang）提交：此前只有 EOA 默认代码支持，更新后 EOA 与合约账户可共用同一逻辑。",
+      "url": "https://github.com/ethereum/EIPs/pull/11482",
+      "date": "2026-04-03",
+      "title_en": "EIP-8141: allow using precompiles for VERIFY frames",
+      "note_en": "(derekchiang), submitted: previously only the EOA default code could, and the update lets EOAs and contract accounts share the same logic.",
+      "topic_en": "Native AA: EIP-8141 signatures and verification"
+    },
+    {
+      "topic": "账户与执行 ERC",
+      "title": "EIP-8130：合约更新",
+      "note": "（chunter-cb）提交；Magicians 讨论帖 ERC-8211 Smart Batching 06:07；Magicians 讨论帖 EIP-8212 区块级瞬时存储 18:08。",
+      "url": "https://github.com/ethereum/EIPs/pull/11483",
+      "date": "2026-04-03",
+      "title_en": "EIP-8130: contract updates",
+      "note_en": "(chunter-cb), submitted; Magicians thread ERC-8211 Smart Batching, 06:07; Magicians thread EIP-8212 Block-scoped transient storage, 18:08.",
+      "topic_en": "Account and execution standards"
+    },
+    {
+      "topic": "账户与执行 ERC",
+      "title": "Magicians 讨论帖 ERC-8211 Smart Batching",
+      "note": "EIP-8130：合约更新（chunter-cb）提交；Magicians 讨论帖 ERC-8211 Smart Batching 06:07；Magicians 讨论帖 EIP-8212 区块级瞬时存储 18:08。",
+      "url": "https://ethereum-magicians.org/t/erc-8211-smart-batching/28135",
+      "date": "2026-04-03",
+      "title_en": "Magicians thread ERC-8211 Smart Batching",
+      "note_en": "EIP-8130: contract updates (chunter-cb), submitted; Magicians thread ERC-8211 Smart Batching, 06:07; Magicians thread EIP-8212 Block-scoped transient storage, 18:08.",
+      "topic_en": "Account and execution standards"
+    },
+    {
+      "topic": "账户与执行 ERC",
+      "title": "Magicians 讨论帖 EIP-8212 区块级瞬时存储",
+      "note": "EIP-8130：合约更新（chunter-cb）提交；Magicians 讨论帖 ERC-8211 Smart Batching 06:07；Magicians 讨论帖 EIP-8212 区块级瞬时存储 18:08。",
+      "url": "https://ethereum-magicians.org/t/eip8212-block-scoped-transient-storage/28137",
+      "date": "2026-04-03",
+      "title_en": "Magicians thread EIP-8212 Block-scoped transient storage",
+      "note_en": "EIP-8130: contract updates (chunter-cb), submitted; Magicians thread ERC-8211 Smart Batching, 06:07; Magicians thread EIP-8212 Block-scoped transient storage, 18:08.",
+      "topic_en": "Account and execution standards"
+    },
+    {
+      "topic": "账户与执行 ERC",
+      "title": "新增 ERC：ERC-6551 账户的插槽式装备",
+      "note": "（LordThisDrip）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1645",
+      "date": "2026-04-03",
+      "title_en": "Add ERC: Slot-Based Equipment for ERC-6551 Accounts",
+      "note_en": "(LordThisDrip), submitted.",
+      "topic_en": "Account and execution standards"
+    },
+    {
+      "topic": "隐私：零知识性质",
+      "title": "ethbeat_org：L2BEAT ZK 目录中多数证明系统实际不具备零知识性质，要隐藏私有输入需额外处理",
+      "note": "20:34；aztecnetwork：Aztec 在本地生成并证明交易，确实是 ZK 23:56。",
+      "url": "https://x.com/ethbeat_org/status/2040060468950188367",
+      "date": "2026-04-03",
+      "title_en": "ethbeat_org: most proving systems in the L2BEAT ZK Catalog lack the zero knowledge property and need extra work to hide private inputs",
+      "note_en": "20:34; aztecnetwork: Aztec generates and proves transactions locally, so it really is ZK, 23:56.",
+      "topic_en": "Privacy: the zero knowledge property"
+    },
+    {
+      "topic": "隐私：零知识性质",
+      "title": "aztecnetwork：Aztec 在本地生成并证明交易，确实是 ZK",
+      "note": "ethbeat_org：L2BEAT ZK 目录中多数证明系统实际不具备零知识性质，要隐藏私有输入需额外处理 20:34；aztecnetwork：Aztec 在本地生成并证明交易，确实是 ZK 23:56。",
+      "url": "https://x.com/aztecnetwork/status/2040111095546044847",
+      "date": "2026-04-03",
+      "title_en": "aztecnetwork: Aztec generates and proves transactions locally, so it really is ZK",
+      "note_en": "Ethbeat_org: most proving systems in the L2BEAT ZK Catalog lack the zero knowledge property and need extra work to hide private inputs, 20:34; aztecnetwork: Aztec generates and proves transactions locally, so it really is ZK, 23:56.",
+      "topic_en": "Privacy: the zero knowledge property"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：客户端级日志索引让 eth_getLogs 中位查询时间从 32 秒降至 219 毫秒",
+      "note": "23:55。",
+      "url": "https://x.com/Nethermind/status/2040110831220728039",
+      "date": "2026-04-03",
+      "title_en": "Nethermind: a client level Log Index cuts median eth_getLogs time from 32 s to 219 ms",
+      "note_en": "23:55.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：DeFi 需要类似 L2BEAT 的评估，但别轻信速成项目",
+      "note": "14:52；peter_szilagyi：不要安装线上会议里别人让你装的东西 19:48。",
+      "url": "https://x.com/donnoh_eth/status/2039974371440140360",
+      "date": "2026-04-03",
+      "title_en": "donnoh_eth: DeFi needs an L2BEAT style review, but do not trust quickly vibecoded projects",
+      "note_en": "14:52; peter_szilagyi: do not install anything someone in an online meeting tells you to, 19:48.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：不要安装线上会议里别人让你装的东西",
+      "note": "donnoh_eth：DeFi 需要类似 L2BEAT 的评估，但别轻信速成项目 14:52；peter_szilagyi：不要安装线上会议里别人让你装的东西 19:48。",
+      "url": "https://x.com/peter_szilagyi/status/2040048740828840225",
+      "date": "2026-04-03",
+      "title_en": "peter_szilagyi: do not install anything someone in an online meeting tells you to",
+      "note_en": "Donnoh_eth: DeFi needs an L2BEAT style review, but do not trust quickly vibecoded projects, 14:52; peter_szilagyi: do not install anything someone in an online meeting tells you to, 19:48.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8211-smart-batching/28135",
+    "credit": "Ethereum Magicians, ERC-8211: Smart Batching",
+    "local_path": "assets/2026-04-03.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8211: Smart Batching"
+  },
+  "keywords_en": [
+    "EIP-8141 adds a signatures list to the outer transaction for PQ signature aggregation",
+    "VERIFY frames can use precompiles",
+    "EIP-8130 contract updates",
+    "Smart Batching ERC-8211",
+    "block scoped transient storage EIP-8212",
+    "most ZK is not ZK",
+    "Nethermind Log Index"
+  ],
+  "summary_en": "lightclient proposed a signatures field on EIP-8141's outer transaction for forward compatibility with aggregation of large post-quantum signatures. derekchiang proposed letting contract accounts' VERIFY frames use precompiles for verification. L2BEAT noted that most proving systems in its ZK Catalog lack the zero knowledge property."
+}

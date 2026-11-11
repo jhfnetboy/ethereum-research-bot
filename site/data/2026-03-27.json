@@ -1,0 +1,149 @@
+{
+  "date": "2026-03-27",
+  "keywords": [
+    "Etherscan 支持 ERC-8004 Agent 身份",
+    "Ethereal news #17",
+    "EIP-8141 默认代码兼容 EIP-7392",
+    "EIP-8148 字节码修正",
+    "无需全局状态树的成员证明",
+    "无主 BFT 研究"
+  ],
+  "summary": "Etherscan 支持 ERC-8004，Agent 身份、信誉与发现更易查看。Ethereal news #17 发布，头条是 frame 交易进入 Hegotá CFI。SirSpudlington 微调 EIP-8141 默认代码以兼容 EIP-7392，提交。ethresear.ch 有两篇研究：无需全局状态树的区块更新摘要，以及无主 BFT 协议设计。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 默认代码",
+      "title": "nixorokish：今天的 ACD 结果是 Hegotá 将迎来一点账户抽象，gg lightclients",
+      "note": "00:35，指前一晚 ACDE #233 把 EIP-8141 列为 CFI。",
+      "url": "https://x.com/nixorokish/status/2037221820802236678",
+      "date": "2026-03-27",
+      "title_en": "nixorokish: today's ACD outcome is a little account abstraction for Hegotá, gg lightclients",
+      "note_en": "00:35, referring to ACDE #233 the night before making EIP-8141 CFI.",
+      "topic_en": "Native AA: EIP-8141 default code"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 默认代码",
+      "title": "EIP-8141：微调默认代码以兼容 EIP-7392",
+      "note": "（SirSpudlington）提交；EtherealnewsHQ：Ethereal news #17，lightclients 的 frame 交易进入 Hegotá CFI 20:03。",
+      "url": "https://github.com/ethereum/EIPs/pull/11455",
+      "date": "2026-03-27",
+      "title_en": "EIP-8141: small tweaks to default code to be EIP-7392 compatible",
+      "note_en": "(SirSpudlington), submitted; EtherealnewsHQ: Ethereal news #17, lightclients' frame transaction CFI for Hegotá, 20:03.",
+      "topic_en": "Native AA: EIP-8141 default code"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 默认代码",
+      "title": "EtherealnewsHQ：Ethereal news #17，lightclients 的 frame 交易进入 Hegotá CFI",
+      "note": "EIP-8141：微调默认代码以兼容 EIP-7392（SirSpudlington）提交；EtherealnewsHQ：Ethereal news #17，lightclients 的 frame 交易进入 Hegotá CFI 20:03。",
+      "url": "https://x.com/EtherealnewsHQ/status/2037515851642061218",
+      "date": "2026-03-27",
+      "title_en": "EtherealnewsHQ: Ethereal news #17, lightclients' frame transaction CFI for Hegotá",
+      "note_en": "EIP-8141: small tweaks to default code to be EIP-7392 compatible (SirSpudlington), submitted; EtherealnewsHQ: Ethereal news #17, lightclients' frame transaction CFI for Hegotá, 20:03.",
+      "topic_en": "Native AA: EIP-8141 default code"
+    },
+    {
+      "topic": "账户与 Agent",
+      "title": "ethereum：Etherscan 支持 ERC-8004，Agent 身份、信誉与发现更易获取",
+      "note": "21:51。",
+      "url": "https://x.com/ethereum/status/2037543154572808324",
+      "date": "2026-03-27",
+      "title_en": "ethereum: ERC-8004 is now supported on Etherscan, making agent identity, reputation and discovery more accessible",
+      "note_en": "21:51.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "研究",
+      "title": "ethresear.ch：区块更新摘要，无需全局状态树的成员证明",
+      "note": "00:56；ethresear.ch：无主 BFT 协议设计前期研究 02:03；Magicians：为 ZK 优化的形式化验证 EVM 解释器提案 09:58。",
+      "url": "https://ethresear.ch/t/block-update-digests-membership-proofs-without-a-global-state-tree/24509",
+      "date": "2026-03-27",
+      "title_en": "ethresear.ch: Block Update Digests, membership proofs without a global state tree",
+      "note_en": "00:56; ethresear.ch: preface research for leaderless BFT protocol designs, 02:03; Magicians: proposal for optimized verified EVM interpreters for ZK, 09:58.",
+      "topic_en": "Research"
+    },
+    {
+      "topic": "研究",
+      "title": "ethresear.ch：无主 BFT 协议设计前期研究",
+      "note": "ethresear.ch：区块更新摘要，无需全局状态树的成员证明 00:56；ethresear.ch：无主 BFT 协议设计前期研究 02:03；Magicians：为 ZK 优化的形式化验证 EVM 解释器提案 09:58。",
+      "url": "https://ethresear.ch/t/preface-research-for-leaderless-bft-protocol-designs/24511",
+      "date": "2026-03-27",
+      "title_en": "ethresear.ch: preface research for leaderless BFT protocol designs",
+      "note_en": "Ethresear.ch: Block Update Digests, membership proofs without a global state tree, 00:56; ethresear.ch: preface research for leaderless BFT protocol designs, 02:03; Magicians: proposal for optimized verified EVM interpreters for ZK, 09:58.",
+      "topic_en": "Research"
+    },
+    {
+      "topic": "研究",
+      "title": "Magicians：为 ZK 优化的形式化验证 EVM 解释器提案",
+      "note": "ethresear.ch：区块更新摘要，无需全局状态树的成员证明 00:56；ethresear.ch：无主 BFT 协议设计前期研究 02:03；Magicians：为 ZK 优化的形式化验证 EVM 解释器提案 09:58。",
+      "url": "https://ethereum-magicians.org/t/proposal-optimized-verified-evm-interpreters-for-zk/28086",
+      "date": "2026-03-27",
+      "title_en": "Magicians: proposal for optimized verified EVM interpreters for ZK",
+      "note_en": "Ethresear.ch: Block Update Digests, membership proofs without a global state tree, 00:56; ethresear.ch: preface research for leaderless BFT protocol designs, 02:03; Magicians: proposal for optimized verified EVM interpreters for ZK, 09:58.",
+      "topic_en": "Research"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8148：修正字节码中 MAX_REQUESTS_PER_BLOCK 由 2 改为 16",
+      "note": "（GarmashAlex）合并；EIP-7981：对齐 EIP-7976 更新（nerolation）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11331",
+      "date": "2026-03-27",
+      "title_en": "EIP-8148: correct MAX_REQUESTS_PER_BLOCK in bytecode from 2 to 16",
+      "note_en": "(GarmashAlex), merged; EIP-7981: align with EIP-7976 updates (nerolation), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7981：对齐 EIP-7976 更新",
+      "note": "EIP-8148：修正字节码中 MAX_REQUESTS_PER_BLOCK 由 2 改为 16（GarmashAlex）合并；EIP-7981：对齐 EIP-7976 更新（nerolation）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11340",
+      "date": "2026-03-27",
+      "title_en": "EIP-7981: align with EIP-7976 updates",
+      "note_en": "EIP-8148: correct MAX_REQUESTS_PER_BLOCK in bytecode from 2 to 16 (GarmashAlex), merged; EIP-7981: align with EIP-7976 updates (nerolation), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "lightclients：密码朋克写代码，我们会写出保护隐私的软件",
+      "note": "00:24；fede_intern：以太坊多数问题与 EF Mandate 无关，而在 ACD 03:55；tcoratger：形式化验证对以太坊越来越重要 06:31。",
+      "url": "https://x.com/lightclients/status/2037219235764773075",
+      "date": "2026-03-27",
+      "title_en": "lightclients: cypherpunks write code, and we will write software to defend privacy",
+      "note_en": "00:24; fede_intern: most of Ethereum's problems have nothing to do with the EF Mandate but with ACD, 03:55; tcoratger: formal verification is becoming more important for Ethereum, 06:31.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：以太坊多数问题与 EF Mandate 无关，而在 ACD",
+      "note": "lightclients：密码朋克写代码，我们会写出保护隐私的软件 00:24；fede_intern：以太坊多数问题与 EF Mandate 无关，而在 ACD 03:55；tcoratger：形式化验证对以太坊越来越重要 06:31。",
+      "url": "https://x.com/fede_intern/status/2037272199392837746",
+      "date": "2026-03-27",
+      "title_en": "fede_intern: most of Ethereum's problems have nothing to do with the EF Mandate but with ACD",
+      "note_en": "Lightclients: cypherpunks write code, and we will write software to defend privacy, 00:24; fede_intern: most of Ethereum's problems have nothing to do with the EF Mandate but with ACD, 03:55; tcoratger: formal verification is becoming more important for Ethereum, 06:31.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：形式化验证对以太坊越来越重要",
+      "note": "lightclients：密码朋克写代码，我们会写出保护隐私的软件 00:24；fede_intern：以太坊多数问题与 EF Mandate 无关，而在 ACD 03:55；tcoratger：形式化验证对以太坊越来越重要 06:31。",
+      "url": "https://x.com/tcoratger/status/2037311569160204442",
+      "date": "2026-03-27",
+      "title_en": "tcoratger: formal verification is becoming more important for Ethereum",
+      "note_en": "Lightclients: cypherpunks write code, and we will write software to defend privacy, 00:24; fede_intern: most of Ethereum's problems have nothing to do with the EF Mandate but with ACD, 03:55; tcoratger: formal verification is becoming more important for Ethereum, 06:31.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/block-update-digests-membership-proofs-without-a-global-state-tree/24509",
+    "credit": "ethresear.ch, Block Update Digests: Membership Proofs Without a Global State Tree",
+    "local_path": "assets/2026-03-27.jpg",
+    "credit_en": "ethresear.ch, Block Update Digests: Membership Proofs Without a Global State Tree"
+  },
+  "keywords_en": [
+    "Etherscan supports ERC-8004 agent identity",
+    "Ethereal news #17",
+    "EIP-8141 default code made EIP-7392 compatible",
+    "EIP-8148 bytecode fixes",
+    "membership proofs without a global state tree",
+    "leaderless BFT research"
+  ],
+  "summary_en": "Etherscan added ERC-8004 support, making agent identity, reputation and discovery easier to see. Ethereal news #17 came out, led by frame transactions being CFI for Hegotá. SirSpudlington submitted tweaks to EIP-8141's default code for EIP-7392 compatibility. Two ethresear.ch posts appeared: block update digests without a global state tree, and leaderless BFT protocol design."
+}

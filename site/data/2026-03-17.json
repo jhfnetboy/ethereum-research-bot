@@ -1,0 +1,179 @@
+{
+  "date": "2026-03-17",
+  "keywords": [
+    "协议内私密 ETH 与 ERC-20 转账 EIP 合并",
+    "EIP-8141 内存池策略与标准 paymaster 合约",
+    "快速确认规则让存款约 13 秒",
+    "NTT 预编译 EIP 合并",
+    "以太坊需要动态可用协议",
+    "无签名后量子 RLPx 握手"
+  ],
+  "summary": "RogerPodacter 的协议内隐私池 EIP 合并为草案，定义私密 ETH 与 ERC-20 转账的标准系统合约。lightclient 提交 EIP-8141 内存池策略初稿，改用标准 paymaster 合约以去掉 ERC-7562 复杂的质押信誉系统。_julianma 解释快速确认规则，L2 与交易所存款时间可降至约 13 秒。",
+  "items": [
+    {
+      "topic": "隐私：协议内私密转账",
+      "title": "新增 EIP：私密 ETH 与 ERC-20 转账",
+      "note": "（RogerPodacter）合并：协议内隐私池系统合约，为 ETH 与 ERC-20 私密转账定义标准有效性层，公开存取；固定地址、仅能通过硬分叉升级、无管理员密钥，共享票据树与 nullifier 集合，采用递归证明架构。",
+      "url": "https://github.com/ethereum/EIPs/pull/11373",
+      "date": "2026-03-17",
+      "title_en": "Add EIP: Private ETH and ERC-20 Transfers",
+      "note_en": "(RogerPodacter), merged: a protocol enshrined privacy pool system contract defining a canonical validity layer for private ETH and ERC-20 transfers with public deposits and withdrawals; fixed address, hard fork only upgrades, no admin keys, a shared note tree and nullifier set, and a recursive proof architecture.",
+      "topic_en": "Privacy: enshrined private transfers"
+    },
+    {
+      "topic": "隐私：协议内私密转账",
+      "title": "ethereum：zkPass 是建在以太坊上的隐私身份协议，可证明自身信息而不暴露底层数据",
+      "note": "23:37；EliBenSasson：隐私不是有无问题，而是程度和类型问题 22:36。",
+      "url": "https://x.com/ethereum/status/2033945733775454273",
+      "date": "2026-03-17",
+      "title_en": "ethereum: zkPass is a privacy preserving identity protocol on Ethereum that proves facts about users without revealing the data",
+      "note_en": "23:37; EliBenSasson: privacy is not yes or no but a question of how much and what kind, 22:36.",
+      "topic_en": "Privacy: enshrined private transfers"
+    },
+    {
+      "topic": "隐私：协议内私密转账",
+      "title": "EliBenSasson：隐私不是有无问题，而是程度和类型问题",
+      "note": "ethereum：zkPass 是建在以太坊上的隐私身份协议，可证明自身信息而不暴露底层数据 23:37；EliBenSasson：隐私不是有无问题，而是程度和类型问题 22:36。",
+      "url": "https://x.com/EliBenSasson/status/2033930525056840180",
+      "date": "2026-03-17",
+      "title_en": "EliBenSasson: privacy is not yes or no but a question of how much and what kind",
+      "note_en": "Ethereum: zkPass is a privacy preserving identity protocol on Ethereum that proves facts about users without revealing the data, 23:37; EliBenSasson: privacy is not yes or no but a question of how much and what kind, 22:36.",
+      "topic_en": "Privacy: enshrined private transfers"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 内存池策略",
+      "title": "EIP-8141：新增内存池策略",
+      "note": "（lightclient）提交：与 ERC-7562 相比的重要变化是依赖一个标准 paymaster 合约，从而去掉围绕质押的复杂信誉系统，日后可逐步扩展功能。",
+      "url": "https://github.com/ethereum/EIPs/pull/11415",
+      "date": "2026-03-17",
+      "title_en": "EIP-8141: add mempool policy",
+      "note_en": "(lightclient), submitted: the key change versus ERC-7562 is relying on a canonical paymaster contract, which removes the complex staking based reputation system and can gain features over time.",
+      "topic_en": "Native AA: EIP-8141 mempool policy"
+    },
+    {
+      "topic": "共识与确认",
+      "title": "_julianma：快速确认规则说明",
+      "note": "17:23，据 Ethereal news #16，规则假设网络同步且对手不控制超过 25% 质押，失败时回落到最终性，L2 与交易所存款时间降至约 13 秒，未来几个月推出；binji_x：快 60 倍的确认对用户意味着什么 18:37；benjaminion_xyz：这不是快速最终性，但对多数应用是巨大升级 18:59。",
+      "url": "https://x.com/_julianma/status/2033851796574154808",
+      "date": "2026-03-17",
+      "title_en": "_julianma: a fast confirmation rule explainer",
+      "note_en": "17:23; per Ethereal news #16, the rule assumes a synchronous network and an adversary with at most 25% of stake, falls back to finality, cuts L2 and exchange deposits to about 13 seconds and rolls out in the coming months; binji_x: what 60x faster confirmation means for users, 18:37; benjaminion_xyz: it is not fast finality, but an incredible upgrade for most applications, 18:59.",
+      "topic_en": "Consensus and confirmation"
+    },
+    {
+      "topic": "共识与确认",
+      "title": "Ethereal news #16",
+      "note": "_julianma：快速确认规则说明 17:23，据 Ethereal news #16，规则假设网络同步且对手不控制超过 25% 质押，失败时回落到最终性，L2 与交易所存款时间降至约 13 秒，未来几个月推出；binji_x：快 60 倍的确认对用户意味着什么 18:37；benjaminion_xyz：这不是快速最终性，但对多数应用是巨大升级 18:59。",
+      "url": "https://ethereal.news/ethereal-news-weekly-16/",
+      "date": "2026-03-17",
+      "title_en": "Ethereal news #16",
+      "note_en": "_julianma: a fast confirmation rule explainer, 17:23; per Ethereal news #16, the rule assumes a synchronous network and an adversary with at most 25% of stake, falls back to finality, cuts L2 and exchange deposits to about 13 seconds and rolls out in the coming months; binji_x: what 60x faster confirmation means for users, 18:37; benjaminion_xyz: it is not fast finality, but an incredible upgrade for most applications, 18:59.",
+      "topic_en": "Consensus and confirmation"
+    },
+    {
+      "topic": "共识与确认",
+      "title": "binji_x：快 60 倍的确认对用户意味着什么",
+      "note": "_julianma：快速确认规则说明 17:23，据 Ethereal news #16，规则假设网络同步且对手不控制超过 25% 质押，失败时回落到最终性，L2 与交易所存款时间降至约 13 秒，未来几个月推出；binji_x：快 60 倍的确认对用户意味着什么 18:37；benjaminion_xyz：这不是快速最终性，但对多数应用是巨大升级 18:59。",
+      "url": "https://x.com/binji_x/status/2033870230049476762",
+      "date": "2026-03-17",
+      "title_en": "binji_x: what 60x faster confirmation means for users",
+      "note_en": "_julianma: a fast confirmation rule explainer, 17:23; per Ethereal news #16, the rule assumes a synchronous network and an adversary with at most 25% of stake, falls back to finality, cuts L2 and exchange deposits to about 13 seconds and rolls out in the coming months; binji_x: what 60x faster confirmation means for users, 18:37; benjaminion_xyz: it is not fast finality, but an incredible upgrade for most applications, 18:59.",
+      "topic_en": "Consensus and confirmation"
+    },
+    {
+      "topic": "共识与确认",
+      "title": "benjaminion_xyz：这不是快速最终性，但对多数应用是巨大升级",
+      "note": "_julianma：快速确认规则说明 17:23，据 Ethereal news #16，规则假设网络同步且对手不控制超过 25% 质押，失败时回落到最终性，L2 与交易所存款时间降至约 13 秒，未来几个月推出；binji_x：快 60 倍的确认对用户意味着什么 18:37；benjaminion_xyz：这不是快速最终性，但对多数应用是巨大升级 18:59。",
+      "url": "https://x.com/benjaminion_xyz/status/2033875896340250960",
+      "date": "2026-03-17",
+      "title_en": "benjaminion_xyz: it is not fast finality, but an incredible upgrade for most applications",
+      "note_en": "_julianma: a fast confirmation rule explainer, 17:23; per Ethereal news #16, the rule assumes a synchronous network and an adversary with at most 25% of stake, falls back to finality, cuts L2 and exchange deposits to about 13 seconds and rolls out in the coming months; binji_x: what 60x faster confirmation means for users, 18:37; benjaminion_xyz: it is not fast finality, but an incredible upgrade for most applications, 18:59.",
+      "topic_en": "Consensus and confirmation"
+    },
+    {
+      "topic": "共识与确认",
+      "title": "ethresear.ch：以太坊为什么需要动态可用协议",
+      "note": "20:56：下一代共识的两层架构，由小规模随机委员会产出快速可用链，另设落后的最终性机制，两层完全解耦。",
+      "url": "https://ethresear.ch/t/why-ethereum-needs-a-dynamically-available-protocol/24418",
+      "date": "2026-03-17",
+      "title_en": "ethresear.ch: Why Ethereum Needs a Dynamically Available Protocol",
+      "note_en": "20:56: a two layer design for the next consensus protocol, with a fast available chain from a small random committee and a separate trailing finality mechanism, fully decoupled.",
+      "topic_en": "Consensus and confirmation"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：NTT 运算预编译",
+      "note": "（rdubois-crypto）合并，为后量子签名与 STARK 结算提供高效多项式乘法。",
+      "url": "https://github.com/ethereum/EIPs/pull/9374",
+      "date": "2026-03-17",
+      "title_en": "Add EIP: Precompile for NTT operations",
+      "note_en": "(rdubois-crypto), merged, giving efficient polynomial multiplication for post-quantum signatures and STARK settlement.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：探索无签名的后量子 RLPx 握手",
+      "note": "18:22；trailofbits：超过 70 万个代码库使用默认静态 IV 的加密库 18:13。",
+      "url": "https://ethresear.ch/t/exploring-signature-free-post-quantum-rlpx-handshake/24413",
+      "date": "2026-03-17",
+      "title_en": "ethresear.ch: exploring a signature free post-quantum RLPx handshake",
+      "note_en": "18:22; trailofbits: over 700,000 repos ship crypto libraries defaulting to a static IV, 18:13.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trailofbits：超过 70 万个代码库使用默认静态 IV 的加密库",
+      "note": "ethresear.ch：探索无签名的后量子 RLPx 握手 18:22；trailofbits：超过 70 万个代码库使用默认静态 IV 的加密库 18:13。",
+      "url": "https://x.com/trailofbits/status/2033864175726850349",
+      "date": "2026-03-17",
+      "title_en": "trailofbits: over 700,000 repos ship crypto libraries defaulting to a static IV",
+      "note_en": "Ethresear.ch: exploring a signature free post-quantum RLPx handshake, 18:22; trailofbits: over 700,000 repos ship crypto libraries defaulting to a static IV, 18:13.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #4 议程",
+      "note": "17:02；EIP-8189：为 snap/2 分配新消息 ID（nerolation）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-4-mar-18-2026/28009",
+      "date": "2026-03-17",
+      "title_en": "Glamsterdam Repricings #4 agenda",
+      "note_en": "17:02; EIP-8189: assign new message IDs for snap/2 (nerolation), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8189：为 snap/2 分配新消息 ID",
+      "note": "Glamsterdam Repricings #4 议程 17:02；EIP-8189：为 snap/2 分配新消息 ID（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11418",
+      "date": "2026-03-17",
+      "title_en": "EIP-8189: assign new message IDs for snap/2",
+      "note_en": "Glamsterdam Repricings #4 agenda, 17:02; EIP-8189: assign new message IDs for snap/2 (nerolation), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：新的 EF Mandate 并非讨好基本盘，EF 不等于以太坊",
+      "note": "06:45。",
+      "url": "https://x.com/AndyGuzmanEth/status/2033691079216689217",
+      "date": "2026-03-17",
+      "title_en": "AndyGuzmanEth: the new EF Mandate is not playing to the base; the EF is not Ethereum",
+      "note_en": "06:45.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/why-ethereum-needs-a-dynamically-available-protocol/24418",
+    "credit": "ethresear.ch, Why Ethereum Needs a Dynamically Available Protocol",
+    "local_path": "assets/2026-03-17.jpg",
+    "credit_en": "ethresear.ch, Why Ethereum Needs a Dynamically Available Protocol"
+  },
+  "keywords_en": [
+    "Private ETH and ERC-20 transfers EIP merged",
+    "EIP-8141 mempool policy with a canonical paymaster contract",
+    "the fast confirmation rule cuts deposits to about 13 seconds",
+    "NTT precompile EIP merged",
+    "why Ethereum needs a dynamically available protocol",
+    "signature free post-quantum RLPx handshake"
+  ],
+  "summary_en": "RogerPodacter's protocol enshrined privacy pool EIP merged as a draft, defining a canonical system contract for private ETH and ERC-20 transfers. lightclient submitted a first draft of EIP-8141 mempool policy built on a canonical paymaster contract, removing ERC-7562's complex staking reputation system. _julianma explained the fast confirmation rule, which cuts L2 and exchange deposit times to about 13 seconds."
+}

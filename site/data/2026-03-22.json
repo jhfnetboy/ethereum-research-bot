@@ -1,0 +1,95 @@
+{
+  "date": "2026-03-22",
+  "keywords": [
+    "Agent 链下条件结算 ERC-8203",
+    "Lean Ethereum 路线图中的后量子签名与 SNARK 聚合",
+    "隐私不是是非题",
+    "Stateless Implementers Call #50 议程"
+  ],
+  "summary": "周日较安静。xrqin 提交 Agent 链下条件结算 ERC（ERC-8203），为机器之间的高频交互定义通用结算层。tcoratger 梳理 Lean Ethereum 如何在客户端中集成后量子签名与 SNARK 聚合。",
+  "items": [
+    {
+      "topic": "账户与支付：Agent 结算",
+      "title": "新增 ERC：Agent 链下条件结算",
+      "note": "（xrqin）提交；Magicians 讨论帖 ERC-8203 15:09：现有 Agent 相关 ERC 覆盖身份、账户、权限与支付信号，但没有机器之间高频交互的通用结算层，提案以状态通道式的条件结算补上。",
+      "url": "https://github.com/ethereum/ERCs/pull/1614",
+      "date": "2026-03-22",
+      "title_en": "Add ERC: Agent Offchain Conditional Settlement",
+      "note_en": "(xrqin), submitted; Magicians thread ERC-8203, 15:09: existing agent ERCs cover identity, accounts, permissions and payment signaling but no common settlement layer for high frequency machine to machine interaction, which this fills with state channel style conditional settlement.",
+      "topic_en": "Accounts and payments: agent settlement"
+    },
+    {
+      "topic": "账户与支付：Agent 结算",
+      "title": "Magicians 讨论帖 ERC-8203",
+      "note": "新增 ERC：Agent 链下条件结算（xrqin）提交；Magicians 讨论帖 ERC-8203 15:09：现有 Agent 相关 ERC 覆盖身份、账户、权限与支付信号，但没有机器之间高频交互的通用结算层，提案以状态通道式的条件结算补上。",
+      "url": "https://ethereum-magicians.org/t/erc-8203-agent-off-chain-conditional-settlement-extension-interface/28041",
+      "date": "2026-03-22",
+      "title_en": "Magicians thread ERC-8203",
+      "note_en": "Add ERC: Agent Offchain Conditional Settlement (xrqin), submitted; Magicians thread ERC-8203, 15:09: existing agent ERCs cover identity, accounts, permissions and payment signaling but no common settlement layer for high frequency machine to machine interaction, which this fills with state channel style conditional settlement.",
+      "topic_en": "Accounts and payments: agent settlement"
+    },
+    {
+      "topic": "后量子：Lean Ethereum",
+      "title": "tcoratger：Lean Ethereum 路线图，扩容、后量子安全与网络",
+      "note": "04:48，梳理 raulvk、corcoranwill 与 nico_mnbl 在 zeroknowledgefm 上讨论如何把后量子签名与 SNARK 聚合集成进真实客户端。",
+      "url": "https://x.com/tcoratger/status/2035473660148871287",
+      "date": "2026-03-22",
+      "title_en": "tcoratger: the roadmap to Lean Ethereum, scaling, PQ security and networking",
+      "note_en": "04:48, summarizing raulvk, corcoranwill and nico_mnbl on zeroknowledgefm about bringing PQ signatures and SNARK aggregation into real clients.",
+      "topic_en": "Post-quantum: Lean Ethereum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Stateless Implementers Call #50 议程",
+      "note": "20:55；EIP-7919 被标记为 stagnant（eth-bot）提交。",
+      "url": "https://ethereum-magicians.org/t/stateless-implementers-call-50-april-20-2026/28042",
+      "date": "2026-03-22",
+      "title_en": "Stateless Implementers Call #50 agenda",
+      "note_en": "20:55; EIP-7919 flagged as stagnant (eth-bot), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7919 被标记为 stagnant",
+      "note": "Stateless Implementers Call #50 议程 20:55；EIP-7919 被标记为 stagnant（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11433",
+      "date": "2026-03-22",
+      "title_en": "EIP-7919 flagged as stagnant",
+      "note_en": "Stateless Implementers Call #50 agenda, 20:55; EIP-7919 flagged as stagnant (eth-bot), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：隐私不是是非题，UX 与可组合性才是难点",
+      "note": "00:25；colludingnode：一位意大利人从第一性原理重新发明了多样化支付地址 04:31。",
+      "url": "https://x.com/EliBenSasson/status/2035407400379768982",
+      "date": "2026-03-22",
+      "title_en": "EliBenSasson: privacy is not a yes or no feature; UX and composability are the hard parts",
+      "note_en": "00:25; colludingnode: a man in Italy reinvented diversified payment addresses from first principles, 04:31.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：一位意大利人从第一性原理重新发明了多样化支付地址",
+      "note": "EliBenSasson：隐私不是是非题，UX 与可组合性才是难点 00:25；colludingnode：一位意大利人从第一性原理重新发明了多样化支付地址 04:31。",
+      "url": "https://x.com/colludingnode/status/2035469409980940749",
+      "date": "2026-03-22",
+      "title_en": "colludingnode: a man in Italy reinvented diversified payment addresses from first principles",
+      "note_en": "EliBenSasson: privacy is not a yes or no feature; UX and composability are the hard parts, 00:25; colludingnode: a man in Italy reinvented diversified payment addresses from first principles, 04:31.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8203-agent-off-chain-conditional-settlement-extension-interface/28041",
+    "credit": "Ethereum Magicians, ERC-8203: Agent Off-Chain Conditional Settlement Extension Interface",
+    "local_path": "assets/2026-03-22.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8203: Agent Off-Chain Conditional Settlement Extension Interface"
+  },
+  "keywords_en": [
+    "Agent off chain conditional settlement ERC-8203",
+    "post-quantum signatures and SNARK aggregation in the Lean Ethereum roadmap",
+    "privacy is not a yes or no feature",
+    "Stateless Implementers Call #50 agenda"
+  ],
+  "summary_en": "A quiet Sunday. xrqin submitted the Agent off chain conditional settlement ERC (ERC-8203), defining a common settlement layer for high frequency machine to machine interactions. tcoratger summarized how Lean Ethereum integrates post-quantum signatures and SNARK aggregation into clients."
+}

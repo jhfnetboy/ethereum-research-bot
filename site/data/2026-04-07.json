@@ -1,0 +1,161 @@
+{
+  "date": "2026-04-07",
+  "keywords": [
+    "沙盒智能钱包 ERC 合并",
+    "区块已死 blob 万岁",
+    "EIP-8142 区块放进 blob",
+    "EU 数字身份选用 Noir",
+    "WhatsApp 私密处理 TEE 审计",
+    "builder 发现 ERC-8218",
+    "EIP-8130 哨兵地址修正"
+  ],
+  "summary": "PowerStream3604 的沙盒智能钱包 ERC（ERC-8199）合并。ethresear.ch 发表区块已死、blob 万岁，nero_eth 解释 EIP-8142 把执行 payload 放进 blob 后验证者只需采样。EU 数字身份钱包选用 Noir 构建 ZK 身份应用。trailofbits 披露审计 WhatsApp 私密处理 TEE 时发现 8 个高危问题。",
+  "items": [
+    {
+      "topic": "账户：沙盒智能钱包",
+      "title": "新增 ERC：沙盒智能钱包",
+      "note": "（PowerStream3604）合并，3 月 19 日提交，为安全的 Agent 自动化定义沙盒钱包接口；EIP-8130：修正哨兵地址（chunter-cb）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1609",
+      "date": "2026-04-07",
+      "title_en": "Add ERC: Sandboxed Smart Wallet",
+      "note_en": "(PowerStream3604), merged after submission on March 19, defining sandboxed wallet interfaces for secure agent automation; EIP-8130: fix sentinel addresses (chunter-cb), submitted.",
+      "topic_en": "Accounts: Sandboxed Smart Wallet"
+    },
+    {
+      "topic": "账户：沙盒智能钱包",
+      "title": "EIP-8130：修正哨兵地址",
+      "note": "新增 ERC：沙盒智能钱包（PowerStream3604）合并，3 月 19 日提交，为安全的 Agent 自动化定义沙盒钱包接口；EIP-8130：修正哨兵地址（chunter-cb）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11492",
+      "date": "2026-04-07",
+      "title_en": "EIP-8130: fix sentinel addresses",
+      "note_en": "Add ERC: Sandboxed Smart Wallet (PowerStream3604), merged after submission on March 19, defining sandboxed wallet interfaces for secure agent automation; EIP-8130: fix sentinel addresses (chunter-cb), submitted.",
+      "topic_en": "Accounts: Sandboxed Smart Wallet"
+    },
+    {
+      "topic": "扩容：区块放进 blob",
+      "title": "ethresear.ch：区块已死，blob 万岁",
+      "note": "19:00；nero_eth：zkEVM 配合 blob 与 DAS 也能扩展数据，EIP-8142 把执行 payload 放进 blob，验证者无需下载全部而只需采样 22:52。",
+      "url": "https://ethresear.ch/t/blocks-are-dead-long-live-blobs/24611",
+      "date": "2026-04-07",
+      "title_en": "ethresear.ch: Blocks Are Dead. Long Live Blobs",
+      "note_en": "19:00; nero_eth: zkEVMs paired with blobs and DAS scale data too; EIP-8142 moves execution payloads into blobs so validators sample instead of downloading everything, 22:52.",
+      "topic_en": "Scaling: blocks in blobs"
+    },
+    {
+      "topic": "扩容：区块放进 blob",
+      "title": "nero_eth：zkEVM 配合 blob 与 DAS 也能扩展数据，EIP-8142 把执行 payload 放进 blob，验证者无需下载全部而只需采样",
+      "note": "ethresear.ch：区块已死，blob 万岁 19:00；nero_eth：zkEVM 配合 blob 与 DAS 也能扩展数据，EIP-8142 把执行 payload 放进 blob，验证者无需下载全部而只需采样 22:52。",
+      "url": "https://x.com/nero_eth/status/2041544589320880199",
+      "date": "2026-04-07",
+      "title_en": "nero_eth: zkEVMs paired with blobs and DAS scale data too; EIP-8142 moves execution payloads into blobs so validators sample instead of downloading everything",
+      "note_en": "Ethresear.ch: Blocks Are Dead. Long Live Blobs, 19:00; nero_eth: zkEVMs paired with blobs and DAS scale data too; EIP-8142 moves execution payloads into blobs so validators sample instead of downloading everything, 22:52.",
+      "topic_en": "Scaling: blocks in blobs"
+    },
+    {
+      "topic": "隐私：ZK 身份与 TEE",
+      "title": "recmo：EU 数字身份选用 Noir 构建其 ZK 身份应用",
+      "note": "22:50；trailofbits：上线前审计 WhatsApp 私密处理 TEE，发现 8 个高危问题，均已修复 18:02；binji_x：以太坊上有大量优秀的隐私工作 15:15。",
+      "url": "https://x.com/recmo/status/2041544161053339663",
+      "date": "2026-04-07",
+      "title_en": "recmo: the EU digital identity effort picked Noir for its ZK identity app",
+      "note_en": "22:50; trailofbits: before launch they audited WhatsApp's Private Processing TEEs and found 8 high severity issues, all patched, 18:02; binji_x: lots of great privacy work happening on Ethereum, 15:15.",
+      "topic_en": "Privacy: ZK identity and TEEs"
+    },
+    {
+      "topic": "隐私：ZK 身份与 TEE",
+      "title": "trailofbits：上线前审计 WhatsApp 私密处理 TEE，发现 8 个高危问题，均已修复",
+      "note": "recmo：EU 数字身份选用 Noir 构建其 ZK 身份应用 22:50；trailofbits：上线前审计 WhatsApp 私密处理 TEE，发现 8 个高危问题，均已修复 18:02；binji_x：以太坊上有大量优秀的隐私工作 15:15。",
+      "url": "https://x.com/trailofbits/status/2041471550881153077",
+      "date": "2026-04-07",
+      "title_en": "trailofbits: before launch they audited WhatsApp's Private Processing TEEs and found 8 high severity issues, all patched",
+      "note_en": "Recmo: the EU digital identity effort picked Noir for its ZK identity app, 22:50; trailofbits: before launch they audited WhatsApp's Private Processing TEEs and found 8 high severity issues, all patched, 18:02; binji_x: lots of great privacy work happening on Ethereum, 15:15.",
+      "topic_en": "Privacy: ZK identity and TEEs"
+    },
+    {
+      "topic": "隐私：ZK 身份与 TEE",
+      "title": "binji_x：以太坊上有大量优秀的隐私工作",
+      "note": "recmo：EU 数字身份选用 Noir 构建其 ZK 身份应用 22:50；trailofbits：上线前审计 WhatsApp 私密处理 TEE，发现 8 个高危问题，均已修复 18:02；binji_x：以太坊上有大量优秀的隐私工作 15:15。",
+      "url": "https://x.com/binji_x/status/2041429597623914820",
+      "date": "2026-04-07",
+      "title_en": "binji_x: lots of great privacy work happening on Ethereum",
+      "note_en": "Recmo: the EU digital identity effort picked Noir for its ZK identity app, 22:50; trailofbits: before launch they audited WhatsApp's Private Processing TEEs and found 8 high severity issues, all patched, 18:02; binji_x: lots of great privacy work happening on Ethereum, 15:15.",
+      "topic_en": "Privacy: ZK identity and TEEs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Builder Discovery",
+      "note": "（canercidam）提交，Magicians 讨论帖 ERC-8218 18:50；ACDT #77 议程 19:40；EIP-7516：修正 BLOBBASEFEE 示例字节码（phrwlk）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1650",
+      "date": "2026-04-07",
+      "title_en": "Add ERC: Builder Discovery",
+      "note_en": "(canercidam), submitted, with the Magicians thread ERC-8218, 18:50; ACDT #77 agenda, 19:40; EIP-7516: fix BLOBBASEFEE example bytecode (phrwlk), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians 讨论帖 ERC-8218",
+      "note": "新增 ERC：Builder Discovery（canercidam）提交，Magicians 讨论帖 ERC-8218 18:50；ACDT #77 议程 19:40；EIP-7516：修正 BLOBBASEFEE 示例字节码（phrwlk）合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8218-builder-discovery/28158",
+      "date": "2026-04-07",
+      "title_en": "Magicians thread ERC-8218",
+      "note_en": "Add ERC: Builder Discovery (canercidam), submitted, with the Magicians thread ERC-8218, 18:50; ACDT #77 agenda, 19:40; EIP-7516: fix BLOBBASEFEE example bytecode (phrwlk), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #77 议程",
+      "note": "新增 ERC：Builder Discovery（canercidam）提交，Magicians 讨论帖 ERC-8218 18:50；ACDT #77 议程 19:40；EIP-7516：修正 BLOBBASEFEE 示例字节码（phrwlk）合并。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-77-april-13-2026/28159",
+      "date": "2026-04-07",
+      "title_en": "ACDT #77 agenda",
+      "note_en": "Add ERC: Builder Discovery (canercidam), submitted, with the Magicians thread ERC-8218, 18:50; ACDT #77 agenda, 19:40; EIP-7516: fix BLOBBASEFEE example bytecode (phrwlk), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7516：修正 BLOBBASEFEE 示例字节码",
+      "note": "新增 ERC：Builder Discovery（canercidam）提交，Magicians 讨论帖 ERC-8218 18:50；ACDT #77 议程 19:40；EIP-7516：修正 BLOBBASEFEE 示例字节码（phrwlk）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10774",
+      "date": "2026-04-07",
+      "title_en": "EIP-7516: fix BLOBBASEFEE example bytecode",
+      "note_en": "Add ERC: Builder Discovery (canercidam), submitted, with the Magicians thread ERC-8218, 18:50; ACDT #77 agenda, 19:40; EIP-7516: fix BLOBBASEFEE example bytecode (phrwlk), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians：如果以太坊是世界计算机，它的操作系统在哪",
+      "note": "23:23；EliBenSasson：Starknet 可扩展、正走向隐私并将完全抗量子 01:03。",
+      "url": "https://ethereum-magicians.org/t/if-ethereum-is-a-world-computer-where-is-its-operating-system/28160",
+      "date": "2026-04-07",
+      "title_en": "Magicians: If Ethereum is a world computer, where is its operating system?",
+      "note_en": "23:23; EliBenSasson: Starknet is scalable, becoming private and soon fully quantum resistant, 01:03.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：Starknet 可扩展、正走向隐私并将完全抗量子",
+      "note": "Magicians：如果以太坊是世界计算机，它的操作系统在哪 23:23；EliBenSasson：Starknet 可扩展、正走向隐私并将完全抗量子 01:03。",
+      "url": "https://x.com/EliBenSasson/status/2041215262926536911",
+      "date": "2026-04-07",
+      "title_en": "EliBenSasson: Starknet is scalable, becoming private and soon fully quantum resistant",
+      "note_en": "Magicians: If Ethereum is a world computer, where is its operating system?, 23:23; EliBenSasson: Starknet is scalable, becoming private and soon fully quantum resistant, 01:03.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/blocks-are-dead-long-live-blobs/24611",
+    "credit": "ethresear.ch, Blocks Are Dead. Long Live Blobs",
+    "local_path": "assets/2026-04-07.jpg",
+    "credit_en": "ethresear.ch, Blocks Are Dead. Long Live Blobs"
+  },
+  "keywords_en": [
+    "Sandboxed Smart Wallet ERC merged",
+    "Blocks Are Dead Long Live Blobs",
+    "EIP-8142 block in blobs",
+    "EU digital identity picks Noir",
+    "WhatsApp Private Processing TEE audit",
+    "Builder Discovery ERC-8218",
+    "EIP-8130 sentinel address fix"
+  ],
+  "summary_en": "PowerStream3604's Sandboxed Smart Wallet ERC (ERC-8199) merged. ethresear.ch published Blocks Are Dead. Long Live Blobs, and nero_eth explained that with EIP-8142 putting execution payloads in blobs, validators only need to sample. The EU digital identity wallet picked Noir for its ZK identity app. trailofbits disclosed 8 high severity issues found auditing WhatsApp's Private Processing TEEs."
+}

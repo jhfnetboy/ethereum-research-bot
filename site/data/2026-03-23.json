@@ -1,0 +1,221 @@
+{
+  "date": "2026-03-23",
+  "keywords": [
+    "Frame 交易对 SchemedTransaction 之争",
+    "EIP-8202 Schemed Transaction",
+    "ACD 本周四决定 EIP-8141 是否进入 Hegotá",
+    "ACDT #75",
+    "EIP-8184 LUCID 更新",
+    "ePBS 可变 payload 截止只多约 6%",
+    "Token Payments ERC-8204"
+  ],
+  "summary": "Giulio2002 提交 Scheme-Agile Transactions（EIP-8202），只把 EIP-1559 交易的 v、r、s 换成 scheme_id 与 signature_data，并在 Magicians 发长文论证这比 frame 交易更便宜、更简单的后量子路径，引发 41 帖讨论。ladislaus0x 提醒 ACD 本周四将决定 EIP-8141 是否进入 Hegotá。ACDT #75 讨论 ePBS 的 PTC 缓存窗口。",
+  "items": [
+    {
+      "topic": "原生 AA 与后量子交易：路线之争",
+      "title": "新增 EIP：Scheme-Agile Transactions",
+      "note": "（Giulio2002）提交；Magicians 讨论帖 EIP-8202 05:13：不引入新操作码、账户抽象或执行 frame，只新增一个复用 EIP-1559 字段的交易类型，把 v、r、s 换成 scheme_id 与 signature_data；作者认为 frame 方案在内存池验证上仍有未解问题，frame 可以日后叠加。",
+      "url": "https://github.com/ethereum/EIPs/pull/11438",
+      "date": "2026-03-23",
+      "title_en": "Add EIP: Scheme-Agile Transactions",
+      "note_en": "(Giulio2002), submitted; Magicians thread EIP-8202, 05:13: no new opcodes, account abstraction or execution frames, just one new transaction type reusing EIP-1559 fields with v, r, s replaced by scheme_id and signature_data; the author argues frame designs still have unresolved mempool validation issues and frames can be layered on later.",
+      "topic_en": "Native AA and PQ transactions: the route debate"
+    },
+    {
+      "topic": "原生 AA 与后量子交易：路线之争",
+      "title": "Magicians 讨论帖 EIP-8202",
+      "note": "新增 EIP：Scheme-Agile Transactions（Giulio2002）提交；Magicians 讨论帖 EIP-8202 05:13：不引入新操作码、账户抽象或执行 frame，只新增一个复用 EIP-1559 字段的交易类型，把 v、r、s 换成 scheme_id 与 signature_data；作者认为 frame 方案在内存池验证上仍有未解问题，frame 可以日后叠加。",
+      "url": "https://ethereum-magicians.org/t/eip-8202-schemed-transaction/28044",
+      "date": "2026-03-23",
+      "title_en": "Magicians thread EIP-8202",
+      "note_en": "Add EIP: Scheme-Agile Transactions (Giulio2002), submitted; Magicians thread EIP-8202, 05:13: no new opcodes, account abstraction or execution frames, just one new transaction type reusing EIP-1559 fields with v, r, s replaced by scheme_id and signature_data; the author argues frame designs still have unresolved mempool validation issues and frames can be layered on later.",
+      "topic_en": "Native AA and PQ transactions: the route debate"
+    },
+    {
+      "topic": "原生 AA 与后量子交易：路线之争",
+      "title": "Magicians：后量子以太坊的 Frame 交易与 SchemedTransaction 之争",
+      "note": "（Giulio2002）23:03，把 Falcon 与 Dilithium 视为最可行的替代后，争论焦点转向哪种交易架构，当周累计 41 帖、1,300 余次浏览。",
+      "url": "https://ethereum-magicians.org/t/frame-transactions-vs-schemedtransactions-for-post-quantum-ethereum/28056",
+      "date": "2026-03-23",
+      "title_en": "Magicians: Frame Transactions vs. SchemedTransactions for Post-Quantum Ethereum",
+      "note_en": "(Giulio2002), 23:03: with Falcon and Dilithium seen as the viable replacements, the debate has moved to which transaction architecture delivers them; 41 posts and over 1,300 views.",
+      "topic_en": "Native AA and PQ transactions: the route debate"
+    },
+    {
+      "topic": "原生 AA 与后量子交易：路线之争",
+      "title": "ladislaus0x：ACD 计划本周四决定 EIP-8141 是否进入 Hegotá，若共识层已后量子安全而执行层仍可被量子攻破，问题并未解决",
+      "note": "20:39。",
+      "url": "https://x.com/ladislaus0x/status/2036075412116107630",
+      "date": "2026-03-23",
+      "title_en": "ladislaus0x: ACD plans to decide on EIP-8141 for Hegotá this Thursday; a PQ secure consensus layer with a quantum vulnerable execution layer does not solve the problem",
+      "note_en": "20:39.",
+      "topic_en": "Native AA and PQ transactions: the route debate"
+    },
+    {
+      "topic": "隐私与 ePBS",
+      "title": "EIP-8184：新增区块顶部竞争小节并调整常量",
+      "note": "（anderselowsson）提交并合并，更新 LUCID 加密内存池；_julianma：参与以太坊是否现在就需要加密内存池的讨论 22:58。",
+      "url": "https://github.com/ethereum/EIPs/pull/11440",
+      "date": "2026-03-23",
+      "title_en": "EIP-8184: add a subsection on competition for the top of block and adjust constants",
+      "note_en": "(anderselowsson), submitted and merged, updating the LUCID encrypted mempool; _julianma: join the discussion on whether Ethereum needs an encrypted mempool now, 22:58.",
+      "topic_en": "Privacy and ePBS"
+    },
+    {
+      "topic": "隐私与 ePBS",
+      "title": "_julianma：参与以太坊是否现在就需要加密内存池的讨论",
+      "note": "EIP-8184：新增区块顶部竞争小节并调整常量（anderselowsson）提交并合并，更新 LUCID 加密内存池；_julianma：参与以太坊是否现在就需要加密内存池的讨论 22:58。",
+      "url": "https://x.com/_julianma/status/2036110381802811569",
+      "date": "2026-03-23",
+      "title_en": "_julianma: join the discussion on whether Ethereum needs an encrypted mempool now",
+      "note_en": "EIP-8184: add a subsection on competition for the top of block and adjust constants (anderselowsson), submitted and merged, updating the LUCID encrypted mempool; _julianma: join the discussion on whether Ethereum needs an encrypted mempool now, 22:58.",
+      "topic_en": "Privacy and ePBS"
+    },
+    {
+      "topic": "隐私与 ePBS",
+      "title": "ethresear.ch：可变 payload 截止时间为何只多约 6%",
+      "note": "16:09；nero_eth：ePBS 不应采用当前形式的可变 payload 截止，理论上只多约 6% 的 gas limit 空间 17:31。",
+      "url": "https://ethresear.ch/t/why-a-variable-payload-deadline-only-helps-by-6/24488",
+      "date": "2026-03-23",
+      "title_en": "ethresear.ch: Why a Variable Payload Deadline Only Helps by ~6%",
+      "note_en": "16:09; nero_eth: ePBS should not adopt a variable payload deadline in its current form; the theoretical gain is about 6% gas limit headroom, 17:31.",
+      "topic_en": "Privacy and ePBS"
+    },
+    {
+      "topic": "隐私与 ePBS",
+      "title": "nero_eth：ePBS 不应采用当前形式的可变 payload 截止，理论上只多约 6% 的 gas limit 空间",
+      "note": "ethresear.ch：可变 payload 截止时间为何只多约 6% 16:09；nero_eth：ePBS 不应采用当前形式的可变 payload 截止，理论上只多约 6% 的 gas limit 空间 17:31。",
+      "url": "https://x.com/nero_eth/status/2036027958406566066",
+      "date": "2026-03-23",
+      "title_en": "nero_eth: ePBS should not adopt a variable payload deadline in its current form; the theoretical gain is about 6% gas limit headroom",
+      "note_en": "Ethresear.ch: Why a Variable Payload Deadline Only Helps by ~6%, 16:09; nero_eth: ePBS should not adopt a variable payload deadline in its current form; the theoretical gain is about 6% gas limit headroom, 17:31.",
+      "topic_en": "Privacy and ePBS"
+    },
+    {
+      "topic": "隐私与 ePBS",
+      "title": "ACDT #75",
+      "note": "21:00，据 Ethereal news #17：ePBS 在状态中加入 PTC 缓存窗口（前一个加后两个 epoch）；可变 PTC 截止不改变共识，可在升级后再加。",
+      "url": "https://forkcast.org/calls/acdt/075",
+      "date": "2026-03-23",
+      "title_en": "ACDT #75",
+      "note_en": "21:00, per Ethereal news #17: ePBS adds a cached PTC window (previous plus next 2 epochs) to state; a variable PTC deadline does not change consensus and can be added after the upgrade.",
+      "topic_en": "Privacy and ePBS"
+    },
+    {
+      "topic": "隐私与 ePBS",
+      "title": "Ethereal news #17",
+      "note": "ACDT #75 21:00，据 Ethereal news #17：ePBS 在状态中加入 PTC 缓存窗口（前一个加后两个 epoch）；可变 PTC 截止不改变共识，可在升级后再加。",
+      "url": "https://ethereal.news/ethereal-news-weekly-17/",
+      "date": "2026-03-23",
+      "title_en": "Ethereal news #17",
+      "note_en": "ACDT #75, 21:00, per Ethereal news #17: ePBS adds a cached PTC window (previous plus next 2 epochs) to state; a variable PTC deadline does not change consensus and can be added after the upgrade.",
+      "topic_en": "Privacy and ePBS"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Token Payments",
+      "note": "（jacopo-eth）提交，标准化代币转账的 Payment 与 Order 事件；Magicians 讨论帖 ERC-8204 08:54；新增 ERC：Agent L2 共享排序器接口（michaelwinczuk）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1617",
+      "date": "2026-03-23",
+      "title_en": "Add ERC: Token Payments",
+      "note_en": "(jacopo-eth), submitted, standardizing Payment and Order events for token transfers; Magicians thread ERC-8204, 08:54; Add ERC: Shared Sequencer Interface for Agent L2s (michaelwinczuk), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians 讨论帖 ERC-8204",
+      "note": "新增 ERC：Token Payments（jacopo-eth）提交，标准化代币转账的 Payment 与 Order 事件；Magicians 讨论帖 ERC-8204 08:54；新增 ERC：Agent L2 共享排序器接口（michaelwinczuk）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8204-token-payments/28046",
+      "date": "2026-03-23",
+      "title_en": "Magicians thread ERC-8204",
+      "note_en": "Add ERC: Token Payments (jacopo-eth), submitted, standardizing Payment and Order events for token transfers; Magicians thread ERC-8204, 08:54; Add ERC: Shared Sequencer Interface for Agent L2s (michaelwinczuk), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Agent L2 共享排序器接口",
+      "note": "新增 ERC：Token Payments（jacopo-eth）提交，标准化代币转账的 Payment 与 Order 事件；Magicians 讨论帖 ERC-8204 08:54；新增 ERC：Agent L2 共享排序器接口（michaelwinczuk）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1615",
+      "date": "2026-03-23",
+      "title_en": "Add ERC: Shared Sequencer Interface for Agent L2s",
+      "note_en": "Add ERC: Token Payments (jacopo-eth), submitted, standardizing Payment and Order events for token transfers; Magicians thread ERC-8204, 08:54; Add ERC: Shared Sequencer Interface for Agent L2s (michaelwinczuk), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #5 议程",
+      "note": "17:25；FCR #6 议程 21:28；PQ Interop #33 议程 21:38；EIP-8201：预摄入时间戳校验 20:15。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-5/28049",
+      "date": "2026-03-23",
+      "title_en": "PQTS Breakout #5 agenda",
+      "note_en": "17:25; FCR #6 agenda, 21:28; PQ Interop #33 agenda, 21:38; EIP-8201: Pre-Ingestion Timestamp Verification, 20:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #6 议程",
+      "note": "PQTS Breakout #5 议程 17:25；FCR #6 议程 21:28；PQ Interop #33 议程 21:38；EIP-8201：预摄入时间戳校验 20:15。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-6-april-14-2026/28053",
+      "date": "2026-03-23",
+      "title_en": "FCR #6 agenda",
+      "note_en": "PQTS Breakout #5 agenda, 17:25; FCR #6 agenda, 21:28; PQ Interop #33 agenda, 21:38; EIP-8201: Pre-Ingestion Timestamp Verification, 20:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #33 议程",
+      "note": "PQTS Breakout #5 议程 17:25；FCR #6 议程 21:28；PQ Interop #33 议程 21:38；EIP-8201：预摄入时间戳校验 20:15。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-33-march-25-2026/28054",
+      "date": "2026-03-23",
+      "title_en": "PQ Interop #33 agenda",
+      "note_en": "PQTS Breakout #5 agenda, 17:25; FCR #6 agenda, 21:28; PQ Interop #33 agenda, 21:38; EIP-8201: Pre-Ingestion Timestamp Verification, 20:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8201：预摄入时间戳校验",
+      "note": "PQTS Breakout #5 议程 17:25；FCR #6 议程 21:28；PQ Interop #33 议程 21:38；EIP-8201：预摄入时间戳校验 20:15。",
+      "url": "https://ethereum-magicians.org/t/eip-8201-pre-ingestion-timestamp-verification/28052",
+      "date": "2026-03-23",
+      "title_en": "EIP-8201: Pre-Ingestion Timestamp Verification",
+      "note_en": "PQTS Breakout #5 agenda, 17:25; FCR #6 agenda, 21:28; PQ Interop #33 agenda, 21:38; EIP-8201: Pre-Ingestion Timestamp Verification, 20:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：以太坊可以成为第一个量子安全的全球金融系统",
+      "note": "20:32；binji_x：想了解以太坊隐私可关注 iptf_updates 05:48。",
+      "url": "https://x.com/binji_x/status/2036073614303183264",
+      "date": "2026-03-23",
+      "title_en": "binji_x: Ethereum can be the first quantum secure global financial system",
+      "note_en": "20:32; binji_x: follow iptf_updates to learn about Ethereum privacy, 05:48.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：想了解以太坊隐私可关注 iptf_updates",
+      "note": "binji_x：以太坊可以成为第一个量子安全的全球金融系统 20:32；binji_x：想了解以太坊隐私可关注 iptf_updates 05:48。",
+      "url": "https://x.com/binji_x/status/2035851159739445722",
+      "date": "2026-03-23",
+      "title_en": "binji_x: follow iptf_updates to learn about Ethereum privacy",
+      "note_en": "Binji_x: Ethereum can be the first quantum secure global financial system, 20:32; binji_x: follow iptf_updates to learn about Ethereum privacy, 05:48.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/frame-transactions-vs-schemedtransactions-for-post-quantum-ethereum/28056",
+    "credit": "Ethereum Magicians, Frame Transactions vs. SchemedTransactions for Post-Quantum Ethereum",
+    "local_path": "assets/2026-03-23.jpg",
+    "credit_en": "Ethereum Magicians, Frame Transactions vs. SchemedTransactions for Post-Quantum Ethereum"
+  },
+  "keywords_en": [
+    "Frame transactions vs SchemedTransactions",
+    "EIP-8202 Schemed Transaction",
+    "ACD to decide on EIP-8141 for Hegotá this Thursday",
+    "ACDT #75",
+    "EIP-8184 LUCID update",
+    "a variable ePBS payload deadline only helps about 6%",
+    "Token Payments ERC-8204"
+  ],
+  "summary_en": "Giulio2002 submitted Scheme-Agile Transactions (EIP-8202), which only replaces the v, r, s fields of an EIP-1559 transaction with scheme_id and signature_data, and argued in a long Magicians post that this is a cheaper, simpler post-quantum path than frame transactions, drawing 41 posts. ladislaus0x noted ACD will decide on EIP-8141 for Hegotá this Thursday. ACDT #75 discussed the ePBS cached PTC window."
+}

@@ -1,0 +1,161 @@
+{
+  "date": "2026-03-13",
+  "keywords": [
+    "EF Mandate 发布",
+    "EIP-8141 简化批准位",
+    "EIP-8141 修正位索引",
+    "EIP-7906 改用操作码",
+    "PQTS Breakout #4",
+    "Encrypt The Mempool #2",
+    "原生 AA 让隐私无缝"
+  ],
+  "summary": "以太坊基金会发布新的 EF Mandate，Vitalik 称这是对过去几个月方向的澄清。derekchiang 提议简化 EIP-8141 批准位，让账户可直接把 TXPARAM 结果传给 APPROVE。EliBenSasson 概括 ZK 负责隐私、原生 AA 负责让隐私无缝。",
+  "items": [
+    {
+      "topic": "以太坊基金会：EF Mandate",
+      "title": "以太坊基金会博客：以太坊的承诺，介绍 EF Mandate",
+      "note": "",
+      "url": "https://blog.ethereum.org/en/2026/03/13/ef-mandate",
+      "date": "2026-03-13",
+      "title_en": "EF blog: The Promise of Ethereum, Introducing the EF Mandate",
+      "note_en": ".",
+      "topic_en": "Ethereum Foundation: the EF Mandate"
+    },
+    {
+      "topic": "以太坊基金会：EF Mandate",
+      "title": "VitalikButerin：这是新的 EF Mandate，内容沿着过去几个月的方向，但仍值得明确说明",
+      "note": "21:52。",
+      "url": "https://x.com/VitalikButerin/status/2032469755614179700",
+      "date": "2026-03-13",
+      "title_en": "VitalikButerin: this is the new EF Mandate, along the lines of recent months but still worth making explicit",
+      "note_en": "21:52.",
+      "topic_en": "Ethereum Foundation: the EF Mandate"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 批准位",
+      "title": "EIP-8141：简化批准位，账户无需自行处理",
+      "note": "（derekchiang）提交：账户可直接把 TXPARAM 的结果传给 APPROVE 来确定批准范围，也不排除使用其他逻辑。",
+      "url": "https://github.com/ethereum/EIPs/pull/11404",
+      "date": "2026-03-13",
+      "title_en": "EIP-8141: simplify approval bits so accounts do not have to manipulate them",
+      "note_en": "(derekchiang), submitted: accounts can pass the TXPARAM result directly to APPROVE to set the approval scope, without ruling out other logic.",
+      "topic_en": "Native AA: EIP-8141 approval bits"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 批准位",
+      "title": "EIP-8141：修正位索引",
+      "note": "（fjl）提交并合并；EIP-7906：改用操作码而非交易类型或预编译（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11402",
+      "date": "2026-03-13",
+      "title_en": "EIP-8141: fix bit indices",
+      "note_en": "(fjl), submitted and merged; EIP-7906: use opcodes instead of transaction types or precompiles (forshtat), submitted and merged.",
+      "topic_en": "Native AA: EIP-8141 approval bits"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 批准位",
+      "title": "EIP-7906：改用操作码而非交易类型或预编译",
+      "note": "EIP-8141：修正位索引（fjl）提交并合并；EIP-7906：改用操作码而非交易类型或预编译（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11403",
+      "date": "2026-03-13",
+      "title_en": "EIP-7906: use opcodes instead of transaction types or precompiles",
+      "note_en": "EIP-8141: fix bit indices (fjl), submitted and merged; EIP-7906: use opcodes instead of transaction types or precompiles (forshtat), submitted and merged.",
+      "topic_en": "Native AA: EIP-8141 approval bits"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 批准位",
+      "title": "EliBenSasson：ZK 让我们构建隐私，原生 AA 让隐私变得无缝",
+      "note": "18:37。",
+      "url": "https://x.com/EliBenSasson/status/2032420736317428046",
+      "date": "2026-03-13",
+      "title_en": "EliBenSasson: ZK lets us build privacy, native AA lets us make it seamless",
+      "note_en": "18:37.",
+      "topic_en": "Native AA: EIP-8141 approval bits"
+    },
+    {
+      "topic": "隐私与后量子",
+      "title": "zooko：把钱穿过隐私系统会泄露信息，把钱存放在隐私系统里才能消除这种泄露",
+      "note": "08:04。",
+      "url": "https://x.com/zooko/status/2032261605996605734",
+      "date": "2026-03-13",
+      "title_en": "zooko: passing money through a privacy system leaks information, while storing money in one removes that leak",
+      "note_en": "08:04.",
+      "topic_en": "Privacy and post-quantum"
+    },
+    {
+      "topic": "隐私与后量子",
+      "title": "PQTS Breakout #4",
+      "note": "16:35；Encrypt The Mempool #2 19:21。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-4/27981",
+      "date": "2026-03-13",
+      "title_en": "PQTS Breakout #4",
+      "note_en": "16:35; Encrypt The Mempool #2, 19:21.",
+      "topic_en": "Privacy and post-quantum"
+    },
+    {
+      "topic": "隐私与后量子",
+      "title": "Encrypt The Mempool #2",
+      "note": "PQTS Breakout #4 16:35；Encrypt The Mempool #2 19:21。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-2/27982",
+      "date": "2026-03-13",
+      "title_en": "Encrypt The Mempool #2",
+      "note_en": "PQTS Breakout #4, 16:35; Encrypt The Mempool #2, 19:21.",
+      "topic_en": "Privacy and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "VitalikButerin：每个人都应有简单且可否认的随身报警方式，这对安全收益大、对公民自由代价小",
+      "note": "10:49。",
+      "url": "https://x.com/VitalikButerin/status/2032303005232742759",
+      "date": "2026-03-13",
+      "title_en": "VitalikButerin: everyone should have easy, deniable ways to call the police, a big safety win at little cost to civil liberties",
+      "note_en": "10:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereumfndn：dAI 团队举办 ERC-8004 主网上线活动",
+      "note": "02:25；ERC-8063：移至 Final（jamesavechives）提交。",
+      "url": "https://x.com/ethereumfndn/status/2032176253458096176",
+      "date": "2026-03-13",
+      "title_en": "ethereumfndn: the dAI team hosts an ERC-8004 mainnet launch event",
+      "note_en": "02:25; ERC-8063: Move to Final (jamesavechives), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8063：移至 Final",
+      "note": "ethereumfndn：dAI 团队举办 ERC-8004 主网上线活动 02:25；ERC-8063：移至 Final（jamesavechives）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1602",
+      "date": "2026-03-13",
+      "title_en": "ERC-8063: Move to Final",
+      "note_en": "Ethereumfndn: the dAI team hosts an ERC-8004 mainnet launch event, 02:25; ERC-8063: Move to Final (jamesavechives), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：所有代理 CLI 的 stdin/stdout 接口应标准化",
+      "note": "23:41。",
+      "url": "https://x.com/gakonst/status/2032497340079382763",
+      "date": "2026-03-13",
+      "title_en": "gakonst: the stdin/stdout interface of agentic CLIs should be standardized",
+      "note_en": "23:41.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/VitalikButerin/status/2032469755614179700",
+    "credit": "X @VitalikButerin",
+    "local_path": "assets/2026-03-13.jpg",
+    "credit_en": "X @VitalikButerin"
+  },
+  "keywords_en": [
+    "EF Mandate published",
+    "EIP-8141 simplifies approval bits",
+    "EIP-8141 fixes bit indices",
+    "EIP-7906 switches to opcodes",
+    "PQTS Breakout #4",
+    "Encrypt The Mempool #2",
+    "native AA makes privacy seamless"
+  ],
+  "summary_en": "The Ethereum Foundation published its new EF Mandate, which Vitalik called a clarification of the direction of recent months. derekchiang proposed simplifying EIP-8141 approval bits so accounts can pass the TXPARAM result straight to APPROVE. EliBenSasson summed up: ZK builds privacy, native AA makes it seamless."
+}

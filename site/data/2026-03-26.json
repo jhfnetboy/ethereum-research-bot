@@ -1,0 +1,187 @@
+{
+  "date": "2026-03-26",
+  "keywords": [
+    "ACDE #233 把 EIP-8141 frame 交易列为 Hegotá 的 CFI 非头号提案",
+    "执行层不设头号提案",
+    "EIP-8141 原子批处理与内存池策略合并",
+    "提款凭证预注册 EIP-8205",
+    "EIP Champion 手册"
+  ],
+  "summary": "ACDE #233 决定 Hegotá 不设执行层头号提案，把 EIP-8141 frame 交易列为非头号的 Considered for Inclusion。同日 derekchiang 的原子批处理与 lightclient 的内存池策略两项 EIP-8141 更新合并。Glamsterdam 方面，bal-devnet-3 与 epbs-devnet-1 计划下周上线。EF 协议团队发布 EIP Champion 手册。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "ACDE #233",
+      "note": "21:00，据 Ethereal news #17：Hegotá 不设执行层头号提案，EIP-8141 frame 交易列为非头号的 Considered for Inclusion。",
+      "url": "https://forkcast.org/calls/acde/233",
+      "date": "2026-03-26",
+      "title_en": "ACDE #233",
+      "note_en": "21:00, per Ethereal news #17: Hegotá has no execution layer headliner, and EIP-8141 frame transactions are Considered for Inclusion as a non headliner.",
+      "topic_en": "Native AA: EIP-8141 is CFI for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "Ethereal news #17",
+      "note": "ACDE #233 21:00，据 Ethereal news #17：Hegotá 不设执行层头号提案，EIP-8141 frame 交易列为非头号的 Considered for Inclusion。",
+      "url": "https://ethereal.news/ethereal-news-weekly-17/",
+      "date": "2026-03-26",
+      "title_en": "Ethereal news #17",
+      "note_en": "ACDE #233, 21:00, per Ethereal news #17: Hegotá has no execution layer headliner, and EIP-8141 frame transactions are Considered for Inclusion as a non headliner.",
+      "topic_en": "Native AA: EIP-8141 is CFI for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "EIP-8141",
+      "note": "ACDE #233 21:00，据 Ethereal news #17：Hegotá 不设执行层头号提案，EIP-8141 frame 交易列为非头号的 Considered for Inclusion。",
+      "url": "https://forkcast.org/eips/8141",
+      "date": "2026-03-26",
+      "title_en": "EIP-8141",
+      "note_en": "ACDE #233, 21:00, per Ethereal news #17: Hegotá has no execution layer headliner, and EIP-8141 frame transactions are Considered for Inclusion as a non headliner.",
+      "topic_en": "Native AA: EIP-8141 is CFI for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "EIP-8141：支持原子批处理",
+      "note": "（derekchiang）合并，3 月 11 日提交；EIP-8141：新增内存池策略（lightclient）合并，3 月 17 日提交；EIP-8141：默认代码对齐最新规范（derekchiang）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11395",
+      "date": "2026-03-26",
+      "title_en": "EIP-8141: add support for atomic batching",
+      "note_en": "(derekchiang), merged after submission on March 11; EIP-8141: add mempool policy (lightclient), merged after submission on March 17; EIP-8141: update default code to match the latest spec (derekchiang), submitted and merged.",
+      "topic_en": "Native AA: EIP-8141 is CFI for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "EIP-8141：新增内存池策略",
+      "note": "EIP-8141：支持原子批处理（derekchiang）合并，3 月 11 日提交；EIP-8141：新增内存池策略（lightclient）合并，3 月 17 日提交；EIP-8141：默认代码对齐最新规范（derekchiang）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11415",
+      "date": "2026-03-26",
+      "title_en": "EIP-8141: add mempool policy",
+      "note_en": "EIP-8141: add support for atomic batching (derekchiang), merged after submission on March 11; EIP-8141: add mempool policy (lightclient), merged after submission on March 17; EIP-8141: update default code to match the latest spec (derekchiang), submitted and merged.",
+      "topic_en": "Native AA: EIP-8141 is CFI for Hegotá"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 进入 Hegotá CFI",
+      "title": "EIP-8141：默认代码对齐最新规范",
+      "note": "EIP-8141：支持原子批处理（derekchiang）合并，3 月 11 日提交；EIP-8141：新增内存池策略（lightclient）合并，3 月 17 日提交；EIP-8141：默认代码对齐最新规范（derekchiang）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11448",
+      "date": "2026-03-26",
+      "title_en": "EIP-8141: update default code to match the latest spec",
+      "note_en": "EIP-8141: add support for atomic batching (derekchiang), merged after submission on March 11; EIP-8141: add mempool policy (lightclient), merged after submission on March 17; EIP-8141: update default code to match the latest spec (derekchiang), submitted and merged.",
+      "topic_en": "Native AA: EIP-8141 is CFI for Hegotá"
+    },
+    {
+      "topic": "Glamsterdam 与质押",
+      "title": "新增 EIP：提款凭证预注册",
+      "note": "（avsetsin）提交；Magicians 讨论帖 EIP-8205 23:07：委托质押中出资方与生成 BLS 密钥的一方不同，提案让出资方事先锁定提款凭证。",
+      "url": "https://github.com/ethereum/EIPs/pull/11450",
+      "date": "2026-03-26",
+      "title_en": "Add EIP: Withdrawal credentials preregistration",
+      "note_en": "(avsetsin), submitted; Magicians thread EIP-8205, 23:07: in delegated staking the funder and the BLS key generator differ, and the proposal lets the funder lock withdrawal credentials in advance.",
+      "topic_en": "Glamsterdam and staking"
+    },
+    {
+      "topic": "Glamsterdam 与质押",
+      "title": "Magicians 讨论帖 EIP-8205",
+      "note": "新增 EIP：提款凭证预注册（avsetsin）提交；Magicians 讨论帖 EIP-8205 23:07：委托质押中出资方与生成 BLS 密钥的一方不同，提案让出资方事先锁定提款凭证。",
+      "url": "https://ethereum-magicians.org/t/eip-8205-withdrawal-credentials-preregistration/28084",
+      "date": "2026-03-26",
+      "title_en": "Magicians thread EIP-8205",
+      "note_en": "Add EIP: Withdrawal credentials preregistration (avsetsin), submitted; Magicians thread EIP-8205, 23:07: in delegated staking the funder and the BLS key generator differ, and the proposal lets the funder lock withdrawal credentials in advance.",
+      "topic_en": "Glamsterdam and staking"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nixorokish：EF 协议团队发布 EIP Champion 手册，帮助提案者推动功能进入协议",
+      "note": "02:37；ACDC #177 议程 04:05。",
+      "url": "https://x.com/nixorokish/status/2036890179781177746",
+      "date": "2026-03-26",
+      "title_en": "nixorokish: the EF protocol team published an EIP Champion's Handbook to help champions get features into the protocol",
+      "note_en": "02:37; ACDC #177 agenda, 04:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #177 议程",
+      "note": "nixorokish：EF 协议团队发布 EIP Champion 手册，帮助提案者推动功能进入协议 02:37；ACDC #177 议程 04:05。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-177-apr-16-2026/28080",
+      "date": "2026-03-26",
+      "title_en": "ACDC #177 agenda",
+      "note_en": "Nixorokish: the EF protocol team published an EIP Champion's Handbook to help champions get features into the protocol, 02:37; ACDC #177 agenda, 04:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8182 更新",
+      "note": "（RogerPodacter）提交并合并；ERC-7730：修正规范与示例中的不一致（manuelwedler）提交；ERC-8274：AI 推理证明验证 18:10。",
+      "url": "https://github.com/ethereum/EIPs/pull/11446",
+      "date": "2026-03-26",
+      "title_en": "EIP-8182 update",
+      "note_en": "(RogerPodacter), submitted and merged; ERC-7730: fix inconsistencies in the spec and examples (manuelwedler), submitted; ERC-8274: AI Inference Proof Verification, 18:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：修正规范与示例中的不一致",
+      "note": "EIP-8182 更新（RogerPodacter）提交并合并；ERC-7730：修正规范与示例中的不一致（manuelwedler）提交；ERC-8274：AI 推理证明验证 18:10。",
+      "url": "https://github.com/ethereum/ERCs/pull/1623",
+      "date": "2026-03-26",
+      "title_en": "ERC-7730: fix inconsistencies in the spec and examples",
+      "note_en": "EIP-8182 update (RogerPodacter), submitted and merged; ERC-7730: fix inconsistencies in the spec and examples (manuelwedler), submitted; ERC-8274: AI Inference Proof Verification, 18:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8274：AI 推理证明验证",
+      "note": "EIP-8182 更新（RogerPodacter）提交并合并；ERC-7730：修正规范与示例中的不一致（manuelwedler）提交；ERC-8274：AI 推理证明验证 18:10。",
+      "url": "https://ethereum-magicians.org/t/erc-8274-ai-inference-proof-verification/28083",
+      "date": "2026-03-26",
+      "title_en": "ERC-8274: AI Inference Proof Verification",
+      "note_en": "EIP-8182 update (RogerPodacter), submitted and merged; ERC-7730: fix inconsistencies in the spec and examples (manuelwedler), submitted; ERC-8274: AI Inference Proof Verification, 18:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Nethermind：Surge 把排序与证明合并为一笔 L1 交易，回应 EF 对同步可组合性与原生 Rollup 的呼吁",
+      "note": "17:06；binji_x：EF Mandate 是对 CROPS 的承诺 17:41；vdWijden：引用密码朋克宣言，密码朋克写代码 15:46。",
+      "url": "https://x.com/Nethermind/status/2037108806035927087",
+      "date": "2026-03-26",
+      "title_en": "Nethermind: Surge merges sequencing and proving into one L1 transaction, answering the EF call for synchronous composability and native rollups",
+      "note_en": "17:06; binji_x: the EF Mandate is a commitment to CROPS, 17:41; vdWijden: quoting the cypherpunk manifesto, cypherpunks write code, 15:46.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：EF Mandate 是对 CROPS 的承诺",
+      "note": "Nethermind：Surge 把排序与证明合并为一笔 L1 交易，回应 EF 对同步可组合性与原生 Rollup 的呼吁 17:06；binji_x：EF Mandate 是对 CROPS 的承诺 17:41；vdWijden：引用密码朋克宣言，密码朋克写代码 15:46。",
+      "url": "https://x.com/binji_x/status/2037117628284637558",
+      "date": "2026-03-26",
+      "title_en": "binji_x: the EF Mandate is a commitment to CROPS",
+      "note_en": "Nethermind: Surge merges sequencing and proving into one L1 transaction, answering the EF call for synchronous composability and native rollups, 17:06; binji_x: the EF Mandate is a commitment to CROPS, 17:41; vdWijden: quoting the cypherpunk manifesto, cypherpunks write code, 15:46.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "vdWijden：引用密码朋克宣言，密码朋克写代码",
+      "note": "Nethermind：Surge 把排序与证明合并为一笔 L1 交易，回应 EF 对同步可组合性与原生 Rollup 的呼吁 17:06；binji_x：EF Mandate 是对 CROPS 的承诺 17:41；vdWijden：引用密码朋克宣言，密码朋克写代码 15:46。",
+      "url": "https://x.com/vdWijden/status/2037088717664297389",
+      "date": "2026-03-26",
+      "title_en": "vdWijden: quoting the cypherpunk manifesto, cypherpunks write code",
+      "note_en": "Nethermind: Surge merges sequencing and proving into one L1 transaction, answering the EF call for synchronous composability and native rollups, 17:06; binji_x: the EF Mandate is a commitment to CROPS, 17:41; vdWijden: quoting the cypherpunk manifesto, cypherpunks write code, 15:46.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://forkcast.org/eips/8141",
+    "credit": "Forkcast, EIP-8141 Frame transaction",
+    "local_path": "assets/2026-03-26.jpg",
+    "credit_en": "Forkcast, EIP-8141 Frame transaction"
+  },
+  "keywords_en": [
+    "ACDE #233 makes EIP-8141 frame transactions Considered for Inclusion in Hegotá as a non headliner",
+    "no execution layer headliner",
+    "EIP-8141 atomic batching and mempool policy merged",
+    "withdrawal credentials preregistration EIP-8205",
+    "the EIP Champion's Handbook"
+  ],
+  "summary_en": "ACDE #233 decided Hegotá will have no execution layer headliner and made EIP-8141 frame transactions Considered for Inclusion as a non headliner. The same day, derekchiang's atomic batching and lightclient's mempool policy updates to EIP-8141 merged. For Glamsterdam, bal-devnet-3 and epbs-devnet-1 are planned for next week. The EF protocol team published an EIP Champion's Handbook."
+}

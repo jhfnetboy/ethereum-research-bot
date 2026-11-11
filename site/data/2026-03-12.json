@@ -1,0 +1,161 @@
+{
+  "date": "2026-03-12",
+  "keywords": [
+    "ACDE #232 推迟 Hegotá 执行层头号提案决定",
+    "EIP-8141 成为唯一候选",
+    "LUCID 加密交易池被拒",
+    "EIP-8141 新增 frame 批准位",
+    "Glamsterdam 8 个执行层 EIP 提议列为 SFI",
+    "以太坊需要加密内存池",
+    "Vitalik 谈区块链的用途"
+  ],
+  "summary": "ACDE #232 决定在下次 ACDE 确定 Hegotá 执行层头号提案，默认不设头号提案，EIP-8141 frame 交易是唯一剩余候选，目前获 Geth 与 Erigon 支持。fjl 为 EIP-8141 加入 frame 批准位并清理 frame 访问操作码，两项均提交并合并。_julianma 发文论证以太坊急需加密内存池。",
+  "items": [
+    {
+      "topic": "ACDE #232",
+      "title": "Ethereal news #15",
+      "note": "会议内容引自 Ethereal news #15：Glamsterdam 的 bal-devnet-3 推迟上线，EIP-8037 提高状态创建 gas 成本引发复杂度担忧；Hegotá 执行层头号提案将在下次 ACDE 决定，默认不设，EIP-8141 frame 交易是唯一剩余候选，获 Geth 与 Erigon 支持，需更多团队支持才能入选；EIP-8184 LUCID 加密交易池与 EIP-7807 SSZ 执行区块被拒绝纳入。",
+      "url": "https://ethereal.news/ethereal-news-weekly-15/",
+      "date": "2026-03-12",
+      "title_en": "Ethereal news #15",
+      "note_en": "Call notes are from Ethereal news #15: Glamsterdam's bal-devnet-3 launch was delayed over complexity concerns about EIP-8037's higher state creation gas cost; the Hegotá EL headliner will be decided at the next ACDE, defaulting to none, with EIP-8141 frame transactions the only remaining candidate, backed by Geth and Erigon and needing more teams to be selected; EIP-8184 LUCID encrypted transaction pool and EIP-7807 SSZ execution blocks were declined for inclusion.",
+      "topic_en": "ACDE #232"
+    },
+    {
+      "topic": "ACDE #232",
+      "title": "fede_intern：推荐大家看上次 ACD，完全是基于利益而非技术的政治",
+      "note": "23:54。",
+      "url": "https://x.com/fede_intern/status/2032138220260012480",
+      "date": "2026-03-12",
+      "title_en": "fede_intern: recommends watching the last ACD, which he calls pure politics based on interests rather than technology",
+      "note_en": "23:54.",
+      "topic_en": "ACDE #232"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 批准位",
+      "title": "EIP-8141：为 frame 加入批准位",
+      "note": "（fjl）提交并合并：在 frame 的 mode 中加入配置位，限制该 frame 能 APPROVE 的范围，让用户能告诉自己的账户该批准什么，同时仍可直接对交易 sighash 签名；EIP-8141：清理 frame 访问操作码（fjl）提交并合并，新增读取 frame 输入数据的专用操作码。",
+      "url": "https://github.com/ethereum/EIPs/pull/11401",
+      "date": "2026-03-12",
+      "title_en": "EIP-8141: add approval bits to frame",
+      "note_en": "(fjl), submitted and merged: adds configuration bits to a frame's mode that constrain what it can APPROVE, letting users tell their own account what to approve while still signing the transaction sighash directly; EIP-8141: clean up frame access opcodes (fjl), submitted and merged, adding dedicated opcodes for reading frame input data.",
+      "topic_en": "Native AA: EIP-8141 approval bits"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 批准位",
+      "title": "EIP-8141：清理 frame 访问操作码",
+      "note": "EIP-8141：为 frame 加入批准位（fjl）提交并合并：在 frame 的 mode 中加入配置位，限制该 frame 能 APPROVE 的范围，让用户能告诉自己的账户该批准什么，同时仍可直接对交易 sighash 签名；EIP-8141：清理 frame 访问操作码（fjl）提交并合并，新增读取 frame 输入数据的专用操作码。",
+      "url": "https://github.com/ethereum/EIPs/pull/11400",
+      "date": "2026-03-12",
+      "title_en": "EIP-8141: clean up frame access opcodes",
+      "note_en": "EIP-8141: add approval bits to frame (fjl), submitted and merged: adds configuration bits to a frame's mode that constrain what it can APPROVE, letting users tell their own account what to approve while still signing the transaction sighash directly; EIP-8141: clean up frame access opcodes (fjl), submitted and merged, adding dedicated opcodes for reading frame input data.",
+      "topic_en": "Native AA: EIP-8141 approval bits"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 批准位",
+      "title": "EIP-7773：Glamsterdam 的 8 个执行层 EIP 列为 SFI",
+      "note": "（spencer-tb）提交，涵盖 EIP-7708、7778、7843、7928、7954、7976、7981、8024 与 8037。",
+      "url": "https://github.com/ethereum/EIPs/pull/11399",
+      "date": "2026-03-12",
+      "title_en": "EIP-7773: SFI the Glamsterdam EL EIPs",
+      "note_en": "(spencer-tb), submitted, covering EIP-7708, 7778, 7843, 7928, 7954, 7976, 7981, 8024 and 8037.",
+      "topic_en": "Native AA: EIP-8141 approval bits"
+    },
+    {
+      "topic": "隐私：加密内存池",
+      "title": "_julianma：以太坊急需加密内存池，这不只是为了阻止三明治攻击，也是链上市场走向成熟的方式",
+      "note": "19:15。",
+      "url": "https://x.com/_julianma/status/2032067843635007508",
+      "date": "2026-03-12",
+      "title_en": "_julianma: Ethereum needs an encrypted mempool fast, not just to stop sandwiching but to mature its onchain markets",
+      "note_en": "19:15.",
+      "topic_en": "Privacy: encrypted mempools"
+    },
+    {
+      "topic": "隐私：加密内存池",
+      "title": "ethereum：以太坊生态的隐私正在经历一场复兴，客座长帖",
+      "note": "23:54；StarkWareLtd：发布 STRK20s 技术论文 20:01。",
+      "url": "https://x.com/ethereum/status/2032138245048524982",
+      "date": "2026-03-12",
+      "title_en": "ethereum: privacy in the Ethereum ecosystem is undergoing a renaissance, a guest thread",
+      "note_en": "23:54; StarkWareLtd: the STRK20s technical paper, 20:01.",
+      "topic_en": "Privacy: encrypted mempools"
+    },
+    {
+      "topic": "隐私：加密内存池",
+      "title": "StarkWareLtd：发布 STRK20s 技术论文",
+      "note": "ethereum：以太坊生态的隐私正在经历一场复兴，客座长帖 23:54；StarkWareLtd：发布 STRK20s 技术论文 20:01。",
+      "url": "https://x.com/StarkWareLtd/status/2032079612952400175",
+      "date": "2026-03-12",
+      "title_en": "StarkWareLtd: the STRK20s technical paper",
+      "note_en": "Ethereum: privacy in the Ethereum ecosystem is undergoing a renaissance, a guest thread, 23:54; StarkWareLtd: the STRK20s technical paper, 20:01.",
+      "topic_en": "Privacy: encrypted mempools"
+    },
+    {
+      "topic": "其他动态",
+      "title": "VitalikButerin：参加 Real World Crypto 让他更清楚区块链的用途",
+      "note": "20:49。",
+      "url": "https://x.com/VitalikButerin/status/2032091657819316620",
+      "date": "2026-03-12",
+      "title_en": "VitalikButerin: attending Real World Crypto clarified for him what blockchains are for",
+      "note_en": "20:49.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：加入 Mastercard 加密合作伙伴计划",
+      "note": "17:08。",
+      "url": "https://x.com/Nethermind/status/2032035873668145159",
+      "date": "2026-03-12",
+      "title_en": "Nethermind: joined Mastercard's Crypto Partner Program",
+      "note_en": "17:08.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #74 议程",
+      "note": "20:47；新增 ERC：OAuth With Ethereum（xinbenlv）提交。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-74-march-16-2026/27971",
+      "date": "2026-03-12",
+      "title_en": "ACDT #74 agenda",
+      "note_en": "20:47; Add ERC: OAuth With Ethereum (xinbenlv), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：OAuth With Ethereum",
+      "note": "ACDT #74 议程 20:47；新增 ERC：OAuth With Ethereum（xinbenlv）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1599",
+      "date": "2026-03-12",
+      "title_en": "Add ERC: OAuth With Ethereum",
+      "note_en": "ACDT #74 agenda, 20:47; Add ERC: OAuth With Ethereum (xinbenlv), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "auryn_macmillan：AI 投票代理需要私密推理与私密聚合两层",
+      "note": "00:37。",
+      "url": "https://x.com/auryn_macmillan/status/2031786631447904582",
+      "date": "2026-03-12",
+      "title_en": "auryn_macmillan: AI voting proxies need two layers, private inference and private aggregation",
+      "note_en": "00:37.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/_julianma/status/2032067843635007508",
+    "credit": "X @_julianma",
+    "local_path": "assets/2026-03-12.jpg",
+    "credit_en": "X @_julianma"
+  },
+  "keywords_en": [
+    "ACDE #232 defers the Hegotá EL headliner decision",
+    "EIP-8141 is the only remaining candidate",
+    "LUCID encrypted mempool declined",
+    "EIP-8141 adds frame approval bits",
+    "8 Glamsterdam EL EIPs proposed for SFI",
+    "Ethereum needs an encrypted mempool",
+    "Vitalik on what blockchains are for"
+  ],
+  "summary_en": "ACDE #232 agreed to decide the Hegotá EL headliner at the next ACDE, defaulting to none, with EIP-8141 frame transactions the only remaining candidate, backed so far by Geth and Erigon. fjl added frame approval bits to EIP-8141 and cleaned up frame access opcodes, both submitted and merged. _julianma argued Ethereum urgently needs an encrypted mempool."
+}

@@ -1,0 +1,171 @@
+{
+  "date": "2026-04-01",
+  "keywords": [
+    "EIP-8037 顶层失败时全额退还状态 gas",
+    "EIP-7708 把 CREATE 与 CREATE2 列入转账日志",
+    "Safe 的后量子路径",
+    "Aztec 获 L2BEAT Stage 1",
+    "EIP-7503 生日攻击缓解",
+    "二进制 trie 性能",
+    "BNPL ERC"
+  ],
+  "summary": "qu0b 提交 EIP-8037 的另一方案：包括顶层在内的所有 frame 失败都退还状态 gas。koeppelmann 介绍 Safe 无需迁移即可走向量子安全，只要把 owner 轮换为哈希签名者。L2BEAT 把 Aztec 评为 Stage 1。ethresear.ch 发表 EIP-7503 零知识虫洞生日攻击的缓解方案，以及二进制 trie 与 MPT 的性能对比。",
+  "items": [
+    {
+      "topic": "Gas：状态 gas 退还之争",
+      "title": "EIP-8037：所有 frame 失败（含顶层）都退还状态 gas",
+      "note": "（qu0b）提交：作为前一日 PR 11468 的替代，两者对子 frame 的处理相同，区别在顶层失败时 execution_state_gas_used 清零，发送者获全额状态 gas 退款。",
+      "url": "https://github.com/ethereum/EIPs/pull/11476",
+      "date": "2026-04-01",
+      "title_en": "EIP-8037: refund state gas on all frame failures including top level",
+      "note_en": "(qu0b), submitted: an alternative to the previous day's PR 11468 with identical child frame handling, differing in that top level failure resets execution_state_gas_used to zero so the sender gets a full state gas refund.",
+      "topic_en": "Gas: the state gas refund question"
+    },
+    {
+      "topic": "Gas：状态 gas 退还之争",
+      "title": "EIP-7708：把 CREATE 与 CREATE2 加入转账日志列表",
+      "note": "（s1na）提交，理由是创建与 CALL 差异足够大，应明确列出。",
+      "url": "https://github.com/ethereum/EIPs/pull/11474",
+      "date": "2026-04-01",
+      "title_en": "EIP-7708: add CREATE and CREATE2 to the transfer log list",
+      "note_en": "(s1na), submitted, since creates differ enough from CALLs to be listed explicitly.",
+      "topic_en": "Gas: the state gas refund question"
+    },
+    {
+      "topic": "账户：Safe 的后量子路径",
+      "title": "koeppelmann：Safe 已实现无需迁移的量子安全路径，用户保留现有 Safe，只需把 owner 轮换为量子安全的哈希签名者，正推进到生产可用",
+      "note": "04:40。",
+      "url": "https://x.com/koeppelmann/status/2039095395419148292",
+      "date": "2026-04-01",
+      "title_en": "koeppelmann: Safe already has a quantum security path that needs no migration; users keep their Safe and rotate the owner to a quantum secure hash based signer, now being made production ready",
+      "note_en": "04:40.",
+      "topic_en": "Accounts: Safe's post-quantum path"
+    },
+    {
+      "topic": "隐私",
+      "title": "ethresear.ch：双模式重铸，在保留代币可组合性的前提下缓解 EIP-7503 生日攻击",
+      "note": "11:08：EIP-7503 零知识虫洞基于销毁地址，ERC-8065 零知识代币包装继承了其 160 位地址的生日攻击问题，文章提出缓解方法。",
+      "url": "https://ethresear.ch/t/dual-mode-remint-an-eip-7503-birthday-attack-mitigation-that-preserves-token-composability/24566",
+      "date": "2026-04-01",
+      "title_en": "ethresear.ch: Dual-Mode Remint, an EIP-7503 birthday attack mitigation that preserves token composability",
+      "note_en": "11:08: EIP-7503 zero knowledge wormholes rely on burn addresses, and ERC-8065 zero knowledge token wrappers inherit their 160 bit birthday attack issue, which the post mitigates.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "ethbeat_org：L2BEAT 收录 Aztec 并评为 Stage 1，它已是抗审查的堡垒",
+      "note": "20:21；zooko：Google 新论文结合量子安全密码、零知识证明与 Zcash 01:32。",
+      "url": "https://x.com/ethbeat_org/status/2039332243680731188",
+      "date": "2026-04-01",
+      "title_en": "ethbeat_org: L2BEAT added Aztec at Stage 1, already a bastion of censorship resistance",
+      "note_en": "20:21; zooko: a new Google paper combines quantum safe cryptography, zero knowledge proofs and Zcash, 01:32.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "zooko：Google 新论文结合量子安全密码、零知识证明与 Zcash",
+      "note": "ethbeat_org：L2BEAT 收录 Aztec 并评为 Stage 1，它已是抗审查的堡垒 20:21；zooko：Google 新论文结合量子安全密码、零知识证明与 Zcash 01:32。",
+      "url": "https://x.com/zooko/status/2039048198912974867",
+      "date": "2026-04-01",
+      "title_en": "zooko: a new Google paper combines quantum safe cryptography, zero knowledge proofs and Zcash",
+      "note_en": "Ethbeat_org: L2BEAT added Aztec at Stage 1, already a bastion of censorship resistance, 20:21; zooko: a new Google paper combines quantum safe cryptography, zero knowledge proofs and Zcash, 01:32.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：通往二进制 trie 之路 2，MPT 与 BTree 对比",
+      "note": "02:42；EIP-7723：依据 ACDT #74 更新 SFI 定义（nixorokish）提交。",
+      "url": "https://ethresear.ch/t/the-path-towards-binary-tries-2-how-fast-is-the-binary-trie-today-mpt-vs-btree/24564",
+      "date": "2026-04-01",
+      "title_en": "ethresear.ch: The Path Towards Binary Tries 2, MPT vs. BTree",
+      "note_en": "02:42; EIP-7723: update the SFI definition based on ACDT #74 (nixorokish), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7723：依据 ACDT #74 更新 SFI 定义",
+      "note": "ethresear.ch：通往二进制 trie 之路 2，MPT 与 BTree 对比 02:42；EIP-7723：依据 ACDT #74 更新 SFI 定义（nixorokish）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11475",
+      "date": "2026-04-01",
+      "title_en": "EIP-7723: update the SFI definition based on ACDT #74",
+      "note_en": "Ethresear.ch: The Path Towards Binary Tries 2, MPT vs. BTree, 02:42; EIP-7723: update the SFI definition based on ACDT #74 (nixorokish), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：先买后付 BNPL",
+      "note": "（asghaier76）提交；ERC-TBA：TEE 与 EVM 协同处理 03:30；Glamsterdam Repricings #5 议程 17:52；RPC Standards #24 议程 20:17。",
+      "url": "https://github.com/ethereum/ERCs/pull/1643",
+      "date": "2026-15-00",
+      "title_en": "Add ERC: Buy Now Pay Later (BNPL)",
+      "note_en": "(asghaier76), submitted; ERC-TBA: TEE-EVM Co-processing, 03:30; Glamsterdam Repricings #5 agenda, 17:52; RPC Standards #24 agenda, 20:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-TBA：TEE 与 EVM 协同处理",
+      "note": "新增 ERC：先买后付 BNPL（asghaier76）提交；ERC-TBA：TEE 与 EVM 协同处理 03:30；Glamsterdam Repricings #5 议程 17:52；RPC Standards #24 议程 20:17。",
+      "url": "https://ethereum-magicians.org/t/erc-tba-tee-evm-co-processing/28113",
+      "date": "2026-15-00",
+      "title_en": "ERC-TBA: TEE-EVM Co-processing",
+      "note_en": "Add ERC: Buy Now Pay Later (BNPL) (asghaier76), submitted; ERC-TBA: TEE-EVM Co-processing, 03:30; Glamsterdam Repricings #5 agenda, 17:52; RPC Standards #24 agenda, 20:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #5 议程",
+      "note": "新增 ERC：先买后付 BNPL（asghaier76）提交；ERC-TBA：TEE 与 EVM 协同处理 03:30；Glamsterdam Repricings #5 议程 17:52；RPC Standards #24 议程 20:17。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-5-april-1-2026/28124",
+      "date": "2026-15-00",
+      "title_en": "Glamsterdam Repricings #5 agenda",
+      "note_en": "Add ERC: Buy Now Pay Later (BNPL) (asghaier76), submitted; ERC-TBA: TEE-EVM Co-processing, 03:30; Glamsterdam Repricings #5 agenda, 17:52; RPC Standards #24 agenda, 20:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #24 议程",
+      "note": "新增 ERC：先买后付 BNPL（asghaier76）提交；ERC-TBA：TEE 与 EVM 协同处理 03:30；Glamsterdam Repricings #5 议程 17:52；RPC Standards #24 议程 20:17。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-24-april-6-2026-15-00-utc/28126",
+      "date": "2026-15-00",
+      "title_en": "RPC Standards #24 agenda",
+      "note_en": "Add ERC: Buy Now Pay Later (BNPL) (asghaier76), submitted; ERC-TBA: TEE-EVM Co-processing, 03:30; Glamsterdam Repricings #5 agenda, 17:52; RPC Standards #24 agenda, 20:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：LLM 正在医院、国防与银行做关键决策，却没人能验证跑的是哪个模型",
+      "note": "10:00；zooko：白帽研究者借助 AI 发现 Zcash 旧 Sprout 池漏洞并已修复 02:10。",
+      "url": "https://x.com/fede_intern/status/2039176127273414955",
+      "date": "2026-04-01",
+      "title_en": "fede_intern: LLMs make critical decisions in hospitals, defense and banks, yet nobody can verify which model ran",
+      "note_en": "10:00; zooko: a white hat using AI found a bug in Zcash's old Sprout pool, now fixed, 02:10.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：白帽研究者借助 AI 发现 Zcash 旧 Sprout 池漏洞并已修复",
+      "note": "fede_intern：LLM 正在医院、国防与银行做关键决策，却没人能验证跑的是哪个模型 10:00；zooko：白帽研究者借助 AI 发现 Zcash 旧 Sprout 池漏洞并已修复 02:10。",
+      "url": "https://x.com/zooko/status/2039057682737574159",
+      "date": "2026-04-01",
+      "title_en": "zooko: a white hat using AI found a bug in Zcash's old Sprout pool, now fixed",
+      "note_en": "Fede_intern: LLMs make critical decisions in hospitals, defense and banks, yet nobody can verify which model ran, 10:00; zooko: a white hat using AI found a bug in Zcash's old Sprout pool, now fixed, 02:10.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/the-path-towards-binary-tries-2-how-fast-is-the-binary-trie-today-mpt-vs-btree/24564",
+    "credit": "ethresear.ch, The Path Towards Binary Tries 2: How Fast Is the Binary Trie Today? MPT vs. BTree",
+    "local_path": "assets/2026-04-01.jpg",
+    "credit_en": "ethresear.ch, The Path Towards Binary Tries 2: How Fast Is the Binary Trie Today? MPT vs. BTree"
+  },
+  "keywords_en": [
+    "EIP-8037 refunds state gas on all frame failures",
+    "EIP-7708 adds CREATE and CREATE2 to transfer logs",
+    "Safe's post-quantum path",
+    "Aztec rated Stage 1 by L2BEAT",
+    "an EIP-7503 birthday attack mitigation",
+    "binary trie performance",
+    "BNPL ERC"
+  ],
+  "summary_en": "qu0b submitted an alternative for EIP-8037: refund state gas on all frame failures including top level. koeppelmann explained that Safe can reach quantum security without migration by rotating the owner to a hash based signer. L2BEAT rated Aztec Stage 1. ethresear.ch published a birthday attack mitigation for EIP-7503 zero knowledge wormholes and a binary trie versus MPT benchmark."
+}

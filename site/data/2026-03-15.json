@@ -1,0 +1,119 @@
+{
+  "date": "2026-03-15",
+  "keywords": [
+    "Vitalik 提议重新考虑共识与执行客户端分离",
+    "以太坊工程声誉之争",
+    "ZK 加原生 AA",
+    "ERC-8196 AI 代理认证钱包",
+    "ACDE #233 议程",
+    "ERC-8004 上线日"
+  ],
+  "summary": "周日。Vitalik 表示应对重新审视信标客户端与执行客户端分离持开放态度，因为运行两个守护进程并让它们互通远比运行一个困难，目标是让自主运行以太坊的体验更好。fede_intern 称以太坊工程曾不配有好名声，但 Reth、ethrex 与公开基准测试正在改变这一点。ACDE #233 议程发布。",
+  "items": [
+    {
+      "topic": "节点与客户端",
+      "title": "VitalikButerin：应对重新审视信标与执行客户端分离保持开放，运行两个守护进程并让它们互通远比运行一个难，目标是让自主运行以太坊的体验更好",
+      "note": "10:03。",
+      "url": "https://x.com/VitalikButerin/status/2033016131884376541",
+      "date": "2026-03-15",
+      "title_en": "VitalikButerin: we should be open to revisiting the beacon and execution client separation, since running two daemons that talk to each other is far harder than one, and the goal is good UX for the self sovereign way of using Ethereum",
+      "note_en": "10:03.",
+      "topic_en": "Nodes and clients"
+    },
+    {
+      "topic": "节点与客户端",
+      "title": "fede_intern：以太坊工程曾不配有好声誉，Reth、ethrex 与 ethPandaOps 以及公开基准测试正在给团队施加真实压力",
+      "note": "11:32。",
+      "url": "https://x.com/fede_intern/status/2033038521586315683",
+      "date": "2026-03-15",
+      "title_en": "fede_intern: Ethereum engineering used to not deserve its reputation; Reth, ethrex, ethPandaOps and public benchmarks now put real pressure on teams",
+      "note_en": "11:32.",
+      "topic_en": "Nodes and clients"
+    },
+    {
+      "topic": "账户与代理",
+      "title": "EliBenSasson：ZK、原生 AA 与 Cairo 是 Starknet 提供最好技术的基础",
+      "note": "01:33。",
+      "url": "https://x.com/EliBenSasson/status/2032887778149532153",
+      "date": "2026-03-15",
+      "title_en": "EliBenSasson: ZK, native AA and Cairo are the foundations of Starknet's tech",
+      "note_en": "01:33.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "账户与代理",
+      "title": "Magicians：ERC-8196 AI 代理认证钱包",
+      "note": "04:14，对应 ERC PR（Cybercentry）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8196-ai-agent-authenticated-wallet/27987",
+      "date": "2026-03-15",
+      "title_en": "Magicians: ERC-8196 AI Agent Authenticated Wallet",
+      "note_en": "04:14, with an ERC PR (Cybercentry) submitted.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "账户与代理",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8196 AI 代理认证钱包 04:14，对应 ERC PR（Cybercentry）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1606",
+      "date": "2026-03-15",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8196 AI Agent Authenticated Wallet, 04:14, with an ERC PR (Cybercentry) submitted.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #233 议程",
+      "note": "10:03；ERC-8004 上线日 #1。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-233-march-26-2026/27989",
+      "date": "2026-03-15",
+      "title_en": "ACDE #233 agenda",
+      "note_en": "10:03; ERC-8004 Launch Day #1.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8004 上线日 #1",
+      "note": "ACDE #233 议程 10:03；ERC-8004 上线日 #1。",
+      "url": "https://github.com/ethereum/pm/issues/1971",
+      "date": "2026-03-15",
+      "title_en": "ERC-8004 Launch Day #1",
+      "note_en": "ACDE #233 agenda, 10:03; ERC-8004 Launch Day #1.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：示例代码改用递归",
+      "note": "（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11412",
+      "date": "2026-03-15",
+      "title_en": "EIP-7979: change example code to use recursion",
+      "note_en": "(gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hudsonjameson：征求用本地 LLM 搭建 OpenClaw 的建议与安全提示",
+      "note": "06:03。",
+      "url": "https://x.com/hudsonjameson/status/2032955779041386992",
+      "date": "2026-03-15",
+      "title_en": "hudsonjameson: asks for the best local LLM and security tips for setting up OpenClaw",
+      "note_en": "06:03.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://x.com/VitalikButerin/status/2033016131884376541",
+    "credit": "X @VitalikButerin",
+    "local_path": "assets/2026-03-15.jpg",
+    "credit_en": "X @VitalikButerin"
+  },
+  "keywords_en": [
+    "Vitalik suggests revisiting the consensus and execution client split",
+    "a debate on Ethereum engineering's reputation",
+    "ZK plus native AA",
+    "ERC-8196 AI Agent Authenticated Wallet",
+    "ACDE #233 agenda",
+    "ERC-8004 launch day"
+  ],
+  "summary_en": "A Sunday. Vitalik said we should be open to revisiting the separation of beacon and execution clients, since running two daemons that talk to each other is far harder than running one, and the goal is good UX for self sovereign use. fede_intern said Ethereum engineering had not deserved its reputation, but Reth, ethrex and public benchmarks are changing that. The ACDE #233 agenda was posted."
+}

@@ -1,0 +1,191 @@
+{
+  "date": "2026-03-31",
+  "keywords": [
+    "两篇改进 Shor 算法的量子论文",
+    "Aztec Alpha 上线",
+    "以太坊状态的分片 PIR 设计",
+    "EIP-7701 提议撤回",
+    "EIP-8209 合并",
+    "EIP-8037 frame 失败时状态 gas 处理",
+    "钱包签名摘要显示 ERC"
+  ],
+  "summary": "drakefjustin 称两篇改进 Shor 算法的论文同日发表，量子威胁时间表再度提前。Aztec Alpha 上线，号称以太坊上首个功能完整的隐私栈。ethresear.ch 提出把以太坊状态分片并为每部分匹配最优 PIR 方案，让用户读链上数据而不暴露所读内容。forshtat 提议把原生 AA 提案 EIP-7701 移为 Withdrawn，同时其 EIP-8209 合并。",
+  "items": [
+    {
+      "topic": "原生 AA：路线收敛到 EIP-8141",
+      "title": "EIP-7701：移为 Withdrawn",
+      "note": "（forshtat）提交，7701 是此前基于 EOF 的原生 AA 提案；新增 EIP：Commit-Reveal Transaction Frames（forshtat）合并，3 月 29 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11472",
+      "date": "2026-03-31",
+      "title_en": "EIP-7701: move to Withdrawn",
+      "note_en": "(forshtat), submitted; 7701 was the earlier EOF based native AA proposal; Add EIP: Commit-Reveal Transaction Frames (forshtat), merged after submission on March 29.",
+      "topic_en": "Native AA: converging on EIP-8141"
+    },
+    {
+      "topic": "原生 AA：路线收敛到 EIP-8141",
+      "title": "新增 EIP：Commit-Reveal Transaction Frames",
+      "note": "EIP-7701：移为 Withdrawn（forshtat）提交，7701 是此前基于 EOF 的原生 AA 提案；新增 EIP：Commit-Reveal Transaction Frames（forshtat）合并，3 月 29 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11466",
+      "date": "2026-03-31",
+      "title_en": "Add EIP: Commit-Reveal Transaction Frames",
+      "note_en": "EIP-7701: move to Withdrawn (forshtat), submitted; 7701 was the earlier EOF based native AA proposal; Add EIP: Commit-Reveal Transaction Frames (forshtat), merged after submission on March 29.",
+      "topic_en": "Native AA: converging on EIP-8141"
+    },
+    {
+      "topic": "原生 AA：路线收敛到 EIP-8141",
+      "title": "EIP-8037：澄清 frame 失败时状态 gas 的处理（子 frame 与顶层）",
+      "note": "（qu0b）提交：子 frame 失败时 execution_state_gas_used 归还给父 frame 储备而不累加，顶层异常停止时不清零、仍计入 block_state_gas_used。",
+      "url": "https://github.com/ethereum/EIPs/pull/11468",
+      "date": "2026-03-31",
+      "title_en": "EIP-8037: clarify state gas behavior on frame failure (child vs top-level)",
+      "note_en": "(qu0b), submitted: on child frame failure execution_state_gas_used returns to the parent's reservoir rather than accumulating, and on top level exceptional halt it is not reset and still counts toward block_state_gas_used.",
+      "topic_en": "Native AA: converging on EIP-8141"
+    },
+    {
+      "topic": "隐私：Aztec Alpha 与 PIR",
+      "title": "aztecnetwork：Alpha 上线，近十年开发后以太坊上首个功能完整的隐私栈，开发者可从执行到结算定制隐私",
+      "note": "20:22。",
+      "url": "https://x.com/aztecnetwork/status/2038970103459709020",
+      "date": "2026-03-31",
+      "title_en": "aztecnetwork: Alpha is live, after nearly a decade the first feature complete privacy stack on Ethereum, with privacy customizable from execution to settlement",
+      "note_en": "20:22.",
+      "topic_en": "Privacy: Aztec Alpha and PIR"
+    },
+    {
+      "topic": "隐私：Aztec Alpha 与 PIR",
+      "title": "ethresear.ch：以太坊状态的分片 PIR 设计",
+      "note": "（aliatiia 与 Keewoo Lee）04:30：私有信息检索让用户从远程服务器读取链上数据而服务器不知道读了什么；各类 PIR 方案性能取舍不同，以太坊数据的更新频率与延迟敏感度也不同，按数据集分片并匹配最优方案，可在相同隐私保证下获得更好整体性能。",
+      "url": "https://ethresear.ch/t/sharded-pir-design-for-the-ethereum-state/24552",
+      "date": "2026-03-31",
+      "title_en": "ethresear.ch: Sharded PIR Design for the Ethereum State",
+      "note_en": "(aliatiia and Keewoo Lee), 04:30: private information retrieval lets users read chain data from remote servers without the server learning what was read; PIR schemes trade off differently and Ethereum data varies in update rate and latency sensitivity, so sharding data and pairing each set with its best scheme gives better overall performance at the same privacy.",
+      "topic_en": "Privacy: Aztec Alpha and PIR"
+    },
+    {
+      "topic": "隐私：Aztec Alpha 与 PIR",
+      "title": "新增 ERC：钱包签名与 calldata 摘要显示",
+      "note": "（PatrickAlphaC）提交：定义 EIP-712 摘要、域哈希、消息哈希与 calldata 摘要四个术语，要求钱包显示以便独立核验。",
+      "url": "https://github.com/ethereum/ERCs/pull/1639",
+      "date": "2026-03-31",
+      "title_en": "Add ERC: Wallet Signature and Calldata Digest Display",
+      "note_en": "(PatrickAlphaC), submitted: defines EIP-712 digest, domain hash, message hash and calldata digest, and requires wallets to display them for independent verification.",
+      "topic_en": "Privacy: Aztec Alpha and PIR"
+    },
+    {
+      "topic": "后量子",
+      "title": "drakefjustin：两篇突破性论文同日发表，都改进了能破解 RSA 与椭圆曲线密码的 Shor 算法，且优化的是不同层面，效果可叠加",
+      "note": "12:15；binji_x：以太坊正在走向后量子 14:27；Magicians：量子恢复路径 08:28。",
+      "url": "https://x.com/drakefjustin/status/2038847732152996108",
+      "date": "2026-03-31",
+      "title_en": "drakefjustin: two breakthrough papers landed today, both improving Shor's algorithm that breaks RSA and elliptic curve cryptography, optimizing separate layers so the results compound",
+      "note_en": "12:15; binji_x: Ethereum is going post quantum, 14:27; Magicians: Quantum recovery pathway, 08:28.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "后量子",
+      "title": "binji_x：以太坊正在走向后量子",
+      "note": "drakefjustin：两篇突破性论文同日发表，都改进了能破解 RSA 与椭圆曲线密码的 Shor 算法，且优化的是不同层面，效果可叠加 12:15；binji_x：以太坊正在走向后量子 14:27；Magicians：量子恢复路径 08:28。",
+      "url": "https://x.com/binji_x/status/2038880911840698669",
+      "date": "2026-03-31",
+      "title_en": "binji_x: Ethereum is going post quantum",
+      "note_en": "Drakefjustin: two breakthrough papers landed today, both improving Shor's algorithm that breaks RSA and elliptic curve cryptography, optimizing separate layers so the results compound, 12:15; binji_x: Ethereum is going post quantum, 14:27; Magicians: Quantum recovery pathway, 08:28.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "后量子",
+      "title": "Magicians：量子恢复路径",
+      "note": "drakefjustin：两篇突破性论文同日发表，都改进了能破解 RSA 与椭圆曲线密码的 Shor 算法，且优化的是不同层面，效果可叠加 12:15；binji_x：以太坊正在走向后量子 14:27；Magicians：量子恢复路径 08:28。",
+      "url": "https://ethereum-magicians.org/t/quantum-recovery-pathway/28109",
+      "date": "2026-03-31",
+      "title_en": "Magicians: Quantum recovery pathway",
+      "note_en": "Drakefjustin: two breakthrough papers landed today, both improving Shor's algorithm that breaks RSA and elliptic curve cryptography, optimizing separate layers so the results compound, 12:15; binji_x: Ethereum is going post quantum, 14:27; Magicians: Quantum recovery pathway, 08:28.",
+      "topic_en": "Post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8134",
+      "note": "与 EIP-8135 进入 Final（poojaranjan），均提交并合并；ERC-8063 进入 Final（jamesavechives）合并；Glamsterdam Repricings #5 议程。",
+      "url": "https://github.com/ethereum/EIPs/pull/11470",
+      "date": "2026-03-31",
+      "title_en": "EIP-8134",
+      "note_en": "And EIP-8135 move to Final (poojaranjan), both submitted and merged; ERC-8063 move to Final (jamesavechives), merged; Glamsterdam Repricings #5 agenda.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8135",
+      "note": "EIP-8134 与 EIP-8135 进入 Final（poojaranjan），均提交并合并；ERC-8063 进入 Final（jamesavechives）合并；Glamsterdam Repricings #5 议程。",
+      "url": "https://github.com/ethereum/EIPs/pull/11471",
+      "date": "2026-03-31",
+      "title_en": "EIP-8135",
+      "note_en": "EIP-8134 and EIP-8135 move to Final (poojaranjan), both submitted and merged; ERC-8063 move to Final (jamesavechives), merged; Glamsterdam Repricings #5 agenda.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8063 进入 Final",
+      "note": "EIP-8134 与 EIP-8135 进入 Final（poojaranjan），均提交并合并；ERC-8063 进入 Final（jamesavechives）合并；Glamsterdam Repricings #5 议程。",
+      "url": "https://github.com/ethereum/ERCs/pull/1602",
+      "date": "2026-03-31",
+      "title_en": "ERC-8063 move to Final",
+      "note_en": "EIP-8134 and EIP-8135 move to Final (poojaranjan), both submitted and merged; ERC-8063 move to Final (jamesavechives), merged; Glamsterdam Repricings #5 agenda.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam Repricings #5 议程",
+      "note": "EIP-8134 与 EIP-8135 进入 Final（poojaranjan），均提交并合并；ERC-8063 进入 Final（jamesavechives）合并；Glamsterdam Repricings #5 议程。",
+      "url": "https://github.com/ethereum/pm/issues/1995",
+      "date": "2026-03-31",
+      "title_en": "Glamsterdam Repricings #5 agenda",
+      "note_en": "EIP-8134 and EIP-8135 move to Final (poojaranjan), both submitted and merged; ERC-8063 move to Final (jamesavechives), merged; Glamsterdam Repricings #5 agenda.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWareLtd：S-two 电路递归让递归证明从约 1 分钟降至约 3 秒",
+      "note": "20:30；zooko：计算机安全的 AI 末日正在发生 08:04；LefterisJP：Scroll 暂停 DAO 并停用其 Etherscan 浏览器 23:37。",
+      "url": "https://x.com/StarkWareLtd/status/2038972152846668003",
+      "date": "2026-03-31",
+      "title_en": "StarkWareLtd: circuit based recursion in S-two cuts recursive proving from about 1 minute to about 3 seconds",
+      "note_en": "20:30; zooko: the computer security AIpocalypse is happening, 08:04; LefterisJP: Scroll paused its DAO and is discontinuing its Etherscan explorer, 23:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：计算机安全的 AI 末日正在发生",
+      "note": "StarkWareLtd：S-two 电路递归让递归证明从约 1 分钟降至约 3 秒 20:30；zooko：计算机安全的 AI 末日正在发生 08:04；LefterisJP：Scroll 暂停 DAO 并停用其 Etherscan 浏览器 23:37。",
+      "url": "https://x.com/zooko/status/2038784359268835623",
+      "date": "2026-03-31",
+      "title_en": "zooko: the computer security AIpocalypse is happening",
+      "note_en": "StarkWareLtd: circuit based recursion in S-two cuts recursive proving from about 1 minute to about 3 seconds, 20:30; zooko: the computer security AIpocalypse is happening, 08:04; LefterisJP: Scroll paused its DAO and is discontinuing its Etherscan explorer, 23:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：Scroll 暂停 DAO 并停用其 Etherscan 浏览器",
+      "note": "StarkWareLtd：S-two 电路递归让递归证明从约 1 分钟降至约 3 秒 20:30；zooko：计算机安全的 AI 末日正在发生 08:04；LefterisJP：Scroll 暂停 DAO 并停用其 Etherscan 浏览器 23:37。",
+      "url": "https://x.com/LefterisJP/status/2039019257778843768",
+      "date": "2026-03-31",
+      "title_en": "LefterisJP: Scroll paused its DAO and is discontinuing its Etherscan explorer",
+      "note_en": "StarkWareLtd: circuit based recursion in S-two cuts recursive proving from about 1 minute to about 3 seconds, 20:30; zooko: the computer security AIpocalypse is happening, 08:04; LefterisJP: Scroll paused its DAO and is discontinuing its Etherscan explorer, 23:37.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/sharded-pir-design-for-the-ethereum-state/24552",
+    "credit": "ethresear.ch, Sharded PIR Design for the Ethereum State",
+    "local_path": "assets/2026-03-31.jpg",
+    "credit_en": "ethresear.ch, Sharded PIR Design for the Ethereum State"
+  },
+  "keywords_en": [
+    "Two papers improving Shor's algorithm",
+    "Aztec Alpha goes live",
+    "sharded PIR design for the Ethereum state",
+    "EIP-7701 proposed for withdrawal",
+    "EIP-8209 merged",
+    "EIP-8037 state gas on frame failure",
+    "wallet signature digest display ERC"
+  ],
+  "summary_en": "drakefjustin said two papers improving Shor's algorithm landed the same day, pulling the quantum timeline forward again. Aztec Alpha went live, billed as the first feature complete privacy stack on Ethereum. ethresear.ch proposed sharding Ethereum state and pairing each part with its best PIR scheme so users can read chain data without revealing what they read. forshtat proposed moving the native AA proposal EIP-7701 to Withdrawn while his EIP-8209 merged."
+}

@@ -1,0 +1,169 @@
+{
+  "date": "2026-03-25",
+  "keywords": [
+    "EIP-8141 专场 #2 讨论交易池策略",
+    "链上明文签名 ERC",
+    "Payload Chunking EIP 合并",
+    "EIP-8184 区块顶部竞争更新",
+    "snap/2 用 BAL 修复状态",
+    "审计的作用"
+  ],
+  "summary": "EIP-8141 frame 交易第二次专场讨论交易池策略。硬件钱包团队 Kampela 提出链上明文签名 ERC，让受限设备无需可信第三方即可读懂并核验交易。nerolation 的 Payload Chunking 与 Chunk Access List EIP 合并。anderselowsson 为 LUCID 的区块顶部竞争小节补充段落，提交并合并。",
+  "items": [
+    {
+      "topic": "原生 AA：frame 交易交易池",
+      "title": "Ethereal news #17",
+      "note": "EIP-8141 Frame Transaction 专场 #2 举行，据 Ethereal news #17 讨论 交易池策略，议程见 Magicians。",
+      "url": "https://ethereal.news/ethereal-news-weekly-17/",
+      "date": "2026-03-25",
+      "title_en": "Ethereal news #17",
+      "note_en": "The EIP-8141 Frame Transaction breakout #2 met; per Ethereal news #17 it discussed transaction pool strategies, with the agenda on Magicians.",
+      "topic_en": "Native AA: the frame transaction pool"
+    },
+    {
+      "topic": "原生 AA：frame 交易交易池",
+      "title": "交易池策略",
+      "note": "EIP-8141 Frame Transaction 专场 #2 举行，据 Ethereal news #17 讨论 交易池策略，议程见 Magicians。",
+      "url": "https://hackmd.io/@matt/frame-mempool",
+      "date": "2026-03-25",
+      "title_en": "transaction pool strategies",
+      "note_en": "The EIP-8141 Frame Transaction breakout #2 met; per Ethereal news #17 it discussed transaction pool strategies, with the agenda on Magicians.",
+      "topic_en": "Native AA: the frame transaction pool"
+    },
+    {
+      "topic": "原生 AA：frame 交易交易池",
+      "title": "Magicians",
+      "note": "EIP-8141 Frame Transaction 专场 #2 举行，据 Ethereal news #17 讨论 交易池策略，议程见 Magicians。",
+      "url": "https://ethereum-magicians.org/t/headliner-breakout-eip-8141-frame-transaction-2-march-25-2026/28058",
+      "date": "2026-03-25",
+      "title_en": "Magicians",
+      "note_en": "The EIP-8141 Frame Transaction breakout #2 met; per Ethereal news #17 it discussed transaction pool strategies, with the agenda on Magicians.",
+      "topic_en": "Native AA: the frame transaction pool"
+    },
+    {
+      "topic": "交易：链上明文签名",
+      "title": "Magicians：ERC 链上明文签名",
+      "note": "（nail）07:34：Kampela 制作隔离式硬件签名设备，提议让交易在受限设备上也能以人类可读形式核验，无需可信第三方；如今以太坊普遍是盲签，用户只能相信请求方对交易的描述。",
+      "url": "https://ethereum-magicians.org/t/erc-onchain-clear-signing/28068",
+      "date": "2026-03-25",
+      "title_en": "Magicians: ERC Onchain Clear Signing",
+      "note_en": "(nail), 07:34: Kampela, which builds air gapped hardware signers, proposes making transactions human readable and verifiable on constrained devices without trusted third parties; today Ethereum relies on blind signing, where users must trust the requesting app's description.",
+      "topic_en": "Transactions: onchain clear signing"
+    },
+    {
+      "topic": "区块与同步",
+      "title": "新增 EIP：Payload Chunking 与 Chunk Access Lists",
+      "note": "（nerolation）合并；Magicians 讨论帖 04:35。",
+      "url": "https://github.com/ethereum/EIPs/pull/10900",
+      "date": "2026-03-25",
+      "title_en": "Add EIP: Payload Chunking with Chunk Access Lists",
+      "note_en": "(nerolation), merged; Magicians thread, 04:35.",
+      "topic_en": "Blocks and sync"
+    },
+    {
+      "topic": "区块与同步",
+      "title": "Magicians 讨论帖",
+      "note": "新增 EIP：Payload Chunking 与 Chunk Access Lists（nerolation）合并；Magicians 讨论帖 04:35。",
+      "url": "https://ethereum-magicians.org/t/payload-chunking/28067",
+      "date": "2026-03-25",
+      "title_en": "Magicians thread",
+      "note_en": "Add EIP: Payload Chunking with Chunk Access Lists (nerolation), merged; Magicians thread, 04:35.",
+      "topic_en": "Blocks and sync"
+    },
+    {
+      "topic": "区块与同步",
+      "title": "nero_eth：BAL 常被忽视的好处是更快更简单的同步，与 Gary_Rong 提出 EIP-8189 snap v2，用 BAL 修复状态以替代逐个拉取 trie 节点",
+      "note": "01:45。",
+      "url": "https://x.com/nero_eth/status/2036514751996407922",
+      "date": "2026-03-25",
+      "title_en": "nero_eth: an overlooked benefit of BALs is faster, simpler sync; with Gary_Rong he proposes EIP-8189 snap v2, healing with BALs instead of iterative trie node fetching",
+      "note_en": "01:45.",
+      "topic_en": "Blocks and sync"
+    },
+    {
+      "topic": "区块与同步",
+      "title": "EIP-8184：为区块顶部竞争小节补充段落",
+      "note": "（anderselowsson）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11445",
+      "date": "2026-03-25",
+      "title_en": "EIP-8184: add a paragraph to Competition for the ToB",
+      "note_en": "(anderselowsson), submitted and merged.",
+      "topic_en": "Blocks and sync"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #76 议程",
+      "note": "21:24；Pre-ERC：Agent 服务会话计量付费 17:33；Pre-ERC：Agent 范围委托 AgentKeys 17:33。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-76-march-30-2026/28079",
+      "date": "2026-03-25",
+      "title_en": "ACDT #76 agenda",
+      "note_en": "21:24; Pre-ERC: Agent Service Sessions, metered payments, 17:33; Pre-ERC: Scoped Agent Delegation (AgentKeys), 17:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Pre-ERC：Agent 服务会话计量付费",
+      "note": "ACDT #76 议程 21:24；Pre-ERC：Agent 服务会话计量付费 17:33；Pre-ERC：Agent 范围委托 AgentKeys 17:33。",
+      "url": "https://ethereum-magicians.org/t/pre-erc-agent-service-sessions-metered-payments-for-ongoing-agent-work/28070",
+      "date": "2026-03-25",
+      "title_en": "Pre-ERC: Agent Service Sessions, metered payments",
+      "note_en": "ACDT #76 agenda, 21:24; Pre-ERC: Agent Service Sessions, metered payments, 17:33; Pre-ERC: Scoped Agent Delegation (AgentKeys), 17:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Pre-ERC：Agent 范围委托 AgentKeys",
+      "note": "ACDT #76 议程 21:24；Pre-ERC：Agent 服务会话计量付费 17:33；Pre-ERC：Agent 范围委托 AgentKeys 17:33。",
+      "url": "https://ethereum-magicians.org/t/pre-erc-scoped-agent-delegation-agentkeys-capability-scoped-authorization-for-agents/28071",
+      "date": "2026-03-25",
+      "title_en": "Pre-ERC: Scoped Agent Delegation (AgentKeys)",
+      "note_en": "ACDT #76 agenda, 21:24; Pre-ERC: Agent Service Sessions, metered payments, 17:33; Pre-ERC: Scoped Agent Delegation (AgentKeys), 17:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "bkiepuszewski：人们误解了审计的作用",
+      "note": "01:34；tcoratger：Q day 可能在 2032 年前后从理论问题变成现实威胁 05:24；growthepie_eth：Celo 等 L2 已支持用稳定币付 gas 23:24。",
+      "url": "https://x.com/bkiepuszewski/status/2036511940076241117",
+      "date": "2026-03-25",
+      "title_en": "bkiepuszewski: people misunderstand the role of audits",
+      "note_en": "01:34; tcoratger: Q day may shift from theory to real threat around 2032, 05:24; growthepie_eth: L2s like Celo already let users pay gas in stablecoins, 23:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：Q day 可能在 2032 年前后从理论问题变成现实威胁",
+      "note": "bkiepuszewski：人们误解了审计的作用 01:34；tcoratger：Q day 可能在 2032 年前后从理论问题变成现实威胁 05:24；growthepie_eth：Celo 等 L2 已支持用稳定币付 gas 23:24。",
+      "url": "https://x.com/tcoratger/status/2036569826403987659",
+      "date": "2026-03-25",
+      "title_en": "tcoratger: Q day may shift from theory to real threat around 2032",
+      "note_en": "Bkiepuszewski: people misunderstand the role of audits, 01:34; tcoratger: Q day may shift from theory to real threat around 2032, 05:24; growthepie_eth: L2s like Celo already let users pay gas in stablecoins, 23:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "growthepie_eth：Celo 等 L2 已支持用稳定币付 gas",
+      "note": "bkiepuszewski：人们误解了审计的作用 01:34；tcoratger：Q day 可能在 2032 年前后从理论问题变成现实威胁 05:24；growthepie_eth：Celo 等 L2 已支持用稳定币付 gas 23:24。",
+      "url": "https://x.com/growthepie_eth/status/2036841575636963803",
+      "date": "2026-03-25",
+      "title_en": "growthepie_eth: L2s like Celo already let users pay gas in stablecoins",
+      "note_en": "Bkiepuszewski: people misunderstand the role of audits, 01:34; tcoratger: Q day may shift from theory to real threat around 2032, 05:24; growthepie_eth: L2s like Celo already let users pay gas in stablecoins, 23:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-onchain-clear-signing/28068",
+    "credit": "Ethereum Magicians, ERC: Onchain Clear Signing",
+    "local_path": "assets/2026-03-25.jpg",
+    "credit_en": "Ethereum Magicians, ERC: Onchain Clear Signing"
+  },
+  "keywords_en": [
+    "EIP-8141 breakout #2 on transaction pool strategies",
+    "Onchain Clear Signing ERC",
+    "Payload Chunking EIP merged",
+    "EIP-8184 top of block competition update",
+    "snap/2 heals state with BALs",
+    "the role of audits"
+  ],
+  "summary_en": "The second EIP-8141 frame transaction breakout covered transaction pool strategies. Hardware wallet team Kampela proposed an Onchain Clear Signing ERC so constrained devices can read and verify transactions without trusted third parties. nerolation's Payload Chunking with Chunk Access Lists EIP merged. anderselowsson added a paragraph to LUCID's top of block competition section, submitted and merged."
+}

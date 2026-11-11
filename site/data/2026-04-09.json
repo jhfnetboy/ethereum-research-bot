@@ -1,0 +1,149 @@
+{
+  "date": "2026-04-09",
+  "keywords": [
+    "ACDE #234 开放 Hegotá 非头号 EIP 提案并计划原生 AA 专场",
+    "bal-devnet-3 上线",
+    "钱包产权契据 ERC-8221",
+    "EIP-8175 新增 TX_GAS_LIMIT",
+    "Lean Staking EIP",
+    "EIP-8037 交易有效性条件"
+  ],
+  "summary": "ACDE #234 宣布 bal-devnet-3 上线，glamsterdam-devnet-0 视 epbs-devnet-1 稳定情况目标下周；Hegotá 非头号 EIP 提案开放，账户抽象方面计划原生 AA 专场，并展示 benaadams 的 ERC-8221 钱包产权契据（由 NFT 控制的智能账户）。rakita 为 EIP-8175 加入 TX_GAS_LIMIT 操作码，提交并合并。",
+  "items": [
+    {
+      "topic": "ACDE #234",
+      "title": "ACDE #234",
+      "note": "21:00，据 Ethereal news #19：Glamsterdam 的 bal-devnet-3 已上线，epbs-devnet-1 有多个问题在排查，glamsterdam-devnet-0 若 epbs-devnet-1 稳定则下周上线，否则继续分开的执行层与共识层 devnet；Hegotá 非头号 EIP 提案开放，计划原生账户抽象讨论与专场；讨论历史数据最短保留期（2 周到 1 年）与 SFI 定义澄清。",
+      "url": "https://forkcast.org/calls/acde/234",
+      "date": "2026-04-09",
+      "title_en": "ACDE #234",
+      "note_en": "21:00, per Ethereal news #19: Glamsterdam's bal-devnet-3 launched, epbs-devnet-1 has several issues under investigation, and glamsterdam-devnet-0 goes next week if epbs-devnet-1 is stable, otherwise separate execution and consensus devnets continue; Hegotá non headliner proposals opened with native account abstraction discussion and a breakout planned; history retention minimums (2 weeks to 1 year) and an SFI definition clarification were discussed.",
+      "topic_en": "ACDE #234"
+    },
+    {
+      "topic": "ACDE #234",
+      "title": "Ethereal news #19",
+      "note": "ACDE #234 21:00，据 Ethereal news #19：Glamsterdam 的 bal-devnet-3 已上线，epbs-devnet-1 有多个问题在排查，glamsterdam-devnet-0 若 epbs-devnet-1 稳定则下周上线，否则继续分开的执行层与共识层 devnet；Hegotá 非头号 EIP 提案开放，计划原生账户抽象讨论与专场；讨论历史数据最短保留期（2 周到 1 年）与 SFI 定义澄清。",
+      "url": "https://ethereal.news/ethereal-news-weekly-19/",
+      "date": "2026-04-09",
+      "title_en": "Ethereal news #19",
+      "note_en": "ACDE #234, 21:00, per Ethereal news #19: Glamsterdam's bal-devnet-3 launched, epbs-devnet-1 has several issues under investigation, and glamsterdam-devnet-0 goes next week if epbs-devnet-1 is stable, otherwise separate execution and consensus devnets continue; Hegotá non headliner proposals opened with native account abstraction discussion and a breakout planned; history retention minimums (2 weeks to 1 year) and an SFI definition clarification were discussed.",
+      "topic_en": "ACDE #234"
+    },
+    {
+      "topic": "账户：钱包产权契据",
+      "title": "新增 ERC：Wallet Title Deeds",
+      "note": "（benaadams）提交；Magicians 讨论帖 ERC-8221 08:56；据 Ethereal news #19，ACDE #234 上展示其为由 NFT 控制的智能账户。",
+      "url": "https://github.com/ethereum/ERCs/pull/1658",
+      "date": "2026-04-09",
+      "title_en": "Add ERC: Wallet Title Deeds",
+      "note_en": "(benaadams), submitted; Magicians thread ERC-8221, 08:56; per Ethereal news #19 it was presented at ACDE #234 as NFT controlled smart accounts.",
+      "topic_en": "Accounts: Wallet Title Deeds"
+    },
+    {
+      "topic": "账户：钱包产权契据",
+      "title": "Magicians 讨论帖 ERC-8221",
+      "note": "新增 ERC：Wallet Title Deeds（benaadams）提交；Magicians 讨论帖 ERC-8221 08:56；据 Ethereal news #19，ACDE #234 上展示其为由 NFT 控制的智能账户。",
+      "url": "https://ethereum-magicians.org/t/erc-8221-wallet-title-deeds/28182",
+      "date": "2026-04-09",
+      "title_en": "Magicians thread ERC-8221",
+      "note_en": "Add ERC: Wallet Title Deeds (benaadams), submitted; Magicians thread ERC-8221, 08:56; per Ethereal news #19 it was presented at ACDE #234 as NFT controlled smart accounts.",
+      "topic_en": "Accounts: Wallet Title Deeds"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8175：新增 TX_GAS_LIMIT 操作码",
+      "note": "（rakita）提交并合并；EIP-8037：增加交易有效性条件（jwasinger）提交，把各客户端与 EEST 已实现的规则写入规范；EIP-8189：GetBlockAccessLists 使用 RLP 空字符串占位并加入 bytes 参数（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11501",
+      "date": "2026-04-09",
+      "title_en": "EIP-8175: add a TX_GAS_LIMIT opcode",
+      "note_en": "(rakita), submitted and merged; EIP-8037: add an additional tx validity condition (jwasinger), submitted, codifying a rule clients and EEST already implement; EIP-8189: RLP empty string placeholder and a bytes parameter for GetBlockAccessLists (nerolation), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8037：增加交易有效性条件",
+      "note": "EIP-8175：新增 TX_GAS_LIMIT 操作码（rakita）提交并合并；EIP-8037：增加交易有效性条件（jwasinger）提交，把各客户端与 EEST 已实现的规则写入规范；EIP-8189：GetBlockAccessLists 使用 RLP 空字符串占位并加入 bytes 参数（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11503",
+      "date": "2026-04-09",
+      "title_en": "EIP-8037: add an additional tx validity condition",
+      "note_en": "EIP-8175: add a TX_GAS_LIMIT opcode (rakita), submitted and merged; EIP-8037: add an additional tx validity condition (jwasinger), submitted, codifying a rule clients and EEST already implement; EIP-8189: RLP empty string placeholder and a bytes parameter for GetBlockAccessLists (nerolation), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "交易与 gas",
+      "title": "EIP-8189：GetBlockAccessLists 使用 RLP 空字符串占位并加入 bytes 参数",
+      "note": "EIP-8175：新增 TX_GAS_LIMIT 操作码（rakita）提交并合并；EIP-8037：增加交易有效性条件（jwasinger）提交，把各客户端与 EEST 已实现的规则写入规范；EIP-8189：GetBlockAccessLists 使用 RLP 空字符串占位并加入 bytes 参数（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11498",
+      "date": "2026-04-09",
+      "title_en": "EIP-8189: RLP empty string placeholder and a bytes parameter for GetBlockAccessLists",
+      "note_en": "EIP-8175: add a TX_GAS_LIMIT opcode (rakita), submitted and merged; EIP-8037: add an additional tx validity condition (jwasinger), submitted, codifying a rule clients and EEST already implement; EIP-8189: RLP empty string placeholder and a bytes parameter for GetBlockAccessLists (nerolation), submitted and merged.",
+      "topic_en": "Transactions and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：Lean Staking",
+      "note": "（dmpierre）提交；ethresear.ch：基于分隔符的参与承诺，用于后量子见证聚合 09:39；PQTS Breakout #6 议程 21:13。",
+      "url": "https://github.com/ethereum/EIPs/pull/11500",
+      "date": "2026-04-09",
+      "title_en": "Add EIP: Lean Staking",
+      "note_en": "(dmpierre), submitted; ethresear.ch: separator based participation commitments for post-quantum attestation aggregation, 09:39; PQTS Breakout #6 agenda, 21:13.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：基于分隔符的参与承诺，用于后量子见证聚合",
+      "note": "新增 EIP：Lean Staking（dmpierre）提交；ethresear.ch：基于分隔符的参与承诺，用于后量子见证聚合 09:39；PQTS Breakout #6 议程 21:13。",
+      "url": "https://ethresear.ch/t/separator-based-participation-commitments-for-post-quantum-attestation-aggregation/24622",
+      "date": "2026-04-09",
+      "title_en": "ethresear.ch: separator based participation commitments for post-quantum attestation aggregation",
+      "note_en": "Add EIP: Lean Staking (dmpierre), submitted; ethresear.ch: separator based participation commitments for post-quantum attestation aggregation, 09:39; PQTS Breakout #6 agenda, 21:13.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #6 议程",
+      "note": "新增 EIP：Lean Staking（dmpierre）提交；ethresear.ch：基于分隔符的参与承诺，用于后量子见证聚合 09:39；PQTS Breakout #6 议程 21:13。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-6/28190",
+      "date": "2026-04-09",
+      "title_en": "PQTS Breakout #6 agenda",
+      "note_en": "Add EIP: Lean Staking (dmpierre), submitted; ethresear.ch: separator based participation commitments for post-quantum attestation aggregation, 09:39; PQTS Breakout #6 agenda, 21:13.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：ZK 的超能力是扩容与隐私，根源是完整性",
+      "note": "11:26；LefterisJP：每个加密用户都会遇到找不到旧交易的困扰 16:29。",
+      "url": "https://x.com/EliBenSasson/status/2042096808894075150",
+      "date": "2026-04-09",
+      "title_en": "EliBenSasson: ZK's superpowers are scale and privacy, rooted in integrity",
+      "note_en": "11:26; LefterisJP: every crypto user hits the wall of not finding an old transaction, 16:29.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：每个加密用户都会遇到找不到旧交易的困扰",
+      "note": "EliBenSasson：ZK 的超能力是扩容与隐私，根源是完整性 11:26；LefterisJP：每个加密用户都会遇到找不到旧交易的困扰 16:29。",
+      "url": "https://x.com/LefterisJP/status/2042173158128574924",
+      "date": "2026-04-09",
+      "title_en": "LefterisJP: every crypto user hits the wall of not finding an old transaction",
+      "note_en": "EliBenSasson: ZK's superpowers are scale and privacy, rooted in integrity, 11:26; LefterisJP: every crypto user hits the wall of not finding an old transaction, 16:29.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8221-wallet-title-deeds/28182",
+    "credit": "Ethereum Magicians, ERC-8221: Wallet Title Deeds",
+    "local_path": "assets/2026-04-09.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8221: Wallet Title Deeds"
+  },
+  "keywords_en": [
+    "ACDE #234 opens Hegotá non headliner proposals and plans a native AA breakout",
+    "bal-devnet-3 launches",
+    "Wallet Title Deeds ERC-8221",
+    "EIP-8175 adds TX_GAS_LIMIT",
+    "Lean Staking EIP",
+    "an EIP-8037 transaction validity condition"
+  ],
+  "summary_en": "ACDE #234 announced bal-devnet-3 had launched and glamsterdam-devnet-0 is targeted for next week if epbs-devnet-1 is stable; Hegotá non headliner proposals opened, a native AA breakout was planned, and benaadams presented ERC-8221 Wallet Title Deeds (NFT controlled smart accounts). rakita added a TX_GAS_LIMIT opcode to EIP-8175, submitted and merged."
+}

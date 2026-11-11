@@ -1,0 +1,151 @@
+{
+  "date": "2026-03-20",
+  "keywords": [
+    "EIP-8130 调整账户配置接口",
+    "EIP-6404 secp256k1 算法 ID 改为 0x00",
+    "EIP-8037 对齐 EIP-7928 合并",
+    "ERC-7943 改为 canSend 与 canReceive",
+    "Tempo Wallet CLI 开源",
+    "Outcome Preconfs",
+    "FOCIL #31 议程"
+  ],
+  "summary": "chunter-cb 调整 EIP-8130 的账户配置接口，提交并合并。SirSpudlington 提交把 EIP-6404 的 secp256k1 算法 ID 从 0xFF 改为 0x00。nerolation 让 EIP-8037 对齐 EIP-7928 的 gas 校验阶段，合并。gakonst 开源内置 MPP 支付的 Tempo Wallet CLI。ethresear.ch 发表无需区块即可验证承诺的 Outcome Preconfs。",
+  "items": [
+    {
+      "topic": "原生 AA 与交易格式",
+      "title": "EIP-8130：调整账户配置接口并做小幅清理",
+      "note": "（chunter-cb）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11428",
+      "date": "2026-03-20",
+      "title_en": "EIP-8130: adjust the account config interface, small clean up",
+      "note_en": "(chunter-cb), submitted and merged.",
+      "topic_en": "Native AA and transaction formats"
+    },
+    {
+      "topic": "原生 AA 与交易格式",
+      "title": "EIP-6404：把 secp256k1 算法 ID 从 0xFF 改为 0x00",
+      "note": "（SirSpudlington）提交，PR 说明该改动会破坏 EIP-6404 测试用例，需等 PR 11357 合并后才能修复。",
+      "url": "https://github.com/ethereum/EIPs/pull/11430",
+      "date": "2026-03-20",
+      "title_en": "EIP-6404: update the secp256k1 algorithm to 0x00 from 0xFF",
+      "note_en": "(SirSpudlington), submitted; the PR notes it breaks EIP-6404 test cases that cannot be fixed until PR 11357 merges.",
+      "topic_en": "Native AA and transaction formats"
+    },
+    {
+      "topic": "Gas：EIP-8037",
+      "title": "EIP-8037：对齐 EIP-7928 的 gas 校验阶段",
+      "note": "（nerolation）15:29 合并，3 月 16 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11414",
+      "date": "2026-03-20",
+      "title_en": "EIP-8037: align with EIP-7928 gas validation phases",
+      "note_en": "(nerolation), merged at 15:29 after being submitted on March 16.",
+      "topic_en": "Gas: EIP-8037"
+    },
+    {
+      "topic": "支付与预确认",
+      "title": "gakonst：开源内置 MPP 支持的 Tempo Wallet CLI",
+      "note": "00:40。",
+      "url": "https://x.com/gakonst/status/2034686471647670667",
+      "date": "2026-03-20",
+      "title_en": "gakonst: open sourced the Tempo Wallet CLI with built in MPP support",
+      "note_en": "00:40.",
+      "topic_en": "Payments and preconfirmations"
+    },
+    {
+      "topic": "支付与预确认",
+      "title": "ethresear.ch：Outcome Preconfs，无需区块即可验证区块承诺",
+      "note": "23:00。",
+      "url": "https://ethresear.ch/t/outcome-preconfs-verifying-block-commitments-without-the-block/24466",
+      "date": "2026-03-20",
+      "title_en": "ethresear.ch: Outcome Preconfs, verifying block commitments without the block",
+      "note_en": "23:00.",
+      "topic_en": "Payments and preconfirmations"
+    },
+    {
+      "topic": "支付与预确认",
+      "title": "_julianma：Bankless 介绍快速确认规则如何让 L2、交易所与跨链桥的存款时间降至 13 秒",
+      "note": "20:28。",
+      "url": "https://x.com/_julianma/status/2034985378680062331",
+      "date": "2026-03-20",
+      "title_en": "_julianma: Bankless highlights how the Fast Confirmation Rule drops L2, exchange and bridge deposit times to 13 seconds",
+      "note_en": "20:28.",
+      "topic_en": "Payments and preconfirmations"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7943：用 canSend 与 canReceive 替代 canTransact",
+      "note": "（xaler5）提交并合并；ERC-8167 进入 Review（wjmelements）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1612",
+      "date": "2026-03-20",
+      "title_en": "ERC-7943: replace canTransact with canSend and canReceive",
+      "note_en": "(xaler5), submitted and merged; ERC-8167: move to Review (wjmelements), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8167 进入 Review",
+      "note": "ERC-7943：用 canSend 与 canReceive 替代 canTransact（xaler5）提交并合并；ERC-8167 进入 Review（wjmelements）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1610",
+      "date": "2026-03-20",
+      "title_en": "ERC-8167: move to Review",
+      "note_en": "ERC-7943: replace canTransact with canSend and canReceive (xaler5), submitted and merged; ERC-8167: move to Review (wjmelements), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #31 议程",
+      "note": "23:03。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-31-march-24-2026/28035",
+      "date": "2026-03-20",
+      "title_en": "FOCIL Breakout #31 agenda",
+      "note_en": "23:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：以太坊是少数积极应对量子风险的金融系统之一",
+      "note": "19:30；EliBenSasson：量子计算对 Bitcoin 的两重威胁 19:51；recmo：zk 身份与人格证明可替代数据收集式防滥用 22:57。",
+      "url": "https://x.com/binji_x/status/2034970807634395248",
+      "date": "2026-03-20",
+      "title_en": "binji_x: Ethereum is one of the few efforts in money and finance actively combatting quantum risk",
+      "note_en": "19:30; EliBenSasson: the two quantum threats to Bitcoin, 19:51; recmo: zk identity and proof of human offer an alternative to data hungry abuse prevention, 22:57.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：量子计算对 Bitcoin 的两重威胁",
+      "note": "binji_x：以太坊是少数积极应对量子风险的金融系统之一 19:30；EliBenSasson：量子计算对 Bitcoin 的两重威胁 19:51；recmo：zk 身份与人格证明可替代数据收集式防滥用 22:57。",
+      "url": "https://x.com/EliBenSasson/status/2034976178738548999",
+      "date": "2026-03-20",
+      "title_en": "EliBenSasson: the two quantum threats to Bitcoin",
+      "note_en": "Binji_x: Ethereum is one of the few efforts in money and finance actively combatting quantum risk, 19:30; EliBenSasson: the two quantum threats to Bitcoin, 19:51; recmo: zk identity and proof of human offer an alternative to data hungry abuse prevention, 22:57.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "recmo：zk 身份与人格证明可替代数据收集式防滥用",
+      "note": "binji_x：以太坊是少数积极应对量子风险的金融系统之一 19:30；EliBenSasson：量子计算对 Bitcoin 的两重威胁 19:51；recmo：zk 身份与人格证明可替代数据收集式防滥用 22:57。",
+      "url": "https://x.com/recmo/status/2035022885950267433",
+      "date": "2026-03-20",
+      "title_en": "recmo: zk identity and proof of human offer an alternative to data hungry abuse prevention",
+      "note_en": "Binji_x: Ethereum is one of the few efforts in money and finance actively combatting quantum risk, 19:30; EliBenSasson: the two quantum threats to Bitcoin, 19:51; recmo: zk identity and proof of human offer an alternative to data hungry abuse prevention, 22:57.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/outcome-preconfs-verifying-block-commitments-without-the-block/24466",
+    "credit": "ethresear.ch, Outcome Preconfs: Verifying Block Commitments Without the Block",
+    "local_path": "assets/2026-03-20.jpg",
+    "credit_en": "ethresear.ch, Outcome Preconfs: Verifying Block Commitments Without the Block"
+  },
+  "keywords_en": [
+    "EIP-8130 adjusts the account config interface",
+    "EIP-6404 moves the secp256k1 algorithm ID to 0x00",
+    "EIP-8037 aligned with EIP-7928 merged",
+    "ERC-7943 switches to canSend and canReceive",
+    "Tempo Wallet CLI open sourced",
+    "Outcome Preconfs",
+    "FOCIL #31 agenda"
+  ],
+  "summary_en": "chunter-cb adjusted EIP-8130's account config interface, submitted and merged. SirSpudlington submitted a change moving EIP-6404's secp256k1 algorithm ID from 0xFF to 0x00. nerolation aligned EIP-8037 with EIP-7928's gas validation phases, merged. gakonst open sourced the Tempo Wallet CLI with built in MPP payments. ethresear.ch published Outcome Preconfs, verifying block commitments without the block."
+}
