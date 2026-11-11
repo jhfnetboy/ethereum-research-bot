@@ -1,0 +1,97 @@
+{
+  "date": "2026-01-01",
+  "keywords": [
+    "Vitalik 回顾以太坊 2025",
+    "terencechain 的 2026 新年目标 ePBS 与 gas 及 blob 上限翻倍",
+    "EIP-5450 JUMPF 验证公式与 EIP-6206 对齐",
+    "EIP-6690 补充安全考量",
+    "隐私是最重要的护城河"
+  ],
+  "summary": "元旦动态较少。VitalikButerin 回顾 2025：gas 上限与 blob 数量提高、节点软件质量改善、zkEVM 突破性能里程碑。terencechain 列出 2026 年目标：上线 ePBS、gas 与 blob 上限翻倍、缩短出块时间。",
+  "items": [
+    {
+      "topic": "Gas 与扩容：新年目标",
+      "title": "VitalikButerin：2025 年以太坊提高了 gas 上限与 blob 数量，节点软件质量提升，zkEVM 突破性能里程碑",
+      "note": "21:41；terencechain：2026 年目标是上线 ePBS、gas 与 blob 上限翻倍、缩短出块时间 00:01。",
+      "url": "https://x.com/VitalikButerin/status/2006737662942871574",
+      "date": "2026-01-01",
+      "title_en": "VitalikButerin: in 2025 Ethereum raised gas limits and blob counts, improved node software and zkEVMs passed performance milestones",
+      "note_en": "21:41; terencechain: 2026 goals are shipping ePBS, doubling gas and blob limits and shortening slot time, 00:01.",
+      "topic_en": "Gas and scaling: New Year goals"
+    },
+    {
+      "topic": "Gas 与扩容：新年目标",
+      "title": "terencechain：2026 年目标是上线 ePBS、gas 与 blob 上限翻倍、缩短出块时间",
+      "note": "VitalikButerin：2025 年以太坊提高了 gas 上限与 blob 数量，节点软件质量提升，zkEVM 突破性能里程碑 21:41；terencechain：2026 年目标是上线 ePBS、gas 与 blob 上限翻倍、缩短出块时间 00:01。",
+      "url": "https://x.com/terencechain/status/2006410391488966936",
+      "date": "2026-01-01",
+      "title_en": "terencechain: 2026 goals are shipping ePBS, doubling gas and blob limits and shortening slot time",
+      "note_en": "VitalikButerin: in 2025 Ethereum raised gas limits and blob counts, improved node software and zkEVMs passed performance milestones, 21:41; terencechain: 2026 goals are shipping ePBS, doubling gas and blob limits and shortening slot time, 00:01.",
+      "topic_en": "Gas and scaling: New Year goals"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-5450：JUMPF 验证公式与 EIP-6206 对齐",
+      "note": "（forkfury）提交；EIP-6690：补充安全考量（endorina）提交；ERC-8109 格式改进（mudgen）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10999",
+      "date": "2026-01-01",
+      "title_en": "EIP-5450: align the JUMPF validation formula with EIP-6206",
+      "note_en": "(forkfury), submitted; EIP-6690: add security considerations (endorina), submitted; ERC-8109: improved formatting (mudgen), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-6690：补充安全考量",
+      "note": "EIP-5450：JUMPF 验证公式与 EIP-6206 对齐（forkfury）提交；EIP-6690：补充安全考量（endorina）提交；ERC-8109 格式改进（mudgen）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11000",
+      "date": "2026-01-01",
+      "title_en": "EIP-6690: add security considerations",
+      "note_en": "EIP-5450: align the JUMPF validation formula with EIP-6206 (forkfury), submitted; EIP-6690: add security considerations (endorina), submitted; ERC-8109: improved formatting (mudgen), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8109 格式改进",
+      "note": "EIP-5450：JUMPF 验证公式与 EIP-6206 对齐（forkfury）提交；EIP-6690：补充安全考量（endorina）提交；ERC-8109 格式改进（mudgen）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1441",
+      "date": "2026-01-01",
+      "title_en": "ERC-8109: improved formatting",
+      "note_en": "EIP-5450: align the JUMPF validation formula with EIP-6206 (forkfury), submitted; EIP-6690: add security considerations (endorina), submitted; ERC-8109: improved formatting (mudgen), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：隐私将是加密领域最重要的护城河",
+      "note": "21:00；fede_intern：近两周真正用 Lean 写代码 01:46。",
+      "url": "https://x.com/aztecnetwork/status/2006727127534809354",
+      "date": "2026-01-01",
+      "title_en": "aztecnetwork: privacy will be the most important moat in crypto",
+      "note_en": "21:00; fede_intern: really coding in Lean over the past two weeks, 01:46.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：近两周真正用 Lean 写代码",
+      "note": "aztecnetwork：隐私将是加密领域最重要的护城河 21:00；fede_intern：近两周真正用 Lean 写代码 01:46。",
+      "url": "https://x.com/fede_intern/status/2006436819731112287",
+      "date": "2026-01-01",
+      "title_en": "fede_intern: really coding in Lean over the past two weeks",
+      "note_en": "Aztecnetwork: privacy will be the most important moat in crypto, 21:00; fede_intern: really coding in Lean over the past two weeks, 01:46.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11000",
+    "credit": "GitHub, ethereum/EIPs PR 11000",
+    "local_path": "assets/2026-01-01.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR 11000"
+  },
+  "keywords_en": [
+    "Vitalik reviews Ethereum's 2025",
+    "terencechain's 2026 resolutions of ePBS and doubled gas and blob limits",
+    "EIP-5450 aligns the JUMPF validation formula with EIP-6206",
+    "EIP-6690 adds security considerations",
+    "privacy as the biggest moat"
+  ],
+  "summary_en": "New Year's Day was quiet. VitalikButerin reviewed 2025: higher gas limits and blob counts, better node software and zkEVMs passing performance milestones. terencechain listed 2026 goals: ship ePBS, double the gas and blob limits and shorten slot time."
+}

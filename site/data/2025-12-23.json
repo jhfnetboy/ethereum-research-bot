@@ -1,0 +1,99 @@
+{
+  "date": "2025-12-23",
+  "keywords": [
+    "虫洞与可信否认的代价",
+    "EIP-7503 宣称的匿名集",
+    "FHE 是否值得这么多关注",
+    "ERC-7573 改名为密钥解密预言机",
+    "Messari 报告称以太坊巩固核心地位",
+    "Aztec 与 Noir"
+  ],
+  "summary": "mmjahanara 与 Pierre 分析指出，虫洞（EIP-7503）的可信否认属性与以太坊 160 位地址并不兼容，并重新审视 EIP-7503 宣称的匿名集。miha-stopar 讨论 FHE 是否值得如此关注：它承诺在加密状态上做通用可组合计算，且不依赖可信硬件。",
+  "items": [
+    {
+      "topic": "隐私：虫洞与匿名集",
+      "title": "ethresear.ch：虫洞与可信否认的代价",
+      "note": "（Pierre）18:21：说明虫洞的可信否认属性似乎与以太坊 160 位地址不兼容，并剖析 EIP-7503 宣称的匿名集。",
+      "url": "https://ethresear.ch/t/wormholes-and-the-cost-of-plausible-deniability/23728",
+      "date": "2025-12-23",
+      "title_en": "ethresear.ch: Wormholes and the cost of plausible deniability",
+      "note_en": "(Pierre), 18:21: explains why wormholes' plausible deniability seems incompatible with Ethereum's 160 bit addresses and examines EIP-7503's claimed anonymity set.",
+      "topic_en": "Privacy: wormholes and anonymity sets"
+    },
+    {
+      "topic": "隐私：虫洞与匿名集",
+      "title": "ethresear.ch：FHE 值得这么多关注吗？",
+      "note": "（miha-stopar）00:19：FHE 承诺在加密状态上做完全通用、可组合的计算，且不依赖可信硬件。",
+      "url": "https://ethresear.ch/t/does-fhe-deserve-this-much-attention/23726",
+      "date": "2025-12-23",
+      "title_en": "ethresear.ch: Does FHE deserve this much attention?",
+      "note_en": "(miha-stopar), 00:19: FHE promises fully general, composable computation over encrypted state without trusted hardware.",
+      "topic_en": "Privacy: wormholes and anonymity sets"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7573 改名为密钥解密预言机",
+      "note": "（cfries）提交并合并；ERC-8033：Agent 委员会预言机（phiraml）提交；EIP-7906：CALL 操作码值从 0xFA 改为 0xF1（mattvaux）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1421",
+      "date": "2025-12-23",
+      "title_en": "ERC-7573: rename to key decryption oracle",
+      "note_en": "(cfries), submitted and merged; ERC-8033: Agent Council Oracles (phiraml), submitted; EIP-7906: correct the CALL opcode value from 0xFA to 0xF1 (mattvaux), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8033：Agent 委员会预言机",
+      "note": "ERC-7573 改名为密钥解密预言机（cfries）提交并合并；ERC-8033：Agent 委员会预言机（phiraml）提交；EIP-7906：CALL 操作码值从 0xFA 改为 0xF1（mattvaux）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1422",
+      "date": "2025-12-23",
+      "title_en": "ERC-8033: Agent Council Oracles",
+      "note_en": "ERC-7573: rename to key decryption oracle (cfries), submitted and merged; ERC-8033: Agent Council Oracles (phiraml), submitted; EIP-7906: correct the CALL opcode value from 0xFA to 0xF1 (mattvaux), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7906：CALL 操作码值从 0xFA 改为 0xF1",
+      "note": "ERC-7573 改名为密钥解密预言机（cfries）提交并合并；ERC-8033：Agent 委员会预言机（phiraml）提交；EIP-7906：CALL 操作码值从 0xFA 改为 0xF1（mattvaux）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10972",
+      "date": "2025-12-23",
+      "title_en": "EIP-7906: correct the CALL opcode value from 0xFA to 0xF1",
+      "note_en": "ERC-7573: rename to key decryption oracle (cfries), submitted and merged; ERC-8033: Agent Council Oracles (phiraml), submitted; EIP-7906: correct the CALL opcode value from 0xFA to 0xF1 (mattvaux), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tkstanczak 引述 Messari 报告：若只看叙事会以为以太坊这一年在失势，数据却显示它巩固了链上活动的核心地位",
+      "note": "13:09；aztecnetwork：Zac 讲解 Aztec 与可编程隐私 22:00。",
+      "url": "https://x.com/tkstanczak/status/2003347204287922328",
+      "date": "2025-12-23",
+      "title_en": "tkstanczak quoting Messari: the narrative says Ethereum lost ground this year, but the data shows it reinforced its central role onchain",
+      "note_en": "13:09; aztecnetwork: Zac explains Aztec and programmable privacy, 22:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Zac 讲解 Aztec 与可编程隐私",
+      "note": "tkstanczak 引述 Messari 报告：若只看叙事会以为以太坊这一年在失势，数据却显示它巩固了链上活动的核心地位 13:09；aztecnetwork：Zac 讲解 Aztec 与可编程隐私 22:00。",
+      "url": "https://x.com/aztecnetwork/status/2003480797014294769",
+      "date": "2025-12-23",
+      "title_en": "aztecnetwork: Zac explains Aztec and programmable privacy",
+      "note_en": "Tkstanczak quoting Messari: the narrative says Ethereum lost ground this year, but the data shows it reinforced its central role onchain, 13:09; aztecnetwork: Zac explains Aztec and programmable privacy, 22:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/wormholes-and-the-cost-of-plausible-deniability/23728",
+    "credit": "ethresear.ch, Wormholes and the cost of plausible deniability",
+    "local_path": "assets/2025-12-23.jpg",
+    "credit_en": "ethresear.ch, Wormholes and the cost of plausible deniability"
+  },
+  "keywords_en": [
+    "Wormholes and the cost of plausible deniability",
+    "EIP-7503's claimed anonymity set",
+    "whether FHE deserves this much attention",
+    "ERC-7573 renamed to a key decryption oracle",
+    "a Messari report says Ethereum reinforced its central role",
+    "Aztec and Noir"
+  ],
+  "summary_en": "mmjahanara and Pierre argued that the plausible deniability of wormholes (EIP-7503) is incompatible with Ethereum's 160 bit addresses, and revisited EIP-7503's claimed anonymity set. miha-stopar asked whether FHE deserves its attention, given its promise of general composable computation over encrypted state without trusted hardware."
+}

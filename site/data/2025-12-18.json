@@ -1,0 +1,121 @@
+{
+  "date": "2025-12-18",
+  "keywords": [
+    "ACDE #226 重定价 EIP 列为 CFI 目标 60 MGas/s",
+    "四项内存与代码 EIP 被拒",
+    "Hegotá 组合名确定",
+    "Tempo Transactions 新交易类型",
+    "EIP-7793 条件交易 FAQ",
+    "bal-devnet-1 上线",
+    "Base App"
+  ],
+  "summary": "ACDE #226：以 60 MGas/s 为目标的重定价 EIP 列为 CFI，包括 EIP-7904 通用重定价、EIP-7976 提高 calldata 下限、EIP-7981 提高访问列表成本、EIP-8038 与 EIP-2780；EIP-2926、7686、7923、7973 被拒。gakonst 发布 Tempo Transactions，一种汲取 AA 经验的 EIP-2718 交易。",
+  "items": [
+    {
+      "topic": "会议：ACDE #226",
+      "title": "ACDE #226",
+      "note": "21:00，据 Ethereal news #3：Glamsterdam 目标 2026 年 6 月；以 60 MGas/s 为目标的重定价列为 CFI，包括 EIP-7904 通用重定价、EIP-7976 提高 calldata 下限成本、EIP-7981 提高访问列表成本、EIP-8038 状态访问 gas 上调与 EIP-2780 降低交易固有成本；EIP-2926、EIP-7686、EIP-7923 与 EIP-7973 被拒；其余提案 1 月 5 日 ACDE 决定；Hegotá 组合名确定。",
+      "url": "https://forkcast.org/calls/acde/226",
+      "date": "2025-12-18",
+      "title_en": "ACDE #226",
+      "note_en": "21:00, per Ethereal news #3: Glamsterdam targets June 2026; repricing for 60 MGas/s is CFI, including EIP-7904 general repricing, EIP-7976 higher calldata floor cost, EIP-7981 higher access list cost, EIP-8038 state access gas increase and EIP-2780 lower intrinsic transaction cost; EIP-2926, EIP-7686, EIP-7923 and EIP-7973 are declined; the rest go to the January 5 ACDE; the Hegotá name is chosen.",
+      "topic_en": "Calls: ACDE #226"
+    },
+    {
+      "topic": "会议：ACDE #226",
+      "title": "Ethereal news #3",
+      "note": "ACDE #226 21:00，据 Ethereal news #3：Glamsterdam 目标 2026 年 6 月；以 60 MGas/s 为目标的重定价列为 CFI，包括 EIP-7904 通用重定价、EIP-7976 提高 calldata 下限成本、EIP-7981 提高访问列表成本、EIP-8038 状态访问 gas 上调与 EIP-2780 降低交易固有成本；EIP-2926、EIP-7686、EIP-7923 与 EIP-7973 被拒；其余提案 1 月 5 日 ACDE 决定；Hegotá 组合名确定。",
+      "url": "https://ethereal.news/ethereal-news-weekly-3/",
+      "date": "2025-12-18",
+      "title_en": "Ethereal news #3",
+      "note_en": "ACDE #226, 21:00, per Ethereal news #3: Glamsterdam targets June 2026; repricing for 60 MGas/s is CFI, including EIP-7904 general repricing, EIP-7976 higher calldata floor cost, EIP-7981 higher access list cost, EIP-8038 state access gas increase and EIP-2780 lower intrinsic transaction cost; EIP-2926, EIP-7686, EIP-7923 and EIP-7973 are declined; the rest go to the January 5 ACDE; the Hegotá name is chosen.",
+      "topic_en": "Calls: ACDE #226"
+    },
+    {
+      "topic": "账户：Tempo Transactions",
+      "title": "gakonst：发布 Tempo Transactions，一种基于 2025 年 AA 经验的 EIP-2718 交易，无需中继，是使用通行密钥更抗审查的方式",
+      "note": "01:11。",
+      "url": "https://x.com/gakonst/status/2001354566819025266",
+      "date": "2025-12-18",
+      "title_en": "gakonst: Tempo Transactions, an EIP-2718 transaction built on 2025 AA lessons, work without relays and are a more censorship resistant way to use passkeys",
+      "note_en": "01:11.",
+      "topic_en": "Accounts: Tempo Transactions"
+    },
+    {
+      "topic": "交易：条件交易",
+      "title": "Magicians：EIP-7793 条件交易 Glamsterdam FAQ",
+      "note": "（marchhill）19:43：一种只在区块中特定槽位与索引有效的交易，例如只在区块首位有效，主要用于更安全的加密内存池。",
+      "url": "https://ethereum-magicians.org/t/conditional-transactions-eip-7793-for-glamsterdam-faq/27228",
+      "date": "2025-12-18",
+      "title_en": "Magicians: Conditional transactions (EIP-7793) for Glamsterdam FAQ",
+      "note_en": "(marchhill), 19:43: a transaction valid only at a given slot and index, such as the top of a block, mainly for safer encrypted mempools.",
+      "topic_en": "Transactions: conditional transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nero_eth：EIP-7928 BAL 首个 devnet 上线",
+      "note": "20:32；EIP-7773：写入 ACDE #225 的 EIP 状态决定（nixorokish）12 月 17 日提交后合并；EIP-8051：signature_info 长度与 ML-DSA 容器对齐（Forostovec）提交并合并。",
+      "url": "https://x.com/nero_eth/status/2001646710595240223",
+      "date": "2025-12-18",
+      "title_en": "nero_eth: the first EIP-7928 BAL devnet is live",
+      "note_en": "20:32; EIP-7773: ACDE #225 status decisions (nixorokish), merged after submission on December 17; EIP-8051: align signature_info length with the ML-DSA container (Forostovec), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：写入 ACDE #225 的 EIP 状态决定",
+      "note": "nero_eth：EIP-7928 BAL 首个 devnet 上线 20:32；EIP-7773：写入 ACDE #225 的 EIP 状态决定（nixorokish）12 月 17 日提交后合并；EIP-8051：signature_info 长度与 ML-DSA 容器对齐（Forostovec）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10941",
+      "date": "2025-12-18",
+      "title_en": "EIP-7773: ACDE #225 status decisions",
+      "note_en": "Nero_eth: the first EIP-7928 BAL devnet is live, 20:32; EIP-7773: ACDE #225 status decisions (nixorokish), merged after submission on December 17; EIP-8051: align signature_info length with the ML-DSA container (Forostovec), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8051：signature_info 长度与 ML-DSA 容器对齐",
+      "note": "nero_eth：EIP-7928 BAL 首个 devnet 上线 20:32；EIP-7773：写入 ACDE #225 的 EIP 状态决定（nixorokish）12 月 17 日提交后合并；EIP-8051：signature_info 长度与 ML-DSA 容器对齐（Forostovec）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10950",
+      "date": "2025-12-18",
+      "title_en": "EIP-8051: align signature_info length with the ML-DSA container",
+      "note_en": "Nero_eth: the first EIP-7928 BAL devnet is live, 20:32; EIP-7773: ACDE #225 status decisions (nixorokish), merged after submission on December 17; EIP-8051: align signature_info length with the ML-DSA container (Forostovec), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：Base App 构建于以太坊",
+      "note": "22:14；VitalikButerin：对快闪城市、网络国家与区域的最新看法 02:06。",
+      "url": "https://x.com/ethereum/status/2001672367903269149",
+      "date": "2025-12-18",
+      "title_en": "ethereum: Base App is built on Ethereum",
+      "note_en": "22:14; VitalikButerin: latest views on popups, network states and zones, 02:06.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：对快闪城市、网络国家与区域的最新看法",
+      "note": "ethereum：Base App 构建于以太坊 22:14；VitalikButerin：对快闪城市、网络国家与区域的最新看法 02:06。",
+      "url": "https://x.com/VitalikButerin/status/2001368474522878409",
+      "date": "2025-12-18",
+      "title_en": "VitalikButerin: latest views on popups, network states and zones",
+      "note_en": "Ethereum: Base App is built on Ethereum, 22:14; VitalikButerin: latest views on popups, network states and zones, 02:06.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/conditional-transactions-eip-7793-for-glamsterdam-faq/27228",
+    "credit": "Ethereum Magicians, Conditional transactions (EIP-7793) for Glamsterdam FAQ",
+    "local_path": "assets/2025-12-18.jpg",
+    "credit_en": "Ethereum Magicians, Conditional transactions (EIP-7793) for Glamsterdam FAQ"
+  },
+  "keywords_en": [
+    "ACDE #226 lists repricing EIPs as CFI targeting 60 MGas/s",
+    "four memory and code EIPs declined",
+    "the Hegotá portmanteau chosen",
+    "Tempo Transactions as a new transaction type",
+    "an EIP-7793 conditional transactions FAQ",
+    "bal-devnet-1 live",
+    "Base App"
+  ],
+  "summary_en": "ACDE #226: repricing EIPs targeting 60 MGas/s are CFI, including EIP-7904 general repricing, EIP-7976 higher calldata floor, EIP-7981 higher access list cost, EIP-8038 and EIP-2780; EIP-2926, 7686, 7923 and 7973 are declined. gakonst introduced Tempo Transactions, an EIP-2718 type built on AA lessons."
+}

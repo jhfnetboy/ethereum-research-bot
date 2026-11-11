@@ -1,0 +1,141 @@
+{
+  "date": "2025-12-12",
+  "keywords": [
+    "受许可拉取转账 ERC",
+    "EIP-7928 用更多区块修正分析",
+    "EIP-7773 更新 Glamsterdam 范围",
+    "ERC-8109 Diamonds 简化版",
+    "Privacy Pools 与合规隐私之争",
+    "FOCIL 与抗审查优先级",
+    "Reth 与 ethrex 的 BAL 进展"
+  ],
+  "summary": "ameensol 引述“合规隐私等于放弃，根本不是隐私”的观点，反问以太坊是否适合 Privacy Pools。colludingnode 呼吁核心开发者把提升抗审查列为最高优先级。recurmj 提交受许可拉取转账 ERC。nerolation 用更多区块修正 EIP-7928 BAL 的分析，提交并合并。",
+  "items": [
+    {
+      "topic": "隐私：合规隐私之争",
+      "title": "ameensol：最喜欢文中一句“合规隐私就像放弃，根本不是隐私”，也许以太坊不适合 Privacy Pools",
+      "note": "23:49；ameensol：很荣幸帮助保护朋友们构建的隐私工具 00:08。",
+      "url": "https://x.com/ameensol/status/1999522057860636997",
+      "date": "2025-12-12",
+      "title_en": "ameensol: favorite line, \"compliant privacy is like giving up, it is not really privacy at all\", so maybe Ethereum is not the place for Privacy Pools",
+      "note_en": "23:49; ameensol: honored to help protect privacy tools built by friends, 00:08.",
+      "topic_en": "Privacy: the compliant privacy debate"
+    },
+    {
+      "topic": "隐私：合规隐私之争",
+      "title": "ameensol：很荣幸帮助保护朋友们构建的隐私工具",
+      "note": "ameensol：最喜欢文中一句“合规隐私就像放弃，根本不是隐私”，也许以太坊不适合 Privacy Pools 23:49；ameensol：很荣幸帮助保护朋友们构建的隐私工具 00:08。",
+      "url": "https://x.com/ameensol/status/1999164282445938798",
+      "date": "2025-12-12",
+      "title_en": "ameensol: honored to help protect privacy tools built by friends",
+      "note_en": "Ameensol: favorite line, \"compliant privacy is like giving up, it is not really privacy at all\", so maybe Ethereum is not the place for Privacy Pools, 23:49; ameensol: honored to help protect privacy tools built by friends, 00:08.",
+      "topic_en": "Privacy: the compliant privacy debate"
+    },
+    {
+      "topic": "交易：抗审查与授权",
+      "title": "colludingnode：希望核心开发者把提升抗审查列为最高优先级，快而可审查的数据库很多，以太坊只有一个",
+      "note": "12:12；soispoke：与 apriori0x 谈 FOCIL 与抗审查 23:02；新增 ERC：受许可拉取（recurmj）提交。",
+      "url": "https://x.com/colludingnode/status/1999346666374357325",
+      "date": "2025-12-12",
+      "title_en": "colludingnode: wants core devs to make censorship resistance the top priority, since fast censorable databases abound and there is only one Ethereum",
+      "note_en": "12:12; soispoke: talked FOCIL and censorship resistance with apriori0x, 23:02; Add ERC: Permissioned Pull (recurmj), submitted.",
+      "topic_en": "Transactions: censorship resistance and authorization"
+    },
+    {
+      "topic": "交易：抗审查与授权",
+      "title": "soispoke：与 apriori0x 谈 FOCIL 与抗审查",
+      "note": "colludingnode：希望核心开发者把提升抗审查列为最高优先级，快而可审查的数据库很多，以太坊只有一个 12:12；soispoke：与 apriori0x 谈 FOCIL 与抗审查 23:02；新增 ERC：受许可拉取（recurmj）提交。",
+      "url": "https://x.com/soispoke/status/1999510246188802304",
+      "date": "2025-12-12",
+      "title_en": "soispoke: talked FOCIL and censorship resistance with apriori0x",
+      "note_en": "Colludingnode: wants core devs to make censorship resistance the top priority, since fast censorable databases abound and there is only one Ethereum, 12:12; soispoke: talked FOCIL and censorship resistance with apriori0x, 23:02; Add ERC: Permissioned Pull (recurmj), submitted.",
+      "topic_en": "Transactions: censorship resistance and authorization"
+    },
+    {
+      "topic": "交易：抗审查与授权",
+      "title": "新增 ERC：受许可拉取",
+      "note": "colludingnode：希望核心开发者把提升抗审查列为最高优先级，快而可审查的数据库很多，以太坊只有一个 12:12；soispoke：与 apriori0x 谈 FOCIL 与抗审查 23:02；新增 ERC：受许可拉取（recurmj）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1401",
+      "date": "2025-12-12",
+      "title_en": "Add ERC: Permissioned Pull",
+      "note_en": "Colludingnode: wants core devs to make censorship resistance the top priority, since fast censorable databases abound and there is only one Ethereum, 12:12; soispoke: talked FOCIL and censorship resistance with apriori0x, 23:02; Add ERC: Permissioned Pull (recurmj), submitted.",
+      "topic_en": "Transactions: censorship resistance and authorization"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：用更多区块修正分析",
+      "note": "（nerolation）提交并合并；EIP-7773：更新 Glamsterdam 范围（figtracer）提交；Magicians：ERC-8109 Diamonds 简化版 07:54。",
+      "url": "https://github.com/ethereum/EIPs/pull/10903",
+      "date": "2025-12-12",
+      "title_en": "EIP-7928: fix analysis using more blocks",
+      "note_en": "(nerolation), submitted and merged; EIP-7773: update Glamsterdam scope (figtracer), submitted; Magicians: ERC-8109 Diamonds, Simplified, 07:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：更新 Glamsterdam 范围",
+      "note": "EIP-7928：用更多区块修正分析（nerolation）提交并合并；EIP-7773：更新 Glamsterdam 范围（figtracer）提交；Magicians：ERC-8109 Diamonds 简化版 07:54。",
+      "url": "https://github.com/ethereum/EIPs/pull/10904",
+      "date": "2025-12-12",
+      "title_en": "EIP-7773: update Glamsterdam scope",
+      "note_en": "EIP-7928: fix analysis using more blocks (nerolation), submitted and merged; EIP-7773: update Glamsterdam scope (figtracer), submitted; Magicians: ERC-8109 Diamonds, Simplified, 07:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8109 Diamonds 简化版",
+      "note": "EIP-7928：用更多区块修正分析（nerolation）提交并合并；EIP-7773：更新 Glamsterdam 范围（figtracer）提交；Magicians：ERC-8109 Diamonds 简化版 07:54。",
+      "url": "https://ethereum-magicians.org/t/erc-8109-diamonds-simplified/27119",
+      "date": "2025-12-12",
+      "title_en": "Magicians: ERC-8109 Diamonds, Simplified",
+      "note_en": "EIP-7928: fix analysis using more blocks (nerolation), submitted and merged; EIP-7773: update Glamsterdam scope (figtracer), submitted; Magicians: ERC-8109 Diamonds, Simplified, 07:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：Glamsterdam 版 Reth 进展顺利，几周内完整实现 BAL",
+      "note": "01:33；fede_intern：ethrex 在主网上已略快于 Reth 00:36；aztecnetwork：Zac 在 Nasdaq 谈金融隐私 03:33。",
+      "url": "https://x.com/gakonst/status/1999185701544583174",
+      "date": "2025-12-12",
+      "title_en": "gakonst: Glamsterdam Reth is progressing, with full BALs in a few weeks",
+      "note_en": "01:33; fede_intern: ethrex is already slightly faster than Reth on mainnet, 00:36; aztecnetwork: Zac on Nasdaq on financial privacy, 03:33.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：ethrex 在主网上已略快于 Reth",
+      "note": "gakonst：Glamsterdam 版 Reth 进展顺利，几周内完整实现 BAL 01:33；fede_intern：ethrex 在主网上已略快于 Reth 00:36；aztecnetwork：Zac 在 Nasdaq 谈金融隐私 03:33。",
+      "url": "https://x.com/fede_intern/status/1999171496313237540",
+      "date": "2025-12-12",
+      "title_en": "fede_intern: ethrex is already slightly faster than Reth on mainnet",
+      "note_en": "Gakonst: Glamsterdam Reth is progressing, with full BALs in a few weeks, 01:33; fede_intern: ethrex is already slightly faster than Reth on mainnet, 00:36; aztecnetwork: Zac on Nasdaq on financial privacy, 03:33.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Zac 在 Nasdaq 谈金融隐私",
+      "note": "gakonst：Glamsterdam 版 Reth 进展顺利，几周内完整实现 BAL 01:33；fede_intern：ethrex 在主网上已略快于 Reth 00:36；aztecnetwork：Zac 在 Nasdaq 谈金融隐私 03:33。",
+      "url": "https://x.com/aztecnetwork/status/1999215910721061251",
+      "date": "2025-12-12",
+      "title_en": "aztecnetwork: Zac on Nasdaq on financial privacy",
+      "note_en": "Gakonst: Glamsterdam Reth is progressing, with full BALs in a few weeks, 01:33; fede_intern: ethrex is already slightly faster than Reth on mainnet, 00:36; aztecnetwork: Zac on Nasdaq on financial privacy, 03:33.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8109-diamonds-simplified/27119",
+    "credit": "Ethereum Magicians, ERC-8109 Diamonds, Simplified",
+    "local_path": "assets/2025-12-12.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8109 Diamonds, Simplified"
+  },
+  "keywords_en": [
+    "A permissioned pull ERC",
+    "EIP-7928 fixes its analysis with more blocks",
+    "EIP-7773 updates Glamsterdam scope",
+    "ERC-8109 Diamonds Simplified",
+    "the Privacy Pools and compliant privacy debate",
+    "FOCIL and censorship resistance priority",
+    "Reth and ethrex BAL progress"
+  ],
+  "summary_en": "ameensol quoted the line that compliant privacy is giving up and not privacy at all, asking whether Ethereum is the right home for Privacy Pools. colludingnode urged core devs to make censorship resistance the top priority. recurmj submitted a permissioned pull ERC. nerolation fixed the EIP-7928 BAL analysis with more blocks, submitted and merged."
+}

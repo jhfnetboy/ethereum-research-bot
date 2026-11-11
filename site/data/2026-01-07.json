@@ -1,0 +1,151 @@
+{
+  "date": "2026-01-07",
+  "keywords": [
+    "BPO2 上线 blob 目标与上限升至 14 与 21",
+    "上限提高后 blob 价格反而飙升",
+    "EIP-8120 MLOAD8 与 CALLDATALOAD8 操作码",
+    "EIP-8051 定义 ML-DSA 范数界",
+    "EIP-5069 引入副编辑",
+    "Dark Bio 后量子密码套件",
+    "ERC-8119 参数化键"
+  ],
+  "summary": "BPO2 上线，blob 目标与上限从 10 与 15 提到 14 与 21；terencechain 观察到随后 blob 价格不降反升，疑似有链在扩容后大幅增加用量。Helkomine 提交 EIP-8120，新增单字节读取内存与 calldata 的操作码以节省 gas。yyhrnk 为 EIP-8051 ML-DSA 验签预编译定义 beta 范数界。",
+  "items": [
+    {
+      "topic": "Gas 与 blob：BPO2",
+      "title": "ralexstokes：BPO2 上线，blob 目标 14、上限 21，已有区块装入 18 个 blob",
+      "note": "08:09；terencechain：BPO2 把目标与上限从 10 与 15 提到 14 与 21 后，blob 价格反而飙升 21:59。",
+      "url": "https://x.com/ralexstokes/status/2008707458563535022",
+      "date": "2026-01-07",
+      "title_en": "ralexstokes: BPO2 is live, blob target 14 and max 21, with a block already carrying 18 blobs",
+      "note_en": "08:09; terencechain: after BPO2 raised target and max from 10 and 15 to 14 and 21, blob prices spiked instead of dropping, 21:59.",
+      "topic_en": "Gas and blobs: BPO2"
+    },
+    {
+      "topic": "Gas 与 blob：BPO2",
+      "title": "terencechain：BPO2 把目标与上限从 10 与 15 提到 14 与 21 后，blob 价格反而飙升",
+      "note": "ralexstokes：BPO2 上线，blob 目标 14、上限 21，已有区块装入 18 个 blob 08:09；terencechain：BPO2 把目标与上限从 10 与 15 提到 14 与 21 后，blob 价格反而飙升 21:59。",
+      "url": "https://x.com/terencechain/status/2008916343593308198",
+      "date": "2026-01-07",
+      "title_en": "terencechain: after BPO2 raised target and max from 10 and 15 to 14 and 21, blob prices spiked instead of dropping",
+      "note_en": "Ralexstokes: BPO2 is live, blob target 14 and max 21, with a block already carrying 18 blobs, 08:09; terencechain: after BPO2 raised target and max from 10 and 15 to 14 and 21, blob prices spiked instead of dropping, 21:59.",
+      "topic_en": "Gas and blobs: BPO2"
+    },
+    {
+      "topic": "Gas：EIP-8120 与后量子预编译",
+      "title": "新增 EIP：MLOAD8 与 CALLDATALOAD8 操作码",
+      "note": "（Helkomine）提交，Magicians 讨论 17:12：单次操作读取一个字节，相比 MLOAD 或 CALLDATALOAD 加移位，降低 gas 与字节码体积。",
+      "url": "https://github.com/ethereum/EIPs/pull/11038",
+      "date": "2026-01-07",
+      "title_en": "Add EIP: MLOAD8 and CALLDATALOAD8 Opcodes",
+      "note_en": "(Helkomine), submitted, with Magicians discussion, 17:12: one operation loads a single byte, cutting gas and bytecode size versus MLOAD or CALLDATALOAD plus shifts.",
+      "topic_en": "Gas: EIP-8120 and a post-quantum precompile"
+    },
+    {
+      "topic": "Gas：EIP-8120 与后量子预编译",
+      "title": "Magicians 讨论",
+      "note": "新增 EIP：MLOAD8 与 CALLDATALOAD8 操作码（Helkomine）提交，Magicians 讨论 17:12：单次操作读取一个字节，相比 MLOAD 或 CALLDATALOAD 加移位，降低 gas 与字节码体积。",
+      "url": "https://ethereum-magicians.org/t/eip-8120-mload8-and-calldataload8-opcodes/27396",
+      "date": "2026-01-07",
+      "title_en": "Magicians discussion",
+      "note_en": "Add EIP: MLOAD8 and CALLDATALOAD8 Opcodes (Helkomine), submitted, with Magicians discussion, 17:12: one operation loads a single byte, cutting gas and bytecode size versus MLOAD or CALLDATALOAD plus shifts.",
+      "topic_en": "Gas: EIP-8120 and a post-quantum precompile"
+    },
+    {
+      "topic": "Gas：EIP-8120 与后量子预编译",
+      "title": "EIP-8051：定义 ML-DSA 的 beta 范数界",
+      "note": "（yyhrnk）提交；EIP-8051：修正未定义变量引用（IrshadKohl51）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11040",
+      "date": "2026-01-07",
+      "title_en": "EIP-8051: define the ML-DSA beta norm bound",
+      "note_en": "(yyhrnk), submitted; EIP-8051: fix an undefined variable reference (IrshadKohl51), submitted and merged.",
+      "topic_en": "Gas: EIP-8120 and a post-quantum precompile"
+    },
+    {
+      "topic": "Gas：EIP-8120 与后量子预编译",
+      "title": "EIP-8051：修正未定义变量引用",
+      "note": "EIP-8051：定义 ML-DSA 的 beta 范数界（yyhrnk）提交；EIP-8051：修正未定义变量引用（IrshadKohl51）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11037",
+      "date": "2026-01-07",
+      "title_en": "EIP-8051: fix an undefined variable reference",
+      "note_en": "EIP-8051: define the ML-DSA beta norm bound (yyhrnk), submitted; EIP-8051: fix an undefined variable reference (IrshadKohl51), submitted and merged.",
+      "topic_en": "Gas: EIP-8120 and a post-quantum precompile"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-5069：引入副编辑",
+      "note": "（lightclient）提交；新增 ERC 8119：参数化存储键（nxt3d）提交；ERC-7888：泛化以支持多种状态承诺方案（luiz-lvj）提交；ACDT #65 议程，1 月 12 日 07:47。",
+      "url": "https://github.com/ethereum/EIPs/pull/11035",
+      "date": "2026-01-07",
+      "title_en": "EIP-5069: add associate editors",
+      "note_en": "(lightclient), submitted; Add ERC 8119: Parameterized Storage Keys (nxt3d), submitted; ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), submitted; ACDT #65 agenda, Jan 12, 07:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC 8119：参数化存储键",
+      "note": "EIP-5069：引入副编辑（lightclient）提交；新增 ERC 8119：参数化存储键（nxt3d）提交；ERC-7888：泛化以支持多种状态承诺方案（luiz-lvj）提交；ACDT #65 议程，1 月 12 日 07:47。",
+      "url": "https://github.com/ethereum/ERCs/pull/1455",
+      "date": "2026-01-07",
+      "title_en": "Add ERC 8119: Parameterized Storage Keys",
+      "note_en": "EIP-5069: add associate editors (lightclient), submitted; Add ERC 8119: Parameterized Storage Keys (nxt3d), submitted; ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), submitted; ACDT #65 agenda, Jan 12, 07:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7888：泛化以支持多种状态承诺方案",
+      "note": "EIP-5069：引入副编辑（lightclient）提交；新增 ERC 8119：参数化存储键（nxt3d）提交；ERC-7888：泛化以支持多种状态承诺方案（luiz-lvj）提交；ACDT #65 议程，1 月 12 日 07:47。",
+      "url": "https://github.com/ethereum/ERCs/pull/1459",
+      "date": "2026-01-07",
+      "title_en": "ERC-7888: generalize to multiple state commitment schemes",
+      "note_en": "EIP-5069: add associate editors (lightclient), submitted; Add ERC 8119: Parameterized Storage Keys (nxt3d), submitted; ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), submitted; ACDT #65 agenda, Jan 12, 07:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #65 议程，1 月 12 日",
+      "note": "EIP-5069：引入副编辑（lightclient）提交；新增 ERC 8119：参数化存储键（nxt3d）提交；ERC-7888：泛化以支持多种状态承诺方案（luiz-lvj）提交；ACDT #65 议程，1 月 12 日 07:47。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-65-january-12-2026/27395",
+      "date": "2026-01-07",
+      "title_en": "ACDT #65 agenda, Jan 12",
+      "note_en": "EIP-5069: add associate editors (lightclient), submitted; Add ERC 8119: Parameterized Storage Keys (nxt3d), submitted; ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), submitted; ACDT #65 agenda, Jan 12, 07:47.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：发布 Dark Bio 后量子密码套件，Rust 与 Go 双实现",
+      "note": "16:12；aztecnetwork：新年同一使命，为 Web3 带来可编程隐私 22:16。",
+      "url": "https://x.com/peter_szilagyi/status/2008829162233159903",
+      "date": "2026-01-07",
+      "title_en": "peter_szilagyi: the Dark Bio post-quantum crypto suite, in both Rust and Go",
+      "note_en": "16:12; aztecnetwork: new year, same mission, programmable privacy for all of Web3, 22:16.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：新年同一使命，为 Web3 带来可编程隐私",
+      "note": "peter_szilagyi：发布 Dark Bio 后量子密码套件，Rust 与 Go 双实现 16:12；aztecnetwork：新年同一使命，为 Web3 带来可编程隐私 22:16。",
+      "url": "https://x.com/aztecnetwork/status/2008920723687915739",
+      "date": "2026-01-07",
+      "title_en": "aztecnetwork: new year, same mission, programmable privacy for all of Web3",
+      "note_en": "Peter_szilagyi: the Dark Bio post-quantum crypto suite, in both Rust and Go, 16:12; aztecnetwork: new year, same mission, programmable privacy for all of Web3, 22:16.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8120-mload8-and-calldataload8-opcodes/27396",
+    "credit": "Ethereum Magicians, EIP-8120 MLOAD8 and CALLDATALOAD8 Opcodes",
+    "local_path": "assets/2026-01-07.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8120 MLOAD8 and CALLDATALOAD8 Opcodes"
+  },
+  "keywords_en": [
+    "BPO2 live with blob target and max raised to 14 and 21",
+    "blob prices spike after the increase",
+    "EIP-8120 MLOAD8 and CALLDATALOAD8 opcodes",
+    "EIP-8051 defines the ML-DSA norm bound",
+    "EIP-5069 adds associate editors",
+    "the Dark Bio post-quantum crypto suite",
+    "ERC-8119 parameterized keys"
+  ],
+  "summary_en": "BPO2 went live, raising the blob target and max from 10 and 15 to 14 and 21; terencechain saw blob prices spike rather than drop, likely as some chain ramped usage after the increase. Helkomine submitted EIP-8120, opcodes that read a single byte from memory or calldata to save gas. yyhrnk defined the beta norm bound for the EIP-8051 ML-DSA verification precompile."
+}

@@ -1,0 +1,127 @@
+{
+  "date": "2025-12-30",
+  "keywords": [
+    "EIP-8115 区块末尾批量支付优先费",
+    "EIP-8116 替换累计收据字段",
+    "EIP-7907 修正与澄清",
+    "ACDE #227 非例行会议议程",
+    "EIP-6466 澄清收据中 contract_address 字段"
+  ],
+  "summary": "etan-status 从 EIP-7799 拆出两项 EIP：EIP-8115 在区块末尾批量支付优先费，EIP-8116 替换收据中的累计字段。fselmo 提交 EIP-7907 合约代码计量的修正与澄清。1 月 5 日非例行 ACDE #227 议程发布。",
+  "items": [
+    {
+      "topic": "Gas 与手续费：EIP-8115 与 EIP-8116",
+      "title": "新增 EIP：区块末尾批量支付优先费",
+      "note": "（etan-status）提交，Magicians 讨论 EIP-8115 16:47；新增 EIP：替换累计收据字段（etan-status）提交，Magicians 讨论 EIP-8116 17:27。",
+      "url": "https://github.com/ethereum/EIPs/pull/10997",
+      "date": "2025-12-30",
+      "title_en": "Add EIP: Batch priority fees at end of block",
+      "note_en": "(etan-status), submitted, with Magicians discussion of EIP-8115, 16:47; Add EIP: Replace cumulative receipt fields (etan-status), submitted, with Magicians discussion of EIP-8116, 17:27.",
+      "topic_en": "Gas and fees: EIP-8115 and EIP-8116"
+    },
+    {
+      "topic": "Gas 与手续费：EIP-8115 与 EIP-8116",
+      "title": "Magicians 讨论 EIP-8115",
+      "note": "新增 EIP：区块末尾批量支付优先费（etan-status）提交，Magicians 讨论 EIP-8115 16:47；新增 EIP：替换累计收据字段（etan-status）提交，Magicians 讨论 EIP-8116 17:27。",
+      "url": "https://ethereum-magicians.org/t/eip-8115-batch-priority-fees-at-end-of-block/27358",
+      "date": "2025-12-30",
+      "title_en": "Magicians discussion of EIP-8115",
+      "note_en": "Add EIP: Batch priority fees at end of block (etan-status), submitted, with Magicians discussion of EIP-8115, 16:47; Add EIP: Replace cumulative receipt fields (etan-status), submitted, with Magicians discussion of EIP-8116, 17:27.",
+      "topic_en": "Gas and fees: EIP-8115 and EIP-8116"
+    },
+    {
+      "topic": "Gas 与手续费：EIP-8115 与 EIP-8116",
+      "title": "新增 EIP：替换累计收据字段",
+      "note": "新增 EIP：区块末尾批量支付优先费（etan-status）提交，Magicians 讨论 EIP-8115 16:47；新增 EIP：替换累计收据字段（etan-status）提交，Magicians 讨论 EIP-8116 17:27。",
+      "url": "https://github.com/ethereum/EIPs/pull/10998",
+      "date": "2025-12-30",
+      "title_en": "Add EIP: Replace cumulative receipt fields",
+      "note_en": "Add EIP: Batch priority fees at end of block (etan-status), submitted, with Magicians discussion of EIP-8115, 16:47; Add EIP: Replace cumulative receipt fields (etan-status), submitted, with Magicians discussion of EIP-8116, 17:27.",
+      "topic_en": "Gas and fees: EIP-8115 and EIP-8116"
+    },
+    {
+      "topic": "Gas 与手续费：EIP-8115 与 EIP-8116",
+      "title": "Magicians 讨论 EIP-8116",
+      "note": "新增 EIP：区块末尾批量支付优先费（etan-status）提交，Magicians 讨论 EIP-8115 16:47；新增 EIP：替换累计收据字段（etan-status）提交，Magicians 讨论 EIP-8116 17:27。",
+      "url": "https://ethereum-magicians.org/t/eip-8116-replace-cumulative-receipt-fields/27359",
+      "date": "2025-12-30",
+      "title_en": "Magicians discussion of EIP-8116",
+      "note_en": "Add EIP: Batch priority fees at end of block (etan-status), submitted, with Magicians discussion of EIP-8115, 16:47; Add EIP: Replace cumulative receipt fields (etan-status), submitted, with Magicians discussion of EIP-8116, 17:27.",
+      "topic_en": "Gas and fees: EIP-8115 and EIP-8116"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7907：修正与澄清",
+      "note": "（fselmo）提交；EIP-6466：澄清收据类型中 contract_address 字段（hawkadrian）2025 年 11 月 12 日提交后合并；ACDE #227 非例行会议议程，1 月 5 日 02:25；ERC-7496：设置元数据 URI 时注册 trait 键（ryanio）12 月 24 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10992",
+      "date": "2025-12-30",
+      "title_en": "EIP-7907: corrections and clarifications",
+      "note_en": "(fselmo), submitted; EIP-6466: clarify contract_address in receipt types (hawkadrian), merged after submission on November 12, 2025; ACDE #227 off cycle agenda, Jan 5, 02:25; ERC-7496: register trait keys when setting the metadata URI (ryanio), merged after submission on December 24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-6466：澄清收据类型中 contract_address 字段",
+      "note": "EIP-7907：修正与澄清（fselmo）提交；EIP-6466：澄清收据类型中 contract_address 字段（hawkadrian）2025 年 11 月 12 日提交后合并；ACDE #227 非例行会议议程，1 月 5 日 02:25；ERC-7496：设置元数据 URI 时注册 trait 键（ryanio）12 月 24 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10781",
+      "date": "2025-12-30",
+      "title_en": "EIP-6466: clarify contract_address in receipt types",
+      "note_en": "EIP-7907: corrections and clarifications (fselmo), submitted; EIP-6466: clarify contract_address in receipt types (hawkadrian), merged after submission on November 12, 2025; ACDE #227 off cycle agenda, Jan 5, 02:25; ERC-7496: register trait keys when setting the metadata URI (ryanio), merged after submission on December 24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #227 非例行会议议程，1 月 5 日",
+      "note": "EIP-7907：修正与澄清（fselmo）提交；EIP-6466：澄清收据类型中 contract_address 字段（hawkadrian）2025 年 11 月 12 日提交后合并；ACDE #227 非例行会议议程，1 月 5 日 02:25；ERC-7496：设置元数据 URI 时注册 trait 键（ryanio）12 月 24 日提交后合并。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-227-jan-5-2026-off-cycle/27356",
+      "date": "2025-12-30",
+      "title_en": "ACDE #227 off cycle agenda, Jan 5",
+      "note_en": "EIP-7907: corrections and clarifications (fselmo), submitted; EIP-6466: clarify contract_address in receipt types (hawkadrian), merged after submission on November 12, 2025; ACDE #227 off cycle agenda, Jan 5, 02:25; ERC-7496: register trait keys when setting the metadata URI (ryanio), merged after submission on December 24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7496：设置元数据 URI 时注册 trait 键",
+      "note": "EIP-7907：修正与澄清（fselmo）提交；EIP-6466：澄清收据类型中 contract_address 字段（hawkadrian）2025 年 11 月 12 日提交后合并；ACDE #227 非例行会议议程，1 月 5 日 02:25；ERC-7496：设置元数据 URI 时注册 trait 键（ryanio）12 月 24 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1426",
+      "date": "2025-12-30",
+      "title_en": "ERC-7496: register trait keys when setting the metadata URI",
+      "note_en": "EIP-7907: corrections and clarifications (fselmo), submitted; EIP-6466: clarify contract_address in receipt types (hawkadrian), merged after submission on November 12, 2025; ACDE #227 off cycle agenda, Jan 5, 02:25; ERC-7496: register trait keys when setting the metadata URI (ryanio), merged after submission on December 24.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：为何 Aztec 自建 zkDSL，Noir 如何默认提供隐私",
+      "note": "22:00；fede_intern：leanEthereum 与 eth_proofs 是最有意思的项目 09:18。",
+      "url": "https://x.com/aztecnetwork/status/2006017512178332018",
+      "date": "2025-12-30",
+      "title_en": "aztecnetwork: why Aztec built its own zkDSL and how Noir gives privacy by default",
+      "note_en": "22:00; fede_intern: leanEthereum and eth_proofs are the most interesting projects, 09:18.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：leanEthereum 与 eth_proofs 是最有意思的项目",
+      "note": "aztecnetwork：为何 Aztec 自建 zkDSL，Noir 如何默认提供隐私 22:00；fede_intern：leanEthereum 与 eth_proofs 是最有意思的项目 09:18。",
+      "url": "https://x.com/fede_intern/status/2005825899560603984",
+      "date": "2025-12-30",
+      "title_en": "fede_intern: leanEthereum and eth_proofs are the most interesting projects",
+      "note_en": "Aztecnetwork: why Aztec built its own zkDSL and how Noir gives privacy by default, 22:00; fede_intern: leanEthereum and eth_proofs are the most interesting projects, 09:18.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8115-batch-priority-fees-at-end-of-block/27358",
+    "credit": "Ethereum Magicians, EIP-8115 Batch priority fees at end of block",
+    "local_path": "assets/2025-12-30.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8115 Batch priority fees at end of block"
+  },
+  "keywords_en": [
+    "EIP-8115 batch priority fees at end of block",
+    "EIP-8116 replace cumulative receipt fields",
+    "EIP-7907 corrections",
+    "the off cycle ACDE #227 agenda",
+    "EIP-6466 clarifies the contract_address receipt field"
+  ],
+  "summary_en": "etan-status split two EIPs from EIP-7799: EIP-8115 pays priority fees in a batch at the end of the block, and EIP-8116 replaces cumulative receipt fields. fselmo submitted corrections to EIP-7907 contract code metering. The agenda for the off cycle ACDE #227 on January 5 went up."
+}

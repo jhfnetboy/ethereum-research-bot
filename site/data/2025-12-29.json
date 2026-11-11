@@ -1,0 +1,97 @@
+{
+  "date": "2025-12-29",
+  "keywords": [
+    "解决 ORIGIN 操作码技术债以实现代付",
+    "peter_szilagyi 的复合后量子签名与加密",
+    "Diamonds 简化版 ERC 合并",
+    "Helium Rust 轻客户端",
+    "Vitalik 谈深度资助"
+  ],
+  "summary": "Helkomine 重提已撤回的 EIP-2711 思路：让他人代付手续费的同时保留原始交易发送者地址，指出连 EIP-7702 也未解决。peter_szilagyi 在 Rust 密码库中加入 ML-DSA-65 加 Ed25519 复合签名与 ML-KEM-768 加 X25519 复合加密。mudgen 的 Diamonds 简化版 ERC 合并。",
+  "items": [
+    {
+      "topic": "交易：代付与原始发送者",
+      "title": "Magicians：解决 ORIGIN 操作码的技术债",
+      "note": "（Helkomine）15:26：重提已撤回的 EIP-2711，让他人代付 gas 同时保留原始发送者地址，认为即使有 EIP-7702 也尚未实现。",
+      "url": "https://ethereum-magicians.org/t/resolving-technical-debt-from-the-origin-opcode/27353",
+      "date": "2025-12-29",
+      "title_en": "Magicians: Resolving technical debt from the ORIGIN opcode",
+      "note_en": "(Helkomine), 15:26: revives the withdrawn EIP-2711 to let others pay gas while keeping the original sender, which it says EIP-7702 still does not provide.",
+      "topic_en": "Transactions: sponsorship and the original sender"
+    },
+    {
+      "topic": "签名：复合后量子方案",
+      "title": "peter_szilagyi：Rust 密码库加入 ML-DSA-65 加 Ed25519 复合签名与 ML-KEM-768 加 X25519 复合加密",
+      "note": "19:59。",
+      "url": "https://x.com/peter_szilagyi/status/2005624675288887319",
+      "date": "2025-12-29",
+      "title_en": "peter_szilagyi: his Rust crypto library adds composite ML-DSA-65 plus Ed25519 signatures and ML-KEM-768 plus X25519 encryption",
+      "note_en": "19:59.",
+      "topic_en": "Signatures: composite post-quantum schemes"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Diamonds 简化版",
+      "note": "（mudgen）12 月 22 日提交后合并；colludingnode：Helium，Mert Mumtaz 用 Rust 写的以太坊轻客户端 04:20；无状态实现者会议 #46 议程 23:03。",
+      "url": "https://github.com/ethereum/ERCs/pull/1417",
+      "date": "2025-12-29",
+      "title_en": "Add ERC: Diamonds, Simplified",
+      "note_en": "(mudgen), merged after submission on December 22; colludingnode: Helium, an Ethereum light client in Rust by Mert Mumtaz, 04:20; Stateless Implementers Call #46 agenda, 23:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "colludingnode：Helium，Mert Mumtaz 用 Rust 写的以太坊轻客户端",
+      "note": "新增 ERC：Diamonds 简化版（mudgen）12 月 22 日提交后合并；colludingnode：Helium，Mert Mumtaz 用 Rust 写的以太坊轻客户端 04:20；无状态实现者会议 #46 议程 23:03。",
+      "url": "https://x.com/colludingnode/status/2005388492231360709",
+      "date": "2025-12-29",
+      "title_en": "colludingnode: Helium, an Ethereum light client in Rust by Mert Mumtaz",
+      "note_en": "Add ERC: Diamonds, Simplified (mudgen), merged after submission on December 22; colludingnode: Helium, an Ethereum light client in Rust by Mert Mumtaz, 04:20; Stateless Implementers Call #46 agenda, 23:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "无状态实现者会议 #46 议程",
+      "note": "新增 ERC：Diamonds 简化版（mudgen）12 月 22 日提交后合并；colludingnode：Helium，Mert Mumtaz 用 Rust 写的以太坊轻客户端 04:20；无状态实现者会议 #46 议程 23:03。",
+      "url": "https://ethereum-magicians.org/t/stateless-implementers-call-46-january-12th-2026/27355",
+      "date": "2025-12-29",
+      "title_en": "Stateless Implementers Call #46 agenda",
+      "note_en": "Add ERC: Diamonds, Simplified (mudgen), merged after submission on December 22; colludingnode: Helium, an Ethereum light client in Rust by Mert Mumtaz, 04:20; Stateless Implementers Call #46 agenda, 23:03.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：为何看好 devanshmehta 的深度资助工作",
+      "note": "20:52；aztecnetwork：隐私不是功能而是基础 21:00。",
+      "url": "https://x.com/VitalikButerin/status/2005638064865984889",
+      "date": "2025-12-29",
+      "title_en": "VitalikButerin: why he is enthusiastic about devanshmehta's deep funding work",
+      "note_en": "20:52; aztecnetwork: privacy is not a feature but the foundation, 21:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：隐私不是功能而是基础",
+      "note": "VitalikButerin：为何看好 devanshmehta 的深度资助工作 20:52；aztecnetwork：隐私不是功能而是基础 21:00。",
+      "url": "https://x.com/aztecnetwork/status/2005640079990251681",
+      "date": "2025-12-29",
+      "title_en": "aztecnetwork: privacy is not a feature but the foundation",
+      "note_en": "VitalikButerin: why he is enthusiastic about devanshmehta's deep funding work, 20:52; aztecnetwork: privacy is not a feature but the foundation, 21:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/resolving-technical-debt-from-the-origin-opcode/27353",
+    "credit": "Ethereum Magicians, Resolving Technical Debt from the ORIGIN OpCode",
+    "local_path": "assets/2025-12-29.jpg",
+    "credit_en": "Ethereum Magicians, Resolving Technical Debt from the ORIGIN OpCode"
+  },
+  "keywords_en": [
+    "Resolving ORIGIN opcode technical debt to enable sponsorship",
+    "peter_szilagyi's composite post-quantum signatures and encryption",
+    "a simplified Diamonds ERC merged",
+    "the Helium Rust light client",
+    "Vitalik on deep funding"
+  ],
+  "summary_en": "Helkomine revived the withdrawn EIP-2711 idea: let others pay fees while keeping the original sender address, which even EIP-7702 does not solve. peter_szilagyi added composite ML-DSA-65 plus Ed25519 signatures and ML-KEM-768 plus X25519 encryption to his Rust crypto library. mudgen's simplified Diamonds ERC merged."
+}

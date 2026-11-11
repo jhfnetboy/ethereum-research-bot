@@ -1,0 +1,117 @@
+{
+  "date": "2025-12-25",
+  "keywords": [
+    "ERC-8112 与 ERC-8114 智能合约钱包的签名代币与 NFT 转账",
+    "EIP-7928 澄清 7702 授权失败时的访问记录",
+    "EIP-8032 SSTORE gas 公式改用 S_pre",
+    "EIP-7377 澄清存储元组处理",
+    "如何不正确使用隐私工具"
+  ],
+  "summary": "wenzhenxiang 提出 ERC-8112 与 ERC-8114，为智能合约钱包定义链下签名的代币与 NFT 转账流程，任何中继者都可提交，规定 EIP-712 模式与 nonce 管理。nerolation 澄清 EIP-7928 BAL 中 7702 授权失败但授权账户尚未被访问时的处理，提交并合并。",
+  "items": [
+    {
+      "topic": "账户：签名转账",
+      "title": "Magicians：ERC-8112 签名代币转账",
+      "note": "（wenzhenxiang）12:38 与 ERC-8114 签名 NFT 转账 13:25：扩展智能合约钱包，钱包所有者用 EIP-712 签名委托转账，由任意中继者提交，规定 nonce 管理与执行要求；对应 ERC PR 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8112-token-transfer-with-signature/27310",
+      "date": "2025-12-25",
+      "title_en": "Magicians: ERC-8112 Token Transfer With Signature",
+      "note_en": "(wenzhenxiang), 12:38, and ERC-8114 NFT Transfer With Signature, 13:25: extend smart contract wallets so owners delegate transfers by EIP-712 signature submitted by any relayer, with nonce accounting and execution rules; the ERC PR was submitted.",
+      "topic_en": "Accounts: signed transfers"
+    },
+    {
+      "topic": "账户：签名转账",
+      "title": "ERC-8114 签名 NFT 转账",
+      "note": "Magicians：ERC-8112 签名代币转账（wenzhenxiang）12:38 与 ERC-8114 签名 NFT 转账 13:25：扩展智能合约钱包，钱包所有者用 EIP-712 签名委托转账，由任意中继者提交，规定 nonce 管理与执行要求；对应 ERC PR 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8114-nft-transfer-with-signature/27312",
+      "date": "2025-12-25",
+      "title_en": "ERC-8114 NFT Transfer With Signature",
+      "note_en": "Magicians: ERC-8112 Token Transfer With Signature (wenzhenxiang), 12:38, and ERC-8114 NFT Transfer With Signature, 13:25: extend smart contract wallets so owners delegate transfers by EIP-712 signature submitted by any relayer, with nonce accounting and execution rules; the ERC PR was submitted.",
+      "topic_en": "Accounts: signed transfers"
+    },
+    {
+      "topic": "账户：签名转账",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8112 签名代币转账（wenzhenxiang）12:38 与 ERC-8114 签名 NFT 转账 13:25：扩展智能合约钱包，钱包所有者用 EIP-712 签名委托转账，由任意中继者提交，规定 nonce 管理与执行要求；对应 ERC PR 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1428",
+      "date": "2025-12-25",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8112 Token Transfer With Signature (wenzhenxiang), 12:38, and ERC-8114 NFT Transfer With Signature, 13:25: extend smart contract wallets so owners delegate transfers by EIP-712 signature submitted by any relayer, with nonce accounting and execution rules; the ERC PR was submitted.",
+      "topic_en": "Accounts: signed transfers"
+    },
+    {
+      "topic": "交易：7702 与 BAL",
+      "title": "EIP-7928：澄清与 7702 相关的措辞",
+      "note": "（nerolation）提交并合并：说明 7702 授权失败且授权账户尚未被加载时如何记录访问，客户端已正确处理；EIP-7377：澄清存储元组处理（forkfury）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10983",
+      "date": "2025-12-25",
+      "title_en": "EIP-7928: clarify wording around 7702",
+      "note_en": "(nerolation), submitted and merged: how access is recorded when a 7702 authorization fails before the authority account is loaded, which clients already handle; EIP-7377: clarify storage tuple processing (forkfury), submitted.",
+      "topic_en": "Transactions: 7702 and BAL"
+    },
+    {
+      "topic": "交易：7702 与 BAL",
+      "title": "EIP-7377：澄清存储元组处理",
+      "note": "EIP-7928：澄清与 7702 相关的措辞（nerolation）提交并合并：说明 7702 授权失败且授权账户尚未被加载时如何记录访问，客户端已正确处理；EIP-7377：澄清存储元组处理（forkfury）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10982",
+      "date": "2025-12-25",
+      "title_en": "EIP-7377: clarify storage tuple processing",
+      "note_en": "EIP-7928: clarify wording around 7702 (nerolation), submitted and merged: how access is recorded when a 7702 authorization fails before the authority account is loaded, which clients already handle; EIP-7377: clarify storage tuple processing (forkfury), submitted.",
+      "topic_en": "Transactions: 7702 and BAL"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8032：SSTORE gas 公式改用 S_pre",
+      "note": "（MozirDmitriy）提交并合并；Magicians：执行责任倒置，gas 优化为何失败 23:48。",
+      "url": "https://github.com/ethereum/EIPs/pull/10976",
+      "date": "2025-12-25",
+      "title_en": "EIP-8032: use S_pre in the SSTORE gas formula",
+      "note_en": "(MozirDmitriy), submitted and merged; Magicians: Execution responsibility inversion, why gas optimization failed, 23:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：执行责任倒置，gas 优化为何失败",
+      "note": "EIP-8032：SSTORE gas 公式改用 S_pre（MozirDmitriy）提交并合并；Magicians：执行责任倒置，gas 优化为何失败 23:48。",
+      "url": "https://ethereum-magicians.org/t/execution-responsibility-inversion-why-gas-optimization-failed/27315",
+      "date": "2025-12-25",
+      "title_en": "Magicians: Execution responsibility inversion, why gas optimization failed",
+      "note_en": "EIP-8032: use S_pre in the SSTORE gas formula (MozirDmitriy), submitted and merged; Magicians: Execution responsibility inversion, why gas optimization failed, 23:48.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：如何不正确使用 Zcash 及任何隐私工具，使用方式本身就泄露了太多信息",
+      "note": "23:09；VitalikButerin：在 X 上随时调用 Grok 是继社区笔记之后对求真最有益的功能 16:37。",
+      "url": "https://x.com/zooko/status/2004222888434614664",
+      "date": "2025-12-25",
+      "title_en": "zooko: how not to use Zcash or any privacy tool, since the usage pattern itself leaks too much",
+      "note_en": "23:09; VitalikButerin: easily calling Grok on X is the biggest positive for truth seeking after community notes, 16:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：在 X 上随时调用 Grok 是继社区笔记之后对求真最有益的功能",
+      "note": "zooko：如何不正确使用 Zcash 及任何隐私工具，使用方式本身就泄露了太多信息 23:09；VitalikButerin：在 X 上随时调用 Grok 是继社区笔记之后对求真最有益的功能 16:37。",
+      "url": "https://x.com/VitalikButerin/status/2004124313679548708",
+      "date": "2025-12-25",
+      "title_en": "VitalikButerin: easily calling Grok on X is the biggest positive for truth seeking after community notes",
+      "note_en": "Zooko: how not to use Zcash or any privacy tool, since the usage pattern itself leaks too much, 23:09; VitalikButerin: easily calling Grok on X is the biggest positive for truth seeking after community notes, 16:37.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8112-token-transfer-with-signature/27310",
+    "credit": "Ethereum Magicians, ERC-8112 Token Transfer With Signature",
+    "local_path": "assets/2025-12-25.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8112 Token Transfer With Signature"
+  },
+  "keywords_en": [
+    "ERC-8112 and ERC-8114 signed token and NFT transfers for smart contract wallets",
+    "EIP-7928 clarifies access recording when a 7702 authorization fails",
+    "EIP-8032 uses S_pre in the SSTORE gas formula",
+    "EIP-7377 clarifies storage tuple processing",
+    "how not to use privacy tools"
+  ],
+  "summary_en": "wenzhenxiang proposed ERC-8112 and ERC-8114, offchain signed token and NFT transfer flows for smart contract wallets that any relayer can submit, with an EIP-712 schema and nonce accounting. nerolation clarified in EIP-7928 BAL how a failed 7702 authorization is handled when the authority account was not yet accessed, submitted and merged."
+}

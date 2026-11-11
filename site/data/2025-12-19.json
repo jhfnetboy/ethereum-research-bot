@@ -1,0 +1,131 @@
+{
+  "date": "2025-12-19",
+  "keywords": [
+    "协议内 gas 期货",
+    "Falcon 与 ML-DSA 预编译加入 Glamsterdam 元 EIP",
+    "EIP-7619 列为 DFI",
+    "Hegotá 组合名确定",
+    "L1 zkEVM 安全冲刺三个里程碑",
+    "L2BEAT 提议安全委员会 walkaway test",
+    "ERC-7964 加入签名编码"
+  ],
+  "summary": "Julian 提出协议内 gas 期货，让用户与企业锁定未来手续费，缓解费用波动带来的体验问题。shemnon 把 Falcon 与 ML-DSA 后量子预编译加入 Glamsterdam 元 EIP 并合并。EF 密码学团队启动 L1 zkEVM 安全冲刺，三个里程碑与后续硬分叉挂钩。",
+  "items": [
+    {
+      "topic": "Gas：协议内期货",
+      "title": "ethresear.ch：论协议内 gas 期货",
+      "note": "（Julian）17:16：gas 费波动造成糟糕体验，用户需预留资金应对费用飙升，企业也把费用波动纳入部署决策，文章探讨在协议内提供 gas 期货。",
+      "url": "https://ethresear.ch/t/on-in-protocol-gas-futures/23698",
+      "date": "2025-12-19",
+      "title_en": "ethresear.ch: On in-protocol gas futures",
+      "note_en": "(Julian), 17:16: fee volatility hurts UX, forcing users to hold buffers for spikes and businesses to factor it into deployment choices, so the post explores gas futures inside the protocol.",
+      "topic_en": "Gas: in-protocol futures"
+    },
+    {
+      "topic": "账户签名：后量子预编译",
+      "title": "EIP-7773：把后量子预编译加入 Glamsterdam",
+      "note": "（shemnon）2025 年 10 月 31 日提交后合并：加入 Falcon 与 ML-DSA 预编译；EIP-7773：EIP-7619 列为 DFI（nixorokish）提交并合并；ERC-7964：加入签名编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10660",
+      "date": "2025-12-19",
+      "title_en": "EIP-7773: add PQC precompiles to Glamsterdam",
+      "note_en": "(shemnon), merged after submission on October 31, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
+      "topic_en": "Account signatures: post-quantum precompiles"
+    },
+    {
+      "topic": "账户签名：后量子预编译",
+      "title": "EIP-7773：EIP-7619 列为 DFI",
+      "note": "EIP-7773：把后量子预编译加入 Glamsterdam（shemnon）2025 年 10 月 31 日提交后合并：加入 Falcon 与 ML-DSA 预编译；EIP-7773：EIP-7619 列为 DFI（nixorokish）提交并合并；ERC-7964：加入签名编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10952",
+      "date": "2025-12-19",
+      "title_en": "EIP-7773: EIP-7619 to DFI",
+      "note_en": "EIP-7773: add PQC precompiles to Glamsterdam (shemnon), merged after submission on October 31, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
+      "topic_en": "Account signatures: post-quantum precompiles"
+    },
+    {
+      "topic": "账户签名：后量子预编译",
+      "title": "ERC-7964：加入签名编码",
+      "note": "EIP-7773：把后量子预编译加入 Glamsterdam（shemnon）2025 年 10 月 31 日提交后合并：加入 Falcon 与 ML-DSA 预编译；EIP-7773：EIP-7619 列为 DFI（nixorokish）提交并合并；ERC-7964：加入签名编码（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1415",
+      "date": "2025-12-19",
+      "title_en": "ERC-7964: add signature encoding",
+      "note_en": "EIP-7773: add PQC precompiles to Glamsterdam (shemnon), merged after submission on October 31, 2025: adds Falcon and ML-DSA precompiles; EIP-7773: EIP-7619 to DFI (nixorokish), submitted and merged; ERC-7964: add signature encoding (ernestognw), submitted and merged.",
+      "topic_en": "Account signatures: post-quantum precompiles"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereumfndn：EF 密码学团队启动 zkEVM 安全冲刺，三个里程碑与硬分叉挂钩",
+      "note": "22:38；ethbeat_org：提议为 Stage 1 增加安全委员会 walkaway test 19:31；EIP-8081：Hegotá 组合名确定（nixorokish）提交并合并。",
+      "url": "https://x.com/ethereumfndn/status/2002040923182526904",
+      "date": "2025-12-19",
+      "title_en": "ethereumfndn: the EF cryptography team starts a zkEVM security sprint with three fork tied milestones",
+      "note_en": "22:38; ethbeat_org: proposes a security council walkaway test for Stage 1, 19:31; EIP-8081: portmanteau selected, Hegotá (nixorokish), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat_org：提议为 Stage 1 增加安全委员会 walkaway test",
+      "note": "ethereumfndn：EF 密码学团队启动 zkEVM 安全冲刺，三个里程碑与硬分叉挂钩 22:38；ethbeat_org：提议为 Stage 1 增加安全委员会 walkaway test 19:31；EIP-8081：Hegotá 组合名确定（nixorokish）提交并合并。",
+      "url": "https://x.com/ethbeat_org/status/2001993801762738250",
+      "date": "2025-12-19",
+      "title_en": "ethbeat_org: proposes a security council walkaway test for Stage 1",
+      "note_en": "Ethereumfndn: the EF cryptography team starts a zkEVM security sprint with three fork tied milestones, 22:38; ethbeat_org: proposes a security council walkaway test for Stage 1, 19:31; EIP-8081: portmanteau selected, Hegotá (nixorokish), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：Hegotá 组合名确定",
+      "note": "ethereumfndn：EF 密码学团队启动 zkEVM 安全冲刺，三个里程碑与硬分叉挂钩 22:38；ethbeat_org：提议为 Stage 1 增加安全委员会 walkaway test 19:31；EIP-8081：Hegotá 组合名确定（nixorokish）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10953",
+      "date": "2025-12-19",
+      "title_en": "EIP-8081: portmanteau selected, Hegotá",
+      "note_en": "Ethereumfndn: the EF cryptography team starts a zkEVM security sprint with three fork tied milestones, 22:38; ethbeat_org: proposes a security council walkaway test for Stage 1, 19:31; EIP-8081: portmanteau selected, Hegotá (nixorokish), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ladislaus0x：EF 协议研究 2025 年终更新",
+      "note": "18:21；gakonst：BAL devnet 上线，Reth 运行良好 06:02；koeppelmann：从 2012 年的 Circles 构想说起 04:32。",
+      "url": "https://x.com/ladislaus0x/status/2001976122473685425",
+      "date": "2025-12-19",
+      "title_en": "ladislaus0x: EF protocol research year end update",
+      "note_en": "18:21; gakonst: the BAL devnet is up and Reth works well, 06:02; koeppelmann: from the 2012 Circles concept onward, 04:32.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：BAL devnet 上线，Reth 运行良好",
+      "note": "ladislaus0x：EF 协议研究 2025 年终更新 18:21；gakonst：BAL devnet 上线，Reth 运行良好 06:02；koeppelmann：从 2012 年的 Circles 构想说起 04:32。",
+      "url": "https://x.com/gakonst/status/2001790232434282611",
+      "date": "2025-12-19",
+      "title_en": "gakonst: the BAL devnet is up and Reth works well",
+      "note_en": "Ladislaus0x: EF protocol research year end update, 18:21; gakonst: the BAL devnet is up and Reth works well, 06:02; koeppelmann: from the 2012 Circles concept onward, 04:32.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "koeppelmann：从 2012 年的 Circles 构想说起",
+      "note": "ladislaus0x：EF 协议研究 2025 年终更新 18:21；gakonst：BAL devnet 上线，Reth 运行良好 06:02；koeppelmann：从 2012 年的 Circles 构想说起 04:32。",
+      "url": "https://x.com/koeppelmann/status/2001767468293865890",
+      "date": "2025-12-19",
+      "title_en": "koeppelmann: from the 2012 Circles concept onward",
+      "note_en": "Ladislaus0x: EF protocol research year end update, 18:21; gakonst: the BAL devnet is up and Reth works well, 06:02; koeppelmann: from the 2012 Circles concept onward, 04:32.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/on-in-protocol-gas-futures/23698",
+    "credit": "ethresear.ch, On In-Protocol Gas Futures",
+    "local_path": "assets/2025-12-19.jpg",
+    "credit_en": "ethresear.ch, On In-Protocol Gas Futures"
+  },
+  "keywords_en": [
+    "In-protocol gas futures",
+    "Falcon and ML-DSA precompiles added to the Glamsterdam meta EIP",
+    "EIP-7619 marked DFI",
+    "the Hegotá portmanteau chosen",
+    "three milestones for the L1 zkEVM security sprint",
+    "L2BEAT proposes a security council walkaway test",
+    "ERC-7964 adds signature encoding"
+  ],
+  "summary_en": "Julian proposed in-protocol gas futures so users and businesses can lock in future fees and ease volatility. shemnon added the Falcon and ML-DSA post-quantum precompiles to the Glamsterdam meta EIP, merged. The EF cryptography team started an L1 zkEVM security sprint with three milestones tied to upcoming forks."
+}

@@ -1,0 +1,152 @@
+{
+  "date": "2026-01-06",
+  "keywords": [
+    "EIP-8037 更新合并",
+    "EIP-7773 更新 Glamsterdam 的 EIP 状态",
+    "Agent 授权 ERC 提交",
+    "soispoke FOCIL 的 Hegotá 就绪度",
+    "MegaETH 加入 L2BEAT 风险评估",
+    "zkSync Boojum 验证器复现",
+    "ERC-7866 进入 Review",
+    "以太坊 2025 年回顾"
+  ],
+  "summary": "misilva73 的 EIP-8037 状态创建 gas 更新合并，ralexstokes 更新 EIP-7773 中 Glamsterdam 的 EIP 状态。soispoke 发布 FOCIL 面向 Hegotá 的就绪度说明。donnoh_eth 称 MegaETH 已加入 L2BEAT，节点代码未公开，目前无人能发起挑战。",
+  "items": [
+    {
+      "topic": "Gas 与升级范围",
+      "title": "EIP-8037 更新",
+      "note": "（misilva73）1 月 3 日提交后合并；EIP-7773：更新 Glamsterdam 的 EIP 状态（ralexstokes）2025 年 12 月 20 日提交后合并；EIP-7916：改为向右 Merkle 化（etan-status）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11002",
+      "date": "2026-01-06",
+      "title_en": "EIP-8037 update",
+      "note_en": "(misilva73), merged after submission on January 3; EIP-7773: update EIP statuses for Glamsterdam (ralexstokes), merged after submission on December 20, 2025; EIP-7916: Merkleize to the right (etan-status), submitted.",
+      "topic_en": "Gas and upgrade scope"
+    },
+    {
+      "topic": "Gas 与升级范围",
+      "title": "EIP-7773：更新 Glamsterdam 的 EIP 状态",
+      "note": "EIP-8037 更新（misilva73）1 月 3 日提交后合并；EIP-7773：更新 Glamsterdam 的 EIP 状态（ralexstokes）2025 年 12 月 20 日提交后合并；EIP-7916：改为向右 Merkle 化（etan-status）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10958",
+      "date": "2026-01-06",
+      "title_en": "EIP-7773: update EIP statuses for Glamsterdam",
+      "note_en": "EIP-8037 update (misilva73), merged after submission on January 3; EIP-7773: update EIP statuses for Glamsterdam (ralexstokes), merged after submission on December 20, 2025; EIP-7916: Merkleize to the right (etan-status), submitted.",
+      "topic_en": "Gas and upgrade scope"
+    },
+    {
+      "topic": "Gas 与升级范围",
+      "title": "EIP-7916：改为向右 Merkle 化",
+      "note": "EIP-8037 更新（misilva73）1 月 3 日提交后合并；EIP-7773：更新 Glamsterdam 的 EIP 状态（ralexstokes）2025 年 12 月 20 日提交后合并；EIP-7916：改为向右 Merkle 化（etan-status）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11032",
+      "date": "2026-01-06",
+      "title_en": "EIP-7916: Merkleize to the right",
+      "note_en": "EIP-8037 update (misilva73), merged after submission on January 3; EIP-7773: update EIP statuses for Glamsterdam (ralexstokes), merged after submission on December 20, 2025; EIP-7916: Merkleize to the right (etan-status), submitted.",
+      "topic_en": "Gas and upgrade scope"
+    },
+    {
+      "topic": "交易与账户",
+      "title": "soispoke：FOCIL 面向 Hegotá 的就绪度",
+      "note": "23:06；新增 ERC：Agent 授权（0xvimer）提交；ERC-7246：修正文档并在 _spendEncumbrance 中发出 Release 事件（arr00）提交并合并。",
+      "url": "https://x.com/soispoke/status/2008570835960033570",
+      "date": "2026-01-06",
+      "title_en": "soispoke: FOCIL readiness for Hegotá",
+      "note_en": "23:06; Add ERC: Agent Authorization (0xvimer), submitted; ERC-7246: fix docs and emit Release in _spendEncumbrance (arr00), submitted and merged.",
+      "topic_en": "Transactions and accounts"
+    },
+    {
+      "topic": "交易与账户",
+      "title": "新增 ERC：Agent 授权",
+      "note": "soispoke：FOCIL 面向 Hegotá 的就绪度 23:06；新增 ERC：Agent 授权（0xvimer）提交；ERC-7246：修正文档并在 _spendEncumbrance 中发出 Release 事件（arr00）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1450",
+      "date": "2026-01-06",
+      "title_en": "Add ERC: Agent Authorization",
+      "note_en": "Soispoke: FOCIL readiness for Hegotá, 23:06; Add ERC: Agent Authorization (0xvimer), submitted; ERC-7246: fix docs and emit Release in _spendEncumbrance (arr00), submitted and merged.",
+      "topic_en": "Transactions and accounts"
+    },
+    {
+      "topic": "交易与账户",
+      "title": "ERC-7246：修正文档并在 _spendEncumbrance 中发出 Release 事件",
+      "note": "soispoke：FOCIL 面向 Hegotá 的就绪度 23:06；新增 ERC：Agent 授权（0xvimer）提交；ERC-7246：修正文档并在 _spendEncumbrance 中发出 Release 事件（arr00）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1452",
+      "date": "2026-01-06",
+      "title_en": "ERC-7246: fix docs and emit Release in _spendEncumbrance",
+      "note_en": "Soispoke: FOCIL readiness for Hegotá, 23:06; Add ERC: Agent Authorization (0xvimer), submitted; ERC-7246: fix docs and emit Release in _spendEncumbrance (arr00), submitted and merged.",
+      "topic_en": "Transactions and accounts"
+    },
+    {
+      "topic": "其他动态",
+      "title": "donnoh_eth：MegaETH 加入 L2BEAT，节点代码未公开，目前无人能发起挑战",
+      "note": "19:26；donnoh_eth：已复现所有 zkSync elastic 链的 Boojum ZK 验证器 00:07；ERC-7866 进入 Review（anistark）2025 年 11 月 18 日提交后合并。",
+      "url": "https://x.com/donnoh_eth/status/2008515528009413042",
+      "date": "2026-01-06",
+      "title_en": "donnoh_eth: MegaETH added to L2BEAT, node code not public so no one can challenge yet",
+      "note_en": "19:26; donnoh_eth: reproduced Boojum ZK verifiers for all zkSync elastic chains, 00:07; ERC-7866: move to Review (anistark), merged after submission on November 18, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "donnoh_eth：已复现所有 zkSync elastic 链的 Boojum ZK 验证器",
+      "note": "donnoh_eth：MegaETH 加入 L2BEAT，节点代码未公开，目前无人能发起挑战 19:26；donnoh_eth：已复现所有 zkSync elastic 链的 Boojum ZK 验证器 00:07；ERC-7866 进入 Review（anistark）2025 年 11 月 18 日提交后合并。",
+      "url": "https://x.com/donnoh_eth/status/2008223741084577906",
+      "date": "2026-01-06",
+      "title_en": "donnoh_eth: reproduced Boojum ZK verifiers for all zkSync elastic chains",
+      "note_en": "Donnoh_eth: MegaETH added to L2BEAT, node code not public so no one can challenge yet, 19:26; donnoh_eth: reproduced Boojum ZK verifiers for all zkSync elastic chains, 00:07; ERC-7866: move to Review (anistark), merged after submission on November 18, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7866 进入 Review",
+      "note": "donnoh_eth：MegaETH 加入 L2BEAT，节点代码未公开，目前无人能发起挑战 19:26；donnoh_eth：已复现所有 zkSync elastic 链的 Boojum ZK 验证器 00:07；ERC-7866 进入 Review（anistark）2025 年 11 月 18 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1358",
+      "date": "2026-01-06",
+      "title_en": "ERC-7866: move to Review",
+      "note_en": "Donnoh_eth: MegaETH added to L2BEAT, node code not public so no one can challenge yet, 19:26; donnoh_eth: reproduced Boojum ZK verifiers for all zkSync elastic chains, 00:07; ERC-7866: move to Review (anistark), merged after submission on November 18, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：2025 年以太坊巩固了数字文明安全基础的地位",
+      "note": "20:51；poojaranjan19 引述 Vitalik：要坚守原则并承认其代价 06:22；AndyGuzmanEth：2026 年预测，以太坊将赢得隐私 21:14。",
+      "url": "https://x.com/ethereum/status/2008536971430248831",
+      "date": "2026-01-06",
+      "title_en": "ethereum: in 2025 Ethereum cemented itself as the secure foundation for digital civilization",
+      "note_en": "20:51; poojaranjan19 quoting Vitalik: stick hard to principles and accept the costs, 06:22; AndyGuzmanEth: 2026 prediction, Ethereum will win privacy, 21:14.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "poojaranjan19 引述 Vitalik：要坚守原则并承认其代价",
+      "note": "ethereum：2025 年以太坊巩固了数字文明安全基础的地位 20:51；poojaranjan19 引述 Vitalik：要坚守原则并承认其代价 06:22；AndyGuzmanEth：2026 年预测，以太坊将赢得隐私 21:14。",
+      "url": "https://x.com/poojaranjan19/status/2008318164241969266",
+      "date": "2026-01-06",
+      "title_en": "poojaranjan19 quoting Vitalik: stick hard to principles and accept the costs",
+      "note_en": "Ethereum: in 2025 Ethereum cemented itself as the secure foundation for digital civilization, 20:51; poojaranjan19 quoting Vitalik: stick hard to principles and accept the costs, 06:22; AndyGuzmanEth: 2026 prediction, Ethereum will win privacy, 21:14.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：2026 年预测，以太坊将赢得隐私",
+      "note": "ethereum：2025 年以太坊巩固了数字文明安全基础的地位 20:51；poojaranjan19 引述 Vitalik：要坚守原则并承认其代价 06:22；AndyGuzmanEth：2026 年预测，以太坊将赢得隐私 21:14。",
+      "url": "https://x.com/AndyGuzmanEth/status/2008542570872287660",
+      "date": "2026-01-06",
+      "title_en": "AndyGuzmanEth: 2026 prediction, Ethereum will win privacy",
+      "note_en": "Ethereum: in 2025 Ethereum cemented itself as the secure foundation for digital civilization, 20:51; poojaranjan19 quoting Vitalik: stick hard to principles and accept the costs, 06:22; AndyGuzmanEth: 2026 prediction, Ethereum will win privacy, 21:14.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11002",
+    "credit": "GitHub, ethereum/EIPs PR 11002",
+    "credit_en": "GitHub, ethereum/EIPs PR 11002"
+  },
+  "keywords_en": [
+    "EIP-8037 update merged",
+    "EIP-7773 updates Glamsterdam EIP statuses",
+    "an agent authorization ERC submitted",
+    "soispoke on FOCIL readiness for Hegotá",
+    "MegaETH added to L2BEAT with a risk assessment",
+    "zkSync Boojum verifiers reproduced",
+    "ERC-7866 moves to Review",
+    "Ethereum's 2025 review"
+  ],
+  "summary_en": "misilva73's EIP-8037 state creation gas update merged, and ralexstokes updated Glamsterdam EIP statuses in EIP-7773. soispoke published FOCIL readiness for Hegotá. donnoh_eth said MegaETH was added to L2BEAT, with node code not yet public so no one can challenge."
+}

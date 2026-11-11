@@ -1,0 +1,98 @@
+{
+  "date": "2025-12-28",
+  "keywords": [
+    "原生 AA 提案 EIP-7701 转为 Stagnant",
+    "EIP-7843 SLOTNUM 转为 Stagnant",
+    "EIP-5920 PAY 与 EIP-7954 被标记停滞",
+    "无托管的受治理自动化",
+    "Concrete v2 规范",
+    "Paul Brody 的 2026 预测"
+  ],
+  "summary": "eth-bot 将原生 AA 提案 EIP-7701 与 EIP-7843 SLOTNUM 标为 Stagnant 并合并，同日对 EIP-5920 PAY 与 EIP-7954 发起停滞标记。recurmj 提出把“何时执行”与“执行动作”分离的无托管自动化。假期期间动态较少。",
+  "items": [
+    {
+      "topic": "账户：EIP-7701 停滞",
+      "title": "EIP-7701 转为 Stagnant",
+      "note": "（eth-bot）12 月 7 日提交后合并；EIP-7843 转为 Stagnant（eth-bot）12 月 14 日提交后合并；EIP-5920 PAY 转为 Stagnant（eth-bot）提交；EIP-7954 停滞标记（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10874",
+      "date": "2025-12-28",
+      "title_en": "EIP-7701: move to Stagnant",
+      "note_en": "(eth-bot), merged after submission on December 7; EIP-7843: move to Stagnant (eth-bot), merged after submission on December 14; EIP-5920 PAY: move to Stagnant (eth-bot), submitted; EIP-7954: stagnant flag (eth-bot), submitted.",
+      "topic_en": "Accounts: EIP-7701 stagnant"
+    },
+    {
+      "topic": "账户：EIP-7701 停滞",
+      "title": "EIP-7843 转为 Stagnant",
+      "note": "EIP-7701 转为 Stagnant（eth-bot）12 月 7 日提交后合并；EIP-7843 转为 Stagnant（eth-bot）12 月 14 日提交后合并；EIP-5920 PAY 转为 Stagnant（eth-bot）提交；EIP-7954 停滞标记（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10916",
+      "date": "2025-12-28",
+      "title_en": "EIP-7843: move to Stagnant",
+      "note_en": "EIP-7701: move to Stagnant (eth-bot), merged after submission on December 7; EIP-7843: move to Stagnant (eth-bot), merged after submission on December 14; EIP-5920 PAY: move to Stagnant (eth-bot), submitted; EIP-7954: stagnant flag (eth-bot), submitted.",
+      "topic_en": "Accounts: EIP-7701 stagnant"
+    },
+    {
+      "topic": "账户：EIP-7701 停滞",
+      "title": "EIP-5920 PAY 转为 Stagnant",
+      "note": "EIP-7701 转为 Stagnant（eth-bot）12 月 7 日提交后合并；EIP-7843 转为 Stagnant（eth-bot）12 月 14 日提交后合并；EIP-5920 PAY 转为 Stagnant（eth-bot）提交；EIP-7954 停滞标记（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10985",
+      "date": "2025-12-28",
+      "title_en": "EIP-5920 PAY: move to Stagnant",
+      "note_en": "EIP-7701: move to Stagnant (eth-bot), merged after submission on December 7; EIP-7843: move to Stagnant (eth-bot), merged after submission on December 14; EIP-5920 PAY: move to Stagnant (eth-bot), submitted; EIP-7954: stagnant flag (eth-bot), submitted.",
+      "topic_en": "Accounts: EIP-7701 stagnant"
+    },
+    {
+      "topic": "账户：EIP-7701 停滞",
+      "title": "EIP-7954 停滞标记",
+      "note": "EIP-7701 转为 Stagnant（eth-bot）12 月 7 日提交后合并；EIP-7843 转为 Stagnant（eth-bot）12 月 14 日提交后合并；EIP-5920 PAY 转为 Stagnant（eth-bot）提交；EIP-7954 停滞标记（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10986",
+      "date": "2025-12-28",
+      "title_en": "EIP-7954: stagnant flag",
+      "note_en": "EIP-7701: move to Stagnant (eth-bot), merged after submission on December 7; EIP-7843: move to Stagnant (eth-bot), merged after submission on December 14; EIP-5920 PAY: move to Stagnant (eth-bot), submitted; EIP-7954: stagnant flag (eth-bot), submitted.",
+      "topic_en": "Accounts: EIP-7701 stagnant"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：将时间与动作分离，无托管的受治理自动化",
+      "note": "（recurmj）06:57；fede_intern：编写 Concrete v2 规范 01:57。",
+      "url": "https://ethereum-magicians.org/t/separating-time-from-action-governed-automation-without-custody/27334",
+      "date": "2025-12-28",
+      "title_en": "Magicians: Separating time from action, governed automation without custody",
+      "note_en": "(recurmj), 06:57; fede_intern: writing the Concrete v2 spec, 01:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "fede_intern：编写 Concrete v2 规范",
+      "note": "Magicians：将时间与动作分离，无托管的受治理自动化（recurmj）06:57；fede_intern：编写 Concrete v2 规范 01:57。",
+      "url": "https://x.com/fede_intern/status/2004989982025392345",
+      "date": "2025-12-28",
+      "title_en": "fede_intern: writing the Concrete v2 spec",
+      "note_en": "Magicians: Separating time from action, governed automation without custody (recurmj), 06:57; fede_intern: writing the Concrete v2 spec, 01:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：如何回应不会成为密码朋克的人",
+      "note": "02:47。",
+      "url": "https://x.com/zooko/status/2005002726976155780",
+      "date": "2025-12-28",
+      "title_en": "zooko: what to offer people who will not become cypherpunks",
+      "note_en": "02:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/10874",
+    "credit": "GitHub, ethereum/EIPs PR 10874",
+    "credit_en": "GitHub, ethereum/EIPs PR 10874"
+  },
+  "keywords_en": [
+    "Native AA proposal EIP-7701 moved to Stagnant",
+    "EIP-7843 SLOTNUM moved to Stagnant",
+    "EIP-5920 PAY and EIP-7954 flagged stagnant",
+    "governed automation without custody",
+    "the Concrete v2 spec",
+    "Paul Brody's 2026 predictions"
+  ],
+  "summary_en": "eth-bot marked native AA proposal EIP-7701 and EIP-7843 SLOTNUM as Stagnant, merged, and flagged EIP-5920 PAY and EIP-7954 the same day. recurmj proposed custody free automation that splits when to act from the action itself. Holiday activity was light."
+}

@@ -1,0 +1,141 @@
+{
+  "date": "2025-12-15",
+  "keywords": [
+    "ACDT #64 gas 上限升到 75M 的前置条件",
+    "ePBS builder 不参与验证且质押 1 ETH",
+    "共识层升级改名 Heze",
+    "ERC-7780 新增模块类型 8 到 10",
+    "EIP-7819 SETDELEGATE 命名修正",
+    "ERC-7674 提交进入 Review",
+    "FOCIL 适用范围之辩"
+  ],
+  "summary": "ACDT #64：gas 上限升到 75M 前需先实现并测试 getBlobsV3 与最大 blob 参数，随 BPO3 版本发布；ePBS builder 将不参与验证、质押 1 ETH；共识层升级改名 Heze。leekt 为 ERC-7780 新增模块类型 8 到 10 并合并。nero_eth 认为 FOCIL 只在少数场景有帮助。",
+  "items": [
+    {
+      "topic": "会议：ACDT #64",
+      "title": "ACDT #64",
+      "note": "21:00，据 Ethereal news #3：gas 上限升到 75M 前，客户端需先实现并测试 getBlobsV3 与最大 blob 参数，准备随 BPO3 版本发布；提议由客户端而非验证者设定 gas 上限；Glamsterdam 中 ePBS builder 不参与验证、质押 1 ETH；Hegotá 的共识层升级因 Heka 不在 IAU 星表中改名 Heze。",
+      "url": "https://forkcast.org/calls/acdt/064",
+      "date": "2025-12-15",
+      "title_en": "ACDT #64",
+      "note_en": "21:00, per Ethereal news #3: before a 75M gas limit, clients must build and test getBlobsV3 and a max blobs flag, ready for BPO3 releases; a proposal has clients rather than validators set the gas limit; ePBS builders in Glamsterdam are non-validating with 1 ETH staked; Hegotá's consensus upgrade is renamed Heze because Heka is not in the IAU star catalog.",
+      "topic_en": "Calls: ACDT #64"
+    },
+    {
+      "topic": "会议：ACDT #64",
+      "title": "Ethereal news #3",
+      "note": "ACDT #64 21:00，据 Ethereal news #3：gas 上限升到 75M 前，客户端需先实现并测试 getBlobsV3 与最大 blob 参数，准备随 BPO3 版本发布；提议由客户端而非验证者设定 gas 上限；Glamsterdam 中 ePBS builder 不参与验证、质押 1 ETH；Hegotá 的共识层升级因 Heka 不在 IAU 星表中改名 Heze。",
+      "url": "https://ethereal.news/ethereal-news-weekly-3/",
+      "date": "2025-12-15",
+      "title_en": "Ethereal news #3",
+      "note_en": "ACDT #64, 21:00, per Ethereal news #3: before a 75M gas limit, clients must build and test getBlobsV3 and a max blobs flag, ready for BPO3 releases; a proposal has clients rather than validators set the gas limit; ePBS builders in Glamsterdam are non-validating with 1 ETH staked; Hegotá's consensus upgrade is renamed Heze because Heka is not in the IAU star catalog.",
+      "topic_en": "Calls: ACDT #64"
+    },
+    {
+      "topic": "账户：模块与委托",
+      "title": "ERC-7780：新增模块类型 8、9、10",
+      "note": "（leekt）11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1355",
+      "date": "2025-12-15",
+      "title_en": "ERC-7780: add module types 8, 9 and 10",
+      "note_en": "(leekt), merged after submission on November 18; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
+      "topic_en": "Accounts: modules and delegation"
+    },
+    {
+      "topic": "账户：模块与委托",
+      "title": "EIP-7819：修正 SETDELEGATE 操作码命名不一致",
+      "note": "ERC-7780：新增模块类型 8、9、10（leekt）11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10922",
+      "date": "2025-12-15",
+      "title_en": "EIP-7819: fix inconsistent SETDELEGATE opcode naming",
+      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), merged after submission on November 18; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
+      "topic_en": "Accounts: modules and delegation"
+    },
+    {
+      "topic": "账户：模块与委托",
+      "title": "ERC-7674 进入 Review",
+      "note": "ERC-7780：新增模块类型 8、9、10（leekt）11 月 18 日提交后合并；EIP-7819：修正 SETDELEGATE 操作码命名不一致（lisenokdonbassenok）提交；ERC-7674 进入 Review（Amxx）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1404",
+      "date": "2025-12-15",
+      "title_en": "ERC-7674: move to Review",
+      "note_en": "ERC-7780: add module types 8, 9 and 10 (leekt), merged after submission on November 18; EIP-7819: fix inconsistent SETDELEGATE opcode naming (lisenokdonbassenok), submitted; ERC-7674: move to Review (Amxx), submitted.",
+      "topic_en": "Accounts: modules and delegation"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nero_eth：FOCIL 只在少数场景有帮助，如缩短欺诈证明挑战期",
+      "note": "16:04；EIP-7928：CodeData 改用 Bytecode（jihoonsong）提交并合并；ACDC #172 议程，1 月 8 日 19:45；AllWalletDevs 第 37 次会议议程 23:41。",
+      "url": "https://x.com/nero_eth/status/2000492146080514274",
+      "date": "2025-12-15",
+      "title_en": "nero_eth: FOCIL helps only in narrow cases, such as shorter fraud proof windows",
+      "note_en": "16:04; EIP-7928: CodeData uses Bytecode (jihoonsong), submitted and merged; ACDC #172 agenda, Jan 8, 19:45; AllWalletDevs call #37 agenda, 23:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：CodeData 改用 Bytecode",
+      "note": "nero_eth：FOCIL 只在少数场景有帮助，如缩短欺诈证明挑战期 16:04；EIP-7928：CodeData 改用 Bytecode（jihoonsong）提交并合并；ACDC #172 议程，1 月 8 日 19:45；AllWalletDevs 第 37 次会议议程 23:41。",
+      "url": "https://github.com/ethereum/EIPs/pull/10921",
+      "date": "2025-12-15",
+      "title_en": "EIP-7928: CodeData uses Bytecode",
+      "note_en": "Nero_eth: FOCIL helps only in narrow cases, such as shorter fraud proof windows, 16:04; EIP-7928: CodeData uses Bytecode (jihoonsong), submitted and merged; ACDC #172 agenda, Jan 8, 19:45; AllWalletDevs call #37 agenda, 23:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #172 议程，1 月 8 日",
+      "note": "nero_eth：FOCIL 只在少数场景有帮助，如缩短欺诈证明挑战期 16:04；EIP-7928：CodeData 改用 Bytecode（jihoonsong）提交并合并；ACDC #172 议程，1 月 8 日 19:45；AllWalletDevs 第 37 次会议议程 23:41。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-172-jan-8-2026/27168",
+      "date": "2025-12-15",
+      "title_en": "ACDC #172 agenda, Jan 8",
+      "note_en": "Nero_eth: FOCIL helps only in narrow cases, such as shorter fraud proof windows, 16:04; EIP-7928: CodeData uses Bytecode (jihoonsong), submitted and merged; ACDC #172 agenda, Jan 8, 19:45; AllWalletDevs call #37 agenda, 23:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "AllWalletDevs 第 37 次会议议程",
+      "note": "nero_eth：FOCIL 只在少数场景有帮助，如缩短欺诈证明挑战期 16:04；EIP-7928：CodeData 改用 Bytecode（jihoonsong）提交并合并；ACDC #172 议程，1 月 8 日 19:45；AllWalletDevs 第 37 次会议议程 23:41。",
+      "url": "https://ethereum-magicians.org/t/allwalletdevs-call-37-january-21-2026/27178",
+      "date": "2025-12-15",
+      "title_en": "AllWalletDevs call #37 agenda",
+      "note_en": "Nero_eth: FOCIL helps only in narrow cases, such as shorter fraud proof windows, 16:04; EIP-7928: CodeData uses Bytecode (jihoonsong), submitted and merged; ACDC #172 agenda, Jan 8, 19:45; AllWalletDevs call #37 agenda, 23:41.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians：扩展“世界计算机”的原则",
+      "note": "21:17；Magicians：以太坊新闻来源 15:43。",
+      "url": "https://ethereum-magicians.org/t/principles-of-scaling-a-world-computer/27173",
+      "date": "2025-12-15",
+      "title_en": "Magicians: Principles of scaling a \"world computer\"",
+      "note_en": "21:17; Magicians: Ethereum news sources, 15:43.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians：以太坊新闻来源",
+      "note": "Magicians：扩展“世界计算机”的原则 21:17；Magicians：以太坊新闻来源 15:43。",
+      "url": "https://ethereum-magicians.org/t/ethereum-news-sources/27162",
+      "date": "2025-12-15",
+      "title_en": "Magicians: Ethereum news sources",
+      "note_en": "Magicians: Principles of scaling a \"world computer\", 21:17; Magicians: Ethereum news sources, 15:43.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/focil-breakout-25-december-16-2025/27169",
+    "credit": "Ethereum Magicians, FOCIL Breakout #25",
+    "local_path": "assets/2025-12-15.jpg",
+    "credit_en": "Ethereum Magicians, FOCIL Breakout #25"
+  },
+  "keywords_en": [
+    "ACDT #64 on prerequisites for a 75M gas limit",
+    "ePBS builders non-validating with 1 ETH staked",
+    "the consensus upgrade renamed Heze",
+    "ERC-7780 adds module types 8 to 10",
+    "EIP-7819 SETDELEGATE naming fix",
+    "ERC-7674 submitted for Review",
+    "the debate over FOCIL's scope"
+  ],
+  "summary_en": "ACDT #64: before a 75M gas limit, getBlobsV3 and a max blobs flag must be built and tested, shipping with BPO3 releases; ePBS builders will be non-validating with 1 ETH staked; the consensus upgrade is renamed Heze. leekt added module types 8 to 10 to ERC-7780, merged. nero_eth argued FOCIL helps only in narrow cases."
+}

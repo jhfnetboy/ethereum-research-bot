@@ -1,0 +1,109 @@
+{
+  "date": "2025-12-22",
+  "keywords": [
+    "ERC-8065 零知识代币包装器的隐身地址扩展",
+    "Nonce 位图支持并行提交交易",
+    "CMSP 非托管定期支付原语",
+    "Hegotá 头号提案选择时间表",
+    "Lido 加入 SEAL Safe Harbor",
+    "EIP-7998 避免分叉前 randao 计算"
+  ],
+  "summary": "ZyraV21 与 doublespending 提交 ERC-8065 扩展草案，用基于 ECDH 的隐身地址为零知识代币包装器提供隐私收款。thnhnv 提出 nonce 位图，让同一账户可并行提交多笔交易。nixorokish 公布 Hegotá 头号提案的选择时间表，FOCIL 是候选之一。",
+  "items": [
+    {
+      "topic": "隐私：隐身地址收款",
+      "title": "Magicians：ERC 草案，通过隐身地址实现隐私收款（ERC-8065 扩展）",
+      "note": "（ZyraV21）16:31：为零知识代币包装器加入基于 ECDH 的隐身地址，作者包括 doublespending。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-privacy-preserving-receiving-via-stealth-addresses-erc-8065-extension/27277",
+      "date": "2025-12-22",
+      "title_en": "Magicians: Draft ERC, privacy preserving receiving via stealth addresses (ERC-8065 extension)",
+      "note_en": "(ZyraV21), 16:31: adds ECDH stealth addresses to zero knowledge token wrappers, coauthored by doublespending.",
+      "topic_en": "Privacy: stealth address receiving"
+    },
+    {
+      "topic": "交易：并行 nonce 与定期支付",
+      "title": "Magicians：Nonce 位图，为并行区块链支持并行提交交易",
+      "note": "（thnhnv）20:51：顺序 nonce 迫使交易者一笔笔提交，位图让多笔交易互不阻塞；Magicians：CMSP，有上限授权的非托管定期支付原语（dperezcabrera）22:01。",
+      "url": "https://ethereum-magicians.org/t/nonce-bitmap-enabling-parallel-transaction-submission-for-a-parallel-blockchain/27280",
+      "date": "2025-12-22",
+      "title_en": "Magicians: Nonce Bitmap, parallel transaction submission for a parallel blockchain",
+      "note_en": "(thnhnv), 20:51: sequential nonces force traders to submit one at a time, and a bitmap stops transactions blocking each other; Magicians: CMSP, a bounded consent primitive for non-custodial recurring payments (dperezcabrera), 22:01.",
+      "topic_en": "Transactions: parallel nonces and recurring payments"
+    },
+    {
+      "topic": "交易：并行 nonce 与定期支付",
+      "title": "Magicians：CMSP，有上限授权的非托管定期支付原语",
+      "note": "Magicians：Nonce 位图，为并行区块链支持并行提交交易（thnhnv）20:51：顺序 nonce 迫使交易者一笔笔提交，位图让多笔交易互不阻塞；Magicians：CMSP，有上限授权的非托管定期支付原语（dperezcabrera）22:01。",
+      "url": "https://ethereum-magicians.org/t/discussion-cmsp-a-bounded-consent-protocol-primitive-for-non-custodial-recurring-payments/27282",
+      "date": "2025-12-22",
+      "title_en": "Magicians: CMSP, a bounded consent primitive for non-custodial recurring payments",
+      "note_en": "Magicians: Nonce Bitmap, parallel transaction submission for a parallel blockchain (thnhnv), 20:51: sequential nonces force traders to submit one at a time, and a bitmap stops transactions blocking each other; Magicians: CMSP, a bounded consent primitive for non-custodial recurring payments (dperezcabrera), 22:01.",
+      "topic_en": "Transactions: parallel nonces and recurring payments"
+    },
+    {
+      "topic": "其他动态",
+      "title": "nixorokish：Glamsterdam 头号提案是 ePBS 与 BAL，Hegotá 头号提案选择时间表已公布",
+      "note": "23:01；EIP-7998：避免分叉前的 randao 种子计算（sashass1315）提交并合并；ERC-7573 改名为密钥解密预言机（cfries）12 月 7 日提交后合并。",
+      "url": "https://x.com/nixorokish/status/2003133688712990805",
+      "date": "2025-12-22",
+      "title_en": "nixorokish: ePBS and BAL head Glamsterdam, and the Hegotá headliner timeline is up",
+      "note_en": "23:01; EIP-7998: avoid pre-fork randao seed computation (sashass1315), submitted and merged; ERC-7573: rename to key decryption oracle (cfries), merged after submission on December 7.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7998：避免分叉前的 randao 种子计算",
+      "note": "nixorokish：Glamsterdam 头号提案是 ePBS 与 BAL，Hegotá 头号提案选择时间表已公布 23:01；EIP-7998：避免分叉前的 randao 种子计算（sashass1315）提交并合并；ERC-7573 改名为密钥解密预言机（cfries）12 月 7 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10969",
+      "date": "2025-12-22",
+      "title_en": "EIP-7998: avoid pre-fork randao seed computation",
+      "note_en": "Nixorokish: ePBS and BAL head Glamsterdam, and the Hegotá headliner timeline is up, 23:01; EIP-7998: avoid pre-fork randao seed computation (sashass1315), submitted and merged; ERC-7573: rename to key decryption oracle (cfries), merged after submission on December 7.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7573 改名为密钥解密预言机",
+      "note": "nixorokish：Glamsterdam 头号提案是 ePBS 与 BAL，Hegotá 头号提案选择时间表已公布 23:01；EIP-7998：避免分叉前的 randao 种子计算（sashass1315）提交并合并；ERC-7573 改名为密钥解密预言机（cfries）12 月 7 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1397",
+      "date": "2025-12-22",
+      "title_en": "ERC-7573: rename to key decryption oracle",
+      "note_en": "Nixorokish: ePBS and BAL head Glamsterdam, and the Hegotá headliner timeline is up, 23:01; EIP-7998: avoid pre-fork randao seed computation (sashass1315), submitted and merged; ERC-7573: rename to key decryption oracle (cfries), merged after submission on December 7.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "_SEAL_Org：Lido 加入 SEAL Safe Harbor，白帽可合法介入救援资金",
+      "note": "22:42；hasufl：Bitcoin 规则难改是好事，但量子与补贴问题带来威胁 18:36。",
+      "url": "https://x.com/_SEAL_Org/status/2003129008003621071",
+      "date": "2025-12-22",
+      "title_en": "_SEAL_Org: Lido joined SEAL Safe Harbor, so whitehats can legally step in to rescue funds",
+      "note_en": "22:42; hasufl: Bitcoin's hard to change rules are good, but quantum and subsidy threats loom, 18:36.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hasufl：Bitcoin 规则难改是好事，但量子与补贴问题带来威胁",
+      "note": "_SEAL_Org：Lido 加入 SEAL Safe Harbor，白帽可合法介入救援资金 22:42；hasufl：Bitcoin 规则难改是好事，但量子与补贴问题带来威胁 18:36。",
+      "url": "https://x.com/hasufl/status/2003067030098923820",
+      "date": "2025-12-22",
+      "title_en": "hasufl: Bitcoin's hard to change rules are good, but quantum and subsidy threats loom",
+      "note_en": "_SEAL_Org: Lido joined SEAL Safe Harbor, so whitehats can legally step in to rescue funds, 22:42; hasufl: Bitcoin's hard to change rules are good, but quantum and subsidy threats loom, 18:36.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/draft-erc-privacy-preserving-receiving-via-stealth-addresses-erc-8065-extension/27277",
+    "credit": "Ethereum Magicians, Privacy-Preserving Receiving via Stealth Addresses",
+    "local_path": "assets/2025-12-22.jpg",
+    "credit_en": "Ethereum Magicians, Privacy-Preserving Receiving via Stealth Addresses"
+  },
+  "keywords_en": [
+    "A stealth address extension for ERC-8065 zero knowledge token wrappers",
+    "a nonce bitmap for parallel transaction submission",
+    "CMSP a primitive for non-custodial recurring payments",
+    "the Hegotá headliner timeline",
+    "Lido joins SEAL Safe Harbor",
+    "EIP-7998 avoids pre-fork randao computation"
+  ],
+  "summary_en": "ZyraV21 and doublespending drafted an ERC-8065 extension that adds ECDH stealth addresses for private receiving to zero knowledge token wrappers. thnhnv proposed a nonce bitmap so one account can submit several transactions in parallel. nixorokish posted the Hegotá headliner timeline, with FOCIL among candidates."
+}

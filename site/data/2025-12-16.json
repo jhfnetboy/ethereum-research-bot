@@ -1,0 +1,151 @@
+{
+  "date": "2025-12-16",
+  "keywords": [
+    "ERC-7913 签名验证器进入 Final",
+    "EIP-7932 迁移到新注册表",
+    "EIP-6404 改用 EIP-7932 注册表",
+    "以太坊区块空间市场观察",
+    "EIP-7917 进入 Final",
+    "Jochem 成为 EIP 编辑",
+    "隐私是中立的前提"
+  ],
+  "summary": "ERC-7913 签名验证器进入 Final，让智能账户可验证任意密钥类型的签名。SirSpudlington 把 EIP-7932 迁移到新注册表，提交并合并。Titan、Ultrasound、ETHGas 与 EF 作者联合发文，指出 PBS 在定价、激励、集中度、延迟与开放性上留有空白。",
+  "items": [
+    {
+      "topic": "账户签名：ERC-7913 与 EIP-7932",
+      "title": "ERC-7913 进入 Final",
+      "note": "（Amxx）2025 年 9 月 16 日提交后合并；EIP-7932：迁移到新注册表（SirSpudlington）提交并合并；EIP-6404：改用 EIP-7932 注册表（SirSpudlington）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1213",
+      "date": "2025-12-16",
+      "title_en": "ERC-7913: move to Final",
+      "note_en": "(Amxx), merged after submission on September 16, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
+      "topic_en": "Account signatures: ERC-7913 and EIP-7932"
+    },
+    {
+      "topic": "账户签名：ERC-7913 与 EIP-7932",
+      "title": "EIP-7932：迁移到新注册表",
+      "note": "ERC-7913 进入 Final（Amxx）2025 年 9 月 16 日提交后合并；EIP-7932：迁移到新注册表（SirSpudlington）提交并合并；EIP-6404：改用 EIP-7932 注册表（SirSpudlington）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10927",
+      "date": "2025-12-16",
+      "title_en": "EIP-7932: migrate to the new registry",
+      "note_en": "ERC-7913: move to Final (Amxx), merged after submission on September 16, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
+      "topic_en": "Account signatures: ERC-7913 and EIP-7932"
+    },
+    {
+      "topic": "账户签名：ERC-7913 与 EIP-7932",
+      "title": "EIP-6404：改用 EIP-7932 注册表",
+      "note": "ERC-7913 进入 Final（Amxx）2025 年 9 月 16 日提交后合并；EIP-7932：迁移到新注册表（SirSpudlington）提交并合并；EIP-6404：改用 EIP-7932 注册表（SirSpudlington）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10926",
+      "date": "2025-12-16",
+      "title_en": "EIP-6404: move to the EIP-7932 registry",
+      "note_en": "ERC-7913: move to Final (Amxx), merged after submission on September 16, 2025; EIP-7932: migrate to the new registry (SirSpudlington), submitted and merged; EIP-6404: move to the EIP-7932 registry (SirSpudlington), submitted.",
+      "topic_en": "Account signatures: ERC-7913 and EIP-7932"
+    },
+    {
+      "topic": "交易：区块空间市场",
+      "title": "ethresear.ch：对以太坊区块空间市场的观察",
+      "note": "（kubimens）21:49：Titan Builder、Ultrasound Relay、ETHGas 与 EF 作者合写，指出 PBS 在定价、激励、集中度、延迟与开放性上的空白并提出原则。",
+      "url": "https://ethresear.ch/t/an-observation-on-ethereum-s-blockspace-market/23669",
+      "date": "2025-12-16",
+      "title_en": "ethresear.ch: An observation on Ethereum's blockspace market",
+      "note_en": "(kubimens), 21:49: by authors from Titan Builder, Ultrasound Relay, ETHGas and the EF, on PBS gaps in pricing, incentives, concentration, latency and openness, with proposed principles.",
+      "topic_en": "Transactions: the blockspace market"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7917 进入 Final",
+      "note": "（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10915",
+      "date": "2025-12-16",
+      "title_en": "EIP-7917: move to Final",
+      "note_en": "(linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-1：Jochem 成为编辑",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10863",
+      "date": "2025-12-16",
+      "title_en": "EIP-1: add Jochem as editor",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8001 进入 Final",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1408",
+      "date": "2025-12-16",
+      "title_en": "ERC-8001: move to Final",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7627 进入 Final",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1378",
+      "date": "2025-12-16",
+      "title_en": "ERC-7627: move to Final",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7745：加入证明格式与线协议规范",
+      "note": "EIP-7917 进入 Final（linoscope）12 月 14 日提交后合并；EIP-1：Jochem 成为编辑（lightclient）12 月 2 日提交后合并；ERC-8001 进入 Final（KBryan）提交并合并；ERC-7627 进入 Final（bizliaoyuan）11 月 28 日提交后合并；EIP-7745：加入证明格式与线协议规范（zsfelfoldi）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10934",
+      "date": "2025-12-16",
+      "title_en": "EIP-7745: add proof format and wire protocol specs",
+      "note_en": "EIP-7917: move to Final (linoscope), merged after submission on December 14; EIP-1: add Jochem as editor (lightclient), merged after submission on December 2; ERC-8001: move to Final (KBryan), submitted and merged; ERC-7627: move to Final (bizliaoyuan), merged after submission on November 28; EIP-7745: add proof format and wire protocol specs (zsfelfoldi), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：以太坊大量应用层建设靠借口与含糊的信任假设支撑",
+      "note": "16:34；AndyGuzmanEth：中立需要盲目，盲目需要默认隐私 23:50；_SEAL_Org：举办首次公开安全分享会 00:57。",
+      "url": "https://x.com/pcaversaccio/status/2000862072834261152",
+      "date": "2025-12-16",
+      "title_en": "pcaversaccio: much of Ethereum's app layer rests on excuses and hand waved trust assumptions",
+      "note_en": "16:34; AndyGuzmanEth: neutrality requires blindness, and blindness requires privacy by default, 23:50; _SEAL_Org: hosting its first public security talks, 00:57.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "AndyGuzmanEth：中立需要盲目，盲目需要默认隐私",
+      "note": "pcaversaccio：以太坊大量应用层建设靠借口与含糊的信任假设支撑 16:34；AndyGuzmanEth：中立需要盲目，盲目需要默认隐私 23:50；_SEAL_Org：举办首次公开安全分享会 00:57。",
+      "url": "https://x.com/AndyGuzmanEth/status/2000971883584360769",
+      "date": "2025-12-16",
+      "title_en": "AndyGuzmanEth: neutrality requires blindness, and blindness requires privacy by default",
+      "note_en": "Pcaversaccio: much of Ethereum's app layer rests on excuses and hand waved trust assumptions, 16:34; AndyGuzmanEth: neutrality requires blindness, and blindness requires privacy by default, 23:50; _SEAL_Org: hosting its first public security talks, 00:57.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "_SEAL_Org：举办首次公开安全分享会",
+      "note": "pcaversaccio：以太坊大量应用层建设靠借口与含糊的信任假设支撑 16:34；AndyGuzmanEth：中立需要盲目，盲目需要默认隐私 23:50；_SEAL_Org：举办首次公开安全分享会 00:57。",
+      "url": "https://x.com/_SEAL_Org/status/2000626201883463932",
+      "date": "2025-12-16",
+      "title_en": "_SEAL_Org: hosting its first public security talks",
+      "note_en": "Pcaversaccio: much of Ethereum's app layer rests on excuses and hand waved trust assumptions, 16:34; AndyGuzmanEth: neutrality requires blindness, and blindness requires privacy by default, 23:50; _SEAL_Org: hosting its first public security talks, 00:57.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/an-observation-on-ethereum-s-blockspace-market/23669",
+    "credit": "ethresear.ch, An Observation on Ethereum's Blockspace Market",
+    "local_path": "assets/2025-12-16.jpg",
+    "credit_en": "ethresear.ch, An Observation on Ethereum's Blockspace Market"
+  },
+  "keywords_en": [
+    "ERC-7913 signature verifiers move to Final",
+    "EIP-7932 migrates to a new registry",
+    "EIP-6404 moves to the EIP-7932 registry",
+    "observations on Ethereum's blockspace market",
+    "EIP-7917 moves to Final",
+    "Jochem becomes an EIP editor",
+    "privacy as a precondition of neutrality"
+  ],
+  "summary_en": "ERC-7913 signature verifiers moved to Final, letting smart accounts verify signatures for any key type. SirSpudlington migrated EIP-7932 to a new registry, submitted and merged. Authors from Titan, Ultrasound, ETHGas and the EF wrote that PBS leaves gaps in pricing, incentives, concentration, latency and openness."
+}

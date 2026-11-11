@@ -1,0 +1,145 @@
+{
+  "date": "2026-01-05",
+  "keywords": [
+    "ACDE #227 EIP-7997 确定性工厂预部署列为 CFI",
+    "EIP-8058",
+    "7668 与 7745 被拒",
+    "合约大小上限与 EIP-8037 留待下次",
+    "EIP-6404 改用 EIP-7932 注册表",
+    "提议 ACD-G 治理会议",
+    "PeerDAS 下的区块与 blob 传播",
+    "Vitalik 重温无需信任宣言",
+    "ePBS 分叉选择场景"
+  ],
+  "summary": "非例行的 ACDE #227：EIP-7997 确定性工厂预部署列为 CFI；合约大小上限（EIP-7907 对 EIP-7954）、EIP-7903 与 EIP-8037 待下次 ACDE；EIP-8058、EIP-7668 与 EIP-7745 被拒。EIP-6404 改用 EIP-7932 签名算法注册表并合并。poojaranjan 提议设立 ACD-G 治理会议。",
+  "items": [
+    {
+      "topic": "会议：ACDE #227",
+      "title": "ACDE #227",
+      "note": "21:00（非例行），据 Ethereal news #6：Glamsterdam 目标 2026 年 6 月；EIP-7997 确定性工厂预部署列为 CFI；合约大小上限在 EIP-7907 与 EIP-7954 之间、EIP-7903 与 EIP-8037 待下次 ACDE；EIP-8058 字节码去重折扣、EIP-7668 移除 bloom 过滤器与 EIP-7745 可信日志索引被拒。",
+      "url": "https://forkcast.org/calls/acde/227",
+      "date": "2026-01-05",
+      "title_en": "ACDE #227",
+      "note_en": "21:00 (off cycle), per Ethereal news #6: Glamsterdam targets June 2026; EIP-7997, the deterministic factory predeploy, is CFI; the contract size limit choice between EIP-7907 and EIP-7954, EIP-7903 and EIP-8037 wait for the next ACDE; EIP-8058 bytecode dedup discount, EIP-7668 removing bloom filters and EIP-7745 trustless log index are declined.",
+      "topic_en": "Calls: ACDE #227"
+    },
+    {
+      "topic": "会议：ACDE #227",
+      "title": "Ethereal news #6",
+      "note": "ACDE #227 21:00（非例行），据 Ethereal news #6：Glamsterdam 目标 2026 年 6 月；EIP-7997 确定性工厂预部署列为 CFI；合约大小上限在 EIP-7907 与 EIP-7954 之间、EIP-7903 与 EIP-8037 待下次 ACDE；EIP-8058 字节码去重折扣、EIP-7668 移除 bloom 过滤器与 EIP-7745 可信日志索引被拒。",
+      "url": "https://ethereal.news/ethereal-news-weekly-6/",
+      "date": "2026-01-05",
+      "title_en": "Ethereal news #6",
+      "note_en": "ACDE #227, 21:00 (off cycle), per Ethereal news #6: Glamsterdam targets June 2026; EIP-7997, the deterministic factory predeploy, is CFI; the contract size limit choice between EIP-7907 and EIP-7954, EIP-7903 and EIP-8037 wait for the next ACDE; EIP-8058 bytecode dedup discount, EIP-7668 removing bloom filters and EIP-7745 trustless log index are declined.",
+      "topic_en": "Calls: ACDE #227"
+    },
+    {
+      "topic": "会议：ACDE #227",
+      "title": "EIP-7997",
+      "note": "ACDE #227 21:00（非例行），据 Ethereal news #6：Glamsterdam 目标 2026 年 6 月；EIP-7997 确定性工厂预部署列为 CFI；合约大小上限在 EIP-7907 与 EIP-7954 之间、EIP-7903 与 EIP-8037 待下次 ACDE；EIP-8058 字节码去重折扣、EIP-7668 移除 bloom 过滤器与 EIP-7745 可信日志索引被拒。",
+      "url": "https://forkcast.org/eips/7997/",
+      "date": "2026-01-05",
+      "title_en": "EIP-7997",
+      "note_en": "ACDE #227, 21:00 (off cycle), per Ethereal news #6: Glamsterdam targets June 2026; EIP-7997, the deterministic factory predeploy, is CFI; the contract size limit choice between EIP-7907 and EIP-7954, EIP-7903 and EIP-8037 wait for the next ACDE; EIP-8058 bytecode dedup discount, EIP-7668 removing bloom filters and EIP-7745 trustless log index are declined.",
+      "topic_en": "Calls: ACDE #227"
+    },
+    {
+      "topic": "会议：ACDE #227",
+      "title": "EIP-8037",
+      "note": "ACDE #227 21:00（非例行），据 Ethereal news #6：Glamsterdam 目标 2026 年 6 月；EIP-7997 确定性工厂预部署列为 CFI；合约大小上限在 EIP-7907 与 EIP-7954 之间、EIP-7903 与 EIP-8037 待下次 ACDE；EIP-8058 字节码去重折扣、EIP-7668 移除 bloom 过滤器与 EIP-7745 可信日志索引被拒。",
+      "url": "https://forkcast.org/eips/8037/",
+      "date": "2026-01-05",
+      "title_en": "EIP-8037",
+      "note_en": "ACDE #227, 21:00 (off cycle), per Ethereal news #6: Glamsterdam targets June 2026; EIP-7997, the deterministic factory predeploy, is CFI; the contract size limit choice between EIP-7907 and EIP-7954, EIP-7903 and EIP-8037 wait for the next ACDE; EIP-8058 bytecode dedup discount, EIP-7668 removing bloom filters and EIP-7745 trustless log index are declined.",
+      "topic_en": "Calls: ACDE #227"
+    },
+    {
+      "topic": "签名与交易格式",
+      "title": "EIP-6404：改用新的 EIP-7932 注册表",
+      "note": "（SirSpudlington）2025 年 12 月 16 日提交后合并；EIP-5792：为状态码 600 补上 6xx 类别（PivasDesant）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10926",
+      "date": "2026-01-05",
+      "title_en": "EIP-6404: update to the new EIP-7932 registry",
+      "note_en": "(SirSpudlington), merged after submission on December 16, 2025; EIP-5792: add the missing 6xx category for status code 600 (PivasDesant), submitted.",
+      "topic_en": "Signatures and transaction formats"
+    },
+    {
+      "topic": "签名与交易格式",
+      "title": "EIP-5792：为状态码 600 补上 6xx 类别",
+      "note": "EIP-6404：改用新的 EIP-7932 注册表（SirSpudlington）2025 年 12 月 16 日提交后合并；EIP-5792：为状态码 600 补上 6xx 类别（PivasDesant）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11025",
+      "date": "2026-01-05",
+      "title_en": "EIP-5792: add the missing 6xx category for status code 600",
+      "note_en": "EIP-6404: update to the new EIP-7932 registry (SirSpudlington), merged after submission on December 16, 2025; EIP-5792: add the missing 6xx category for status code 600 (PivasDesant), submitted.",
+      "topic_en": "Signatures and transaction formats"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：设立 ACD-G 全体核心开发者治理会议",
+      "note": "（poojaranjan）06:33；ethresear.ch：PeerDAS 下的区块与 blob 传播（jonasbostoen）23:01；terencechain：ePBS 与 Gloas 的分叉选择场景 22:26。",
+      "url": "https://ethereum-magicians.org/t/introduce-acd-g-all-core-devs-governance/27387",
+      "date": "2026-01-05",
+      "title_en": "Magicians: introduce ACD-G, an All Core Devs governance call",
+      "note_en": "(poojaranjan), 06:33; ethresear.ch: block and blob propagation with PeerDAS (jonasbostoen), 23:01; terencechain: fork choice scenarios for ePBS and Gloas, 22:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：PeerDAS 下的区块与 blob 传播",
+      "note": "Magicians：设立 ACD-G 全体核心开发者治理会议（poojaranjan）06:33；ethresear.ch：PeerDAS 下的区块与 blob 传播（jonasbostoen）23:01；terencechain：ePBS 与 Gloas 的分叉选择场景 22:26。",
+      "url": "https://ethresear.ch/t/block-blob-propagation-with-peerdas/23801",
+      "date": "2026-01-05",
+      "title_en": "ethresear.ch: block and blob propagation with PeerDAS",
+      "note_en": "Magicians: introduce ACD-G, an All Core Devs governance call (poojaranjan), 06:33; ethresear.ch: block and blob propagation with PeerDAS (jonasbostoen), 23:01; terencechain: fork choice scenarios for ePBS and Gloas, 22:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "terencechain：ePBS 与 Gloas 的分叉选择场景",
+      "note": "Magicians：设立 ACD-G 全体核心开发者治理会议（poojaranjan）06:33；ethresear.ch：PeerDAS 下的区块与 blob 传播（jonasbostoen）23:01；terencechain：ePBS 与 Gloas 的分叉选择场景 22:26。",
+      "url": "https://x.com/terencechain/status/2008198330309124341",
+      "date": "2026-01-05",
+      "title_en": "terencechain: fork choice scenarios for ePBS and Gloas",
+      "note_en": "Magicians: introduce ACD-G, an All Core Devs governance call (poojaranjan), 06:33; ethresear.ch: block and blob propagation with PeerDAS (jonasbostoen), 23:01; terencechain: fork choice scenarios for ePBS and Gloas, 22:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：重温无需信任宣言中“以太坊为让人自由而生”一句",
+      "note": "20:51；aztecnetwork：Aztec 与 Noir 在以太坊上提供可编程隐私与私有状态 18:00。",
+      "url": "https://x.com/VitalikButerin/status/2008174642066845778",
+      "date": "2026-01-05",
+      "title_en": "VitalikButerin: revisits the Trustless Manifesto line that Ethereum was created to set people free",
+      "note_en": "20:51; aztecnetwork: Aztec and Noir bring programmable privacy and private state to Ethereum, 18:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Aztec 与 Noir 在以太坊上提供可编程隐私与私有状态",
+      "note": "VitalikButerin：重温无需信任宣言中“以太坊为让人自由而生”一句 20:51；aztecnetwork：Aztec 与 Noir 在以太坊上提供可编程隐私与私有状态 18:00。",
+      "url": "https://x.com/aztecnetwork/status/2008131365158506673",
+      "date": "2026-01-05",
+      "title_en": "aztecnetwork: Aztec and Noir bring programmable privacy and private state to Ethereum",
+      "note_en": "VitalikButerin: revisits the Trustless Manifesto line that Ethereum was created to set people free, 20:51; aztecnetwork: Aztec and Noir bring programmable privacy and private state to Ethereum, 18:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/introduce-acd-g-all-core-devs-governance/27387",
+    "credit": "Ethereum Magicians, Introduce ACD-G",
+    "local_path": "assets/2026-01-05.jpg",
+    "credit_en": "Ethereum Magicians, Introduce ACD-G"
+  },
+  "keywords_en": [
+    "ACDE #227 lists the EIP-7997 deterministic factory predeploy as CFI",
+    "declines EIP-8058",
+    "7668 and 7745",
+    "leaves the contract size limit and EIP-8037 for later",
+    "EIP-6404 moves to the EIP-7932 registry",
+    "an ACD-G governance call proposed",
+    "block and blob propagation under PeerDAS",
+    "Vitalik revisits the Trustless Manifesto",
+    "ePBS fork choice scenarios"
+  ],
+  "summary_en": "The off cycle ACDE #227: EIP-7997, the deterministic factory predeploy, is CFI; the contract size limit (EIP-7907 versus EIP-7954), EIP-7903 and EIP-8037 wait for the next ACDE; EIP-8058, EIP-7668 and EIP-7745 are declined. EIP-6404 moved to the EIP-7932 signature algorithm registry, merged. poojaranjan proposed an ACD-G governance call."
+}

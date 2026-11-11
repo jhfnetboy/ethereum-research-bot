@@ -1,0 +1,87 @@
+{
+  "date": "2025-12-27",
+  "keywords": [
+    "寻找经形式化验证的 7702 多签",
+    "后量子算法潜在致命缺陷综述",
+    "CoNoir 多方协同证明",
+    "Trust Wallet 被盗约 700 万美元",
+    "EIP-7973 常量名修正"
+  ],
+  "summary": "fede_intern 询问是否已有针对 EIP-7702 形式化验证的多签，并招募合作实现。zooko 推荐 Sophie Schmieg 关于后量子算法“未知的未知”的综述，认为无状态哈希签名最安全。Trust Wallet 浏览器扩展被盗约 700 万美元引发讨论。",
+  "items": [
+    {
+      "topic": "账户：7702 与后量子",
+      "title": "fede_intern：有没有针对 7702 形式化验证的多签？没有的话我们找人一起实现",
+      "note": "23:33；zooko：推荐 Sophie Schmieg 关于后量子算法潜在致命缺陷的综述，无状态哈希签名最安全 10:30。",
+      "url": "https://x.com/fede_intern/status/2004953726788968594",
+      "date": "2025-12-27",
+      "title_en": "fede_intern: is there any multisig formally verified for 7702, and if not, who wants to build one with us",
+      "note_en": "23:33; zooko: recommends Sophie Schmieg's rundown of unknown unknowns in post-quantum algorithms, with stateless hash based signatures safest, 10:30.",
+      "topic_en": "Accounts: 7702 and post-quantum"
+    },
+    {
+      "topic": "账户：7702 与后量子",
+      "title": "zooko：推荐 Sophie Schmieg 关于后量子算法潜在致命缺陷的综述，无状态哈希签名最安全",
+      "note": "fede_intern：有没有针对 7702 形式化验证的多签？没有的话我们找人一起实现 23:33；zooko：推荐 Sophie Schmieg 关于后量子算法潜在致命缺陷的综述，无状态哈希签名最安全 10:30。",
+      "url": "https://x.com/zooko/status/2004756817130520961",
+      "date": "2025-12-27",
+      "title_en": "zooko: recommends Sophie Schmieg's rundown of unknown unknowns in post-quantum algorithms, with stateless hash based signatures safest",
+      "note_en": "Fede_intern: is there any multisig formally verified for 7702, and if not, who wants to build one with us, 23:33; zooko: recommends Sophie Schmieg's rundown of unknown unknowns in post-quantum algorithms, with stateless hash based signatures safest, 10:30.",
+      "topic_en": "Accounts: 7702 and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7973：修正常量名不一致",
+      "note": "（mo-melvin77）12 月 25 日提交后合并；EIP-4762：修正格式（clarenew）12 月 15 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10977",
+      "date": "2025-12-27",
+      "title_en": "EIP-7973: fix constant name inconsistencies",
+      "note_en": "(mo-melvin77), merged after submission on December 25; EIP-4762: formatting fixes (clarenew), merged after submission on December 15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-4762：修正格式",
+      "note": "EIP-7973：修正常量名不一致（mo-melvin77）12 月 25 日提交后合并；EIP-4762：修正格式（clarenew）12 月 15 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10925",
+      "date": "2025-12-27",
+      "title_en": "EIP-4762: formatting fixes",
+      "note_en": "EIP-7973: fix constant name inconsistencies (mo-melvin77), merged after submission on December 25; EIP-4762: formatting fixes (clarenew), merged after submission on December 15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：最常用的钱包之一只被盗 700 万美元，市场真冷",
+      "note": "00:45；aztecnetwork：CoNoir 让多方无需共享私有数据就能共同生成一个证明 18:00。",
+      "url": "https://x.com/zengjiajun_eth/status/2004609498724663343",
+      "date": "2025-12-27",
+      "title_en": "zengjiajun_eth: only $7M drained from one of the most used wallets, the market is down bad",
+      "note_en": "00:45; aztecnetwork: CoNoir lets several parties make one proof without sharing private data, 18:00.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：CoNoir 让多方无需共享私有数据就能共同生成一个证明",
+      "note": "zengjiajun_eth：最常用的钱包之一只被盗 700 万美元，市场真冷 00:45；aztecnetwork：CoNoir 让多方无需共享私有数据就能共同生成一个证明 18:00。",
+      "url": "https://x.com/aztecnetwork/status/2004869872002736411",
+      "date": "2025-12-27",
+      "title_en": "aztecnetwork: CoNoir lets several parties make one proof without sharing private data",
+      "note_en": "Zengjiajun_eth: only $7M drained from one of the most used wallets, the market is down bad, 00:45; aztecnetwork: CoNoir lets several parties make one proof without sharing private data, 18:00.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/10977",
+    "credit": "GitHub, ethereum/EIPs PR 10977",
+    "local_path": "assets/2025-12-27.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR 10977"
+  },
+  "keywords_en": [
+    "Seeking a formally verified 7702 multisig",
+    "a survey of unknown unknowns in post-quantum algorithms",
+    "CoNoir multiparty proofs",
+    "about $7M drained from Trust Wallet",
+    "EIP-7973 constant name fixes"
+  ],
+  "summary_en": "fede_intern asked whether any multisig is formally verified for EIP-7702 and sought collaborators. zooko recommended Sophie Schmieg's survey of unknown unknowns in post-quantum algorithms, concluding stateless hash based signatures are safest. About $7M drained via the Trust Wallet browser extension drew discussion."
+}

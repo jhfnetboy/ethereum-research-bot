@@ -1,0 +1,97 @@
+{
+  "date": "2025-12-21",
+  "keywords": [
+    "用动态大小写校验和缓解地址投毒",
+    "EIP-7825 交易大小上限之争",
+    "RISC V zkVM 约束不够明确",
+    "ethlambda 客户端开工",
+    "EIP-7886 停滞"
+  ],
+  "summary": "Mitsuhamizu 提出仅在钱包界面实现的防地址投毒方案：收款方分享短期收款码，发送方钱包用 Keccak256(地址加收款码) 生成动态大小写指纹。fede_intern 为 EIP-7825 辩护：它限制交易大小，但让 ZK 证明更可靠。",
+  "items": [
+    {
+      "topic": "交易安全：地址投毒",
+      "title": "ethresear.ch：探索用动态大小写校验和缓解地址投毒",
+      "note": "（Mitsuhamizu）08:59：投毒利用人们只核对首尾，收款方分享短期收款码，发送方钱包用 Keccak256(地址加收款码) 生成动态大小写指纹，粘贴仿冒地址时指纹不符。",
+      "url": "https://ethresear.ch/t/exploring-dynamic-casing-checksums-to-mitigate-address-poisoning/23716",
+      "date": "2025-12-21",
+      "title_en": "ethresear.ch: Exploring dynamic casing checksums to mitigate address poisoning",
+      "note_en": "(Mitsuhamizu), 08:59: poisoning works because people check only prefix and suffix, so the receiver shares a short lived code and the sender's wallet derives a dynamic casing fingerprint from Keccak256(address plus code) that fails for a pasted lookalike.",
+      "topic_en": "Transaction safety: address poisoning"
+    },
+    {
+      "topic": "Gas：交易上限",
+      "title": "fede_intern：EIP-7825 限制交易大小，但让 ZK 更可靠，ZK 让以太坊更快",
+      "note": "10:43；potuz_eth：这一改动是为了允许更高的 gas 上限并简化证明与执行 05:24。",
+      "url": "https://x.com/fede_intern/status/2002585760487350596",
+      "date": "2025-12-21",
+      "title_en": "fede_intern: EIP-7825 caps transaction size but makes ZK reliable, and ZK makes Ethereum faster",
+      "note_en": "10:43; potuz_eth: the change allows a larger gas limit and easier proving and execution, 05:24.",
+      "topic_en": "Gas: the transaction cap"
+    },
+    {
+      "topic": "Gas：交易上限",
+      "title": "potuz_eth：这一改动是为了允许更高的 gas 上限并简化证明与执行",
+      "note": "fede_intern：EIP-7825 限制交易大小，但让 ZK 更可靠，ZK 让以太坊更快 10:43；potuz_eth：这一改动是为了允许更高的 gas 上限并简化证明与执行 05:24。",
+      "url": "https://x.com/potuz_eth/status/2002505416887185608",
+      "date": "2025-12-21",
+      "title_en": "potuz_eth: the change allows a larger gas limit and easier proving and execution",
+      "note_en": "Fede_intern: EIP-7825 caps transaction size but makes ZK reliable, and ZK makes Ethereum faster, 10:43; potuz_eth: the change allows a larger gas limit and easier proving and execution, 05:24.",
+      "topic_en": "Gas: the transaction cap"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7886 停滞标记",
+      "note": "（eth-bot）提交；Magicians：终极 Web3 浏览器设计 21:43。",
+      "url": "https://github.com/ethereum/EIPs/pull/10963",
+      "date": "2025-12-21",
+      "title_en": "EIP-7886: stagnant flag",
+      "note_en": "(eth-bot), submitted; Magicians: The ultimate Web3 browser design, 21:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：终极 Web3 浏览器设计",
+      "note": "EIP-7886 停滞标记（eth-bot）提交；Magicians：终极 Web3 浏览器设计 21:43。",
+      "url": "https://ethereum-magicians.org/t/the-ultimate-web3-browser-design/27269",
+      "date": "2025-12-21",
+      "title_en": "Magicians: The ultimate Web3 browser design",
+      "note_en": "EIP-7886: stagnant flag (eth-bot), submitted; Magicians: The ultimate Web3 browser design, 21:43.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：多数 RISC V zkVM 的约束在代码和文档中都不够明确，这是以太坊的大问题",
+      "note": "03:36；fede_intern：开始开发 leanEthereum 客户端 ethlambda 23:10。",
+      "url": "https://x.com/fede_intern/status/2002478117592686613",
+      "date": "2025-12-21",
+      "title_en": "fede_intern: most RISC V zkVM constraints are not explicit in code or docs, a big problem for Ethereum",
+      "note_en": "03:36; fede_intern: started the leanEthereum client ethlambda, 23:10.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：开始开发 leanEthereum 客户端 ethlambda",
+      "note": "fede_intern：多数 RISC V zkVM 的约束在代码和文档中都不够明确，这是以太坊的大问题 03:36；fede_intern：开始开发 leanEthereum 客户端 ethlambda 23:10。",
+      "url": "https://x.com/fede_intern/status/2002773757912289392",
+      "date": "2025-12-21",
+      "title_en": "fede_intern: started the leanEthereum client ethlambda",
+      "note_en": "Fede_intern: most RISC V zkVM constraints are not explicit in code or docs, a big problem for Ethereum, 03:36; fede_intern: started the leanEthereum client ethlambda, 23:10.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/exploring-dynamic-casing-checksums-to-mitigate-address-poisoning/23716",
+    "credit": "ethresear.ch, Exploring Dynamic Casing Checksums to Mitigate Address Poisoning",
+    "local_path": "assets/2025-12-21.jpg",
+    "credit_en": "ethresear.ch, Exploring Dynamic Casing Checksums to Mitigate Address Poisoning"
+  },
+  "keywords_en": [
+    "Dynamic casing checksums against address poisoning",
+    "the debate over the EIP-7825 transaction cap",
+    "unclear constraints in RISC V zkVMs",
+    "ethlambda client work begins",
+    "EIP-7886 stagnant"
+  ],
+  "summary_en": "Mitsuhamizu proposed a wallet UI only defense against address poisoning: the receiver shares a short lived code and the sender's wallet derives a dynamic casing fingerprint from Keccak256(address plus code). fede_intern defended EIP-7825: it caps transaction size but makes ZK proving reliable."
+}

@@ -1,0 +1,121 @@
+{
+  "date": "2026-01-09",
+  "keywords": [
+    "ERC-8118 Agent 授权",
+    "Truebit 2021 年部署合约遭 2600 万美元攻击",
+    "TimBeiko 转向探索以太坊前沿应用",
+    "FOCIL 与抗审查之争",
+    "Vitalik 为 Roman Storm 写支持信",
+    "地址压缩显示格式 ERC 合并",
+    "ERC-8122 极简 Agent 注册表提交"
+  ],
+  "summary": "0xvimer 提出 ERC-8118，定义授权自主 Agent 代表用户执行特定链上操作的标准接口。2021 年部署的 Truebit 合约遭约 2600 万美元攻击。TimBeiko 宣布未来几个月从 L1 研发转向探索以太坊前沿应用。nero_eth 与 soispoke 就 FOCIL 能否等同抗审查展开讨论。",
+  "items": [
+    {
+      "topic": "账户：Agent 授权",
+      "title": "Magicians：ERC-8118 Agent 授权",
+      "note": "（0xvimer）15:23：为机器人、AI 系统或自动化账户代表用户执行特定链上操作定义标准授权接口；新增 ERC：极简 Agent 注册表（nxt3d）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8118-agent-authorization/27402",
+      "date": "2026-01-09",
+      "title_en": "Magicians: ERC-8118 Agent Authorization",
+      "note_en": "(0xvimer), 15:23: a standard interface for authorizing bots, AI systems or automated accounts to perform specific onchain actions for users; Add ERC: Minimal Agent Registry (nxt3d), submitted.",
+      "topic_en": "Accounts: agent authorization"
+    },
+    {
+      "topic": "账户：Agent 授权",
+      "title": "新增 ERC：极简 Agent 注册表",
+      "note": "Magicians：ERC-8118 Agent 授权（0xvimer）15:23：为机器人、AI 系统或自动化账户代表用户执行特定链上操作定义标准授权接口；新增 ERC：极简 Agent 注册表（nxt3d）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1463",
+      "date": "2026-01-09",
+      "title_en": "Add ERC: Minimal Agent Registry",
+      "note_en": "Magicians: ERC-8118 Agent Authorization (0xvimer), 15:23: a standard interface for authorizing bots, AI systems or automated accounts to perform specific onchain actions for users; Add ERC: Minimal Agent Registry (nxt3d), submitted.",
+      "topic_en": "Accounts: agent authorization"
+    },
+    {
+      "topic": "交易：FOCIL 与抗审查",
+      "title": "nero_eth：别把 FOCIL 简单等同于抗审查，减半出块时间同样关键",
+      "note": "12:11；soispoke：FOCIL 确实提升抗审查，它借助多个验证者削弱大型参与方对交易打包的影响 15:01。",
+      "url": "https://x.com/nero_eth/status/2009493204802936840",
+      "date": "2026-01-09",
+      "title_en": "nero_eth: stop equating FOCIL with censorship resistance, and halving slot time is a game changer too",
+      "note_en": "12:11; soispoke: FOCIL does improve censorship resistance by using many validators to curb outsized parties' influence over inclusion, 15:01.",
+      "topic_en": "Transactions: FOCIL and censorship resistance"
+    },
+    {
+      "topic": "交易：FOCIL 与抗审查",
+      "title": "soispoke：FOCIL 确实提升抗审查，它借助多个验证者削弱大型参与方对交易打包的影响",
+      "note": "nero_eth：别把 FOCIL 简单等同于抗审查，减半出块时间同样关键 12:11；soispoke：FOCIL 确实提升抗审查，它借助多个验证者削弱大型参与方对交易打包的影响 15:01。",
+      "url": "https://x.com/soispoke/status/2009535980026376435",
+      "date": "2026-01-09",
+      "title_en": "soispoke: FOCIL does improve censorship resistance by using many validators to curb outsized parties' influence over inclusion",
+      "note_en": "Nero_eth: stop equating FOCIL with censorship resistance, and halving slot time is a game changer too, 12:11; soispoke: FOCIL does improve censorship resistance by using many validators to curb outsized parties' influence over inclusion, 15:01.",
+      "topic_en": "Transactions: FOCIL and censorship resistance"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：地址压缩显示格式",
+      "note": "（xinbenlv）2025 年 12 月 31 日提交后合并；pashov：Truebit 2021 年部署的合约遭约 2600 万美元攻击 01:40。",
+      "url": "https://github.com/ethereum/ERCs/pull/1438",
+      "date": "2026-01-09",
+      "title_en": "Add ERC: Compressed Display Format for Addresses",
+      "note_en": "(xinbenlv), merged after submission on December 31, 2025; pashov: a Truebit contract deployed in 2021 was exploited for about $26M, 01:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "pashov：Truebit 2021 年部署的合约遭约 2600 万美元攻击",
+      "note": "新增 ERC：地址压缩显示格式（xinbenlv）2025 年 12 月 31 日提交后合并；pashov：Truebit 2021 年部署的合约遭约 2600 万美元攻击 01:40。",
+      "url": "https://x.com/pashov/status/2009334293798244626",
+      "date": "2026-01-09",
+      "title_en": "pashov: a Truebit contract deployed in 2021 was exploited for about $26M",
+      "note_en": "Add ERC: Compressed Display Format for Addresses (xinbenlv), merged after submission on December 31, 2025; pashov: a Truebit contract deployed in 2021 was exploited for about $26M, 01:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "TimBeiko：未来几个月将从 L1 研发转向探索以太坊前沿应用，协议正接近终局",
+      "note": "20:55；VitalikButerin：为 Roman Storm 写的支持信 13:51；aztecnetwork：Zac 谈可编程隐私为何要从零构建 Aztec 22:47。",
+      "url": "https://x.com/TimBeiko/status/2009625017554772107",
+      "date": "2026-01-09",
+      "title_en": "TimBeiko: over the next months he moves from L1 R&D to frontier Ethereum use cases as the protocol nears its endgame",
+      "note_en": "20:55; VitalikButerin: his letter of support for Roman Storm, 13:51; aztecnetwork: Zac on why programmable privacy meant building Aztec from scratch, 22:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：为 Roman Storm 写的支持信",
+      "note": "TimBeiko：未来几个月将从 L1 研发转向探索以太坊前沿应用，协议正接近终局 20:55；VitalikButerin：为 Roman Storm 写的支持信 13:51；aztecnetwork：Zac 谈可编程隐私为何要从零构建 Aztec 22:47。",
+      "url": "https://x.com/VitalikButerin/status/2009518473173512379",
+      "date": "2026-01-09",
+      "title_en": "VitalikButerin: his letter of support for Roman Storm",
+      "note_en": "TimBeiko: over the next months he moves from L1 R&D to frontier Ethereum use cases as the protocol nears its endgame, 20:55; VitalikButerin: his letter of support for Roman Storm, 13:51; aztecnetwork: Zac on why programmable privacy meant building Aztec from scratch, 22:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Zac 谈可编程隐私为何要从零构建 Aztec",
+      "note": "TimBeiko：未来几个月将从 L1 研发转向探索以太坊前沿应用，协议正接近终局 20:55；VitalikButerin：为 Roman Storm 写的支持信 13:51；aztecnetwork：Zac 谈可编程隐私为何要从零构建 Aztec 22:47。",
+      "url": "https://x.com/aztecnetwork/status/2009653253265367372",
+      "date": "2026-01-09",
+      "title_en": "aztecnetwork: Zac on why programmable privacy meant building Aztec from scratch",
+      "note_en": "TimBeiko: over the next months he moves from L1 R&D to frontier Ethereum use cases as the protocol nears its endgame, 20:55; VitalikButerin: his letter of support for Roman Storm, 13:51; aztecnetwork: Zac on why programmable privacy meant building Aztec from scratch, 22:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8118-agent-authorization/27402",
+    "credit": "Ethereum Magicians, ERC-8118 Agent Authorization",
+    "local_path": "assets/2026-01-09.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8118 Agent Authorization"
+  },
+  "keywords_en": [
+    "ERC-8118 agent authorization",
+    "a $26M exploit of a Truebit contract deployed in 2021",
+    "TimBeiko shifts to frontier Ethereum use cases",
+    "the FOCIL and censorship resistance debate",
+    "Vitalik writes a support letter for Roman Storm",
+    "a compressed address display ERC merged",
+    "ERC-8122 minimal agent registry submitted"
+  ],
+  "summary_en": "0xvimer proposed ERC-8118, a standard interface for authorizing autonomous agents to perform specific onchain actions for users. A Truebit contract deployed in 2021 was exploited for about $26M. TimBeiko said he will shift from L1 R&D to frontier Ethereum use cases. nero_eth and soispoke debated whether FOCIL equals censorship resistance."
+}

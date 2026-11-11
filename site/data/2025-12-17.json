@@ -1,0 +1,161 @@
+{
+  "date": "2025-12-17",
+  "keywords": [
+    "通用协议内加密内存池 EIP 提交",
+    "ML-DSA 验签预编译 EIP 合并",
+    "EIP-8077 nonce 缺口模拟",
+    "EIP-7928 BAL 移出执行层区块",
+    "EIP-7907 账户元组加入 codesize",
+    "证明一个区块只需约一美分",
+    "ERC-8107 ENS 信任注册表"
+  ],
+  "summary": "jannikluhn 提交通用协议内加密内存池 EIP（后编号 EIP-8105），用户的交易在打包前保持加密，防止抢跑与三明治攻击。simonmasson 的 ML-DSA 验签预编译 EIP 合并。nerolation 合并三项 EIP-7928 BAL 修改，包括把 BAL 移出执行层区块。fede_intern 称证明一个区块的成本从年初约 1.7 美元降至约一美分。",
+  "items": [
+    {
+      "topic": "交易隐私：协议内加密内存池",
+      "title": "新增 EIP：通用协议内加密内存池",
+      "note": "（jannikluhn）提交；ethresear.ch 讨论 20:47 与 Magicians：EIP-8105 20:50：方案与加密机制无关，交易在打包前保持加密，防止抢跑。",
+      "url": "https://github.com/ethereum/EIPs/pull/10943",
+      "date": "2025-12-17",
+      "title_en": "Add EIP: Universal Enshrined Encrypted Mempool",
+      "note_en": "(jannikluhn), submitted; ethresear.ch discussion, 20:47, and Magicians: EIP-8105, 20:50: scheme agnostic, transactions stay encrypted until included, preventing frontrunning.",
+      "topic_en": "Transaction privacy: an enshrined encrypted mempool"
+    },
+    {
+      "topic": "交易隐私：协议内加密内存池",
+      "title": "ethresear.ch 讨论",
+      "note": "新增 EIP：通用协议内加密内存池（jannikluhn）提交；ethresear.ch 讨论 20:47 与 Magicians：EIP-8105 20:50：方案与加密机制无关，交易在打包前保持加密，防止抢跑。",
+      "url": "https://ethresear.ch/t/universal-enshrined-encrypted-mempool-eip/23685",
+      "date": "2025-12-17",
+      "title_en": "ethresear.ch discussion",
+      "note_en": "Add EIP: Universal Enshrined Encrypted Mempool (jannikluhn), submitted; ethresear.ch discussion, 20:47, and Magicians: EIP-8105, 20:50: scheme agnostic, transactions stay encrypted until included, preventing frontrunning.",
+      "topic_en": "Transaction privacy: an enshrined encrypted mempool"
+    },
+    {
+      "topic": "交易隐私：协议内加密内存池",
+      "title": "Magicians：EIP-8105",
+      "note": "新增 EIP：通用协议内加密内存池（jannikluhn）提交；ethresear.ch 讨论 20:47 与 Magicians：EIP-8105 20:50：方案与加密机制无关，交易在打包前保持加密，防止抢跑。",
+      "url": "https://ethereum-magicians.org/t/eip-8105-universal-enshrined-encrypted-mempool/27201",
+      "date": "2025-12-17",
+      "title_en": "Magicians: EIP-8105",
+      "note_en": "Add EIP: Universal Enshrined Encrypted Mempool (jannikluhn), submitted; ethresear.ch discussion, 20:47, and Magicians: EIP-8105, 20:50: scheme agnostic, transactions stay encrypted until included, preventing frontrunning.",
+      "topic_en": "Transaction privacy: an enshrined encrypted mempool"
+    },
+    {
+      "topic": "签名：ML-DSA 预编译",
+      "title": "新增 EIP：ML-DSA 验签预编译",
+      "note": "（simonmasson）2025 年 10 月 17 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10557",
+      "date": "2025-12-17",
+      "title_en": "Add EIP: Precompile for ML-DSA signature verification",
+      "note_en": "(simonmasson), merged after submission on October 17, 2025.",
+      "topic_en": "Signatures: the ML-DSA precompile"
+    },
+    {
+      "topic": "Gas 与区块结构",
+      "title": "ethresear.ch：EIP-8077 nonce 缺口模拟报告",
+      "note": "（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）11 月 9 日提交后合并。",
+      "url": "https://ethresear.ch/t/eip-8077-nonce-gap-simulation-report/23687",
+      "date": "2025-12-17",
+      "title_en": "ethresear.ch: EIP-8077 nonce gap simulation report",
+      "note_en": "(leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9.",
+      "topic_en": "Gas and block structure"
+    },
+    {
+      "topic": "Gas 与区块结构",
+      "title": "EIP-7928：把 BAL 移出执行层区块",
+      "note": "ethresear.ch：EIP-8077 nonce 缺口模拟报告（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）11 月 9 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10937",
+      "date": "2025-12-17",
+      "title_en": "EIP-7928: remove BAL from the EL block",
+      "note_en": "Ethresear.ch: EIP-8077 nonce gap simulation report (leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9.",
+      "topic_en": "Gas and block structure"
+    },
+    {
+      "topic": "Gas 与区块结构",
+      "title": "EIP-7907：账户元组加入 codesize 并更新每字 gas",
+      "note": "ethresear.ch：EIP-8077 nonce 缺口模拟报告（leobago）22:12：蒙特卡洛模拟分片 blob 内存池中同一发送者连续 blob 交易被分到不同分片的频率；EIP-7928：把 BAL 移出执行层区块（nerolation）提交并合并；EIP-7907：账户元组加入 codesize 并更新每字 gas（charles-cooper）11 月 9 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10758",
+      "date": "2025-12-17",
+      "title_en": "EIP-7907: add codesize to the account tuple and update gas per word",
+      "note_en": "Ethresear.ch: EIP-8077 nonce gap simulation report (leobago), 22:12: a Monte Carlo study of how often one sender's consecutive blob transactions land in different shards of a sharded blob mempool; EIP-7928: remove BAL from the EL block (nerolation), submitted and merged; EIP-7907: add codesize to the account tuple and update gas per word (charles-cooper), merged after submission on November 9.",
+      "topic_en": "Gas and block structure"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8107 面向 Agent 协作的 ENS 信任注册表",
+      "note": "（KBryan）20:33；ERC-7656 进入 Final（sullof）提交；EIP-1：加入网络升级纳入字段（nconsigny）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8107-ens-trust-registry-for-agent-coordination/27200",
+      "date": "2025-12-17",
+      "title_en": "Magicians: ERC-8107 ENS Trust Registry for Agent Coordination",
+      "note_en": "(KBryan), 20:33; ERC-7656: move to Final (sullof), submitted; EIP-1: add Network Upgrade Inclusion (nconsigny), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7656 进入 Final",
+      "note": "Magicians：ERC-8107 面向 Agent 协作的 ENS 信任注册表（KBryan）20:33；ERC-7656 进入 Final（sullof）提交；EIP-1：加入网络升级纳入字段（nconsigny）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1413",
+      "date": "2025-12-17",
+      "title_en": "ERC-7656: move to Final",
+      "note_en": "Magicians: ERC-8107 ENS Trust Registry for Agent Coordination (KBryan), 20:33; ERC-7656: move to Final (sullof), submitted; EIP-1: add Network Upgrade Inclusion (nconsigny), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-1：加入网络升级纳入字段",
+      "note": "Magicians：ERC-8107 面向 Agent 协作的 ENS 信任注册表（KBryan）20:33；ERC-7656 进入 Final（sullof）提交；EIP-1：加入网络升级纳入字段（nconsigny）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10936",
+      "date": "2025-12-17",
+      "title_en": "EIP-1: add Network Upgrade Inclusion",
+      "note_en": "Magicians: ERC-8107 ENS Trust Registry for Agent Coordination (KBryan), 20:33; ERC-7656: move to Final (sullof), submitted; EIP-1: add Network Upgrade Inclusion (nconsigny), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：证明一个以太坊区块约一美分，年初约 1.7 美元，下降 170 倍",
+      "note": "13:45；VitalikButerin：让更多人能从头到尾理解整个协议是被低估的无需信任 23:47；sigp_io：Web3 安全审查入门指南 11:15。",
+      "url": "https://x.com/fede_intern/status/2001181965039390926",
+      "date": "2025-12-17",
+      "title_en": "fede_intern: proving an Ethereum block costs about a cent, down 170x from about $1.70 at the start of the year",
+      "note_en": "13:45; VitalikButerin: more people able to understand the whole protocol is an underrated form of trustlessness, 23:47; sigp_io: a guide to getting into Web3 security reviewing, 11:15.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：让更多人能从头到尾理解整个协议是被低估的无需信任",
+      "note": "fede_intern：证明一个以太坊区块约一美分，年初约 1.7 美元，下降 170 倍 13:45；VitalikButerin：让更多人能从头到尾理解整个协议是被低估的无需信任 23:47；sigp_io：Web3 安全审查入门指南 11:15。",
+      "url": "https://x.com/VitalikButerin/status/2001333394614132884",
+      "date": "2025-12-17",
+      "title_en": "VitalikButerin: more people able to understand the whole protocol is an underrated form of trustlessness",
+      "note_en": "Fede_intern: proving an Ethereum block costs about a cent, down 170x from about $1.70 at the start of the year, 13:45; VitalikButerin: more people able to understand the whole protocol is an underrated form of trustlessness, 23:47; sigp_io: a guide to getting into Web3 security reviewing, 11:15.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "sigp_io：Web3 安全审查入门指南",
+      "note": "fede_intern：证明一个以太坊区块约一美分，年初约 1.7 美元，下降 170 倍 13:45；VitalikButerin：让更多人能从头到尾理解整个协议是被低估的无需信任 23:47；sigp_io：Web3 安全审查入门指南 11:15。",
+      "url": "https://x.com/sigp_io/status/2001144309945712718",
+      "date": "2025-12-17",
+      "title_en": "sigp_io: a guide to getting into Web3 security reviewing",
+      "note_en": "Fede_intern: proving an Ethereum block costs about a cent, down 170x from about $1.70 at the start of the year, 13:45; VitalikButerin: more people able to understand the whole protocol is an underrated form of trustlessness, 23:47; sigp_io: a guide to getting into Web3 security reviewing, 11:15.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/universal-enshrined-encrypted-mempool-eip/23685",
+    "credit": "ethresear.ch, Universal Enshrined Encrypted Mempool EIP",
+    "local_path": "assets/2025-12-17.jpg",
+    "credit_en": "ethresear.ch, Universal Enshrined Encrypted Mempool EIP"
+  },
+  "keywords_en": [
+    "A universal enshrined encrypted mempool EIP submitted",
+    "the ML-DSA verification precompile EIP merged",
+    "the EIP-8077 nonce gap simulation",
+    "EIP-7928 removes BAL from the EL block",
+    "EIP-7907 adds codesize to the account tuple",
+    "proving a block costs about a cent",
+    "ERC-8107 ENS trust registry"
+  ],
+  "summary_en": "jannikluhn submitted the universal enshrined encrypted mempool EIP (later EIP-8105): transactions stay encrypted until included, blocking frontrunning and sandwiching. simonmasson's ML-DSA verification precompile EIP merged. nerolation merged three EIP-7928 BAL changes, including removing BAL from the EL block. fede_intern said proving a block fell from about $1.70 at the start of the year to about one cent."
+}

@@ -1,0 +1,173 @@
+{
+  "date": "2026-01-08",
+  "keywords": [
+    "ERC-4337 进入 Review",
+    "ACDC #172 Hegotá 头号提案截止 2 月 4 日",
+    "EIP-7773 依 ACDE #227 列 EIP-7997 为 CFI",
+    "Bound Signatures ERC 合并",
+    "ERC-7674 进入 Review",
+    "用同步可组合解决碎片化",
+    "Vitalik 带宽比延迟更安全",
+    "BPO2 上线"
+  ],
+  "summary": "ERC-4337 进入 Review，ERC-7674 同日进入 Review，Bound Signatures ERC 合并。ACDC #172 确定 Hegotá 头号提案截止 2 月 4 日，需要 Magicians 帖子与 ACD 演示。nixorokish 依 ACDE #227 更新 EIP-7773：EIP-7997 确定性工厂预部署列为 CFI，EIP-8058、7668、7745 被拒。",
+  "items": [
+    {
+      "topic": "账户：ERC-4337 进入 Review",
+      "title": "ERC-4337 进入 Review",
+      "note": "（drortirosh）2025 年 4 月 17 日提交后合并；ERC-7674 进入 Review（Amxx）2025 年 12 月 15 日提交后合并；新增 ERC：Bound Signatures（wjmelements）2025 年 12 月 24 日提交后合并，作为 ERC-2098 的替代签名格式。",
+      "url": "https://github.com/ethereum/ERCs/pull/1014",
+      "date": "2026-01-08",
+      "title_en": "ERC-4337: move to Review",
+      "note_en": "(drortirosh), merged after submission on April 17, 2025; ERC-7674: move to Review (Amxx), merged after submission on December 15, 2025; Add ERC: Bound Signatures (wjmelements), merged after submission on December 24, 2025, an alternative to ERC-2098.",
+      "topic_en": "Accounts: ERC-4337 moves to Review"
+    },
+    {
+      "topic": "账户：ERC-4337 进入 Review",
+      "title": "ERC-7674 进入 Review",
+      "note": "ERC-4337 进入 Review（drortirosh）2025 年 4 月 17 日提交后合并；ERC-7674 进入 Review（Amxx）2025 年 12 月 15 日提交后合并；新增 ERC：Bound Signatures（wjmelements）2025 年 12 月 24 日提交后合并，作为 ERC-2098 的替代签名格式。",
+      "url": "https://github.com/ethereum/ERCs/pull/1404",
+      "date": "2026-01-08",
+      "title_en": "ERC-7674: move to Review",
+      "note_en": "ERC-4337: move to Review (drortirosh), merged after submission on April 17, 2025; ERC-7674: move to Review (Amxx), merged after submission on December 15, 2025; Add ERC: Bound Signatures (wjmelements), merged after submission on December 24, 2025, an alternative to ERC-2098.",
+      "topic_en": "Accounts: ERC-4337 moves to Review"
+    },
+    {
+      "topic": "账户：ERC-4337 进入 Review",
+      "title": "新增 ERC：Bound Signatures",
+      "note": "ERC-4337 进入 Review（drortirosh）2025 年 4 月 17 日提交后合并；ERC-7674 进入 Review（Amxx）2025 年 12 月 15 日提交后合并；新增 ERC：Bound Signatures（wjmelements）2025 年 12 月 24 日提交后合并，作为 ERC-2098 的替代签名格式。",
+      "url": "https://github.com/ethereum/ERCs/pull/1427",
+      "date": "2026-01-08",
+      "title_en": "Add ERC: Bound Signatures",
+      "note_en": "ERC-4337: move to Review (drortirosh), merged after submission on April 17, 2025; ERC-7674: move to Review (Amxx), merged after submission on December 15, 2025; Add ERC: Bound Signatures (wjmelements), merged after submission on December 24, 2025, an alternative to ERC-2098.",
+      "topic_en": "Accounts: ERC-4337 moves to Review"
+    },
+    {
+      "topic": "会议：ACDC #172 与 ACDE #227 决定",
+      "title": "ACDC #172",
+      "note": "21:00，据 Ethereal news #6：Hegotá 头号提案截止 2 月 4 日，需在 Magicians 发帖并在 ACD 演示；提议 EIP 负责人指南。",
+      "url": "https://forkcast.org/calls/acdc/172",
+      "date": "2026-01-08",
+      "title_en": "ACDC #172",
+      "note_en": "21:00, per Ethereal news #6: Hegotá headliner proposals are due February 4 and need a Magicians post and an ACD presentation; an EIP champion guide was proposed.",
+      "topic_en": "Calls: ACDC #172 and ACDE #227 decisions"
+    },
+    {
+      "topic": "会议：ACDC #172 与 ACDE #227 决定",
+      "title": "Ethereal news #6",
+      "note": "ACDC #172 21:00，据 Ethereal news #6：Hegotá 头号提案截止 2 月 4 日，需在 Magicians 发帖并在 ACD 演示；提议 EIP 负责人指南。",
+      "url": "https://ethereal.news/ethereal-news-weekly-6/",
+      "date": "2026-01-08",
+      "title_en": "Ethereal news #6",
+      "note_en": "ACDC #172, 21:00, per Ethereal news #6: Hegotá headliner proposals are due February 4 and need a Magicians post and an ACD presentation; an EIP champion guide was proposed.",
+      "topic_en": "Calls: ACDC #172 and ACDE #227 decisions"
+    },
+    {
+      "topic": "会议：ACDC #172 与 ACDE #227 决定",
+      "title": "Hegotá 头号提案",
+      "note": "ACDC #172 21:00，据 Ethereal news #6：Hegotá 头号提案截止 2 月 4 日，需在 Magicians 发帖并在 ACD 演示；提议 EIP 负责人指南。",
+      "url": "https://ethereum-magicians.org/t/eip-8081-hegota-network-upgrade-meta-thread/26876",
+      "date": "2026-01-08",
+      "title_en": "Hegotá headliner proposals",
+      "note_en": "ACDC #172, 21:00, per Ethereal news #6: Hegotá headliner proposals are due February 4 and need a Magicians post and an ACD presentation; an EIP champion guide was proposed.",
+      "topic_en": "Calls: ACDC #172 and ACDE #227 decisions"
+    },
+    {
+      "topic": "会议：ACDC #172 与 ACDE #227 决定",
+      "title": "EIP 负责人指南",
+      "note": "ACDC #172 21:00，据 Ethereal news #6：Hegotá 头号提案截止 2 月 4 日，需在 Magicians 发帖并在 ACD 演示；提议 EIP 负责人指南。",
+      "url": "https://github.com/ethereum/pm/pull/1864",
+      "date": "2026-01-08",
+      "title_en": "EIP champion guide",
+      "note_en": "ACDC #172, 21:00, per Ethereal news #6: Hegotá headliner proposals are due February 4 and need a Magicians post and an ACD presentation; an EIP champion guide was proposed.",
+      "topic_en": "Calls: ACDC #172 and ACDE #227 decisions"
+    },
+    {
+      "topic": "会议：ACDC #172 与 ACDE #227 决定",
+      "title": "EIP-7773：依 ACDE #227 更新状态",
+      "note": "（nixorokish）提交并合并：EIP-7997 列为 CFI，EIP-8058、EIP-7668、EIP-7745 列为 DFI。",
+      "url": "https://github.com/ethereum/EIPs/pull/11041",
+      "date": "2026-01-08",
+      "title_en": "EIP-7773: status updates from ACDE #227",
+      "note_en": "(nixorokish), submitted and merged: EIP-7997 to CFI, EIP-8058, EIP-7668 and EIP-7745 to DFI.",
+      "topic_en": "Calls: ACDC #172 and ACDE #227 decisions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：用同步可组合解决以太坊碎片化",
+      "note": "（alonmuroch）13:20；ethereum：第二次 BPO 分叉已完成 00:45；ERC-7984：name() 与 symbol() 改为必需（arr00）提交并合并。",
+      "url": "https://ethresear.ch/t/solving-ethereum-s-fragmentation-problem-with-sync-composability/23814",
+      "date": "2026-01-08",
+      "title_en": "ethresear.ch: Solving Ethereum's fragmentation problem with sync composability",
+      "note_en": "(alonmuroch), 13:20; ethereum: the second BPO fork happened, 00:45; ERC-7984: make name() and symbol() mandatory (arr00), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereum：第二次 BPO 分叉已完成",
+      "note": "ethresear.ch：用同步可组合解决以太坊碎片化（alonmuroch）13:20；ethereum：第二次 BPO 分叉已完成 00:45；ERC-7984：name() 与 symbol() 改为必需（arr00）提交并合并。",
+      "url": "https://x.com/ethereum/status/2008958120035283285",
+      "date": "2026-01-08",
+      "title_en": "ethereum: the second BPO fork happened",
+      "note_en": "Ethresear.ch: Solving Ethereum's fragmentation problem with sync composability (alonmuroch), 13:20; ethereum: the second BPO fork happened, 00:45; ERC-7984: make name() and symbol() mandatory (arr00), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7984：name() 与 symbol() 改为必需",
+      "note": "ethresear.ch：用同步可组合解决以太坊碎片化（alonmuroch）13:20；ethereum：第二次 BPO 分叉已完成 00:45；ERC-7984：name() 与 symbol() 改为必需（arr00）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1461",
+      "date": "2026-01-08",
+      "title_en": "ERC-7984: make name() and symbol() mandatory",
+      "note_en": "Ethresear.ch: Solving Ethereum's fragmentation problem with sync composability (alonmuroch), 13:20; ethereum: the second BPO fork happened, 00:45; ERC-7984: make name() and symbol() mandatory (arr00), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：提高带宽比降低延迟更安全，借助 PeerDAS 与 ZKP 可扩容数千倍",
+      "note": "14:00；VitalikButerin：以太坊像 BitTorrent 与 Linux 13:46；peter_szilagyi：从椭圆曲线换到后量子密码有多难 21:02。",
+      "url": "https://x.com/VitalikButerin/status/2009158272943599877",
+      "date": "2026-01-08",
+      "title_en": "VitalikButerin: increasing bandwidth is safer than reducing latency, and PeerDAS plus ZKPs could scale thousands of times",
+      "note_en": "14:00; VitalikButerin: Ethereum is like BitTorrent and Linux, 13:46; peter_szilagyi: how hard is switching from elliptic curve to post-quantum crypto, 21:02.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：以太坊像 BitTorrent 与 Linux",
+      "note": "VitalikButerin：提高带宽比降低延迟更安全，借助 PeerDAS 与 ZKP 可扩容数千倍 14:00；VitalikButerin：以太坊像 BitTorrent 与 Linux 13:46；peter_szilagyi：从椭圆曲线换到后量子密码有多难 21:02。",
+      "url": "https://x.com/VitalikButerin/status/2009154666467074392",
+      "date": "2026-01-08",
+      "title_en": "VitalikButerin: Ethereum is like BitTorrent and Linux",
+      "note_en": "VitalikButerin: increasing bandwidth is safer than reducing latency, and PeerDAS plus ZKPs could scale thousands of times, 14:00; VitalikButerin: Ethereum is like BitTorrent and Linux, 13:46; peter_szilagyi: how hard is switching from elliptic curve to post-quantum crypto, 21:02.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：从椭圆曲线换到后量子密码有多难",
+      "note": "VitalikButerin：提高带宽比降低延迟更安全，借助 PeerDAS 与 ZKP 可扩容数千倍 14:00；VitalikButerin：以太坊像 BitTorrent 与 Linux 13:46；peter_szilagyi：从椭圆曲线换到后量子密码有多难 21:02。",
+      "url": "https://x.com/peter_szilagyi/status/2009264475338133764",
+      "date": "2026-01-08",
+      "title_en": "peter_szilagyi: how hard is switching from elliptic curve to post-quantum crypto",
+      "note_en": "VitalikButerin: increasing bandwidth is safer than reducing latency, and PeerDAS plus ZKPs could scale thousands of times, 14:00; VitalikButerin: Ethereum is like BitTorrent and Linux, 13:46; peter_szilagyi: how hard is switching from elliptic curve to post-quantum crypto, 21:02.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/solving-ethereum-s-fragmentation-problem-with-sync-composability/23814",
+    "credit": "ethresear.ch, Solving Ethereum's Fragmentation Problem With Sync Composability",
+    "local_path": "assets/2026-01-08.jpg",
+    "credit_en": "ethresear.ch, Solving Ethereum's Fragmentation Problem With Sync Composability"
+  },
+  "keywords_en": [
+    "ERC-4337 moves to Review",
+    "ACDC #172 sets the Hegotá headliner deadline at February 4",
+    "EIP-7773 lists EIP-7997 as CFI per ACDE #227",
+    "a Bound Signatures ERC merged",
+    "ERC-7674 moves to Review",
+    "sync composability against fragmentation",
+    "Vitalik says more bandwidth is safer than less latency",
+    "BPO2 live"
+  ],
+  "summary_en": "ERC-4337 moved to Review, ERC-7674 did too the same day, and a Bound Signatures ERC merged. ACDC #172 set the Hegotá headliner deadline at February 4, requiring a Magicians post and an ACD presentation. nixorokish updated EIP-7773 per ACDE #227: EIP-7997, the deterministic factory predeploy, is CFI, and EIP-8058, 7668 and 7745 are declined."
+}

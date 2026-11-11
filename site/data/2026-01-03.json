@@ -1,0 +1,65 @@
+{
+  "date": "2026-01-03",
+  "keywords": [
+    "EIP-7773 依 ACDE #226 更新 EIP 状态",
+    "EIP-8037 更新提交",
+    "EIP 与 ERC 网站从 Jekyll 迁移到 Zola",
+    "类别页改为可筛选表格"
+  ],
+  "summary": "joshdavislight 把 ACDE #226 的 EIP 状态决定写入 EIP-7773 并合并。misilva73 提交 EIP-8037 更新。SamWilsn 宣布 EIP 与 ERC 网站将从 Jekyll 迁移到 Zola。新年假期期间整体动态较少。",
+  "items": [
+    {
+      "topic": "升级范围与 gas",
+      "title": "EIP-7773：写入 ACDE #226 的 EIP 状态决定",
+      "note": "（joshdavislight）2025 年 12 月 18 日提交后合并；EIP-8037 更新（misilva73）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10951",
+      "date": "2026-01-03",
+      "title_en": "EIP-7773: update with ACDE #226 status decisions",
+      "note_en": "(joshdavislight), merged after submission on December 18, 2025; EIP-8037 update (misilva73), submitted.",
+      "topic_en": "Upgrade scope and gas"
+    },
+    {
+      "topic": "升级范围与 gas",
+      "title": "EIP-8037 更新",
+      "note": "EIP-7773：写入 ACDE #226 的 EIP 状态决定（joshdavislight）2025 年 12 月 18 日提交后合并；EIP-8037 更新（misilva73）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11002",
+      "date": "2026-01-03",
+      "title_en": "EIP-8037 update",
+      "note_en": "EIP-7773: update with ACDE #226 status decisions (joshdavislight), merged after submission on December 18, 2025; EIP-8037 update (misilva73), submitted.",
+      "topic_en": "Upgrade scope and gas"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP 与 ERC 网站从 Jekyll 迁移到 Zola",
+      "note": "02:38；网站：类别页的静态状态表改为筛选（nixorokish）提交。",
+      "url": "https://ethereum-magicians.org/t/eip-erc-website-migration-jekyll-zola/27375",
+      "date": "2026-01-03",
+      "title_en": "Magicians: EIP and ERC website migration, Jekyll to Zola",
+      "note_en": "02:38; Website: switch category page status tables to filtering (nixorokish), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "网站：类别页的静态状态表改为筛选",
+      "note": "Magicians：EIP 与 ERC 网站从 Jekyll 迁移到 Zola 02:38；网站：类别页的静态状态表改为筛选（nixorokish）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11004",
+      "date": "2026-01-03",
+      "title_en": "Website: switch category page status tables to filtering",
+      "note_en": "Magicians: EIP and ERC website migration, Jekyll to Zola, 02:38; Website: switch category page status tables to filtering (nixorokish), submitted.",
+      "topic_en": "Other updates"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-erc-website-migration-jekyll-zola/27375",
+    "credit": "Ethereum Magicians, EIP/ERC Website Migration (Jekyll to Zola)",
+    "local_path": "assets/2026-01-03.jpg",
+    "credit_en": "Ethereum Magicians, EIP/ERC Website Migration (Jekyll to Zola)"
+  },
+  "keywords_en": [
+    "EIP-7773 updated with ACDE #226 status decisions",
+    "an EIP-8037 update submitted",
+    "the EIP and ERC websites migrate from Jekyll to Zola",
+    "category pages switch to filterable tables"
+  ],
+  "summary_en": "joshdavislight recorded ACDE #226 status decisions in EIP-7773, merged. misilva73 submitted an EIP-8037 update. SamWilsn announced the EIP and ERC websites will move from Jekyll to Zola. Activity was light over the New Year holiday."
+}

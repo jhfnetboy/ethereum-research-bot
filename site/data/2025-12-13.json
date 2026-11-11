@@ -1,0 +1,119 @@
+{
+  "date": "2025-12-13",
+  "keywords": [
+    "ERC-8103 可撤销的 EIP-712 授权对象",
+    "ERC-7730 加入命令注册表与打包 multicall",
+    "ERC-7908 进入 Final",
+    "用户为何还不用隐私工具",
+    "后量子签名聚合研究",
+    "个人隐私合规之辨"
+  ],
+  "summary": "recurmj 提出 ERC-8103：一种可移植、可撤销的 EIP-712 授权结构，用于有上限的拉取式转账，执行语义由 ERC-8102 另行定义。muhammadaus 为 ERC-7730 清晰签名格式加入命令注册表、嵌套编码与打包 multicall。tcoratger 推荐 PrivacyEthereum 关于用户为何还不用隐私工具的研究。",
+  "items": [
+    {
+      "topic": "账户与交易：授权与清晰签名",
+      "title": "Magicians：ERC-8103 受许可授权对象",
+      "note": "（recurmj）00:14：可移植、可撤销的 EIP-712 授权结构，用于有上限的拉取式转账；ERC-7730：加入命令注册表、嵌套编码与打包 multicall（muhammadaus）提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8103-permissioned-authorization-object/27135",
+      "date": "2025-12-13",
+      "title_en": "Magicians: ERC-8103 Permissioned Authorization Object",
+      "note_en": "(recurmj), 00:14: a portable, revocable EIP-712 authorization struct for bounded pull transfers; ERC-7730: add command registries, nested encoding and packed multicall (muhammadaus), submitted.",
+      "topic_en": "Accounts and transactions: authorization and clear signing"
+    },
+    {
+      "topic": "账户与交易：授权与清晰签名",
+      "title": "ERC-7730：加入命令注册表、嵌套编码与打包 multicall",
+      "note": "Magicians：ERC-8103 受许可授权对象（recurmj）00:14：可移植、可撤销的 EIP-712 授权结构，用于有上限的拉取式转账；ERC-7730：加入命令注册表、嵌套编码与打包 multicall（muhammadaus）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1402",
+      "date": "2025-12-13",
+      "title_en": "ERC-7730: add command registries, nested encoding and packed multicall",
+      "note_en": "Magicians: ERC-8103 Permissioned Authorization Object (recurmj), 00:14: a portable, revocable EIP-712 authorization struct for bounded pull transfers; ERC-7730: add command registries, nested encoding and packed multicall (muhammadaus), submitted.",
+      "topic_en": "Accounts and transactions: authorization and clear signing"
+    },
+    {
+      "topic": "隐私：用户为何不用",
+      "title": "tcoratger 推荐 PrivacyEthereum 的研究：用户为何还不使用隐私工具",
+      "note": "17:17；AndyGuzmanEth：机构的隐私合规可以接受，个人的隐私合规要复杂得多 04:37。",
+      "url": "https://x.com/tcoratger/status/1999785675743502752",
+      "date": "2025-12-13",
+      "title_en": "tcoratger shares PrivacyEthereum's study: why users don't use privacy yet",
+      "note_en": "17:17; AndyGuzmanEth: privacy compliance for institutions is fine, for individuals it is far more nuanced, 04:37.",
+      "topic_en": "Privacy: why users stay away"
+    },
+    {
+      "topic": "隐私：用户为何不用",
+      "title": "AndyGuzmanEth：机构的隐私合规可以接受，个人的隐私合规要复杂得多",
+      "note": "tcoratger 推荐 PrivacyEthereum 的研究：用户为何还不使用隐私工具 17:17；AndyGuzmanEth：机构的隐私合规可以接受，个人的隐私合规要复杂得多 04:37。",
+      "url": "https://x.com/AndyGuzmanEth/status/1999594479217705231",
+      "date": "2025-12-13",
+      "title_en": "AndyGuzmanEth: privacy compliance for institutions is fine, for individuals it is far more nuanced",
+      "note_en": "Tcoratger shares PrivacyEthereum's study: why users don't use privacy yet, 17:17; AndyGuzmanEth: privacy compliance for institutions is fine, for individuals it is far more nuanced, 04:37.",
+      "topic_en": "Privacy: why users stay away"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7908 进入 Final",
+      "note": "（elizabethxiaoyu）12 月 4 日提交后合并；EIP-7928：修正分析（nerolation）12 月 12 日提交后合并；ACDT #64 议程，12 月 15 日 03:10。",
+      "url": "https://github.com/ethereum/ERCs/pull/1392",
+      "date": "2025-12-13",
+      "title_en": "ERC-7908: move to Final",
+      "note_en": "(elizabethxiaoyu), merged after submission on December 4; EIP-7928: fix analysis (nerolation), merged after submission on December 12; ACDT #64 agenda, Dec 15, 03:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：修正分析",
+      "note": "ERC-7908 进入 Final（elizabethxiaoyu）12 月 4 日提交后合并；EIP-7928：修正分析（nerolation）12 月 12 日提交后合并；ACDT #64 议程，12 月 15 日 03:10。",
+      "url": "https://github.com/ethereum/EIPs/pull/10910",
+      "date": "2025-12-13",
+      "title_en": "EIP-7928: fix analysis",
+      "note_en": "ERC-7908: move to Final (elizabethxiaoyu), merged after submission on December 4; EIP-7928: fix analysis (nerolation), merged after submission on December 12; ACDT #64 agenda, Dec 15, 03:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #64 议程，12 月 15 日",
+      "note": "ERC-7908 进入 Final（elizabethxiaoyu）12 月 4 日提交后合并；EIP-7928：修正分析（nerolation）12 月 12 日提交后合并；ACDT #64 议程，12 月 15 日 03:10。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-64-december-15-2025/27137",
+      "date": "2025-12-13",
+      "title_en": "ACDT #64 agenda, Dec 15",
+      "note_en": "ERC-7908: move to Final (elizabethxiaoyu), merged after submission on December 4; EIP-7928: fix analysis (nerolation), merged after submission on December 12; ACDT #64 agenda, Dec 15, 03:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ladislaus0x：推荐 Ethereal 本周收录的后量子签名聚合研究",
+      "note": "01:19；colludingnode：使用无需许可的隐私软件在道德上没有错 00:54。",
+      "url": "https://x.com/ladislaus0x/status/1999544583030497453",
+      "date": "2025-12-13",
+      "title_en": "ladislaus0x: read the post-quantum signature aggregation research in this week's Ethereal",
+      "note_en": "01:19; colludingnode: nothing is morally wrong with permissionless privacy software, 00:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：使用无需许可的隐私软件在道德上没有错",
+      "note": "ladislaus0x：推荐 Ethereal 本周收录的后量子签名聚合研究 01:19；colludingnode：使用无需许可的隐私软件在道德上没有错 00:54。",
+      "url": "https://x.com/colludingnode/status/1999538408914300955",
+      "date": "2025-12-13",
+      "title_en": "colludingnode: nothing is morally wrong with permissionless privacy software",
+      "note_en": "Ladislaus0x: read the post-quantum signature aggregation research in this week's Ethereal, 01:19; colludingnode: nothing is morally wrong with permissionless privacy software, 00:54.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8103-permissioned-authorization-object/27135",
+    "credit": "Ethereum Magicians, ERC-8103 Permissioned Authorization Object",
+    "local_path": "assets/2025-12-13.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8103 Permissioned Authorization Object"
+  },
+  "keywords_en": [
+    "ERC-8103 a revocable EIP-712 authorization object",
+    "ERC-7730 adds command registries and packed multicall",
+    "ERC-7908 moves to Final",
+    "why users do not use privacy yet",
+    "post-quantum signature aggregation research",
+    "the debate over privacy compliance for individuals"
+  ],
+  "summary_en": "recurmj proposed ERC-8103, a portable, revocable EIP-712 authorization struct for bounded pull transfers, with execution defined separately in ERC-8102. muhammadaus added command registries, nested encoding and packed multicall to the ERC-7730 clear signing format. tcoratger shared PrivacyEthereum's study of why users do not use privacy yet."
+}

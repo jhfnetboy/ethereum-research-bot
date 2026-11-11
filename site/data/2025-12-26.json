@@ -1,0 +1,94 @@
+{
+  "date": "2025-12-26",
+  "keywords": [
+    "Trust Wallet 浏览器扩展 v2.68 被盗约 700 万美元",
+    "热钱包是安全漏洞",
+    "EIP-7979 澄清动机",
+    "Vitalik 担忧欧洲的网络管控倾向"
+  ],
+  "summary": "Trust Wallet 浏览器扩展 v2.68 被植入恶意代码，约 700 万美元被盗，官方提示停用并升级，承诺赔付；Ethereal 后续报道称疑与 11 月 Sha1-Hulud 2 npm 供应链攻击有关。pcaversaccio 重申热钱包是安全漏洞。",
+  "items": [
+    {
+      "topic": "交易安全：Trust Wallet 扩展事件",
+      "title": "TrustWallet：浏览器扩展 v2.68 约 700 万美元被盗，勿打开、停用并升级，用户将获赔付",
+      "note": "15:51，据 Ethereal news #4；Ethereal news #5 后续称攻击者疑借 11 月 Sha1-Hulud 2 npm 供应链攻击获取源码与应用商店 API 密钥。",
+      "url": "https://x.com/TrustWallet/status/2004475085168795941",
+      "date": "2025-12-26",
+      "title_en": "TrustWallet: about $7M stolen via browser extension v2.68, do not open it, disable and upgrade, users will be refunded",
+      "note_en": "15:51, per Ethereal news #4; Ethereal news #5 later said attackers likely used November's Sha1-Hulud 2 npm supply chain attack to get source code and a web store API key.",
+      "topic_en": "Transaction safety: the Trust Wallet extension incident"
+    },
+    {
+      "topic": "交易安全：Trust Wallet 扩展事件",
+      "title": "Ethereal news #4",
+      "note": "TrustWallet：浏览器扩展 v2.68 约 700 万美元被盗，勿打开、停用并升级，用户将获赔付 15:51，据 Ethereal news #4；Ethereal news #5 后续称攻击者疑借 11 月 Sha1-Hulud 2 npm 供应链攻击获取源码与应用商店 API 密钥。",
+      "url": "https://ethereal.news/ethereal-news-weekly-4/",
+      "date": "2025-12-26",
+      "title_en": "Ethereal news #4",
+      "note_en": "TrustWallet: about $7M stolen via browser extension v2.68, do not open it, disable and upgrade, users will be refunded, 15:51, per Ethereal news #4; Ethereal news #5 later said attackers likely used November's Sha1-Hulud 2 npm supply chain attack to get source code and a web store API key.",
+      "topic_en": "Transaction safety: the Trust Wallet extension incident"
+    },
+    {
+      "topic": "交易安全：Trust Wallet 扩展事件",
+      "title": "Ethereal news #5",
+      "note": "TrustWallet：浏览器扩展 v2.68 约 700 万美元被盗，勿打开、停用并升级，用户将获赔付 15:51，据 Ethereal news #4；Ethereal news #5 后续称攻击者疑借 11 月 Sha1-Hulud 2 npm 供应链攻击获取源码与应用商店 API 密钥。",
+      "url": "https://ethereal.news/ethereal-news-weekly-5/",
+      "date": "2025-12-26",
+      "title_en": "Ethereal news #5",
+      "note_en": "TrustWallet: about $7M stolen via browser extension v2.68, do not open it, disable and upgrade, users will be refunded, 15:51, per Ethereal news #4; Ethereal news #5 later said attackers likely used November's Sha1-Hulud 2 npm supply chain attack to get source code and a web store API key.",
+      "topic_en": "Transaction safety: the Trust Wallet extension incident"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：澄清动机与利害",
+      "note": "（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10984",
+      "date": "2025-12-26",
+      "title_en": "EIP-7979: clarify motivation and stakes",
+      "note_en": "(gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：再说一遍，热钱包是安全漏洞",
+      "note": "04:43；VitalikButerin：担心欧洲走向以整洁的网络环境为荣的意识形态 22:31；dcbuilder：至少每个人都会学会用隐私工具 04:40。",
+      "url": "https://x.com/pcaversaccio/status/2004307146385903944",
+      "date": "2025-12-26",
+      "title_en": "pcaversaccio: again, hot wallets are a security bug",
+      "note_en": "04:43; VitalikButerin: worries Europe drifts into an ideology proud of a sanitized online environment, 22:31; dcbuilder: at least everyone will learn online privacy tools, 04:40.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：担心欧洲走向以整洁的网络环境为荣的意识形态",
+      "note": "pcaversaccio：再说一遍，热钱包是安全漏洞 04:43；VitalikButerin：担心欧洲走向以整洁的网络环境为荣的意识形态 22:31；dcbuilder：至少每个人都会学会用隐私工具 04:40。",
+      "url": "https://x.com/VitalikButerin/status/2004575793750355971",
+      "date": "2025-12-26",
+      "title_en": "VitalikButerin: worries Europe drifts into an ideology proud of a sanitized online environment",
+      "note_en": "Pcaversaccio: again, hot wallets are a security bug, 04:43; VitalikButerin: worries Europe drifts into an ideology proud of a sanitized online environment, 22:31; dcbuilder: at least everyone will learn online privacy tools, 04:40.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dcbuilder：至少每个人都会学会用隐私工具",
+      "note": "pcaversaccio：再说一遍，热钱包是安全漏洞 04:43；VitalikButerin：担心欧洲走向以整洁的网络环境为荣的意识形态 22:31；dcbuilder：至少每个人都会学会用隐私工具 04:40。",
+      "url": "https://x.com/dcbuilder/status/2004306281583276429",
+      "date": "2025-12-26",
+      "title_en": "dcbuilder: at least everyone will learn online privacy tools",
+      "note_en": "Pcaversaccio: again, hot wallets are a security bug, 04:43; VitalikButerin: worries Europe drifts into an ideology proud of a sanitized online environment, 22:31; dcbuilder: at least everyone will learn online privacy tools, 04:40.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/10984",
+    "credit": "GitHub, ethereum/EIPs PR 10984",
+    "credit_en": "GitHub, ethereum/EIPs PR 10984"
+  },
+  "keywords_en": [
+    "About $7M stolen via Trust Wallet browser extension v2.68",
+    "hot wallets are a security bug",
+    "EIP-7979 clarifies motivation",
+    "Vitalik worries about Europe's drift toward a sanitized internet"
+  ],
+  "summary_en": "Trust Wallet browser extension v2.68 shipped malicious code and about $7M was stolen; the team told users to disable and upgrade and promised refunds, and Ethereal later reported a likely link to November's Sha1-Hulud 2 npm supply chain attack. pcaversaccio repeated that hot wallets are a security bug."
+}

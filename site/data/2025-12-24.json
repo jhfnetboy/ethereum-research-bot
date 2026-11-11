@@ -1,0 +1,97 @@
+{
+  "date": "2025-12-24",
+  "keywords": [
+    "ERC-8111 Bound Signatures 64 字节 ECDSA",
+    "提高点评估预编译 gas 成本的 EIP 合并",
+    "EIP-7932 修正未定义的 SIZE",
+    "ERC-8113 激励金库的系列记账",
+    "ethlambda 共识客户端"
+  ],
+  "summary": "wjmelements 提出 ERC-8111 Bound Signatures：把 ECDSA 签名绑定到特定 v 值，签名可压缩到 64 字节，作为 ERC-2098 的替代。marcindsobczak 提出的提高 EIP-4844 点评估预编译 gas 成本的 EIP 合并，原因是该预编译相对资源消耗定价过低。",
+  "items": [
+    {
+      "topic": "签名：ERC-8111",
+      "title": "Magicians：ERC-8111 Bound Signatures",
+      "note": "（wjmelements）23:36：ECDSA 签名对同一哈希可恢复出两个公钥，限定 y 奇偶性后签名可放入 64 字节；对应 ERC PR 提交；EIP-7932：修正未定义的 SIZE（mo-melvin77）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8111-bound-signatures/27308",
+      "date": "2025-12-24",
+      "title_en": "Magicians: ERC-8111 Bound Signatures",
+      "note_en": "(wjmelements), 23:36: an ECDSA signature recovers two public keys for a hash, and fixing the y parity fits it in 64 bytes; the ERC PR was submitted; EIP-7932: fix undefined SIZE (mo-melvin77), submitted and merged.",
+      "topic_en": "Signatures: ERC-8111"
+    },
+    {
+      "topic": "签名：ERC-8111",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8111 Bound Signatures（wjmelements）23:36：ECDSA 签名对同一哈希可恢复出两个公钥，限定 y 奇偶性后签名可放入 64 字节；对应 ERC PR 提交；EIP-7932：修正未定义的 SIZE（mo-melvin77）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1427",
+      "date": "2025-12-24",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8111 Bound Signatures (wjmelements), 23:36: an ECDSA signature recovers two public keys for a hash, and fixing the y parity fits it in 64 bytes; the ERC PR was submitted; EIP-7932: fix undefined SIZE (mo-melvin77), submitted and merged.",
+      "topic_en": "Signatures: ERC-8111"
+    },
+    {
+      "topic": "签名：ERC-8111",
+      "title": "EIP-7932：修正未定义的 SIZE",
+      "note": "Magicians：ERC-8111 Bound Signatures（wjmelements）23:36：ECDSA 签名对同一哈希可恢复出两个公钥，限定 y 奇偶性后签名可放入 64 字节；对应 ERC PR 提交；EIP-7932：修正未定义的 SIZE（mo-melvin77）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10974",
+      "date": "2025-12-24",
+      "title_en": "EIP-7932: fix undefined SIZE",
+      "note_en": "Magicians: ERC-8111 Bound Signatures (wjmelements), 23:36: an ECDSA signature recovers two public keys for a hash, and fixing the y parity fits it in 64 bytes; the ERC PR was submitted; EIP-7932: fix undefined SIZE (mo-melvin77), submitted and merged.",
+      "topic_en": "Signatures: ERC-8111"
+    },
+    {
+      "topic": "Gas：点评估预编译",
+      "title": "新增 EIP：提高点评估预编译的 gas 成本",
+      "note": "（marcindsobczak）12 月 2 日提交后合并：EIP-4844 引入的点评估预编译相对其资源消耗定价过低。",
+      "url": "https://github.com/ethereum/EIPs/pull/10864",
+      "date": "2025-12-24",
+      "title_en": "Add EIP: Increase Gas Cost of Point Evaluation",
+      "note_en": "(marcindsobczak), merged after submission on December 2: the EIP-4844 point evaluation precompile is underpriced relative to its resource use.",
+      "topic_en": "Gas: the point evaluation precompile"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8113 激励金库的系列记账",
+      "note": "12:47；ERC-7496：澄清未设置 trait 值的行为（ryanio）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8113-series-accounting-for-incentivized-vaults/27306",
+      "date": "2025-12-24",
+      "title_en": "Magicians: ERC-8113 Series Accounting for Incentivized Vaults",
+      "note_en": "12:47; ERC-7496: clarify behavior for unset trait values (ryanio), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7496：澄清未设置 trait 值的行为",
+      "note": "Magicians：ERC-8113 激励金库的系列记账 12:47；ERC-7496：澄清未设置 trait 值的行为（ryanio）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1424",
+      "date": "2025-12-24",
+      "title_en": "ERC-7496: clarify behavior for unset trait values",
+      "note_en": "Magicians: ERC-8113 Series Accounting for Incentivized Vaults, 12:47; ERC-7496: clarify behavior for unset trait values (ryanio), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：一年前做了 ethrex 执行客户端，现在又做了 leanEthereum 共识客户端 ethlambda",
+      "note": "05:53。",
+      "url": "https://x.com/fede_intern/status/2003599850122674481",
+      "date": "2025-12-24",
+      "title_en": "fede_intern: a year after building the ethrex execution client, they built ethlambda, a leanEthereum consensus client",
+      "note_en": "05:53.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8111-bound-signatures/27308",
+    "credit": "Ethereum Magicians, ERC-8111 Bound Signatures",
+    "local_path": "assets/2025-12-24.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8111 Bound Signatures"
+  },
+  "keywords_en": [
+    "ERC-8111 Bound Signatures as 64 byte ECDSA",
+    "an EIP raising the point evaluation precompile gas cost merged",
+    "EIP-7932 fixes an undefined SIZE",
+    "ERC-8113 series accounting for incentivized vaults",
+    "the ethlambda consensus client"
+  ],
+  "summary_en": "wjmelements proposed ERC-8111 Bound Signatures: ECDSA signatures bound to a specific v fit in 64 bytes, an alternative to ERC-2098. marcindsobczak's EIP raising the gas cost of the EIP-4844 point evaluation precompile merged, since it is underpriced relative to its resources."
+}

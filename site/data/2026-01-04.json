@@ -1,0 +1,108 @@
+{
+  "date": "2026-01-04",
+  "keywords": [
+    "Vitalik 谈 ZKEVM 进入 alpha 与 PeerDAS 上线的意义",
+    "Agent 授权接口 EIP 提交",
+    "EIP-7979 控制流图示例与漏洞代码",
+    "EIP-7792 与 EIP-7793 转为 Stagnant",
+    "EIP-7723 澄清状态与阶段",
+    "Dark Bio Rust 密码库"
+  ],
+  "summary": "VitalikButerin 称 ZKEVM 已达 alpha（性能达生产级，剩下安全工作）且 PeerDAS 已上主网，这将把以太坊变成全新的系统。0xvimer 提交 Agent 授权接口 EIP。EIP-7793 条件交易因长期无进展转为 Stagnant。",
+  "items": [
+    {
+      "topic": "扩容：ZKEVM 与 PeerDAS",
+      "title": "VitalikButerin：ZKEVM 已达 alpha，PeerDAS 已上主网，是时候谈两者结合对以太坊意味着什么，这不是小改进",
+      "note": "04:07。",
+      "url": "https://x.com/VitalikButerin/status/2007559523528233041",
+      "date": "2026-01-04",
+      "title_en": "VitalikButerin: ZKEVMs are at alpha and PeerDAS is live, so it is time to discuss what the combination means, and these are not minor improvements",
+      "note_en": "04:07.",
+      "topic_en": "Scaling: ZKEVM and PeerDAS"
+    },
+    {
+      "topic": "账户与交易",
+      "title": "新增 EIP：Agent 授权接口",
+      "note": "（0xvimer）提交；EIP-7793 条件交易转为 Stagnant（eth-bot）提交；EIP-7792 转为 Stagnant（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11007",
+      "date": "2026-01-04",
+      "title_en": "Add EIP: Agent Authorization Interface",
+      "note_en": "(0xvimer), submitted; EIP-7793 conditional transactions: move to Stagnant (eth-bot), submitted; EIP-7792: move to Stagnant (eth-bot), submitted.",
+      "topic_en": "Accounts and transactions"
+    },
+    {
+      "topic": "账户与交易",
+      "title": "EIP-7793 条件交易转为 Stagnant",
+      "note": "新增 EIP：Agent 授权接口（0xvimer）提交；EIP-7793 条件交易转为 Stagnant（eth-bot）提交；EIP-7792 转为 Stagnant（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11009",
+      "date": "2026-01-04",
+      "title_en": "EIP-7793 conditional transactions: move to Stagnant",
+      "note_en": "Add EIP: Agent Authorization Interface (0xvimer), submitted; EIP-7793 conditional transactions: move to Stagnant (eth-bot), submitted; EIP-7792: move to Stagnant (eth-bot), submitted.",
+      "topic_en": "Accounts and transactions"
+    },
+    {
+      "topic": "账户与交易",
+      "title": "EIP-7792 转为 Stagnant",
+      "note": "新增 EIP：Agent 授权接口（0xvimer）提交；EIP-7793 条件交易转为 Stagnant（eth-bot）提交；EIP-7792 转为 Stagnant（eth-bot）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11008",
+      "date": "2026-01-04",
+      "title_en": "EIP-7792: move to Stagnant",
+      "note_en": "Add EIP: Agent Authorization Interface (0xvimer), submitted; EIP-7793 conditional transactions: move to Stagnant (eth-bot), submitted; EIP-7792: move to Stagnant (eth-bot), submitted.",
+      "topic_en": "Accounts and transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：加入新的控制流图漏洞代码",
+      "note": "（gcolvin）提交并合并；EIP-7723：澄清状态与阶段（poojaranjan）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11014",
+      "date": "2026-01-04",
+      "title_en": "EIP-7979: new CFG exploit code",
+      "note_en": "(gcolvin), submitted and merged; EIP-7723: clarify Status and Stages (poojaranjan), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7723：澄清状态与阶段",
+      "note": "EIP-7979：加入新的控制流图漏洞代码（gcolvin）提交并合并；EIP-7723：澄清状态与阶段（poojaranjan）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11006",
+      "date": "2026-01-04",
+      "title_en": "EIP-7723: clarify Status and Stages",
+      "note_en": "EIP-7979: new CFG exploit code (gcolvin), submitted and merged; EIP-7723: clarify Status and Stages (poojaranjan), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：Dark Bio Rust 密码库初具雏形",
+      "note": "01:39；zengjiajun_eth：“机构需要隐私”是流传最久的说法之一 10:08。",
+      "url": "https://x.com/peter_szilagyi/status/2007522238212493561",
+      "date": "2026-01-04",
+      "title_en": "peter_szilagyi: the Dark Bio Rust crypto crate is taking shape",
+      "note_en": "01:39; zengjiajun_eth: \"institutions need privacy\" is one of the longest lasting claims, 10:08.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：“机构需要隐私”是流传最久的说法之一",
+      "note": "peter_szilagyi：Dark Bio Rust 密码库初具雏形 01:39；zengjiajun_eth：“机构需要隐私”是流传最久的说法之一 10:08。",
+      "url": "https://x.com/zengjiajun_eth/status/2007650207048314888",
+      "date": "2026-01-04",
+      "title_en": "zengjiajun_eth: \"institutions need privacy\" is one of the longest lasting claims",
+      "note_en": "Peter_szilagyi: the Dark Bio Rust crypto crate is taking shape, 01:39; zengjiajun_eth: \"institutions need privacy\" is one of the longest lasting claims, 10:08.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11007",
+    "credit": "GitHub, ethereum/EIPs PR 11007",
+    "credit_en": "GitHub, ethereum/EIPs PR 11007"
+  },
+  "keywords_en": [
+    "Vitalik on ZKEVMs at alpha and PeerDAS live",
+    "an agent authorization interface EIP submitted",
+    "EIP-7979 control flow examples and exploit code",
+    "EIP-7792 and EIP-7793 moved to Stagnant",
+    "EIP-7723 clarifies status and stages",
+    "the Dark Bio Rust crypto crate"
+  ],
+  "summary_en": "VitalikButerin said ZKEVMs are at alpha (production performance, safety work remaining) and PeerDAS is on mainnet, turning Ethereum into a different kind of system. 0xvimer submitted an agent authorization interface EIP. EIP-7793 conditional transactions moved to Stagnant for inactivity."
+}

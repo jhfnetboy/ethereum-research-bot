@@ -1,0 +1,98 @@
+{
+  "date": "2025-12-14",
+  "keywords": [
+    "EIP-7917 提交进入 Final",
+    "EIP-7843 停滞标记",
+    "EVM 文件系统 EIP",
+    "EIP-7922 修正未定义常量",
+    "TrustMesh 涌现式共识",
+    "Monero 隐私"
+  ],
+  "summary": "周日动态较少。linoscope 提交 EIP-7917 进入 Final。eth-bot 对 EIP-7843 SLOTNUM 发起停滞标记。tallero 提交 EVM 文件系统 EIP。",
+  "items": [
+    {
+      "topic": "规范进展",
+      "title": "EIP-7917 进入 Final",
+      "note": "（linoscope）提交；EIP-7843 停滞标记（eth-bot）提交；新增 EIP：以太坊虚拟机文件系统（tallero）提交；EIP-7922：修正未定义的常量与变量引用（gfischer7）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10915",
+      "date": "2025-12-14",
+      "title_en": "EIP-7917: move to Final",
+      "note_en": "(linoscope), submitted; EIP-7843: stagnant flag (eth-bot), submitted; Add EIP: Ethereum Virtual Machine File System (tallero), submitted; EIP-7922: fix undefined constant and variable references (gfischer7), submitted.",
+      "topic_en": "Spec progress"
+    },
+    {
+      "topic": "规范进展",
+      "title": "EIP-7843 停滞标记",
+      "note": "EIP-7917 进入 Final（linoscope）提交；EIP-7843 停滞标记（eth-bot）提交；新增 EIP：以太坊虚拟机文件系统（tallero）提交；EIP-7922：修正未定义的常量与变量引用（gfischer7）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10916",
+      "date": "2025-12-14",
+      "title_en": "EIP-7843: stagnant flag",
+      "note_en": "EIP-7917: move to Final (linoscope), submitted; EIP-7843: stagnant flag (eth-bot), submitted; Add EIP: Ethereum Virtual Machine File System (tallero), submitted; EIP-7922: fix undefined constant and variable references (gfischer7), submitted.",
+      "topic_en": "Spec progress"
+    },
+    {
+      "topic": "规范进展",
+      "title": "新增 EIP：以太坊虚拟机文件系统",
+      "note": "EIP-7917 进入 Final（linoscope）提交；EIP-7843 停滞标记（eth-bot）提交；新增 EIP：以太坊虚拟机文件系统（tallero）提交；EIP-7922：修正未定义的常量与变量引用（gfischer7）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10917",
+      "date": "2025-12-14",
+      "title_en": "Add EIP: Ethereum Virtual Machine File System",
+      "note_en": "EIP-7917: move to Final (linoscope), submitted; EIP-7843: stagnant flag (eth-bot), submitted; Add EIP: Ethereum Virtual Machine File System (tallero), submitted; EIP-7922: fix undefined constant and variable references (gfischer7), submitted.",
+      "topic_en": "Spec progress"
+    },
+    {
+      "topic": "规范进展",
+      "title": "EIP-7922：修正未定义的常量与变量引用",
+      "note": "EIP-7917 进入 Final（linoscope）提交；EIP-7843 停滞标记（eth-bot）提交；新增 EIP：以太坊虚拟机文件系统（tallero）提交；EIP-7922：修正未定义的常量与变量引用（gfischer7）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10918",
+      "date": "2025-12-14",
+      "title_en": "EIP-7922: fix undefined constant and variable references",
+      "note_en": "EIP-7917: move to Final (linoscope), submitted; EIP-7843: stagnant flag (eth-bot), submitted; Add EIP: Ethereum Virtual Machine File System (tallero), submitted; EIP-7922: fix undefined constant and variable references (gfischer7), submitted.",
+      "topic_en": "Spec progress"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：TrustMesh，涌现式共识",
+      "note": "11:12。",
+      "url": "https://ethresear.ch/t/trustmesh-consensus-as-emergence-security-from-behavior/23651",
+      "date": "2025-12-14",
+      "title_en": "ethresear.ch: TrustMesh, consensus as emergence",
+      "note_en": "11:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：很多好人依赖 Monero 获得隐私，它变得更好对人类有益",
+      "note": "01:16；fede_intern：为 lean ethereum Rust 执行客户端求 star 01:55。",
+      "url": "https://x.com/colludingnode/status/1999906275946348965",
+      "date": "2025-12-14",
+      "title_en": "colludingnode: many good people rely on Monero for privacy, so humanity benefits from it improving",
+      "note_en": "01:16; fede_intern: asks for GitHub stars for a lean Ethereum Rust execution client, 01:55.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：为 lean ethereum Rust 执行客户端求 star",
+      "note": "colludingnode：很多好人依赖 Monero 获得隐私，它变得更好对人类有益 01:16；fede_intern：为 lean ethereum Rust 执行客户端求 star 01:55。",
+      "url": "https://x.com/fede_intern/status/1999915996476563669",
+      "date": "2025-12-14",
+      "title_en": "fede_intern: asks for GitHub stars for a lean Ethereum Rust execution client",
+      "note_en": "Colludingnode: many good people rely on Monero for privacy, so humanity benefits from it improving, 01:16; fede_intern: asks for GitHub stars for a lean Ethereum Rust execution client, 01:55.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/10917",
+    "credit": "GitHub, ethereum/EIPs PR 10917",
+    "credit_en": "GitHub, ethereum/EIPs PR 10917"
+  },
+  "keywords_en": [
+    "EIP-7917 submitted to Final",
+    "an EIP-7843 stagnant flag",
+    "an EVM file system EIP",
+    "EIP-7922 fixes undefined constants",
+    "TrustMesh emergent consensus",
+    "Monero privacy"
+  ],
+  "summary_en": "A quiet Sunday. linoscope submitted EIP-7917 for Final. eth-bot flagged EIP-7843 SLOTNUM as stagnant. tallero submitted an EVM file system EIP."
+}

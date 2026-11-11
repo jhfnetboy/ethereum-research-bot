@@ -1,0 +1,119 @@
+{
+  "date": "2025-12-20",
+  "keywords": [
+    "FOCIL 面向 Hegotá 的就绪度",
+    "以新计费规则提高单笔交易 gas 上限",
+    "EIP-8081 更新 Hegotá 组合名",
+    "EIP-7773 更新 Glamsterdam 状态",
+    "Solidity 0.8.32 与 0.8.33",
+    "Fusaka 后 getBlobs 利用率"
+  ],
+  "summary": "Thomas Thiery 与 Jihoon Song 发布 FOCIL（EIP-7805）面向 Hegotá 的就绪度报告，FOCIL 已列为 Hegotá CFI，可显著提升交易打包保障。Helkomine 提议用新的计费规则让大交易超出 EIP-7825 上限。Solidity 0.8.32 与 0.8.33 发布。",
+  "items": [
+    {
+      "topic": "交易：FOCIL 就绪度",
+      "title": "Magicians：FOCIL 面向 Hegotá 的就绪度",
+      "note": "（jihoonsong）03:19：作者 Thomas Thiery 与 Jihoon Song；EIP-7805 FOCIL 即分叉选择强制的包含列表，当前列为 Hegotá CFI，可显著提升交易打包保障。",
+      "url": "https://ethereum-magicians.org/t/focil-readiness-for-hegota/27245",
+      "date": "2025-12-20",
+      "title_en": "Magicians: FOCIL readiness for Hegotá",
+      "note_en": "(jihoonsong), 03:19: by Thomas Thiery and Jihoon Song; EIP-7805 FOCIL, fork choice enforced inclusion lists, is CFI for Hegotá and greatly improves inclusion guarantees.",
+      "topic_en": "Transactions: FOCIL readiness"
+    },
+    {
+      "topic": "Gas：超大交易",
+      "title": "Magicians：EIP 草案，以新的计费规则提高交易 gas 上限",
+      "note": "（Helkomine）11:19：允许交易声明超过 uint24 最大值的 gas 上限，为大交易引入新的计费规则，依赖 EIP-1559、EIP-7702 与 EIP-7825。",
+      "url": "https://ethereum-magicians.org/t/eip-tba-increasing-transaction-gas-limit-with-a-new-fee-calculation-rule/27249",
+      "date": "2025-12-20",
+      "title_en": "Magicians: EIP draft, increasing the transaction gas limit with a new fee calculation rule",
+      "note_en": "(Helkomine), 11:19: lets transactions set gas limits above the uint24 maximum with a new fee rule for large transactions, building on EIP-1559, EIP-7702 and EIP-7825.",
+      "topic_en": "Gas: very large transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：更新 Hegotá 组合名",
+      "note": "（ralexstokes）提交并合并；EIP-7773：更新 Glamsterdam 的 EIP 状态（ralexstokes）提交；ERC-8110：Diamonds 的域架构 12:11；ethresear.ch：区块链 KV 查找从 O(log N) 到 O(1) 磁盘 I/O 22:56。",
+      "url": "https://github.com/ethereum/EIPs/pull/10957",
+      "date": "2025-12-20",
+      "title_en": "EIP-8081: update the portmanteau for Hegotá",
+      "note_en": "(ralexstokes), submitted and merged; EIP-7773: update Glamsterdam EIP statuses (ralexstokes), submitted; ERC-8110: Domain Architecture for Diamonds, 12:11; ethresear.ch: blockchain KV lookups from O(log N) to O(1) disk I/O, 22:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7773：更新 Glamsterdam 的 EIP 状态",
+      "note": "EIP-8081：更新 Hegotá 组合名（ralexstokes）提交并合并；EIP-7773：更新 Glamsterdam 的 EIP 状态（ralexstokes）提交；ERC-8110：Diamonds 的域架构 12:11；ethresear.ch：区块链 KV 查找从 O(log N) 到 O(1) 磁盘 I/O 22:56。",
+      "url": "https://github.com/ethereum/EIPs/pull/10958",
+      "date": "2025-12-20",
+      "title_en": "EIP-7773: update Glamsterdam EIP statuses",
+      "note_en": "EIP-8081: update the portmanteau for Hegotá (ralexstokes), submitted and merged; EIP-7773: update Glamsterdam EIP statuses (ralexstokes), submitted; ERC-8110: Domain Architecture for Diamonds, 12:11; ethresear.ch: blockchain KV lookups from O(log N) to O(1) disk I/O, 22:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8110：Diamonds 的域架构",
+      "note": "EIP-8081：更新 Hegotá 组合名（ralexstokes）提交并合并；EIP-7773：更新 Glamsterdam 的 EIP 状态（ralexstokes）提交；ERC-8110：Diamonds 的域架构 12:11；ethresear.ch：区块链 KV 查找从 O(log N) 到 O(1) 磁盘 I/O 22:56。",
+      "url": "https://ethereum-magicians.org/t/erc-8110-domain-architecture-for-diamonds/27250",
+      "date": "2025-12-20",
+      "title_en": "ERC-8110: Domain Architecture for Diamonds",
+      "note_en": "EIP-8081: update the portmanteau for Hegotá (ralexstokes), submitted and merged; EIP-7773: update Glamsterdam EIP statuses (ralexstokes), submitted; ERC-8110: Domain Architecture for Diamonds, 12:11; ethresear.ch: blockchain KV lookups from O(log N) to O(1) disk I/O, 22:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：区块链 KV 查找从 O(log N) 到 O(1) 磁盘 I/O",
+      "note": "EIP-8081：更新 Hegotá 组合名（ralexstokes）提交并合并；EIP-7773：更新 Glamsterdam 的 EIP 状态（ralexstokes）提交；ERC-8110：Diamonds 的域架构 12:11；ethresear.ch：区块链 KV 查找从 O(log N) 到 O(1) 磁盘 I/O 22:56。",
+      "url": "https://ethresear.ch/t/demystifying-blockchain-kv-lookups-from-o-log-n-to-o-1-disk-i-o/23711",
+      "date": "2025-12-20",
+      "title_en": "ethresear.ch: blockchain KV lookups from O(log N) to O(1) disk I/O",
+      "note_en": "EIP-8081: update the portmanteau for Hegotá (ralexstokes), submitted and merged; EIP-7773: update Glamsterdam EIP statuses (ralexstokes), submitted; ERC-8110: Domain Architecture for Diamonds, 12:11; ethresear.ch: blockchain KV lookups from O(log N) to O(1) disk I/O, 22:56.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "solidity_lang：Solidity 0.8.32 与 0.8.33 发布，修复一个重要的低严重度问题",
+      "note": "04:35；terencechain：Fusaka 以来 getBlobs 利用率 23:32；VitalikButerin：加密从一开始就在构建人的赋能 17:42。",
+      "url": "https://x.com/solidity_lang/status/2002130787983110634",
+      "date": "2025-12-20",
+      "title_en": "solidity_lang: Solidity 0.8.32 and 0.8.33 fix an important low severity issue",
+      "note_en": "04:35; terencechain: getBlobs utilization since Fusaka, 23:32; VitalikButerin: crypto has built toward human empowerment since the start, 17:42.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "terencechain：Fusaka 以来 getBlobs 利用率",
+      "note": "solidity_lang：Solidity 0.8.32 与 0.8.33 发布，修复一个重要的低严重度问题 04:35；terencechain：Fusaka 以来 getBlobs 利用率 23:32；VitalikButerin：加密从一开始就在构建人的赋能 17:42。",
+      "url": "https://x.com/terencechain/status/2002416888211779973",
+      "date": "2025-12-20",
+      "title_en": "terencechain: getBlobs utilization since Fusaka",
+      "note_en": "Solidity_lang: Solidity 0.8.32 and 0.8.33 fix an important low severity issue, 04:35; terencechain: getBlobs utilization since Fusaka, 23:32; VitalikButerin: crypto has built toward human empowerment since the start, 17:42.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：加密从一开始就在构建人的赋能",
+      "note": "solidity_lang：Solidity 0.8.32 与 0.8.33 发布，修复一个重要的低严重度问题 04:35；terencechain：Fusaka 以来 getBlobs 利用率 23:32；VitalikButerin：加密从一开始就在构建人的赋能 17:42。",
+      "url": "https://x.com/VitalikButerin/status/2002328755579076740",
+      "date": "2025-12-20",
+      "title_en": "VitalikButerin: crypto has built toward human empowerment since the start",
+      "note_en": "Solidity_lang: Solidity 0.8.32 and 0.8.33 fix an important low severity issue, 04:35; terencechain: getBlobs utilization since Fusaka, 23:32; VitalikButerin: crypto has built toward human empowerment since the start, 17:42.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/focil-readiness-for-hegota/27245",
+    "credit": "Ethereum Magicians, FOCIL Readiness for Hegotá",
+    "local_path": "assets/2025-12-20.jpg",
+    "credit_en": "Ethereum Magicians, FOCIL Readiness for Hegotá"
+  },
+  "keywords_en": [
+    "FOCIL readiness for Hegotá",
+    "raising the per transaction gas limit with a new fee rule",
+    "EIP-8081 updates the Hegotá portmanteau",
+    "EIP-7773 updates Glamsterdam statuses",
+    "Solidity 0.8.32 and 0.8.33",
+    "getBlobs utilization since Fusaka"
+  ],
+  "summary_en": "Thomas Thiery and Jihoon Song published FOCIL (EIP-7805) readiness for Hegotá; FOCIL is CFI for Hegotá and greatly improves inclusion guarantees. Helkomine proposed a new fee rule letting large transactions exceed the EIP-7825 cap. Solidity 0.8.32 and 0.8.33 shipped."
+}

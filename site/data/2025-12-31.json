@@ -1,0 +1,107 @@
+{
+  "date": "2025-12-31",
+  "keywords": [
+    "不可恢复公钥的链上存储以支持后量子迁移",
+    "ERC-8117 防投毒的地址压缩显示格式",
+    "条件代币 ERC",
+    "SEAL 911 的 2025 年",
+    "链上分析与隐私协议去匿名之辨"
+  ],
+  "summary": "SirSpudlington 指出多数后量子签名不支持公钥恢复，交易需每次附带公钥或存进合约，提议配合 EIP-7932 在链上存储公钥。xinbenlv 提出 ERC-8117 地址压缩显示格式，用于防范地址投毒。pcaversaccio 总结 SEAL 911 的 2025 年：1800 多张工单、125 多个作战室、挽回约 9500 万美元。",
+  "items": [
+    {
+      "topic": "账户：后量子密钥存储",
+      "title": "Magicians：不可恢复账户公钥的链上存储",
+      "note": "（SirSpudlington）04:54：大多数非对称密码不支持从签名恢复公钥，后量子迁移时要么每笔交易附带公钥，要么存进合约，方案假定与 EIP-7932 一同打包。",
+      "url": "https://ethereum-magicians.org/t/storage-of-non-recoverable-account-keys-on-chain/27361",
+      "date": "2025-12-31",
+      "title_en": "Magicians: Storage of non-recoverable account keys on chain",
+      "note_en": "(SirSpudlington), 04:54: most asymmetric schemes cannot recover the public key from a signature, so post-quantum migration must either attach the key to every transaction or store it in a contract, assuming bundling with EIP-7932.",
+      "topic_en": "Accounts: post-quantum key storage"
+    },
+    {
+      "topic": "交易安全：防地址投毒",
+      "title": "Magicians：ERC-8117 EVM 地址压缩显示格式",
+      "note": "（xinbenlv）04:09，后更名为防投毒紧凑地址格式；对应 PR 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8117-compressed-display-format-for-evm-addresses/27360",
+      "date": "2025-12-31",
+      "title_en": "Magicians: ERC-8117 Compressed Display Format for EVM Addresses",
+      "note_en": "(xinbenlv), 04:09, later renamed an anti poisoning compact address format; the PR was submitted.",
+      "topic_en": "Transaction safety: address poisoning"
+    },
+    {
+      "topic": "交易安全：防地址投毒",
+      "title": "对应 PR",
+      "note": "Magicians：ERC-8117 EVM 地址压缩显示格式（xinbenlv）04:09，后更名为防投毒紧凑地址格式；对应 PR 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1438",
+      "date": "2025-12-31",
+      "title_en": "PR",
+      "note_en": "Magicians: ERC-8117 Compressed Display Format for EVM Addresses (xinbenlv), 04:09, later renamed an anti poisoning compact address format; the PR was submitted.",
+      "topic_en": "Transaction safety: address poisoning"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：条件代币 ERC",
+      "note": "16:06；ERC-8109 删除诗句（mudgen）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/erc-xxxx-conditional-tokens/27363",
+      "date": "2025-12-31",
+      "title_en": "Magicians: a Conditional Tokens ERC",
+      "note_en": "16:06; ERC-8109: removed poetry (mudgen), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8109 删除诗句",
+      "note": "Magicians：条件代币 ERC 16:06；ERC-8109 删除诗句（mudgen）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1439",
+      "date": "2025-12-31",
+      "title_en": "ERC-8109: removed poetry",
+      "note_en": "Magicians: a Conditional Tokens ERC, 16:06; ERC-8109: removed poetry (mudgen), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：SEAL 911 这一年极其艰难，整个领域的安全状况仍然很糟",
+      "note": "16:59；colludingnode：链上分析师声称去匿名化隐私协议，其实多是用户自愿披露的信息 03:19；VitalikButerin：权力的平衡 08:54。",
+      "url": "https://x.com/pcaversaccio/status/2006304083238412583",
+      "date": "2025-12-31",
+      "title_en": "pcaversaccio: SEAL 911's year was brutal and security across the space is still badly broken",
+      "note_en": "16:59; colludingnode: chain analysts claiming to deanonymize a privacy protocol mostly used info users disclosed willingly, 03:19; VitalikButerin: Balance of power, 08:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：链上分析师声称去匿名化隐私协议，其实多是用户自愿披露的信息",
+      "note": "pcaversaccio：SEAL 911 这一年极其艰难，整个领域的安全状况仍然很糟 16:59；colludingnode：链上分析师声称去匿名化隐私协议，其实多是用户自愿披露的信息 03:19；VitalikButerin：权力的平衡 08:54。",
+      "url": "https://x.com/colludingnode/status/2006097723481579928",
+      "date": "2025-12-31",
+      "title_en": "colludingnode: chain analysts claiming to deanonymize a privacy protocol mostly used info users disclosed willingly",
+      "note_en": "Pcaversaccio: SEAL 911's year was brutal and security across the space is still badly broken, 16:59; colludingnode: chain analysts claiming to deanonymize a privacy protocol mostly used info users disclosed willingly, 03:19; VitalikButerin: Balance of power, 08:54.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：权力的平衡",
+      "note": "pcaversaccio：SEAL 911 这一年极其艰难，整个领域的安全状况仍然很糟 16:59；colludingnode：链上分析师声称去匿名化隐私协议，其实多是用户自愿披露的信息 03:19；VitalikButerin：权力的平衡 08:54。",
+      "url": "https://x.com/VitalikButerin/status/2006182090694615084",
+      "date": "2025-12-31",
+      "title_en": "VitalikButerin: Balance of power",
+      "note_en": "Pcaversaccio: SEAL 911's year was brutal and security across the space is still badly broken, 16:59; colludingnode: chain analysts claiming to deanonymize a privacy protocol mostly used info users disclosed willingly, 03:19; VitalikButerin: Balance of power, 08:54.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/storage-of-non-recoverable-account-keys-on-chain/27361",
+    "credit": "Ethereum Magicians, Storage of non-recoverable account keys on chain",
+    "local_path": "assets/2025-12-31.jpg",
+    "credit_en": "Ethereum Magicians, Storage of non-recoverable account keys on chain"
+  },
+  "keywords_en": [
+    "Onchain storage of non-recoverable account keys for post-quantum migration",
+    "ERC-8117 an anti poisoning compressed address display format",
+    "a conditional tokens ERC",
+    "SEAL 911's 2025",
+    "chain analysis versus deanonymizing a privacy protocol"
+  ],
+  "summary_en": "SirSpudlington noted most post-quantum signatures cannot recover public keys, so transactions must carry the key or store it in a contract, and proposed onchain key storage alongside EIP-7932. xinbenlv proposed ERC-8117, a compressed address display format against address poisoning. pcaversaccio summed up SEAL 911's 2025: 1.8k+ tickets, 125+ war rooms and about $95M saved."
+}
