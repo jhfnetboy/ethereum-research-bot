@@ -1,0 +1,189 @@
+{
+  "date": "2026-07-15",
+  "keywords": [
+    "ERC-8339 接收方签名同意的转账",
+    "EIP-8272 与 EIP-8141 签名计费",
+    "Starknet 隐私 SDK",
+    "Base 战略调整",
+    "Glamsterdam 300M gas limit",
+    "P2P Networking #4"
+  ],
+  "summary": "ERC-8339 改为接收方签名同意的转账，构建在 EIP-8141 frame 交易之上，不再需要托管和第二笔交易。EIP-8272 提交两处修正，其中一处恢复 EIP-8141 的签名验证费用和签名 calldata 费用，避免 frame 交易签名少收费。Starknet 隐私 SDK 和 Wallet API 上线。Jesse Pollak 发长文谈 Base 的反思，据 Ethereal news #31，Base 将聚焦全球金融。",
+  "items": [
+    {
+      "topic": "frame 交易上的应用与计费",
+      "title": "ERC-8339：接收方签名同意的转账",
+      "note": "（muhammadaus）提交，原名两阶段资产转账，这一版移除了托管、撤销/取回和密钥流程。论坛说明 14:00：只有接收方为这笔转账签了同意才执行，无需托管、无需第二笔交易、也没有挂起状态，基于 EIP-8141 frame 交易，适用于 ETH 与 ERC-20/721/1155。",
+      "url": "https://github.com/ethereum/ERCs/pull/1882",
+      "date": "2026-07-15",
+      "title_en": "ERC-8339: Receiver-Attested Transfers",
+      "note_en": "(muhammadaus), submitted; previously titled Two-Phase Asset Transfers, this revision removes the escrow, revoke/reclaim and secret-key flow. Forum write-up, 14:00: a transfer runs only if the receiver has signed consent for exactly that transfer, with no escrow, no second transaction and no pending state; it builds on EIP-8141 frame transactions and covers ETH and ERC-20/721/1155.",
+      "topic_en": "Applications and charging on frame transactions"
+    },
+    {
+      "topic": "frame 交易上的应用与计费",
+      "title": "论坛说明",
+      "note": "ERC-8339：接收方签名同意的转账（muhammadaus）提交，原名两阶段资产转账，这一版移除了托管、撤销/取回和密钥流程。论坛说明 14:00：只有接收方为这笔转账签了同意才执行，无需托管、无需第二笔交易、也没有挂起状态，基于 EIP-8141 frame 交易，适用于 ETH 与 ERC-20/721/1155。",
+      "url": "https://ethereum-magicians.org/t/erc-8339-receiver-attested-transfers/29017",
+      "date": "2026-07-15",
+      "title_en": "Forum write-up",
+      "note_en": "ERC-8339: Receiver-Attested Transfers (muhammadaus), submitted; previously titled Two-Phase Asset Transfers, this revision removes the escrow, revoke/reclaim and secret-key flow. Forum write-up, 14:00: a transfer runs only if the receiver has signed consent for exactly that transfer, with no escrow, no second transaction and no pending state; it builds on EIP-8141 frame transactions and covers ETH and ERC-20/721/1155.",
+      "topic_en": "Applications and charging on frame transactions"
+    },
+    {
+      "topic": "frame 交易上的应用与计费",
+      "title": "EIP-8272：在 tx_gas_limit 中恢复 EIP-8141 签名费用",
+      "note": "（AnkushinDaniil）提交。8272 作为 8141 的增量，重述 `tx_gas_limit` 时漏掉了 `signature_verification_cost` 和签名的 calldata 费用，导致分叉后 frame 交易签名被少收费。同一作者还提交 修正 TXPARAM_RECENT_ROOT_REFERENCE_COUNT 取值不一致，常量表写 `0x0F`，TXPARAM 表写 `0x0D`。",
+      "url": "https://github.com/ethereum/EIPs/pull/11931",
+      "date": "2026-07-15",
+      "title_en": "EIP-8272: restore EIP-8141 signature costs in tx_gas_limit",
+      "note_en": "(AnkushinDaniil), submitted. As a delta on 8141, 8272 restated `tx_gas_limit` but dropped `signature_verification_cost` and the signatures' calldata cost, so post-fork frame transactions were under-charged for signatures. The same author also submitted a fix for the TXPARAM_RECENT_ROOT_REFERENCE_COUNT value inconsistency: the constants table says `0x0F` while the TXPARAM table says `0x0D`.",
+      "topic_en": "Applications and charging on frame transactions"
+    },
+    {
+      "topic": "frame 交易上的应用与计费",
+      "title": "修正 TXPARAM_RECENT_ROOT_REFERENCE_COUNT 取值不一致",
+      "note": "EIP-8272：在 tx_gas_limit 中恢复 EIP-8141 签名费用（AnkushinDaniil）提交。8272 作为 8141 的增量，重述 `tx_gas_limit` 时漏掉了 `signature_verification_cost` 和签名的 calldata 费用，导致分叉后 frame 交易签名被少收费。同一作者还提交 修正 TXPARAM_RECENT_ROOT_REFERENCE_COUNT 取值不一致，常量表写 `0x0F`，TXPARAM 表写 `0x0D`。",
+      "url": "https://github.com/ethereum/EIPs/pull/11930",
+      "date": "2026-07-15",
+      "title_en": "a fix for the TXPARAM_RECENT_ROOT_REFERENCE_COUNT value inconsistency",
+      "note_en": "EIP-8272: restore EIP-8141 signature costs in tx_gas_limit (AnkushinDaniil), submitted. As a delta on 8141, 8272 restated `tx_gas_limit` but dropped `signature_verification_cost` and the signatures' calldata cost, so post-fork frame transactions were under-charged for signatures. The same author also submitted a fix for the TXPARAM_RECENT_ROOT_REFERENCE_COUNT value inconsistency: the constants table says `0x0F` while the TXPARAM table says `0x0D`.",
+      "topic_en": "Applications and charging on frame transactions"
+    },
+    {
+      "topic": "隐私与 L2",
+      "title": "StarkWare：Starknet 隐私 SDK 与 Wallet API 上线",
+      "note": "19:09，团队无需构建新密码学、单独隐私网络或让用户换钱包即可加入隐私功能。Eli Ben-Sasson：STRK20 的原则是隐私对用户和开发者都要简单 23:01。",
+      "url": "https://x.com/StarkWareLtd/status/2077364829849812999",
+      "date": "2026-07-15",
+      "title_en": "StarkWare: Starknet's privacy SDK and Wallet API are live",
+      "note_en": "19:09; teams can add privacy without building new cryptography, a separate privacy network or forcing users into a new wallet. Eli Ben-Sasson: STRK20's principle is that privacy should be easy for users and builders, 23:01.",
+      "topic_en": "Privacy and L2s"
+    },
+    {
+      "topic": "隐私与 L2",
+      "title": "Eli Ben-Sasson：STRK20 的原则是隐私对用户和开发者都要简单",
+      "note": "StarkWare：Starknet 隐私 SDK 与 Wallet API 上线 19:09，团队无需构建新密码学、单独隐私网络或让用户换钱包即可加入隐私功能。Eli Ben-Sasson：STRK20 的原则是隐私对用户和开发者都要简单 23:01。",
+      "url": "https://x.com/EliBenSasson/status/2077423381255696537",
+      "date": "2026-07-15",
+      "title_en": "Eli Ben-Sasson: STRK20's principle is that privacy should be easy for users and builders",
+      "note_en": "StarkWare: Starknet's privacy SDK and Wallet API are live, 19:09; teams can add privacy without building new cryptography, a separate privacy network or forcing users into a new wallet. Eli Ben-Sasson: STRK20's principle is that privacy should be easy for users and builders, 23:01.",
+      "topic_en": "Privacy and L2s"
+    },
+    {
+      "topic": "隐私与 L2",
+      "title": "Jesse Pollak：一周倾听后对 Base 的坦诚看法",
+      "note": "23:17，称 2026 年第一季度像被打了一拳；据 Ethereal news #31，Base 在押注社交之后转向全球金融（交易、支付和 agent），Base app 交还 Coinbase。",
+      "url": "https://x.com/jessepollak/status/2077427261586997745",
+      "date": "2026-07-15",
+      "title_en": "Jesse Pollak: a candid take on Base after a week of listening",
+      "note_en": "23:17, calling the first quarter of 2026 a punch in the face. Per Ethereal news #31, after betting on social, Base is turning to global finance (trading, payments and agents), and the Base app is handed back to Coinbase.",
+      "topic_en": "Privacy and L2s"
+    },
+    {
+      "topic": "隐私与 L2",
+      "title": "Barnabé：L1 很可能最终变成自己的 rollup，所以 rollup 并非天然不为 ETH 增值，正确的视角是状态",
+      "note": "15:56。",
+      "url": "https://x.com/barnabemonnot/status/2077316466194456692",
+      "date": "2026-07-15",
+      "title_en": "Barnabé: L1 is likely to eventually turn into a rollup of itself, so rollups are not inherently non-value-accretive to ETH, and the right lens is state",
+      "note_en": "15:56.",
+      "topic_en": "Privacy and L2s"
+    },
+    {
+      "topic": "其他动态",
+      "title": "dankrad：Glamsterdam 用 300M gas limit？",
+      "note": "00:03，指 devnet-7 的设置。",
+      "url": "https://x.com/dankrad/status/2077076429834182715",
+      "date": "2026-07-15",
+      "title_en": "dankrad: a 300M gas limit for Glamsterdam?",
+      "note_en": "00:03, referring to the devnet-7 setting.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "potuz：称赞 Ben Edgington 的最终性调研是最务实的文章之一",
+      "note": "05:36。",
+      "url": "https://x.com/potuz_eth/status/2077160431144292442",
+      "date": "2026-07-15",
+      "title_en": "potuz: praising Ben Edgington's finality research as one of the most down-to-earth write-ups",
+      "note_en": "05:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8337 Validated EVM Code",
+      "note": "03:45；Cohort Order Book，O(1) 全链上限价订单簿 15:01。",
+      "url": "https://ethereum-magicians.org/t/eip-8337-validated-evm-code/29013",
+      "date": "2026-07-15",
+      "title_en": "Magicians: EIP-8337 Validated EVM Code",
+      "note_en": "03:45; Cohort Order Book, an O(1) fully on-chain limit order book, 15:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Cohort Order Book，O(1) 全链上限价订单簿",
+      "note": "Magicians：EIP-8337 Validated EVM Code 03:45；Cohort Order Book，O(1) 全链上限价订单簿 15:01。",
+      "url": "https://ethereum-magicians.org/t/cohort-order-book-an-o-1-fully-on-chain-limit-order-book-via-generational-fungible-liquidity/29018",
+      "date": "2026-07-15",
+      "title_en": "Cohort Order Book, an O(1) fully on-chain limit order book",
+      "note_en": "Magicians: EIP-8337 Validated EVM Code, 03:45; Cohort Order Book, an O(1) fully on-chain limit order book, 15:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP Editing Office Hour #107 议程",
+      "note": "P2P Networking #4 当天召开。",
+      "url": "https://github.com/ethereum/pm/issues/2160",
+      "date": "2026-07-15",
+      "title_en": "EIP Editing Office Hour #107 agenda",
+      "note_en": "P2P Networking #4 was held on the day.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "P2P Networking #4",
+      "note": "EIP Editing Office Hour #107 议程；P2P Networking #4 当天召开。",
+      "url": "https://github.com/ethereum/pm/issues/2161",
+      "date": "2026-07-15",
+      "title_en": "P2P Networking #4",
+      "note_en": "EIP Editing Office Hour #107 agenda; P2P Networking #4 was held on the day.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Subject-Linked NAV Snapshot Oracle",
+      "note": "ERCs 合并 david-hay 的四个 Subject-Linked 系列草案，例如 Subject-Linked NAV Snapshot Oracle。",
+      "url": "https://github.com/ethereum/ERCs/pull/1858",
+      "date": "2026-07-15",
+      "title_en": "Subject-Linked NAV Snapshot Oracle",
+      "note_en": "ERCs merged four Subject-Linked drafts from david-hay, for example Subject-Linked NAV Snapshot Oracle.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "auryn_macmillan：以太坊靠可信中立取胜，Aztec 靠可信中立的隐私，The Interfold 靠无收据、可信中立的多方隐私",
+      "note": "02:42。",
+      "url": "https://x.com/auryn_macmillan/status/2077116460682326410",
+      "date": "2026-07-15",
+      "title_en": "auryn_macmillan: Ethereum wins on credible neutrality, Aztec on credibly neutral privacy, and The Interfold on receipt-free, credibly neutral multiplayer privacy",
+      "note_en": "02:42.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/ERCs/pull/1882",
+    "credit": "GitHub, ethereum/ERCs PR #1882",
+    "local_path": "assets/2026-07-15.jpg",
+    "credit_en": "GitHub, ethereum/ERCs PR #1882"
+  },
+  "keywords_en": [
+    "ERC-8339 receiver-attested transfers",
+    "EIP-8272 and EIP-8141 signature charges",
+    "Starknet privacy SDK",
+    "Base strategy shift",
+    "Glamsterdam 300M gas limit",
+    "P2P Networking #4"
+  ],
+  "summary_en": "ERC-8339 was reworked into receiver-attested transfers built on EIP-8141 frame transactions, with no escrow and no second transaction. Two EIP-8272 fixes were submitted; one restores EIP-8141's signature verification cost and signature calldata cost so frame transaction signatures are not under-charged. Starknet's privacy SDK and Wallet API went live. Jesse Pollak posted a long reflection on Base; per Ethereal news #31, Base will focus on global finance."
+}

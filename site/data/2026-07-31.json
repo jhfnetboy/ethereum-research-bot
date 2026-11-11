@@ -1,0 +1,251 @@
+{
+  "date": "2026-07-31",
+  "keywords": [
+    "EIP-7819 委托标识尾随数据存放 ML-DSA 公钥",
+    "EIP-8355 ML-DSA 验证预编译",
+    "EIP-8357 EVM 验证密钥登记",
+    "EIP-8358 账户变更净 gas 计量",
+    "EIP-8347 PBT 离线迁移合并",
+    "EIP-8038 访问列表成本修正",
+    "Ethereal news #33"
+  ],
+  "summary": "shemnon 提交两项后量子相关 EIP：EIP-7819 允许在委托标识后附加尾随数据，并给出把 ML-DSA 公钥存入尾随数据、由 EIP-8141 代码接受的示例；新 EIP-8355 为 FIPS 204 ML-DSA 三个安全级别提供验证预编译。donnoh 提交 EIP-8357 EVM 验证密钥登记，rakita 提交 EIP-8358 账户变更净 gas 计量。EIP-8347 PBT 离线状态迁移合并为 Draft。Ethereal news #33 发布。",
+  "items": [
+    {
+      "topic": "后量子账户路径",
+      "title": "EIP-7819：为委托标识加入尾随数据",
+      "note": "（shemnon）提交，新增示例：把 ML-DSA 公钥存放在委托标识的尾随数据中，并用 EIP-8141 代码接受它。",
+      "url": "https://github.com/ethereum/EIPs/pull/12047",
+      "date": "2026-07-31",
+      "title_en": "EIP-7819: add trailing data to the delegation designator",
+      "note_en": "(shemnon), submitted, with a worked example storing ML-DSA public keys in the designator's trailing data and EIP-8141 code that accepts them.",
+      "topic_en": "A post-quantum account path"
+    },
+    {
+      "topic": "后量子账户路径",
+      "title": "新 EIP：ML-DSA 验证预编译",
+      "note": "（shemnon）提交，即 EIP-8355，按 FIPS 原文为全部参数集提供预编译。论坛 07:55：三个预编译分别验证 NIST 安全级别 II、III、V（ML-DSA-44、65、87），与 EIP-8051 有重叠，作者列出四处具体分歧，若 8051 解决这些分歧，他更愿意并入 8051。EIP-8081：提议纳入 EIP-8355 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12048",
+      "date": "2026-07-31",
+      "title_en": "New EIP: Precompiles for ML-DSA Verification",
+      "note_en": "(shemnon), submitted as EIP-8355, a \"just the FIPS\" set of precompiles for all parameter sets. Forum, 07:55: three precompiles verify NIST security levels II, III and V (ML-DSA-44, 65 and 87); it overlaps with EIP-8051, the author lists four specific disagreements, and he would rather fold it into 8051 if those are resolved. EIP-8081: propose EIP-8355 for inclusion, submitted.",
+      "topic_en": "A post-quantum account path"
+    },
+    {
+      "topic": "后量子账户路径",
+      "title": "论坛",
+      "note": "新 EIP：ML-DSA 验证预编译（shemnon）提交，即 EIP-8355，按 FIPS 原文为全部参数集提供预编译。论坛 07:55：三个预编译分别验证 NIST 安全级别 II、III、V（ML-DSA-44、65、87），与 EIP-8051 有重叠，作者列出四处具体分歧，若 8051 解决这些分歧，他更愿意并入 8051。EIP-8081：提议纳入 EIP-8355 提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8355-precompiles-for-ml-dsa-verification/29211",
+      "date": "2026-07-31",
+      "title_en": "Forum",
+      "note_en": "New EIP: Precompiles for ML-DSA Verification (shemnon), submitted as EIP-8355, a \"just the FIPS\" set of precompiles for all parameter sets. Forum, 07:55: three precompiles verify NIST security levels II, III and V (ML-DSA-44, 65 and 87); it overlaps with EIP-8051, the author lists four specific disagreements, and he would rather fold it into 8051 if those are resolved. EIP-8081: propose EIP-8355 for inclusion, submitted.",
+      "topic_en": "A post-quantum account path"
+    },
+    {
+      "topic": "后量子账户路径",
+      "title": "EIP-8081：提议纳入 EIP-8355",
+      "note": "新 EIP：ML-DSA 验证预编译（shemnon）提交，即 EIP-8355，按 FIPS 原文为全部参数集提供预编译。论坛 07:55：三个预编译分别验证 NIST 安全级别 II、III、V（ML-DSA-44、65、87），与 EIP-8051 有重叠，作者列出四处具体分歧，若 8051 解决这些分歧，他更愿意并入 8051。EIP-8081：提议纳入 EIP-8355 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12059",
+      "date": "2026-07-31",
+      "title_en": "EIP-8081: propose EIP-8355 for inclusion",
+      "note_en": "New EIP: Precompiles for ML-DSA Verification (shemnon), submitted as EIP-8355, a \"just the FIPS\" set of precompiles for all parameter sets. Forum, 07:55: three precompiles verify NIST security levels II, III and V (ML-DSA-44, 65 and 87); it overlaps with EIP-8051, the author lists four specific disagreements, and he would rather fold it into 8051 if those are resolved. EIP-8081: propose EIP-8355 for inclusion, submitted.",
+      "topic_en": "A post-quantum account path"
+    },
+    {
+      "topic": "gas 与原生 rollup",
+      "title": "新 EIP：账户变更的净 gas 计量",
+      "note": "（rakita）提交，即 EIP-8358：带 value 的调用对交易中首次改变余额的账户收费，之后再改同一账户更便宜，恢复原余额且 nonce 不变可获退款。按 EIP-8038 的 `ACCOUNT_WRITE = 9000`，调用基础费 4000，每个干净账户加 2500；2300 gas stipend 变为被调用方 gas 的下限。已应用的 EIP-7702 授权会改变授权方 nonce，因此之后的调用视该账户为已变更。",
+      "url": "https://github.com/ethereum/EIPs/pull/12058",
+      "date": "2026-07-31",
+      "title_en": "New EIP: Net Gas Metering for Account Changes",
+      "note_en": "(rakita), submitted as EIP-8358: a value-bearing call pays for each account whose balance changes for the first time in a transaction, later changes to that account cost less, and restoring the original balance earns a refund if the nonce is unchanged. With EIP-8038's `ACCOUNT_WRITE = 9000`, a call pays a 4000 base plus 2500 per clean account changed; the 2300 gas stipend becomes a floor on callee gas. An applied EIP-7702 authorization changes the authority's nonce, so later calls treat that account as changed.",
+      "topic_en": "Gas and native rollups"
+    },
+    {
+      "topic": "gas 与原生 rollup",
+      "title": "EIP-8038：访问列表成本由冷访问成本推导",
+      "note": "（misilva73）提交并合并：两项访问列表成本原为 3000，等于冷访问成本，加上触及时的 `WARM_ACCESS` 共 3100，反而比不用访问列表贵，颠倒了 EIP-2930 的折扣；现均改为 2900。",
+      "url": "https://github.com/ethereum/EIPs/pull/12056",
+      "date": "2026-07-31",
+      "title_en": "EIP-8038: derive access list costs from cold access costs",
+      "note_en": "(misilva73), submitted and merged: both access list costs were 3000, equal to the cold costs, and since a prepaid entry still pays `WARM_ACCESS` when touched, using an access list cost 3100 versus 3000 without one, inverting the EIP-2930 discount; both are now 2900.",
+      "topic_en": "Gas and native rollups"
+    },
+    {
+      "topic": "gas 与原生 rollup",
+      "title": "新 EIP：EVM 验证密钥登记",
+      "note": "（donnoh）提交，即 EIP-8357：固定地址的系统合约公开每个 L1 分叉批准的 EVM 验证密钥哈希及其接受的无状态输入 `schema_id`（EIP-8025），原生 rollup 可自动跟随当前哈希或固定某个已登记哈希。论坛 21:14。",
+      "url": "https://github.com/ethereum/EIPs/pull/12055",
+      "date": "2026-07-31",
+      "title_en": "New EIP: EVM Verification Key Registry",
+      "note_en": "(donnoh), submitted as EIP-8357: a fixed-address system contract exposes fork-approved EVM verification key hashes and the stateless input `schema_id` (EIP-8025) each accepts, so native rollups can follow the current hash automatically or pin a registered one. Forum, 21:14.",
+      "topic_en": "Gas and native rollups"
+    },
+    {
+      "topic": "gas 与原生 rollup",
+      "title": "论坛",
+      "note": "新 EIP：EVM 验证密钥登记（donnoh）提交，即 EIP-8357：固定地址的系统合约公开每个 L1 分叉批准的 EVM 验证密钥哈希及其接受的无状态输入 `schema_id`（EIP-8025），原生 rollup 可自动跟随当前哈希或固定某个已登记哈希。论坛 21:14。",
+      "url": "https://ethereum-magicians.org/t/eip-8357-evm-verification-key-registry/29222",
+      "date": "2026-07-31",
+      "title_en": "Forum",
+      "note_en": "New EIP: EVM Verification Key Registry (donnoh), submitted as EIP-8357: a fixed-address system contract exposes fork-approved EVM verification key hashes and the stateless input `schema_id` (EIP-8025) each accepts, so native rollups can follow the current hash automatically or pin a registered one. Forum, 21:14.",
+      "topic_en": "Gas and native rollups"
+    },
+    {
+      "topic": "gas 与原生 rollup",
+      "title": "EIP-8025：移至 Draft",
+      "note": "（frisitano）合并，补全各章节。",
+      "url": "https://github.com/ethereum/EIPs/pull/11604",
+      "date": "2026-07-31",
+      "title_en": "EIP-8025: move to Draft",
+      "note_en": "(frisitano), merged, filling in all sections.",
+      "topic_en": "Gas and native rollups"
+    },
+    {
+      "topic": "状态树",
+      "title": "新 EIP：离线状态迁移到 PBT",
+      "note": "合并为 Draft（EIP-8347）；EIP-8297：迁移指向 EIP-8347 并删除 Verkle 引用 合并；EIP-8297：清零时删除叶子 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12006",
+      "date": "2026-07-31",
+      "title_en": "New EIP: Offline State Migration to the PBT",
+      "note_en": "Merged as a Draft (EIP-8347); EIP-8297: point migration at EIP-8347 and drop Verkle references, merged; EIP-8297: delete leaves on zeroization, merged.",
+      "topic_en": "State tree"
+    },
+    {
+      "topic": "状态树",
+      "title": "EIP-8297：迁移指向 EIP-8347 并删除 Verkle 引用",
+      "note": "新 EIP：离线状态迁移到 PBT 合并为 Draft（EIP-8347）；EIP-8297：迁移指向 EIP-8347 并删除 Verkle 引用 合并；EIP-8297：清零时删除叶子 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12027",
+      "date": "2026-07-31",
+      "title_en": "EIP-8297: point migration at EIP-8347 and drop Verkle references",
+      "note_en": "New EIP: Offline State Migration to the PBT, merged as a Draft (EIP-8347); EIP-8297: point migration at EIP-8347 and drop Verkle references, merged; EIP-8297: delete leaves on zeroization, merged.",
+      "topic_en": "State tree"
+    },
+    {
+      "topic": "状态树",
+      "title": "EIP-8297：清零时删除叶子",
+      "note": "新 EIP：离线状态迁移到 PBT 合并为 Draft（EIP-8347）；EIP-8297：迁移指向 EIP-8347 并删除 Verkle 引用 合并；EIP-8297：清零时删除叶子 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12043",
+      "date": "2026-07-31",
+      "title_en": "EIP-8297: delete leaves on zeroization",
+      "note_en": "New EIP: Offline State Migration to the PBT, merged as a Draft (EIP-8347); EIP-8297: point migration at EIP-8347 and drop Verkle references, merged; EIP-8297: delete leaves on zeroization, merged.",
+      "topic_en": "State tree"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news weekly #33",
+      "note": "21:53：以太坊创世 11 周年、pcaversaccio 加入 EF 董事会、北极熊当选 Glamsterdam 吉祥物。",
+      "url": "https://x.com/EtherealnewsHQ/status/2083204320754037111",
+      "date": "2026-07-31",
+      "title_en": "Ethereal news weekly #33",
+      "note_en": "21:53: Ethereum 11 years since genesis, pcaversaccio joined the EF board, the polar bear chosen as Glamsterdam mascot.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8141：SIGPARAM 复制操作数顺序与 CALLDATACOPY 对齐",
+      "note": "合并；EIP-7668 列为 PFI 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12042",
+      "date": "2026-07-31",
+      "title_en": "EIP-8141: align SIGPARAM copy operand order with CALLDATACOPY",
+      "note_en": "Merged; EIP-7668 as PFI, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7668 列为 PFI",
+      "note": "EIP-8141：SIGPARAM 复制操作数顺序与 CALLDATACOPY 对齐 合并；EIP-7668 列为 PFI 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12046",
+      "date": "2026-07-31",
+      "title_en": "EIP-7668 as PFI",
+      "note_en": "EIP-8141: align SIGPARAM copy operand order with CALLDATACOPY, merged; EIP-7668 as PFI, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #184 议程",
+      "note": "00:27；ACDE #243 议程 00:29。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-184-august-6-2026/29209",
+      "date": "2026-07-31",
+      "title_en": "ACDC #184 agenda",
+      "note_en": "00:27; ACDE #243 agenda, 00:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #243 议程",
+      "note": "ACDC #184 议程 00:27；ACDE #243 议程 00:29。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-243-august-13-2026/29210",
+      "date": "2026-07-31",
+      "title_en": "ACDE #243 agenda",
+      "note_en": "ACDC #184 agenda, 00:27; ACDE #243 agenda, 00:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8356 目的绑定的第三方数据同意",
+      "note": "11:41；ERC-8406 可替代 agent 代币 19:51。",
+      "url": "https://ethereum-magicians.org/t/erc-8356-purpose-bound-third-party-data-consent/29217",
+      "date": "2026-07-31",
+      "title_en": "Magicians: ERC-8356 purpose-bound third-party data consent",
+      "note_en": "11:41; ERC-8406 fungible agent tokens, 19:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8406 可替代 agent 代币",
+      "note": "Magicians：ERC-8356 目的绑定的第三方数据同意 11:41；ERC-8406 可替代 agent 代币 19:51。",
+      "url": "https://ethereum-magicians.org/t/erc-8406-fungible-agent-tokens/29220",
+      "date": "2026-07-31",
+      "title_en": "ERC-8406 fungible agent tokens",
+      "note_en": "Magicians: ERC-8356 purpose-bound third-party data consent, 11:41; ERC-8406 fungible agent tokens, 19:51.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "binji：已铸造 2.6 万件，以太坊一年来最高的 gas 峰值",
+      "note": "15:40。",
+      "url": "https://x.com/binji_x/status/2083110641162723438",
+      "date": "2026-07-31",
+      "title_en": "binji: 26K pieces minted, the highest gas spike on Ethereum in a year",
+      "note_en": "15:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：做钱包就只有一项职责，失败了就该倾尽全力收拾残局然后离开",
+      "note": "22:55。",
+      "url": "https://x.com/tayvano_/status/2083219899426755044",
+      "date": "2026-07-31",
+      "title_en": "tayvano: a wallet has one job, and if it fails it should clean up the mess with everything it has and then leave",
+      "note_en": "22:55.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh：真正的隐私等级，只有你知道最好，第三方公司知道最差",
+      "note": "21:36。",
+      "url": "https://x.com/donnoh_eth/status/2083200100646481996",
+      "date": "2026-07-31",
+      "title_en": "donnoh: the real privacy tiers, best when only you know, worst when a third-party company knows too",
+      "note_en": "21:36.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12047",
+    "credit": "GitHub, ethereum/EIPs PR #12047",
+    "local_path": "assets/2026-07-31.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12047"
+  },
+  "keywords_en": [
+    "EIP-7819 delegation designator trailing data holds ML-DSA public keys",
+    "EIP-8355 ML-DSA verification precompiles",
+    "EIP-8357 EVM verification key registry",
+    "EIP-8358 net gas metering for account changes",
+    "EIP-8347 PBT offline migration merged",
+    "EIP-8038 access list cost fix",
+    "Ethereal news #33"
+  ],
+  "summary_en": "shemnon submitted two post-quantum-related EIPs: EIP-7819 allows trailing data after the delegation designator, with a worked example storing ML-DSA public keys there and accepting them with EIP-8141 code, and the new EIP-8355 provides verification precompiles for FIPS 204 ML-DSA at three security levels. donnoh submitted EIP-8357, an EVM verification key registry, and rakita submitted EIP-8358, net gas metering for account changes. EIP-8347 offline state migration to the PBT merged as a Draft. Ethereal news #33 was published."
+}

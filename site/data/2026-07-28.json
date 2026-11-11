@@ -1,0 +1,171 @@
+{
+  "date": "2026-07-28",
+  "keywords": [
+    "ERC-8286 frame 交易的模块化账户",
+    "EIP-8141 charged_gas 费用结算合并",
+    "ERC-8262 零知识合规预言机",
+    "EIP-7906 POST_TX 执行",
+    "Vitalik diamond iO",
+    "Lido 验证者数减少近 30%",
+    "Starknet 隐私第二阶段"
+  ],
+  "summary": "ERC-8286 合并为 Draft，为 ERC-7579 模块化账户定义 EIP-8141 frame 交易的验证扩展：验证器返回批准模式，账户在 VERIFY frame 中用 `APPROVE` 指令应用。soispoke 的 EIP-8141 `charged_gas` 费用结算修改合并。ERC-8262 零知识合规预言机合并。Vitalik 发布密码学混淆系列第二篇，讲 diamond iO。Barnabé 称 Lido 升级把验证者数减少近 30%。",
+  "items": [
+    {
+      "topic": "frame 交易与模块化账户",
+      "title": "新 ERC：Modular Accounts for Frame Transactions",
+      "note": "（chiranjeev13）合并为 Draft，即 ERC-8286。ERC-7579 仍是核心模块系统，本 ERC 增加 EIP-8141 frame 交易的验证流程：验证器模块返回批准模式，账户在 VERIFY frame 中通过 `APPROVE` 指令应用。",
+      "url": "https://github.com/ethereum/ERCs/pull/1794",
+      "date": "2026-07-28",
+      "title_en": "New ERC: Modular Accounts for Frame Transactions",
+      "note_en": "(chiranjeev13), merged as a Draft, ERC-8286. ERC-7579 stays the core module system, and this ERC adds the validation flow for EIP-8141 frame transactions: a validator module returns an approval mode that the account applies via the `APPROVE` instruction during a VERIFY frame.",
+      "topic_en": "Frame transactions and modular accounts"
+    },
+    {
+      "topic": "frame 交易与模块化账户",
+      "title": "EIP-8141：费用结算采用 charged_gas",
+      "note": "（soispoke）合并，退款、calldata 下限和区块 gas 计数统一按 `charged_gas` 计算。",
+      "url": "https://github.com/ethereum/EIPs/pull/11969",
+      "date": "2026-07-28",
+      "title_en": "EIP-8141: apply charged_gas to fee settlement",
+      "note_en": "(soispoke), merged, so refunds, the calldata floor and block gas accounting all follow `charged_gas`.",
+      "topic_en": "Frame transactions and modular accounts"
+    },
+    {
+      "topic": "frame 交易与模块化账户",
+      "title": "EIP-7906：在安全考虑中加入 POST_TX 执行",
+      "note": "（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12020",
+      "date": "2026-07-28",
+      "title_en": "EIP-7906: add POST_TX enforcement to security considerations",
+      "note_en": "(forshtat), submitted and merged.",
+      "topic_en": "Frame transactions and modular accounts"
+    },
+    {
+      "topic": "合规隐私与研究",
+      "title": "新 ERC：零知识合规预言机",
+      "note": "（DROOdotFOO）合并为 Draft，即 ERC-8262：用户在客户端生成证明，证明自己满足特定司法辖区的 AML、制裁筛查和反拆分阈值，不暴露金额、交易对手或筛查细节，不需要可信第三方或 TEE。",
+      "url": "https://github.com/ethereum/ERCs/pull/1747",
+      "date": "2026-07-28",
+      "title_en": "New ERC: Zero-Knowledge Compliance Oracle",
+      "note_en": "(DROOdotFOO), merged as a Draft, ERC-8262: users generate proofs client-side that they meet jurisdiction-specific AML, sanctions screening and anti-structuring thresholds without revealing amounts, counterparties or screening details, with no trusted third party or TEE.",
+      "topic_en": "Compliant privacy and research"
+    },
+    {
+      "topic": "合规隐私与研究",
+      "title": "Vitalik：密码学混淆协议系列第二篇，diamond iO",
+      "note": "22:55。",
+      "url": "https://x.com/VitalikButerin/status/2082132765886108082",
+      "date": "2026-07-28",
+      "title_en": "Vitalik: the second part of his series on cryptographic obfuscation protocols, on diamond iO",
+      "note_en": "22:55.",
+      "topic_en": "Compliant privacy and research"
+    },
+    {
+      "topic": "合规隐私与研究",
+      "title": "zooko：首个具备机器可检验证明、保证规范与密码学之间没有可导致无法察觉伪造的漏洞的在线货币协议",
+      "note": "22:33。",
+      "url": "https://x.com/zooko/status/2082127365669359860",
+      "date": "2026-07-28",
+      "title_en": "zooko: the first live money protocol with a machine-checkable proof that there are no gaps between the spec and the crypto that could allow undetectable counterfeiting",
+      "note_en": "22:33.",
+      "topic_en": "Compliant privacy and research"
+    },
+    {
+      "topic": "合规隐私与研究",
+      "title": "StarkWare：Starknet 隐私进入第二阶段",
+      "note": "18:56，第一阶段是 STRK20 协议级隐私池。",
+      "url": "https://x.com/StarkWareLtd/status/2082072579888775280",
+      "date": "2026-07-28",
+      "title_en": "StarkWare: Starknet privacy enters Stage 2",
+      "note_en": "18:56; Stage 1 was the STRK20 protocol-level privacy pool.",
+      "topic_en": "Compliant privacy and research"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：Lido 新升级把验证者数减少近 30%",
+      "note": "00:33，消息更少、网络开销更低，也让快速最终性的路径更清晰；据 Ethereal news #33，Lido Curated Module v2 支持 0x02 提款凭证，可迁移 26.5 万以上验证者。",
+      "url": "https://x.com/barnabemonnot/status/2081795081875439716",
+      "date": "2026-07-28",
+      "title_en": "Barnabé: a new Lido upgrade cuts its validator count by almost 30%",
+      "note_en": "00:33, meaning fewer messages, less network overhead and a cleaner path to faster finality; per Ethereal news #33, Lido Curated Module v2 supports 0x02 withdrawal credentials, and 265k+ validators can be migrated.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：Regulated Asset Claim",
+      "note": "合并；ERC：跨链事件存档 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1849",
+      "date": "2026-07-28",
+      "title_en": "ERC: Regulated Asset Claim",
+      "note_en": "Merged; ERC: Cross-Chain Event Archive, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：跨链事件存档",
+      "note": "ERC：Regulated Asset Claim 合并；ERC：跨链事件存档 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1914",
+      "date": "2026-07-28",
+      "title_en": "ERC: Cross-Chain Event Archive",
+      "note_en": "ERC: Regulated Asset Claim, merged; ERC: Cross-Chain Event Archive, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：通过状态同步结构性消除 OEV",
+      "note": "20:56；较弱保证下的原生随机数来源 23:05。",
+      "url": "https://ethresear.ch/t/structural-oev-elimination-through-state-synchronization/25555",
+      "date": "2026-07-28",
+      "title_en": "ethresear.ch: structural OEV elimination through state synchronization",
+      "note_en": "20:56; native randomness sourcing with looser guarantees, 23:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "较弱保证下的原生随机数来源",
+      "note": "ethresear.ch：通过状态同步结构性消除 OEV 20:56；较弱保证下的原生随机数来源 23:05。",
+      "url": "https://ethresear.ch/t/native-randomness-sourcing-with-looser-guarantees/25556",
+      "date": "2026-07-28",
+      "title_en": "native randomness sourcing with looser guarantees",
+      "note_en": "Ethresear.ch: structural OEV elimination through state synchronization, 20:56; native randomness sourcing with looser guarantees, 23:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #90 议程",
+      "note": "02:02。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-90-august-3-2026/29108",
+      "date": "2026-07-28",
+      "title_en": "ACDT #90 agenda",
+      "note_en": "02:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：Opus 的 Auto-Topup 在钱包余额低于阈值时自动补充，适用于机器人、gas 钱包和热钱包",
+      "note": "14:37。",
+      "url": "https://x.com/StarkWareLtd/status/2082007624242135466",
+      "date": "2026-07-28",
+      "title_en": "StarkWare: Opus Auto-Topup refills a wallet when its balance falls below a threshold, for bots, gas wallets and hot wallets",
+      "note_en": "14:37.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/ERCs/pull/1794",
+    "credit": "GitHub, ethereum/ERCs PR #1794",
+    "local_path": "assets/2026-07-28.jpg",
+    "credit_en": "GitHub, ethereum/ERCs PR #1794"
+  },
+  "keywords_en": [
+    "ERC-8286 modular accounts for frame transactions",
+    "EIP-8141 charged_gas fee settlement merged",
+    "ERC-8262 zero-knowledge compliance oracle",
+    "EIP-7906 POST_TX enforcement",
+    "Vitalik on diamond iO",
+    "Lido cuts validator count by almost 30%",
+    "Starknet privacy Stage 2"
+  ],
+  "summary_en": "ERC-8286 merged as a Draft, defining an EIP-8141 frame transaction validation extension for ERC-7579 modular accounts: a validator returns an approval mode that the account applies with the `APPROVE` instruction in a VERIFY frame. soispoke's EIP-8141 `charged_gas` fee settlement change merged. ERC-8262, a zero-knowledge compliance oracle, merged. Vitalik published the second part of his cryptographic obfuscation series, on diamond iO. Barnabé said a Lido upgrade cuts its validator count by almost 30%."
+}

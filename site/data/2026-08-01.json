@@ -1,0 +1,169 @@
+{
+  "date": "2026-08-01",
+  "keywords": [
+    "EIP-8141 frame 拆分执行 gas 与状态 gas",
+    "验证前缀禁止 SLOTNUM",
+    "frame 收据无交易级状态",
+    "NONCE_MANAGER 与 RECENT_ROOT_ADDRESS 地址固定",
+    "Glamsterdam 10 个 EIP 解读",
+    "ERC-8373 后量子锚定密钥绑定"
+  ],
+  "summary": "EIP-8141 再提交四项修改：lightclient 把 frame 的 `gas_limit` 拆成 `execution_gas_limit` 和 `state_gas_limit`；AnkushinDaniil 在验证前缀中禁用 SLOTNUM，并说明 frame 收据没有交易级状态，起因是 Nethermind 与 ethrex 在同一笔交易的 JSON-RPC `status` 上一个报 `0x1`、一个报 `0x0`。EIP-8250 和 EIP-8272 的系统地址分别固定为以 8250、8272 结尾。trent_vanepps 解读 Glamsterdam 包含的 10 个 EIP。",
+  "items": [
+    {
+      "topic": "EIP-8141 的 gas 维度与验证规则",
+      "title": "EIP-8141：为 frame 加入显式的状态 gas 第二维度",
+      "note": "（lightclient）提交：把 frame 的 `gas_limit` 拆为 `execution_gas_limit` 和 `state_gas_limit`，执行 gas 大体仍是调用帧层面的概念，状态 gas 则作为 frame 层面的概念，用来理清 frame 与 EIP-2780、7623、7708、7825、8037 之间剩余的边界情况。",
+      "url": "https://github.com/ethereum/EIPs/pull/12062",
+      "date": "2026-08-01",
+      "title_en": "EIP-8141: add an explicit second dimension for state gas to frames",
+      "note_en": "(lightclient), submitted: a frame's `gas_limit` splits into `execution_gas_limit` and `state_gas_limit`; execution gas stays (generally) a call-frame-level concept while state gas is a frame-level concept, to clear up the remaining edge cases between frames and EIP-2780, 7623, 7708, 7825 and 8037.",
+      "topic_en": "Gas dimensions and validation rules in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 维度与验证规则",
+      "title": "EIP-8141：在验证前缀执行中禁用 SLOTNUM",
+      "note": "（AnkushinDaniil）提交：验证前缀已禁止 `TIMESTAMP`、`NUMBER`、`PREVRANDAO`、`BASEFEE`、`BLOBBASEFEE` 等在接纳与打包之间会变化的操作码，否则交易可能在接纳时通过模拟、打包时回滚；EIP-7843 的 `SLOTNUM`（`0x4B`）具有同样性质。",
+      "url": "https://github.com/ethereum/EIPs/pull/12066",
+      "date": "2026-08-01",
+      "title_en": "EIP-8141: ban SLOTNUM during validation-prefix execution",
+      "note_en": "(AnkushinDaniil), submitted: the validation prefix already bans opcodes whose value changes between admission and inclusion, such as `TIMESTAMP`, `NUMBER`, `PREVRANDAO`, `BASEFEE` and `BLOBBASEFEE`, since otherwise a transaction could pass simulation at admission and revert on inclusion; EIP-7843's `SLOTNUM` (`0x4B`) has the same property.",
+      "topic_en": "Gas dimensions and validation rules in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 维度与验证规则",
+      "title": "EIP-8141：说明 frame 收据不含交易级状态",
+      "note": "（AnkushinDaniil）提交：`ReceiptPayload` 没有交易级状态字段，但 JSON-RPC 收据有 `status`；在 Nethermind/ethrex devnet 上，同一笔 SENDER frame 回滚的交易被一个客户端报为 `0x1`、另一个报为 `0x0`，而所有共识字段一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12061",
+      "date": "2026-08-01",
+      "title_en": "EIP-8141: note that a frame receipt carries no transaction-level status",
+      "note_en": "(AnkushinDaniil), submitted: `ReceiptPayload` has no transaction-level status field, but JSON-RPC receipts have `status`; on a Nethermind/ethrex devnet, the same transaction with a reverting SENDER frame was reported as `0x1` by one client and `0x0` by the other, while all consensus fields matched.",
+      "topic_en": "Gas dimensions and validation rules in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 维度与验证规则",
+      "title": "EIP-8250：NONCE_MANAGER 固定为 0x…8250",
+      "note": "与 EIP-8272：RECENT_ROOT_ADDRESS 固定为 0x…8272（AnkushinDaniil）提交，两个已知实现都独立选择了等于 EIP 编号的地址，与 8141 的 `EXPIRY_VERIFIER = 0x…8141` 惯例一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12067",
+      "date": "2026-08-01",
+      "title_en": "EIP-8250: pin NONCE_MANAGER to 0x…8250",
+      "note_en": "And EIP-8272: pin RECENT_ROOT_ADDRESS to 0x…8272 (AnkushinDaniil), submitted; both known implementations independently chose the address equal to the EIP number, matching 8141's `EXPIRY_VERIFIER = 0x…8141` convention.",
+      "topic_en": "Gas dimensions and validation rules in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的 gas 维度与验证规则",
+      "title": "EIP-8272：RECENT_ROOT_ADDRESS 固定为 0x…8272",
+      "note": "EIP-8250：NONCE_MANAGER 固定为 0x…8250 与 EIP-8272：RECENT_ROOT_ADDRESS 固定为 0x…8272（AnkushinDaniil）提交，两个已知实现都独立选择了等于 EIP 编号的地址，与 8141 的 `EXPIRY_VERIFIER = 0x…8141` 惯例一致。",
+      "url": "https://github.com/ethereum/EIPs/pull/12068",
+      "date": "2026-08-01",
+      "title_en": "EIP-8272: pin RECENT_ROOT_ADDRESS to 0x…8272",
+      "note_en": "EIP-8250: pin NONCE_MANAGER to 0x…8250 and EIP-8272: pin RECENT_ROOT_ADDRESS to 0x…8272 (AnkushinDaniil), submitted; both known implementations independently chose the address equal to the EIP number, matching 8141's `EXPIRY_VERIFIER = 0x…8141` convention.",
+      "topic_en": "Gas dimensions and validation rules in EIP-8141"
+    },
+    {
+      "topic": "Glamsterdam 与后量子",
+      "title": "trent_vanepps：Glamsterdam 包含 10 个 EIP，两个 headliner、一批面向合约开发者的改进和 gas 重定价",
+      "note": "04:15。",
+      "url": "https://x.com/trent_vanepps/status/2083300509239087145",
+      "date": "2026-08-01",
+      "title_en": "trent_vanepps: Glamsterdam includes 10 EIPs, two headliners, a set of improvements for smart contract developers, and gas repricings",
+      "note_en": "04:15.",
+      "topic_en": "Glamsterdam and post-quantum"
+    },
+    {
+      "topic": "Glamsterdam 与后量子",
+      "title": "Magicians：ERC-8373 后量子锚定密钥绑定",
+      "note": "05:52，针对链上与 agent 身份签名层迁移到后量子的问题，依靠重新计算而非信任；作者指出“在经典签名旁加一个后量子签名”并不能真正解决问题。",
+      "url": "https://ethereum-magicians.org/t/erc-8373-post-quantum-anchored-key-binding/29225",
+      "date": "2026-08-01",
+      "title_en": "Magicians: ERC-8373 Post-Quantum Anchored Key-Binding",
+      "note_en": "05:52, aimed at migrating the signature layer of onchain and agent identity to post-quantum, relying on recomputation rather than trust; the author argues that \"adding a post-quantum signature alongside the classical one\" does not actually close the gap.",
+      "topic_en": "Glamsterdam and post-quantum"
+    },
+    {
+      "topic": "Glamsterdam 与后量子",
+      "title": "新 EIP：信标区块报告字段",
+      "note": "（hanniabu）提交，即 EIP-8359，在信标区块体中加入可选的 32 字节字段，让验证者报告 CL/EL 客户端、部署类型和多节点阈值，用于客户端多样性统计，论坛 04:41。",
+      "url": "https://github.com/ethereum/EIPs/pull/12063",
+      "date": "2026-08-01",
+      "title_en": "New EIP: Beacon Block Reporting Field",
+      "note_en": "(hanniabu), submitted as EIP-8359: an optional 32-byte beacon block body field where validators report CL/EL clients, setup type and multi-node threshold for client diversity statistics; forum, 04:41.",
+      "topic_en": "Glamsterdam and post-quantum"
+    },
+    {
+      "topic": "Glamsterdam 与后量子",
+      "title": "论坛",
+      "note": "新 EIP：信标区块报告字段（hanniabu）提交，即 EIP-8359，在信标区块体中加入可选的 32 字节字段，让验证者报告 CL/EL 客户端、部署类型和多节点阈值，用于客户端多样性统计，论坛 04:41。",
+      "url": "https://ethereum-magicians.org/t/eip-8359-beacon-block-reporting-field/29224",
+      "date": "2026-08-01",
+      "title_en": "forum",
+      "note_en": "New EIP: Beacon Block Reporting Field (hanniabu), submitted as EIP-8359: an optional 32-byte beacon block body field where validators report CL/EL clients, setup type and multi-node threshold for client diversity statistics; forum, 04:41.",
+      "topic_en": "Glamsterdam and post-quantum"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-1153：在安全考虑中加入 SIR.trading 事件",
+      "note": "提交，2025 年 3 月约 35.5 万美元的漏洞源于用于池地址校验的瞬态存储槽被挪作他用。",
+      "url": "https://github.com/ethereum/EIPs/pull/12064",
+      "date": "2026-08-01",
+      "title_en": "EIP-1153: add the SIR.trading incident to Security Considerations",
+      "note_en": "Submitted; the March 2025 exploit of about $355K came from a transient storage slot used for pool address verification being overwritten for another purpose.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie：TokenWorks 的新应用不到一个月在以太坊上产生超过 17 万美元 gas 费",
+      "note": "03:52；Barnabé：称赞 jalilwahdat、jackbutcher 等人的项目，开放 24 小时内成为 gas 消耗第二大的合约 02:34。",
+      "url": "https://x.com/growthepie_eth/status/2083294684244213945",
+      "date": "2026-08-01",
+      "title_en": "growthepie: TokenWorks' new app generated over $170k in Ethereum gas fees in under a month",
+      "note_en": "03:52; Barnabé: praising a project by jalilwahdat, jackbutcher and others that became the second-largest gas-consuming contract in the 24 hours it was open, 02:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Barnabé：称赞 jalilwahdat、jackbutcher 等人的项目，开放 24 小时内成为 gas 消耗第二大的合约",
+      "note": "growthepie：TokenWorks 的新应用不到一个月在以太坊上产生超过 17 万美元 gas 费 03:52；Barnabé：称赞 jalilwahdat、jackbutcher 等人的项目，开放 24 小时内成为 gas 消耗第二大的合约 02:34。",
+      "url": "https://x.com/barnabemonnot/status/2083275218336841736",
+      "date": "2026-08-01",
+      "title_en": "Barnabé: praising a project by jalilwahdat, jackbutcher and others that became the second-largest gas-consuming contract in the 24 hours it was open",
+      "note_en": "Growthepie: TokenWorks' new app generated over $170k in Ethereum gas fees in under a month, 03:52; Barnabé: praising a project by jalilwahdat, jackbutcher and others that became the second-largest gas-consuming contract in the 24 hours it was open, 02:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Tim Roughgarden：与 Dan Boneh 一起问 Ron Rivest，RSA 签名和加密谁先出现",
+      "note": "00:19。",
+      "url": "https://x.com/Tim_Roughgarden/status/2083241043818913913",
+      "date": "2026-08-01",
+      "title_en": "Tim Roughgarden: asking Ron Rivest, with Dan Boneh, whether RSA signatures or RSA encryption came first",
+      "note_en": "00:19.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：钱包出了熵问题几乎无法补救，无法用密码学验证所有权，也无法抢跑或预警",
+      "note": "01:50。",
+      "url": "https://x.com/tayvano_/status/2083264110977077276",
+      "date": "2026-08-01",
+      "title_en": "tayvano: a wallet with an entropy issue is nearly impossible to fix after shipping, since you cannot verify ownership cryptographically, frontrun or warn",
+      "note_en": "01:50.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12062",
+    "credit": "GitHub, ethereum/EIPs PR #12062",
+    "local_path": "assets/2026-08-01.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12062"
+  },
+  "keywords_en": [
+    "EIP-8141 frames split execution gas and state gas",
+    "SLOTNUM banned in validation prefixes",
+    "frame receipts carry no transaction-level status",
+    "NONCE_MANAGER and RECENT_ROOT_ADDRESS pinned",
+    "Glamsterdam's 10 EIPs explained",
+    "ERC-8373 post-quantum anchored key binding"
+  ],
+  "summary_en": "Four more EIP-8141 changes were submitted: lightclient split a frame's `gas_limit` into `execution_gas_limit` and `state_gas_limit`; AnkushinDaniil banned SLOTNUM in validation prefixes and noted that frame receipts carry no transaction-level status, after Nethermind and ethrex reported `0x1` and `0x0` respectively for the JSON-RPC `status` of the same transaction. The system addresses of EIP-8250 and EIP-8272 were pinned to addresses ending in 8250 and 8272. trent_vanepps explained the 10 EIPs in Glamsterdam."
+}

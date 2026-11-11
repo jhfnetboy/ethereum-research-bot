@@ -1,0 +1,99 @@
+{
+  "date": "2026-07-11",
+  "keywords": [
+    "EIP-8037 calldata 底价修复合并",
+    "Robinhood Chain 与 ETH 作为 gas 代币",
+    "约 8",
+    "500 个验证者物理节点",
+    "AI 2040 讨论",
+    "ERC-7303 代理委托安全"
+  ],
+  "summary": "周六。jochem-brouwer 提交的 EIP-8037 修复合并，calldata 底价计入区块级 gas 记账。Barnabé 认为 1 亿美元流入 Robinhood Chain 不是因为 ETH 是其 gas 代币，而是因为 ETH 是以太坊的货币；他还引用一项新研究称以太坊验证者网络约有 8,500 个物理节点。Vitalik 评论 AI 2040 与批评者的世界观完全不相容。",
+  "items": [
+    {
+      "topic": "gas 记账",
+      "title": "EIP-8037：把 EIP-7976 calldata 底价应用到区块级 gas 记账",
+      "note": "合并。复现测试在 Amsterdam 规则、`block_gas_limit = 2 * TX_MAX_GAS_LIMIT = 33,554,432` 的设置下测量 calldata 底价预算。",
+      "url": "https://github.com/ethereum/EIPs/pull/11908",
+      "date": "2026-07-11",
+      "title_en": "EIP-8037: apply the EIP-7976 calldata floor to block-level gas accounting",
+      "note_en": "Merged. Its reproduction test measures the calldata floor budget under Amsterdam rules with `block_gas_limit = 2 * TX_MAX_GAS_LIMIT = 33,554,432`.",
+      "topic_en": "Gas accounting"
+    },
+    {
+      "topic": "网络与生态",
+      "title": "Barnabé：约 8,500 个验证者物理节点",
+      "note": "03:52，引用 alexneumueller 的新研究；2024 年 Brown 与 Bautista-Gomez 的论文记录约 12,000 个节点，其中约 7,000 个验证者节点。",
+      "url": "https://x.com/barnabemonnot/status/2075684679093789083",
+      "date": "2026-07-11",
+      "title_en": "Barnabé: about 8,500 physical nodes in the validator network",
+      "note_en": "03:52, citing a new study by alexneumueller; a 2024 paper by Brown and Bautista-Gomez recorded about 12,000 nodes, about 7,000 of them validator nodes.",
+      "topic_en": "Network and ecosystem"
+    },
+    {
+      "topic": "网络与生态",
+      "title": "Barnabé：1 亿美元流入 Robinhood Chain 不是因为 ETH 是 gas 代币",
+      "note": "21:40，让 ETH 做 gas 代币是最面向未来的决定，但 gas 支出很小，真正原因是 ETH 是以太坊的货币。",
+      "url": "https://x.com/barnabemonnot/status/2075953504489800128",
+      "date": "2026-07-11",
+      "title_en": "Barnabé: $100 million did not bridge to Robinhood Chain because ETH is its gas token",
+      "note_en": "21:40; making ETH the gas token is the most future-proof decision, but gas spent is trivial, and the real reason is that ETH is the money of Ethereum.",
+      "topic_en": "Network and ecosystem"
+    },
+    {
+      "topic": "网络与生态",
+      "title": "ERC-7303：加入 IERC7303 introspection 接口和代理委托安全考量",
+      "note": "（kofujimura）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1872",
+      "date": "2026-07-11",
+      "title_en": "ERC-7303: add the IERC7303 introspection interface and agent delegation security considerations",
+      "note_en": "(kofujimura), submitted and merged.",
+      "topic_en": "Network and ecosystem"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：AI 2040 与批评者锁定在完全不相容的世界观里",
+      "note": "12:08；zooko 赞赏其中的认识论谦逊和防御性技术清单 21:26，包括形式化验证、密码学、安全开源硬件等。",
+      "url": "https://x.com/VitalikButerin/status/2075809437428646294",
+      "date": "2026-07-11",
+      "title_en": "Vitalik: AI 2040 and its detractors are locked into totally incompatible worldviews",
+      "note_en": "12:08; zooko praised its epistemic humility and its list of defensive technologies, 21:26, including formal verification, cryptography and secure open hardware.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko 赞赏其中的认识论谦逊和防御性技术清单",
+      "note": "Vitalik：AI 2040 与批评者锁定在完全不相容的世界观里 12:08；zooko 赞赏其中的认识论谦逊和防御性技术清单 21:26，包括形式化验证、密码学、安全开源硬件等。",
+      "url": "https://x.com/zooko/status/2075949766572433626",
+      "date": "2026-07-11",
+      "title_en": "zooko praised its epistemic humility and its list of defensive technologies",
+      "note_en": "Vitalik: AI 2040 and its detractors are locked into totally incompatible worldviews, 12:08; zooko praised its epistemic humility and its list of defensive technologies, 21:26, including formal verification, cryptography and secure open hardware.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst：Centaur 新版本可加入外部频道并接受不可信输入",
+      "note": "07:05。",
+      "url": "https://x.com/gakonst/status/2075733284513005718",
+      "date": "2026-07-11",
+      "title_en": "gakonst: a new Centaur release can join external channels and accept untrusted input",
+      "note_en": "07:05.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11908",
+    "credit": "GitHub, ethereum/EIPs PR #11908",
+    "local_path": "assets/2026-07-11.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11908"
+  },
+  "keywords_en": [
+    "EIP-8037 calldata floor fix merged",
+    "Robinhood Chain and ETH as gas token",
+    "about 8",
+    "500 physical validator nodes",
+    "the AI 2040 debate",
+    "ERC-7303 agent delegation security"
+  ],
+  "summary_en": "Saturday. jochem-brouwer's EIP-8037 fix was merged, bringing the calldata floor into block-level gas accounting. Barnabé argued that $100 million flowed to Robinhood Chain not because ETH is its gas token but because ETH is the money of Ethereum, and cited a new study counting about 8,500 physical nodes in Ethereum's validator network. Vitalik commented that AI 2040 and its detractors hold totally incompatible worldviews."
+}

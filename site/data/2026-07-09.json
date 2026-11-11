@@ -1,0 +1,183 @@
+{
+  "date": "2026-07-09",
+  "keywords": [
+    "EF 协议安全团队用 AI 代理审计",
+    "分类才是产品",
+    "EIP-8130 重新编号合并",
+    "EIP-7906 TXDIFF 按地址视图",
+    "Privacy Pools v2",
+    "Solidity v0.8.36",
+    "捆绑式 attestation 传播",
+    "ACDC #182"
+  ],
+  "summary": "EF 发布协议安全团队的博客：用协调的 AI 代理审查协议代码，真正耗时的不是找 bug 而是分辨真假，已公开的成果包括 libp2p gossipsub 可远程触发的 panic（CVE-2026-34219）。EIP-8130 交易类型重新编号和 RPC 扩展合并；EIP-7906 为 TXDIFF 加入按地址视图。ameensol 介绍 Privacy Pools v2 的屏蔽池设计。Solidity v0.8.36 发布，支持 Amsterdam EVM。当晚召开 ACDC #182。",
+  "items": [
+    {
+      "topic": "账户与交易断言",
+      "title": "EIP-8130：重新编号 AA 交易类型并加入 eth_call/eth_estimateGas RPC 扩展",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11903",
+      "date": "2026-07-09",
+      "title_en": "EIP-8130: renumber AA transaction types and add an eth_call/eth_estimateGas RPC extension",
+      "note_en": "Merged.",
+      "topic_en": "Accounts and transaction assertions"
+    },
+    {
+      "topic": "账户与交易断言",
+      "title": "EIP-7906：加入按地址的 TXDIFF 视图和账户变化标志",
+      "note": "（forshtat）合并，为 `TXDIFF` 操作码增加参数 `0x06` 到 `0x0A`，使“某合约是否改变”“是否发出事件”这类问题可以直接回答。",
+      "url": "https://github.com/ethereum/EIPs/pull/11900",
+      "date": "2026-07-09",
+      "title_en": "EIP-7906: add per-address TXDIFF views and account change flags",
+      "note_en": "(forshtat), merged, extending the `TXDIFF` opcode with params `0x06` to `0x0A` so per-contract questions such as \"did it change?\" and \"did it emit?\" can be answered directly.",
+      "topic_en": "Accounts and transaction assertions"
+    },
+    {
+      "topic": "账户与交易断言",
+      "title": "EIP-7928：运行时中止早于接收方访问时排除接收方",
+      "note": "（nerolation）合并；EIP-2780：澄清 和 与最新变化对齐 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11902",
+      "date": "2026-07-09",
+      "title_en": "EIP-7928: exclude the recipient when a runtime halt precedes its access",
+      "note_en": "(nerolation), merged; EIP-2780: clarifications and alignment with recent changes, merged.",
+      "topic_en": "Accounts and transaction assertions"
+    },
+    {
+      "topic": "账户与交易断言",
+      "title": "EIP-2780：澄清",
+      "note": "EIP-7928：运行时中止早于接收方访问时排除接收方（nerolation）合并；EIP-2780：澄清 和 与最新变化对齐 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11891",
+      "date": "2026-07-09",
+      "title_en": "EIP-2780: clarifications",
+      "note_en": "EIP-7928: exclude the recipient when a runtime halt precedes its access (nerolation), merged; EIP-2780: clarifications and alignment with recent changes, merged.",
+      "topic_en": "Accounts and transaction assertions"
+    },
+    {
+      "topic": "账户与交易断言",
+      "title": "与最新变化对齐",
+      "note": "EIP-7928：运行时中止早于接收方访问时排除接收方（nerolation）合并；EIP-2780：澄清 和 与最新变化对齐 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11906",
+      "date": "2026-07-09",
+      "title_en": "alignment with recent changes",
+      "note_en": "EIP-7928: exclude the recipient when a runtime halt precedes its access (nerolation), merged; EIP-2780: clarifications and alignment with recent changes, merged.",
+      "topic_en": "Accounts and transaction assertions"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "EF 博客：分类才是产品，用 AI 代理审查以太坊协议代码",
+      "note": "（Nikos Baxevanis），EF 推文 22:58。协议安全团队用协调的 AI 代理审查系统软件、密码学代码和合约，找到了真实 bug，已公开的一个是 libp2p gossipsub 中可远程触发的 panic，编号 CVE-2026-34219；令人意外的是大部分工作花在区分真 bug 和看起来像 bug 的结果上。",
+      "url": "https://blog.ethereum.org/en/2026/07/09/triage-is-the-product",
+      "date": "2026-07-09",
+      "title_en": "EF blog: the triage is the product, running AI agents against Ethereum's protocol code",
+      "note_en": "(Nikos Baxevanis), with the EF post at 22:58. The Protocol Security team runs coordinated AI agents against systems software, cryptographic code and contracts and found real bugs; one now public is a remotely triggerable panic in libp2p's gossipsub, CVE-2026-34219. The surprise was how much of the work went into telling real bugs from ones that only looked real.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "EF 推文",
+      "note": "EF 博客：分类才是产品，用 AI 代理审查以太坊协议代码（Nikos Baxevanis），EF 推文 22:58。协议安全团队用协调的 AI 代理审查系统软件、密码学代码和合约，找到了真实 bug，已公开的一个是 libp2p gossipsub 中可远程触发的 panic，编号 CVE-2026-34219；令人意外的是大部分工作花在区分真 bug 和看起来像 bug 的结果上。",
+      "url": "https://x.com/ethereumfndn/status/2075248337821798657",
+      "date": "2026-07-09",
+      "title_en": "EF post",
+      "note_en": "EF blog: the triage is the product, running AI agents against Ethereum's protocol code (Nikos Baxevanis), with the EF post at 22:58. The Protocol Security team runs coordinated AI agents against systems software, cryptographic code and contracts and found real bugs; one now public is a remotely triggerable panic in libp2p's gossipsub, CVE-2026-34219. The surprise was how much of the work went into telling real bugs from ones that only looked real.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "ameensol：构建 Privacy Pools v2",
+      "note": "22:59：屏蔽池中每笔存款获得单独审批的 ID，之后仍可撤销（与 Railgun 的一次性 PPOI 不同），所有隐私转账都带 `deposit_ID`。",
+      "url": "https://x.com/ameensol/status/2075248531875762602",
+      "date": "2026-07-09",
+      "title_en": "ameensol: building Privacy Pools v2",
+      "note_en": "22:59: in shielded pools each deposit gets an individually approved ID that can still be revoked later (unlike Railgun's one-time PPOI), and every private transfer carries a `deposit_ID`.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "安全与隐私",
+      "title": "L2BEAT：隐私看板加入 Zama 机密代币",
+      "note": "20:19。",
+      "url": "https://x.com/ethbeat_org/status/2075208333959581711",
+      "date": "2026-07-09",
+      "title_en": "L2BEAT: Zama confidential tokens added to the privacy dashboard",
+      "note_en": "20:19.",
+      "topic_en": "Security and privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Solidity v0.8.36 发布",
+      "note": "21:32，支持 Amsterdam EVM，修复继承线性化和 Yul 优化器的重要 bug。",
+      "url": "https://x.com/solidity_lang/status/2075226573410885811",
+      "date": "2026-07-09",
+      "title_en": "Solidity v0.8.36 is out",
+      "note_en": "21:32, with Amsterdam EVM support and important fixes for inheritance linearization and the Yul optimizer.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：捆绑式 attestation 传播",
+      "note": "（sukunrt）提交，去重 subnet 中的 attestation 广播，带宽最多节省 50%，向后兼容，无需分叉。",
+      "url": "https://github.com/ethereum/EIPs/pull/11905",
+      "date": "2026-07-09",
+      "title_en": "New EIP: bundled attestation propagation",
+      "note_en": "(sukunrt), submitted, deduplicating attestation broadcast in subnets for up to 50% bandwidth savings, backward compatible and deployable without a fork.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7723：更新升级 Meta EIP 处理流程",
+      "note": "提交；EIP-7904：Move to Review 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11904",
+      "date": "2026-07-09",
+      "title_en": "EIP-7723: update the upgrade Meta EIP process",
+      "note_en": "Submitted; EIP-7904: move to Review, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7904：Move to Review",
+      "note": "EIP-7723：更新升级 Meta EIP 处理流程 提交；EIP-7904：Move to Review 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11883",
+      "date": "2026-07-09",
+      "title_en": "EIP-7904: move to Review",
+      "note_en": "EIP-7723: update the upgrade Meta EIP process, submitted; EIP-7904: move to Review, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：STRK20 隐私池上线一个月",
+      "note": "16:46。",
+      "url": "https://x.com/EliBenSasson/status/2075154512902328631",
+      "date": "2026-07-09",
+      "title_en": "Eli Ben-Sasson: the STRK20 privacy pool one month after launch",
+      "note_en": "16:46.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：用 Claude Fable 5 做 Zcash 防窃听安全项目",
+      "note": "03:12。",
+      "url": "https://x.com/zooko/status/2074949883275141307",
+      "date": "2026-07-09",
+      "title_en": "zooko: using Claude Fable 5 on a Zcash anti-eavesdropping security project",
+      "note_en": "03:12.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/07/09/triage-is-the-product",
+    "credit": "Ethereum Foundation Blog, The triage is the product",
+    "local_path": "assets/2026-07-09.jpg",
+    "credit_en": "Ethereum Foundation Blog, The triage is the product"
+  },
+  "keywords_en": [
+    "EF Protocol Security running AI agents",
+    "triage is the product",
+    "EIP-8130 renumbering merged",
+    "EIP-7906 per-address TXDIFF views",
+    "Privacy Pools v2",
+    "Solidity v0.8.36",
+    "bundled attestation propagation",
+    "ACDC #182"
+  ],
+  "summary_en": "The EF published a Protocol Security team post on running coordinated AI agents against protocol code: the real work is not finding bugs but telling real ones from fake, and one public result is a remotely triggerable panic in libp2p gossipsub (CVE-2026-34219). The EIP-8130 transaction type renumbering and RPC extension were merged, and EIP-7906 gained per-address TXDIFF views. ameensol described the shielded pool design of Privacy Pools v2. Solidity v0.8.36 shipped with Amsterdam EVM support. ACDC #182 was held in the evening."
+}

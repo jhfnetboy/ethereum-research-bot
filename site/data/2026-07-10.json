@@ -1,0 +1,189 @@
+{
+  "date": "2026-07-10",
+  "keywords": [
+    "EIP-8037 区块级 gas 记账套用 calldata 底价",
+    "ERC-8335 账户级授权转账",
+    "Interfold 隐私拍卖",
+    "Nimbus 提议纳入 8115/8116/7807/8015",
+    "L2BEAT 隐私看板与 CROPS",
+    "SSZ Engine API #2"
+  ],
+  "summary": "jochem-brouwer 指出 EIP-8037 的区块级 gas 记账没有套用 EIP-7976 的 calldata 底价，与最大区块大小和 calldata 重定价相关，并提交修复。新 ERC-8335 把 ERC-3009 的 `transferWithAuthorization` 放到智能账户而非代币合约上实现。auryn_macmillan 的 Interfold 隐私拍卖结束，他称看到 500 ETH，大家真的很喜欢隐私。etan-status 为 Hegotá 提议纳入 EIP-8115、8116、7807、8015。",
+  "items": [
+    {
+      "topic": "账户与 gas 记账",
+      "title": "EIP-8037：把 EIP-7976 calldata 底价应用到区块级 gas 记账",
+      "note": "（jochem-brouwer）提交，作者认为这是 8037 的 bug，特别是与最大区块大小和 calldata 重定价有关，并附复现测试。",
+      "url": "https://github.com/ethereum/EIPs/pull/11908",
+      "date": "2026-07-10",
+      "title_en": "EIP-8037: apply the EIP-7976 calldata floor to block-level gas accounting",
+      "note_en": "(jochem-brouwer), submitted; the author considers it an 8037 bug, especially in relation to maximum block size and calldata repricing, and includes a reproduction test.",
+      "topic_en": "Accounts and gas accounting"
+    },
+    {
+      "topic": "账户与 gas 记账",
+      "title": "新 ERC：账户级授权转账",
+      "note": "（yongqjn）提交，Magicians 讨论帖 10:12。把 ERC-3009 的 `transferWithAuthorization` 在智能账户上实现：所有者离线签署 EIP-712 授权，任何中继者可提交给账户，账户用自己的签名验证逻辑校验。",
+      "url": "https://github.com/ethereum/ERCs/pull/1869",
+      "date": "2026-07-10",
+      "title_en": "New ERC: account-level transfer with authorization",
+      "note_en": "(yongqjn), submitted, with a Magicians thread at 10:12. It implements ERC-3009's `transferWithAuthorization` on the smart account: the owner signs an EIP-712 authorization offchain, any relayer can submit it to the account, and the account checks it with its own signature validation.",
+      "topic_en": "Accounts and gas accounting"
+    },
+    {
+      "topic": "账户与 gas 记账",
+      "title": "Magicians 讨论帖",
+      "note": "新 ERC：账户级授权转账（yongqjn）提交，Magicians 讨论帖 10:12。把 ERC-3009 的 `transferWithAuthorization` 在智能账户上实现：所有者离线签署 EIP-712 授权，任何中继者可提交给账户，账户用自己的签名验证逻辑校验。",
+      "url": "https://ethereum-magicians.org/t/erc-8335-account-level-transfer-with-authorization/28977",
+      "date": "2026-07-10",
+      "title_en": "Magicians thread",
+      "note_en": "New ERC: account-level transfer with authorization (yongqjn), submitted, with a Magicians thread at 10:12. It implements ERC-3009's `transferWithAuthorization` on the smart account: the owner signs an EIP-712 authorization offchain, any relayer can submit it to the account, and the account checks it with its own signature validation.",
+      "topic_en": "Accounts and gas accounting"
+    },
+    {
+      "topic": "隐私",
+      "title": "auryn_macmillan：500 ETH，看来大家真的喜欢隐私",
+      "note": "21:09，拍卖结束后的感谢 21:36。他在 7 月 6 日提到 Interfold 使用 Uniswap 的连续清算拍卖。",
+      "url": "https://x.com/auryn_macmillan/status/2075583222306554116",
+      "date": "2026-07-10",
+      "title_en": "auryn_macmillan: 500 ETH in this economy",
+      "note_en": "21:09, and his thanks after the auction closed, 21:36. On July 6 he noted that Interfold uses Uniswap's continuous clearing auction.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "拍卖结束后的感谢",
+      "note": "auryn_macmillan：500 ETH，看来大家真的喜欢隐私 21:09，拍卖结束后的感谢 21:36。他在 7 月 6 日提到 Interfold 使用 Uniswap 的连续清算拍卖。",
+      "url": "https://x.com/auryn_macmillan/status/2075589959314989332",
+      "date": "2026-07-10",
+      "title_en": "his thanks after the auction closed",
+      "note_en": "Auryn_macmillan: 500 ETH in this economy, 21:09, and his thanks after the auction closed, 21:36. On July 6 he noted that Interfold uses Uniswap's continuous clearing auction.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "L2BEAT：隐私看板每一列如何对应 CROPS 原则",
+      "note": "20:57。",
+      "url": "https://x.com/ethbeat_org/status/2075580170740654336",
+      "date": "2026-07-10",
+      "title_en": "L2BEAT: how each column of its privacy dashboard maps to the CROPS principles",
+      "note_en": "20:57.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "auryn_macmillan：Chat Control 通过是警钟",
+      "note": "01:45，可否认性和无收据性是隐私中最被低估的性质。",
+      "url": "https://x.com/auryn_macmillan/status/2075290366052380831",
+      "date": "2026-07-10",
+      "title_en": "auryn_macmillan: Chat Control passing should be a wake-up call",
+      "note_en": "01:45; plausible deniability and receipt-freeness are two of the most underrated privacy properties.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "提议纳入 EIP-8115",
+      "note": "etan-status 提交 提议纳入 EIP-8115、EIP-8116、EIP-7807、EIP-8015，以及 EIP-8015 同时移除起始索引和 BeaconState 字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/11911",
+      "date": "2026-07-10",
+      "title_en": "EIP-8115",
+      "note_en": "Etan-status submitted proposals to include EIP-8115, EIP-8116, EIP-7807 and EIP-8015, plus EIP-8015: also remove the start index and BeaconState fields.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8116",
+      "note": "etan-status 提交 提议纳入 EIP-8115、EIP-8116、EIP-7807、EIP-8015，以及 EIP-8015 同时移除起始索引和 BeaconState 字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/11912",
+      "date": "2026-07-10",
+      "title_en": "EIP-8116",
+      "note_en": "Etan-status submitted proposals to include EIP-8115, EIP-8116, EIP-7807 and EIP-8015, plus EIP-8015: also remove the start index and BeaconState fields.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7807",
+      "note": "etan-status 提交 提议纳入 EIP-8115、EIP-8116、EIP-7807、EIP-8015，以及 EIP-8015 同时移除起始索引和 BeaconState 字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/11913",
+      "date": "2026-07-10",
+      "title_en": "EIP-7807",
+      "note_en": "Etan-status submitted proposals to include EIP-8115, EIP-8116, EIP-7807 and EIP-8015, plus EIP-8015: also remove the start index and BeaconState fields.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8015",
+      "note": "etan-status 提交 提议纳入 EIP-8115、EIP-8116、EIP-7807、EIP-8015，以及 EIP-8015 同时移除起始索引和 BeaconState 字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/11914",
+      "date": "2026-07-10",
+      "title_en": "EIP-8015",
+      "note_en": "Etan-status submitted proposals to include EIP-8115, EIP-8116, EIP-7807 and EIP-8015, plus EIP-8015: also remove the start index and BeaconState fields.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8015 同时移除起始索引和 BeaconState 字段",
+      "note": "etan-status 提交 提议纳入 EIP-8115、EIP-8116、EIP-7807、EIP-8015，以及 EIP-8015 同时移除起始索引和 BeaconState 字段。",
+      "url": "https://github.com/ethereum/EIPs/pull/11910",
+      "date": "2026-07-10",
+      "title_en": "EIP-8015: also remove the start index and BeaconState fields",
+      "note_en": "Etan-status submitted proposals to include EIP-8115, EIP-8116, EIP-7807 and EIP-8015, plus EIP-8015: also remove the start index and BeaconState fields.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7708：Move to Review",
+      "note": "和 EIP-7778：Move to Review 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11872",
+      "date": "2026-07-10",
+      "title_en": "EIP-7708: move to Review",
+      "note_en": "And EIP-7778: move to Review, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7778：Move to Review",
+      "note": "EIP-7708：Move to Review 和 EIP-7778：Move to Review 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11874",
+      "date": "2026-07-10",
+      "title_en": "EIP-7778: move to Review",
+      "note_en": "EIP-7708: move to Review and EIP-7778: move to Review, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #30 议程",
+      "note": "17:49。SSZ Engine API #2 当晚召开，无可引用纪要。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-30-july-13-2026/28981",
+      "date": "2026-07-10",
+      "title_en": "RPC Standards #30 agenda",
+      "note_en": "17:49. SSZ Engine API #2 was held in the evening, with no notes to cite.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Tim Roughgarden：图灵的工作在生成式 AI 和量子计算时代是否仍然相关，新系列",
+      "note": "21:57。",
+      "url": "https://x.com/Tim_Roughgarden/status/2075595262530408959",
+      "date": "2026-07-10",
+      "title_en": "Tim Roughgarden: does Turing's work remain relevant with generative AI and quantum computers, a new mini-series",
+      "note_en": "21:57.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8335-account-level-transfer-with-authorization/28977",
+    "credit": "Ethereum Magicians, ERC-8335: Account-Level Transfer With Authorization",
+    "local_path": "assets/2026-07-10.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8335: Account-Level Transfer With Authorization"
+  },
+  "keywords_en": [
+    "EIP-8037 block-level gas accounting with the calldata floor",
+    "ERC-8335 account-level transfer with authorization",
+    "Interfold privacy auction",
+    "Nimbus proposes 8115/8116/7807/8015",
+    "L2BEAT privacy dashboard and CROPS",
+    "SSZ Engine API #2"
+  ],
+  "summary_en": "jochem-brouwer pointed out that EIP-8037's block-level gas accounting does not apply the EIP-7976 calldata floor, which matters for maximum block size and calldata repricing, and submitted a fix. The new ERC-8335 implements ERC-3009's `transferWithAuthorization` on the smart account instead of the token contract. auryn_macmillan's Interfold privacy auction closed, and he remarked on 500 ETH: people must really like privacy. etan-status proposed EIP-8115, 8116, 7807 and 8015 for Hegotá."
+}

@@ -1,0 +1,213 @@
+{
+  "date": "2026-07-23",
+  "keywords": [
+    "ACDC #183",
+    "首个公共测试网目标 9 月",
+    "devnet-8 与 devnet-9 计划",
+    "EIP-8141 规范 P256 发送账户与 passkey",
+    "协议定义验证前缀可直接求值",
+    "APPROVE gas 成本",
+    "PBT 离线状态迁移",
+    "STRK20 隐私池形式化验证"
+  ],
+  "summary": "ACDC #183 据 Ethereal news #32：devnet-8 目标 8 月初，含重定价小改动和执行层仅用 discv5 发现；devnet-9 8 月用于非最终性测试；首个公共测试网目标 9 月；Hegotá 新提案包括 EIP-8334、EIP-8341、EIP-8321 和 EIP-8015。EIP-8141 提交四项修改：规范的 P256 发送账户让 passkey 账户免模拟进入内存池、协议定义的验证前缀可直接求值、APPROVE 的 gas 成本、费用字段的上限。misilva73 提交 PBT 离线状态迁移 EIP。",
+  "items": [
+    {
+      "topic": "ACDC #183 与 Glamsterdam 时间线",
+      "title": "ACDT #89 议程",
+      "note": "13:57。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-89-july-27-2026/29069",
+      "date": "2026-07-23",
+      "title_en": "ACDT #89 agenda",
+      "note_en": "13:57.",
+      "topic_en": "ACDC #183 and the Glamsterdam timeline"
+    },
+    {
+      "topic": "EIP-8141：passkey 与内存池接纳",
+      "title": "EIP-8141：用于免模拟接纳的规范 P256 发送账户",
+      "note": "（AnkushinDaniil）提交。8141 中协议定义、免模拟的接纳路径（默认代码、规范 paymaster、expiry verifier）都只支持 SECP256K1，而 passkey/WebAuthn（secp256r1）钱包在智能账户中占比越来越大；目前 EIP-7702 委托的 P256 账户必须完整模拟验证前缀。PR 增加按运行时代码匹配识别的规范 P256 发送账户，接纳只需代码匹配、一次 `P256VERIFY` 和 scope 检查。",
+      "url": "https://github.com/ethereum/EIPs/pull/12004",
+      "date": "2026-07-23",
+      "title_en": "EIP-8141: a canonical P256 sender account for no-simulation admission",
+      "note_en": "(AnkushinDaniil), submitted. 8141's protocol-defined no-simulation admission paths (default code, the canonical paymaster, the expiry verifier) are SECP256K1-only, while passkey/WebAuthn (secp256r1) wallets are a large and growing share of smart accounts; today an EIP-7702-delegated P256 account must go through full validation prefix simulation. The PR adds a canonical P256 sender account recognized by runtime code match, admitted with a code match, one `P256VERIFY` and a scope check.",
+      "topic_en": "EIP-8141: passkeys and mempool admission"
+    },
+    {
+      "topic": "EIP-8141：passkey 与内存池接纳",
+      "title": "EIP-8141：允许直接求值协议定义的验证前缀",
+      "note": "（svlachakis）提交。默认代码、规范 expiry verifier 和规范 paymaster 没有需要执行才能发现的部署代码，对只由它们组成的前缀，模拟和直接求值是同一计算；常见流程，即 `self_verify` 的 EOA 式交易和规范 paymaster 代付交易，都属于这一类。",
+      "url": "https://github.com/ethereum/EIPs/pull/12001",
+      "date": "2026-07-23",
+      "title_en": "EIP-8141: allow direct evaluation of protocol-defined validation prefixes",
+      "note_en": "(svlachakis), submitted. Default code, the canonical expiry verifier and the canonical paymaster have no deployed code to discover by execution, so for prefixes made only of them, simulation and direct evaluation are the same computation; the common flows, `self_verify` EOA-style transactions and canonical-paymaster-sponsored transactions, fall into this class.",
+      "topic_en": "EIP-8141: passkeys and mempool admission"
+    },
+    {
+      "topic": "EIP-8141：passkey 与内存池接纳",
+      "title": "EIP-8141：规定 APPROVE 操作码的 gas 成本",
+      "note": "（AnkushinDaniil）提交，`APPROVE`（`0xaa`）是唯一未规定 gas 的新 frame 操作码；在静态约束中限制费用字段（svlachakis）提交，RLP 允许任意长整数，而 `TXPARAM` 会把费用字段压栈，超出栈字宽度。",
+      "url": "https://github.com/ethereum/EIPs/pull/12003",
+      "date": "2026-07-23",
+      "title_en": "EIP-8141: specify the APPROVE opcode gas cost",
+      "note_en": "(AnkushinDaniil), submitted, since `APPROVE` (`0xaa`) was the only new frame opcode without a gas cost; bound the fee fields in the static constraints (svlachakis), submitted, since RLP admits arbitrarily long integers while `TXPARAM` pushes fee fields onto the stack, where they might not fit a stack word.",
+      "topic_en": "EIP-8141: passkeys and mempool admission"
+    },
+    {
+      "topic": "EIP-8141：passkey 与内存池接纳",
+      "title": "在静态约束中限制费用字段",
+      "note": "EIP-8141：规定 APPROVE 操作码的 gas 成本（AnkushinDaniil）提交，`APPROVE`（`0xaa`）是唯一未规定 gas 的新 frame 操作码；在静态约束中限制费用字段（svlachakis）提交，RLP 允许任意长整数，而 `TXPARAM` 会把费用字段压栈，超出栈字宽度。",
+      "url": "https://github.com/ethereum/EIPs/pull/12005",
+      "date": "2026-07-23",
+      "title_en": "bound the fee fields in the static constraints",
+      "note_en": "EIP-8141: specify the APPROVE opcode gas cost (AnkushinDaniil), submitted, since `APPROVE` (`0xaa`) was the only new frame opcode without a gas cost; bound the fee fields in the static constraints (svlachakis), submitted, since RLP admits arbitrarily long integers while `TXPARAM` pushes fee fields onto the stack, where they might not fit a stack word.",
+      "topic_en": "EIP-8141: passkeys and mempool admission"
+    },
+    {
+      "topic": "状态迁移与隐私",
+      "title": "新 EIP：离线状态迁移到 PBT",
+      "note": "（misilva73）提交，据 Ethereal news #32 编号 EIP-8347：在最终确定的锚点区块把状态从十六进制 MPT 离线转换为 Partitioned Binary Tree（EIP-8297），以可验证快照分发，节点用锚点 `stateRoot` 校验，再通过回放 BAL（EIP-7928）追上链头。",
+      "url": "https://github.com/ethereum/EIPs/pull/12006",
+      "date": "2026-07-23",
+      "title_en": "New EIP: offline state migration to the PBT",
+      "note_en": "(misilva73), submitted; per Ethereal news #32 it is numbered EIP-8347. State at a finalized anchor block is converted offline from the hexary MPT to the Partitioned Binary Tree (EIP-8297) and distributed as a verifiable snapshot; nodes verify it against the anchor's `stateRoot` and catch up to the tip by replaying BALs (EIP-7928).",
+      "topic_en": "State migration and privacy"
+    },
+    {
+      "topic": "状态迁移与隐私",
+      "title": "EIP-8297：重画图示并删除 EIP-7864 修改部分",
+      "note": "提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12002",
+      "date": "2026-07-23",
+      "title_en": "EIP-8297: redraw diagram and drop the EIP-7864 changes section",
+      "note_en": "Submitted and merged.",
+      "topic_en": "State migration and privacy"
+    },
+    {
+      "topic": "状态迁移与隐私",
+      "title": "StarkWare：开源 STRK20 隐私池形式化验证，230 多个机器检验定理",
+      "note": "20:03。Eli Ben-Sasson：隐私方案不只要防跟踪，还要防 bug 和威胁 20:20；人们对原生账户抽象还不够看好 22:45。",
+      "url": "https://x.com/StarkWareLtd/status/2080277557967298987",
+      "date": "2026-07-23",
+      "title_en": "StarkWare: open-sourced the formal verification of the STRK20 privacy pool, with 230+ machine-checked theorems",
+      "note_en": "20:03. Eli Ben-Sasson: a privacy solution must shield funds not only from tracking but also from bugs and threats, 20:20; people are not bullish enough on native account abstraction, 22:45.",
+      "topic_en": "State migration and privacy"
+    },
+    {
+      "topic": "状态迁移与隐私",
+      "title": "Eli Ben-Sasson：隐私方案不只要防跟踪，还要防 bug 和威胁",
+      "note": "StarkWare：开源 STRK20 隐私池形式化验证，230 多个机器检验定理 20:03。Eli Ben-Sasson：隐私方案不只要防跟踪，还要防 bug 和威胁 20:20；人们对原生账户抽象还不够看好 22:45。",
+      "url": "https://x.com/EliBenSasson/status/2080281986380259369",
+      "date": "2026-07-23",
+      "title_en": "Eli Ben-Sasson: a privacy solution must shield funds not only from tracking but also from bugs and threats",
+      "note_en": "StarkWare: open-sourced the formal verification of the STRK20 privacy pool, with 230+ machine-checked theorems, 20:03. Eli Ben-Sasson: a privacy solution must shield funds not only from tracking but also from bugs and threats, 20:20; people are not bullish enough on native account abstraction, 22:45.",
+      "topic_en": "State migration and privacy"
+    },
+    {
+      "topic": "状态迁移与隐私",
+      "title": "人们对原生账户抽象还不够看好",
+      "note": "StarkWare：开源 STRK20 隐私池形式化验证，230 多个机器检验定理 20:03。Eli Ben-Sasson：隐私方案不只要防跟踪，还要防 bug 和威胁 20:20；人们对原生账户抽象还不够看好 22:45。",
+      "url": "https://x.com/EliBenSasson/status/2080318441504837757",
+      "date": "2026-07-23",
+      "title_en": "people are not bullish enough on native account abstraction",
+      "note_en": "StarkWare: open-sourced the formal verification of the STRK20 privacy pool, with 230+ machine-checked theorems, 20:03. Eli Ben-Sasson: a privacy solution must shield funds not only from tracking but also from bugs and threats, 20:20; people are not bullish enough on native account abstraction, 22:45.",
+      "topic_en": "State migration and privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8346：ERC-7730 描述文件的翻译文件",
+      "note": "（forshtat）提交，为多语言清晰签名打基础，论坛 18:53。",
+      "url": "https://github.com/ethereum/ERCs/pull/1906",
+      "date": "2026-07-23",
+      "title_en": "ERC-8346: Translation Files for ERC-7730 Descriptors",
+      "note_en": "(forshtat), submitted, laying a foundation for multilingual clear signing; forum, 18:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "论坛",
+      "note": "ERC-8346：ERC-7730 描述文件的翻译文件（forshtat）提交，为多语言清晰签名打基础，论坛 18:53。",
+      "url": "https://ethereum-magicians.org/t/erc-8346-translation-files-for-erc-7730-descriptors/29072",
+      "date": "2026-07-23",
+      "title_en": "forum",
+      "note_en": "ERC-8346: Translation Files for ERC-7730 Descriptors (forshtat), submitted, laying a foundation for multilingual clear signing; forum, 18:53.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8348：金融租赁",
+      "note": "（javierpmateos）提交，论坛 19:29。",
+      "url": "https://github.com/ethereum/ERCs/pull/1907",
+      "date": "2026-07-23",
+      "title_en": "ERC-8348: Financial Lease",
+      "note_en": "(javierpmateos), submitted; forum, 19:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "论坛",
+      "note": "ERC-8348：金融租赁（javierpmateos）提交，论坛 19:29。",
+      "url": "https://ethereum-magicians.org/t/erc-8348-financial-lease/29076",
+      "date": "2026-07-23",
+      "title_en": "forum",
+      "note_en": "ERC-8348: Financial Lease (javierpmateos), submitted; forum, 19:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EFDevcon：今年 Devcon 议程分 9 个方向",
+      "note": "19:45。",
+      "url": "https://x.com/EFDevcon/status/2080273029351837896",
+      "date": "2026-07-23",
+      "title_en": "EFDevcon: this year's Devcon program spans 9 tracks",
+      "note_en": "19:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethresear.ch：正和的市场微观结构设计是最后的瓶颈",
+      "note": "05:32；机制设计的失败模式 04:17。",
+      "url": "https://ethresear.ch/t/positive-sum-microstructure-design-is-the-last-bottleneck/25505",
+      "date": "2026-07-23",
+      "title_en": "ethresear.ch: positive-sum microstructure design is the last bottleneck",
+      "note_en": "05:32; mechanism design failure modes, 04:17.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "机制设计的失败模式",
+      "note": "ethresear.ch：正和的市场微观结构设计是最后的瓶颈 05:32；机制设计的失败模式 04:17。",
+      "url": "https://ethresear.ch/t/mechanism-design-failure-modes/25503",
+      "date": "2026-07-23",
+      "title_en": "mechanism design failure modes",
+      "note_en": "Ethresear.ch: positive-sum microstructure design is the last bottleneck, 05:32; mechanism design failure modes, 04:17.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：Zcash 钱包 Zodl 为 Ironwood 升级做了很好的用户沟通",
+      "note": "00:35。",
+      "url": "https://x.com/zooko/status/2079983566214012970",
+      "date": "2026-07-23",
+      "title_en": "zooko: the Zcash wallet Zodl is communicating well with users about the Ironwood upgrade",
+      "note_en": "00:35.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12004",
+    "credit": "GitHub, ethereum/EIPs PR #12004",
+    "local_path": "assets/2026-07-23.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12004"
+  },
+  "keywords_en": [
+    "ACDC #183",
+    "first public testnet targeted for September",
+    "devnet-8 and devnet-9 plans",
+    "EIP-8141 canonical P256 sender account and passkeys",
+    "direct evaluation of protocol-defined validation prefixes",
+    "APPROVE gas cost",
+    "offline PBT state migration",
+    "STRK20 privacy pool formal verification"
+  ],
+  "summary_en": "Per Ethereal news #32, ACDC #183 set devnet-8 for early August with minor repricing changes and discv5-only execution layer discovery, devnet-9 for August non-finality testing, and the first public testnet for September; new Hegotá proposals include EIP-8334, EIP-8341, EIP-8321 and EIP-8015. Four EIP-8141 changes were submitted: a canonical P256 sender account that lets passkey accounts enter the mempool without simulation, direct evaluation of protocol-defined validation prefixes, the APPROVE gas cost, and bounds on fee fields. misilva73 submitted an EIP for offline state migration to the PBT."
+}

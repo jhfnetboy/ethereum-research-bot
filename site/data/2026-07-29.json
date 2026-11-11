@@ -1,0 +1,239 @@
+{
+  "date": "2026-07-29",
+  "keywords": [
+    "pcaversaccio 加入 EF 董事会",
+    "Glamsterdam 全部 Core EIP 提升为 SFI",
+    "EIP-8141 内存池替换与日志语义合并",
+    "Nethermind 与 ethrex 交叉测试 8141",
+    "PQ1 后量子硬件钱包",
+    "EIP-8038 成本组件模型"
+  ],
+  "summary": "EF 博客宣布 pcaversaccio 加入 EF 董事会，首个任期一年，志愿担任。poojaranjan 依据 ACDC #183 决定提交 EIP-7773 修改，把 Glamsterdam 所有 Core EIP 提升为 SFI。EIP-8141 的内存池替换、驱逐与付款方敞口规则，以及交易日志集合语义合并；Nethermind 实现者在与 ethrex 交叉测试时发现三处歧义并提交澄清。EF 直播介绍 Freedom Factory 的 PQ1 后量子硬件钱包，据 Ethereal news #33 它为 ERC-4337 智能账户提供 SPHINCS+ 签名。",
+  "items": [
+    {
+      "topic": "EF 董事会与 Glamsterdam 范围",
+      "title": "EF 博客：董事会更新",
+      "note": "pcaversaccio 是 SEAL 911 联合创始人和负责人、EF Silviculture Society 成员，著有 The Ethereum Cypherpunk Manifesto；董事会现为 Aya Miyaguchi（主席）、Vitalik Buterin（创始人）、Patrick Storchenegger（瑞士法律顾问）和 pcaversaccio，他首个任期一年，志愿担任。EF 公告 19:04，pcaversaccio：无条件的隐私 19:13。",
+      "url": "https://blog.ethereum.org/en/2026/07/29/ef-board-update",
+      "date": "2026-07-29",
+      "title_en": "EF blog: board update",
+      "note_en": "Pcaversaccio is co-founder and lead of SEAL 911, a member of the EF Silviculture Society, and author of The Ethereum Cypherpunk Manifesto; the board now consists of Aya Miyaguchi (President), Vitalik Buterin (Founder), Patrick Storchenegger (Swiss counsel) and pcaversaccio, who joins for an initial one-year term on a voluntary basis. EF announcement, 19:04; pcaversaccio: unconditional privacy, 19:13.",
+      "topic_en": "The EF board and Glamsterdam scope"
+    },
+    {
+      "topic": "EF 董事会与 Glamsterdam 范围",
+      "title": "EF 公告",
+      "note": "EF 博客：董事会更新：pcaversaccio 是 SEAL 911 联合创始人和负责人、EF Silviculture Society 成员，著有 The Ethereum Cypherpunk Manifesto；董事会现为 Aya Miyaguchi（主席）、Vitalik Buterin（创始人）、Patrick Storchenegger（瑞士法律顾问）和 pcaversaccio，他首个任期一年，志愿担任。EF 公告 19:04，pcaversaccio：无条件的隐私 19:13。",
+      "url": "https://x.com/ethereumfndn/status/2082437165233951223",
+      "date": "2026-07-29",
+      "title_en": "EF announcement",
+      "note_en": "EF blog: board update: pcaversaccio is co-founder and lead of SEAL 911, a member of the EF Silviculture Society, and author of The Ethereum Cypherpunk Manifesto; the board now consists of Aya Miyaguchi (President), Vitalik Buterin (Founder), Patrick Storchenegger (Swiss counsel) and pcaversaccio, who joins for an initial one-year term on a voluntary basis. EF announcement, 19:04; pcaversaccio: unconditional privacy, 19:13.",
+      "topic_en": "The EF board and Glamsterdam scope"
+    },
+    {
+      "topic": "EF 董事会与 Glamsterdam 范围",
+      "title": "pcaversaccio：无条件的隐私",
+      "note": "EF 博客：董事会更新：pcaversaccio 是 SEAL 911 联合创始人和负责人、EF Silviculture Society 成员，著有 The Ethereum Cypherpunk Manifesto；董事会现为 Aya Miyaguchi（主席）、Vitalik Buterin（创始人）、Patrick Storchenegger（瑞士法律顾问）和 pcaversaccio，他首个任期一年，志愿担任。EF 公告 19:04，pcaversaccio：无条件的隐私 19:13。",
+      "url": "https://x.com/pcaversaccio/status/2082439323274952926",
+      "date": "2026-07-29",
+      "title_en": "pcaversaccio: unconditional privacy",
+      "note_en": "EF blog: board update: pcaversaccio is co-founder and lead of SEAL 911, a member of the EF Silviculture Society, and author of The Ethereum Cypherpunk Manifesto; the board now consists of Aya Miyaguchi (President), Vitalik Buterin (Founder), Patrick Storchenegger (Swiss counsel) and pcaversaccio, who joins for an initial one-year term on a voluntary basis. EF announcement, 19:04; pcaversaccio: unconditional privacy, 19:13.",
+      "topic_en": "The EF board and Glamsterdam scope"
+    },
+    {
+      "topic": "EF 董事会与 Glamsterdam 范围",
+      "title": "EIP-7773：CFI 提升为 SFI",
+      "note": "（poojaranjan）提交：依据 ACDC #183 决定，所有 Core EIP 提升为 SFI，升级 Meta EIP 中移除 CFI 部分。",
+      "url": "https://github.com/ethereum/EIPs/pull/12022",
+      "date": "2026-07-29",
+      "title_en": "EIP-7773: promote CFI to SFI",
+      "note_en": "(poojaranjan), submitted: based on ACDC #183 decisions, all Core EIPs are promoted to SFI and the CFI section is removed from the upgrade Meta EIP.",
+      "topic_en": "The EF board and Glamsterdam scope"
+    },
+    {
+      "topic": "EF 董事会与 Glamsterdam 范围",
+      "title": "lightclient：Glamsterdam 吉祥物投票还剩两天",
+      "note": "23:52。",
+      "url": "https://x.com/lightclients/status/2082509615531688015",
+      "date": "2026-07-29",
+      "title_en": "lightclient: two days left to vote for the Glamsterdam mascot",
+      "note_en": "23:52.",
+      "topic_en": "The EF board and Glamsterdam scope"
+    },
+    {
+      "topic": "EIP-8141 实现与内存池",
+      "title": "EIP-8141：公共内存池的替换、驱逐与付款方敞口",
+      "note": "合并；交易日志集合与回滚批次日志语义 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12007",
+      "date": "2026-07-29",
+      "title_en": "EIP-8141: replacement, eviction and payer exposure for the public mempool",
+      "note_en": "Merged; transaction log set and unrolled-batch log semantics, merged.",
+      "topic_en": "EIP-8141 implementation and mempool"
+    },
+    {
+      "topic": "EIP-8141 实现与内存池",
+      "title": "交易日志集合与回滚批次日志语义",
+      "note": "EIP-8141：公共内存池的替换、驱逐与付款方敞口 合并；交易日志集合与回滚批次日志语义 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12008",
+      "date": "2026-07-29",
+      "title_en": "transaction log set and unrolled-batch log semantics",
+      "note_en": "EIP-8141: replacement, eviction and payer exposure for the public mempool, merged; transaction log set and unrolled-batch log semantics, merged.",
+      "topic_en": "EIP-8141 implementation and mempool"
+    },
+    {
+      "topic": "EIP-8141 实现与内存池",
+      "title": "EIP-8141：澄清下限重定价、签名验证和 frame.value gas",
+      "note": "（AnkushinDaniil）提交。他在 Nethermind 中实现 8141 并在 devnet 上与 ethrex 交叉测试，三处文字有多种读法，其中两处已造成实际分歧；例如 calldata 下限常量在本 EIP 中未定义，而 EIP-7976 会把同一常量从 10 改为 16。",
+      "url": "https://github.com/ethereum/EIPs/pull/12026",
+      "date": "2026-07-29",
+      "title_en": "EIP-8141: clarify floor repricing, signature validation and frame.value gas",
+      "note_en": "(AnkushinDaniil), submitted. He is implementing 8141 in Nethermind and cross-testing against ethrex on a devnet; three passages can be read more than one way, and two have already caused real divergences. For example, the calldata floor constant is not defined in this EIP, while EIP-7976 redefines the same constant from 10 to 16.",
+      "topic_en": "EIP-8141 implementation and mempool"
+    },
+    {
+      "topic": "EIP-8141 实现与内存池",
+      "title": "EIP-8250：keyed nonce 改为增量修改",
+      "note": "与 EIP-8272：recent root 改为增量修改 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11968",
+      "date": "2026-07-29",
+      "title_en": "EIP-8250: make keyed nonce changes additive",
+      "note_en": "And EIP-8272: make recent root changes additive, merged.",
+      "topic_en": "EIP-8141 implementation and mempool"
+    },
+    {
+      "topic": "EIP-8141 实现与内存池",
+      "title": "EIP-8272：recent root 改为增量修改",
+      "note": "EIP-8250：keyed nonce 改为增量修改 与 EIP-8272：recent root 改为增量修改 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11970",
+      "date": "2026-07-29",
+      "title_en": "EIP-8272: make recent root changes additive",
+      "note_en": "EIP-8250: make keyed nonce changes additive and EIP-8272: make recent root changes additive, merged.",
+      "topic_en": "EIP-8141 implementation and mempool"
+    },
+    {
+      "topic": "EIP-8141 实现与内存池",
+      "title": "EIP-8038：把 gas 表重述为访问、写入、创建三组件模型",
+      "note": "（misilva73）提交并合并。EIP-8337 Validated EVM Code 合并为 Draft。",
+      "url": "https://github.com/ethereum/EIPs/pull/12028",
+      "date": "2026-07-29",
+      "title_en": "EIP-8038: restate the gas schedule as an access/write/creation component model",
+      "note_en": "(misilva73), submitted and merged. EIP-8337 Validated EVM Code, merged as a Draft.",
+      "topic_en": "EIP-8141 implementation and mempool"
+    },
+    {
+      "topic": "EIP-8141 实现与内存池",
+      "title": "EIP-8337 Validated EVM Code",
+      "note": "EIP-8038：把 gas 表重述为访问、写入、创建三组件模型（misilva73）提交并合并。EIP-8337 Validated EVM Code 合并为 Draft。",
+      "url": "https://github.com/ethereum/EIPs/pull/11922",
+      "date": "2026-07-29",
+      "title_en": "EIP-8337 Validated EVM Code",
+      "note_en": "EIP-8038: restate the gas schedule as an access/write/creation component model (misilva73), submitted and merged. EIP-8337 Validated EVM Code, merged as a Draft.",
+      "topic_en": "EIP-8141 implementation and mempool"
+    },
+    {
+      "topic": "后量子钱包",
+      "title": "EF：Ethereum Builders Live 介绍 PQ1 硬件钱包",
+      "note": "23:01，与 Freedom Factory CEO mhaas_eth 讨论其抗量子、完全开源的软硬件。据 Ethereal news #33，PQ1 为 ERC-4337 智能账户提供后量子签名（SPHINCS+C10），双安全芯片，支持清晰签名，预售 179 美元，2026 年第四季度发货。",
+      "url": "https://x.com/ethereumfndn/status/2082496755929669880",
+      "date": "2026-07-29",
+      "title_en": "EF: Ethereum Builders Live on the PQ1 hardware wallet",
+      "note_en": "23:01, with Freedom Factory CEO mhaas_eth discussing its quantum-resistant, fully open source hardware and software. Per Ethereal news #33, PQ1 provides post-quantum signatures (SPHINCS+C10) for ERC-4337 smart accounts, with dual secure enclaves and clear signing, at a $179 preorder, shipping Q4 2026.",
+      "topic_en": "Post-quantum wallets"
+    },
+    {
+      "topic": "后量子钱包",
+      "title": "binji：三人团队从零做了 dgen1 手机，现在又做了首个抗量子以太坊钱包",
+      "note": "04:53。",
+      "url": "https://x.com/binji_x/status/2082222841848541355",
+      "date": "2026-07-29",
+      "title_en": "binji: a three-person team built the dgen1 phone from scratch and has now built the first quantum-proof Ethereum wallet",
+      "note_en": "04:53.",
+      "topic_en": "Post-quantum wallets"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EFDevcon：隐私是决定分享哪些部分的权利",
+      "note": "17:07。",
+      "url": "https://x.com/EFDevcon/status/2082407759262195721",
+      "date": "2026-07-29",
+      "title_en": "EFDevcon: privacy is the power to decide which parts of yourself you share",
+      "note_en": "17:07.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie：MegaETH 在吞吐量榜排第 4",
+      "note": "19:16。",
+      "url": "https://x.com/growthepie_eth/status/2082439999052824777",
+      "date": "2026-07-29",
+      "title_en": "growthepie: MegaETH ranks 4th on the throughput leaderboard",
+      "note_en": "19:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat：项目页面新增安全委员会章节，说明成员、能否绕过 DAO 以及升级期间的安排",
+      "note": "19:18。",
+      "url": "https://x.com/ethbeat_org/status/2082440662721417488",
+      "date": "2026-07-29",
+      "title_en": "ethbeat: a new security council section on project pages, covering members, whether the council can bypass the DAO and what happens during upgrades",
+      "note_en": "19:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8353 质押加权验证门",
+      "note": "08:43；P2P Networking #5 与 PQ Interop #49 当天召开。",
+      "url": "https://ethereum-magicians.org/t/erc-8353-staked-weighted-verification-gate/29194",
+      "date": "2026-07-29",
+      "title_en": "Magicians: ERC-8353 Staked Weighted Verification Gate",
+      "note_en": "08:43; P2P Networking #5 and PQ Interop #49 were held on the day.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "P2P Networking #5",
+      "note": "Magicians：ERC-8353 质押加权验证门 08:43；P2P Networking #5 与 PQ Interop #49 当天召开。",
+      "url": "https://ethereum-magicians.org/t/p2p-networking-5-july-29-2026/29200",
+      "date": "2026-07-29",
+      "title_en": "P2P Networking #5",
+      "note_en": "Magicians: ERC-8353 Staked Weighted Verification Gate, 08:43; P2P Networking #5 and PQ Interop #49 were held on the day.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #49",
+      "note": "Magicians：ERC-8353 质押加权验证门 08:43；P2P Networking #5 与 PQ Interop #49 当天召开。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-49-july-29-2026/29204",
+      "date": "2026-07-29",
+      "title_en": "PQ Interop #49",
+      "note_en": "Magicians: ERC-8353 Staked Weighted Verification Gate, 08:43; P2P Networking #5 and PQ Interop #49 were held on the day.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethresear.ch：CEX 微观结构信号能否经受以太坊执行延迟和 MEV",
+      "note": "04:53。",
+      "url": "https://ethresear.ch/t/can-a-cex-microstructure-signal-survive-ethereum-execution-latency-and-mev/25562",
+      "date": "2026-07-29",
+      "title_en": "ethresear.ch: can a CEX microstructure signal survive Ethereum execution latency and MEV?",
+      "note_en": "04:53.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/07/29/ef-board-update",
+    "credit": "Ethereum Foundation Blog, Ethereum Foundation Board Update",
+    "local_path": "assets/2026-07-29.jpg",
+    "credit_en": "Ethereum Foundation Blog, Ethereum Foundation Board Update"
+  },
+  "keywords_en": [
+    "pcaversaccio joins the EF board",
+    "all Glamsterdam Core EIPs promoted to SFI",
+    "EIP-8141 mempool replacement and log semantics merged",
+    "Nethermind and ethrex cross-test 8141",
+    "PQ1 post-quantum hardware wallet",
+    "EIP-8038 cost component model"
+  ],
+  "summary_en": "The EF blog announced that pcaversaccio has joined the EF board for an initial one-year term on a voluntary basis. poojaranjan submitted an EIP-7773 change, based on ACDC #183 decisions, promoting all Glamsterdam Core EIPs to SFI. EIP-8141's mempool replacement, eviction and payer exposure rules and its transaction log set semantics merged; a Nethermind implementer cross-testing against ethrex found three ambiguities and submitted clarifications. An EF livestream presented Freedom Factory's PQ1 post-quantum hardware wallet, which per Ethereal news #33 provides SPHINCS+ signatures for ERC-4337 smart accounts."
+}

@@ -1,0 +1,57 @@
+{
+  "date": "2026-07-12",
+  "keywords": [
+    "Ethlabs Week 3",
+    "异步互操作与 EEZ",
+    "Hegotá 快速 slot 提案准备",
+    "AUCIL 女巫攻击",
+    "ERC-8336 分数批量拍卖代币"
+  ],
+  "summary": "周日较安静。Barnabé 的 Ethlabs Week 3 提到正在为 Hegotá 的非主角提案截止日准备更快 slot 的提案：6 秒 slot 未被纳入 Glamsterdam 后，carlbeek 提出 quick slots（EIP-8198），为未来缩短 slot 打基础。ethresear.ch 上有文章分析拍卖式包含列表 AUCIL 的女巫攻击。",
+  "items": [
+    {
+      "topic": "包含列表研究",
+      "title": "ethresear.ch：AUCIL 的女巫攻击",
+      "note": "10:28（AbhiMan1601）。包含列表是 PBS 下的抗审查原语，FOCIL 依赖固定的每 slot 参与者且无显式定价，AUCIL 基于拍卖和经济激励。",
+      "url": "https://ethresear.ch/t/sybil-attacks-on-aucil/25447",
+      "date": "2026-07-12",
+      "title_en": "ethresear.ch: Sybil attacks on AUCIL",
+      "note_en": "10:28 (AbhiMan1601). Inclusion lists are a censorship resistance primitive under PBS; FOCIL relies on fixed per-slot participants with no explicit pricing, while AUCIL is auction-based and relies on economic incentives.",
+      "topic_en": "Inclusion list research"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC：分数批量拍卖代币",
+      "note": "（fairbidlab）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1874",
+      "date": "2026-07-12",
+      "title_en": "New ERC: fractional batch auction token",
+      "note_en": "(fairbidlab), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：扩容之后是隐私，抗量子也会到来，三者都将成为基线",
+      "note": "20:45。",
+      "url": "https://x.com/EliBenSasson/status/2076301905446183053",
+      "date": "2026-07-12",
+      "title_en": "Eli Ben-Sasson: after scale comes privacy, quantum resilience will have its moment, and all three will become the baseline",
+      "note_en": "20:45.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/sybil-attacks-on-aucil/25447",
+    "credit": "ethresear.ch, Sybil Attacks on AUCIL (AbhiMan1601)",
+    "local_path": "assets/2026-07-12.jpg",
+    "credit_en": "ethresear.ch, Sybil Attacks on AUCIL (AbhiMan1601)"
+  },
+  "keywords_en": [
+    "Ethlabs Week 3",
+    "async interop and EEZ",
+    "preparing a faster-slot proposal for Hegotá",
+    "Sybil attacks on AUCIL",
+    "ERC-8336 fractional batch auction token"
+  ],
+  "summary_en": "A quiet Sunday. Barnabé's Ethlabs Week 3 said the team is preparing a faster-slot proposal ahead of the Hegotá non-headliner deadline: after 6-second slots were declined for Glamsterdam, carlbeek proposed quick slots (EIP-8198) to prepare the ground for future slot reductions. A post on ethresear.ch analyzed Sybil attacks on AUCIL, an auction-based inclusion list."
+}

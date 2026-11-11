@@ -1,0 +1,199 @@
+{
+  "date": "2026-07-22",
+  "keywords": [
+    "EIP-8141 P256 签名 low-s",
+    "VERIFY frame 静态排除在原子批次外",
+    "frame 交易支持 blob",
+    "EIP-2780 把转账日志费用并入 TX_VALUE_COST",
+    "Starknet Falcon-512 账户主网转账",
+    "Aztec Alpha V5 上线"
+  ],
+  "summary": "EIP-8141 继续收敛：P256 签名要求 low-s 规范形式、VERIFY frame 静态排除在原子批次之外，两项均提交并合并；svlachakis 提交 frame 交易 blob 支持的完整规定。misilva73 合并 EIP-2780 修改，移除单独的 `TRANSFER_LOG_COST`（1756），`TX_VALUE_COST` 从 4244 提高到 6000，同时覆盖接收方和 EIP-7708 转账日志。Starknet 上符合规范的 Falcon-512 账户完成主网转账，约 0.06 美元。",
+  "items": [
+    {
+      "topic": "EIP-8141 的签名、批次与 blob",
+      "title": "EIP-8141：固定 P256 签名规范形式（low-s）",
+      "note": "（svlachakis）提交并合并。SECP256K1 路径已固定恢复 id 和 EIP-2 low-s，P256 没有对应规则，而 P256VERIFY 预编译（EIP-7951）同时接受 `s` 和 `n − s`；签名条目的原始字节是交易身份的一部分，不固定会带来可塑性。",
+      "url": "https://github.com/ethereum/EIPs/pull/11984",
+      "date": "2026-07-22",
+      "title_en": "EIP-8141: pin the P256 signature canonicality (low-s)",
+      "note_en": "(svlachakis), submitted and merged. The SECP256K1 path already pins the recovery id and EIP-2 low-s, but P256 had no equivalent rule, and the P256VERIFY precompile (EIP-7951) accepts both `s` and `n − s`; a signature entry's raw bytes are part of the transaction's identity, so leaving this open allows malleability.",
+      "topic_en": "Signatures, batches and blobs in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的签名、批次与 blob",
+      "title": "EIP-8141：静态排除原子批次中的 VERIFY frame",
+      "note": "（lightclient）提交并合并，澄清批次中禁止 VERIFY 的措辞。",
+      "url": "https://github.com/ethereum/EIPs/pull/11987",
+      "date": "2026-07-22",
+      "title_en": "EIP-8141: statically exclude VERIFY frames from atomic batches",
+      "note_en": "(lightclient), submitted and merged, clarifying the wording of the ban on VERIFY in batches.",
+      "topic_en": "Signatures, batches and blobs in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的签名、批次与 blob",
+      "title": "EIP-8141：规定 frame 交易的 blob 支持",
+      "note": "（svlachakis）提交。费用部分已有（`tx_fee` 中的 `blob_fees`，`TXPARAM` `0x05`/`0x07`），缺的是包含有效性、区块级 blob gas 计数和网络形式；大部分引用 EIP-4844/EIP-7594，由付款方承担 blob 费用。",
+      "url": "https://github.com/ethereum/EIPs/pull/11985",
+      "date": "2026-07-22",
+      "title_en": "EIP-8141: specify blob support for frame transactions",
+      "note_en": "(svlachakis), submitted. The fee side already existed (`blob_fees` in `tx_fee`, `TXPARAM` `0x05`/`0x07`); missing were inclusion validity, block-level blob gas accounting and the networking form. Most of it is EIP-4844/EIP-7594 by reference, with the payer as the blob-fee payer.",
+      "topic_en": "Signatures, batches and blobs in EIP-8141"
+    },
+    {
+      "topic": "EIP-8141 的签名、批次与 blob",
+      "title": "EIP-8141：规定 frame 的 EIP-3529 存储退款记账",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11940",
+      "date": "2026-07-22",
+      "title_en": "EIP-8141: specify EIP-3529 storage refund accounting for frames",
+      "note_en": "Merged.",
+      "topic_en": "Signatures, batches and blobs in EIP-8141"
+    },
+    {
+      "topic": "Glamsterdam gas 参数",
+      "title": "EIP-2780：把转账日志费用并入 TX_VALUE_COST",
+      "note": "（misilva73）提交并合并：移除 `TRANSFER_LOG_COST`（1756），`TX_VALUE_COST` 从 4244 变为 6000，同时覆盖接收方和 EIP-7708 转账日志；带 value 的创建交易成本随之变化，规范和测试需更新。",
+      "url": "https://github.com/ethereum/EIPs/pull/11997",
+      "date": "2026-07-22",
+      "title_en": "EIP-2780: fold transfer log cost into TX_VALUE_COST",
+      "note_en": "(misilva73), submitted and merged: `TRANSFER_LOG_COST` (1756) is removed and `TX_VALUE_COST` goes from 4244 to 6000, covering both the recipient and the EIP-7708 transfer log; the cost of a create transaction with value changes, and specs and tests need updating.",
+      "topic_en": "Glamsterdam gas parameters"
+    },
+    {
+      "topic": "Glamsterdam gas 参数",
+      "title": "EIP-8038：记录参数来源，并从 requires 中去掉 EIP-7904",
+      "note": "提交并合并，不改 gas 值；EIP-8037：把 “regular gas” 改称 “execution gas” 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11996",
+      "date": "2026-07-22",
+      "title_en": "EIP-8038: document parameter provenance and drop EIP-7904 from requires",
+      "note_en": "Submitted and merged, with no gas value changes; EIP-8037: rename \"regular gas\" to \"execution gas\", submitted and merged.",
+      "topic_en": "Glamsterdam gas parameters"
+    },
+    {
+      "topic": "Glamsterdam gas 参数",
+      "title": "EIP-8037：把 “regular gas” 改称 “execution gas”",
+      "note": "EIP-8038：记录参数来源，并从 requires 中去掉 EIP-7904 提交并合并，不改 gas 值；EIP-8037：把 “regular gas” 改称 “execution gas” 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11998",
+      "date": "2026-07-22",
+      "title_en": "EIP-8037: rename \"regular gas\" to \"execution gas\"",
+      "note_en": "EIP-8038: document parameter provenance and drop EIP-7904 from requires, submitted and merged, with no gas value changes; EIP-8037: rename \"regular gas\" to \"execution gas\", submitted and merged.",
+      "topic_en": "Glamsterdam gas parameters"
+    },
+    {
+      "topic": "Glamsterdam gas 参数",
+      "title": "EIP-8015：同时移除 start index 与 BeaconState 字段",
+      "note": "（etan-status）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11910",
+      "date": "2026-07-22",
+      "title_en": "EIP-8015: also remove start index and BeaconState fields",
+      "note_en": "(etan-status), merged.",
+      "topic_en": "Glamsterdam gas parameters"
+    },
+    {
+      "topic": "后量子与隐私",
+      "title": "StarkWare：完全符合规范的 Falcon-512 账户在 Starknet 主网完成转账，约 0.06 美元",
+      "note": "22:44，与 OpenZeppelin 合作。",
+      "url": "https://x.com/StarkWareLtd/status/2079955780019864015",
+      "date": "2026-07-22",
+      "title_en": "StarkWare: a fully spec-compliant Falcon-512 account executed a live transfer on Starknet mainnet for about $0.06",
+      "note_en": "22:44, built with OpenZeppelin.",
+      "topic_en": "Post-quantum and privacy"
+    },
+    {
+      "topic": "后量子与隐私",
+      "title": "Aztec：Alpha V5 上线",
+      "note": "03:01，已有以太坊上的隐私交易和经 nyxmoney 在 Aave 上的隐私借贷。",
+      "url": "https://x.com/aztecnetwork/status/2079657998994346467",
+      "date": "2026-07-22",
+      "title_en": "Aztec: Alpha V5 launched",
+      "note_en": "03:01, with private transactions on Ethereum and private lending on Aave via nyxmoney.",
+      "topic_en": "Post-quantum and privacy"
+    },
+    {
+      "topic": "后量子与隐私",
+      "title": "PQ Interop #48 议程",
+      "note": "PQ Interop #48 与 Encrypt The Mempool #7 当天召开，PQ Interop #48 议程 20:35。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-48-july-22-2026/29061",
+      "date": "2026-07-22",
+      "title_en": "PQ Interop #48 agenda",
+      "note_en": "PQ Interop #48 and Encrypt The Mempool #7 were held on the day; PQ Interop #48 agenda, 20:35.",
+      "topic_en": "Post-quantum and privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7964：多个 chainId 时取首个匹配深度作为规范目标链",
+      "note": "（ernestognw）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1902",
+      "date": "2026-07-22",
+      "title_en": "ERC-7964: canonical target chainId under first match at depth",
+      "note_en": "(ernestognw), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048：加入可选的 Metadata Authority 扩展",
+      "note": "（nxt3d）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1903",
+      "date": "2026-07-22",
+      "title_en": "ERC-8048: add an optional Metadata Authority extension",
+      "note_en": "(nxt3d), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8349 基于索引的多 facet 代理",
+      "note": "02:30；协议级合约不变量保护，进内存池前按安全清单验证 10:40。",
+      "url": "https://ethereum-magicians.org/t/erc-8349-index-based-multi-facet-proxy/29054",
+      "date": "2026-07-22",
+      "title_en": "Magicians: ERC-8349, an index-based multi-facet proxy",
+      "note_en": "02:30; protocol-level contract invariant protection via pre-mempool validation with security manifests, 10:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "协议级合约不变量保护，进内存池前按安全清单验证",
+      "note": "Magicians：ERC-8349 基于索引的多 facet 代理 02:30；协议级合约不变量保护，进内存池前按安全清单验证 10:40。",
+      "url": "https://ethereum-magicians.org/t/idea-draft-protocol-level-smart-contract-invariant-protection-via-pre-mempool-validation-security-manifests/29056",
+      "date": "2026-07-22",
+      "title_en": "protocol-level contract invariant protection via pre-mempool validation with security manifests",
+      "note_en": "Magicians: ERC-8349, an index-based multi-facet proxy, 02:30; protocol-level contract invariant protection via pre-mempool validation with security manifests, 10:40.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "SSZ Engine API Call 3 议程",
+      "note": "20:12。",
+      "url": "https://ethereum-magicians.org/t/ssz-engine-api-call-3-july-24-2026/29060",
+      "date": "2026-07-22",
+      "title_en": "SSZ Engine API Call 3 agenda",
+      "note_en": "20:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：工程师总会选最新奇、最巧妙的路线，而不是最快、最安全的那条",
+      "note": "07:10。",
+      "url": "https://x.com/tayvano_/status/2079720695135916276",
+      "date": "2026-07-22",
+      "title_en": "tayvano: engineers always pick the most novel and clever route over the fastest and safest one",
+      "note_en": "07:10.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11985",
+    "credit": "GitHub, ethereum/EIPs PR #11985",
+    "local_path": "assets/2026-07-22.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11985"
+  },
+  "keywords_en": [
+    "EIP-8141 P256 signature low-s",
+    "VERIFY frames statically excluded from atomic batches",
+    "blob support for frame transactions",
+    "EIP-2780 folds transfer log cost into TX_VALUE_COST",
+    "Starknet Falcon-512 account mainnet transfer",
+    "Aztec Alpha V5 launch"
+  ],
+  "summary_en": "EIP-8141 kept converging: P256 signatures must use the canonical low-s form and VERIFY frames are statically excluded from atomic batches, both submitted and merged; svlachakis submitted a full specification of blob support for frame transactions. misilva73 merged an EIP-2780 change removing the standalone `TRANSFER_LOG_COST` (1756) and raising `TX_VALUE_COST` from 4244 to 6000 to cover both the recipient and the EIP-7708 transfer log. A spec-compliant Falcon-512 account made a mainnet transfer on Starknet for about $0.06."
+}

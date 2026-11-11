@@ -1,0 +1,183 @@
+{
+  "date": "2026-07-08",
+  "keywords": [
+    "EIP-8141 规范清理",
+    "签名字节不进入签名哈希",
+    "expiry 验证 frame 只能放第一个",
+    "EIP-8130 交易类型重新编号",
+    "pcaversaccio 隐私目标",
+    "Robinhood Chain 与 Base 对比",
+    "L1-zkEVM #06",
+    "PQ Interop #47"
+  ],
+  "summary": "EIP-8141 的规范清理合并：`sig.signer` 可留空并默认为 `tx.sender`，原始签名字节不进入任何 `sig_hash`，以便将来做签名聚合；内存池规则要求 expiry 验证 frame 只能是第一个 frame。chunter-cb 提交 EIP-8130 交易类型重新编号和 `eth_call`/`eth_estimateGas` 扩展。pcaversaccio 表示个人目标是让以太坊成为领先的隐私链。当晚召开 L1-zkEVM breakout #06 和 PQ Interop #47。",
+  "items": [
+    {
+      "topic": "两条原生 AA 路线的规范推进",
+      "title": "EIP-8141：规范清理与澄清",
+      "note": "（morph-dev）合并。`sig.signer` 可以为空，默认是 `tx.sender`；所有 `sig_hash` 都省略原始 `sig.signature` 字节，因为交易有效要求所有签名有效，承诺 `sig.msg` 已间接承诺签名，若不省略将无法在未来做签名聚合；内存池方面，expiry 验证 frame 只能是 frame 列表中的第一个。",
+      "url": "https://github.com/ethereum/EIPs/pull/11814",
+      "date": "2026-07-08",
+      "title_en": "EIP-8141: spec cleanup and clarifications",
+      "note_en": "(morph-dev), merged. `sig.signer` can be empty and defaults to `tx.sender`; raw `sig.signature` bytes are elided from every `sig_hash`, because a transaction is valid only if all signatures are valid, so committing to `sig.msg` already commits to the signatures indirectly, and keeping the bytes would rule out future signature aggregation; in the mempool, the expiry verifier frame can only be the first frame in the list.",
+      "topic_en": "Spec progress on both native AA paths"
+    },
+    {
+      "topic": "两条原生 AA 路线的规范推进",
+      "title": "EIP-8130：重新编号 AA 交易类型并加入 eth_call/eth_estimateGas RPC 扩展",
+      "note": "（chunter-cb）提交。`AA_TX_TYPE` 从 `0x7B` 改为 `0x79`，`AA_PAYER_TYPE` 从 `0x7C` 改为 `0x7A`；RPC 接受 AA 交易字段（`sender`、`nonceKey`、`accountChanges`、`calls`、`expiry`、`payer` 等）并按 AA 交易计价，认证 gas 取决于认证数据的形状而非有效签名。",
+      "url": "https://github.com/ethereum/EIPs/pull/11903",
+      "date": "2026-07-08",
+      "title_en": "EIP-8130: renumber AA transaction types and add an eth_call/eth_estimateGas RPC extension",
+      "note_en": "(chunter-cb), submitted. `AA_TX_TYPE` goes from `0x7B` to `0x79` and `AA_PAYER_TYPE` from `0x7C` to `0x7A`; the RPC accepts the AA transaction fields (`sender`, `nonceKey`, `accountChanges`, `calls`, `expiry`, `payer` and more) and prices the request as an AA transaction, since authentication gas depends on the auth blob's shape rather than a valid signature.",
+      "topic_en": "Spec progress on both native AA paths"
+    },
+    {
+      "topic": "隐私与 L2 信任模型",
+      "title": "pcaversaccio：我的个人目标是让以太坊成为领先的隐私链",
+      "note": "15:17，包括无条件的原生隐私交易和通过机密智能合约实现的隐私计算。",
+      "url": "https://x.com/pcaversaccio/status/2074769875172475035",
+      "date": "2026-07-08",
+      "title_en": "pcaversaccio: my personal goal is to make Ethereum the leading privacy chain",
+      "note_en": "15:17, with unconditional native private transactions and private compute via confidential smart contracts.",
+      "topic_en": "Privacy and L2 trust models"
+    },
+    {
+      "topic": "隐私与 L2 信任模型",
+      "title": "donnoh_eth：Robinhood Chain 与 Base 对比",
+      "note": "16:55：Robinhood 的规范桥是许可且受信任的，只有两个 EOA 能提议和挑战状态根；Base 由许可的 TEE 提议状态根，但任何人都可以挑战。",
+      "url": "https://x.com/donnoh_eth/status/2074794537386463695",
+      "date": "2026-07-08",
+      "title_en": "donnoh_eth: Robinhood Chain versus Base",
+      "note_en": "16:55: Robinhood's canonical bridge is permissioned and trusted, with only two EOAs able to propose and challenge state roots; on Base a permissioned TEE proposes state roots, but anyone can challenge.",
+      "topic_en": "Privacy and L2 trust models"
+    },
+    {
+      "topic": "隐私与 L2 信任模型",
+      "title": "growthepie：Optimism 上智能钱包活动大幅上升",
+      "note": "22:04。",
+      "url": "https://x.com/growthepie_eth/status/2074872231289647174",
+      "date": "2026-07-08",
+      "title_en": "growthepie: a big spike in smart wallet activity on Optimism",
+      "note_en": "22:04.",
+      "topic_en": "Privacy and L2 trust models"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081 PFI",
+      "note": "Helkomine 提交多份 EIP-8081 PFI，涉及 EIP-7973、7609、8058、7971、7923、7686；EIP-8311：calldata 底价适用退款规则 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11892",
+      "date": "2026-07-08",
+      "title_en": "EIP-8081 PFIs",
+      "note_en": "Helkomine submitted several EIP-8081 PFIs covering EIP-7973, 7609, 8058, 7971, 7923 and 7686; EIP-8311: apply refunds to calldata floor gas, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8311：calldata 底价适用退款规则",
+      "note": "Helkomine 提交多份 EIP-8081 PFI，涉及 EIP-7973、7609、8058、7971、7923、7686；EIP-8311：calldata 底价适用退款规则 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11901",
+      "date": "2026-07-08",
+      "title_en": "EIP-8311: apply refunds to calldata floor gas",
+      "note_en": "Helkomine submitted several EIP-8081 PFIs covering EIP-7973, 7609, 8058, 7971, 7923 and 7686; EIP-8311: apply refunds to calldata floor gas, submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：Move to Review",
+      "note": "和 EIP-7981：Move to Review 合并；EIP-8282：按当前参考字节码设置预部署地址 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11875",
+      "date": "2026-07-08",
+      "title_en": "EIP-7928: move to Review",
+      "note_en": "And EIP-7981: move to Review, merged; EIP-8282: set predeploy addresses from current reference bytecode, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7981：Move to Review",
+      "note": "EIP-7928：Move to Review 和 EIP-7981：Move to Review 合并；EIP-8282：按当前参考字节码设置预部署地址 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11878",
+      "date": "2026-07-08",
+      "title_en": "EIP-7981: move to Review",
+      "note_en": "EIP-7928: move to Review and EIP-7981: move to Review, merged; EIP-8282: set predeploy addresses from current reference bytecode, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8282：按当前参考字节码设置预部署地址",
+      "note": "EIP-7928：Move to Review 和 EIP-7981：Move to Review 合并；EIP-8282：按当前参考字节码设置预部署地址 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11899",
+      "date": "2026-07-08",
+      "title_en": "EIP-8282: set predeploy addresses from current reference bytecode",
+      "note_en": "EIP-7928: move to Review and EIP-7981: move to Review, merged; EIP-8282: set predeploy addresses from current reference bytecode, submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDC #182 议程",
+      "note": "16:28；PQ Interop #47 20:29。L1-zkEVM breakout #06 当晚召开，无可引用纪要。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-182-july-9-2026/28968",
+      "date": "2026-07-08",
+      "title_en": "ACDC #182 agenda",
+      "note_en": "16:28; PQ Interop #47, 20:29. L1-zkEVM breakout #06 was held in the evening, with no notes to cite.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ Interop #47",
+      "note": "ACDC #182 议程 16:28；PQ Interop #47 20:29。L1-zkEVM breakout #06 当晚召开，无可引用纪要。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-pq-interop-47-july-8-2026/28972",
+      "date": "2026-07-08",
+      "title_en": "PQ Interop #47",
+      "note_en": "ACDC #182 agenda, 16:28; PQ Interop #47, 20:29. L1-zkEVM breakout #06 was held in the evening, with no notes to cite.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Builder 背离与激励相容",
+      "note": "18:22。",
+      "url": "https://ethresear.ch/t/builders-defection-and-incentive-compatibility/25400",
+      "date": "2026-07-08",
+      "title_en": "ethresear.ch: builders' defection and incentive compatibility",
+      "note_en": "18:22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：他们又在推动 Chat Control",
+      "note": "11:17。",
+      "url": "https://x.com/VitalikButerin/status/2074709559973752987",
+      "date": "2026-07-08",
+      "title_en": "Vitalik: they are trying to push Chat Control through again",
+      "note_en": "11:17.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：用 Ledger 签 Safe 交易，Ambire 比 MetaMask 和 Rabby 好用",
+      "note": "04:50。",
+      "url": "https://x.com/LefterisJP/status/2074612070830485949",
+      "date": "2026-07-08",
+      "title_en": "LefterisJP: signing a Safe transaction with a Ledger, Ambire beat MetaMask and Rabby",
+      "note_en": "04:50.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11814",
+    "credit": "GitHub, ethereum/EIPs PR #11814",
+    "local_path": "assets/2026-07-08.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11814"
+  },
+  "keywords_en": [
+    "EIP-8141 spec cleanup",
+    "signature bytes kept out of the signing hash",
+    "expiry verifier frame must come first",
+    "EIP-8130 transaction types renumbered",
+    "pcaversaccio's privacy goal",
+    "Robinhood Chain versus Base",
+    "L1-zkEVM #06",
+    "PQ Interop #47"
+  ],
+  "summary_en": "An EIP-8141 spec cleanup was merged: `sig.signer` may be empty and defaults to `tx.sender`, raw signature bytes are left out of every `sig_hash` so signatures can be aggregated later, and the mempool rules require the expiry verifier frame to be the first frame. chunter-cb submitted an EIP-8130 renumbering of transaction types and an `eth_call`/`eth_estimateGas` extension. pcaversaccio said his personal goal is to make Ethereum the leading privacy chain. L1-zkEVM breakout #06 and PQ Interop #47 were held in the evening."
+}

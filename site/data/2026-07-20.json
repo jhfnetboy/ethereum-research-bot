@@ -1,0 +1,169 @@
+{
+  "date": "2026-07-20",
+  "keywords": [
+    "Kohaku CLI 隐私演示",
+    "ERC-4337 UserOp 一次完成解除屏蔽与兑换",
+    "EIP-8272 列为 Hegotá PFI",
+    "ACDT #88",
+    "Vitalik 谈 AI 能力增长",
+    "Aztec 匿名留言板演示"
+  ],
+  "summary": "kassandraETH 发布 Kohaku CLI 主网隐私演示，据 Ethereal news #32，可在一个 ERC-4337 操作中完成从 Tornado Cash 资金解除屏蔽并兑换，仍在开发中、未经安全审查；她同时列出 CLI 只连接 RPC 和 Pimlico 公共 bundler 两个 HTTP 端点。EIP-8272（recent root 引用）被列为 Hegotá PFI。ACDT #88 当晚召开，据 Ethereal news #32，devnet-7 在做混沌测试，stable containers 慢约 10% 到 20%。",
+  "items": [
+    {
+      "topic": "Kohaku CLI 与账户层隐私",
+      "title": "kassandraETH：给以太坊用户做了一个试用 Kohaku 的方式，在主网实际演示",
+      "note": "23:13。据 Ethereal news #32，kohaku-cli 是终端钱包，可在单个 ERC-4337 操作中完成解除屏蔽和兑换，资金来自 Tornado Cash；仍在开发中，未经安全审查。",
+      "url": "https://x.com/kassandraETH/status/2079238186018931113",
+      "date": "2026-07-20",
+      "title_en": "kassandraETH: a way for Ethereum users to try Kohaku, as a live demo on mainnet",
+      "note_en": "23:13. Per Ethereal news #32, kohaku-cli is a terminal wallet that can unshield and swap in a single ERC-4337 operation funded from Tornado Cash; it is a work in progress and not security reviewed.",
+      "topic_en": "Kohaku CLI and account-layer privacy"
+    },
+    {
+      "topic": "Kohaku CLI 与账户层隐私",
+      "title": "kassandraETH：从隐私角度分析，CLI 只通过 HTTP 访问两个服务器，以太坊 RPC 端点和用于提交 4337 UserOp 的 Pimlico 公共端点",
+      "note": "23:40。",
+      "url": "https://x.com/kassandraETH/status/2079245166649516376",
+      "date": "2026-07-20",
+      "title_en": "kassandraETH: from a privacy view, the CLI talks over HTTP to only two servers, the Ethereum RPC endpoint and Pimlico's public endpoint for submitting 4337 UserOps",
+      "note_en": "23:40.",
+      "topic_en": "Kohaku CLI and account-layer privacy"
+    },
+    {
+      "topic": "Kohaku CLI 与账户层隐私",
+      "title": "binji：以太坊隐私正在出现技术突破，在保持用户主权的同时引入可编程隐私",
+      "note": "17:45。",
+      "url": "https://x.com/binji_x/status/2079155774245240961",
+      "date": "2026-07-20",
+      "title_en": "binji: breakthroughs are happening in Ethereum privacy, introducing programmable privacy while keeping full user sovereignty",
+      "note_en": "17:45.",
+      "topic_en": "Kohaku CLI and account-layer privacy"
+    },
+    {
+      "topic": "Hegotá 与 frame 交易家族",
+      "title": "EIP-8081：提议 EIP-8272 进入 Hegotá",
+      "note": "（soispoke）合并，列为 PFI。EIP-8272：解决 RECENTROOTREFLOAD 操作码冲突 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11831",
+      "date": "2026-07-20",
+      "title_en": "EIP-8081: propose EIP-8272 for Hegotá",
+      "note_en": "(soispoke), merged, listing it as PFI. EIP-8272: resolve the RECENTROOTREFLOAD opcode collision, merged.",
+      "topic_en": "Hegotá and the frame transaction family"
+    },
+    {
+      "topic": "Hegotá 与 frame 交易家族",
+      "title": "EIP-8272：解决 RECENTROOTREFLOAD 操作码冲突",
+      "note": "EIP-8081：提议 EIP-8272 进入 Hegotá（soispoke）合并，列为 PFI。EIP-8272：解决 RECENTROOTREFLOAD 操作码冲突 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11967",
+      "date": "2026-07-20",
+      "title_en": "EIP-8272: resolve the RECENTROOTREFLOAD opcode collision",
+      "note_en": "EIP-8081: propose EIP-8272 for Hegotá (soispoke), merged, listing it as PFI. EIP-8272: resolve the RECENTROOTREFLOAD opcode collision, merged.",
+      "topic_en": "Hegotá and the frame transaction family"
+    },
+    {
+      "topic": "Hegotá 与 frame 交易家族",
+      "title": "EIP-8250：澄清 NONCE_MANAGER 激活",
+      "note": "soispoke 继续提交 EIP-8250：澄清 NONCE_MANAGER 激活，要求其地址不同于 8141 的 `EXPIRY_VERIFIER`，激活前出现代码或存储则激活区块无效；以及 EIP-8272：澄清签名哈希与预部署地址。",
+      "url": "https://github.com/ethereum/EIPs/pull/11972",
+      "date": "2026-07-20",
+      "title_en": "EIP-8250: clarify NONCE_MANAGER activation",
+      "note_en": "Soispoke also submitted EIP-8250: clarify NONCE_MANAGER activation, requiring its address to differ from 8141's `EXPIRY_VERIFIER` and making the activation block invalid if code or storage appears there before activation, and EIP-8272: clarify signature hashing and predeploy address.",
+      "topic_en": "Hegotá and the frame transaction family"
+    },
+    {
+      "topic": "Hegotá 与 frame 交易家族",
+      "title": "EIP-8272：澄清签名哈希与预部署地址",
+      "note": "soispoke 继续提交 EIP-8250：澄清 NONCE_MANAGER 激活，要求其地址不同于 8141 的 `EXPIRY_VERIFIER`，激活前出现代码或存储则激活区块无效；以及 EIP-8272：澄清签名哈希与预部署地址。",
+      "url": "https://github.com/ethereum/EIPs/pull/11973",
+      "date": "2026-07-20",
+      "title_en": "EIP-8272: clarify signature hashing and predeploy address",
+      "note_en": "Soispoke also submitted EIP-8250: clarify NONCE_MANAGER activation, requiring its address to differ from 8141's `EXPIRY_VERIFIER` and making the activation block invalid if code or storage appears there before activation, and EIP-8272: clarify signature hashing and predeploy address.",
+      "topic_en": "Hegotá and the frame transaction family"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：如何看待 AI 能力增长及其对我们的意义",
+      "note": "17:53，比较人类和 AI 不应只看智能等单一维度。",
+      "url": "https://x.com/VitalikButerin/status/2079157844817990035",
+      "date": "2026-07-20",
+      "title_en": "Vitalik: how to think about AI capability growth and what it means for us",
+      "note_en": "17:53: humans and AI should not be compared on a single dimension such as intelligence.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：在 Aztec 上 vibe-code 了带审核的匿名留言板玩具演示",
+      "note": "05:15。",
+      "url": "https://x.com/VitalikButerin/status/2078966876198105183",
+      "date": "2026-07-20",
+      "title_en": "Vitalik: vibe-coded a toy demo of the \"anon billboard with moderation\" idea on Aztec",
+      "note_en": "05:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "@ethereum：过去一个月以太坊生态的上线、升级与发布汇总",
+      "note": "21:50，例如 Robinhood Chain 主网上线。",
+      "url": "https://x.com/ethereum/status/2079217433059996150",
+      "date": "2026-07-20",
+      "title_en": "@ethereum: what the Ethereum ecosystem launched, upgraded and announced over the past month",
+      "note_en": "21:50, for example Robinhood Chain launching on mainnet.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Encrypt The Mempool #7 议程",
+      "note": "21:13；PQTS Breakout #12 议程 18:32。",
+      "url": "https://ethereum-magicians.org/t/encrypt-the-mempool-7-july-22-2026/29042",
+      "date": "2026-07-20",
+      "title_en": "Encrypt The Mempool #7 agenda",
+      "note_en": "21:13; PQTS Breakout #12 agenda, 18:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQTS Breakout #12 议程",
+      "note": "Encrypt The Mempool #7 议程 21:13；PQTS Breakout #12 议程 18:32。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-12/29041",
+      "date": "2026-07-20",
+      "title_en": "PQTS Breakout #12 agenda",
+      "note_en": "Encrypt The Mempool #7 agenda, 21:13; PQTS Breakout #12 agenda, 18:32.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：多数比特币用户似乎已同意需要尽快做抗量子准备",
+      "note": "20:35。",
+      "url": "https://x.com/EliBenSasson/status/2079198486516367585",
+      "date": "2026-07-20",
+      "title_en": "Eli Ben-Sasson: most Bitcoiners seem to agree that quantum readiness must happen fast",
+      "note_en": "20:35.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dcbuilder：Telegram 被盗两个月后，建议大家备份所有平台的消息和联系人",
+      "note": "15:53。",
+      "url": "https://x.com/dcbuilder/status/2079127488651800679",
+      "date": "2026-07-20",
+      "title_en": "dcbuilder: after having his Telegram stolen two months ago, he recommends backing up all messages and contacts across platforms",
+      "note_en": "15:53.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11831",
+    "credit": "GitHub, ethereum/EIPs PR #11831",
+    "local_path": "assets/2026-07-20.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11831"
+  },
+  "keywords_en": [
+    "Kohaku CLI privacy demo",
+    "unshield and swap in one ERC-4337 UserOp",
+    "EIP-8272 listed as Hegotá PFI",
+    "ACDT #88",
+    "Vitalik on AI capability growth",
+    "anonymous billboard demo on Aztec"
+  ],
+  "summary_en": "kassandraETH released a Kohaku CLI privacy demo on mainnet; per Ethereal news #32, it can unshield funds from Tornado Cash and swap in one ERC-4337 operation, and it is a work in progress without a security review. She also listed the only two HTTP endpoints the CLI talks to: the RPC and Pimlico's public bundler. EIP-8272 (recent root references) was listed as a Hegotá PFI. ACDT #88 was held in the evening; per Ethereal news #32, devnet-7 is in chaos testing and stable containers are about 10% to 20% slower."
+}

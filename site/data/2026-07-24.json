@@ -1,0 +1,193 @@
+{
+  "date": "2026-07-24",
+  "keywords": [
+    "EIP-8141 内存池替换与驱逐",
+    "付款方敞口上限",
+    "交易日志集合",
+    "规范 paymaster 实现",
+    "签名方案注册表",
+    "EIP-7906 状态差异断言列为 PFI",
+    "zeam 失去 EF 资助",
+    "ERC-8354 机密 agent 策略裁决"
+  ],
+  "summary": "EIP-8141 的内存池与 paymaster 部分集中推进：svlachakis 提交内存池生命周期定义，待处理身份为 `(sender, nonce)`，替换须两个费用字段都提价，所有付款方的待处理最大费用之和不得超过其余额；同时提交交易日志集合与回滚批次日志语义、规范 paymaster 的具体实现。AnkushinDaniil 提交签名方案注册表和按稳定身份识别规范 paymaster 两个 RFC。前一天提交的 blob 支持、直接求值验证前缀、APPROVE gas 成本和费用字段上限当天合并。zeam 宣布 EF 资助停止。",
+  "items": [
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "EIP-8141：定义公共内存池的替换、驱逐与付款方敞口",
+      "note": "（svlachakis）提交。替换：待处理身份为 `(sender, nonce)`，签名或 witness 刷新的变体视为替换候选，从而消除签名可塑性造成的抖动；替换须独立有效，两个费用字段都按节点设定的最低幅度提价，可以更换付款方，预留随之原子转移。付款方敞口：规范 paymaster 的预留记账推广到所有付款方，待处理最大费用之和不超过付款方余额，防止一次余额变化让大量待处理交易同时失效。",
+      "url": "https://github.com/ethereum/EIPs/pull/12007",
+      "date": "2026-07-24",
+      "title_en": "EIP-8141: define replacement, eviction and payer exposure for the public mempool",
+      "note_en": "(svlachakis), submitted. Replacement: pending identity is `(sender, nonce)`, and signature- or witness-refreshed variants are replacement candidates, which closes signature-malleability churn; replacements must be independently valid, bump both fee fields by a node-configured minimum, and may switch payer, with reservations moving atomically. Payer exposure: the canonical paymaster's reservation accounting generalizes to every payer, so summed pending maximum costs never exceed the payer's balance, preventing one balance change from invalidating many pending transactions at once.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "EIP-8141：定义交易日志集合和回滚批次的日志语义",
+      "note": "（svlachakis）提交：交易日志按 frame 顺序拼接，被展开的 frame 日志与其状态修改一并丢弃，否则两个客户端即使收据编码一致也可能在区块头 `logsBloom` 上分歧。",
+      "url": "https://github.com/ethereum/EIPs/pull/12008",
+      "date": "2026-07-24",
+      "title_en": "EIP-8141: define the transaction log set and unrolled-batch log semantics",
+      "note_en": "(svlachakis), submitted: the transaction's logs are the frame receipts' logs in frame order, and an unrolled frame's logs are discarded with its state changes; otherwise two clients could agree on the receipt encoding and still disagree on the header `logsBloom`.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "EIP-8141：规定规范 paymaster 的实现",
+      "note": "（svlachakis）提交，用规范存储布局、付款授权、金库规则、管理接口和按分叉的 code hash 识别替换原来的占位描述。",
+      "url": "https://github.com/ethereum/EIPs/pull/12012",
+      "date": "2026-07-24",
+      "title_en": "EIP-8141: specify the canonical paymaster implementation",
+      "note_en": "(svlachakis), submitted, replacing the placeholder with a normative storage layout, payment authorization, treasury rules, admin interface and per-fork code hash recognition.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "按稳定身份而非精确字节码识别规范 paymaster",
+      "note": "AnkushinDaniil 提交两个 RFC：按稳定身份而非精确字节码识别规范 paymaster，即 EIP-7702 委托到保留地址或按分叉固定的 code hash；把签名方案表正式化为协议内注册表，签名方案是协议提供优化支持的密码学操作，而不是账户。",
+      "url": "https://github.com/ethereum/EIPs/pull/12010",
+      "date": "2026-07-24",
+      "title_en": "recognize the canonical paymaster by stable identity rather than exact bytecode match",
+      "note_en": "AnkushinDaniil submitted two RFCs: recognize the canonical paymaster by stable identity rather than exact bytecode match, meaning an EIP-7702 delegation to a reserved address or a code hash pinned per fork, and formalize the signature scheme table as an in-protocol registry, where a signature scheme is a cryptographic operation the protocol supports in optimized form, not an account.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "把签名方案表正式化为协议内注册表",
+      "note": "AnkushinDaniil 提交两个 RFC：按稳定身份而非精确字节码识别规范 paymaster，即 EIP-7702 委托到保留地址或按分叉固定的 code hash；把签名方案表正式化为协议内注册表，签名方案是协议提供优化支持的密码学操作，而不是账户。",
+      "url": "https://github.com/ethereum/EIPs/pull/12011",
+      "date": "2026-07-24",
+      "title_en": "formalize the signature scheme table as an in-protocol registry",
+      "note_en": "AnkushinDaniil submitted two RFCs: recognize the canonical paymaster by stable identity rather than exact bytecode match, meaning an EIP-7702 delegation to a reserved address or a code hash pinned per fork, and formalize the signature scheme table as an in-protocol registry, where a signature scheme is a cryptographic operation the protocol supports in optimized form, not an account.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "frame 交易 blob 支持",
+      "note": "合并：frame 交易 blob 支持、直接求值协议定义的验证前缀、APPROVE 操作码 gas 成本、费用字段静态上限。",
+      "url": "https://github.com/ethereum/EIPs/pull/11985",
+      "date": "2026-07-24",
+      "title_en": "blob support for frame transactions",
+      "note_en": "Merged: blob support for frame transactions, direct evaluation of protocol-defined validation prefixes, the APPROVE opcode gas cost, and static bounds on fee fields.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "直接求值协议定义的验证前缀",
+      "note": "合并：frame 交易 blob 支持、直接求值协议定义的验证前缀、APPROVE 操作码 gas 成本、费用字段静态上限。",
+      "url": "https://github.com/ethereum/EIPs/pull/12001",
+      "date": "2026-07-24",
+      "title_en": "direct evaluation of protocol-defined validation prefixes",
+      "note_en": "Merged: blob support for frame transactions, direct evaluation of protocol-defined validation prefixes, the APPROVE opcode gas cost, and static bounds on fee fields.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "APPROVE 操作码 gas 成本",
+      "note": "合并：frame 交易 blob 支持、直接求值协议定义的验证前缀、APPROVE 操作码 gas 成本、费用字段静态上限。",
+      "url": "https://github.com/ethereum/EIPs/pull/12003",
+      "date": "2026-07-24",
+      "title_en": "the APPROVE opcode gas cost",
+      "note_en": "Merged: blob support for frame transactions, direct evaluation of protocol-defined validation prefixes, the APPROVE opcode gas cost, and static bounds on fee fields.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "EIP-8141 内存池与 paymaster",
+      "title": "费用字段静态上限",
+      "note": "合并：frame 交易 blob 支持、直接求值协议定义的验证前缀、APPROVE 操作码 gas 成本、费用字段静态上限。",
+      "url": "https://github.com/ethereum/EIPs/pull/12005",
+      "date": "2026-07-24",
+      "title_en": "static bounds on fee fields",
+      "note_en": "Merged: blob support for frame transactions, direct evaluation of protocol-defined validation prefixes, the APPROVE opcode gas cost, and static bounds on fee fields.",
+      "topic_en": "EIP-8141 mempool and paymaster"
+    },
+    {
+      "topic": "Hegotá 候选与生态",
+      "title": "EIP-8081：EIP-7906 列为 PFI",
+      "note": "（forshtat）提交；据 Ethereal news #33，EIP-7906 是通过状态差异操作码实现的交易断言，服务于其无需信任的清晰签名架构。",
+      "url": "https://github.com/ethereum/EIPs/pull/12013",
+      "date": "2026-07-24",
+      "title_en": "EIP-8081: list EIP-7906 as PFI",
+      "note_en": "(forshtat), submitted; per Ethereal news #33, EIP-7906 is transaction assertions via a state diff opcode, part of his trustless clear-signing architecture.",
+      "topic_en": "Hegotá candidates and ecosystem"
+    },
+    {
+      "topic": "Hegotá 候选与生态",
+      "title": "zeam：EF 对 zeam 的资助已停止",
+      "note": "15:34，团队称一直在承担后量子实现工作，但受到这轮收缩影响。",
+      "url": "https://x.com/zeamETH/status/2080572239309861353",
+      "date": "2026-07-24",
+      "title_en": "zeam: EF grant support for zeam has been discontinued",
+      "note_en": "15:34; the team says it had been carrying post-quantum implementation work but was caught up in the downturn.",
+      "topic_en": "Hegotá candidates and ecosystem"
+    },
+    {
+      "topic": "Hegotá 候选与生态",
+      "title": "Nethermind：加入 ERC3643 协会",
+      "note": "18:54，工作重点是在不暴露身份、余额和交易历史的前提下证明合规。",
+      "url": "https://x.com/Nethermind/status/2080622535704543325",
+      "date": "2026-07-24",
+      "title_en": "Nethermind: joined the ERC3643 association",
+      "note_en": "18:54, focusing on proving compliance without exposing identities, balances or transaction history.",
+      "topic_en": "Hegotá candidates and ecosystem"
+    },
+    {
+      "topic": "Hegotá 候选与生态",
+      "title": "Magicians：ERC-8354 机密 agent 策略裁决",
+      "note": "16:23，为自主 agent 行为提供执行前的允许/拒绝接口，裁决用零知识证明针对从不上链公开的策略。",
+      "url": "https://ethereum-magicians.org/t/erc-8354-confidential-agent-policy-verdicts/29088",
+      "date": "2026-07-24",
+      "title_en": "Magicians: ERC-8354 confidential agent policy verdicts",
+      "note_en": "16:23: a pre-execution allow/deny interface for autonomous agent actions, with the decision proven in zero knowledge against a policy never disclosed onchain.",
+      "topic_en": "Hegotá candidates and ecosystem"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8347 论坛讨论",
+      "note": "18:10。",
+      "url": "https://ethereum-magicians.org/t/eip-8347-offline-state-migration-to-the-pbt/29089",
+      "date": "2026-07-24",
+      "title_en": "EIP-8347 forum discussion",
+      "note_en": "18:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7997：简化规范并澄清理由",
+      "note": "（jochem-brouwer）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12009",
+      "date": "2026-07-24",
+      "title_en": "EIP-7997: simplify the spec and clarify the rationale",
+      "note_en": "(jochem-brouwer), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hasufl：BitMEX 关闭是一个时代的结束，原因多年前已埋下",
+      "note": "19:24。",
+      "url": "https://x.com/hasufl/status/2080630125620502977",
+      "date": "2026-07-24",
+      "title_en": "hasufl: BitMEX shutting down is the end of an era, with causes seeded years ago",
+      "note_en": "19:24.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12007",
+    "credit": "GitHub, ethereum/EIPs PR #12007",
+    "local_path": "assets/2026-07-24.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12007"
+  },
+  "keywords_en": [
+    "EIP-8141 mempool replacement and eviction",
+    "payer exposure bound",
+    "transaction log set",
+    "canonical paymaster implementation",
+    "signature scheme registry",
+    "EIP-7906 state diff assertions listed as PFI",
+    "zeam loses EF grant",
+    "ERC-8354 confidential agent policy verdicts"
+  ],
+  "summary_en": "EIP-8141's mempool and paymaster sections moved together: svlachakis submitted a mempool lifecycle definition where pending identity is `(sender, nonce)`, replacements must bump both fee fields, and summed pending maximum costs for any payer cannot exceed its balance; he also submitted the transaction log set and unrolled-batch log semantics, and a concrete canonical paymaster implementation. AnkushinDaniil submitted two RFCs, a signature scheme registry and recognizing the canonical paymaster by stable identity. Blob support, direct evaluation of validation prefixes, the APPROVE gas cost and fee field bounds, submitted the day before, merged. zeam announced its EF grant has ended."
+}

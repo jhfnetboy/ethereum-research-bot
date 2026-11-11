@@ -1,0 +1,201 @@
+{
+  "date": "2026-07-17",
+  "keywords": [
+    "EIP-8141 恢复 EOA 代付",
+    "批准效果的回滚范围",
+    "EIP-8250 nonce 字段计费",
+    "EIP-8272 签名哈希同步与内存池加固",
+    "EIP-7997 去除不规则状态转换",
+    "Glamsterdam 扩容到至少 200M gas",
+    "Ethereal news #31"
+  ],
+  "summary": "lightclient 合并两项 EIP-8141 修改：恢复无代码 EOA 代付交易的能力，并把跳过的收据状态码改为 0x2。AnkushinDaniil 在实现 frame 交易家族时提交一批修正：明确批准效果是交易级、不会被 frame 回滚撤销，给 EIP-8250 的 `nonce_keys` 计费，同步 EIP-8272 的签名哈希，并加固 recent root 引用的内存池处理。soispoke 称 Glamsterdam 将把区块 gas 从 60M 提升到至少 200M。",
+  "items": [
+    {
+      "topic": "EIP-8141 frame 交易的代付与回滚语义",
+      "title": "EIP-8141：再次允许 EOA 作为 sponsor",
+      "note": "（lightclient）提交并合并。#11814 把默认代码中的签名限定为索引 0，本意是简化，却让无代码 EOA 无法代付；现在按 frame 的 scope 决定签名位置：执行和付款加执行在索引 0，单独付款在索引 1。",
+      "url": "https://github.com/ethereum/EIPs/pull/11954",
+      "date": "2026-07-17",
+      "title_en": "EIP-8141: allow EOA sponsor again",
+      "note_en": "(lightclient), submitted and merged. #11814 restricted the signature in the default code to index 0 as a simplification, which broke the ability of codeless EOAs to sponsor; now the expected signature index depends on the frame scope: index 0 for execution and pay-plus-execution, index 1 for pay only.",
+      "topic_en": "Sponsorship and revert semantics in EIP-8141 frame transactions"
+    },
+    {
+      "topic": "EIP-8141 frame 交易的代付与回滚语义",
+      "title": "EIP-8141：使用跳过的收据状态码",
+      "note": "（lightclient）提交并合并，状态码从 0x3 改为下一个可用值 0x2。",
+      "url": "https://github.com/ethereum/EIPs/pull/11953",
+      "date": "2026-07-17",
+      "title_en": "EIP-8141: use skipped receipt status code",
+      "note_en": "(lightclient), submitted and merged, changing the status code from 0x3 to the next available value, 0x2.",
+      "topic_en": "Sponsorship and revert semantics in EIP-8141 frame transactions"
+    },
+    {
+      "topic": "EIP-8141 frame 交易的代付与回滚语义",
+      "title": "EIP-8141：批准效果不被 frame 回滚或原子批次展开撤销",
+      "note": "（AnkushinDaniil）提交。`APPROVE(APPROVE_PAYMENT)` 会递增 nonce、设置 `payer` 并收取最大费用，规范没说原子批次失败时这些是否回滚：一个客户端把 `payer` 回滚为空导致交易无效，另一个视为交易级而有效，就会在同一区块上分歧。PR 明确这些效果是交易级的。",
+      "url": "https://github.com/ethereum/EIPs/pull/11955",
+      "date": "2026-07-17",
+      "title_en": "EIP-8141: approval effects are not reverted by frame revert or atomic-batch unroll",
+      "note_en": "(AnkushinDaniil), submitted. `APPROVE(APPROVE_PAYMENT)` increments the nonce, sets `payer` and collects the maximum cost, but the spec did not say whether these roll back when an atomic batch fails: one client rolling `payer` back to none would make the transaction invalid while another treating it as transaction-scoped would keep it valid, so they would disagree on the same block. The PR states these effects are transaction-scoped.",
+      "topic_en": "Sponsorship and revert semantics in EIP-8141 frame transactions"
+    },
+    {
+      "topic": "EIP-8141 frame 交易的代付与回滚语义",
+      "title": "说明 sponsor 还款的可逆性，并在示例 3 中把还款放入批次",
+      "note": "同一作者还提交 说明 sponsor 还款的可逆性，并在示例 3 中把还款放入批次：示例中 sponsor 在 frame 1 批准付款，ERC-20 还款（frame 2）与用户调用（frame 3）分开，非批次 frame 回滚只丢弃自身，sponsor 可能付了钱却没收到还款。",
+      "url": "https://github.com/ethereum/EIPs/pull/11956",
+      "date": "2026-07-17",
+      "title_en": "a note on sponsor repayment reversibility, batching the repayment in Example 3",
+      "note_en": "The same author also submitted a note on sponsor repayment reversibility, batching the repayment in Example 3: in the example the sponsor approves payment in frame 1, while the ERC-20 repayment (frame 2) and the sponsee's call (frame 3) are separate; a non-batched frame that reverts discards only itself, so the sponsor could pay without being repaid.",
+      "topic_en": "Sponsorship and revert semantics in EIP-8141 frame transactions"
+    },
+    {
+      "topic": "EIP-8250 与 EIP-8272 的计费和内存池",
+      "title": "EIP-8250：把 nonce_keys 和 nonce_seq 作为交易数据计费",
+      "note": "提交，最多 16 个 32 字节 key，约 512 字节此前不计费。将 KEYED_NONCE_FIRST_USE_GAS 排除在 MAX_VERIFY_GAS 之外 提交，指出首次使用 key 的 20000 gas 附加费与内存池验证 gas 上限冲突。",
+      "url": "https://github.com/ethereum/EIPs/pull/11958",
+      "date": "2026-07-17",
+      "title_en": "EIP-8250: price nonce_keys and nonce_seq as transaction data",
+      "note_en": "Submitted; up to 16 32-byte keys, about 512 bytes, were previously free. Exclude KEYED_NONCE_FIRST_USE_GAS from MAX_VERIFY_GAS accounting, submitted, pointing out that the 20000 gas first-use surcharge collides with the mempool validation gas cap.",
+      "topic_en": "Charging and mempool in EIP-8250 and EIP-8272"
+    },
+    {
+      "topic": "EIP-8250 与 EIP-8272 的计费和内存池",
+      "title": "将 KEYED_NONCE_FIRST_USE_GAS 排除在 MAX_VERIFY_GAS 之外",
+      "note": "EIP-8250：把 nonce_keys 和 nonce_seq 作为交易数据计费 提交，最多 16 个 32 字节 key，约 512 字节此前不计费。将 KEYED_NONCE_FIRST_USE_GAS 排除在 MAX_VERIFY_GAS 之外 提交，指出首次使用 key 的 20000 gas 附加费与内存池验证 gas 上限冲突。",
+      "url": "https://github.com/ethereum/EIPs/pull/11957",
+      "date": "2026-07-17",
+      "title_en": "Exclude KEYED_NONCE_FIRST_USE_GAS from MAX_VERIFY_GAS accounting",
+      "note_en": "EIP-8250: price nonce_keys and nonce_seq as transaction data, submitted; up to 16 32-byte keys, about 512 bytes, were previously free. Exclude KEYED_NONCE_FIRST_USE_GAS from MAX_VERIFY_GAS accounting, submitted, pointing out that the 20000 gas first-use surcharge collides with the mempool validation gas cap.",
+      "topic_en": "Charging and mempool in EIP-8250 and EIP-8272"
+    },
+    {
+      "topic": "EIP-8250 与 EIP-8272 的计费和内存池",
+      "title": "EIP-8272：恢复 payload 中的 signatures 字段并在 compute_sig_hash 中省略签名字节",
+      "note": "提交，否则客户端可能在签名哈希上不一致；加强 recent root 引用的公共内存池处理 提交，建议过期引用 SHOULD 驱逐、临近过期不接纳、限制共享同一引用的待处理交易数量，均为节点策略而非共识修改。",
+      "url": "https://github.com/ethereum/EIPs/pull/11959",
+      "date": "2026-07-17",
+      "title_en": "EIP-8272: restore the signatures field in the payload and elide signature bytes in compute_sig_hash",
+      "note_en": "Submitted, since otherwise clients could disagree on the signature hash; strengthen public-mempool handling of recent root references, submitted, recommending that expired references SHOULD be evicted, that near-expiry ones not be admitted, and that the number of pending transactions sharing a reference be bounded; all are node policy, not consensus changes.",
+      "topic_en": "Charging and mempool in EIP-8250 and EIP-8272"
+    },
+    {
+      "topic": "EIP-8250 与 EIP-8272 的计费和内存池",
+      "title": "加强 recent root 引用的公共内存池处理",
+      "note": "EIP-8272：恢复 payload 中的 signatures 字段并在 compute_sig_hash 中省略签名字节 提交，否则客户端可能在签名哈希上不一致；加强 recent root 引用的公共内存池处理 提交，建议过期引用 SHOULD 驱逐、临近过期不接纳、限制共享同一引用的待处理交易数量，均为节点策略而非共识修改。",
+      "url": "https://github.com/ethereum/EIPs/pull/11961",
+      "date": "2026-07-17",
+      "title_en": "strengthen public-mempool handling of recent root references",
+      "note_en": "EIP-8272: restore the signatures field in the payload and elide signature bytes in compute_sig_hash, submitted, since otherwise clients could disagree on the signature hash; strengthen public-mempool handling of recent root references, submitted, recommending that expired references SHOULD be evicted, that near-expiry ones not be admitted, and that the number of pending transactions sharing a reference be bounded; all are node policy, not consensus changes.",
+      "topic_en": "Charging and mempool in EIP-8250 and EIP-8272"
+    },
+    {
+      "topic": "Glamsterdam 与扩容",
+      "title": "soispoke：便宜且不可阻止的隐私交易",
+      "note": "18:08，Glamsterdam 将把以太坊从今天的 60M gas/区块扩展到至少 200M/区块，超过 3 倍。",
+      "url": "https://x.com/soispoke/status/2078074275458691246",
+      "date": "2026-07-17",
+      "title_en": "soispoke: cheap, unstoppable private transactions",
+      "note_en": "18:08: Glamsterdam will scale Ethereum from 60M gas per block today to at least 200M per block, more than 3x.",
+      "topic_en": "Glamsterdam and scaling"
+    },
+    {
+      "topic": "Glamsterdam 与扩容",
+      "title": "EIP-7997：去掉不规则状态转换和状态查找",
+      "note": "（marioevz）合并，原措辞导致部分客户端在分叉边界硬编码状态查找，使执行 witness 多出这次查找。",
+      "url": "https://github.com/ethereum/EIPs/pull/11952",
+      "date": "2026-07-17",
+      "title_en": "EIP-7997: remove the irregular state transition and state lookup",
+      "note_en": "(marioevz), merged; the old wording led some clients to hard-code a state lookup at the fork boundary, which added that lookup to the execution witness.",
+      "topic_en": "Glamsterdam and scaling"
+    },
+    {
+      "topic": "Glamsterdam 与扩容",
+      "title": "EIP-8341 论坛讨论",
+      "note": "20:19。",
+      "url": "https://ethereum-magicians.org/t/eip-8341-partial-execution-payload-commitments/29030",
+      "date": "2026-07-17",
+      "title_en": "EIP-8341 forum discussion",
+      "note_en": "20:19.",
+      "topic_en": "Glamsterdam and scaling"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news weekly #31",
+      "note": "15:09：devnet-7 开放应用测试、EthSystems 发布、Devcon 门票。Ethereal news mini #1 06:08 列出点击最多的链接，包括 Vitalik 更新的 Strawmap 解读和 EF Protocol 解散。",
+      "url": "https://x.com/EtherealnewsHQ/status/2078029348817498314",
+      "date": "2026-07-17",
+      "title_en": "Ethereal news weekly #31",
+      "note_en": "15:09: devnet-7 open for app testing, EthSystems launched, Devcon tickets. Ethereal news mini #1, 06:08, listed the most clicked links, including Vitalik's updated Strawmap explainer and EF Protocol being dissolved.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news mini #1",
+      "note": "Ethereal news weekly #31 15:09：devnet-7 开放应用测试、EthSystems 发布、Devcon 门票。Ethereal news mini #1 06:08 列出点击最多的链接，包括 Vitalik 更新的 Strawmap 解读和 EF Protocol 解散。",
+      "url": "https://x.com/EtherealnewsHQ/status/2077893238757925119",
+      "date": "2026-07-17",
+      "title_en": "Ethereal news mini #1",
+      "note_en": "Ethereal news weekly #31, 15:09: devnet-7 open for app testing, EthSystems launched, Devcon tickets. Ethereal news mini #1, 06:08, listed the most clicked links, including Vitalik's updated Strawmap explainer and EF Protocol being dissolved.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：后量子安全正成为基线要求，ZK-STARK 和原生 AA 都重要",
+      "note": "16:12。",
+      "url": "https://x.com/EliBenSasson/status/2078045194805514610",
+      "date": "2026-07-17",
+      "title_en": "Eli Ben-Sasson: post-quantum security is becoming a baseline requirement, and ZK-STARKs and native AA both matter",
+      "note_en": "16:12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8081：加入 EIP-8304 为 PFI",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11933",
+      "date": "2026-07-17",
+      "title_en": "EIP-8081: add EIP-8304 as PFI",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：提出“硬件钱包加 Safe 多签”来解决签名问题的人，是没经常签高额交易的人",
+      "note": "06:52。",
+      "url": "https://x.com/tayvano_/status/2077904150415986921",
+      "date": "2026-07-17",
+      "title_en": "tayvano: people proposing \"hardware wallet plus Safe multisig\" as the answer to signing are those who do not sign high-stakes transactions regularly",
+      "note_en": "06:52.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "raulvk：Wasm 被严重低估，适合承载有限状态机和 actor 模型等逻辑",
+      "note": "20:54。",
+      "url": "https://x.com/raulvk/status/2078116006401028327",
+      "date": "2026-07-17",
+      "title_en": "raulvk: Wasm is massively underrated, a good substrate for finite state machines and actor-model logic",
+      "note_en": "20:54.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11954",
+    "credit": "GitHub, ethereum/EIPs PR #11954",
+    "local_path": "assets/2026-07-17.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11954"
+  },
+  "keywords_en": [
+    "EIP-8141 restores EOA sponsorship",
+    "revert scope of approval effects",
+    "EIP-8250 nonce field charging",
+    "EIP-8272 signature hash sync and mempool hardening",
+    "EIP-7997 removes the irregular state transition",
+    "Glamsterdam scales to at least 200M gas",
+    "Ethereal news #31"
+  ],
+  "summary_en": "lightclient merged two EIP-8141 changes: codeless EOAs can sponsor transactions again, and the skipped receipt status code becomes 0x2. While implementing the frame transaction family, AnkushinDaniil submitted a batch of fixes: approval effects are transaction-scoped and not undone by frame reverts, EIP-8250's `nonce_keys` get charged, EIP-8272's signature hash is synced, and mempool handling of recent root references is hardened. soispoke said Glamsterdam will raise block gas from 60M to at least 200M."
+}

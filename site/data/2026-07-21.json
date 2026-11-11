@@ -1,0 +1,223 @@
+{
+  "date": "2026-07-21",
+  "keywords": [
+    "EIP-8141 对每个 ARBITRARY 签名条目收费",
+    "批准效果交易级语义合并",
+    "frame 交易收据编码合并",
+    "EIP-8268 列为 PFI",
+    "ERC-1613 Gas Station Network 回到 Draft",
+    "Aztec Alpha V5",
+    "avnu 隐私兑换",
+    "Vitalik 谈面向 Lean 的可读语言"
+  ],
+  "summary": "lightclient 提交并合并 EIP-8141 修改，对所有签名在 calldata 费用之外每条加收 100 gas，防止大量空 ARBITRARY 签名条目少付费，作为 MAX_SIGNATURES 上限方案的替代。此前提交的批准效果交易级语义和 frame 交易收据编码也合并。forshtat 把 ERC-1613 Gas Station Network 从 Stagnant 移回 Draft，理由是 Polygon 上仍有 Polymarket 等在用。Aztec Alpha V5 把客户端证明降到消费级笔记本约 2.5 秒。",
+  "items": [
+    {
+      "topic": "EIP-8141 签名计费与语义",
+      "title": "EIP-8141：对每个任意签名条目收费",
+      "note": "（lightclient）提交并合并，作为 #11935 的替代：为避免大量空的 `ARBITRARY` 签名条目没有被公平计费，对所有签名在常规 calldata 费用之外每条加收固定 100 gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/11976",
+      "date": "2026-07-21",
+      "title_en": "EIP-8141: charge for each arbitrary sig entry",
+      "note_en": "(lightclient), submitted and merged as an alternative to #11935: to keep large numbers of empty `ARBITRARY` signature entries from being under-charged, a flat 100 gas per entry is added on top of regular calldata costs for all signatures.",
+      "topic_en": "EIP-8141 signature charging and semantics"
+    },
+    {
+      "topic": "EIP-8141 签名计费与语义",
+      "title": "EIP-8141：批准效果不被 frame 回滚或原子批次展开撤销",
+      "note": "合并，定义 frame 交易收据的 Receipts 消息编码 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11955",
+      "date": "2026-07-21",
+      "title_en": "EIP-8141: approval effects are not reverted by frame revert or atomic-batch unroll",
+      "note_en": "Merged; define the Receipts message encoding for frame transaction receipts, merged.",
+      "topic_en": "EIP-8141 signature charging and semantics"
+    },
+    {
+      "topic": "EIP-8141 签名计费与语义",
+      "title": "定义 frame 交易收据的 Receipts 消息编码",
+      "note": "EIP-8141：批准效果不被 frame 回滚或原子批次展开撤销 合并，定义 frame 交易收据的 Receipts 消息编码 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11942",
+      "date": "2026-07-21",
+      "title_en": "define the Receipts message encoding for frame transaction receipts",
+      "note_en": "EIP-8141: approval effects are not reverted by frame revert or atomic-batch unroll, merged; define the Receipts message encoding for frame transaction receipts, merged.",
+      "topic_en": "EIP-8141 signature charging and semantics"
+    },
+    {
+      "topic": "代付与账户相关 ERC",
+      "title": "ERC-1613：移至 Draft",
+      "note": "（forshtat）合并。他在清理旧的 Stagnant ERC，但认为 GSN 虽多年未开发，仍在包括 Polygon 在内的链上使用，Polymarket 是用户之一，撤回没有意义。论坛讨论 23:40。",
+      "url": "https://github.com/ethereum/ERCs/pull/1802",
+      "date": "2026-07-21",
+      "title_en": "ERC-1613: move to Draft",
+      "note_en": "(forshtat), merged. He is withdrawing old stagnant ERCs, but argues that although GSN has not been developed for years, it is still used on chains including Polygon, where Polymarket is among its users, so withdrawing it makes no sense. Forum discussion, 23:40.",
+      "topic_en": "Sponsorship and account-related ERCs"
+    },
+    {
+      "topic": "代付与账户相关 ERC",
+      "title": "论坛讨论",
+      "note": "ERC-1613：移至 Draft（forshtat）合并。他在清理旧的 Stagnant ERC，但认为 GSN 虽多年未开发，仍在包括 Polygon 在内的链上使用，Polymarket 是用户之一，撤回没有意义。论坛讨论 23:40。",
+      "url": "https://ethereum-magicians.org/t/erc-1613-gas-station-network/29051",
+      "date": "2026-07-21",
+      "title_en": "Forum discussion",
+      "note_en": "ERC-1613: move to Draft (forshtat), merged. He is withdrawing old stagnant ERCs, but argues that although GSN has not been developed for years, it is still used on chains including Polygon, where Polymarket is among its users, so withdrawing it makes no sense. Forum discussion, 23:40.",
+      "topic_en": "Sponsorship and account-related ERCs"
+    },
+    {
+      "topic": "代付与账户相关 ERC",
+      "title": "ERC-7730：引入 schema 语义化版本",
+      "note": "（forshtat）合并，为钱包清晰签名描述文件建立显式版本流程。",
+      "url": "https://github.com/ethereum/ERCs/pull/1838",
+      "date": "2026-07-21",
+      "title_en": "ERC-7730: introduce schema semantic versioning",
+      "note_en": "(forshtat), merged, setting an explicit versioning process for wallet clear-signing descriptors.",
+      "topic_en": "Sponsorship and account-related ERCs"
+    },
+    {
+      "topic": "代付与账户相关 ERC",
+      "title": "ERC-8343：合约停用",
+      "note": "（rya-sge）提交，定义永久停用代币合约并在链上暴露该终态的最小接口，论坛 22:09。",
+      "url": "https://github.com/ethereum/ERCs/pull/1900",
+      "date": "2026-07-21",
+      "title_en": "ERC-8343: Contract Deactivation",
+      "note_en": "(rya-sge), submitted, a minimal interface for permanently deactivating a token contract and exposing that terminal state onchain; forum, 22:09.",
+      "topic_en": "Sponsorship and account-related ERCs"
+    },
+    {
+      "topic": "代付与账户相关 ERC",
+      "title": "论坛",
+      "note": "ERC-8343：合约停用（rya-sge）提交，定义永久停用代币合约并在链上暴露该终态的最小接口，论坛 22:09。",
+      "url": "https://ethereum-magicians.org/t/erc-8343-contract-deactivation/29049",
+      "date": "2026-07-21",
+      "title_en": "forum",
+      "note_en": "ERC-8343: Contract Deactivation (rya-sge), submitted, a minimal interface for permanently deactivating a token contract and exposing that terminal state onchain; forum, 22:09.",
+      "topic_en": "Sponsorship and account-related ERCs"
+    },
+    {
+      "topic": "Hegotá 候选与隐私 L2",
+      "title": "EIP-8081：EIP-8268 列为 PFI",
+      "note": "（nixorokish）提交并合并，因 ACDE #241 时间太短未能介绍，将在 ACDE #242 介绍；提议纳入 EIP-2488 与 EIP-7645 合并，作为消除技术债的小改动。",
+      "url": "https://github.com/ethereum/EIPs/pull/11977",
+      "date": "2026-07-21",
+      "title_en": "EIP-8081: list EIP-8268 as PFI",
+      "note_en": "(nixorokish), submitted and merged; the champion could not present it on the very short ACDE #241 and will do so on ACDE #242. Propose EIP-2488 and EIP-7645 for inclusion, merged, as minor changes to remove technical debt.",
+      "topic_en": "Hegotá candidates and privacy L2s"
+    },
+    {
+      "topic": "Hegotá 候选与隐私 L2",
+      "title": "提议纳入 EIP-2488 与 EIP-7645",
+      "note": "EIP-8081：EIP-8268 列为 PFI（nixorokish）提交并合并，因 ACDE #241 时间太短未能介绍，将在 ACDE #242 介绍；提议纳入 EIP-2488 与 EIP-7645 合并，作为消除技术债的小改动。",
+      "url": "https://github.com/ethereum/EIPs/pull/11793",
+      "date": "2026-07-21",
+      "title_en": "Propose EIP-2488 and EIP-7645 for inclusion",
+      "note_en": "EIP-8081: list EIP-8268 as PFI (nixorokish), submitted and merged; the champion could not present it on the very short ACDE #241 and will do so on ACDE #242. Propose EIP-2488 and EIP-7645 for inclusion, merged, as minor changes to remove technical debt.",
+      "topic_en": "Hegotá candidates and privacy L2s"
+    },
+    {
+      "topic": "Hegotá 候选与隐私 L2",
+      "title": "EIP-8297 更新",
+      "note": "（kevaundray）提交：改用可变长度 key，加入路径压缩，取消每个 stem 固定 256 值的概念，叶节点包含完整 key 和 value。",
+      "url": "https://github.com/ethereum/EIPs/pull/11978",
+      "date": "2026-07-21",
+      "title_en": "EIP-8297 update",
+      "note_en": "(kevaundray), submitted: variable-length keys, path compression, no fixed 256 values per stem, and leaf nodes holding the full key and value.",
+      "topic_en": "Hegotá candidates and privacy L2s"
+    },
+    {
+      "topic": "Hegotá 候选与隐私 L2",
+      "title": "Aztec：Alpha V5 的密码学优化把客户端证明降到消费级笔记本约 2.5 秒",
+      "note": "20:39。StarkWare：avnu 上线所有资产的隐私兑换 16:08，不暴露余额和交易金额，免 gas 执行，基于 STRK20。",
+      "url": "https://x.com/aztecnetwork/status/2079562016784867577",
+      "date": "2026-07-21",
+      "title_en": "Aztec: Alpha V5's cryptographic optimizations bring client-side proving down to about 2.5 seconds on a consumer laptop",
+      "note_en": "20:39. StarkWare: private swaps for all assets are live on avnu, 16:08, without revealing balances or trade amounts, with gasless execution, powered by STRK20s.",
+      "topic_en": "Hegotá candidates and privacy L2s"
+    },
+    {
+      "topic": "Hegotá 候选与隐私 L2",
+      "title": "StarkWare：avnu 上线所有资产的隐私兑换",
+      "note": "Aztec：Alpha V5 的密码学优化把客户端证明降到消费级笔记本约 2.5 秒 20:39。StarkWare：avnu 上线所有资产的隐私兑换 16:08，不暴露余额和交易金额，免 gas 执行，基于 STRK20。",
+      "url": "https://x.com/StarkWareLtd/status/2079493825018437696",
+      "date": "2026-07-21",
+      "title_en": "StarkWare: private swaps for all assets are live on avnu",
+      "note_en": "Aztec: Alpha V5's cryptographic optimizations bring client-side proving down to about 2.5 seconds on a consumer laptop, 20:39. StarkWare: private swaps for all assets are live on avnu, 16:08, without revealing balances or trade amounts, with gasless execution, powered by STRK20s.",
+      "topic_en": "Hegotá candidates and privacy L2s"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik：值得做一种编译到 Lean（或 HOL）的高级语言，专门让人类易读定义和定理",
+      "note": "22:01。",
+      "url": "https://x.com/VitalikButerin/status/2079582483243245850",
+      "date": "2026-07-21",
+      "title_en": "Vitalik: a high-level language that compiles to Lean (or HOL) and makes definitions and theorems as readable as possible for humans seems worth building",
+      "note_en": "22:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trail of Bits：审计 PyTorch 的 ExecuTorch，一个月报告 42 个问题，26 个来自 AI 辅助流程",
+      "note": "18:02。",
+      "url": "https://x.com/trailofbits/status/2079522279835283936",
+      "date": "2026-07-21",
+      "title_en": "Trail of Bits: audited PyTorch's ExecuTorch, reporting 42 issues in a month, 26 from AI-assisted workflows",
+      "note_en": "18:02.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #242 议程",
+      "note": "03:05；FCR #12 议程 23:30。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-242-july-30-2026/29043",
+      "date": "2026-07-21",
+      "title_en": "ACDE #242 agenda",
+      "note_en": "03:05; FCR #12 agenda, 23:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #12 议程",
+      "note": "ACDE #242 议程 03:05；FCR #12 议程 23:30。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-12-august-4-2026/29050",
+      "date": "2026-07-21",
+      "title_en": "FCR #12 agenda",
+      "note_en": "ACDE #242 agenda, 03:05; FCR #12 agenda, 23:30.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8327",
+      "note": "ERC-8325 至 ERC-8330 移至 Review 合并，例如 ERC-8327。",
+      "url": "https://github.com/ethereum/ERCs/pull/1892",
+      "date": "2026-07-21",
+      "title_en": "ERC-8327",
+      "note_en": "ERC-8325 through ERC-8330 moves to Review were merged, for example ERC-8327.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethresear.ch：跨域状态保持的机械化函子塔",
+      "note": "17:36，给出两个机器检验的定理。",
+      "url": "https://ethresear.ch/t/a-mechanized-functor-tower-for-cross-domain-state-preservation/25491",
+      "date": "2026-07-21",
+      "title_en": "ethresear.ch: a mechanized functor tower for cross-domain state preservation",
+      "note_en": "17:36, with two machine-checked theorems.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11976",
+    "credit": "GitHub, ethereum/EIPs PR #11976",
+    "local_path": "assets/2026-07-21.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11976"
+  },
+  "keywords_en": [
+    "EIP-8141 charges each ARBITRARY signature entry",
+    "transaction-scoped approval effects merged",
+    "frame transaction receipt encoding merged",
+    "EIP-8268 listed as PFI",
+    "ERC-1613 Gas Station Network back to Draft",
+    "Aztec Alpha V5",
+    "avnu private swaps",
+    "Vitalik on a readable language for Lean"
+  ],
+  "summary_en": "lightclient submitted and merged an EIP-8141 change that adds a flat 100 gas per signature on top of calldata costs, so large numbers of empty ARBITRARY signature entries cannot underpay; it is an alternative to the MAX_SIGNATURES cap. The previously submitted transaction-scoped approval semantics and frame transaction receipt encoding were also merged. forshtat moved ERC-1613 Gas Station Network from Stagnant back to Draft because it is still used on Polygon, including by Polymarket. Aztec Alpha V5 brings client-side proving down to about 2.5 seconds on a consumer laptop."
+}

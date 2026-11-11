@@ -1,0 +1,95 @@
+{
+  "date": "2026-07-25",
+  "keywords": [
+    "EIP-8333 checkpoint 对齐 epoch 边界区块",
+    "kohaku-cli 一个 UserOp 解除多个 Tornado 票据",
+    "Solidus 形式化验证编译器挑战",
+    "ERC-8349 多 facet 代理"
+  ],
+  "summary": "EIP-8333 合并为 Draft：epoch N 的 FFG checkpoint 从 N 第一个 slot 的区块改为 N 之前的最后一个区块，消除迟到区块分裂首个委员会投票的竞态，并修正“epoch N 最终确定其实还多一个区块”的差一问题。kassandraETH 改进 kohaku-cli，现在可在一个 UserOp 中解除多个 Tornado 票据的屏蔽。gakonst 发布 Solidus 形式化验证 EVM 编译器的挑战。",
+  "items": [
+    {
+      "topic": "EIP-8333 checkpoint 对齐",
+      "title": "新 EIP：Align Checkpoint with Epoch Boundary Block",
+      "note": "（wemeetagain）合并为 Draft，即 EIP-8333。checkpoint 所在 epoch 不变，只是根改变，通过新的 `get_checkpoint_root` 用于 attestation 处理、justification、fork choice 和验证者指南。目前 target 区块与首个委员会投票在同一 slot，迟到的区块会分裂投票，每个 epoch 都有可测的损失；边界区块在 epoch 开始前已知，竞态随之消失。",
+      "url": "https://github.com/ethereum/EIPs/pull/11871",
+      "date": "2026-07-25",
+      "title_en": "New EIP: Align Checkpoint with Epoch Boundary Block",
+      "note_en": "(wemeetagain), merged as a Draft, EIP-8333. Checkpoint epochs stay the same and only the root changes, through a new `get_checkpoint_root` helper used in attestation processing, justification, fork choice and the validator guide. Today the target block is proposed in the same slot the first committee votes, so a late block splits their votes, a measurable loss every epoch; the boundary block is known before the epoch starts, so the race disappears.",
+      "topic_en": "EIP-8333 checkpoint alignment"
+    },
+    {
+      "topic": "隐私钱包与安全工具",
+      "title": "kassandraETH：本周末改进 kohaku-cli",
+      "note": "18:07，可在一个 UserOp 中解除多个 Tornado 票据的屏蔽，Tornado 提款同步尾调用的 gas 估算明显改善，并在写实用的用户指南 wiki。",
+      "url": "https://x.com/kassandraETH/status/2080973318543286781",
+      "date": "2026-07-25",
+      "title_en": "kassandraETH: improving kohaku-cli this weekend",
+      "note_en": "18:07: it can now unshield multiple Tornado notes in one UserOp, gas estimation for sync tail-calls of Tornado withdrawals is much improved, and a practical user guide wiki is in progress.",
+      "topic_en": "Privacy wallets and security tooling"
+    },
+    {
+      "topic": "隐私钱包与安全工具",
+      "title": "gakonst：AI 之后安全在变化，Solidus 形式化验证 EVM 编译器的挑战",
+      "note": "00:12；据 Ethereal news #33，Solidus 是用 Lean 写的 Solidity 编译器，处于 pre-alpha。",
+      "url": "https://x.com/gakonst/status/2080702659598889277",
+      "date": "2026-07-25",
+      "title_en": "gakonst: security is changing after AI, with challenges for Solidus, a formally verified EVM compiler",
+      "note_en": "00:12; per Ethereal news #33, Solidus is a Solidity compiler written in Lean and is pre-alpha.",
+      "topic_en": "Privacy wallets and security tooling"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：基于索引的多 facet 代理",
+      "note": "（Arhemius）提交，据 Ethereal news #33 编号 ERC-8349。",
+      "url": "https://github.com/ethereum/ERCs/pull/1909",
+      "date": "2026-07-25",
+      "title_en": "ERC: Index-Based Multi-Facet Proxy",
+      "note_en": "(Arhemius), submitted; per Ethereal news #33 it is ERC-8349.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7979：性能测量与参考实现",
+      "note": "（gcolvin）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12015",
+      "date": "2026-07-25",
+      "title_en": "EIP-7979: performance measurements and reference implementation",
+      "note_en": "(gcolvin), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：在 Reddit 推荐注重隐私的加密税务软件 rotki 后再次被封",
+      "note": "21:26。",
+      "url": "https://x.com/LefterisJP/status/2081023216718410228",
+      "date": "2026-07-25",
+      "title_en": "LefterisJP: banned again on Reddit after recommending rotki, a privacy-respecting crypto tax tool",
+      "note_en": "21:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：Starknet 拥有最完整、最易用的隐私生态",
+      "note": "16:28。",
+      "url": "https://x.com/StarkWareLtd/status/2080948169643597924",
+      "date": "2026-07-25",
+      "title_en": "StarkWare: Starknet has the most complete and user-friendly privacy ecosystem",
+      "note_en": "16:28.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11871",
+    "credit": "GitHub, ethereum/EIPs PR #11871",
+    "local_path": "assets/2026-07-25.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11871"
+  },
+  "keywords_en": [
+    "EIP-8333 aligns checkpoint with epoch boundary block",
+    "kohaku-cli unshields multiple Tornado notes in one UserOp",
+    "Solidus formally verified compiler challenges",
+    "ERC-8349 multi-facet proxy"
+  ],
+  "summary_en": "EIP-8333 merged as a Draft: epoch N's FFG checkpoint moves from the block at N's first slot to the last block before N, removing the race where a late block splits the first committee's votes and fixing the off-by-one where \"epoch N finalized\" really meant one extra block. kassandraETH improved kohaku-cli, which can now unshield multiple Tornado notes in one UserOp. gakonst published challenges for Solidus, a formally verified EVM compiler."
+}

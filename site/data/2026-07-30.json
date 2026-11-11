@@ -1,0 +1,293 @@
+{
+  "date": "2026-07-30",
+  "keywords": [
+    "ACDE #242",
+    "Platåberget 短期公共测试网",
+    "北极熊当选 Glamsterdam 吉祥物",
+    "EIP-7819 SETDELEGATE",
+    "EIP-7906 状态差异断言",
+    "规范 paymaster 字节码",
+    "EIP-8250 keyed 内存池并发",
+    "EIP-7732 等移至 Review"
+  ],
+  "summary": "ACDE #242 据 Ethereal news #33：Platåberget 是短期无许可公共测试网，目标 8 月初，使用基于基准测试更新的重定价数值并仅用 discv5；Hegotá 新提案包括 Etan Kissling 的 EIP-8115、8116、7807，Derek Chiang 的 EIP-7819 SETDELEGATE，forshtat 的 EIP-7906，以及 EIP-7668、8200、7666；北极熊当选吉祥物。当天 EIPs 仓库大量合并：EIP-7732（ePBS）、8045、8061、2780 移至 Review，8115、8116、7807、7906 进入 Hegotá 候选列表。Marchhill 提交 EIP-8141 规范 paymaster 的 355 字节参考字节码。",
+  "items": [
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-8115",
+      "note": "合并进 EIP-8081：EIP-8115、EIP-8116、EIP-7807、EIP-7906 列为 PFI。另有 EIP-7668 列为 PFI（jochem-brouwer）和 EIP-8333 提议纳入（wemeetagain）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11911",
+      "date": "2026-07-30",
+      "title_en": "EIP-8115",
+      "note_en": "Merged into EIP-8081: EIP-8115, EIP-8116, EIP-7807, and EIP-7906 as PFI. Also submitted: EIP-7668 as PFI (jochem-brouwer) and proposing EIP-8333 for inclusion (wemeetagain).",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-8116",
+      "note": "合并进 EIP-8081：EIP-8115、EIP-8116、EIP-7807、EIP-7906 列为 PFI。另有 EIP-7668 列为 PFI（jochem-brouwer）和 EIP-8333 提议纳入（wemeetagain）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11912",
+      "date": "2026-07-30",
+      "title_en": "EIP-8116",
+      "note_en": "Merged into EIP-8081: EIP-8115, EIP-8116, EIP-7807, and EIP-7906 as PFI. Also submitted: EIP-7668 as PFI (jochem-brouwer) and proposing EIP-8333 for inclusion (wemeetagain).",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-7807",
+      "note": "合并进 EIP-8081：EIP-8115、EIP-8116、EIP-7807、EIP-7906 列为 PFI。另有 EIP-7668 列为 PFI（jochem-brouwer）和 EIP-8333 提议纳入（wemeetagain）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11913",
+      "date": "2026-07-30",
+      "title_en": "EIP-7807",
+      "note_en": "Merged into EIP-8081: EIP-8115, EIP-8116, EIP-7807, and EIP-7906 as PFI. Also submitted: EIP-7668 as PFI (jochem-brouwer) and proposing EIP-8333 for inclusion (wemeetagain).",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-7906 列为 PFI",
+      "note": "合并进 EIP-8081：EIP-8115、EIP-8116、EIP-7807、EIP-7906 列为 PFI。另有 EIP-7668 列为 PFI（jochem-brouwer）和 EIP-8333 提议纳入（wemeetagain）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12013",
+      "date": "2026-07-30",
+      "title_en": "EIP-7906 as PFI",
+      "note_en": "Merged into EIP-8081: EIP-8115, EIP-8116, EIP-7807, and EIP-7906 as PFI. Also submitted: EIP-7668 as PFI (jochem-brouwer) and proposing EIP-8333 for inclusion (wemeetagain).",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-7668 列为 PFI",
+      "note": "合并进 EIP-8081：EIP-8115、EIP-8116、EIP-7807、EIP-7906 列为 PFI。另有 EIP-7668 列为 PFI（jochem-brouwer）和 EIP-8333 提议纳入（wemeetagain）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12046",
+      "date": "2026-07-30",
+      "title_en": "EIP-7668 as PFI",
+      "note_en": "Merged into EIP-8081: EIP-8115, EIP-8116, EIP-7807, and EIP-7906 as PFI. Also submitted: EIP-7668 as PFI (jochem-brouwer) and proposing EIP-8333 for inclusion (wemeetagain).",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-8333 提议纳入",
+      "note": "合并进 EIP-8081：EIP-8115、EIP-8116、EIP-7807、EIP-7906 列为 PFI。另有 EIP-7668 列为 PFI（jochem-brouwer）和 EIP-8333 提议纳入（wemeetagain）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12044",
+      "date": "2026-07-30",
+      "title_en": "proposing EIP-8333 for inclusion",
+      "note_en": "Merged into EIP-8081: EIP-8115, EIP-8116, EIP-7807, and EIP-7906 as PFI. Also submitted: EIP-7668 as PFI (jochem-brouwer) and proposing EIP-8333 for inclusion (wemeetagain).",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-7906：改写 deploy frame 副作用的安全考虑",
+      "note": "（forshtat）提交并合并；EIP-8200：移除 BLS map 预编译（kevaundray）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12030",
+      "date": "2026-07-30",
+      "title_en": "EIP-7906: rephrase the deploy frame side effects security consideration",
+      "note_en": "(forshtat), submitted and merged; EIP-8200: remove BLS map precompiles (kevaundray), submitted and merged.",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "ACDE #242 与 Hegotá 候选",
+      "title": "EIP-8200：移除 BLS map 预编译",
+      "note": "EIP-7906：改写 deploy frame 副作用的安全考虑（forshtat）提交并合并；EIP-8200：移除 BLS map 预编译（kevaundray）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12031",
+      "date": "2026-07-30",
+      "title_en": "EIP-8200: remove BLS map precompiles",
+      "note_en": "EIP-7906: rephrase the deploy frame side effects security consideration (forshtat), submitted and merged; EIP-8200: remove BLS map precompiles (kevaundray), submitted and merged.",
+      "topic_en": "ACDE #242 and Hegotá candidates"
+    },
+    {
+      "topic": "EIP-8141 paymaster 与 8250 并发",
+      "title": "EIP-8141：规范 paymaster 的参考字节码",
+      "note": "（Marchhill）提交，延续 #12012：355 字节运行时实现调度、付款验证、存款和四项带时间锁的管理操作（提款/轮换发起、取消、完成），并给出按分叉识别的 keccak256 code hash。",
+      "url": "https://github.com/ethereum/EIPs/pull/12041",
+      "date": "2026-07-30",
+      "title_en": "EIP-8141: assembled canonical paymaster reference bytecode",
+      "note_en": "(Marchhill), submitted, continuing #12012: a 355-byte runtime implementing dispatch, payment validation, deposit and four timelocked admin operations (withdrawal/rotation initiate, cancel, finalize), plus a keccak256 code hash as the per-fork recognition anchor.",
+      "topic_en": "EIP-8141 paymaster and 8250 concurrency"
+    },
+    {
+      "topic": "EIP-8141 paymaster 与 8250 并发",
+      "title": "EIP-8141：SIGPARAM 复制操作数顺序与 CALLDATACOPY 对齐",
+      "note": "（Marchhill）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12042",
+      "date": "2026-07-30",
+      "title_en": "EIP-8141: align SIGPARAM copy operand order with CALLDATACOPY",
+      "note_en": "(Marchhill), submitted.",
+      "topic_en": "EIP-8141 paymaster and 8250 concurrency"
+    },
+    {
+      "topic": "EIP-8141 paymaster 与 8250 并发",
+      "title": "EIP-8250：定义 keyed 内存池并发",
+      "note": "（soispoke）提交：8250 给 frame 交易独立的重放域，但内存池仍沿用 8141 每个 sender 只能有一笔待处理交易的限制；PR 定义一个窄的可选例外，key 0 和验证依赖可变的交易仍受该限制。",
+      "url": "https://github.com/ethereum/EIPs/pull/12039",
+      "date": "2026-07-30",
+      "title_en": "EIP-8250: define keyed mempool concurrency",
+      "note_en": "(soispoke), submitted: 8250 gives frame transactions independent replay domains, but the mempool kept 8141's limit of one pending frame transaction per sender; the PR defines a narrow optional exception, with key zero and transactions with mutable validation dependencies still under the sender limit.",
+      "topic_en": "EIP-8141 paymaster and 8250 concurrency"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-7732（ePBS）",
+      "note": "移至 Review 合并：EIP-7732（ePBS）、EIP-8045、EIP-8061，以及 EIP-2780（misilva73，提交并合并）；poojaranjan 另提交 EIP-7975、8070、8136、8159、8189 移至 Review，例如 EIP-8136。",
+      "url": "https://github.com/ethereum/EIPs/pull/11873",
+      "date": "2026-07-30",
+      "title_en": "EIP-7732 (ePBS)",
+      "note_en": "Moves to Review merged: EIP-7732 (ePBS), EIP-8045, EIP-8061, and EIP-2780 (misilva73, submitted and merged); poojaranjan also submitted moves to Review for EIP-7975, 8070, 8136, 8159 and 8189, for example EIP-8136.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-8045",
+      "note": "移至 Review 合并：EIP-7732（ePBS）、EIP-8045、EIP-8061，以及 EIP-2780（misilva73，提交并合并）；poojaranjan 另提交 EIP-7975、8070、8136、8159、8189 移至 Review，例如 EIP-8136。",
+      "url": "https://github.com/ethereum/EIPs/pull/11886",
+      "date": "2026-07-30",
+      "title_en": "EIP-8045",
+      "note_en": "Moves to Review merged: EIP-7732 (ePBS), EIP-8045, EIP-8061, and EIP-2780 (misilva73, submitted and merged); poojaranjan also submitted moves to Review for EIP-7975, 8070, 8136, 8159 and 8189, for example EIP-8136.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-8061",
+      "note": "移至 Review 合并：EIP-7732（ePBS）、EIP-8045、EIP-8061，以及 EIP-2780（misilva73，提交并合并）；poojaranjan 另提交 EIP-7975、8070、8136、8159、8189 移至 Review，例如 EIP-8136。",
+      "url": "https://github.com/ethereum/EIPs/pull/11887",
+      "date": "2026-07-30",
+      "title_en": "EIP-8061",
+      "note_en": "Moves to Review merged: EIP-7732 (ePBS), EIP-8045, EIP-8061, and EIP-2780 (misilva73, submitted and merged); poojaranjan also submitted moves to Review for EIP-7975, 8070, 8136, 8159 and 8189, for example EIP-8136.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-2780",
+      "note": "移至 Review 合并：EIP-7732（ePBS）、EIP-8045、EIP-8061，以及 EIP-2780（misilva73，提交并合并）；poojaranjan 另提交 EIP-7975、8070、8136、8159、8189 移至 Review，例如 EIP-8136。",
+      "url": "https://github.com/ethereum/EIPs/pull/12038",
+      "date": "2026-07-30",
+      "title_en": "EIP-2780",
+      "note_en": "Moves to Review merged: EIP-7732 (ePBS), EIP-8045, EIP-8061, and EIP-2780 (misilva73, submitted and merged); poojaranjan also submitted moves to Review for EIP-7975, 8070, 8136, 8159 and 8189, for example EIP-8136.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-8136",
+      "note": "移至 Review 合并：EIP-7732（ePBS）、EIP-8045、EIP-8061，以及 EIP-2780（misilva73，提交并合并）；poojaranjan 另提交 EIP-7975、8070、8136、8159、8189 移至 Review，例如 EIP-8136。",
+      "url": "https://github.com/ethereum/EIPs/pull/12035",
+      "date": "2026-07-30",
+      "title_en": "EIP-8136",
+      "note_en": "Moves to Review merged: EIP-7732 (ePBS), EIP-8045, EIP-8061, and EIP-2780 (misilva73, submitted and merged); poojaranjan also submitted moves to Review for EIP-7975, 8070, 8136, 8159 and 8189, for example EIP-8136.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-7723：澄清 Status 与 Stages",
+      "note": "合并；EIP-8333：使用 attestation 截止时间而非固定 slot 比例（jihoonsong）提交并合并；EIP-8297：更简洁的树结构伪代码 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11006",
+      "date": "2026-07-30",
+      "title_en": "EIP-7723: clarify Status and Stages",
+      "note_en": "Merged; EIP-8333: use the attestation deadline, not a fixed fraction of a slot (jihoonsong), submitted and merged; EIP-8297: simpler pseudocode for the tree structure algorithm, submitted and merged.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-8333：使用 attestation 截止时间而非固定 slot 比例",
+      "note": "EIP-7723：澄清 Status 与 Stages 合并；EIP-8333：使用 attestation 截止时间而非固定 slot 比例（jihoonsong）提交并合并；EIP-8297：更简洁的树结构伪代码 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12029",
+      "date": "2026-07-30",
+      "title_en": "EIP-8333: use the attestation deadline, not a fixed fraction of a slot",
+      "note_en": "EIP-7723: clarify Status and Stages, merged; EIP-8333: use the attestation deadline, not a fixed fraction of a slot (jihoonsong), submitted and merged; EIP-8297: simpler pseudocode for the tree structure algorithm, submitted and merged.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "状态迁移与 EIP 状态",
+      "title": "EIP-8297：更简洁的树结构伪代码",
+      "note": "EIP-7723：澄清 Status 与 Stages 合并；EIP-8333：使用 attestation 截止时间而非固定 slot 比例（jihoonsong）提交并合并；EIP-8297：更简洁的树结构伪代码 提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12040",
+      "date": "2026-07-30",
+      "title_en": "EIP-8297: simpler pseudocode for the tree structure algorithm",
+      "note_en": "EIP-7723: clarify Status and Stages, merged; EIP-8333: use the attestation deadline, not a fixed fraction of a slot (jihoonsong), submitted and merged; EIP-8297: simpler pseudocode for the tree structure algorithm, submitted and merged.",
+      "topic_en": "State migration and EIP status"
+    },
+    {
+      "topic": "其他动态",
+      "title": "pcaversaccio：隐私不是去掉名字，而是消除独特性，关键是最大化匿名集",
+      "note": "17:01。",
+      "url": "https://x.com/pcaversaccio/status/2082768576113688610",
+      "date": "2026-07-30",
+      "title_en": "pcaversaccio: privacy is not about removing names but eliminating uniqueness, so maximize your anonymity set",
+      "note_en": "17:01.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "lightclients：大家都嫌 EVM 的 63/64 规则烦，Glamsterdam 说“看我的”",
+      "note": "01:10。",
+      "url": "https://x.com/lightclients/status/2082529235848352205",
+      "date": "2026-07-30",
+      "title_en": "lightclients: everyone says the EVM's 63/64 rule is annoying, and Glamsterdam says \"hold my beer\"",
+      "note_en": "01:10.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trail of Bits：Uniswap v4 hooks 的七种出错方式与构建者清单",
+      "note": "18:15。",
+      "url": "https://x.com/trailofbits/status/2082787068522991721",
+      "date": "2026-07-30",
+      "title_en": "Trail of Bits: seven ways Uniswap v4 hooks break, and a builder checklist",
+      "note_en": "18:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "StarkWare：Starknet 后量子中心上线",
+      "note": "20:09；Starknet 隐私兑换上线 15:04。",
+      "url": "https://x.com/StarkWareLtd/status/2082815746632016364",
+      "date": "2026-07-30",
+      "title_en": "StarkWare: the Starknet Post-Quantum Hub is live",
+      "note_en": "20:09; private swaps on Starknet, 15:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Starknet 隐私兑换上线",
+      "note": "StarkWare：Starknet 后量子中心上线 20:09；Starknet 隐私兑换上线 15:04。",
+      "url": "https://x.com/StarkWareLtd/status/2082739060339335416",
+      "date": "2026-07-30",
+      "title_en": "private swaps on Starknet",
+      "note_en": "StarkWare: the Starknet Post-Quantum Hub is live, 20:09; private swaps on Starknet, 15:04.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Jesse Pollak：这个账号转型了",
+      "note": "19:26，自嘲式宣布今后只发极度乐观的建设者内容。",
+      "url": "https://x.com/jessepollak/status/2082804950497722485",
+      "date": "2026-07-30",
+      "title_en": "Jesse Pollak: pivoting this account",
+      "note_en": "19:26, jokingly announcing only extremely bullish builder posting from now on.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians：EVM 中可独立重算的确定性随机数",
+      "note": "22:47。",
+      "url": "https://ethereum-magicians.org/t/deterministic-random-number-in-evm-for-independent-recomputability/29208",
+      "date": "2026-07-30",
+      "title_en": "Magicians: deterministic random numbers in the EVM for independent recomputability",
+      "note_en": "22:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12041",
+    "credit": "GitHub, ethereum/EIPs PR #12041",
+    "local_path": "assets/2026-07-30.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12041"
+  },
+  "keywords_en": [
+    "ACDE #242",
+    "Platåberget short-lived public testnet",
+    "polar bear chosen as Glamsterdam mascot",
+    "EIP-7819 SETDELEGATE",
+    "EIP-7906 state diff assertions",
+    "canonical paymaster bytecode",
+    "EIP-8250 keyed mempool concurrency",
+    "EIP-7732 and others move to Review"
+  ],
+  "summary_en": "Per Ethereal news #33, ACDE #242 covered Platåberget, a short-lived permissionless public testnet targeting early August with benchmark-based repricing numbers and discv5 only; new Hegotá proposals include Etan Kissling's EIP-8115, 8116 and 7807, Derek Chiang's EIP-7819 SETDELEGATE, forshtat's EIP-7906, and EIP-7668, 8200 and 7666; the polar bear was chosen as mascot. The EIPs repo saw many merges: EIP-7732 (ePBS), 8045, 8061 and 2780 moved to Review, and 8115, 8116, 7807 and 7906 entered the Hegotá candidate list. Marchhill submitted 355-byte reference bytecode for EIP-8141's canonical paymaster."
+}

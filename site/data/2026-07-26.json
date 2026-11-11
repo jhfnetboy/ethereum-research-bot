@@ -1,0 +1,107 @@
+{
+  "date": "2026-07-26",
+  "keywords": [
+    "EIP-8015 提议纳入 Hegotá",
+    "Ethlabs 周更",
+    "ERC-8350 agent 记忆状态登记",
+    "ZK-STARK 通俗解读",
+    "Aztec Alpha V5 应用"
+  ],
+  "summary": "周日较安静。EIP-8015（移除 deposit 与 eth1data 字段）被提议纳入 Hegotá 并合并到 EIP-8081。Caspar Schwarz-Schilling 发布 Ethlabs 的周更。ERC-8350 提出 agent 记忆的可验证版本控制，记忆内容不上链。Eli Ben-Sasson 发布面向非技术读者的 ZK-STARK 解读。",
+  "items": [
+    {
+      "topic": "Hegotá 与 Ethlabs",
+      "title": "EIP-8081：提议纳入 EIP-8015",
+      "note": "（etan-status）合并。据 Ethereal news #32，EIP-8015 移除 deposit 与 eth1data 字段，已在 ACDC #183 上提出。",
+      "url": "https://github.com/ethereum/EIPs/pull/11914",
+      "date": "2026-07-26",
+      "title_en": "EIP-8081: propose EIP-8015 for inclusion",
+      "note_en": "(etan-status), merged. Per Ethereal news #32, EIP-8015 removes deposit and eth1data fields and was raised at ACDC #183.",
+      "topic_en": "Hegotá and Ethlabs"
+    },
+    {
+      "topic": "Hegotá 与 Ethlabs",
+      "title": "casparschwa：又一周的 Ethlabs 进展更新",
+      "note": "19:47。",
+      "url": "https://x.com/casparschwa/status/2081360670151385328",
+      "date": "2026-07-26",
+      "title_en": "casparschwa: another week, another Ethlabs update",
+      "note_en": "19:47.",
+      "topic_en": "Hegotá and Ethlabs"
+    },
+    {
+      "topic": "agent 与隐私",
+      "title": "ERC-8350：agent 记忆状态登记",
+      "note": "（everest-an）提交，论坛 14:42，为自主 agent 的记忆提供可验证版本控制，记忆内容不上链，Sepolia 上已有部署。",
+      "url": "https://github.com/ethereum/ERCs/pull/1910",
+      "date": "2026-07-26",
+      "title_en": "ERC-8350: Agent Memory State Registry",
+      "note_en": "(everest-an), submitted, with a forum thread at 14:42: verifiable version control of autonomous agent memory without putting memory content onchain, with a live Sepolia deployment.",
+      "topic_en": "Agents and privacy"
+    },
+    {
+      "topic": "agent 与隐私",
+      "title": "论坛",
+      "note": "ERC-8350：agent 记忆状态登记（everest-an）提交，论坛 14:42，为自主 agent 的记忆提供可验证版本控制，记忆内容不上链，Sepolia 上已有部署。",
+      "url": "https://ethereum-magicians.org/t/erc-8350-agent-memory-state-registry/29098",
+      "date": "2026-07-26",
+      "title_en": "forum thread",
+      "note_en": "ERC-8350: Agent Memory State Registry (everest-an), submitted, with a forum thread at 14:42: verifiable version control of autonomous agent memory without putting memory content onchain, with a live Sepolia deployment.",
+      "topic_en": "Agents and privacy"
+    },
+    {
+      "topic": "agent 与隐私",
+      "title": "Eli Ben-Sasson：写了一篇非技术的 ZK-STARK 如何带来扩容和隐私的解读",
+      "note": "14:57。",
+      "url": "https://x.com/EliBenSasson/status/2081287721692127555",
+      "date": "2026-07-26",
+      "title_en": "Eli Ben-Sasson: a non-technical explainer of how ZK-STARKs deliver scale and privacy",
+      "note_en": "14:57.",
+      "topic_en": "Agents and privacy"
+    },
+    {
+      "topic": "agent 与隐私",
+      "title": "Aztec：Alpha V5 的可编程隐私和设备端证明，本周还有新应用发布",
+      "note": "22:28。",
+      "url": "https://x.com/aztecnetwork/status/2081401262202142960",
+      "date": "2026-07-26",
+      "title_en": "Aztec: Alpha V5's programmable privacy and on-device proofs, with another app reveal this week",
+      "note_en": "22:28.",
+      "topic_en": "Agents and privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPs CI：加固 HTMLProofer 工作流",
+      "note": "（minksy-ux）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12018",
+      "date": "2026-07-26",
+      "title_en": "EIPs CI: harden the HTMLProofer workflow",
+      "note_en": "(minksy-ux), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP：subreddit 版主永久封禁了他和推荐 rotki 的其他用户",
+      "note": "02:03。",
+      "url": "https://x.com/LefterisJP/status/2081093087883936153",
+      "date": "2026-07-26",
+      "title_en": "LefterisJP: subreddit moderators permanently banned him and other users who recommended rotki",
+      "note_en": "02:03.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11914",
+    "credit": "GitHub, ethereum/EIPs PR #11914",
+    "local_path": "assets/2026-07-26.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11914"
+  },
+  "keywords_en": [
+    "EIP-8015 proposed for Hegotá",
+    "Ethlabs weekly update",
+    "ERC-8350 agent memory state registry",
+    "plain-language ZK-STARK explainer",
+    "Aztec Alpha V5 apps"
+  ],
+  "summary_en": "A quiet Sunday. EIP-8015 (removing deposit and eth1data fields) was proposed for Hegotá and merged into EIP-8081. Caspar Schwarz-Schilling posted Ethlabs' weekly update. ERC-8350 proposes verifiable version control for agent memory without putting memory content onchain. Eli Ben-Sasson published a non-technical ZK-STARK explainer."
+}

@@ -1,0 +1,159 @@
+{
+  "date": "2026-07-19",
+  "keywords": [
+    "EIP-8141 charged_gas 与费用结算",
+    "EIP-8250/8272 改写为对 8141 的增量",
+    "操作码与 TXPARAM 冲突",
+    "主网隐私协议实测",
+    "Zcash Ironwood",
+    "Lean Ethereum"
+  ],
+  "summary": "soispoke 提交一组 frame 交易家族整理 PR：EIP-8141 用 `charged_gas` 统一 frame gas、EIP-3529 退款与 EIP-7623 下限并用于费用结算；EIP-8250 与 EIP-8272 改写为只描述对 8141 的增量修改，并解决与 8141 冲突的 TXPARAM 和操作码分配。kassandraETH 用自制 CLI 在主网测试 Tornado Cash、Railgun 和 Privacy Pools 存取。",
+  "items": [
+    {
+      "topic": "frame 交易家族的 gas 记账与结构整理",
+      "title": "EIP-8141：费用结算采用 charged_gas",
+      "note": "（soispoke）提交。此前 8141 定义了 frame gas 上限、交易级 EIP-3529 退款和 EIP-7623 calldata 下限，但没有一致地连起来，`charged_gas` 还引用 `total_gas_used`，费用结算沿用旧 `tx_fee` 模型且未与付款方的最大费用托管对账。PR 从按序 frame 收据计算未用 gas，先退款再取下限得到 `charged_gas`，用于区块 gas 计数和收据 `cumulative_gas_used`，执行前预留 `tx_gas_limit` 并把差额退回区块 gas 池。",
+      "url": "https://github.com/ethereum/EIPs/pull/11969",
+      "date": "2026-07-19",
+      "title_en": "EIP-8141: apply charged_gas to fee settlement",
+      "note_en": "(soispoke), submitted. 8141 defined frame gas limits, a transaction-level EIP-3529 refund and the EIP-7623 calldata floor but did not connect them consistently: `charged_gas` still referenced `total_gas_used`, and fee settlement used the older `tx_fee` model without reconciling the payer's maximum fee escrow. The PR computes unused gas from the ordered frame receipts, applies the refund before the floor to get `charged_gas`, uses it for block gas accounting and receipt `cumulative_gas_used`, reserves `tx_gas_limit` before execution and returns the difference to the block gas pool.",
+      "topic_en": "Gas accounting and structure in the frame transaction family"
+    },
+    {
+      "topic": "frame 交易家族的 gas 记账与结构整理",
+      "title": "EIP-8250：交易自省分配对齐",
+      "note": "（soispoke）提交并合并：8250 把 `TXPARAM_NONCE_KEY_0` 分配为 `0x0B`，而 8141 已把它给了 `len(signatures)`，现移到 `0x10`，并按 8141 当前的 `payer` 与原子批次模型改写 nonce 消耗和回滚措辞。",
+      "url": "https://github.com/ethereum/EIPs/pull/11966",
+      "date": "2026-07-19",
+      "title_en": "EIP-8250: align transaction introspection assignments",
+      "note_en": "(soispoke), submitted and merged: 8250 assigned `TXPARAM_NONCE_KEY_0` to `0x0B`, which 8141 already uses for `len(signatures)`, so it moves to `0x10`, and nonce consumption and rollback wording follows 8141's current `payer` and atomic batch model.",
+      "topic_en": "Gas accounting and structure in the frame transaction family"
+    },
+    {
+      "topic": "frame 交易家族的 gas 记账与结构整理",
+      "title": "EIP-8272：解决 RECENTROOTREFLOAD 操作码冲突",
+      "note": "提交，`0xB4` 已被 8141 的 `SIGPARAM` 占用，移至 `0xB5`。EIP-8250：keyed nonce 改为增量修改 与 EIP-8272：recent root 改为增量修改 提交，使两者只表达为对 8141 的修改。EIP-8141：澄清解码、签名与激活 提交，定义 payload 的 RLP 形状，对 P256 签名应用 EIP-7951 验证规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/11967",
+      "date": "2026-07-19",
+      "title_en": "EIP-8272: resolve the RECENTROOTREFLOAD opcode collision",
+      "note_en": "Submitted, moving it from `0xB4`, already 8141's `SIGPARAM`, to `0xB5`. EIP-8250: make keyed nonce changes additive and EIP-8272: make recent root changes additive, submitted, so both are expressed only as changes to 8141. EIP-8141: clarify decoding, signing and activation, submitted, defining the payload's RLP shape and applying EIP-7951 validation rules to P256 signatures.",
+      "topic_en": "Gas accounting and structure in the frame transaction family"
+    },
+    {
+      "topic": "frame 交易家族的 gas 记账与结构整理",
+      "title": "EIP-8250：keyed nonce 改为增量修改",
+      "note": "EIP-8272：解决 RECENTROOTREFLOAD 操作码冲突 提交，`0xB4` 已被 8141 的 `SIGPARAM` 占用，移至 `0xB5`。EIP-8250：keyed nonce 改为增量修改 与 EIP-8272：recent root 改为增量修改 提交，使两者只表达为对 8141 的修改。EIP-8141：澄清解码、签名与激活 提交，定义 payload 的 RLP 形状，对 P256 签名应用 EIP-7951 验证规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/11968",
+      "date": "2026-07-19",
+      "title_en": "EIP-8250: make keyed nonce changes additive",
+      "note_en": "EIP-8272: resolve the RECENTROOTREFLOAD opcode collision, submitted, moving it from `0xB4`, already 8141's `SIGPARAM`, to `0xB5`. EIP-8250: make keyed nonce changes additive and EIP-8272: make recent root changes additive, submitted, so both are expressed only as changes to 8141. EIP-8141: clarify decoding, signing and activation, submitted, defining the payload's RLP shape and applying EIP-7951 validation rules to P256 signatures.",
+      "topic_en": "Gas accounting and structure in the frame transaction family"
+    },
+    {
+      "topic": "frame 交易家族的 gas 记账与结构整理",
+      "title": "EIP-8272：recent root 改为增量修改",
+      "note": "EIP-8272：解决 RECENTROOTREFLOAD 操作码冲突 提交，`0xB4` 已被 8141 的 `SIGPARAM` 占用，移至 `0xB5`。EIP-8250：keyed nonce 改为增量修改 与 EIP-8272：recent root 改为增量修改 提交，使两者只表达为对 8141 的修改。EIP-8141：澄清解码、签名与激活 提交，定义 payload 的 RLP 形状，对 P256 签名应用 EIP-7951 验证规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/11970",
+      "date": "2026-07-19",
+      "title_en": "EIP-8272: make recent root changes additive",
+      "note_en": "EIP-8272: resolve the RECENTROOTREFLOAD opcode collision, submitted, moving it from `0xB4`, already 8141's `SIGPARAM`, to `0xB5`. EIP-8250: make keyed nonce changes additive and EIP-8272: make recent root changes additive, submitted, so both are expressed only as changes to 8141. EIP-8141: clarify decoding, signing and activation, submitted, defining the payload's RLP shape and applying EIP-7951 validation rules to P256 signatures.",
+      "topic_en": "Gas accounting and structure in the frame transaction family"
+    },
+    {
+      "topic": "frame 交易家族的 gas 记账与结构整理",
+      "title": "EIP-8141：澄清解码、签名与激活",
+      "note": "EIP-8272：解决 RECENTROOTREFLOAD 操作码冲突 提交，`0xB4` 已被 8141 的 `SIGPARAM` 占用，移至 `0xB5`。EIP-8250：keyed nonce 改为增量修改 与 EIP-8272：recent root 改为增量修改 提交，使两者只表达为对 8141 的修改。EIP-8141：澄清解码、签名与激活 提交，定义 payload 的 RLP 形状，对 P256 签名应用 EIP-7951 验证规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/11971",
+      "date": "2026-07-19",
+      "title_en": "EIP-8141: clarify decoding, signing and activation",
+      "note_en": "EIP-8272: resolve the RECENTROOTREFLOAD opcode collision, submitted, moving it from `0xB4`, already 8141's `SIGPARAM`, to `0xB5`. EIP-8250: make keyed nonce changes additive and EIP-8272: make recent root changes additive, submitted, so both are expressed only as changes to 8141. EIP-8141: clarify decoding, signing and activation, submitted, defining the payload's RLP shape and applying EIP-7951 validation rules to P256 signatures.",
+      "topic_en": "Gas accounting and structure in the frame transaction family"
+    },
+    {
+      "topic": "frame 交易家族的 gas 记账与结构整理",
+      "title": "EIP-8250：nonce_keys 与 nonce_seq 按交易数据计费",
+      "note": "前一天提交的 EIP-8250：nonce_keys 与 nonce_seq 按交易数据计费 合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11958",
+      "date": "2026-07-19",
+      "title_en": "EIP-8250: price nonce_keys and nonce_seq as transaction data",
+      "note_en": "Submitted the day before, was merged.",
+      "topic_en": "Gas accounting and structure in the frame transaction family"
+    },
+    {
+      "topic": "隐私",
+      "title": "kassandraETH：周六用自制 CLI 在以太坊主网测试 Tornado、Railgun 和 Privacy Pools 的存取",
+      "note": "00:56。",
+      "url": "https://x.com/kassandraETH/status/2078539355220512887",
+      "date": "2026-07-19",
+      "title_en": "kassandraETH: spending Saturday testing Tornado, Railgun and Privacy Pools deposits and withdrawals on Ethereum mainnet with a homegrown CLI",
+      "note_en": "00:56.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "隐私",
+      "title": "zooko：Zcash Ironwood 升级的时间、意义和注意事项",
+      "note": "02:23，称不必在隐私和稳健货币之间二选一。",
+      "url": "https://x.com/zooko/status/2078561341674295484",
+      "date": "2026-07-19",
+      "title_en": "zooko: when the Zcash Ironwood upgrade is coming, why it matters and what to know",
+      "note_en": "02:23, saying there is no need to choose between privacy and sound money.",
+      "topic_en": "Privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "sassal0x：Lean Ethereum",
+      "note": "17:28。",
+      "url": "https://x.com/sassal0x/status/2078789164313776415",
+      "date": "2026-07-19",
+      "title_en": "sassal0x: Lean Ethereum",
+      "note_en": "17:28.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8327",
+      "note": "david-hay 把 ERC-8327 到 ERC-8330 提交移至 Review，例如 ERC-8327，并为 ERC-8326 加入规范测试向量。",
+      "url": "https://github.com/ethereum/ERCs/pull/1892",
+      "date": "2026-07-19",
+      "title_en": "ERC-8327",
+      "note_en": "David-hay submitted moves of ERC-8327 through ERC-8330 to Review, for example ERC-8327, and added normative test vectors for ERC-8326.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8326 加入规范测试向量",
+      "note": "david-hay 把 ERC-8327 到 ERC-8330 提交移至 Review，例如 ERC-8327，并为 ERC-8326 加入规范测试向量。",
+      "url": "https://github.com/ethereum/ERCs/pull/1896",
+      "date": "2026-07-19",
+      "title_en": "added normative test vectors for ERC-8326",
+      "note_en": "David-hay submitted moves of ERC-8327 through ERC-8330 to Review, for example ERC-8327, and added normative test vectors for ERC-8326.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "StarkWare：隐私是常态，隐私属于每个人",
+      "note": "19:04。",
+      "url": "https://x.com/StarkWareLtd/status/2078813101340962993",
+      "date": "2026-07-19",
+      "title_en": "StarkWare: privacy is normal, privacy is for everyone",
+      "note_en": "19:04.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11969",
+    "credit": "GitHub, ethereum/EIPs PR #11969",
+    "local_path": "assets/2026-07-19.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11969"
+  },
+  "keywords_en": [
+    "EIP-8141 charged_gas and fee settlement",
+    "EIP-8250/8272 rewritten as deltas on 8141",
+    "opcode and TXPARAM collisions",
+    "mainnet privacy protocols tested",
+    "Zcash Ironwood",
+    "Lean Ethereum"
+  ],
+  "summary_en": "soispoke submitted a set of cleanup PRs for the frame transaction family: EIP-8141 uses `charged_gas` to tie together frame gas, the EIP-3529 refund and the EIP-7623 floor and applies it to fee settlement; EIP-8250 and EIP-8272 are rewritten to describe only their changes to 8141, and their TXPARAM and opcode assignments that collided with 8141 are resolved. kassandraETH tested Tornado Cash, Railgun and Privacy Pools deposits and withdrawals on mainnet with a homegrown CLI."
+}

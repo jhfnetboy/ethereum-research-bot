@@ -1,0 +1,213 @@
+{
+  "date": "2026-07-14",
+  "keywords": [
+    "glamsterdam-devnet-7 上线",
+    "EIP-2780 与 8037 状态相关费用移出固有 gas",
+    "EthSystems 机构隐私",
+    "Upgrading Finality 2",
+    "ethrex v21 支持 EIP-8141",
+    "钱包默认支持 4337/7702/交易去关联",
+    "时间锁账户恢复",
+    "Devcon 8 门票"
+  ],
+  "summary": "terencechain 宣布 glamsterdam-devnet-7 上线，执行层把 EIP-2780 和 8037 的状态相关费用从固有 gas 移到运行时，共识层加入 EIP-7688 progressive containers。EthSystems 发布，为机构以太坊构建机密系统，锚定资金方包括 Bitmine、Sharplink 和 Joe Lubin。ethrex v21 初步支持 Hegotá 分叉和 EIP-8141 frame 交易。Ben Edgington 发布最终性用户调研第二篇。kassandraETH 呼吁钱包立即把 4337 UserOps、7702 委托和去关联交易作为默认。",
+  "items": [
+    {
+      "topic": "Glamsterdam devnet 与 gas",
+      "title": "terencechain：glamsterdam-devnet-7 上线",
+      "note": "23:39。共识层：EIP-7688 progressive containers，更新 payload 截止时间和 builder 生命周期参数；执行层：EIP-2780 和 8037 把状态相关费用从固有 gas 移出。",
+      "url": "https://x.com/terencechain/status/2077070487981855053",
+      "date": "2026-07-14",
+      "title_en": "terencechain: glamsterdam-devnet-7 is live",
+      "note_en": "23:39. Consensus layer: EIP-7688 progressive containers, plus updated payload deadlines and builder lifecycle parameters; execution layer: EIP-2780 and 8037 move state-dependent charges out of intrinsic gas.",
+      "topic_en": "Glamsterdam devnet and gas"
+    },
+    {
+      "topic": "Glamsterdam devnet 与 gas",
+      "title": "EIP-8038：去掉对 EIP-8037 的循环依赖，复用规范 gas 符号",
+      "note": "（jochem-brouwer）提交。2780、8037、8038 是 Glamsterdam EIP 中唯一的依赖环，PR 让 8038 成为独立的常规 gas 重定价，不改变任何收费值、条件、时机或退款行为。",
+      "url": "https://github.com/ethereum/EIPs/pull/11927",
+      "date": "2026-07-14",
+      "title_en": "EIP-8038: remove the circular EIP-8037 dependency and reuse canonical gas symbols",
+      "note_en": "(jochem-brouwer), submitted. 2780, 8037 and 8038 form the only dependency cycle among Glamsterdam EIPs; the PR makes 8038 a standalone regular gas repricing, without changing any charge value, condition, timing or refund behavior.",
+      "topic_en": "Glamsterdam devnet and gas"
+    },
+    {
+      "topic": "账户与钱包",
+      "title": "EIP-8130：创建和导入时允许初始 actor 设置 expiry",
+      "note": "（chunter-cb）提交。此前时间限制只能在部署后通过配置变更设置；现在每个初始 actor 可带 `uint48 expiry`（0 表示不过期），并计入地址承诺，钱包可以在创建账户时原子地发放有时限的密钥。",
+      "url": "https://github.com/ethereum/EIPs/pull/11919",
+      "date": "2026-07-14",
+      "title_en": "EIP-8130: allow initial actors to set an expiry at create and import",
+      "note_en": "(chunter-cb), submitted. Previously time limits could only be set by a config change after deployment; now each initial actor can carry a `uint48 expiry` (0 means no expiry), committed in the address, so wallets can issue time-limited keys atomically when the account is created.",
+      "topic_en": "Accounts and wallets"
+    },
+    {
+      "topic": "账户与钱包",
+      "title": "ethrex v21.0.0",
+      "note": "23:08，基于内存池的状态预热让主网区块执行快约 15%，并初步支持 Hegotá 分叉与 EIP-8141 frame 交易。",
+      "url": "https://x.com/ethrex_client/status/2077062775449280848",
+      "date": "2026-07-14",
+      "title_en": "ethrex v21.0.0",
+      "note_en": "23:08: mempool-based state prewarming makes mainnet block execution about 15% faster, and it ships initial Hegotá fork support with EIP-8141 frame transactions.",
+      "topic_en": "Accounts and wallets"
+    },
+    {
+      "topic": "账户与钱包",
+      "title": "kassandraETH：4337 UserOps、7702 委托、去关联的交易活动都应是一等公民",
+      "note": "15:23，这应当现在就成为以太坊钱包的标准和默认。",
+      "url": "https://x.com/kassandraETH/status/2076945786298843478",
+      "date": "2026-07-14",
+      "title_en": "kassandraETH: 4337 UserOps, 7702 delegations and unlinked transaction activity should all be first-class citizens",
+      "note_en": "15:23, and this should be the standard and default for Ethereum wallets now.",
+      "topic_en": "Accounts and wallets"
+    },
+    {
+      "topic": "账户与钱包",
+      "title": "Magicians：时间锁账户恢复",
+      "note": "18:06（iyari），面向 ERC-4337/7579 智能账户，不依赖守护人：发起恢复需质押 `LockValue` ETH 并等待 `LockTime` 挑战窗口，期间所有者可以挑战。",
+      "url": "https://ethereum-magicians.org/t/timelock-account-recovery-a-trust-minimized-recovery-system-for-smart-accounts/29009",
+      "date": "2026-07-14",
+      "title_en": "Magicians: timelock account recovery",
+      "note_en": "18:06 (iyari), for ERC-4337/7579 smart accounts without guardians: starting a recovery requires staking `LockValue` ETH and waiting out a `LockTime` challenge window, during which the owner can challenge.",
+      "topic_en": "Accounts and wallets"
+    },
+    {
+      "topic": "隐私与最终性",
+      "title": "Barnabé：EthSystems 发布",
+      "note": "22:16，机构隐私是把万亿美元资产带上链的缺失环节；据 Ethereal news #31，EthSystems 为营利机构，锚定资金方包括 Bitmine、Sharplink 和 Joe Lubin。Nethermind 23:38 欢迎有规范和安全属性的专门团队。",
+      "url": "https://x.com/barnabemonnot/status/2077049593917850058",
+      "date": "2026-07-14",
+      "title_en": "Barnabé: EthSystems launches",
+      "note_en": "22:16: institutional privacy is a missing link to onboard trillions of dollars of assets onchain. Per Ethereal news #31, EthSystems is for profit, with anchor funders including Bitmine, Sharplink and Joe Lubin. Nethermind, 23:38, welcomed a dedicated team working with specs and security properties.",
+      "topic_en": "Privacy and finality"
+    },
+    {
+      "topic": "隐私与最终性",
+      "title": "Nethermind",
+      "note": "Barnabé：EthSystems 发布 22:16，机构隐私是把万亿美元资产带上链的缺失环节；据 Ethereal news #31，EthSystems 为营利机构，锚定资金方包括 Bitmine、Sharplink 和 Joe Lubin。Nethermind 23:38 欢迎有规范和安全属性的专门团队。",
+      "url": "https://x.com/Nethermind/status/2077070343148036473",
+      "date": "2026-07-14",
+      "title_en": "Nethermind",
+      "note_en": "Barnabé: EthSystems launches, 22:16: institutional privacy is a missing link to onboard trillions of dollars of assets onchain. Per Ethereal news #31, EthSystems is for profit, with anchor funders including Bitmine, Sharplink and Joe Lubin. Nethermind, 23:38, welcomed a dedicated team working with specs and security properties.",
+      "topic_en": "Privacy and finality"
+    },
+    {
+      "topic": "隐私与最终性",
+      "title": "Ben Edgington：Upgrading Finality 2，生态告诉了我们什么",
+      "note": "23:54；据 Ethereal news #31，几十秒的最终性将改善跨链桥、互操作、solver 经济、L2 存款和交易定价。",
+      "url": "https://x.com/benjaminion_xyz/status/2077074289258381722",
+      "date": "2026-07-14",
+      "title_en": "Ben Edgington: Upgrading Finality 2, what the ecosystem told us",
+      "note_en": "23:54. Per Ethereal news #31, finality in tens of seconds would improve bridges, interop, solver economics, L2 deposits and trade pricing.",
+      "topic_en": "Privacy and finality"
+    },
+    {
+      "topic": "隐私与最终性",
+      "title": "tcoratger：用比特币式一次性 UTXO 处理简单支付，持久状态足迹可缩小 99.8%",
+      "note": "13:26。",
+      "url": "https://x.com/tcoratger/status/2076916325507551620",
+      "date": "2026-07-14",
+      "title_en": "tcoratger: using a Bitcoin-style one-shot UTXO model for simple payments could shrink the persistent state footprint by 99.8%",
+      "note_en": "13:26.",
+      "topic_en": "Privacy and finality"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF 博客：Devcon 8 门票开售",
+      "note": "11 月在孟买，学生、印度居民、以太坊贡献者等有折扣通道。",
+      "url": "https://blog.ethereum.org/en/2026/07/14/devcon8-tickets",
+      "date": "2026-07-14",
+      "title_en": "EF blog: Devcon 8 tickets are live",
+      "note_en": "In Mumbai in November, with discounted pathways for students, Indian residents, Ethereum contributors and others.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 EIP：Validated EVM Code",
+      "note": "（gcolvin）提交，即 EIP-8337，用 MAGIC 字节保证静态控制流并防止栈下溢。",
+      "url": "https://github.com/ethereum/EIPs/pull/11922",
+      "date": "2026-07-14",
+      "title_en": "New EIP: Validated EVM Code",
+      "note_en": "(gcolvin), submitted as EIP-8337, using MAGIC bytes to ensure static control flow and prevent stack underflows.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP：无需信任的日志和交易索引",
+      "note": "（zsfelfoldi）合并为 Draft，与 EIP-7745 同一项目，但设计更简单。",
+      "url": "https://github.com/ethereum/EIPs/pull/11811",
+      "date": "2026-07-14",
+      "title_en": "EIP: trustless log and transaction index",
+      "note_en": "(zsfelfoldi), merged as a Draft, part of the same project as EIP-7745 but with a simpler design.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：EIP-8333 checkpoint 与 epoch 边界区块对齐",
+      "note": "01:18；EIP-8334 捆绑式 attestation 传播 15:59；ERC-8338 代币绑定的可执行技能 03:26。",
+      "url": "https://ethereum-magicians.org/t/eip-8333-align-checkpoint-with-epoch-boundary-block/29003",
+      "date": "2026-07-14",
+      "title_en": "Magicians: EIP-8333, align checkpoint with the epoch boundary block",
+      "note_en": "01:18; EIP-8334, bundled attestation propagation, 15:59; ERC-8338, token-bound executable skills, 03:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8334 捆绑式 attestation 传播",
+      "note": "Magicians：EIP-8333 checkpoint 与 epoch 边界区块对齐 01:18；EIP-8334 捆绑式 attestation 传播 15:59；ERC-8338 代币绑定的可执行技能 03:26。",
+      "url": "https://ethereum-magicians.org/t/eip-8334-bundled-attestation-propagation/29008",
+      "date": "2026-07-14",
+      "title_en": "EIP-8334, bundled attestation propagation",
+      "note_en": "Magicians: EIP-8333, align checkpoint with the epoch boundary block, 01:18; EIP-8334, bundled attestation propagation, 15:59; ERC-8338, token-bound executable skills, 03:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8338 代币绑定的可执行技能",
+      "note": "Magicians：EIP-8333 checkpoint 与 epoch 边界区块对齐 01:18；EIP-8334 捆绑式 attestation 传播 15:59；ERC-8338 代币绑定的可执行技能 03:26。",
+      "url": "https://ethereum-magicians.org/t/erc-8338-token-bound-executable-skills/29005",
+      "date": "2026-07-14",
+      "title_en": "ERC-8338, token-bound executable skills",
+      "note_en": "Magicians: EIP-8333, align checkpoint with the epoch boundary block, 01:18; EIP-8334, bundled attestation propagation, 15:59; ERC-8338, token-bound executable skills, 03:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "pcaversaccio：最近的 Tornado Cash DAO 提案要么恶意要么质量很差",
+      "note": "15:21。",
+      "url": "https://x.com/pcaversaccio/status/2076945231271113031",
+      "date": "2026-07-14",
+      "title_en": "pcaversaccio: recent Tornado Cash DAO proposals are either malicious or very poor quality",
+      "note_en": "15:21.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：可以争论以成本价提供以太坊安全性是增长手段还是收入手段",
+      "note": "14:04。",
+      "url": "https://x.com/barnabemonnot/status/2076925835752210902",
+      "date": "2026-07-14",
+      "title_en": "Barnabé: we may disagree on whether offering Ethereum security at cost is a growth lever or a revenue play",
+      "note_en": "14:04.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/en/2026/07/14/devcon8-tickets",
+    "credit": "Ethereum Foundation Blog, Devcon 8 Tickets Are Live",
+    "local_path": "assets/2026-07-14.jpg",
+    "credit_en": "Ethereum Foundation Blog, Devcon 8 Tickets Are Live"
+  },
+  "keywords_en": [
+    "glamsterdam-devnet-7 live",
+    "EIP-2780 and 8037 move state-dependent charges out of intrinsic gas",
+    "EthSystems institutional privacy",
+    "Upgrading Finality 2",
+    "ethrex v21 supports EIP-8141",
+    "4337/7702/unlinked transactions as wallet defaults",
+    "timelock account recovery",
+    "Devcon 8 tickets"
+  ],
+  "summary_en": "terencechain announced that glamsterdam-devnet-7 is live: on the execution layer, EIP-2780 and 8037 move state-dependent charges from intrinsic gas to runtime, and the consensus layer adds EIP-7688 progressive containers. EthSystems launched to build confidential systems for institutional Ethereum, with anchor funders including Bitmine, Sharplink and Joe Lubin. ethrex v21 ships initial support for the Hegotá fork and EIP-8141 frame transactions. Ben Edgington published the second post of his finality user research. kassandraETH called for wallets to make 4337 UserOps, 7702 delegations and unlinked transactions the default now."
+}

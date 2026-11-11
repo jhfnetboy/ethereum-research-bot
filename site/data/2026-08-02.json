@@ -1,0 +1,95 @@
+{
+  "date": "2026-08-02",
+  "keywords": [
+    "Umia 测试网与 futarchy",
+    "Starknet 隐私兑换",
+    "链上套利研究",
+    "EIPs CI 修复"
+  ],
+  "summary": "周日较安静。Barnabé 试用了 Umia Finance 刚上线的测试网，称其展示了用条件代币等 futarchy 原语进行全链上风险投资的可能。Starknet 经 avnu 上线隐私兑换。brucexu_eth 分享在熊市发起链上套利研究的原因。EIPs 仓库只有 CI 相关提交。",
+  "items": [
+    {
+      "topic": "应用与隐私",
+      "title": "Barnabé：以太坊生日大家忙着做 11x11 像素画时，Umia Finance 上线了测试网",
+      "note": "03:55，他走完了测试网流程，认为它展示了用条件代币等 futarchy 原语进行全链上风险投资的可能。",
+      "url": "https://x.com/barnabemonnot/status/2083657946026717616",
+      "date": "2026-08-02",
+      "title_en": "Barnabé: while everyone was making 11x11 pixel art on Ethereum's birthday, Umia Finance launched its testnet",
+      "note_en": "03:55; he went through the testnet flow and sees it as a glimpse of fully onchain venture funding with futarchy primitives like conditional tokens.",
+      "topic_en": "Applications and privacy"
+    },
+    {
+      "topic": "应用与隐私",
+      "title": "StarkWare：Starknet 上线市场最低费用的隐私兑换，由 avnu 提供",
+      "note": "18:56。",
+      "url": "https://x.com/StarkWareLtd/status/2083884540871995523",
+      "date": "2026-08-02",
+      "title_en": "StarkWare: private swaps with the lowest privacy fees on the market are live on Starknet, powered by avnu",
+      "note_en": "18:56.",
+      "topic_en": "Applications and privacy"
+    },
+    {
+      "topic": "标准仓库",
+      "title": "EIPs CI：最小化流水线以恢复 htmlproofer 与产物流程",
+      "note": "与 EIP-1：恢复 htmlproofer 和基于产物的审阅工作流（minksy-ux）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12069",
+      "date": "2026-08-02",
+      "title_en": "EIPs CI: a minimal stack to unblock htmlproofer and the artifact flow",
+      "note_en": "And EIP-1: unblock htmlproofer and artifact-driven review workflows (minksy-ux), submitted.",
+      "topic_en": "Standards repo"
+    },
+    {
+      "topic": "标准仓库",
+      "title": "EIP-1：恢复 htmlproofer 和基于产物的审阅工作流",
+      "note": "EIPs CI：最小化流水线以恢复 htmlproofer 与产物流程 与 EIP-1：恢复 htmlproofer 和基于产物的审阅工作流（minksy-ux）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/12070",
+      "date": "2026-08-02",
+      "title_en": "EIP-1: unblock htmlproofer and artifact-driven review workflows",
+      "note_en": "EIPs CI: a minimal stack to unblock htmlproofer and the artifact flow and EIP-1: unblock htmlproofer and artifact-driven review workflows (minksy-ux), submitted.",
+      "topic_en": "Standards repo"
+    },
+    {
+      "topic": "其他动态",
+      "title": "brucexu_eth：为什么在熊市发起链上套利研究，以及为什么认为套利是一种必备的思考方式",
+      "note": "22:17。",
+      "url": "https://x.com/brucexu_eth/status/2083935229757337948",
+      "date": "2026-08-02",
+      "title_en": "brucexu_eth: why he started onchain arbitrage research in a bear market, and why he sees arbitrage as an essential way of thinking",
+      "note_en": "22:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：不可转让时间积分的动态杠杆定价，解决志愿与公共物品劳动中的技能错配",
+      "note": "13:54。",
+      "url": "https://ethresear.ch/t/dynamic-leverage-pricing-for-non-transferable-time-credits-solving-skill-mismatch-in-volunteer-public-good-labor/25602",
+      "date": "2026-08-02",
+      "title_en": "ethresear.ch: dynamic leverage pricing for non-transferable time credits, addressing skill mismatch in volunteer and public-good labor",
+      "note_en": "13:54.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tayvano：这从来不是关于安全，而是一种偷懒的信号",
+      "note": "02:23。",
+      "url": "https://x.com/tayvano_/status/2083634624551645445",
+      "date": "2026-08-02",
+      "title_en": "tayvano: it was never about security, but a lazy signal",
+      "note_en": "02:23.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/12070",
+    "credit": "GitHub, ethereum/EIPs PR #12070",
+    "local_path": "assets/2026-08-02.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #12070"
+  },
+  "keywords_en": [
+    "Umia testnet and futarchy",
+    "Starknet private swaps",
+    "onchain arbitrage research",
+    "EIPs CI fixes"
+  ],
+  "summary_en": "A quiet Sunday. Barnabé tried Umia Finance's newly launched testnet and said it shows the potential of fully onchain venture funding with futarchy primitives such as conditional tokens. Starknet launched private swaps via avnu. brucexu_eth explained why he started onchain arbitrage research in a bear market. The EIPs repo saw only CI-related submissions."
+}

@@ -1,0 +1,171 @@
+{
+  "date": "2026-07-06",
+  "keywords": [
+    "The Extremely Lean Chain",
+    "验证者隐私",
+    "Native UTXOs",
+    "EIP-8250 与 EIP-8272 提议进入 Hegotá",
+    "EIP-8141 任意签名数据",
+    "Hash-Chain RANDAO",
+    "ACDT #86"
+  ],
+  "summary": "Vitalik 在 ethresear.ch 发表 The Extremely Lean Chain，设想把共识链状态责任推给质押者，由他们管理并偶尔 ZK 证明自己的状态，同时加入强验证者隐私。nero_eth 发表 Native UTXOs on Ethereum，借鉴比特币一次性支付对象来避免收款永久增加状态。soispoke 宣布 keyed nonce（EIP-8250）和 recent roots（EIP-8272）正式提议进入 Hegotá。EIP-8141 允许任意签名数据的修改合并。当晚召开 ACDT #86。",
+  "items": [
+    {
+      "topic": "隐私交易的协议基础",
+      "title": "soispoke：keyed nonce（EIP-8250）和 recent roots（EIP-8272）正式提议进入 Hegotá",
+      "note": "15:29，配套视频和幻灯片说明如何实现无需信任、抗审查的隐私协议交易。",
+      "url": "https://x.com/soispoke/status/2074048120082550890",
+      "date": "2026-07-06",
+      "title_en": "soispoke: keyed nonces (EIP-8250) and recent roots (EIP-8272) are now officially proposed for Hegotá",
+      "note_en": "15:29, with a video and slides on getting to trustless, censorship-resistant privacy protocol transactions.",
+      "topic_en": "Protocol groundwork for private transactions"
+    },
+    {
+      "topic": "隐私交易的协议基础",
+      "title": "ethresear.ch：Native UTXOs on Ethereum",
+      "note": "13:52（Nero_eth）。在以太坊上，地址首次收到 ETH 会产生永久账户叶子，首次持有 ERC-20 会产生永久存储槽；比特币的支付是一次性对象，创建一次、花费一次，然后从状态删除。文章探讨把这一性质引入以太坊。",
+      "url": "https://ethresear.ch/t/native-utxos-on-ethereum/25368",
+      "date": "2026-07-06",
+      "title_en": "ethresear.ch: Native UTXOs on Ethereum",
+      "note_en": "13:52 (Nero_eth). On Ethereum, the first ETH an address receives creates a permanent account leaf, and the first ERC-20 it holds a permanent storage slot; a Bitcoin payment is a one-shot object, created once, spent once and then deleted from state. The post explores borrowing that property.",
+      "topic_en": "Protocol groundwork for private transactions"
+    },
+    {
+      "topic": "隐私交易的协议基础",
+      "title": "EIP-8141：允许任意签名数据，避免自定义验证器的循环依赖",
+      "note": "（lightclient）合并，自定义验证器由此可以使用规范签名哈希。",
+      "url": "https://github.com/ethereum/EIPs/pull/11837",
+      "date": "2026-07-06",
+      "title_en": "EIP-8141: allow arbitrary signature data to avoid a circular dependency for custom verifiers",
+      "note_en": "(lightclient), merged, so custom verifiers can use the canonical signing hash.",
+      "topic_en": "Protocol groundwork for private transactions"
+    },
+    {
+      "topic": "共识层：极简链与验证者隐私",
+      "title": "Vitalik：如何让 Lean 共识链更精简并加入强验证者隐私",
+      "note": "14:30：用 ZK 断开存款、质押活动与提款的关联，并每天重新匿名化质押者。",
+      "url": "https://x.com/VitalikButerin/status/2074033310875975719",
+      "date": "2026-07-06",
+      "title_en": "Vitalik: a path to make the Lean consensus chain aggressively leaner and add strong validator privacy",
+      "note_en": "14:30: ZK-unlinking deposits from staking activity from withdrawals, and re-anonymizing stakers every day.",
+      "topic_en": "Consensus: an extremely lean chain and validator privacy"
+    },
+    {
+      "topic": "共识层：极简链与验证者隐私",
+      "title": "ethresear.ch：The Extremely Lean Chain",
+      "note": "14:00（vbuterin）。在单 slot 最终性、基于递归 STARK 的抗量子签名聚合等 Lean 升级背景下，把责任推给质押者管理并偶尔 ZK 证明其状态，从而去掉 epoch 末处理（少 slot 最终性下可能每 16 秒一次），共识或可扩展到数百万验证者。",
+      "url": "https://ethresear.ch/t/the-extremely-lean-chain/25369",
+      "date": "2026-07-06",
+      "title_en": "ethresear.ch: The Extremely Lean Chain",
+      "note_en": "14:00 (vbuterin). With Lean upgrades such as single-slot finality and recursive-STARK-based quantum-resistant signature aggregation, stakers take responsibility for managing and occasionally ZK-proving their state, removing end-of-epoch processing (which in few-slot finality may run every 16 seconds) and possibly letting consensus scale to millions of validators.",
+      "topic_en": "Consensus: an extremely lean chain and validator privacy"
+    },
+    {
+      "topic": "共识层：极简链与验证者隐私",
+      "title": "新 EIP：Hash-Chain RANDAO",
+      "note": "（kevaundray）提交，Magicians 讨论帖 05:50，即 EIP-8321。",
+      "url": "https://github.com/ethereum/EIPs/pull/11861",
+      "date": "2026-07-06",
+      "title_en": "New EIP: Hash-Chain RANDAO",
+      "note_en": "(kevaundray), submitted, with a Magicians thread at 05:50; this is EIP-8321.",
+      "topic_en": "Consensus: an extremely lean chain and validator privacy"
+    },
+    {
+      "topic": "共识层：极简链与验证者隐私",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP：Hash-Chain RANDAO（kevaundray）提交，Magicians 讨论帖 05:50，即 EIP-8321。",
+      "url": "https://ethereum-magicians.org/t/eip-8321-hash-chain-randao/28942",
+      "date": "2026-07-06",
+      "title_en": "Magicians thread",
+      "note_en": "New EIP: Hash-Chain RANDAO (kevaundray), submitted, with a Magicians thread at 05:50; this is EIP-8321.",
+      "topic_en": "Consensus: an extremely lean chain and validator privacy"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7906：POST_TX 回滚行为措辞加强",
+      "note": "（forshtat）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11866",
+      "date": "2026-07-06",
+      "title_en": "EIP-7906: stronger wording on POST_TX revert behavior",
+      "note_en": "(forshtat), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7843：移至 Review",
+      "note": "提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11867",
+      "date": "2026-07-06",
+      "title_en": "EIP-7843: move to Review",
+      "note_en": "Submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：智能凭证解析接口",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1504",
+      "date": "2026-07-06",
+      "title_en": "ERC: smart credential resolution interface",
+      "note_en": "Merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8325 资产锚定注册表",
+      "note": "david-hay 发布一组 RWA 相关 ERC 讨论帖，如 ERC-8325 资产锚定注册表 04:28 和 ERC-8330 NAV 快照预言机 04:34。",
+      "url": "https://ethereum-magicians.org/t/erc-8325-asset-anchor-registry/28934",
+      "date": "2026-07-06",
+      "title_en": "ERC-8325 asset anchor registry",
+      "note_en": "David-hay posted a set of RWA-related ERC threads, such as ERC-8325 asset anchor registry, 04:28, and ERC-8330 NAV snapshot oracle, 04:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8330 NAV 快照预言机",
+      "note": "david-hay 发布一组 RWA 相关 ERC 讨论帖，如 ERC-8325 资产锚定注册表 04:28 和 ERC-8330 NAV 快照预言机 04:34。",
+      "url": "https://ethereum-magicians.org/t/erc-8330-subject-linked-nav-snapshot-oracle/28939",
+      "date": "2026-07-06",
+      "title_en": "ERC-8330 NAV snapshot oracle",
+      "note_en": "David-hay posted a set of RWA-related ERC threads, such as ERC-8325 asset anchor registry, 04:28, and ERC-8330 NAV snapshot oracle, 04:34.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Lean Execution",
+      "note": "20:15。",
+      "url": "https://ethresear.ch/t/lean-execution-a-holistic-approach-to-secure-efficient-adaptive-and-resourceful-execution-throughput-to-scale-the-world-computer/25374",
+      "date": "2026-07-06",
+      "title_en": "ethresear.ch: Lean Execution",
+      "note_en": "20:15.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "hasufl：Lido 的安全文化可能是加密领域最极端谨慎的",
+      "note": "21:35。",
+      "url": "https://x.com/hasufl/status/2074140239975616522",
+      "date": "2026-07-06",
+      "title_en": "hasufl: Lido's security culture is arguably the most extreme and paranoid in crypto",
+      "note_en": "21:35.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/native-utxos-on-ethereum/25368",
+    "credit": "ethresear.ch, Native UTXOs on Ethereum (Nero_eth)",
+    "local_path": "assets/2026-07-06.jpg",
+    "credit_en": "ethresear.ch, Native UTXOs on Ethereum (Nero_eth)"
+  },
+  "keywords_en": [
+    "The Extremely Lean Chain",
+    "validator privacy",
+    "Native UTXOs",
+    "EIP-8250 and EIP-8272 proposed for Hegotá",
+    "EIP-8141 arbitrary signature data",
+    "Hash-Chain RANDAO",
+    "ACDT #86"
+  ],
+  "summary_en": "Vitalik published The Extremely Lean Chain on ethresear.ch, pushing consensus state responsibility to stakers, who manage and occasionally ZK-prove their own state, while adding strong validator privacy. nero_eth published Native UTXOs on Ethereum, borrowing Bitcoin's one-shot payment objects so that receiving a payment need not add state forever. soispoke announced that keyed nonces (EIP-8250) and recent roots (EIP-8272) are officially proposed for Hegotá. An EIP-8141 change allowing arbitrary signature data was merged. ACDT #86 was held in the evening."
+}

@@ -1,0 +1,187 @@
+{
+  "date": "2026-07-18",
+  "keywords": [
+    "EIP-8141 规范澄清批量合并",
+    "EIP-8272 签名计费与内存池加固合并",
+    "EIP-7716 回到 Draft",
+    "ERC 可验证发票承诺",
+    "Unichain TVS 下滑"
+  ],
+  "summary": "前两天提交的 frame 交易家族修正集中合并：EIP-8141 的 SECP256K1 签名编码、执行批准范围、FRAMEDATALOAD 操作数顺序和 EIP-7623 calldata 下限；EIP-8272 的签名费用、TXPARAM 常量、签名哈希同步和内存池加固；EIP-8250 的签名哈希描述。EIP-7716 反相关惩罚从 Stagnant 回到 Draft，并换用超过移动平均的惩罚设计。",
+  "items": [
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "固定 SECP256K1 签名编码",
+      "note": "EIP-8141 合并：固定 SECP256K1 签名编码、执行批准授权之后所有 sender frame、FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序、对 frame 和签名数据应用 EIP-7623 calldata 下限。",
+      "url": "https://github.com/ethereum/EIPs/pull/11937",
+      "date": "2026-07-18",
+      "title_en": "pin the SECP256K1 signature encoding",
+      "note_en": "EIP-8141 merged: pin the SECP256K1 signature encoding, execution approval authorizes all subsequent sender frames, stack operand order for FRAMEDATALOAD/FRAMEDATACOPY, and apply the EIP-7623 calldata floor to frame and signature data.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "执行批准授权之后所有 sender frame",
+      "note": "EIP-8141 合并：固定 SECP256K1 签名编码、执行批准授权之后所有 sender frame、FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序、对 frame 和签名数据应用 EIP-7623 calldata 下限。",
+      "url": "https://github.com/ethereum/EIPs/pull/11939",
+      "date": "2026-07-18",
+      "title_en": "execution approval authorizes all subsequent sender frames",
+      "note_en": "EIP-8141 merged: pin the SECP256K1 signature encoding, execution approval authorizes all subsequent sender frames, stack operand order for FRAMEDATALOAD/FRAMEDATACOPY, and apply the EIP-7623 calldata floor to frame and signature data.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序",
+      "note": "EIP-8141 合并：固定 SECP256K1 签名编码、执行批准授权之后所有 sender frame、FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序、对 frame 和签名数据应用 EIP-7623 calldata 下限。",
+      "url": "https://github.com/ethereum/EIPs/pull/11938",
+      "date": "2026-07-18",
+      "title_en": "stack operand order for FRAMEDATALOAD/FRAMEDATACOPY",
+      "note_en": "EIP-8141 merged: pin the SECP256K1 signature encoding, execution approval authorizes all subsequent sender frames, stack operand order for FRAMEDATALOAD/FRAMEDATACOPY, and apply the EIP-7623 calldata floor to frame and signature data.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "对 frame 和签名数据应用 EIP-7623 calldata 下限",
+      "note": "EIP-8141 合并：固定 SECP256K1 签名编码、执行批准授权之后所有 sender frame、FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序、对 frame 和签名数据应用 EIP-7623 calldata 下限。",
+      "url": "https://github.com/ethereum/EIPs/pull/11941",
+      "date": "2026-07-18",
+      "title_en": "apply the EIP-7623 calldata floor to frame and signature data",
+      "note_en": "EIP-8141 merged: pin the SECP256K1 signature encoding, execution approval authorizes all subsequent sender frames, stack operand order for FRAMEDATALOAD/FRAMEDATACOPY, and apply the EIP-7623 calldata floor to frame and signature data.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "在 tx_gas_limit 中恢复 8141 签名费用",
+      "note": "EIP-8272 合并：在 tx_gas_limit 中恢复 8141 签名费用、修正 TXPARAM 常量、恢复 signatures 字段并在签名哈希中省略签名字节、加强 recent root 引用的内存池处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/11931",
+      "date": "2026-07-18",
+      "title_en": "restore 8141 signature costs in tx_gas_limit",
+      "note_en": "EIP-8272 merged: restore 8141 signature costs in tx_gas_limit, fix the TXPARAM constant, restore the signatures field and elide signature bytes in the signature hash, and strengthen mempool handling of recent root references.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "修正 TXPARAM 常量",
+      "note": "EIP-8272 合并：在 tx_gas_limit 中恢复 8141 签名费用、修正 TXPARAM 常量、恢复 signatures 字段并在签名哈希中省略签名字节、加强 recent root 引用的内存池处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/11930",
+      "date": "2026-07-18",
+      "title_en": "fix the TXPARAM constant",
+      "note_en": "EIP-8272 merged: restore 8141 signature costs in tx_gas_limit, fix the TXPARAM constant, restore the signatures field and elide signature bytes in the signature hash, and strengthen mempool handling of recent root references.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "恢复 signatures 字段并在签名哈希中省略签名字节",
+      "note": "EIP-8272 合并：在 tx_gas_limit 中恢复 8141 签名费用、修正 TXPARAM 常量、恢复 signatures 字段并在签名哈希中省略签名字节、加强 recent root 引用的内存池处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/11959",
+      "date": "2026-07-18",
+      "title_en": "restore the signatures field and elide signature bytes in the signature hash",
+      "note_en": "EIP-8272 merged: restore 8141 signature costs in tx_gas_limit, fix the TXPARAM constant, restore the signatures field and elide signature bytes in the signature hash, and strengthen mempool handling of recent root references.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "加强 recent root 引用的内存池处理",
+      "note": "EIP-8272 合并：在 tx_gas_limit 中恢复 8141 签名费用、修正 TXPARAM 常量、恢复 signatures 字段并在签名哈希中省略签名字节、加强 recent root 引用的内存池处理。",
+      "url": "https://github.com/ethereum/EIPs/pull/11961",
+      "date": "2026-07-18",
+      "title_en": "strengthen mempool handling of recent root references",
+      "note_en": "EIP-8272 merged: restore 8141 signature costs in tx_gas_limit, fix the TXPARAM constant, restore the signatures field and elide signature bytes in the signature hash, and strengthen mempool handling of recent root references.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "NONCE_MANAGER 激活措辞与 8272 对齐",
+      "note": "EIP-8250：NONCE_MANAGER 激活措辞与 8272 对齐 合并；恢复 payload 中的签名并更正签名哈希描述（AnkushinDaniil）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11960",
+      "date": "2026-07-18",
+      "title_en": "align NONCE_MANAGER activation wording with 8272",
+      "note_en": "EIP-8250: align NONCE_MANAGER activation wording with 8272, merged; restore signatures in the payload and correct the signature-hash description (AnkushinDaniil), submitted and merged.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "frame 交易家族修正合并",
+      "title": "恢复 payload 中的签名并更正签名哈希描述",
+      "note": "EIP-8250：NONCE_MANAGER 激活措辞与 8272 对齐 合并；恢复 payload 中的签名并更正签名哈希描述（AnkushinDaniil）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11963",
+      "date": "2026-07-18",
+      "title_en": "restore signatures in the payload and correct the signature-hash description",
+      "note_en": "EIP-8250: align NONCE_MANAGER activation wording with 8272, merged; restore signatures in the payload and correct the signature-hash description (AnkushinDaniil), submitted and merged.",
+      "topic_en": "Frame transaction family fixes merged"
+    },
+    {
+      "topic": "EIP-7716 反相关惩罚",
+      "title": "EIP-7716：移至 Draft",
+      "note": "（OisinKyne）提交。EIP-7716 是 Hegotá 的 PFI，这一版把 `NET_EXCESS_PENALTIES` 惩罚因子机制换成“超过移动平均”的设计：只新增一个 `Gwei` 状态字段，`PENALTY_SLOPE = 3 · (MAX_PENALTY_FACTOR − 1)`，使上限恰好在三分之一质押时生效，并把放大范围收窄到同时错过 source 和 target 的验证者的 target 惩罚。",
+      "url": "https://github.com/ethereum/EIPs/pull/11962",
+      "date": "2026-07-18",
+      "title_en": "EIP-7716: move to Draft",
+      "note_en": "(OisinKyne), submitted. EIP-7716 is a Hegotá PFI; this revision replaces the `NET_EXCESS_PENALTIES` penalty-factor mechanism with an excess-over-moving-average design: one new `Gwei` state field, `PENALTY_SLOPE = 3 · (MAX_PENALTY_FACTOR − 1)` so the cap binds at exactly one third of stake, and scaling narrowed to the target penalty of validators that missed both source and target.",
+      "topic_en": "EIP-7716 anti-correlation penalties"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC：可验证发票承诺（VIC）",
+      "note": "（javierpmateos）提交，用确定性 CREATE2 单例登记器把 EIP-712 签名的结构化发票元数据（税务身份、税额、汇率、明细）绑定到链上支付，不修改现有代币。",
+      "url": "https://github.com/ethereum/ERCs/pull/1890",
+      "date": "2026-07-18",
+      "title_en": "ERC: Verifiable Invoice Commitment (VIC)",
+      "note_en": "(javierpmateos), submitted: a deterministic CREATE2 singleton registrar binds EIP-712-signed structured invoice metadata (fiscal identity, tax breakdown, FX context, line items) to onchain payments without modifying existing tokens.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8272：加入 source_id 测试向量",
+      "note": "（soispoke）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11964",
+      "date": "2026-07-18",
+      "title_en": "EIP-8272: add a source_id test vector",
+      "note_en": "(soispoke), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8325",
+      "note": "与 ERC-8326 由 david-hay 提交移至 Review，例如 ERC-8325。",
+      "url": "https://github.com/ethereum/ERCs/pull/1888",
+      "date": "2026-07-18",
+      "title_en": "ERC-8325",
+      "note_en": "David-hay submitted moves of ERC-8325 and ERC-8326 to Review, for example ERC-8325.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh：Spark 在 7 月 6 日从 Unichain 撤出 2.04 亿美元以降低链风险敞口，Unichain TVS 下降 72% 至 7700 万美元",
+      "note": "21:37。",
+      "url": "https://x.com/donnoh_eth/status/2078489258122191320",
+      "date": "2026-07-18",
+      "title_en": "donnoh: on July 6 Spark withdrew $204M from Unichain to reduce chain risk exposure, dropping Unichain's TVS 72% to $77M",
+      "note_en": "21:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：又一次被挡在用加密货币付费升级服务的门外",
+      "note": "23:04。",
+      "url": "https://x.com/zooko/status/2078511192713343253",
+      "date": "2026-07-18",
+      "title_en": "zooko: blocked yet again from paying to upgrade a service with crypto",
+      "note_en": "23:04.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11962",
+    "credit": "GitHub, ethereum/EIPs PR #11962",
+    "local_path": "assets/2026-07-18.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11962"
+  },
+  "keywords_en": [
+    "EIP-8141 spec clarifications merged in bulk",
+    "EIP-8272 signature charges and mempool hardening merged",
+    "EIP-7716 back to Draft",
+    "verifiable invoice commitment ERC",
+    "Unichain TVS drop"
+  ],
+  "summary_en": "The frame transaction family fixes submitted over the previous two days were merged together: EIP-8141's SECP256K1 signature encoding, execution approval scope, FRAMEDATALOAD operand order and EIP-7623 calldata floor; EIP-8272's signature costs, TXPARAM constant, signature hash sync and mempool hardening; and EIP-8250's signature hash description. EIP-7716 anti-correlation penalties moved from Stagnant back to Draft with an excess-over-moving-average penalty design."
+}

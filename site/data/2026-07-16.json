@@ -1,0 +1,253 @@
+{
+  "date": "2026-07-16",
+  "keywords": [
+    "ACDE #241",
+    "主网前至少 3 个月",
+    "Hegotá 提案截止 8 月 6 日",
+    "EIP-8141 规范澄清",
+    "EIP-8341 部分执行 payload 承诺",
+    "ERC-8340 交易元数据编码",
+    "快速确认上 Glamsterdam devnet",
+    "Francesco 加入 Ethlabs"
+  ],
+  "summary": "ACDE #241 确认 glamsterdam-devnet-7 向应用开发者开放（300M gas limit），devnet-8 可能是升级公共测试网前最后一个 devnet，主网前至少还需 3 个月；Hegotá 非 headliner 提案截止 8 月 6 日。svlachakis 提交一组 EIP-8141 规范澄清，涉及签名编码、执行批准范围、存储退款、calldata 下限和收据传输。chunter-cb 提交 ERC-8340，定义 EIP-8130 交易 `metadata` 字段的字节布局。Francesco（fradamt）从 EF 加入 Ethlabs，并表示快速确认已上 Glamsterdam devnet。",
+  "items": [
+    {
+      "topic": "ACDE #241 与 Glamsterdam 时间线",
+      "title": "nixorokish：应用开发者可在 Sepolia/Hoodi 之前用 devnet-7 测试 Glamsterdam",
+      "note": "21:28。",
+      "url": "https://x.com/nixorokish/status/2077762286132109417",
+      "date": "2026-07-16",
+      "title_en": "nixorokish: app developers can test Glamsterdam on devnet-7 before Sepolia/Hoodi",
+      "note_en": "21:28.",
+      "topic_en": "ACDE #241 and the Glamsterdam timeline"
+    },
+    {
+      "topic": "ACDE #241 与 Glamsterdam 时间线",
+      "title": "EIP-8081：EIP-7862 延迟状态根列为 PFI",
+      "note": "（nixorokish）提交并合并；EIP-8081：提议纳入 EIP-8298 合并；EIP-8081：加入 EIP-8304 为 PFI（zsfelfoldi）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11934",
+      "date": "2026-07-16",
+      "title_en": "EIP-8081: list EIP-7862 delayed state root as PFI",
+      "note_en": "(nixorokish), submitted and merged; EIP-8081: propose EIP-8298 for inclusion, merged; EIP-8081: add EIP-8304 as PFI (zsfelfoldi), submitted.",
+      "topic_en": "ACDE #241 and the Glamsterdam timeline"
+    },
+    {
+      "topic": "ACDE #241 与 Glamsterdam 时间线",
+      "title": "EIP-8081：提议纳入 EIP-8298",
+      "note": "EIP-8081：EIP-7862 延迟状态根列为 PFI（nixorokish）提交并合并；EIP-8081：提议纳入 EIP-8298 合并；EIP-8081：加入 EIP-8304 为 PFI（zsfelfoldi）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11881",
+      "date": "2026-07-16",
+      "title_en": "EIP-8081: propose EIP-8298 for inclusion",
+      "note_en": "EIP-8081: list EIP-7862 delayed state root as PFI (nixorokish), submitted and merged; EIP-8081: propose EIP-8298 for inclusion, merged; EIP-8081: add EIP-8304 as PFI (zsfelfoldi), submitted.",
+      "topic_en": "ACDE #241 and the Glamsterdam timeline"
+    },
+    {
+      "topic": "ACDE #241 与 Glamsterdam 时间线",
+      "title": "EIP-8081：加入 EIP-8304 为 PFI",
+      "note": "EIP-8081：EIP-7862 延迟状态根列为 PFI（nixorokish）提交并合并；EIP-8081：提议纳入 EIP-8298 合并；EIP-8081：加入 EIP-8304 为 PFI（zsfelfoldi）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11933",
+      "date": "2026-07-16",
+      "title_en": "EIP-8081: add EIP-8304 as PFI",
+      "note_en": "EIP-8081: list EIP-7862 delayed state root as PFI (nixorokish), submitted and merged; EIP-8081: propose EIP-8298 for inclusion, merged; EIP-8081: add EIP-8304 as PFI (zsfelfoldi), submitted.",
+      "topic_en": "ACDE #241 and the Glamsterdam timeline"
+    },
+    {
+      "topic": "ACDE #241 与 Glamsterdam 时间线",
+      "title": "新 EIP：部分执行 payload 承诺",
+      "note": "（nerolation）提交，据 Ethereal news #31 编号 EIP-8341，作为 EIP-7862 的替代方案，不在执行层处理延迟状态根，同时给 builder 和 prover 更多时间。",
+      "url": "https://github.com/ethereum/EIPs/pull/11936",
+      "date": "2026-07-16",
+      "title_en": "New EIP: Partial Execution Payload Commitments",
+      "note_en": "(nerolation), submitted; per Ethereal news #31 it is numbered EIP-8341. It is an alternative to EIP-7862 that avoids a delayed state root on the execution layer while still giving builders and provers more time.",
+      "topic_en": "ACDE #241 and the Glamsterdam timeline"
+    },
+    {
+      "topic": "EIP-8141 规范澄清",
+      "title": "固定 SECP256K1 签名编码（恢复 id 与 low-s）",
+      "note": "svlachakis 一次提交多项澄清：固定 SECP256K1 签名编码（恢复 id 与 low-s），此前 `validate_signature` 直接传给 `ecrecover`，没有规定 `v` 的编码也不要求 `s` 规范化；说明执行批准会授权之后所有 sender frame，`sender_approved` 是交易级标志而非按 frame 或目标限定；规定 frame 的 EIP-3529 存储退款记账；对 frame 和签名数据应用 EIP-7623 calldata 下限，此前交易 gas 从未取下限；定义 frame 交易收据的 Receipts 消息编码；以及 FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序。",
+      "url": "https://github.com/ethereum/EIPs/pull/11937",
+      "date": "2026-07-16",
+      "title_en": "pin the SECP256K1 signature encoding (recovery id and low-s)",
+      "note_en": "Svlachakis submitted several clarifications at once: pin the SECP256K1 signature encoding (recovery id and low-s), since `validate_signature` passed signatures straight into `ecrecover` without defining `v` or requiring a canonical `s`; note that execution approval authorizes all subsequent sender frames, because `sender_approved` is a transaction-scoped flag, not scoped to a frame or target; specify EIP-3529 storage refund accounting for frames; apply the EIP-7623 calldata floor to frame and signature data, since the transaction's gas was never floored; define the Receipts message encoding for frame transaction receipts; and the stack operand order for FRAMEDATALOAD/FRAMEDATACOPY.",
+      "topic_en": "EIP-8141 spec clarifications"
+    },
+    {
+      "topic": "EIP-8141 规范澄清",
+      "title": "说明执行批准会授权之后所有 sender frame",
+      "note": "svlachakis 一次提交多项澄清：固定 SECP256K1 签名编码（恢复 id 与 low-s），此前 `validate_signature` 直接传给 `ecrecover`，没有规定 `v` 的编码也不要求 `s` 规范化；说明执行批准会授权之后所有 sender frame，`sender_approved` 是交易级标志而非按 frame 或目标限定；规定 frame 的 EIP-3529 存储退款记账；对 frame 和签名数据应用 EIP-7623 calldata 下限，此前交易 gas 从未取下限；定义 frame 交易收据的 Receipts 消息编码；以及 FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序。",
+      "url": "https://github.com/ethereum/EIPs/pull/11939",
+      "date": "2026-07-16",
+      "title_en": "note that execution approval authorizes all subsequent sender frames",
+      "note_en": "Svlachakis submitted several clarifications at once: pin the SECP256K1 signature encoding (recovery id and low-s), since `validate_signature` passed signatures straight into `ecrecover` without defining `v` or requiring a canonical `s`; note that execution approval authorizes all subsequent sender frames, because `sender_approved` is a transaction-scoped flag, not scoped to a frame or target; specify EIP-3529 storage refund accounting for frames; apply the EIP-7623 calldata floor to frame and signature data, since the transaction's gas was never floored; define the Receipts message encoding for frame transaction receipts; and the stack operand order for FRAMEDATALOAD/FRAMEDATACOPY.",
+      "topic_en": "EIP-8141 spec clarifications"
+    },
+    {
+      "topic": "EIP-8141 规范澄清",
+      "title": "规定 frame 的 EIP-3529 存储退款记账",
+      "note": "svlachakis 一次提交多项澄清：固定 SECP256K1 签名编码（恢复 id 与 low-s），此前 `validate_signature` 直接传给 `ecrecover`，没有规定 `v` 的编码也不要求 `s` 规范化；说明执行批准会授权之后所有 sender frame，`sender_approved` 是交易级标志而非按 frame 或目标限定；规定 frame 的 EIP-3529 存储退款记账；对 frame 和签名数据应用 EIP-7623 calldata 下限，此前交易 gas 从未取下限；定义 frame 交易收据的 Receipts 消息编码；以及 FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序。",
+      "url": "https://github.com/ethereum/EIPs/pull/11940",
+      "date": "2026-07-16",
+      "title_en": "specify EIP-3529 storage refund accounting for frames",
+      "note_en": "Svlachakis submitted several clarifications at once: pin the SECP256K1 signature encoding (recovery id and low-s), since `validate_signature` passed signatures straight into `ecrecover` without defining `v` or requiring a canonical `s`; note that execution approval authorizes all subsequent sender frames, because `sender_approved` is a transaction-scoped flag, not scoped to a frame or target; specify EIP-3529 storage refund accounting for frames; apply the EIP-7623 calldata floor to frame and signature data, since the transaction's gas was never floored; define the Receipts message encoding for frame transaction receipts; and the stack operand order for FRAMEDATALOAD/FRAMEDATACOPY.",
+      "topic_en": "EIP-8141 spec clarifications"
+    },
+    {
+      "topic": "EIP-8141 规范澄清",
+      "title": "对 frame 和签名数据应用 EIP-7623 calldata 下限",
+      "note": "svlachakis 一次提交多项澄清：固定 SECP256K1 签名编码（恢复 id 与 low-s），此前 `validate_signature` 直接传给 `ecrecover`，没有规定 `v` 的编码也不要求 `s` 规范化；说明执行批准会授权之后所有 sender frame，`sender_approved` 是交易级标志而非按 frame 或目标限定；规定 frame 的 EIP-3529 存储退款记账；对 frame 和签名数据应用 EIP-7623 calldata 下限，此前交易 gas 从未取下限；定义 frame 交易收据的 Receipts 消息编码；以及 FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序。",
+      "url": "https://github.com/ethereum/EIPs/pull/11941",
+      "date": "2026-07-16",
+      "title_en": "apply the EIP-7623 calldata floor to frame and signature data",
+      "note_en": "Svlachakis submitted several clarifications at once: pin the SECP256K1 signature encoding (recovery id and low-s), since `validate_signature` passed signatures straight into `ecrecover` without defining `v` or requiring a canonical `s`; note that execution approval authorizes all subsequent sender frames, because `sender_approved` is a transaction-scoped flag, not scoped to a frame or target; specify EIP-3529 storage refund accounting for frames; apply the EIP-7623 calldata floor to frame and signature data, since the transaction's gas was never floored; define the Receipts message encoding for frame transaction receipts; and the stack operand order for FRAMEDATALOAD/FRAMEDATACOPY.",
+      "topic_en": "EIP-8141 spec clarifications"
+    },
+    {
+      "topic": "EIP-8141 规范澄清",
+      "title": "定义 frame 交易收据的 Receipts 消息编码",
+      "note": "svlachakis 一次提交多项澄清：固定 SECP256K1 签名编码（恢复 id 与 low-s），此前 `validate_signature` 直接传给 `ecrecover`，没有规定 `v` 的编码也不要求 `s` 规范化；说明执行批准会授权之后所有 sender frame，`sender_approved` 是交易级标志而非按 frame 或目标限定；规定 frame 的 EIP-3529 存储退款记账；对 frame 和签名数据应用 EIP-7623 calldata 下限，此前交易 gas 从未取下限；定义 frame 交易收据的 Receipts 消息编码；以及 FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序。",
+      "url": "https://github.com/ethereum/EIPs/pull/11942",
+      "date": "2026-07-16",
+      "title_en": "define the Receipts message encoding for frame transaction receipts",
+      "note_en": "Svlachakis submitted several clarifications at once: pin the SECP256K1 signature encoding (recovery id and low-s), since `validate_signature` passed signatures straight into `ecrecover` without defining `v` or requiring a canonical `s`; note that execution approval authorizes all subsequent sender frames, because `sender_approved` is a transaction-scoped flag, not scoped to a frame or target; specify EIP-3529 storage refund accounting for frames; apply the EIP-7623 calldata floor to frame and signature data, since the transaction's gas was never floored; define the Receipts message encoding for frame transaction receipts; and the stack operand order for FRAMEDATALOAD/FRAMEDATACOPY.",
+      "topic_en": "EIP-8141 spec clarifications"
+    },
+    {
+      "topic": "EIP-8141 规范澄清",
+      "title": "FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序",
+      "note": "svlachakis 一次提交多项澄清：固定 SECP256K1 签名编码（恢复 id 与 low-s），此前 `validate_signature` 直接传给 `ecrecover`，没有规定 `v` 的编码也不要求 `s` 规范化；说明执行批准会授权之后所有 sender frame，`sender_approved` 是交易级标志而非按 frame 或目标限定；规定 frame 的 EIP-3529 存储退款记账；对 frame 和签名数据应用 EIP-7623 calldata 下限，此前交易 gas 从未取下限；定义 frame 交易收据的 Receipts 消息编码；以及 FRAMEDATALOAD/FRAMEDATACOPY 栈操作数顺序。",
+      "url": "https://github.com/ethereum/EIPs/pull/11938",
+      "date": "2026-07-16",
+      "title_en": "the stack operand order for FRAMEDATALOAD/FRAMEDATACOPY",
+      "note_en": "Svlachakis submitted several clarifications at once: pin the SECP256K1 signature encoding (recovery id and low-s), since `validate_signature` passed signatures straight into `ecrecover` without defining `v` or requiring a canonical `s`; note that execution approval authorizes all subsequent sender frames, because `sender_approved` is a transaction-scoped flag, not scoped to a frame or target; specify EIP-3529 storage refund accounting for frames; apply the EIP-7623 calldata floor to frame and signature data, since the transaction's gas was never floored; define the Receipts message encoding for frame transaction receipts; and the stack operand order for FRAMEDATALOAD/FRAMEDATACOPY.",
+      "topic_en": "EIP-8141 spec clarifications"
+    },
+    {
+      "topic": "EIP-8141 规范澄清",
+      "title": "用 MAX_SIGNATURES 限制签名列表长度",
+      "note": "也被提出：`signatures` 是 frame 交易家族中唯一没有显式上限的变长列表，只受 `tx_gas_limit` 隐式约束，可达上千条。",
+      "url": "https://github.com/ethereum/EIPs/pull/11935",
+      "date": "2026-07-16",
+      "title_en": "Bounding the signatures list with MAX_SIGNATURES",
+      "note_en": "Was also proposed: `signatures` is the only variable-length list in the frame transaction family without an explicit bound, limited only implicitly by `tx_gas_limit`, which allows thousands of entries.",
+      "topic_en": "EIP-8141 spec clarifications"
+    },
+    {
+      "topic": "8130 元数据与确认",
+      "title": "ERC-8340：交易元数据编码",
+      "note": "（chunter-cb）提交，论坛讨论 06:08。EIP-8130 的 AA 交易有可选的不透明 `metadata` 字段，本 ERC 规定它是确定性 CBOR 值（备注、承诺摘要、保留键映射或其数组），键与 ERC-8021 schema 2 兼容，任意值可替换为加盐承诺，实现选择性披露，并给出链下证明包和 ERC-5792 集成。",
+      "url": "https://github.com/ethereum/ERCs/pull/1883",
+      "date": "2026-07-16",
+      "title_en": "ERC-8340: Transaction Metadata Encoding",
+      "note_en": "(chunter-cb), submitted, with forum discussion at 06:08. EIP-8130's AA transaction has an optional opaque `metadata` field; this ERC defines it as a deterministic CBOR value (memo, commitment digest, a map of reserved keys, or an array of these), with keys compatible with ERC-8021 schema 2. Any value can be replaced by a salted commitment for selective disclosure, and the ERC specifies an offchain proof package and ERC-5792 integration.",
+      "topic_en": "8130 metadata and confirmation"
+    },
+    {
+      "topic": "8130 元数据与确认",
+      "title": "论坛讨论",
+      "note": "ERC-8340：交易元数据编码（chunter-cb）提交，论坛讨论 06:08。EIP-8130 的 AA 交易有可选的不透明 `metadata` 字段，本 ERC 规定它是确定性 CBOR 值（备注、承诺摘要、保留键映射或其数组），键与 ERC-8021 schema 2 兼容，任意值可替换为加盐承诺，实现选择性披露，并给出链下证明包和 ERC-5792 集成。",
+      "url": "https://ethereum-magicians.org/t/erc-8340-transaction-metadata-encoding/29022",
+      "date": "2026-07-16",
+      "title_en": "forum discussion",
+      "note_en": "ERC-8340: Transaction Metadata Encoding (chunter-cb), submitted, with forum discussion at 06:08. EIP-8130's AA transaction has an optional opaque `metadata` field; this ERC defines it as a deterministic CBOR value (memo, commitment digest, a map of reserved keys, or an array of these), with keys compatible with ERC-8021 schema 2. Any value can be replaced by a salted commitment for selective disclosure, and the ERC specifies an offchain proof package and ERC-5792 integration.",
+      "topic_en": "8130 metadata and confirmation"
+    },
+    {
+      "topic": "8130 元数据与确认",
+      "title": "Francesco 加入",
+      "note": "Ethlabs 宣布 Francesco 加入 19:59，据 Ethereal news #31 他从 EF 转来。fradamt：目标是尽快实现快速最终性，在此之前快速确认已经可用，几秒内给出很强的确认，比最终性快 98%，现已上 Glamsterdam devnet 21:21。Ben Edgington：确认用于和平时期，最终性用于战时 21:36。",
+      "url": "https://x.com/ethlabs_org/status/2077739868025762252",
+      "date": "2026-07-16",
+      "title_en": "Francesco is joining",
+      "note_en": "Ethlabs announced that Francesco is joining, 19:59; per Ethereal news #31 he is moving from the EF. fradamt: the goal is fast finality asap, but fast confirmation is already here, giving a very strong confirmation in seconds, 98% faster than finality, now on Glamsterdam devnets, 21:21. Ben Edgington: confirmation is for peacetime, finality is for wartime, 21:36.",
+      "topic_en": "8130 metadata and confirmation"
+    },
+    {
+      "topic": "8130 元数据与确认",
+      "title": "fradamt：目标是尽快实现快速最终性，在此之前快速确认已经可用，几秒内给出很强的确认，比最终性快 98%，现已上 Glamsterdam devnet",
+      "note": "Ethlabs 宣布 Francesco 加入 19:59，据 Ethereal news #31 他从 EF 转来。fradamt：目标是尽快实现快速最终性，在此之前快速确认已经可用，几秒内给出很强的确认，比最终性快 98%，现已上 Glamsterdam devnet 21:21。Ben Edgington：确认用于和平时期，最终性用于战时 21:36。",
+      "url": "https://x.com/fradamt/status/2077760553062170768",
+      "date": "2026-07-16",
+      "title_en": "fradamt: the goal is fast finality asap, but fast confirmation is already here, giving a very strong confirmation in seconds, 98% faster than finality, now on Glamsterdam devnets",
+      "note_en": "Ethlabs announced that Francesco is joining, 19:59; per Ethereal news #31 he is moving from the EF. fradamt: the goal is fast finality asap, but fast confirmation is already here, giving a very strong confirmation in seconds, 98% faster than finality, now on Glamsterdam devnets, 21:21. Ben Edgington: confirmation is for peacetime, finality is for wartime, 21:36.",
+      "topic_en": "8130 metadata and confirmation"
+    },
+    {
+      "topic": "8130 元数据与确认",
+      "title": "Ben Edgington：确认用于和平时期，最终性用于战时",
+      "note": "Ethlabs 宣布 Francesco 加入 19:59，据 Ethereal news #31 他从 EF 转来。fradamt：目标是尽快实现快速最终性，在此之前快速确认已经可用，几秒内给出很强的确认，比最终性快 98%，现已上 Glamsterdam devnet 21:21。Ben Edgington：确认用于和平时期，最终性用于战时 21:36。",
+      "url": "https://x.com/benjaminion_xyz/status/2077764224617447592",
+      "date": "2026-07-16",
+      "title_en": "Ben Edgington: confirmation is for peacetime, finality is for wartime",
+      "note_en": "Ethlabs announced that Francesco is joining, 19:59; per Ethereal news #31 he is moving from the EF. fradamt: the goal is fast finality asap, but fast confirmation is already here, giving a very strong confirmation in seconds, 98% faster than finality, now on Glamsterdam devnets, 21:21. Ben Edgington: confirmation is for peacetime, finality is for wartime, 21:36.",
+      "topic_en": "8130 metadata and confirmation"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nethermind：Stellar Private Payments，把 KYC 门槛、冻结和审计披露放进协议的屏蔽池",
+      "note": "19:11，已上测试网。",
+      "url": "https://x.com/Nethermind/status/2077727711649259662",
+      "date": "2026-07-16",
+      "title_en": "Nethermind: Stellar Private Payments, a shielded pool with KYC gating, freezing and audit disclosure inside the protocol",
+      "note_en": "19:11, live on testnet.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Eli Ben-Sasson：DeFi 隐私不是是非题，而是一个范围",
+      "note": "20:00。",
+      "url": "https://x.com/EliBenSasson/status/2077740222373134681",
+      "date": "2026-07-16",
+      "title_en": "Eli Ben-Sasson: DeFi privacy is not yes or no but a range",
+      "note_en": "20:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7723：更新升级 Meta EIP 处理流程",
+      "note": "合并，澄清 DFI 流程。",
+      "url": "https://github.com/ethereum/EIPs/pull/11904",
+      "date": "2026-07-16",
+      "title_en": "EIP-7723: update the upgrade Meta EIP handling process",
+      "note_en": "Merged, clarifying the DFI process.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #88 议程",
+      "note": "11:05。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-88-july-20-2026/29023",
+      "date": "2026-07-16",
+      "title_en": "ACDT #88 agenda",
+      "note_en": "11:05.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：评 kubimensah 关于 MEV、分配与用户安全的文章",
+      "note": "16:03。",
+      "url": "https://x.com/barnabemonnot/status/2077680616951140362",
+      "date": "2026-07-16",
+      "title_en": "Barnabé: on kubimensah's piece about MEV, allocation and user security",
+      "note_en": "16:03.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11936",
+    "credit": "GitHub, ethereum/EIPs PR #11936",
+    "local_path": "assets/2026-07-16.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11936"
+  },
+  "keywords_en": [
+    "ACDE #241",
+    "at least 3 months to mainnet",
+    "Hegotá proposal deadline August 6",
+    "EIP-8141 spec clarifications",
+    "EIP-8341 partial execution payload commitments",
+    "ERC-8340 transaction metadata encoding",
+    "fast confirmation on Glamsterdam devnets",
+    "Francesco joins Ethlabs"
+  ],
+  "summary_en": "ACDE #241 confirmed that glamsterdam-devnet-7 is open to app developers (300M gas limit), that devnet-8 is likely the last devnet before public testnets upgrade, and that mainnet is at least 3 months away; the deadline for non-headliner Hegotá proposals is August 6. svlachakis submitted a set of EIP-8141 spec clarifications covering signature encoding, execution approval scope, storage refunds, the calldata floor and receipt exchange. chunter-cb submitted ERC-8340, which defines the byte layout of the `metadata` field in EIP-8130 transactions. Francesco (fradamt) moved from the EF to Ethlabs and said fast confirmation is already on Glamsterdam devnets."
+}

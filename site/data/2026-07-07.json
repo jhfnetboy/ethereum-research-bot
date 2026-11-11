@@ -1,0 +1,229 @@
+{
+  "date": "2026-07-07",
+  "keywords": [
+    "Glamsterdam EIP 批量移至 Review",
+    "EIP-2780 状态相关费用移到运行时",
+    "EIP-8037 账户创建按访问条件收费",
+    "EIP-8141 细节修正",
+    "EIP-8298 提议纳入 Hegotá",
+    "开源嵌入式钱包"
+  ],
+  "summary": "poojaranjan 为一批 Glamsterdam EIP 提交移至 Review 的 PR，包括 ePBS（7732）、BAL（7928）、8037、8038、7778 等，其中 7954、7976、7997 当天合并。EIP-2780 把所有依赖状态的费用移到运行时，固有 gas 只保留打包交易的最低成本；EIP-8037 把 CREATE/CREATE2 的账户创建改为在目标访问时按条件收费。两者都已合并。EIP-8141 的细节修正也合并：frame 外调用 frame 相关操作码会异常终止，数据按实际字节而非 RLP 编码计费。",
+  "items": [
+    {
+      "topic": "交易 gas 的重新划分",
+      "title": "EIP-2780：把依赖状态的费用移到运行时（冷访问附加费、新账户状态 gas）",
+      "note": "（rakita）合并。固有 gas 变为把交易放进区块所需的最低成本；账户访问拆成固有阶段的 `WARM_ACCESS`（与状态无关的底价）加运行时的冷访问附加费，创建交易的新账户状态 gas 改为运行时按条件收取。",
+      "url": "https://github.com/ethereum/EIPs/pull/11844",
+      "date": "2026-07-07",
+      "title_en": "EIP-2780: move state-dependent charges to runtime (cold surcharge, new-account state gas)",
+      "note_en": "(rakita), merged. Intrinsic gas becomes the bare minimum needed to include a transaction in a block; account access splits into an intrinsic `WARM_ACCESS` (a state-independent floor) plus a runtime cold surcharge, and the create transaction's new-account state gas is charged conditionally at runtime.",
+      "topic_en": "Redrawing transaction gas"
+    },
+    {
+      "topic": "交易 gas 的重新划分",
+      "title": "EIP-8037：在访问时按条件收取账户创建费",
+      "note": "（chfast）合并。用在目标地址唯一一次访问（同时做 EIP-7610 碰撞检查，EIP-7928 已记录该访问）时按条件收费，取代 CREATE/CREATE2 先无条件收费再退还的模型；余额、nonce、深度检查失败的创建不读目标、不收费，目标已存在（如预先注资的确定性部署地址）也不收费。",
+      "url": "https://github.com/ethereum/EIPs/pull/11858",
+      "date": "2026-07-07",
+      "title_en": "EIP-8037: charge account creation conditionally at access",
+      "note_en": "(chfast), merged. A conditional charge at the single destination access that also performs the EIP-7610 collision check (an access EIP-7928 already records) replaces the unconditional-charge-with-refill model for CREATE/CREATE2; creations failing balance, nonce or depth checks never read the destination and pay nothing, and pre-existing destinations (such as pre-funded deterministic deployment addresses) pay nothing either.",
+      "topic_en": "Redrawing transaction gas"
+    },
+    {
+      "topic": "交易 gas 的重新划分",
+      "title": "EIP-8141：细节修正",
+      "note": "（lightclient）提交并合并：在 frame 交易上下文之外调用 frame 相关操作码会异常终止；按实际数据而非 RLP 编码计费。",
+      "url": "https://github.com/ethereum/EIPs/pull/11870",
+      "date": "2026-07-07",
+      "title_en": "EIP-8141: nits",
+      "note_en": "(lightclient), submitted and merged: calling frame-related opcodes outside a frame transaction context is an exceptional halt, and data is charged as actual data, not RLP encoded.",
+      "topic_en": "Redrawing transaction gas"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-7732",
+      "note": "poojaranjan 提交一批移至 Review 的 PR，如 EIP-7732、EIP-7928、EIP-8037、EIP-8038；其中 EIP-7954、EIP-7976、EIP-7997 当天合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11873",
+      "date": "2026-07-07",
+      "title_en": "EIP-7732",
+      "note_en": "Poojaranjan submitted a batch of move-to-Review PRs, such as EIP-7732, EIP-7928, EIP-8037 and EIP-8038; EIP-7954, EIP-7976 and EIP-7997 were merged the same day.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-7928",
+      "note": "poojaranjan 提交一批移至 Review 的 PR，如 EIP-7732、EIP-7928、EIP-8037、EIP-8038；其中 EIP-7954、EIP-7976、EIP-7997 当天合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11875",
+      "date": "2026-07-07",
+      "title_en": "EIP-7928",
+      "note_en": "Poojaranjan submitted a batch of move-to-Review PRs, such as EIP-7732, EIP-7928, EIP-8037 and EIP-8038; EIP-7954, EIP-7976 and EIP-7997 were merged the same day.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-8037",
+      "note": "poojaranjan 提交一批移至 Review 的 PR，如 EIP-7732、EIP-7928、EIP-8037、EIP-8038；其中 EIP-7954、EIP-7976、EIP-7997 当天合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11879",
+      "date": "2026-07-07",
+      "title_en": "EIP-8037",
+      "note_en": "Poojaranjan submitted a batch of move-to-Review PRs, such as EIP-7732, EIP-7928, EIP-8037 and EIP-8038; EIP-7954, EIP-7976 and EIP-7997 were merged the same day.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-8038",
+      "note": "poojaranjan 提交一批移至 Review 的 PR，如 EIP-7732、EIP-7928、EIP-8037、EIP-8038；其中 EIP-7954、EIP-7976、EIP-7997 当天合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11885",
+      "date": "2026-07-07",
+      "title_en": "EIP-8038",
+      "note_en": "Poojaranjan submitted a batch of move-to-Review PRs, such as EIP-7732, EIP-7928, EIP-8037 and EIP-8038; EIP-7954, EIP-7976 and EIP-7997 were merged the same day.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-7954",
+      "note": "poojaranjan 提交一批移至 Review 的 PR，如 EIP-7732、EIP-7928、EIP-8037、EIP-8038；其中 EIP-7954、EIP-7976、EIP-7997 当天合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11876",
+      "date": "2026-07-07",
+      "title_en": "EIP-7954",
+      "note_en": "Poojaranjan submitted a batch of move-to-Review PRs, such as EIP-7732, EIP-7928, EIP-8037 and EIP-8038; EIP-7954, EIP-7976 and EIP-7997 were merged the same day.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-7976",
+      "note": "poojaranjan 提交一批移至 Review 的 PR，如 EIP-7732、EIP-7928、EIP-8037、EIP-8038；其中 EIP-7954、EIP-7976、EIP-7997 当天合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11877",
+      "date": "2026-07-07",
+      "title_en": "EIP-7976",
+      "note_en": "Poojaranjan submitted a batch of move-to-Review PRs, such as EIP-7732, EIP-7928, EIP-8037 and EIP-8038; EIP-7954, EIP-7976 and EIP-7997 were merged the same day.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-7997",
+      "note": "poojaranjan 提交一批移至 Review 的 PR，如 EIP-7732、EIP-7928、EIP-8037、EIP-8038；其中 EIP-7954、EIP-7976、EIP-7997 当天合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11884",
+      "date": "2026-07-07",
+      "title_en": "EIP-7997",
+      "note_en": "Poojaranjan submitted a batch of move-to-Review PRs, such as EIP-7732, EIP-7928, EIP-8037 and EIP-8038; EIP-7954, EIP-7976 and EIP-7997 were merged the same day.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-8081：提议纳入 EIP-8298",
+      "note": "（colinlyguo）提交，EIP-8298 在 ACDE #240 上分享，讨论顺利。",
+      "url": "https://github.com/ethereum/EIPs/pull/11881",
+      "date": "2026-07-07",
+      "title_en": "EIP-8081: propose EIP-8298 for inclusion",
+      "note_en": "(colinlyguo), submitted; EIP-8298 was shared at ACDE #240 and the discussion went smoothly.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "Glamsterdam 与 Hegotá 流程",
+      "title": "EIP-8282：与 gloas 规范同步",
+      "note": "合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11859",
+      "date": "2026-07-07",
+      "title_en": "EIP-8282: sync with the gloas spec",
+      "note_en": "Merged.",
+      "topic_en": "Glamsterdam and Hegotá process"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：开源嵌入式钱包模式",
+      "note": "13:16（1Shot 团队），作为 Privy、Thirdweb 等专有方案的替代。",
+      "url": "https://ethereum-magicians.org/t/a-simple-open-source-embedded-wallet-pattern-for-ethereum/28955",
+      "date": "2026-07-07",
+      "title_en": "Magicians: a simple, open-source embedded wallet pattern",
+      "note_en": "13:16 (the 1Shot team), as an alternative to proprietary vendors such as Privy and Thirdweb.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7964：强制 chainId 字段",
+      "note": "提交并合并；ERC-7730：json-schema 升级到 2020-12 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1860",
+      "date": "2026-07-07",
+      "title_en": "ERC-7964: mandate the chainId field",
+      "note_en": "Submitted and merged; ERC-7730: json-schema updated to 2020-12, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：json-schema 升级到 2020-12",
+      "note": "ERC-7964：强制 chainId 字段 提交并合并；ERC-7730：json-schema 升级到 2020-12 合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1822",
+      "date": "2026-07-07",
+      "title_en": "ERC-7730: json-schema updated to 2020-12",
+      "note_en": "ERC-7964: mandate the chainId field, submitted and merged; ERC-7730: json-schema updated to 2020-12, merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FCR #11 议程",
+      "note": "19:42。",
+      "url": "https://ethereum-magicians.org/t/fast-confirmation-rule-fcr-11-july-21-2026/28961",
+      "date": "2026-07-07",
+      "title_en": "FCR #11 agenda",
+      "note_en": "19:42.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EF：Ethereum Builders Live 介绍 Self",
+      "note": "23:01，用户可以证明关于自己的事实而不暴露个人信息。",
+      "url": "https://x.com/ethereumfndn/status/2074524232210432112",
+      "date": "2026-07-07",
+      "title_en": "EF: Ethereum Builders Live on Self",
+      "note_en": "23:01, which lets users prove facts about themselves without revealing personal information.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：找到了获胜者",
+      "note": "00:19，他在 2024 年写那篇文章时先用中文写，再用本地 qwen2.5 翻译成英文并手工修正。",
+      "url": "https://x.com/VitalikButerin/status/2074181340908462109",
+      "date": "2026-07-07",
+      "title_en": "Vitalik: we have a winner",
+      "note_en": "00:19; for the 2024 post he wrote in Chinese, translated it locally with qwen2.5 and fixed the translation by hand.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：The Extremely Lean Chain 把验证者状态降到几个字节",
+      "note": "04:38。",
+      "url": "https://x.com/tcoratger/status/2074246712483316182",
+      "date": "2026-07-07",
+      "title_en": "tcoratger: The Extremely Lean Chain cuts per-validator state to a couple of bytes",
+      "note_en": "04:38.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "jessepollak：1 美元一次的链上安全代理审计，通过 x402 支付",
+      "note": "23:26。",
+      "url": "https://x.com/jessepollak/status/2074530503563280736",
+      "date": "2026-07-07",
+      "title_en": "jessepollak: a $1 onchain agentic security audit paid via x402",
+      "note_en": "23:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11844",
+    "credit": "GitHub, ethereum/EIPs PR #11844",
+    "local_path": "assets/2026-07-07.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR #11844"
+  },
+  "keywords_en": [
+    "Glamsterdam EIPs moved to Review in bulk",
+    "EIP-2780 state-dependent charges moved to runtime",
+    "EIP-8037 conditional account creation charge at access",
+    "EIP-8141 fixes",
+    "EIP-8298 proposed for Hegotá",
+    "open-source embedded wallets"
+  ],
+  "summary_en": "poojaranjan submitted PRs moving a batch of Glamsterdam EIPs to Review, including ePBS (7732), BAL (7928), 8037, 8038 and 7778; 7954, 7976 and 7997 were merged the same day. EIP-2780 moves every state-dependent charge to runtime, leaving intrinsic gas as the bare minimum to include a transaction, and EIP-8037 now charges CREATE/CREATE2 account creation conditionally at the destination access. Both were merged. EIP-8141 fixes were merged too: frame-related opcodes halt outside a frame transaction, and data is charged by actual bytes rather than the RLP encoding."
+}

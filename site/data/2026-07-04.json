@@ -1,0 +1,95 @@
+{
+  "date": "2026-07-04",
+  "keywords": [
+    "ERC-8324 优先级更新注册表",
+    "PropAMM",
+    "EIP-7928 SSTORE 访问成本",
+    "ERC-8004 代理绑定"
+  ],
+  "summary": "周六较安静。Flashbots 的 quintus 提交 ERC-8324 优先级更新注册表（PUR），为以太坊上的 PropAMM 提供共享合约，该合约自 2026 年 5 月已在主网运行并承载了几乎全部 PropAMM 交易量。EIP-7928（BAL）关于 SSTORE stipend 与冷状态跟踪的澄清合并。",
+  "items": [
+    {
+      "topic": "PropAMM 的标准化",
+      "title": "Magicians：ERC-8324 优先级更新注册表（PUR）",
+      "note": "03:14（quintus），对应 ERC PR 提交。PUR 是单一共享合约，面向 EVM 上的 PropAMM 等场景；一个实例自 5 月起在以太坊上运行，承载多个 builder 中几乎全部 PropAMM 交易量，作者希望在各 EVM 链上标准化。",
+      "url": "https://ethereum-magicians.org/t/erc-8324-priority-update-registry-pur/28921",
+      "date": "2026-07-04",
+      "title_en": "Magicians: ERC-8324 Priority Update Registry (PUR)",
+      "note_en": "03:14 (quintus), with the ERC PR submitted. PUR is a single shared contract for PropAMMs on the EVM and similar uses; an instance has been live on Ethereum since May, handling almost all PropAMM volume across multiple builders, and the author hopes to standardize it across EVM chains.",
+      "topic_en": "Standardizing PropAMMs"
+    },
+    {
+      "topic": "PropAMM 的标准化",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8324 优先级更新注册表（PUR） 03:14（quintus），对应 ERC PR 提交。PUR 是单一共享合约，面向 EVM 上的 PropAMM 等场景；一个实例自 5 月起在以太坊上运行，承载多个 builder 中几乎全部 PropAMM 交易量，作者希望在各 EVM 链上标准化。",
+      "url": "https://github.com/ethereum/ERCs/pull/1852",
+      "date": "2026-07-04",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8324 Priority Update Registry (PUR), 03:14 (quintus), with the ERC PR submitted. PUR is a single shared contract for PropAMMs on the EVM and similar uses; an instance has been live on Ethereum since May, handling almost all PropAMM volume across multiple builders, and the author hopes to standardize it across EVM chains.",
+      "topic_en": "Standardizing PropAMMs"
+    },
+    {
+      "topic": "PropAMM 的标准化",
+      "title": "EIP-7928：SSTORE 访问成本检查",
+      "note": "（nerolation）合并，澄清 stipend 与冷状态的跟踪方式。",
+      "url": "https://github.com/ethereum/EIPs/pull/11854",
+      "date": "2026-07-04",
+      "title_en": "EIP-7928: SSTORE access cost check",
+      "note_en": "(nerolation), merged, clarifying how the stipend and cold state are tracked.",
+      "topic_en": "Standardizing PropAMMs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8323 ERC-8004 的源代币代理绑定",
+      "note": "01:18，对应 ERC PR 提交。",
+      "url": "https://ethereum-magicians.org/t/erc-8323-source-token-agent-binding-for-erc-8004/28920",
+      "date": "2026-07-04",
+      "title_en": "Magicians: ERC-8323 source-token agent binding for ERC-8004",
+      "note_en": "01:18, with the ERC PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC PR",
+      "note": "Magicians：ERC-8323 ERC-8004 的源代币代理绑定 01:18，对应 ERC PR 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1851",
+      "date": "2026-07-04",
+      "title_en": "ERC PR",
+      "note_en": "Magicians: ERC-8323 source-token agent binding for ERC-8004, 01:18, with the ERC PR submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "zkSecurity：有人发现其成本度量评分的 bug",
+      "note": "00:43，电路本身是可靠的。",
+      "url": "https://x.com/zksecurityXYZ/status/2073100422558929299",
+      "date": "2026-07-04",
+      "title_en": "zkSecurity: someone found a bug in how its cost scoring is measured",
+      "note_en": "00:43; the circuits themselves are sound.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：对 Robinhood Chain 与代币化股票的期待",
+      "note": "17:57。",
+      "url": "https://x.com/binji_x/status/2073360433017245887",
+      "date": "2026-07-04",
+      "title_en": "binji: what he hopes Robinhood Chain and tokenized stocks can aim for",
+      "note_en": "17:57.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8324-priority-update-registry-pur/28921",
+    "credit": "Ethereum Magicians, ERC-8324: Priority Update Registry (PUR)",
+    "local_path": "assets/2026-07-04.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8324: Priority Update Registry (PUR)"
+  },
+  "keywords_en": [
+    "ERC-8324 Priority Update Registry",
+    "PropAMMs",
+    "EIP-7928 SSTORE access cost",
+    "ERC-8004 agent binding"
+  ],
+  "summary_en": "A quiet Saturday. Flashbots' quintus submitted ERC-8324, the Priority Update Registry (PUR), a shared contract for PropAMMs on Ethereum; an instance has run on mainnet since May 2026 and handles almost all PropAMM volume. An EIP-7928 (BAL) clarification of SSTORE stipend and cold state tracking was merged."
+}
