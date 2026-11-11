@@ -103,7 +103,9 @@ STRINGS = {
         "article_back": "返回目录",
         "cite_day": "日报",
         "cite_src": "原文",
-        "diagram_title": "理想以太坊账户的组件结构图",
+        "diagram_title": "理想以太坊账户的组件结构图（状态截至 2026-11-11）",
+        "diagram_desc": "从用户往下分六层：钱包与交互、交易格式、验证与签名、执行 nonce 与付费、权限恢复与委托安全、隐私与抗审查。每层列出对应标准，实线框为已上线、在用或已排期，虚线框为候选或提议中。",
+        "checked": "2026-11-11 核对",
     },
     "en": {
         "html_lang": "en",
@@ -179,7 +181,9 @@ STRINGS = {
         "article_back": "Back to all reports",
         "cite_day": "daily",
         "cite_src": "source",
-        "diagram_title": "Component diagram of the ideal Ethereum account",
+        "diagram_title": "Component diagram of the ideal Ethereum account (status as of 2026-11-11)",
+        "diagram_desc": "Six layers below the user: wallet, transaction format, signatures, nonces and fees, keys and delegation, privacy and anti-censorship. Each layer lists its standards; solid boxes are live, in use, or Scheduled for Inclusion, dashed boxes are candidates or proposals.",
+        "checked": "checked 2026-11-11",
     },
 }
 
@@ -699,22 +703,23 @@ def render_about(c: Ctx) -> str:
 
 
 SVG_LAYERS = [
-    # (zh band, en band, [(label, zh desc, en desc, style)])  style: s=live/settled, d=candidate/proposed, g=not recorded
+    # (zh band, en band, [(label, zh desc, en desc, style)])  style: s=live, in use or SFI, d=candidate/proposed
     ("钱包与交互", "Wallet layer", [
-        ("ERC-7730", "可读签名", "Clear signing", "g"),
+        ("ERC-7730", "可读签名", "Clear signing", "s"),
+        ("EIP-5792", "批量调用接口", "Batch call API", "s"),
         ("EIP-7906", "交易断言", "Assertions", "d"),
         ("ERC-7930 / 7828", "跨链地址", "Interop addresses", "d"),
     ]),
     ("交易格式", "Transaction format", [
         ("EIP-8141", "帧交易，L1", "Frames, L1", "s"),
-        ("ERC-4337", "UserOp 与 bundler", "UserOps, bundlers", "s"),
+        ("ERC-4337 / 7562", "UserOp 与 bundler", "UserOps, bundlers", "s"),
         ("EIP-7702", "EOA 委托", "EOA delegation", "s"),
-        ("EIP-8430", "AA 交易，L2 先行", "AA tx, L2 first", "d"),
+        ("8130 AA tx type", "拆出的交易类型，PR 未合并", "Split out, PR unmerged", "d"),
     ]),
     ("验证与签名", "Signatures", [
         ("EIP-7951", "P256，passkey", "P256, passkeys", "s"),
         ("ERC-7913", "非地址公钥", "Non-address keys", "s"),
-        ("EIP-7932", "签名算法注册", "Algorithm registry", "d"),
+        ("ERC-1271", "合约签名", "Contract signatures", "s"),
         ("EIP-8288", "后量子签名聚合", "PQ aggregation", "d"),
     ]),
     ("执行、nonce 与付费", "Nonces and fees", [
@@ -728,9 +733,10 @@ SVG_LAYERS = [
         ("ERC-8403 / 8231", "授权方与后量子公钥", "Authorities, PQ keys", "d"),
         ("EIP-8476 / 8477", "关闭或限时委托", "Opt-out, expiry", "d"),
         ("EIP-8425", "量子冻结与恢复", "Quantum freeze", "d"),
+        ("EIP-8151 / 8298", "停用旧密钥", "Retire old key", "d"),
     ]),
     ("隐私与抗审查", "Privacy, anti-censorship", [
-        ("ERC-5564 / 6538", "隐身地址", "Stealth addresses", "g"),
+        ("ERC-5564 / 6538", "隐身地址", "Stealth addresses", "s"),
         ("ERC-8441", "后量子隐身地址", "PQ stealth", "d"),
         ("EIP-8272", "recent roots", "Recent roots", "d"),
         ("FOCIL EIP-7805", "包含列表", "Inclusion lists", "s"),
@@ -742,8 +748,9 @@ def article_svg(lang: str) -> str:
     zh = lang == "zh"
     W, band_h, gap, top, left_w = 960, 74, 14, 40, 200
     H = top + len(SVG_LAYERS) * (band_h + gap) + 56
-    out = [f'<svg class="arch" viewBox="0 0 {W} {H}" role="img" aria-labelledby="arch-title" xmlns="http://www.w3.org/2000/svg">',
+    out = [f'<svg class="arch" viewBox="0 0 {W} {H}" role="img" aria-labelledby="arch-title" aria-describedby="arch-desc" xmlns="http://www.w3.org/2000/svg">',
            f'<title id="arch-title">{esc(STRINGS[lang]["diagram_title"])}</title>',
+           f'<desc id="arch-desc">{esc(STRINGS[lang]["diagram_desc"])}</desc>',
            '<defs><marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">'
            '<path d="M0 0L10 5L0 10z" fill="#5c564d"/></marker></defs>',
            f'<text x="{W/2}" y="24" text-anchor="middle" class="arch-h">{esc("用户" if zh else "User")}</text>']
@@ -755,7 +762,7 @@ def article_svg(lang: str) -> str:
         bw = (W - left_w - 24 - (n - 1) * 10) / n
         for j, (lab, dz, de, st) in enumerate(boxes):
             x = left_w + j * (bw + 10)
-            cls = {"s": "arch-box", "d": "arch-box dashed", "g": "arch-box grey"}[st]
+            cls = {"s": "arch-box", "d": "arch-box dashed"}[st]
             out.append(f'<rect x="{x:.0f}" y="{y+10}" width="{bw:.0f}" height="{band_h-20}" rx="8" class="{cls}"/>')
             out.append(f'<text x="{x+bw/2:.0f}" y="{y+32}" text-anchor="middle" class="arch-l">{esc(lab)}</text>')
             out.append(f'<text x="{x+bw/2:.0f}" y="{y+50}" text-anchor="middle" class="arch-d">{esc(dz if zh else de)}</text>')
@@ -763,11 +770,10 @@ def article_svg(lang: str) -> str:
             out.append(f'<line x1="{W/2}" y1="{y+band_h}" x2="{W/2}" y2="{y+band_h+gap}" stroke="#5c564d" marker-end="url(#arr)"/>')
     out.append(f'<line x1="{W/2}" y1="30" x2="{W/2}" y2="{top}" stroke="#5c564d" marker-end="url(#arr)"/>')
     ly = H - 22
-    leg = [("arch-box", "实线：已上线或已定" if zh else "Solid: live or settled"),
-           ("arch-box dashed", "虚线：候选或提议中" if zh else "Dashed: candidate or proposed"),
-           ("arch-box grey", "灰色：资料未记录状态" if zh else "Grey: status not in our sources")]
+    leg = [("arch-box", "实线：已上线、在用或已排期（SFI）" if zh else "Solid: live, in use, or Scheduled for Inclusion (SFI)"),
+           ("arch-box dashed", "虚线：候选（CFI）或提议中" if zh else "Dashed: candidate (CFI) or proposed")]
     for k, (cls, t) in enumerate(leg):
-        x = 24 + k * 310
+        x = 24 + k * 460
         out.append(f'<rect x="{x}" y="{ly-12}" width="26" height="16" rx="4" class="{cls}"/>')
         out.append(f'<text x="{x+34}" y="{ly+1}" class="arch-d" text-anchor="start">{esc(t)}</text>')
     out.append("</svg>")
@@ -775,6 +781,7 @@ def article_svg(lang: str) -> str:
 
 
 CITE_RE = re.compile(r"\{\{c:([^}]*)\}\}")
+REF_RE = re.compile(r"\{\{r:([^|}]+)\|([^}]+)\}\}")
 
 
 def render_article_body(c: Ctx, raw: str, day_dates: set[str]) -> str:
@@ -792,7 +799,15 @@ def render_article_body(c: Ctx, raw: str, day_dates: set[str]) -> str:
         o, cl = ("（", "）") if c.lang == "zh" else ("(", ")")
         return f'<span class="cite">{o}{" · ".join(bits)}{cl}</span>'
 
-    body = CITE_RE.sub(cite, raw)
+    def ref(m: re.Match) -> str:
+        u, label = m.group(1).strip(), m.group(2).strip()
+        o, cl = ("（", "）") if c.lang == "zh" else ("(", ")")
+        sep = "：" if c.lang == "zh" else ": "
+        return f'<span class="cite">{o}{esc(s["checked"])}{sep}<a href="{esc(u)}" rel="noopener noreferrer">{esc(label)}</a>{cl}</span>'
+
+    body = REF_RE.sub(ref, CITE_RE.sub(cite, raw))
+    if "{{" in body.replace("{{svg}}", ""):
+        raise SystemExit("unrendered macro left in article body")
     return body.replace("{{svg}}", article_svg(c.lang))
 
 
@@ -1171,7 +1186,6 @@ EXTRA_STYLES = """
 .arch-band-t { font-size: 14px; font-weight: 600; fill: var(--ink); }
 .arch-box { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.4; }
 .arch-box.dashed { fill: #fffcf6; stroke-dasharray: 6 4; }
-.arch-box.grey { fill: #ece7dc; stroke: #9a9284; stroke-dasharray: 2 3; }
 .arch-l { font-size: 13px; font-weight: 600; fill: var(--ink); }
 .arch-d { font-size: 11.5px; fill: var(--muted); }
 .arch-h { font-size: 13px; fill: var(--muted); }
