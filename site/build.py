@@ -99,6 +99,11 @@ STRINGS = {
         "kw_sep": "、",
         "example": "示例",
         "article_entry_pre": "专题文章：",
+        "research_heading": "我的账户研究",
+        "research_zh": "中文版",
+        "research_en": "English",
+        "research_label": "账户研究文章链接",
+        "archive_jump": "跳到月份",
         "article_kicker": "专题",
         "article_back": "返回目录",
         "cite_day": "日报",
@@ -177,6 +182,11 @@ STRINGS = {
         "kw_sep": ", ",
         "example": "Example",
         "article_entry_pre": "Feature article: ",
+        "research_heading": "My account research",
+        "research_zh": "中文版",
+        "research_en": "English",
+        "research_label": "Account research article links",
+        "archive_jump": "Jump to month",
         "article_kicker": "Feature",
         "article_back": "Back to all reports",
         "cite_day": "daily",
@@ -367,9 +377,39 @@ def intro_block_html(c: Ctx, include_sources: bool) -> str:
             f'<p class="sources-link-note">{esc(s["sources_link_pre"])}'
             f'<a href="{esc(c.href("about/"))}">{esc(s["sources_link"])}</a>{s["sentence_end"]}</p>'
         )
+    main = (
+        f'<h2>{esc(s["about_heading"])}</h2>'
+        f"<p>{esc(s['intro'])}</p>{article_entry_html(c)}{sources}{suggest_html(c)}"
+    )
+    if include_sources:
+        return f'<section class="about-intro">{main}</section>'
     return (
-        f'<section class="about-intro"><h2>{esc(s["about_heading"])}</h2>'
-        f"<p>{esc(s['intro'])}</p>{article_entry_html(c)}{sources}{suggest_html(c)}</section>"
+        f'<section class="about-intro has-aside"><div class="about-main">{main}</div>'
+        f"{research_aside_html(c)}</section>"
+    )
+
+
+def research_aside_html(c: Ctx) -> str:
+    s = c.s
+    items = []
+    for slug, meta in ARTICLES.items():
+        links = []
+        for lang, label in (("zh", s["research_zh"]), ("en", STRINGS["zh"]["research_en"])):
+            path = f'/{STRINGS[lang]["prefix"]}{slug}/'
+            href = c.root + STRINGS[lang]["prefix"] + slug + "/"
+            cur = ' aria-current="true"' if lang == c.lang else ""
+            links.append(
+                f'<a class="research-link" href="{esc(href)}" hreflang="{STRINGS[lang]["hreflang"]}" '
+                f'lang="{STRINGS[lang]["html_lang"]}"{cur}><span class="rl-lang">{esc(label)}</span>'
+                f'<span class="rl-path">{esc(path)}</span></a>'
+            )
+        items.append(
+            f'<p class="research-title">{esc(meta[c.lang]["title"])}</p>'
+            f'<div class="research-links">{"".join(links)}</div>'
+        )
+    return (
+        f'<aside class="research-aside" aria-label="{esc(s["research_label"])}">'
+        f'<h2>{esc(s["research_heading"])}</h2>{"".join(items)}</aside>'
     )
 
 
@@ -581,6 +621,11 @@ def render_archive(c: Ctx, days: list[dict]) -> str:
             f'<ul class="archive-list">{"".join(rows)}</ul></section>'
         )
     body = "".join(sections) or f"<p>{esc(s['archive_empty'])}</p>"
+    if months:
+        chips = "".join(
+            f'<a href="#m{esc(ym)}">{esc(fmt_month(ym, c.lang))}</a>' for ym in sorted(months, reverse=True)
+        )
+        body = f'<nav class="archive-jump" aria-label="{esc(s["archive_jump"])}">{chips}</nav>' + body
     return f"""{head_html(c, f'{s["archive_title"]} · {s["brand"]}', s["archive_desc"])}
 <body>
   <header class="site-header">
@@ -1143,25 +1188,68 @@ img { max-width: 100%; display: block; }
 .pager .current { background: var(--accent); border-color: var(--accent); color: #fffcf6; }
 .pager .disabled { color: var(--line); }
 .pager .gap { border: 0; background: transparent; min-width: 0; padding: 0.35rem 0.2rem; }
-.archive-main { padding-bottom: 3rem; display: grid; gap: 2rem; }
+.archive-main {
+  width: min(1080px, calc(100% - 2rem));
+  margin: 0.4rem auto 0;
+  padding: 0 0 3rem;
+  display: grid;
+  gap: 1.4rem;
+}
+.archive-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 0.4rem;
+}
+.archive-jump a {
+  padding: 0.2rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+.archive-jump a:hover { border-color: var(--accent); color: var(--accent); }
+.archive-month {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.3rem 1.6rem 1.4rem;
+  scroll-margin-top: 1rem;
+}
 .archive-month h2 {
   font-family: var(--serif);
   font-size: 1.45rem;
-  margin: 0 0 0.8rem;
-  padding-bottom: 0.4rem;
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--line);
 }
 .archive-month h2 .count { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); margin-left: 0.6rem; font-weight: 400; }
-.archive-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
-.archive-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 0.8rem; align-items: baseline; }
-.archive-list a.day { font-family: var(--serif); font-weight: 600; }
+.archive-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.archive-list li {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 55%, transparent);
+  border-radius: 8px;
+}
+.archive-list li:last-child { border-bottom: 0; }
+.archive-list li:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+.archive-list a.day { font-family: var(--serif); font-weight: 600; white-space: nowrap; }
 .archive-list .kw { color: var(--muted); font-size: 0.92rem; }
 .day-nav { display: flex; justify-content: space-between; gap: 1rem; padding: 0 0 2rem; font-size: 0.95rem; }
-@media (max-width: 600px) { .archive-list li { grid-template-columns: 1fr; gap: 0.1rem; } }
+@media (max-width: 600px) {
+  .archive-list li { grid-template-columns: 1fr; gap: 0.1rem; padding: 0.55rem 0.2rem; }
+  .archive-month { padding: 1rem 1rem 1.1rem; }
+}
 """
 
 EXTRA_STYLES = """
-.page-status { text-align: center; margin-left: auto; margin-right: auto; max-width: 46rem; }
+.page-status { text-align: center; margin-left: auto; margin-right: auto; max-width: 46rem; padding: 0 1rem; }
 .site-nav { flex-wrap: wrap; align-items: baseline; }
 .site-nav a.lang-switch { margin-left: auto; border: 1px solid var(--line); border-radius: 999px; padding: 0 0.7rem; }
 .site-nav a.lang-switch:hover { border-color: var(--accent); }
@@ -1192,6 +1280,40 @@ EXTRA_STYLES = """
 .article-date { color: var(--muted); font-size: 0.9rem; margin: 0.3rem 0 0; }
 .article-back { margin-top: 1.4rem; }
 .about-intro .article-entry { margin-top: 0.85rem; font-weight: 600; }
+.about-intro.has-aside {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem);
+  gap: 1.6rem;
+  align-items: start;
+}
+.research-aside {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 5%, var(--paper));
+  padding: 1rem 1.1rem 1.1rem;
+}
+.about-intro .research-aside h2 { font-size: 1.1rem; margin: 0 0 0.45rem; }
+.about-intro .research-title { font-size: 0.92rem; color: var(--muted); margin: 0 0 0.75rem; }
+.research-links { display: grid; gap: 0.5rem; }
+.research-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+}
+.research-link:hover { border-color: var(--accent); color: var(--accent); }
+.research-link[aria-current] { border-color: var(--accent); }
+.research-link .rl-lang { font-weight: 600; }
+.research-link .rl-path { font-size: 0.85rem; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+@media (max-width: 800px) {
+  .about-intro.has-aside { grid-template-columns: 1fr; gap: 1.1rem; }
+}
 html[lang="en"] body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans CJK SC", sans-serif; }
 """
 
