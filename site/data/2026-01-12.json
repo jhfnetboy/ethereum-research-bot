@@ -1,0 +1,153 @@
+{
+  "date": "2026-01-12",
+  "keywords": [
+    "ACDT #65 bal-devnet-2 定于 1 月下旬并加入 EIP-8024",
+    "EIP-7708 与 EIP-7778",
+    "BPO3 暂不急",
+    "Vitalik 递归 STARK 带宽高效内存池",
+    "AA 与后量子的显式消息通道",
+    "DAS 无速率编码",
+    "Vitalik 以太坊必须通过 walkaway test",
+    "零知识代币包装 ERC 合并"
+  ],
+  "summary": "ACDT #65：bal-devnet-2 定于 1 月下旬，加入 EIP-8024、EIP-7708 ETH 转账日志与 EIP-7778 无退款区块 gas 计算，可能加入 EIP-7843；BPO3 按当前用量不急。VitalikButerin 提出后量子环境下用递归 STARK 聚合内存池对象以节省带宽。VitalikButerin 发文称以太坊本身必须通过 walkaway test。",
+  "items": [
+    {
+      "topic": "会议：ACDT #65",
+      "title": "ACDT #65",
+      "note": "21:00，据 Ethereal news #7：BPO3 按当前用量不急，且需要所有共识层客户端实现 getBlobV3 与部分 cell 消息；bal-devnet-2 目标 1 月下旬，加入 EIP-8024 SWAPN、DUPN 与 EXCHANGE，EIP-7708 ETH 转账发出日志，EIP-7778 无退款区块 gas 计算，可能加入 EIP-7843 SLOTNUM；bal-devnet-3 计划再加四项；ePBS 讨论出价最低增幅、提款与分叉时 builder 接入。",
+      "url": "https://forkcast.org/calls/acdt/065",
+      "date": "2026-01-12",
+      "title_en": "ACDT #65",
+      "note_en": "21:00, per Ethereal news #7: BPO3 is not urgent at current usage and needs getBlobV3 plus partial cell messages in every consensus client; bal-devnet-2 targets late January with EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfers emitting a log, EIP-7778 block gas accounting without refunds and maybe EIP-7843 SLOTNUM; bal-devnet-3 plans four more; ePBS discussed minimum bid increments, withdrawals and builder onboarding at the fork.",
+      "topic_en": "Calls: ACDT #65"
+    },
+    {
+      "topic": "会议：ACDT #65",
+      "title": "Ethereal news #7",
+      "note": "ACDT #65 21:00，据 Ethereal news #7：BPO3 按当前用量不急，且需要所有共识层客户端实现 getBlobV3 与部分 cell 消息；bal-devnet-2 目标 1 月下旬，加入 EIP-8024 SWAPN、DUPN 与 EXCHANGE，EIP-7708 ETH 转账发出日志，EIP-7778 无退款区块 gas 计算，可能加入 EIP-7843 SLOTNUM；bal-devnet-3 计划再加四项；ePBS 讨论出价最低增幅、提款与分叉时 builder 接入。",
+      "url": "https://ethereal.news/ethereal-news-weekly-7/",
+      "date": "2026-01-12",
+      "title_en": "Ethereal news #7",
+      "note_en": "ACDT #65, 21:00, per Ethereal news #7: BPO3 is not urgent at current usage and needs getBlobV3 plus partial cell messages in every consensus client; bal-devnet-2 targets late January with EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfers emitting a log, EIP-7778 block gas accounting without refunds and maybe EIP-7843 SLOTNUM; bal-devnet-3 plans four more; ePBS discussed minimum bid increments, withdrawals and builder onboarding at the fork.",
+      "topic_en": "Calls: ACDT #65"
+    },
+    {
+      "topic": "会议：ACDT #65",
+      "title": "bal-devnet-2",
+      "note": "ACDT #65 21:00，据 Ethereal news #7：BPO3 按当前用量不急，且需要所有共识层客户端实现 getBlobV3 与部分 cell 消息；bal-devnet-2 目标 1 月下旬，加入 EIP-8024 SWAPN、DUPN 与 EXCHANGE，EIP-7708 ETH 转账发出日志，EIP-7778 无退款区块 gas 计算，可能加入 EIP-7843 SLOTNUM；bal-devnet-3 计划再加四项；ePBS 讨论出价最低增幅、提款与分叉时 builder 接入。",
+      "url": "https://notes.ethereum.org/@ethpandaops/bal-devnet-2",
+      "date": "2026-01-12",
+      "title_en": "bal-devnet-2",
+      "note_en": "ACDT #65, 21:00, per Ethereal news #7: BPO3 is not urgent at current usage and needs getBlobV3 plus partial cell messages in every consensus client; bal-devnet-2 targets late January with EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfers emitting a log, EIP-7778 block gas accounting without refunds and maybe EIP-7843 SLOTNUM; bal-devnet-3 plans four more; ePBS discussed minimum bid increments, withdrawals and builder onboarding at the fork.",
+      "topic_en": "Calls: ACDT #65"
+    },
+    {
+      "topic": "交易：后量子内存池",
+      "title": "ethresear.ch：基于递归 STARK 的带宽高效内存池",
+      "note": "（vbuterin）17:15：大量用户对象都需广播给最终 builder，在后量子环境下椭圆曲线 SNARK 不可用，文章用递归 STARK 聚合以节省带宽。",
+      "url": "https://ethresear.ch/t/recursive-stark-based-bandwidth-efficient-mempool/23838",
+      "date": "2026-01-12",
+      "title_en": "ethresear.ch: Recursive STARK based bandwidth efficient mempool",
+      "note_en": "(vbuterin), 17:15: many user objects must be broadcast to a final builder, and with elliptic curve SNARKs unusable after quantum, the post aggregates them with recursive STARKs to save bandwidth.",
+      "topic_en": "Transactions: a post-quantum mempool"
+    },
+    {
+      "topic": "交易：后量子内存池",
+      "title": "Magicians：AA 与后量子的显式消息通道，防止域分离“虫洞”",
+      "note": "11:29。",
+      "url": "https://ethereum-magicians.org/t/explicit-message-lanes-for-aa-pq-preventing-domain-separation-wormholes/27419",
+      "date": "2026-01-12",
+      "title_en": "Magicians: Explicit Message Lanes for AA plus PQ, preventing domain separation wormholes",
+      "note_en": "11:29.",
+      "topic_en": "Transactions: a post-quantum mempool"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：在 DAS 中使用无速率编码",
+      "note": "（MoritzGrundei）17:46；新增 ERC：零知识代币包装器（doublespending）2025 年 10 月 28 日提交后合并；EIP-8096：重新定价改为翻倍（marcindsobczak）提交并合并；ERC-8121：通过钩子跨链调用函数 23:29。",
+      "url": "https://ethresear.ch/t/using-rateless-coding-for-das/23839",
+      "date": "2026-01-12",
+      "title_en": "ethresear.ch: Using rateless coding for DAS",
+      "note_en": "(MoritzGrundei), 17:46; Add ERC: Zero Knowledge Token Wrapper (doublespending), merged after submission on October 28, 2025; EIP-8096: change reprice to double (marcindsobczak), submitted and merged; ERC-8121: Cross-Chain Function Calls via Hooks, 23:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：零知识代币包装器",
+      "note": "ethresear.ch：在 DAS 中使用无速率编码（MoritzGrundei）17:46；新增 ERC：零知识代币包装器（doublespending）2025 年 10 月 28 日提交后合并；EIP-8096：重新定价改为翻倍（marcindsobczak）提交并合并；ERC-8121：通过钩子跨链调用函数 23:29。",
+      "url": "https://github.com/ethereum/ERCs/pull/1322",
+      "date": "2026-01-12",
+      "title_en": "Add ERC: Zero Knowledge Token Wrapper",
+      "note_en": "Ethresear.ch: Using rateless coding for DAS (MoritzGrundei), 17:46; Add ERC: Zero Knowledge Token Wrapper (doublespending), merged after submission on October 28, 2025; EIP-8096: change reprice to double (marcindsobczak), submitted and merged; ERC-8121: Cross-Chain Function Calls via Hooks, 23:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8096：重新定价改为翻倍",
+      "note": "ethresear.ch：在 DAS 中使用无速率编码（MoritzGrundei）17:46；新增 ERC：零知识代币包装器（doublespending）2025 年 10 月 28 日提交后合并；EIP-8096：重新定价改为翻倍（marcindsobczak）提交并合并；ERC-8121：通过钩子跨链调用函数 23:29。",
+      "url": "https://github.com/ethereum/EIPs/pull/11063",
+      "date": "2026-01-12",
+      "title_en": "EIP-8096: change reprice to double",
+      "note_en": "Ethresear.ch: Using rateless coding for DAS (MoritzGrundei), 17:46; Add ERC: Zero Knowledge Token Wrapper (doublespending), merged after submission on October 28, 2025; EIP-8096: change reprice to double (marcindsobczak), submitted and merged; ERC-8121: Cross-Chain Function Calls via Hooks, 23:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8121：通过钩子跨链调用函数",
+      "note": "ethresear.ch：在 DAS 中使用无速率编码（MoritzGrundei）17:46；新增 ERC：零知识代币包装器（doublespending）2025 年 10 月 28 日提交后合并；EIP-8096：重新定价改为翻倍（marcindsobczak）提交并合并；ERC-8121：通过钩子跨链调用函数 23:29。",
+      "url": "https://ethereum-magicians.org/t/erc-8121-cross-chain-function-calls-via-hooks/27424",
+      "date": "2026-01-12",
+      "title_en": "ERC-8121: Cross-Chain Function Calls via Hooks",
+      "note_en": "Ethresear.ch: Using rateless coding for DAS (MoritzGrundei), 17:46; Add ERC: Zero Knowledge Token Wrapper (doublespending), merged after submission on October 28, 2025; EIP-8096: change reprice to double (marcindsobczak), submitted and merged; ERC-8121: Cross-Chain Function Calls via Hooks, 23:29.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：以太坊本身必须通过 walkaway test，应支持像锤子一样买来就归你的工具型应用",
+      "note": "14:56；zengjiajun_eth：Lean Ethereum 加原生 AA、FOCIL、降低增发与 ZKEVM 就完成了 19:50；donnoh_eth：谈 EIP-8025 23:09。",
+      "url": "https://x.com/VitalikButerin/status/2010621884811845708",
+      "date": "2026-01-12",
+      "title_en": "VitalikButerin: Ethereum itself must pass the walkaway test and support tool like apps that are yours once bought, like a hammer",
+      "note_en": "14:56; zengjiajun_eth: Lean Ethereum plus native AA, FOCIL, issuance reduction and ZKEVM and done, 19:50; donnoh_eth: on EIP-8025, 23:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zengjiajun_eth：Lean Ethereum 加原生 AA、FOCIL、降低增发与 ZKEVM 就完成了",
+      "note": "VitalikButerin：以太坊本身必须通过 walkaway test，应支持像锤子一样买来就归你的工具型应用 14:56；zengjiajun_eth：Lean Ethereum 加原生 AA、FOCIL、降低增发与 ZKEVM 就完成了 19:50；donnoh_eth：谈 EIP-8025 23:09。",
+      "url": "https://x.com/zengjiajun_eth/status/2010695914118115647",
+      "date": "2026-01-12",
+      "title_en": "zengjiajun_eth: Lean Ethereum plus native AA, FOCIL, issuance reduction and ZKEVM and done",
+      "note_en": "VitalikButerin: Ethereum itself must pass the walkaway test and support tool like apps that are yours once bought, like a hammer, 14:56; zengjiajun_eth: Lean Ethereum plus native AA, FOCIL, issuance reduction and ZKEVM and done, 19:50; donnoh_eth: on EIP-8025, 23:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：谈 EIP-8025",
+      "note": "VitalikButerin：以太坊本身必须通过 walkaway test，应支持像锤子一样买来就归你的工具型应用 14:56；zengjiajun_eth：Lean Ethereum 加原生 AA、FOCIL、降低增发与 ZKEVM 就完成了 19:50；donnoh_eth：谈 EIP-8025 23:09。",
+      "url": "https://x.com/donnoh_eth/status/2010745897676611906",
+      "date": "2026-01-12",
+      "title_en": "donnoh_eth: on EIP-8025",
+      "note_en": "VitalikButerin: Ethereum itself must pass the walkaway test and support tool like apps that are yours once bought, like a hammer, 14:56; zengjiajun_eth: Lean Ethereum plus native AA, FOCIL, issuance reduction and ZKEVM and done, 19:50; donnoh_eth: on EIP-8025, 23:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/recursive-stark-based-bandwidth-efficient-mempool/23838",
+    "credit": "ethresear.ch, Recursive-STARK-based bandwidth-efficient mempool",
+    "local_path": "assets/2026-01-12.jpg",
+    "credit_en": "ethresear.ch, Recursive-STARK-based bandwidth-efficient mempool"
+  },
+  "keywords_en": [
+    "ACDT #65 sets bal-devnet-2 for late January with EIP-8024",
+    "EIP-7708 and EIP-7778",
+    "BPO3 not urgent",
+    "Vitalik's recursive STARK bandwidth efficient mempool",
+    "explicit message lanes for AA and post-quantum",
+    "rateless coding for DAS",
+    "Vitalik says Ethereum must pass the walkaway test",
+    "a zero knowledge token wrapper ERC merged"
+  ],
+  "summary_en": "ACDT #65: bal-devnet-2 targets late January with EIP-8024, EIP-7708 ETH transfer logs and EIP-7778 block gas accounting without refunds, maybe EIP-7843; BPO3 is not urgent at current usage. VitalikButerin proposed aggregating mempool objects with recursive STARKs to save bandwidth in a post-quantum setting. VitalikButerin wrote that Ethereum itself must pass the walkaway test."
+}

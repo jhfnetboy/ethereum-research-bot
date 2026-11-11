@@ -1,0 +1,85 @@
+{
+  "date": "2026-01-18",
+  "keywords": [
+    "协议简洁性是无需信任的关键",
+    "把授权与执行分离",
+    "L1 TPS 超过所有 validium 与 optimium",
+    "多个 EIP 被标记 stagnant"
+  ],
+  "summary": "周日较安静。VitalikButerin 强调协议简洁性是无需信任、通过离场测试与自主权中常被低估的一环。Magicians 讨论把授权视为执行之下缺失的一层状态。donnoh_eth 指出以太坊 L1 的 TPS 持续超过所有 validium 与 optimium 之和。",
+  "items": [
+    {
+      "topic": "账户：授权层",
+      "title": "Magicians：在以太坊中把授权与执行分离",
+      "note": "（recurmj）05:51：主张授权是执行之下缺失的一层机器状态，许可式拉取是唯一正确尊重这一层的金融执行语义。",
+      "url": "https://ethereum-magicians.org/t/separating-authorization-from-execution-in-ethereum/27452",
+      "date": "2026-01-18",
+      "title_en": "Magicians: Separating Authorization from Execution in Ethereum",
+      "note_en": "(recurmj), 05:51: argues authorization is a missing layer of machine state beneath execution, and permissioned pull is the only financial execution semantics that respects it.",
+      "topic_en": "Accounts: an authorization layer"
+    },
+    {
+      "topic": "路线",
+      "title": "VitalikButerin：无需信任、离场测试与自主权中长期被低估的一环是协议简洁性",
+      "note": "16:27。",
+      "url": "https://x.com/VitalikButerin/status/2012819160426807639",
+      "date": "2026-01-18",
+      "title_en": "VitalikButerin: an underrated part of trustlessness, the walkaway test and self sovereignty is protocol simplicity",
+      "note_en": "16:27.",
+      "topic_en": "Roadmap"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7612 被标记 stagnant",
+      "note": "（eth-bot）提交；EIP-5920 进入 Stagnant（eth-bot）合并；EIP-7954 被标记 stagnant（eth-bot）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11101",
+      "date": "2026-01-18",
+      "title_en": "EIP-7612 flagged stagnant",
+      "note_en": "(eth-bot), submitted; EIP-5920: move to Stagnant (eth-bot), merged; EIP-7954 flagged stagnant (eth-bot), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-5920 进入 Stagnant",
+      "note": "EIP-7612 被标记 stagnant（eth-bot）提交；EIP-5920 进入 Stagnant（eth-bot）合并；EIP-7954 被标记 stagnant（eth-bot）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10985",
+      "date": "2026-01-18",
+      "title_en": "EIP-5920: move to Stagnant",
+      "note_en": "EIP-7612 flagged stagnant (eth-bot), submitted; EIP-5920: move to Stagnant (eth-bot), merged; EIP-7954 flagged stagnant (eth-bot), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7954 被标记 stagnant",
+      "note": "EIP-7612 被标记 stagnant（eth-bot）提交；EIP-5920 进入 Stagnant（eth-bot）合并；EIP-7954 被标记 stagnant（eth-bot）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/10986",
+      "date": "2026-01-18",
+      "title_en": "EIP-7954 flagged stagnant",
+      "note_en": "EIP-7612 flagged stagnant (eth-bot), submitted; EIP-5920: move to Stagnant (eth-bot), merged; EIP-7954 flagged stagnant (eth-bot), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：以太坊 L1 的 TPS 持续超过所有 validium 与 optimium 之和",
+      "note": "02:28。",
+      "url": "https://x.com/donnoh_eth/status/2012607983289594074",
+      "date": "2026-01-18",
+      "title_en": "donnoh_eth: Ethereum L1 consistently does more TPS than all validiums and optimiums combined",
+      "note_en": "02:28.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/separating-authorization-from-execution-in-ethereum/27452",
+    "credit": "Ethereum Magicians, Separating Authorization from Execution in Ethereum",
+    "local_path": "assets/2026-01-18.jpg",
+    "credit_en": "Ethereum Magicians, Separating Authorization from Execution in Ethereum"
+  },
+  "keywords_en": [
+    "Protocol simplicity as a key to trustlessness",
+    "separating authorization from execution",
+    "L1 TPS above all validiums and optimiums combined",
+    "several EIPs flagged stagnant"
+  ],
+  "summary_en": "A quiet Sunday. VitalikButerin stressed protocol simplicity as an underrated part of trustlessness, the walkaway test and self sovereignty. A Magicians post framed authorization as a missing layer of state beneath execution. donnoh_eth noted Ethereum L1 consistently does more TPS than all validiums and optimiums combined."
+}

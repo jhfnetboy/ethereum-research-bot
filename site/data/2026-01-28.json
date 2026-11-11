@@ -1,0 +1,151 @@
+{
+  "date": "2026-01-28",
+  "keywords": [
+    "账户配置式 AA EIP（EIP-8130）提交",
+    "7702 账户的隐身地址与子账户",
+    "zkFOCIL 实现与基准",
+    "授权对象 ERC-8139",
+    "ERC-8004 即将上主网",
+    "EIP-7708 转账日志澄清",
+    "Vitalik 用 Etherscan 查多签签名者"
+  ],
+  "summary": "chunter-cb 提交“通过账户配置实现账户抽象”EIP：账户为签名密钥配置链上验证器合约，协议原生验证 K1、P256、BLS、WebAuthn，其他算法在沙盒纯函数合约中验证。ethresear.ch 提出为 7702 账户加入隐身地址与子账户。zkFOCIL 的可链接环签名实现给出基准。",
+  "items": [
+    {
+      "topic": "原生 AA：账户配置",
+      "title": "新增 EIP：通过账户配置实现账户抽象",
+      "note": "（chunter-cb）提交：账户为签名密钥指定链上验证器合约，协议对 K1、P256、BLS、WebAuthn 等常用验证器原生验证，其他算法通过沙盒化纯函数合约验证。",
+      "url": "https://github.com/ethereum/EIPs/pull/11186",
+      "date": "2026-01-28",
+      "title_en": "Add EIP: Account Abstraction by Account Configuration",
+      "note_en": "(chunter-cb), submitted: accounts assign onchain verifier contracts to signing keys, the protocol natively validates well known verifiers such as K1, P256, BLS and WebAuthn, and other algorithms are verified through sandboxed pure function contracts.",
+      "topic_en": "Native AA: account configuration"
+    },
+    {
+      "topic": "隐私：隐身地址与包含列表",
+      "title": "ethresear.ch：7702 账户的隐身地址与子账户",
+      "note": "（0xkoiner）16:03：根密钥可以是现有 7702 账户，花费密钥与查看密钥存于 KMS、HSM 或 MPC，隐身地址发现需存储 ERC-5564 元数据（1 字节 viewTag 与 33 字节临时公钥）。",
+      "url": "https://ethresear.ch/t/stealth-address-sub-accounts-for-7702-account/23964",
+      "date": "2026-01-28",
+      "title_en": "ethresear.ch: Stealth Address + Sub Accounts for 7702 Account",
+      "note_en": "(0xkoiner), 16:03: the root key can be an existing 7702 account, spending and viewing keys live in a KMS, HSM or MPC, and discovery needs ERC-5564 metadata (a 1 byte viewTag and a 33 byte ephemeral public key).",
+      "topic_en": "Privacy: stealth addresses and inclusion lists"
+    },
+    {
+      "topic": "隐私：隐身地址与包含列表",
+      "title": "ethresear.ch：zkFOCIL 实现与基准报告",
+      "note": "（shreyas-londhe）20:36：实现并测试 zkFOCIL 提出的可链接环签名，在不暴露单个验证者的情况下保护包含列表委员会免受胁迫。",
+      "url": "https://ethresear.ch/t/zkfocil-implementation-benchmarking-report/23966",
+      "date": "2026-01-28",
+      "title_en": "ethresear.ch: zkFOCIL Implementation and Benchmarking Report",
+      "note_en": "(shreyas-londhe), 20:36: implements and benchmarks the zkFOCIL linkable ring signature, protecting the inclusion list committee from coercion without exposing individual validators.",
+      "topic_en": "Privacy: stealth addresses and inclusion lists"
+    },
+    {
+      "topic": "交易：授权与日志",
+      "title": "新增 ERC：授权对象（AO）",
+      "note": "（recurmj）提交，ERC-8139 讨论帖 04:19；EIP-7708：明确调用自身不产生转账日志（rakita）提交并合并；EIP-7778：恢复为无收据字段（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1491",
+      "date": "2026-01-28",
+      "title_en": "Add ERC: Authorization Objects (AO)",
+      "note_en": "(recurmj), submitted, with the ERC-8139 thread, 04:19; EIP-7708: clarify CALL to self does not emit a transfer log (rakita), submitted and merged; EIP-7778: revert back to no receipt field (nerolation), submitted and merged.",
+      "topic_en": "Transactions: authorization and logs"
+    },
+    {
+      "topic": "交易：授权与日志",
+      "title": "ERC-8139 讨论帖",
+      "note": "新增 ERC：授权对象（AO）（recurmj）提交，ERC-8139 讨论帖 04:19；EIP-7708：明确调用自身不产生转账日志（rakita）提交并合并；EIP-7778：恢复为无收据字段（nerolation）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8139-authorization-objects/27608",
+      "date": "2026-01-28",
+      "title_en": "ERC-8139 thread",
+      "note_en": "Add ERC: Authorization Objects (AO) (recurmj), submitted, with the ERC-8139 thread, 04:19; EIP-7708: clarify CALL to self does not emit a transfer log (rakita), submitted and merged; EIP-7778: revert back to no receipt field (nerolation), submitted and merged.",
+      "topic_en": "Transactions: authorization and logs"
+    },
+    {
+      "topic": "交易：授权与日志",
+      "title": "EIP-7708：明确调用自身不产生转账日志",
+      "note": "新增 ERC：授权对象（AO）（recurmj）提交，ERC-8139 讨论帖 04:19；EIP-7708：明确调用自身不产生转账日志（rakita）提交并合并；EIP-7778：恢复为无收据字段（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11187",
+      "date": "2026-01-28",
+      "title_en": "EIP-7708: clarify CALL to self does not emit a transfer log",
+      "note_en": "Add ERC: Authorization Objects (AO) (recurmj), submitted, with the ERC-8139 thread, 04:19; EIP-7708: clarify CALL to self does not emit a transfer log (rakita), submitted and merged; EIP-7778: revert back to no receipt field (nerolation), submitted and merged.",
+      "topic_en": "Transactions: authorization and logs"
+    },
+    {
+      "topic": "交易：授权与日志",
+      "title": "EIP-7778：恢复为无收据字段",
+      "note": "新增 ERC：授权对象（AO）（recurmj）提交，ERC-8139 讨论帖 04:19；EIP-7708：明确调用自身不产生转账日志（rakita）提交并合并；EIP-7778：恢复为无收据字段（nerolation）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11191",
+      "date": "2026-01-28",
+      "title_en": "EIP-7778: revert back to no receipt field",
+      "note_en": "Add ERC: Authorization Objects (AO) (recurmj), submitted, with the ERC-8139 thread, 04:19; EIP-7708: clarify CALL to self does not emit a transfer log (rakita), submitted and merged; EIP-7778: revert back to no receipt field (nerolation), submitted and merged.",
+      "topic_en": "Transactions: authorization and logs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #68 议程",
+      "note": "00:44；ERC-7730：改进 map 处理（lcastillo-ledger）提交。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-68-february-2-2026/27607",
+      "date": "2026-01-28",
+      "title_en": "ACDT #68 agenda",
+      "note_en": "00:44; ERC-7730: improve maps handling (lcastillo-ledger), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：改进 map 处理",
+      "note": "ACDT #68 议程 00:44；ERC-7730：改进 map 处理（lcastillo-ledger）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1494",
+      "date": "2026-01-28",
+      "title_en": "ERC-7730: improve maps handling",
+      "note_en": "ACDT #68 agenda, 00:44; ERC-7730: improve maps handling (lcastillo-ledger), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：ERC-8004 即将上线主网，为 AI Agent 提供发现与可携带信誉",
+      "note": "00:36；VitalikButerin：手机上没有 Safe 应用时，用 Etherscan 的 read contract 查多签签名者 15:15；EliBenSasson：隐私能与合规共存 11:58。",
+      "url": "https://x.com/ethereum/status/2016203577203818723",
+      "date": "2026-01-28",
+      "title_en": "ethereum: ERC-8004 is going live on mainnet soon, giving AI agents discovery and portable reputation",
+      "note_en": "00:36; VitalikButerin: without the Safe app on his phone, he checked multisig signers via Etherscan's read contract, 15:15; EliBenSasson: privacy can coexist with compliance, 11:58.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：手机上没有 Safe 应用时，用 Etherscan 的 read contract 查多签签名者",
+      "note": "ethereum：ERC-8004 即将上线主网，为 AI Agent 提供发现与可携带信誉 00:36；VitalikButerin：手机上没有 Safe 应用时，用 Etherscan 的 read contract 查多签签名者 15:15；EliBenSasson：隐私能与合规共存 11:58。",
+      "url": "https://x.com/VitalikButerin/status/2016424844682723819",
+      "date": "2026-01-28",
+      "title_en": "VitalikButerin: without the Safe app on his phone, he checked multisig signers via Etherscan's read contract",
+      "note_en": "Ethereum: ERC-8004 is going live on mainnet soon, giving AI agents discovery and portable reputation, 00:36; VitalikButerin: without the Safe app on his phone, he checked multisig signers via Etherscan's read contract, 15:15; EliBenSasson: privacy can coexist with compliance, 11:58.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：隐私能与合规共存",
+      "note": "ethereum：ERC-8004 即将上线主网，为 AI Agent 提供发现与可携带信誉 00:36；VitalikButerin：手机上没有 Safe 应用时，用 Etherscan 的 read contract 查多签签名者 15:15；EliBenSasson：隐私能与合规共存 11:58。",
+      "url": "https://x.com/EliBenSasson/status/2016375417024737670",
+      "date": "2026-01-28",
+      "title_en": "EliBenSasson: privacy can coexist with compliance",
+      "note_en": "Ethereum: ERC-8004 is going live on mainnet soon, giving AI agents discovery and portable reputation, 00:36; VitalikButerin: without the Safe app on his phone, he checked multisig signers via Etherscan's read contract, 15:15; EliBenSasson: privacy can coexist with compliance, 11:58.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/stealth-address-sub-accounts-for-7702-account/23964",
+    "credit": "ethresear.ch, Stealth Address + Sub Accounts for 7702 Account",
+    "local_path": "assets/2026-01-28.jpg",
+    "credit_en": "ethresear.ch, Stealth Address + Sub Accounts for 7702 Account"
+  },
+  "keywords_en": [
+    "The account configuration AA EIP (EIP-8130) submitted",
+    "stealth addresses and sub accounts for 7702 accounts",
+    "zkFOCIL implementation and benchmarks",
+    "Authorization Objects ERC-8139",
+    "ERC-8004 nearing mainnet",
+    "EIP-7708 transfer log clarifications",
+    "Vitalik checks multisig signers on Etherscan"
+  ],
+  "summary_en": "chunter-cb submitted an EIP for account abstraction by account configuration: accounts configure signing keys with onchain verifier contracts, the protocol natively validates K1, P256, BLS and WebAuthn, and other algorithms run in sandboxed pure function contracts. An ethresear.ch post proposed stealth addresses and sub accounts for 7702 accounts. A zkFOCIL linkable ring signature implementation reported benchmarks."
+}

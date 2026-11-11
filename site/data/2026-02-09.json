@@ -1,0 +1,203 @@
+{
+  "date": "2026-02-09",
+  "keywords": [
+    "私钥停用感知的 ecRecover（EIP-8151）",
+    "EIP-8037 量化与储备模型",
+    "EIP-7904 收窄为计算 gas 上调",
+    "执行 gas 最低基础费",
+    "ACDT #69",
+    "bal-devnet-2 上线",
+    "ERC-7730 字段加密",
+    "ERC-7683 与互操作"
+  ],
+  "summary": "colinlyguo 提交感知私钥停用的 ecRecover EIP（EIP-8151）：DAI 等不可变的 ERC-2612 permit 合约依赖 ecRecover，EOA 停用私钥后仍可能被旧签名调用。misilva73 提交 EIP-8037 的量化方案与储备模型，EIP-7904 收窄为上调 13 个低效计算操作的 gas 并合并。ACDT #69 报告 bal-devnet-2 已上线，gas 重定价最终数字预计 3 月底。",
+  "items": [
+    {
+      "topic": "账户：私钥停用后的签名",
+      "title": "新增 EIP：感知私钥停用的 ecRecover",
+      "note": "（colinlyguo）提交，Magicians 讨论帖 EIP-8151 13:24：据 EIP-7851 讨论，实现 ERC-2612 permit 的不可变 ERC-20（如 DAI）依赖 ecRecover 验签，EOA 委托后停用私钥，旧私钥仍能通过 permit 动用资产。",
+      "url": "https://github.com/ethereum/EIPs/pull/11288",
+      "date": "2026-02-09",
+      "title_en": "Add EIP: Private Key Deactivation Aware ecRecover",
+      "note_en": "(colinlyguo), submitted, with the Magicians thread EIP-8151, 13:24: per the EIP-7851 discussion, immutable ERC-20s implementing ERC-2612 permit, such as DAI, rely on ecRecover, so after an EOA delegates and deactivates its key, the old key could still move assets through permit.",
+      "topic_en": "Accounts: signatures after key deactivation"
+    },
+    {
+      "topic": "账户：私钥停用后的签名",
+      "title": "Magicians 讨论帖 EIP-8151",
+      "note": "新增 EIP：感知私钥停用的 ecRecover（colinlyguo）提交，Magicians 讨论帖 EIP-8151 13:24：据 EIP-7851 讨论，实现 ERC-2612 permit 的不可变 ERC-20（如 DAI）依赖 ecRecover 验签，EOA 委托后停用私钥，旧私钥仍能通过 permit 动用资产。",
+      "url": "https://ethereum-magicians.org/t/eip-8151-account-code-restricted-ecrecover/27690",
+      "date": "2026-02-09",
+      "title_en": "Magicians thread EIP-8151",
+      "note_en": "Add EIP: Private Key Deactivation Aware ecRecover (colinlyguo), submitted, with the Magicians thread EIP-8151, 13:24: per the EIP-7851 discussion, immutable ERC-20s implementing ERC-2612 permit, such as DAI, rely on ecRecover, so after an EOA delegates and deactivates its key, the old key could still move assets through permit.",
+      "topic_en": "Accounts: signatures after key deactivation"
+    },
+    {
+      "topic": "账户：私钥停用后的签名",
+      "title": "EIP-7851 讨论",
+      "note": "新增 EIP：感知私钥停用的 ecRecover（colinlyguo）提交，Magicians 讨论帖 EIP-8151 13:24：据 EIP-7851 讨论，实现 ERC-2612 permit 的不可变 ERC-20（如 DAI）依赖 ecRecover 验签，EOA 委托后停用私钥，旧私钥仍能通过 permit 动用资产。",
+      "url": "https://ethereum-magicians.org/t/eip-7851-deactivate-reactivate-a-delegated-eoas-key/22344/14",
+      "date": "2026-02-09",
+      "title_en": "EIP-7851 discussion",
+      "note_en": "Add EIP: Private Key Deactivation Aware ecRecover (colinlyguo), submitted, with the Magicians thread EIP-8151, 13:24: per the EIP-7851 discussion, immutable ERC-20s implementing ERC-2612 permit, such as DAI, rely on ecRecover, so after an EOA delegates and deactivates its key, the old key could still move assets through permit.",
+      "topic_en": "Accounts: signatures after key deactivation"
+    },
+    {
+      "topic": "Gas：状态成本与计算重定价",
+      "title": "EIP-8037：加入量化、储备模型并细化 gas 计算",
+      "note": "（misilva73）提交：cost_per_state_byte 取前 4 个有效位量化，避免随 gas limit 频繁小幅变化；以储备模型取代基于回滚的 TX_MAX_GAS_LIMIT，把执行 gas 拆成 gas_left 与 state_gas_reservoir。",
+      "url": "https://github.com/ethereum/EIPs/pull/11292",
+      "date": "2026-02-09",
+      "title_en": "EIP-8037: add quantization, reservoir model, and refine gas accounting",
+      "note_en": "(misilva73), submitted: cost_per_state_byte is quantized to its top 4 significant bits to avoid frequent small changes as the gas limit moves, and a reservoir model replaces revert based TX_MAX_GAS_LIMIT enforcement by splitting execution gas into gas_left and state_gas_reservoir.",
+      "topic_en": "Gas: state cost and compute repricing"
+    },
+    {
+      "topic": "Gas：状态成本与计算重定价",
+      "title": "EIP-7904：新方法与初步数字",
+      "note": "（misilva73）合并，2 月 3 日提交：由“通用重定价”改名“计算 gas 成本上调”，只上调 13 个低于 60 Mgas/s 的计算操作与预编译。",
+      "url": "https://github.com/ethereum/EIPs/pull/11244",
+      "date": "2026-02-09",
+      "title_en": "EIP-7904: new methodology and preliminary numbers",
+      "note_en": "(misilva73), merged after submission on February 3: renamed from General Repricing to Compute Gas Cost Increase, it now raises costs only for 13 compute operations and precompiles below 60 Mgas/s.",
+      "topic_en": "Gas: state cost and compute repricing"
+    },
+    {
+      "topic": "Gas：状态成本与计算重定价",
+      "title": "ethresear.ch：用一个参数解决垃圾交易、状态膨胀与费用波动",
+      "note": "（lavender）14:08：提议为执行 gas 设最低基础费，因为扩容后需求常低于 50% 目标，基础费会趋近于零。",
+      "url": "https://ethresear.ch/t/solving-spam-state-bloat-and-fee-volatility-with-a-single-parameter/24088",
+      "date": "2026-02-09",
+      "title_en": "ethresear.ch: Solving Spam, State Bloat, and Fee Volatility with a Single Parameter",
+      "note_en": "(lavender), 14:08: proposes a minimum base fee for execution gas, since after scaling demand often sits below the 50% target and the base fee converges to zero.",
+      "topic_en": "Gas: state cost and compute repricing"
+    },
+    {
+      "topic": "会议：ACDT #69",
+      "title": "ACDT #69",
+      "note": "21:00，据 Ethereal news #11：bal-devnet-2 已上线；gas 重定价最终数字预计 3 月底；ethPandaOps 发布执行层客户端基准工具 Benchmarkoor。",
+      "url": "https://forkcast.org/calls/acdt/069/",
+      "date": "2026-02-09",
+      "title_en": "ACDT #69",
+      "note_en": "21:00, per Ethereal news #11: bal-devnet-2 is live; final gas repricing numbers are expected at the end of March; ethPandaOps released Benchmarkoor, an execution client benchmarking tool.",
+      "topic_en": "Calls: ACDT #69"
+    },
+    {
+      "topic": "会议：ACDT #69",
+      "title": "Ethereal news #11",
+      "note": "ACDT #69 21:00，据 Ethereal news #11：bal-devnet-2 已上线；gas 重定价最终数字预计 3 月底；ethPandaOps 发布执行层客户端基准工具 Benchmarkoor。",
+      "url": "https://ethereal.news/ethereal-news-weekly-11/",
+      "date": "2026-02-09",
+      "title_en": "Ethereal news #11",
+      "note_en": "ACDT #69, 21:00, per Ethereal news #11: bal-devnet-2 is live; final gas repricing numbers are expected at the end of March; ethPandaOps released Benchmarkoor, an execution client benchmarking tool.",
+      "topic_en": "Calls: ACDT #69"
+    },
+    {
+      "topic": "会议：ACDT #69",
+      "title": "bal-devnet-2",
+      "note": "ACDT #69 21:00，据 Ethereal news #11：bal-devnet-2 已上线；gas 重定价最终数字预计 3 月底；ethPandaOps 发布执行层客户端基准工具 Benchmarkoor。",
+      "url": "https://bal-devnet-2.ethpandaops.io/",
+      "date": "2026-02-09",
+      "title_en": "bal-devnet-2",
+      "note_en": "ACDT #69, 21:00, per Ethereal news #11: bal-devnet-2 is live; final gas repricing numbers are expected at the end of March; ethPandaOps released Benchmarkoor, an execution client benchmarking tool.",
+      "topic_en": "Calls: ACDT #69"
+    },
+    {
+      "topic": "会议：ACDT #69",
+      "title": "Benchmarkoor",
+      "note": "ACDT #69 21:00，据 Ethereal news #11：bal-devnet-2 已上线；gas 重定价最终数字预计 3 月底；ethPandaOps 发布执行层客户端基准工具 Benchmarkoor。",
+      "url": "https://github.com/ethpandaops/benchmarkoor#readme",
+      "date": "2026-02-09",
+      "title_en": "Benchmarkoor",
+      "note_en": "ACDT #69, 21:00, per Ethereal news #11: bal-devnet-2 is live; final gas repricing numbers are expected at the end of March; ethPandaOps released Benchmarkoor, an execution client benchmarking tool.",
+      "topic_en": "Calls: ACDT #69"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7862：与 7732 和 7928 对齐",
+      "note": "（nerolation）提交并合并；ERC-7730：加入加密规范（melanciani）合并；ERC-7730：字段加密的结构微调（lcastillo-ledger）提交并合并；ERC-8147：二叉树的局部性存储布局 13:06。",
+      "url": "https://github.com/ethereum/EIPs/pull/11289",
+      "date": "2026-02-09",
+      "title_en": "EIP-7862: align with 7732 and 7928",
+      "note_en": "(nerolation), submitted and merged; ERC-7730: add encryption specs (melanciani), merged; ERC-7730: small structural changes to field encryption (lcastillo-ledger), submitted and merged; ERC-8147: Locality-Preserving Storage Layout for Binary Trie, 13:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：加入加密规范",
+      "note": "EIP-7862：与 7732 和 7928 对齐（nerolation）提交并合并；ERC-7730：加入加密规范（melanciani）合并；ERC-7730：字段加密的结构微调（lcastillo-ledger）提交并合并；ERC-8147：二叉树的局部性存储布局 13:06。",
+      "url": "https://github.com/ethereum/ERCs/pull/1522",
+      "date": "2026-02-09",
+      "title_en": "ERC-7730: add encryption specs",
+      "note_en": "EIP-7862: align with 7732 and 7928 (nerolation), submitted and merged; ERC-7730: add encryption specs (melanciani), merged; ERC-7730: small structural changes to field encryption (lcastillo-ledger), submitted and merged; ERC-8147: Locality-Preserving Storage Layout for Binary Trie, 13:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：字段加密的结构微调",
+      "note": "EIP-7862：与 7732 和 7928 对齐（nerolation）提交并合并；ERC-7730：加入加密规范（melanciani）合并；ERC-7730：字段加密的结构微调（lcastillo-ledger）提交并合并；ERC-8147：二叉树的局部性存储布局 13:06。",
+      "url": "https://github.com/ethereum/ERCs/pull/1527",
+      "date": "2026-02-09",
+      "title_en": "ERC-7730: small structural changes to field encryption",
+      "note_en": "EIP-7862: align with 7732 and 7928 (nerolation), submitted and merged; ERC-7730: add encryption specs (melanciani), merged; ERC-7730: small structural changes to field encryption (lcastillo-ledger), submitted and merged; ERC-8147: Locality-Preserving Storage Layout for Binary Trie, 13:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8147：二叉树的局部性存储布局",
+      "note": "EIP-7862：与 7732 和 7928 对齐（nerolation）提交并合并；ERC-7730：加入加密规范（melanciani）合并；ERC-7730：字段加密的结构微调（lcastillo-ledger）提交并合并；ERC-8147：二叉树的局部性存储布局 13:06。",
+      "url": "https://ethereum-magicians.org/t/erc-8147-locality-preserving-storage-layout-for-binary-trie/27689",
+      "date": "2026-02-09",
+      "title_en": "ERC-8147: Locality-Preserving Storage Layout for Binary Trie",
+      "note_en": "EIP-7862: align with 7732 and 7928 (nerolation), submitted and merged; ERC-7730: add encryption specs (melanciani), merged; ERC-7730: small structural changes to field encryption (lcastillo-ledger), submitted and merged; ERC-8147: Locality-Preserving Storage Layout for Binary Trie, 13:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "barnabemonnot：ERC-7683 如何融入更大的互操作图景，意图式跨链由对手方先垫付资产以降低延迟",
+      "note": "17:30；ladislaus0x：以太坊的下一次大转变，从重新执行每笔交易到验证 ZK 证明 21:58；VitalikButerin：人们不愿完全转用 Signal 的一个原因 03:05。",
+      "url": "https://x.com/barnabemonnot/status/2020807563659333710",
+      "date": "2026-02-09",
+      "title_en": "barnabemonnot: how ERC-7683 fits a broader interop picture, with intent based bridging cutting latency by having a counterparty front assets",
+      "note_en": "17:30; ladislaus0x: Ethereum's next big shift, from re-executing every transaction to verifying ZK proofs, 21:58; VitalikButerin: one reason people hesitate to switch fully to Signal, 03:05.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ladislaus0x：以太坊的下一次大转变，从重新执行每笔交易到验证 ZK 证明",
+      "note": "barnabemonnot：ERC-7683 如何融入更大的互操作图景，意图式跨链由对手方先垫付资产以降低延迟 17:30；ladislaus0x：以太坊的下一次大转变，从重新执行每笔交易到验证 ZK 证明 21:58；VitalikButerin：人们不愿完全转用 Signal 的一个原因 03:05。",
+      "url": "https://x.com/ladislaus0x/status/2020874834855514278",
+      "date": "2026-02-09",
+      "title_en": "ladislaus0x: Ethereum's next big shift, from re-executing every transaction to verifying ZK proofs",
+      "note_en": "Barnabemonnot: how ERC-7683 fits a broader interop picture, with intent based bridging cutting latency by having a counterparty front assets, 17:30; ladislaus0x: Ethereum's next big shift, from re-executing every transaction to verifying ZK proofs, 21:58; VitalikButerin: one reason people hesitate to switch fully to Signal, 03:05.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：人们不愿完全转用 Signal 的一个原因",
+      "note": "barnabemonnot：ERC-7683 如何融入更大的互操作图景，意图式跨链由对手方先垫付资产以降低延迟 17:30；ladislaus0x：以太坊的下一次大转变，从重新执行每笔交易到验证 ZK 证明 21:58；VitalikButerin：人们不愿完全转用 Signal 的一个原因 03:05。",
+      "url": "https://x.com/VitalikButerin/status/2020589921895948446",
+      "date": "2026-02-09",
+      "title_en": "VitalikButerin: one reason people hesitate to switch fully to Signal",
+      "note_en": "Barnabemonnot: how ERC-7683 fits a broader interop picture, with intent based bridging cutting latency by having a counterparty front assets, 17:30; ladislaus0x: Ethereum's next big shift, from re-executing every transaction to verifying ZK proofs, 21:58; VitalikButerin: one reason people hesitate to switch fully to Signal, 03:05.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8151-account-code-restricted-ecrecover/27690",
+    "credit": "Ethereum Magicians, EIP-8151: Account Code Restricted ecRecover",
+    "local_path": "assets/2026-02-09.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8151: Account Code Restricted ecRecover"
+  },
+  "keywords_en": [
+    "Private key deactivation aware ecRecover (EIP-8151)",
+    "EIP-8037 quantization and reservoir model",
+    "EIP-7904 narrowed to a compute gas increase",
+    "a minimum base fee for execution gas",
+    "ACDT #69",
+    "bal-devnet-2 live",
+    "ERC-7730 field encryption",
+    "ERC-7683 and interop"
+  ],
+  "summary_en": "colinlyguo submitted a private key deactivation aware ecRecover EIP (EIP-8151): immutable ERC-2612 permit contracts such as DAI rely on ecRecover, so a deactivated EOA key could still be used through old signatures. misilva73 submitted EIP-8037 quantization and a reservoir model, and EIP-7904, narrowed to raising gas for 13 slow compute operations, merged. ACDT #69 reported bal-devnet-2 live, with final repricing numbers expected at the end of March."
+}

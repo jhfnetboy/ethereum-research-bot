@@ -1,0 +1,121 @@
+{
+  "date": "2026-01-17",
+  "keywords": [
+    "后量子与混合签名的显式消息通道",
+    "Vitalik 2026 年夺回自主权与无需信任",
+    "blob gas 市场让时间博弈有利可图",
+    "EIP-7778 新增 gas_spent 收据字段",
+    "签名 HTTP 请求 ERC",
+    "ZKML 推理 ERC 合并",
+    "Slither 新检测器"
+  ],
+  "summary": "Magicians 讨论 AA 与后量子、混合签名共存时的新型语义失效：同一签名在 ERC-1271、ERC-7913 与 AA 验证面之间可能被重放或误读，提议显式消息通道。VitalikButerin 列出 2026 年夺回自主权与无需信任的具体含义，包括借助 ZK-EVM 与 BAL 让本地运行全节点重新变得容易。potuz_eth 指出 blob gas 市场让时间博弈变得理性。",
+  "items": [
+    {
+      "topic": "交易签名：跨验证面重放",
+      "title": "Magicians：后量子与混合签名的显式消息通道，避免域分离“虫洞”",
+      "note": "（pipavlo82）11:18：AA 与后量子、混合签名共存后，同一签名在密码学上有效，却可能在 ERC-1271、ERC-7913 与 AA 验证之间被重放或重新解释，这是语义而非密码学层面的失效。",
+      "url": "https://ethereum-magicians.org/t/explicit-message-lanes-for-pq-hybrid-signatures-avoiding-domain-separation-wormholes/27451",
+      "date": "2026-01-17",
+      "title_en": "Magicians: Explicit Message Lanes for PQ and Hybrid Signatures, avoiding domain separation wormholes",
+      "note_en": "(pipavlo82), 11:18: as AA and post-quantum or hybrid signatures coexist, one cryptographically valid signature can be replayed or reinterpreted across ERC-1271, ERC-7913 and AA verification, a semantic rather than cryptographic failure.",
+      "topic_en": "Signatures: replay across verification surfaces"
+    },
+    {
+      "topic": "Gas 与 blob",
+      "title": "potuz_eth：问题不在于玩时间博弈的实体，而在于 blob gas 市场让这样做变得理性，Glamsterdam 至少会把 blob 传播移出见证的关键路径",
+      "note": "20:55；EIP-7778：新增 gas_spent 收据字段（nerolation）提交。",
+      "url": "https://x.com/potuz_eth/status/2012524100858622240",
+      "date": "2026-01-17",
+      "title_en": "potuz_eth: the problem is not entities playing timing games but a blob gas market that makes it rational, and Glamsterdam should at least move blob propagation out of the attestation hot path",
+      "note_en": "20:55; EIP-7778: add a gas_spent receipt field (nerolation), submitted.",
+      "topic_en": "Gas and blobs"
+    },
+    {
+      "topic": "Gas 与 blob",
+      "title": "EIP-7778：新增 gas_spent 收据字段",
+      "note": "potuz_eth：问题不在于玩时间博弈的实体，而在于 blob gas 市场让这样做变得理性，Glamsterdam 至少会把 blob 传播移出见证的关键路径 20:55；EIP-7778：新增 gas_spent 收据字段（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11099",
+      "date": "2026-01-17",
+      "title_en": "EIP-7778: add a gas_spent receipt field",
+      "note_en": "Potuz_eth: the problem is not entities playing timing games but a blob gas market that makes it rational, and Glamsterdam should at least move blob propagation out of the attestation hot path, 20:55; EIP-7778: add a gas_spent receipt field (nerolation), submitted.",
+      "topic_en": "Gas and blobs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：以太坊签名 HTTP 请求",
+      "note": "（jacopo-eth）提交；新增 ERC：可验证的 ML 模型推理（ZKML）（aryaethn）2025 年 7 月 23 日提交后合并；新增 ERC：基于 EIP-712 选择器的自描述字节（awrichar）2025 年 11 月 1 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1478",
+      "date": "2026-01-17",
+      "title_en": "Add ERC: Signed HTTP Requests with Ethereum",
+      "note_en": "(jacopo-eth), submitted; Add ERC: Verifiable ML Model Inference (ZKML) (aryaethn), merged after submission on July 23, 2025; Add ERC: Self-Describing Bytes via EIP-712 Selectors (awrichar), merged after submission on November 1, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：可验证的 ML 模型推理（ZKML）",
+      "note": "新增 ERC：以太坊签名 HTTP 请求（jacopo-eth）提交；新增 ERC：可验证的 ML 模型推理（ZKML）（aryaethn）2025 年 7 月 23 日提交后合并；新增 ERC：基于 EIP-712 选择器的自描述字节（awrichar）2025 年 11 月 1 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1133",
+      "date": "2026-01-17",
+      "title_en": "Add ERC: Verifiable ML Model Inference (ZKML)",
+      "note_en": "Add ERC: Signed HTTP Requests with Ethereum (jacopo-eth), submitted; Add ERC: Verifiable ML Model Inference (ZKML) (aryaethn), merged after submission on July 23, 2025; Add ERC: Self-Describing Bytes via EIP-712 Selectors (awrichar), merged after submission on November 1, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：基于 EIP-712 选择器的自描述字节",
+      "note": "新增 ERC：以太坊签名 HTTP 请求（jacopo-eth）提交；新增 ERC：可验证的 ML 模型推理（ZKML）（aryaethn）2025 年 7 月 23 日提交后合并；新增 ERC：基于 EIP-712 选择器的自描述字节（awrichar）2025 年 11 月 1 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1334",
+      "date": "2026-01-17",
+      "title_en": "Add ERC: Self-Describing Bytes via EIP-712 Selectors",
+      "note_en": "Add ERC: Signed HTTP Requests with Ethereum (jacopo-eth), submitted; Add ERC: Verifiable ML Model Inference (ZKML) (aryaethn), merged after submission on July 23, 2025; Add ERC: Self-Describing Bytes via EIP-712 Selectors (awrichar), merged after submission on November 1, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：2026 年夺回自主权与无需信任，借助 ZK-EVM 与 BAL，本地运行并验证全节点将重新变得容易",
+      "note": "01:32；trailofbits：Slither 0.11.5 新增检测器，可识别某次黑客事件所用的重入漏洞 03:53；aztecnetwork：2026 年隐私将吞噬世界 23:37。",
+      "url": "https://x.com/VitalikButerin/status/2012231445809435134",
+      "date": "2026-01-17",
+      "title_en": "VitalikButerin: 2026 is the year to take back self sovereignty and trustlessness, and with ZK-EVM and BAL running and verifying a full node locally becomes easy again",
+      "note_en": "01:32; trailofbits: Slither 0.11.5 adds a detector for the reentrancy bug used in a recent hack, 03:53; aztecnetwork: privacy will eat the world in 2026, 23:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trailofbits：Slither 0.11.5 新增检测器，可识别某次黑客事件所用的重入漏洞",
+      "note": "VitalikButerin：2026 年夺回自主权与无需信任，借助 ZK-EVM 与 BAL，本地运行并验证全节点将重新变得容易 01:32；trailofbits：Slither 0.11.5 新增检测器，可识别某次黑客事件所用的重入漏洞 03:53；aztecnetwork：2026 年隐私将吞噬世界 23:37。",
+      "url": "https://x.com/trailofbits/status/2012266921052488079",
+      "date": "2026-01-17",
+      "title_en": "trailofbits: Slither 0.11.5 adds a detector for the reentrancy bug used in a recent hack",
+      "note_en": "VitalikButerin: 2026 is the year to take back self sovereignty and trustlessness, and with ZK-EVM and BAL running and verifying a full node locally becomes easy again, 01:32; trailofbits: Slither 0.11.5 adds a detector for the reentrancy bug used in a recent hack, 03:53; aztecnetwork: privacy will eat the world in 2026, 23:37.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：2026 年隐私将吞噬世界",
+      "note": "VitalikButerin：2026 年夺回自主权与无需信任，借助 ZK-EVM 与 BAL，本地运行并验证全节点将重新变得容易 01:32；trailofbits：Slither 0.11.5 新增检测器，可识别某次黑客事件所用的重入漏洞 03:53；aztecnetwork：2026 年隐私将吞噬世界 23:37。",
+      "url": "https://x.com/aztecnetwork/status/2012564823486419140",
+      "date": "2026-01-17",
+      "title_en": "aztecnetwork: privacy will eat the world in 2026",
+      "note_en": "VitalikButerin: 2026 is the year to take back self sovereignty and trustlessness, and with ZK-EVM and BAL running and verifying a full node locally becomes easy again, 01:32; trailofbits: Slither 0.11.5 adds a detector for the reentrancy bug used in a recent hack, 03:53; aztecnetwork: privacy will eat the world in 2026, 23:37.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/explicit-message-lanes-for-pq-hybrid-signatures-avoiding-domain-separation-wormholes/27451",
+    "credit": "Ethereum Magicians, Explicit Message Lanes for PQ & Hybrid Signatures",
+    "local_path": "assets/2026-01-17.jpg",
+    "credit_en": "Ethereum Magicians, Explicit Message Lanes for PQ & Hybrid Signatures"
+  },
+  "keywords_en": [
+    "Explicit message lanes for post-quantum and hybrid signatures",
+    "Vitalik on taking back self sovereignty and trustlessness in 2026",
+    "a blob gas market that rewards timing games",
+    "EIP-7778 adds a gas_spent receipt field",
+    "a signed HTTP requests ERC",
+    "a ZKML inference ERC merged",
+    "a new Slither detector"
+  ],
+  "summary_en": "A Magicians post described a new semantic failure as AA and post-quantum or hybrid signatures coexist: one signature can be replayed or reinterpreted across ERC-1271, ERC-7913 and AA verification surfaces, so it proposes explicit message lanes. VitalikButerin listed what taking back self sovereignty and trustlessness means in 2026, including easier local full nodes thanks to ZK-EVM and BAL. potuz_eth said the blob gas market makes timing games rational."
+}

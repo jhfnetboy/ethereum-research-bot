@@ -1,0 +1,161 @@
+{
+  "date": "2026-01-30",
+  "keywords": [
+    "EF 进入温和紧缩期",
+    "Tornado 资金的 Safe 签名者守护 2.2 亿美元",
+    "应用控制执行与撤单优先",
+    "只保留一年活跃状态的数据",
+    "Block-in-Blobs EIP",
+    "EIP-7773 依 ACDE #229 更新 CFI/DFI",
+    "Ethereal news #9"
+  ],
+  "summary": "VitalikButerin 表示未来五年 EF 将进入温和紧缩期，以同时兑现激进路线图与长期可持续。pcaversaccio 说明其 Safe 签名者全部由 Tornado Cash 注资，守护逾 2.2 亿美元资产。mikeneuder 等分析应用控制执行与 Hyperliquid 的撤单优先。weiihann 用数据评估只保留一年活跃状态的影响。",
+  "items": [
+    {
+      "topic": "隐私与安全",
+      "title": "pcaversaccio：安全也是隐私，我的 Safe 签名者完全由 Tornado Cash 注资，如今守护逾 2.2 亿美元资产",
+      "note": "01:01。",
+      "url": "https://x.com/pcaversaccio/status/2016934776125771845",
+      "date": "2026-01-30",
+      "title_en": "pcaversaccio: security is also privacy, my Safe signer is fully funded via Tornado Cash and now secures over $220M",
+      "note_en": "01:01.",
+      "topic_en": "Privacy and security"
+    },
+    {
+      "topic": "交易排序与状态",
+      "title": "ethresear.ch：应用控制执行，撤单优先案例研究",
+      "note": "（mikeneuder）01:06：应用控制执行把交易排序权交给应用，Hyperliquid 的撤单优先是目前最典型的例子。",
+      "url": "https://ethresear.ch/t/application-controlled-execution-a-case-study-on-cancel-prioritization/23977",
+      "date": "2026-01-30",
+      "title_en": "ethresear.ch: Application-controlled execution, a case study on cancel prioritization",
+      "note_en": "(mikeneuder), 01:06: application controlled execution gives applications power over transaction sequencing, with Hyperliquid's cancel prioritization the leading example.",
+      "topic_en": "Transaction ordering and state"
+    },
+    {
+      "topic": "交易排序与状态",
+      "title": "ethresear.ch：如果只保留一年的活跃状态",
+      "note": "（weiihann）15:27：用实测数据评估状态过期对节点日常运行的影响。",
+      "url": "https://ethresear.ch/t/what-if-we-only-kept-1-year-of-active-state/23980",
+      "date": "2026-01-30",
+      "title_en": "ethresear.ch: What if we only kept 1 year of active state?",
+      "note_en": "(weiihann), 15:27: uses measurements to show how state expiry would affect day to day node operation.",
+      "topic_en": "Transaction ordering and state"
+    },
+    {
+      "topic": "协议规范",
+      "title": "新增 EIP：Block-in-Blobs（BiB）",
+      "note": "（kevaundray）提交，EIP-8142 讨论帖 01:26；EIP-7773：依 ACDE #229 更新（joshdavislight）提交，EIP-7610 列为 CFI，EIP-7872 与 EIP-7949 列为 DFI；EIP-7928：澄清针对无效臃肿 BAL 的防 DoS 措施（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11212",
+      "date": "2026-01-30",
+      "title_en": "Add EIP: Block-in-Blobs (BiB)",
+      "note_en": "(kevaundray), submitted, with the EIP-8142 thread, 01:26; EIP-7773: update per ACDE #229 (joshdavislight), submitted, listing EIP-7610 as CFI and EIP-7872 and EIP-7949 as DFI; EIP-7928: clarify anti DoS measures for invalid bloated BALs (nerolation), submitted.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "EIP-8142 讨论帖",
+      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）提交，EIP-8142 讨论帖 01:26；EIP-7773：依 ACDE #229 更新（joshdavislight）提交，EIP-7610 列为 CFI，EIP-7872 与 EIP-7949 列为 DFI；EIP-7928：澄清针对无效臃肿 BAL 的防 DoS 措施（nerolation）提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8142-block-in-blobs-bib/27621",
+      "date": "2026-01-30",
+      "title_en": "EIP-8142 thread",
+      "note_en": "Add EIP: Block-in-Blobs (BiB) (kevaundray), submitted, with the EIP-8142 thread, 01:26; EIP-7773: update per ACDE #229 (joshdavislight), submitted, listing EIP-7610 as CFI and EIP-7872 and EIP-7949 as DFI; EIP-7928: clarify anti DoS measures for invalid bloated BALs (nerolation), submitted.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "EIP-7773：依 ACDE #229 更新",
+      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）提交，EIP-8142 讨论帖 01:26；EIP-7773：依 ACDE #229 更新（joshdavislight）提交，EIP-7610 列为 CFI，EIP-7872 与 EIP-7949 列为 DFI；EIP-7928：澄清针对无效臃肿 BAL 的防 DoS 措施（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11213",
+      "date": "2026-01-30",
+      "title_en": "EIP-7773: update per ACDE #229",
+      "note_en": "Add EIP: Block-in-Blobs (BiB) (kevaundray), submitted, with the EIP-8142 thread, 01:26; EIP-7773: update per ACDE #229 (joshdavislight), submitted, listing EIP-7610 as CFI and EIP-7872 and EIP-7949 as DFI; EIP-7928: clarify anti DoS measures for invalid bloated BALs (nerolation), submitted.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "EIP-7928：澄清针对无效臃肿 BAL 的防 DoS 措施",
+      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）提交，EIP-8142 讨论帖 01:26；EIP-7773：依 ACDE #229 更新（joshdavislight）提交，EIP-7610 列为 CFI，EIP-7872 与 EIP-7949 列为 DFI；EIP-7928：澄清针对无效臃肿 BAL 的防 DoS 措施（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11223",
+      "date": "2026-01-30",
+      "title_en": "EIP-7928: clarify anti DoS measures for invalid bloated BALs",
+      "note_en": "Add EIP: Block-in-Blobs (BiB) (kevaundray), submitted, with the EIP-8142 thread, 01:26; EIP-7773: update per ACDE #229 (joshdavislight), submitted, listing EIP-7610 as CFI and EIP-7872 and EIP-7949 as DFI; EIP-7928: clarify anti DoS measures for invalid bloated BALs (nerolation), submitted.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8141：修正状态字段编号",
+      "note": "（kevaundray）合并；EIP-8052：改进与测试向量（simonmasson）提交并合并；Glamsterdam 重定价 #1 议程 15:36；AllWalletDevs #38 议程 03:36。",
+      "url": "https://github.com/ethereum/EIPs/pull/11209",
+      "date": "2026-01-30",
+      "title_en": "EIP-8141: fix status field number",
+      "note_en": "(kevaundray), merged; EIP-8052: improvements and test vectors (simonmasson), submitted and merged; Glamsterdam Repricings #1 agenda, 15:36; AllWalletDevs #38 agenda, 03:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8052：改进与测试向量",
+      "note": "EIP-8141：修正状态字段编号（kevaundray）合并；EIP-8052：改进与测试向量（simonmasson）提交并合并；Glamsterdam 重定价 #1 议程 15:36；AllWalletDevs #38 议程 03:36。",
+      "url": "https://github.com/ethereum/EIPs/pull/11225",
+      "date": "2026-01-30",
+      "title_en": "EIP-8052: improvements and test vectors",
+      "note_en": "EIP-8141: fix status field number (kevaundray), merged; EIP-8052: improvements and test vectors (simonmasson), submitted and merged; Glamsterdam Repricings #1 agenda, 15:36; AllWalletDevs #38 agenda, 03:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam 重定价 #1 议程",
+      "note": "EIP-8141：修正状态字段编号（kevaundray）合并；EIP-8052：改进与测试向量（simonmasson）提交并合并；Glamsterdam 重定价 #1 议程 15:36；AllWalletDevs #38 议程 03:36。",
+      "url": "https://ethereum-magicians.org/t/glamsterdam-repricings-1-feb-4-2026/27625",
+      "date": "2026-01-30",
+      "title_en": "Glamsterdam Repricings #1 agenda",
+      "note_en": "EIP-8141: fix status field number (kevaundray), merged; EIP-8052: improvements and test vectors (simonmasson), submitted and merged; Glamsterdam Repricings #1 agenda, 15:36; AllWalletDevs #38 agenda, 03:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "AllWalletDevs #38 议程",
+      "note": "EIP-8141：修正状态字段编号（kevaundray）合并；EIP-8052：改进与测试向量（simonmasson）提交并合并；Glamsterdam 重定价 #1 议程 15:36；AllWalletDevs #38 议程 03:36。",
+      "url": "https://ethereum-magicians.org/t/allwalletdevs-38-february-18-2026/27623",
+      "date": "2026-01-30",
+      "title_en": "AllWalletDevs #38 agenda",
+      "note_en": "EIP-8141: fix status field number (kevaundray), merged; EIP-8052: improvements and test vectors (simonmasson), submitted and merged; Glamsterdam Repricings #1 agenda, 15:36; AllWalletDevs #38 agenda, 03:36.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：未来五年 EF 进入温和紧缩期，以同时兑现激进路线图与长期目标",
+      "note": "14:59；EtherealnewsHQ：Ethereal news #9 发布，含 Fidelity FIDD 稳定币与 Hegotá 头号提案 19:56。",
+      "url": "https://x.com/VitalikButerin/status/2017145595819933745",
+      "date": "2026-01-30",
+      "title_en": "VitalikButerin: over the next five years the EF enters mild austerity to deliver an aggressive roadmap alongside long term goals",
+      "note_en": "14:59; EtherealnewsHQ: Ethereal news #9 is out, with Fidelity's FIDD stablecoin and Hegotá headliner proposals, 19:56.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EtherealnewsHQ：Ethereal news #9 发布，含 Fidelity FIDD 稳定币与 Hegotá 头号提案",
+      "note": "VitalikButerin：未来五年 EF 进入温和紧缩期，以同时兑现激进路线图与长期目标 14:59；EtherealnewsHQ：Ethereal news #9 发布，含 Fidelity FIDD 稳定币与 Hegotá 头号提案 19:56。",
+      "url": "https://x.com/EtherealnewsHQ/status/2017220290103926785",
+      "date": "2026-01-30",
+      "title_en": "EtherealnewsHQ: Ethereal news #9 is out, with Fidelity's FIDD stablecoin and Hegotá headliner proposals",
+      "note_en": "VitalikButerin: over the next five years the EF enters mild austerity to deliver an aggressive roadmap alongside long term goals, 14:59; EtherealnewsHQ: Ethereal news #9 is out, with Fidelity's FIDD stablecoin and Hegotá headliner proposals, 19:56.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/application-controlled-execution-a-case-study-on-cancel-prioritization/23977",
+    "credit": "ethresear.ch, Application-controlled execution: A case study on cancel prioritization",
+    "local_path": "assets/2026-01-30.jpg",
+    "credit_en": "ethresear.ch, Application-controlled execution: A case study on cancel prioritization"
+  },
+  "keywords_en": [
+    "The EF enters mild austerity",
+    "a Tornado funded Safe signer secures $220M",
+    "application controlled execution and cancel prioritization",
+    "data on keeping only one year of active state",
+    "the Block-in-Blobs EIP",
+    "EIP-7773 updates CFI and DFI per ACDE #229",
+    "Ethereal news #9"
+  ],
+  "summary_en": "VitalikButerin said the EF is entering a period of mild austerity for the next five years to deliver an aggressive roadmap while staying sustainable. pcaversaccio said his Safe signer is fully funded through Tornado Cash and secures over $220M. mikeneuder and maryam analyzed application controlled execution and Hyperliquid's cancel prioritization. weiihann measured the effect of keeping only one year of active state."
+}

@@ -1,0 +1,139 @@
+{
+  "date": "2026-01-21",
+  "keywords": [
+    "EIP-8037 正式列入 Glamsterdam CFI",
+    "后量子交易签名专场启动",
+    "EIP-7778 用户 gas 计算不变",
+    "Associated Accounts ERC 合并",
+    "Optimism 自定义 gas 代币与原生 Rollup 一致",
+    "Vitalik 回归去中心化社交"
+  ],
+  "summary": "nixorokish 把 EIP-8037 状态创建 gas 上调列入 Glamsterdam 元 EIP 的 CFI 并合并。后量子交易签名（PQTS）专场发布启动会议程，首次会议 2 月 4 日。yperbasis 明确 EIP-7778 不改变用户 gas 计算，提交并合并。stevieraykatz 的 Associated Accounts ERC 合并。",
+  "items": [
+    {
+      "topic": "Gas：EIP-8037 进入 CFI",
+      "title": "EIP-7773：EIP-8037 列为 CFI",
+      "note": "（nixorokish）合并，1 月 20 日提交；EIP-7778：明确用户 gas 计算保持不变（yperbasis）提交并合并，恢复在 PR 11099 中被删除的用户 gas 计算一节。",
+      "url": "https://github.com/ethereum/EIPs/pull/11117",
+      "date": "2026-01-21",
+      "title_en": "EIP-7773: CFI EIP-8037",
+      "note_en": "(nixorokish), merged after submission on January 20; EIP-7778: clarify that user gas accounting remains unchanged (yperbasis), submitted and merged, restoring the user gas accounting section removed in PR 11099.",
+      "topic_en": "Gas: EIP-8037 enters CFI"
+    },
+    {
+      "topic": "Gas：EIP-8037 进入 CFI",
+      "title": "EIP-7778：明确用户 gas 计算保持不变",
+      "note": "EIP-7773：EIP-8037 列为 CFI（nixorokish）合并，1 月 20 日提交；EIP-7778：明确用户 gas 计算保持不变（yperbasis）提交并合并，恢复在 PR 11099 中被删除的用户 gas 计算一节。",
+      "url": "https://github.com/ethereum/EIPs/pull/11138",
+      "date": "2026-01-21",
+      "title_en": "EIP-7778: clarify that user gas accounting remains unchanged",
+      "note_en": "EIP-7773: CFI EIP-8037 (nixorokish), merged after submission on January 20; EIP-7778: clarify that user gas accounting remains unchanged (yperbasis), submitted and merged, restoring the user gas accounting section removed in PR 11099.",
+      "topic_en": "Gas: EIP-8037 enters CFI"
+    },
+    {
+      "topic": "交易签名：PQTS 专场",
+      "title": "Magicians：后量子交易签名（PQTS）专场启动会",
+      "note": "21:00：首次会议 2 月 4 日 22:00，重点是 PQTS 概览、目标设定与社区对齐。",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-room-kickoff-call/27554",
+      "date": "2026-01-21",
+      "title_en": "Magicians: Post Quantum transaction signature (PQTS) breakout kickoff",
+      "note_en": "21:00: the first session on February 4 at 22:00 covers a PQTS overview, goal setting and community alignment.",
+      "topic_en": "Signatures: the PQTS breakout"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：Associated Accounts",
+      "note": "（stevieraykatz）合并；EIP-7708：明确自毁事件（etan-status）提交并合并；EIP-7954 改回 Draft（benaadams）合并；EIP-7823 进入 Final（poojaranjan）合并；ethresear.ch：跨客户端统一慢区块指标 21:31。",
+      "url": "https://github.com/ethereum/ERCs/pull/1377",
+      "date": "2026-01-21",
+      "title_en": "Add ERC: Associated Accounts",
+      "note_en": "(stevieraykatz), merged; EIP-7708: clarify the selfdestruct event (etan-status), submitted and merged; EIP-7954: move back to Draft (benaadams), merged; EIP-7823: move to Final (poojaranjan), merged; ethresear.ch: unified slow block metrics across clients, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7708：明确自毁事件",
+      "note": "新增 ERC：Associated Accounts（stevieraykatz）合并；EIP-7708：明确自毁事件（etan-status）提交并合并；EIP-7954 改回 Draft（benaadams）合并；EIP-7823 进入 Final（poojaranjan）合并；ethresear.ch：跨客户端统一慢区块指标 21:31。",
+      "url": "https://github.com/ethereum/EIPs/pull/11127",
+      "date": "2026-01-21",
+      "title_en": "EIP-7708: clarify the selfdestruct event",
+      "note_en": "Add ERC: Associated Accounts (stevieraykatz), merged; EIP-7708: clarify the selfdestruct event (etan-status), submitted and merged; EIP-7954: move back to Draft (benaadams), merged; EIP-7823: move to Final (poojaranjan), merged; ethresear.ch: unified slow block metrics across clients, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7954 改回 Draft",
+      "note": "新增 ERC：Associated Accounts（stevieraykatz）合并；EIP-7708：明确自毁事件（etan-status）提交并合并；EIP-7954 改回 Draft（benaadams）合并；EIP-7823 进入 Final（poojaranjan）合并；ethresear.ch：跨客户端统一慢区块指标 21:31。",
+      "url": "https://github.com/ethereum/EIPs/pull/11116",
+      "date": "2026-01-21",
+      "title_en": "EIP-7954: move back to Draft",
+      "note_en": "Add ERC: Associated Accounts (stevieraykatz), merged; EIP-7708: clarify the selfdestruct event (etan-status), submitted and merged; EIP-7954: move back to Draft (benaadams), merged; EIP-7823: move to Final (poojaranjan), merged; ethresear.ch: unified slow block metrics across clients, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7823 进入 Final",
+      "note": "新增 ERC：Associated Accounts（stevieraykatz）合并；EIP-7708：明确自毁事件（etan-status）提交并合并；EIP-7954 改回 Draft（benaadams）合并；EIP-7823 进入 Final（poojaranjan）合并；ethresear.ch：跨客户端统一慢区块指标 21:31。",
+      "url": "https://github.com/ethereum/EIPs/pull/11113",
+      "date": "2026-01-21",
+      "title_en": "EIP-7823: move to Final",
+      "note_en": "Add ERC: Associated Accounts (stevieraykatz), merged; EIP-7708: clarify the selfdestruct event (etan-status), submitted and merged; EIP-7954: move back to Draft (benaadams), merged; EIP-7823: move to Final (poojaranjan), merged; ethresear.ch: unified slow block metrics across clients, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：跨客户端统一慢区块指标",
+      "note": "新增 ERC：Associated Accounts（stevieraykatz）合并；EIP-7708：明确自毁事件（etan-status）提交并合并；EIP-7954 改回 Draft（benaadams）合并；EIP-7823 进入 Final（poojaranjan）合并；ethresear.ch：跨客户端统一慢区块指标 21:31。",
+      "url": "https://ethresear.ch/t/a-small-step-towards-data-driven-protocol-decisions-unified-slowblock-metrics-across-clients/23907",
+      "date": "2026-01-21",
+      "title_en": "ethresear.ch: unified slow block metrics across clients",
+      "note_en": "Add ERC: Associated Accounts (stevieraykatz), merged; EIP-7708: clarify the selfdestruct event (etan-status), submitted and merged; EIP-7954: move back to Draft (benaadams), merged; EIP-7823: move to Final (poojaranjan), merged; ethresear.ch: unified slow block metrics across clients, 21:31.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：Optimism 新的自定义 gas 代币设计与原生 Rollup 方案几乎一致",
+      "note": "23:53；VitalikButerin：2026 年将全面回归去中心化社交 15:02；trailofbits：slither-mcp 新增 11 个工具 23:26。",
+      "url": "https://x.com/donnoh_eth/status/2014018611917083119",
+      "date": "2026-01-21",
+      "title_en": "donnoh_eth: Optimism's new custom gas token design is virtually identical to the one planned for native rollups",
+      "note_en": "23:53; VitalikButerin: in 2026 he will be fully back to decentralized social, 15:02; trailofbits: slither-mcp adds 11 new tools, 23:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：2026 年将全面回归去中心化社交",
+      "note": "donnoh_eth：Optimism 新的自定义 gas 代币设计与原生 Rollup 方案几乎一致 23:53；VitalikButerin：2026 年将全面回归去中心化社交 15:02；trailofbits：slither-mcp 新增 11 个工具 23:26。",
+      "url": "https://x.com/VitalikButerin/status/2013884907659944205",
+      "date": "2026-01-21",
+      "title_en": "VitalikButerin: in 2026 he will be fully back to decentralized social",
+      "note_en": "Donnoh_eth: Optimism's new custom gas token design is virtually identical to the one planned for native rollups, 23:53; VitalikButerin: in 2026 he will be fully back to decentralized social, 15:02; trailofbits: slither-mcp adds 11 new tools, 23:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trailofbits：slither-mcp 新增 11 个工具",
+      "note": "donnoh_eth：Optimism 新的自定义 gas 代币设计与原生 Rollup 方案几乎一致 23:53；VitalikButerin：2026 年将全面回归去中心化社交 15:02；trailofbits：slither-mcp 新增 11 个工具 23:26。",
+      "url": "https://x.com/trailofbits/status/2014011811633500642",
+      "date": "2026-01-21",
+      "title_en": "trailofbits: slither-mcp adds 11 new tools",
+      "note_en": "Donnoh_eth: Optimism's new custom gas token design is virtually identical to the one planned for native rollups, 23:53; VitalikButerin: in 2026 he will be fully back to decentralized social, 15:02; trailofbits: slither-mcp adds 11 new tools, 23:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-room-kickoff-call/27554",
+    "credit": "Ethereum Magicians, Post Quantum transaction signature (PQTS) Breakout Room",
+    "local_path": "assets/2026-01-21.jpg",
+    "credit_en": "Ethereum Magicians, Post Quantum transaction signature (PQTS) Breakout Room"
+  },
+  "keywords_en": [
+    "EIP-8037 formally listed as CFI for Glamsterdam",
+    "the post-quantum transaction signature breakout launches",
+    "EIP-7778 keeps user gas accounting unchanged",
+    "the Associated Accounts ERC merged",
+    "Optimism's custom gas token matches native rollups",
+    "Vitalik returns to decentralized social"
+  ],
+  "summary_en": "nixorokish listed EIP-8037, the state creation gas increase, as CFI in the Glamsterdam meta EIP, merged. The post-quantum transaction signature (PQTS) breakout posted its kickoff agenda, first meeting February 4. yperbasis clarified EIP-7778 leaves user gas accounting unchanged, submitted and merged. stevieraykatz's Associated Accounts ERC merged."
+}

@@ -1,0 +1,183 @@
+{
+  "date": "2026-01-29",
+  "keywords": [
+    "EIP-8141 Frame Transaction 提交并合并",
+    "frame 交易成为 Hegotá 头号提案",
+    "EIP-8130 的 ERC-20 代付 gas",
+    "ACDE #229 头号候选汇总",
+    "EIP-8037 的失效模式",
+    "ERC-7730 支持 4337",
+    "机密交易代币 ERC 合并",
+    "SSZ 执行区块头号提案"
+  ],
+  "summary": "fjl 等提交的 EIP-8141 Frame Transaction 当日合并：新交易类型的有效性与 gas 支付可抽象定义，账户可用任意密码系统定义签名方案，同时被提为 Hegotá 头号提案。chunter-cb 提交 EIP-8130 的 ERC-20 代付 gas 扩展。ACDE #229 汇总 Hegotá 头号候选，截止 2 月 4 日。aelowsson 分析 EIP-8037 的两种均衡失效模式。",
+  "items": [
+    {
+      "topic": "原生 AA：EIP-8141 Frame Transaction",
+      "title": "新增 EIP：Frame Transaction",
+      "note": "（fjl）提交并合并；EIP-8141：补上 VERIFY frame 数据的省略规则（fjl）提交并合并；Magicians 讨论帖 EIP-8141（matt）10:35：新交易的有效性与 gas 支付可抽象定义，账户不再只依赖单个 ECDSA 签名，可用任意密码系统定义并解释签名方案。",
+      "url": "https://github.com/ethereum/EIPs/pull/11202",
+      "date": "2026-01-29",
+      "title_en": "Add EIP: Frame Transaction",
+      "note_en": "(fjl), submitted and merged; EIP-8141: add the missing elision of VERIFY frame data (fjl), submitted and merged; Magicians thread EIP-8141 (matt), 10:35: a new transaction whose validity and gas payment are defined abstractly, so accounts no longer rely on one ECDSA signature and can define and interpret any cryptographic signature scheme.",
+      "topic_en": "Native AA: EIP-8141 Frame Transaction"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 Frame Transaction",
+      "title": "EIP-8141：补上 VERIFY frame 数据的省略规则",
+      "note": "新增 EIP：Frame Transaction（fjl）提交并合并；EIP-8141：补上 VERIFY frame 数据的省略规则（fjl）提交并合并；Magicians 讨论帖 EIP-8141（matt）10:35：新交易的有效性与 gas 支付可抽象定义，账户不再只依赖单个 ECDSA 签名，可用任意密码系统定义并解释签名方案。",
+      "url": "https://github.com/ethereum/EIPs/pull/11205",
+      "date": "2026-01-29",
+      "title_en": "EIP-8141: add the missing elision of VERIFY frame data",
+      "note_en": "Add EIP: Frame Transaction (fjl), submitted and merged; EIP-8141: add the missing elision of VERIFY frame data (fjl), submitted and merged; Magicians thread EIP-8141 (matt), 10:35: a new transaction whose validity and gas payment are defined abstractly, so accounts no longer rely on one ECDSA signature and can define and interpret any cryptographic signature scheme.",
+      "topic_en": "Native AA: EIP-8141 Frame Transaction"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 Frame Transaction",
+      "title": "Magicians 讨论帖 EIP-8141",
+      "note": "新增 EIP：Frame Transaction（fjl）提交并合并；EIP-8141：补上 VERIFY frame 数据的省略规则（fjl）提交并合并；Magicians 讨论帖 EIP-8141（matt）10:35：新交易的有效性与 gas 支付可抽象定义，账户不再只依赖单个 ECDSA 签名，可用任意密码系统定义并解释签名方案。",
+      "url": "https://ethereum-magicians.org/t/eip-8141-frame-transaction/27617",
+      "date": "2026-01-29",
+      "title_en": "Magicians thread EIP-8141",
+      "note_en": "Add EIP: Frame Transaction (fjl), submitted and merged; EIP-8141: add the missing elision of VERIFY frame data (fjl), submitted and merged; Magicians thread EIP-8141 (matt), 10:35: a new transaction whose validity and gas payment are defined abstractly, so accounts no longer rely on one ECDSA signature and can define and interpret any cryptographic signature scheme.",
+      "topic_en": "Native AA: EIP-8141 Frame Transaction"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 Frame Transaction",
+      "title": "Magicians：Hegotá 头号提案 Frame Transaction",
+      "note": "10:49；lightclients：EIP-8141 Frame Transaction 介绍 13:05。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-frame-transaction/27618",
+      "date": "2026-01-29",
+      "title_en": "Magicians: Hegotá headliner proposal Frame Transaction",
+      "note_en": "10:49; lightclients: introducing EIP-8141 Frame Transaction, 13:05.",
+      "topic_en": "Native AA: EIP-8141 Frame Transaction"
+    },
+    {
+      "topic": "原生 AA：EIP-8141 Frame Transaction",
+      "title": "lightclients：EIP-8141 Frame Transaction 介绍",
+      "note": "Magicians：Hegotá 头号提案 Frame Transaction 10:49；lightclients：EIP-8141 Frame Transaction 介绍 13:05。",
+      "url": "https://x.com/lightclients/status/2016754618429010070",
+      "date": "2026-01-29",
+      "title_en": "lightclients: introducing EIP-8141 Frame Transaction",
+      "note_en": "Magicians: Hegotá headliner proposal Frame Transaction, 10:49; lightclients: introducing EIP-8141 Frame Transaction, 13:05.",
+      "topic_en": "Native AA: EIP-8141 Frame Transaction"
+    },
+    {
+      "topic": "原生 AA：EIP-8130 代付 gas",
+      "title": "新增 EIP：EIP-8130 的代币 gas 支付",
+      "note": "（chunter-cb）提交：通过 extensions 字段让 EIP-8130 AA 交易用 ERC-20 付 gas，此时 EIP-8130 本身仍在 PR 中。",
+      "url": "https://github.com/ethereum/EIPs/pull/11194",
+      "date": "2026-01-29",
+      "title_en": "Add EIP: Token Gas Payments for EIP-8130",
+      "note_en": "(chunter-cb), submitted: lets EIP-8130 AA transactions pay gas in ERC-20 tokens through the extensions field, while EIP-8130 itself was still in PR.",
+      "topic_en": "Native AA: EIP-8130 gas payments"
+    },
+    {
+      "topic": "Gas：EIP-8037 的失效模式",
+      "title": "ethresear.ch：EIP-8037 的失效模式与状态 gas 缩放",
+      "note": "（aelowsson）20:29：当用户不愿把 50% 预算用于状态创建时会出现两种均衡失效，文章给出可部署的状态 gas 缩放修正措施。",
+      "url": "https://ethresear.ch/t/failure-modes-in-eip-8037-and-state-gas-scaling/23975",
+      "date": "2026-01-29",
+      "title_en": "ethresear.ch: Failure modes in EIP-8037 and state-gas scaling",
+      "note_en": "(aelowsson), 20:29: two equilibrium failure modes arise when users do not want to spend 50% of their budget on state creation, and the note presents corrective state gas scaling measures.",
+      "topic_en": "Gas: EIP-8037 failure modes"
+    },
+    {
+      "topic": "会议：ACDE #229",
+      "title": "ACDE #229",
+      "note": "21:00，据 Ethereal news #9：EIP-7928 BAL 的并行执行、批量读取与并行状态根为必选优化；EIP-7610 列为 CFI，EIP-7872 与 EIP-7949 拒绝纳入但客户端应统一；Hegotá 头号候选为 EIP-8141 frame 交易、EIP-8105 加密交易池、EIP-7807 SSZ 执行区块与共识层的 EIP-7805 FOCIL，提交截止 2 月 4 日。",
+      "url": "https://forkcast.org/calls/acde/229",
+      "date": "2026-01-29",
+      "title_en": "ACDE #229",
+      "note_en": "21:00, per Ethereal news #9: EIP-7928 BAL parallel execution, batch reads and parallel state root are mandatory optimizations; EIP-7610 is CFI, while EIP-7872 and EIP-7949 were declined but clients should standardize; Hegotá headliner candidates are EIP-8141 frame transactions, the EIP-8105 encrypted pool, EIP-7807 SSZ execution blocks and consensus layer EIP-7805 FOCIL, with a February 4 deadline.",
+      "topic_en": "Calls: ACDE #229"
+    },
+    {
+      "topic": "会议：ACDE #229",
+      "title": "Ethereal news #9",
+      "note": "ACDE #229 21:00，据 Ethereal news #9：EIP-7928 BAL 的并行执行、批量读取与并行状态根为必选优化；EIP-7610 列为 CFI，EIP-7872 与 EIP-7949 拒绝纳入但客户端应统一；Hegotá 头号候选为 EIP-8141 frame 交易、EIP-8105 加密交易池、EIP-7807 SSZ 执行区块与共识层的 EIP-7805 FOCIL，提交截止 2 月 4 日。",
+      "url": "https://ethereal.news/ethereal-news-weekly-9/",
+      "date": "2026-01-29",
+      "title_en": "Ethereal news #9",
+      "note_en": "ACDE #229, 21:00, per Ethereal news #9: EIP-7928 BAL parallel execution, batch reads and parallel state root are mandatory optimizations; EIP-7610 is CFI, while EIP-7872 and EIP-7949 were declined but clients should standardize; Hegotá headliner candidates are EIP-8141 frame transactions, the EIP-8105 encrypted pool, EIP-7807 SSZ execution blocks and consensus layer EIP-7805 FOCIL, with a February 4 deadline.",
+      "topic_en": "Calls: ACDE #229"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：支持机密交易的代币",
+      "note": "（andrewcoder666）合并；ERC-7730：加入 4337 推荐支持与代理处理（lcastillo-ledger）提交；Hegotá 头号提案：SSZ 执行区块 18:28；EIP-7708：明确销毁日志与 coinbase 转账日志顺序（jwasinger）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1034",
+      "date": "2026-01-29",
+      "title_en": "Add ERC: Confidential Transactions Supported Token",
+      "note_en": "(andrewcoder666), merged; ERC-7730: add 4337 recommended support and proxy handling (lcastillo-ledger), submitted; Hegotá headliner proposal: SSZ execution blocks, 18:28; EIP-7708: clarify order of burn logs and coinbase transfer logs (jwasinger), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730：加入 4337 推荐支持与代理处理",
+      "note": "新增 ERC：支持机密交易的代币（andrewcoder666）合并；ERC-7730：加入 4337 推荐支持与代理处理（lcastillo-ledger）提交；Hegotá 头号提案：SSZ 执行区块 18:28；EIP-7708：明确销毁日志与 coinbase 转账日志顺序（jwasinger）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1496",
+      "date": "2026-01-29",
+      "title_en": "ERC-7730: add 4337 recommended support and proxy handling",
+      "note_en": "Add ERC: Confidential Transactions Supported Token (andrewcoder666), merged; ERC-7730: add 4337 recommended support and proxy handling (lcastillo-ledger), submitted; Hegotá headliner proposal: SSZ execution blocks, 18:28; EIP-7708: clarify order of burn logs and coinbase transfer logs (jwasinger), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Hegotá 头号提案：SSZ 执行区块",
+      "note": "新增 ERC：支持机密交易的代币（andrewcoder666）合并；ERC-7730：加入 4337 推荐支持与代理处理（lcastillo-ledger）提交；Hegotá 头号提案：SSZ 执行区块 18:28；EIP-7708：明确销毁日志与 coinbase 转账日志顺序（jwasinger）合并。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-ssz-execution-blocks/27619",
+      "date": "2026-01-29",
+      "title_en": "Hegotá headliner proposal: SSZ execution blocks",
+      "note_en": "Add ERC: Confidential Transactions Supported Token (andrewcoder666), merged; ERC-7730: add 4337 recommended support and proxy handling (lcastillo-ledger), submitted; Hegotá headliner proposal: SSZ execution blocks, 18:28; EIP-7708: clarify order of burn logs and coinbase transfer logs (jwasinger), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7708：明确销毁日志与 coinbase 转账日志顺序",
+      "note": "新增 ERC：支持机密交易的代币（andrewcoder666）合并；ERC-7730：加入 4337 推荐支持与代理处理（lcastillo-ledger）提交；Hegotá 头号提案：SSZ 执行区块 18:28；EIP-7708：明确销毁日志与 coinbase 转账日志顺序（jwasinger）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11190",
+      "date": "2026-01-29",
+      "title_en": "EIP-7708: clarify order of burn logs and coinbase transfer logs",
+      "note_en": "Add ERC: Confidential Transactions Supported Token (andrewcoder666), merged; ERC-7730: add 4337 recommended support and proxy handling (lcastillo-ledger), submitted; Hegotá headliner proposal: SSZ execution blocks, 18:28; EIP-7708: clarify order of burn logs and coinbase transfer logs (jwasinger), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Zypherpunk 黑客松 Aztec 获奖者分享",
+      "note": "02:06；zooko：很酷的安全与隐私功能 03:26。",
+      "url": "https://x.com/aztecnetwork/status/2016588652080496675",
+      "date": "2026-01-29",
+      "title_en": "aztecnetwork: Aztec winners of the Zypherpunk hackathon share their work",
+      "note_en": "02:06; zooko: a very cool security and privacy feature, 03:26.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：很酷的安全与隐私功能",
+      "note": "aztecnetwork：Zypherpunk 黑客松 Aztec 获奖者分享 02:06；zooko：很酷的安全与隐私功能 03:26。",
+      "url": "https://x.com/zooko/status/2016608852377292903",
+      "date": "2026-01-29",
+      "title_en": "zooko: a very cool security and privacy feature",
+      "note_en": "Aztecnetwork: Aztec winners of the Zypherpunk hackathon share their work, 02:06; zooko: a very cool security and privacy feature, 03:26.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8141-frame-transaction/27617",
+    "credit": "Ethereum Magicians, EIP-8141: Frame Transaction",
+    "local_path": "assets/2026-01-29.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8141: Frame Transaction"
+  },
+  "keywords_en": [
+    "EIP-8141 Frame Transaction submitted and merged",
+    "frame transactions proposed as a Hegotá headliner",
+    "ERC-20 gas payments for EIP-8130",
+    "ACDE #229 collects headliner candidates",
+    "failure modes in EIP-8037",
+    "ERC-7730 adds 4337 support",
+    "a confidential transactions token ERC merged",
+    "SSZ execution blocks headliner proposal"
+  ],
+  "summary_en": "EIP-8141 Frame Transaction, submitted by fjl and coauthors, merged the same day: a new transaction type whose validity and gas payment are defined abstractly, letting accounts use any cryptographic system for signatures, and it was proposed as a Hegotá headliner. chunter-cb submitted an ERC-20 gas payment extension for EIP-8130. ACDE #229 collected Hegotá headliner candidates ahead of the February 4 deadline. aelowsson analyzed two equilibrium failure modes in EIP-8037."
+}

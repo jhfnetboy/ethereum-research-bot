@@ -1,0 +1,121 @@
+{
+  "date": "2026-02-07",
+  "keywords": [
+    "ERC-7683 重设计为可编程 filler",
+    "L1 缺乏稳定的证明 API",
+    "EIP-8142 移除 blob_gas_used 修改",
+    "ERC-7730 加密规范",
+    "数据列广播的 cell 级增量 EIP-8136",
+    "ENS 状态留在 L1",
+    "生态 28 项进展"
+  ],
+  "summary": "frangio 发布 ERC-7683 重设计，由 Across、Uniswap、LI.FI 与 OpenZeppelin 协作，解决现有跨链意图草案的问题。protolambda 认为 L2 互操作慢、向 Stage 2 过度谨慎，根源是 L1 缺少稳定的证明 API。kevaundray 提交移除 EIP-8142 中的 blob_gas_used 修改。",
+  "items": [
+    {
+      "topic": "交易：跨链意图",
+      "title": "Magicians：ERC-7683 重设计，可编程 filler",
+      "note": "（frangio）02:11：讨论现有草案的问题并提出重设计，由原作者 Across 与 Uniswap 以及 LI.FI、OpenZeppelin 在 Open Intents Framework 中协作完成。",
+      "url": "https://ethereum-magicians.org/t/erc-7683-redux-programmable-fillers/27674",
+      "date": "2026-02-07",
+      "title_en": "Magicians: ERC-7683 Redux, Programmable Fillers",
+      "note_en": "(frangio), 02:11: discusses problems in the current draft and proposes a redesign, built in the Open Intents Framework by original authors Across and Uniswap with LI.FI and OpenZeppelin.",
+      "topic_en": "Transactions: cross chain intents"
+    },
+    {
+      "topic": "交易：跨链意图",
+      "title": "protolambda：L2 互操作缓慢、对 Stage 2 过度谨慎，技术原因是 L1 没有良好、一致、稳定的 API，数据、状态、消息、最终性与意图的证明都很脆弱",
+      "note": "22:37。",
+      "url": "https://x.com/protolambda/status/2020159895345967208",
+      "date": "2026-02-07",
+      "title_en": "protolambda: slow L2 interop and over caution about Stage 2 have a technical cause, L1 lacks a good, coherent, stable API, and proofs of data, state, messages, finality and intents are fragile",
+      "note_en": "22:37.",
+      "topic_en": "Transactions: cross chain intents"
+    },
+    {
+      "topic": "协议规范",
+      "title": "EIP-8142：移除 blob_gas_used 修改",
+      "note": "（kevaundray）提交；EIP-8024：完善设计理由（frangio）提交并合并；ERC-7730：加入加密规范（melanciani）提交；Magicians：EIP-8136 数据列广播的 cell 级增量 02:26。",
+      "url": "https://github.com/ethereum/EIPs/pull/11277",
+      "date": "2026-02-07",
+      "title_en": "EIP-8142: remove blob_gas_used modifications",
+      "note_en": "(kevaundray), submitted; EIP-8024: improve rationale (frangio), submitted and merged; ERC-7730: add encryption specs (melanciani), submitted; Magicians: EIP-8136 cell level deltas for data column broadcast, 02:26.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "EIP-8024：完善设计理由",
+      "note": "EIP-8142：移除 blob_gas_used 修改（kevaundray）提交；EIP-8024：完善设计理由（frangio）提交并合并；ERC-7730：加入加密规范（melanciani）提交；Magicians：EIP-8136 数据列广播的 cell 级增量 02:26。",
+      "url": "https://github.com/ethereum/EIPs/pull/11279",
+      "date": "2026-02-07",
+      "title_en": "EIP-8024: improve rationale",
+      "note_en": "EIP-8142: remove blob_gas_used modifications (kevaundray), submitted; EIP-8024: improve rationale (frangio), submitted and merged; ERC-7730: add encryption specs (melanciani), submitted; Magicians: EIP-8136 cell level deltas for data column broadcast, 02:26.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "ERC-7730：加入加密规范",
+      "note": "EIP-8142：移除 blob_gas_used 修改（kevaundray）提交；EIP-8024：完善设计理由（frangio）提交并合并；ERC-7730：加入加密规范（melanciani）提交；Magicians：EIP-8136 数据列广播的 cell 级增量 02:26。",
+      "url": "https://github.com/ethereum/ERCs/pull/1522",
+      "date": "2026-02-07",
+      "title_en": "ERC-7730: add encryption specs",
+      "note_en": "EIP-8142: remove blob_gas_used modifications (kevaundray), submitted; EIP-8024: improve rationale (frangio), submitted and merged; ERC-7730: add encryption specs (melanciani), submitted; Magicians: EIP-8136 cell level deltas for data column broadcast, 02:26.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "Magicians：EIP-8136 数据列广播的 cell 级增量",
+      "note": "EIP-8142：移除 blob_gas_used 修改（kevaundray）提交；EIP-8024：完善设计理由（frangio）提交并合并；ERC-7730：加入加密规范（melanciani）提交；Magicians：EIP-8136 数据列广播的 cell 级增量 02:26。",
+      "url": "https://ethereum-magicians.org/t/eip-8136-cell-level-deltas-for-data-column-broadcast/27675",
+      "date": "2026-02-07",
+      "title_en": "Magicians: EIP-8136 cell level deltas for data column broadcast",
+      "note_en": "EIP-8142: remove blob_gas_used modifications (kevaundray), submitted; EIP-8024: improve rationale (frangio), submitted and merged; ERC-7730: add encryption specs (melanciani), submitted; Magicians: EIP-8136 cell level deltas for data column broadcast, 02:26.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Stateless 实现者会议 #48 议程",
+      "note": "09:06。",
+      "url": "https://ethereum-magicians.org/t/stateless-implementers-call-48-february-9th-2026/27678",
+      "date": "2026-02-07",
+      "title_en": "Stateless Implementer's Call #48 agenda",
+      "note_en": "09:06.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：支持 ENS 的决定，ENS 名称与记录是生态核心状态，应尽可能随处可访问",
+      "note": "00:02；ethereum：以太坊仍是 AI、政府、机构与全球金融的基础设施，生态 28 项进展 05:06。",
+      "url": "https://x.com/VitalikButerin/status/2019818956530274327",
+      "date": "2026-02-07",
+      "title_en": "VitalikButerin: backs the ENS decision, as ENS names and records are core ecosystem state that should be accessible from anywhere",
+      "note_en": "00:02; ethereum: Ethereum remains foundational infrastructure for AI, governments, institutions and global finance, 28 ecosystem updates, 05:06.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：以太坊仍是 AI、政府、机构与全球金融的基础设施，生态 28 项进展",
+      "note": "VitalikButerin：支持 ENS 的决定，ENS 名称与记录是生态核心状态，应尽可能随处可访问 00:02；ethereum：以太坊仍是 AI、政府、机构与全球金融的基础设施，生态 28 项进展 05:06。",
+      "url": "https://x.com/ethereum/status/2019895379945484553",
+      "date": "2026-02-07",
+      "title_en": "ethereum: Ethereum remains foundational infrastructure for AI, governments, institutions and global finance, 28 ecosystem updates",
+      "note_en": "VitalikButerin: backs the ENS decision, as ENS names and records are core ecosystem state that should be accessible from anywhere, 00:02; ethereum: Ethereum remains foundational infrastructure for AI, governments, institutions and global finance, 28 ecosystem updates, 05:06.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-7683-redux-programmable-fillers/27674",
+    "credit": "Ethereum Magicians, ERC-7683 Redux: Programmable Fillers",
+    "local_path": "assets/2026-02-07.jpg",
+    "credit_en": "Ethereum Magicians, ERC-7683 Redux: Programmable Fillers"
+  },
+  "keywords_en": [
+    "ERC-7683 redesigned around programmable fillers",
+    "L1 lacks a stable proving API",
+    "EIP-8142 drops blob_gas_used changes",
+    "ERC-7730 encryption specs",
+    "cell level deltas for data column broadcast EIP-8136",
+    "ENS state staying on L1",
+    "28 ecosystem updates"
+  ],
+  "summary_en": "frangio published an ERC-7683 redesign, built by Across, Uniswap, LI.FI and OpenZeppelin to fix problems in the cross chain intent draft. protolambda argued slow L2 interop and over caution about Stage 2 stem from L1 lacking a stable proving API. kevaundray submitted removing blob_gas_used changes from EIP-8142."
+}

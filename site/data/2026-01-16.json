@@ -1,0 +1,129 @@
+{
+  "date": "2026-01-16",
+  "keywords": [
+    "量子威胁下 EOA 的迁移策略",
+    "EIP-8105 通用协议内加密内存池成为 Hegotá 头号提案",
+    "预确认与 based Rollup 实现同步可组合",
+    "以太坊隐私直播 The Apparatus",
+    "EIP-8024 改用 push 后缀编码",
+    "新的 Stage 2 应用链"
+  ],
+  "summary": "Marco López 等发表论文，分析在出现能破解 secp256k1 的量子计算机时，EOA 授权、交易与签名流程如何迁移及会坏掉什么。jannikluhn 把 EIP-8105 通用协议内加密内存池提为 Hegotá 头号提案：交易在打包前保持加密，防止抢跑与三明治攻击。VitalikButerin 发文论述把预确认与 based Rollup 结合实现同步可组合。",
+  "items": [
+    {
+      "topic": "账户：量子威胁下的 EOA 迁移",
+      "title": "ethresear.ch：量子威胁下 EOA 的迁移策略，断点与开放问题",
+      "note": "（Marcolopeez）21:18：论文聚焦执行层，即 EOA 授权、交易与签名流程，在出现能破解 secp256k1/ECDSA 的量子计算机时如何迁移，不涉及共识层。",
+      "url": "https://ethresear.ch/t/migration-strategies-for-eoas-under-the-quantum-threat-breakages-and-open-questions/23864",
+      "date": "2026-01-16",
+      "title_en": "ethresear.ch: Migration Strategies for EOAs under the Quantum Threat, breakages and open questions",
+      "note_en": "(Marcolopeez), 21:18: the paper focuses on the execution layer, meaning EOA authorization, transactions and signature flows, and how they migrate once a quantum computer can break secp256k1 and ECDSA, leaving the consensus layer aside.",
+      "topic_en": "Accounts: EOA migration under the quantum threat"
+    },
+    {
+      "topic": "交易隐私：EIP-8105 加密内存池",
+      "title": "Magicians：Hegotá 头号提案 EIP-8105 通用协议内加密内存池（EEM）",
+      "note": "（jannikluhn）18:24：作为可选的协议级功能，让用户提交在打包前保持加密的交易，防止抢跑、三明治攻击与实时审查。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-eip-8105-universal-enshrined-encrypted-mempool-eem/27448",
+      "date": "2026-01-16",
+      "title_en": "Magicians: Hegotá headliner proposal EIP-8105 Universal Enshrined Encrypted Mempool (EEM)",
+      "note_en": "(jannikluhn), 18:24: an optional protocol level feature letting users submit transactions that stay encrypted until included, protecting against frontrunning, sandwich attacks and real time censorship.",
+      "topic_en": "Transaction privacy: the EIP-8105 encrypted mempool"
+    },
+    {
+      "topic": "Rollup 与签名工具",
+      "title": "ethresear.ch：结合预确认与 based Rollup 实现同步可组合",
+      "note": "（vbuterin）14:58：对比由 L1 决定排序的 based Rollup 与由链下机制排序的 sequenced Rollup。",
+      "url": "https://ethresear.ch/t/combining-preconfirmations-with-based-rollups-for-synchronous-composability/23863",
+      "date": "2026-01-16",
+      "title_en": "ethresear.ch: Combining preconfirmations with based rollups for synchronous composability",
+      "note_en": "(vbuterin), 14:58: contrasts based rollups ordered by L1 with sequenced rollups ordered offchain.",
+      "topic_en": "Rollups and signing tools"
+    },
+    {
+      "topic": "Rollup 与签名工具",
+      "title": "EIP-8024：编码改为 push 后缀",
+      "note": "（frangio）提交；EIP-7778：澄清收据的 gas 计算（nerolation）1 月 14 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11094",
+      "date": "2026-01-16",
+      "title_en": "EIP-8024: switch encoding to push postfix",
+      "note_en": "(frangio), submitted; EIP-7778: clarify gas accounting for receipts (nerolation), merged after submission on January 14.",
+      "topic_en": "Rollups and signing tools"
+    },
+    {
+      "topic": "Rollup 与签名工具",
+      "title": "EIP-7778：澄清收据的 gas 计算",
+      "note": "EIP-8024：编码改为 push 后缀（frangio）提交；EIP-7778：澄清收据的 gas 计算（nerolation）1 月 14 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11075",
+      "date": "2026-01-16",
+      "title_en": "EIP-7778: clarify gas accounting for receipts",
+      "note_en": "EIP-8024: switch encoding to push postfix (frangio), submitted; EIP-7778: clarify gas accounting for receipts (nerolation), merged after submission on January 14.",
+      "topic_en": "Rollups and signing tools"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：跨链消息格式与邮箱",
+      "note": "（elliedavidson）2024 年 12 月 12 日提交后合并；ERC-8127：人类可读的代币标识 23:05；ethbeat_org：L2BEAT 新增 Stage 2 应用链 ethscriptions 18:17。",
+      "url": "https://github.com/ethereum/ERCs/pull/766",
+      "date": "2026-01-16",
+      "title_en": "Add ERC: Cross-chain Message Format and Mailbox",
+      "note_en": "(elliedavidson), merged after submission on December 12, 2024; ERC-8127: Human Readable Token Identifiers, 23:05; ethbeat_org: a new Stage 2 appchain on L2BEAT, ethscriptions, 18:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8127：人类可读的代币标识",
+      "note": "新增 ERC：跨链消息格式与邮箱（elliedavidson）2024 年 12 月 12 日提交后合并；ERC-8127：人类可读的代币标识 23:05；ethbeat_org：L2BEAT 新增 Stage 2 应用链 ethscriptions 18:17。",
+      "url": "https://ethereum-magicians.org/t/erc-8127-human-readable-token-identifiers/27449",
+      "date": "2026-01-16",
+      "title_en": "ERC-8127: Human Readable Token Identifiers",
+      "note_en": "Add ERC: Cross-chain Message Format and Mailbox (elliedavidson), merged after submission on December 12, 2024; ERC-8127: Human Readable Token Identifiers, 23:05; ethbeat_org: a new Stage 2 appchain on L2BEAT, ethscriptions, 18:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethbeat_org：L2BEAT 新增 Stage 2 应用链 ethscriptions",
+      "note": "新增 ERC：跨链消息格式与邮箱（elliedavidson）2024 年 12 月 12 日提交后合并；ERC-8127：人类可读的代币标识 23:05；ethbeat_org：L2BEAT 新增 Stage 2 应用链 ethscriptions 18:17。",
+      "url": "https://x.com/ethbeat_org/status/2012122053873139809",
+      "date": "2026-01-16",
+      "title_en": "ethbeat_org: a new Stage 2 appchain on L2BEAT, ethscriptions",
+      "note_en": "Add ERC: Cross-chain Message Format and Mailbox (elliedavidson), merged after submission on December 12, 2024; ERC-8127: Human Readable Token Identifiers, 23:05; ethbeat_org: a new Stage 2 appchain on L2BEAT, ethscriptions, 18:17.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：隐私直播 The Apparatus，VitalikButerin、Ada Palmer 与 Sherri Davidoff 对谈",
+      "note": "01:04；peter_szilagyi：为签名编排加入后量子支持 04:34。",
+      "url": "https://x.com/ethereum/status/2011862033625727317",
+      "date": "2026-01-16",
+      "title_en": "ethereum: the privacy livestream The Apparatus with VitalikButerin, Ada Palmer and Sherri Davidoff",
+      "note_en": "01:04; peter_szilagyi: added post-quantum support to his signer orchestration, 04:34.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：为签名编排加入后量子支持",
+      "note": "ethereum：隐私直播 The Apparatus，VitalikButerin、Ada Palmer 与 Sherri Davidoff 对谈 01:04；peter_szilagyi：为签名编排加入后量子支持 04:34。",
+      "url": "https://x.com/peter_szilagyi/status/2011914929943576873",
+      "date": "2026-01-16",
+      "title_en": "peter_szilagyi: added post-quantum support to his signer orchestration",
+      "note_en": "Ethereum: the privacy livestream The Apparatus with VitalikButerin, Ada Palmer and Sherri Davidoff, 01:04; peter_szilagyi: added post-quantum support to his signer orchestration, 04:34.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/migration-strategies-for-eoas-under-the-quantum-threat-breakages-and-open-questions/23864",
+    "credit": "ethresear.ch, Migration Strategies for EOAs under the Quantum Threat",
+    "local_path": "assets/2026-01-16.jpg",
+    "credit_en": "ethresear.ch, Migration Strategies for EOAs under the Quantum Threat"
+  },
+  "keywords_en": [
+    "Migration strategies for EOAs under the quantum threat",
+    "EIP-8105 universal enshrined encrypted mempool proposed as a Hegotá headliner",
+    "preconfirmations plus based rollups for synchronous composability",
+    "the Ethereum privacy livestream The Apparatus",
+    "EIP-8024 switches to push postfix encoding",
+    "a new Stage 2 appchain"
+  ],
+  "summary_en": "Marco López and coauthors published a paper on how EOA authorization, transactions and signature flows would migrate, and what breaks, once a quantum computer can break secp256k1. jannikluhn proposed EIP-8105, the universal enshrined encrypted mempool, as a Hegotá headliner: transactions stay encrypted until inclusion, blocking frontrunning and sandwiching. VitalikButerin wrote on combining preconfirmations with based rollups for synchronous composability."
+}

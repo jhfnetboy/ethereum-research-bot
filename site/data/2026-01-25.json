@@ -1,0 +1,119 @@
+{
+  "date": "2026-01-25",
+  "keywords": [
+    "从 EOA 到智能合约账户的护城河",
+    "数据列广播的 cell 级增量 EIP",
+    "量子威胁的现状",
+    "BPO1 元 EIP 讨论帖",
+    "多个 EIP 被标记 stagnant",
+    "Agent 时代的客户端多样性"
+  ],
+  "summary": "周日较安静。zengjiajun_eth 认为以太坊从 EOA 转向智能合约账户，不仅是安全与体验升级，更能加深护城河，让 EVM 分叉难以零成本挖走用户。MarcoPolo 提交数据列广播的 cell 级增量 EIP。",
+  "items": [
+    {
+      "topic": "账户：从 EOA 到智能账户",
+      "title": "zengjiajun_eth：以太坊从 EOA 转向智能合约账户，不仅是用户与协议的安全和体验升级，更重要的是加深护城河，让其他 EVM 分叉无法零成本挖走用户",
+      "note": "10:05。",
+      "url": "https://x.com/zengjiajun_eth/status/2015259803505864781",
+      "date": "2026-01-25",
+      "title_en": "zengjiajun_eth: moving Ethereum from EOAs to smart contract accounts is a big security and UX upgrade for users and the protocol, and above all deepens the moat so other EVM forks cannot take its users at almost zero switching cost",
+      "note_en": "10:05.",
+      "topic_en": "Accounts: from EOAs to smart accounts"
+    },
+    {
+      "topic": "协议：blob 与元 EIP",
+      "title": "新增 EIP：数据列广播的 cell 级增量",
+      "note": "（MarcoPolo）提交；Magicians：EIP-8134 硬分叉元 EIP BPO1 12:31。",
+      "url": "https://github.com/ethereum/EIPs/pull/11176",
+      "date": "2026-01-25",
+      "title_en": "Add EIP: Cell-Level Deltas for Data Column Broadcast",
+      "note_en": "(MarcoPolo), submitted; Magicians: EIP-8134 Hardfork Meta BPO1, 12:31.",
+      "topic_en": "Protocol: blobs and meta EIPs"
+    },
+    {
+      "topic": "协议：blob 与元 EIP",
+      "title": "Magicians：EIP-8134 硬分叉元 EIP BPO1",
+      "note": "新增 EIP：数据列广播的 cell 级增量（MarcoPolo）提交；Magicians：EIP-8134 硬分叉元 EIP BPO1 12:31。",
+      "url": "https://ethereum-magicians.org/t/eip-8134-hardfork-meta-bpo1/27582",
+      "date": "2026-01-25",
+      "title_en": "Magicians: EIP-8134 Hardfork Meta BPO1",
+      "note_en": "Add EIP: Cell-Level Deltas for Data Column Broadcast (MarcoPolo), submitted; Magicians: EIP-8134 Hardfork Meta BPO1, 12:31.",
+      "topic_en": "Protocol: blobs and meta EIPs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-3540 被标记 stagnant",
+      "note": "（eth-bot）提交；EIP-7793 进入 Stagnant（eth-bot）合并；EIP-8030：requires 加入 EIP-7951（jenniferzelo）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11168",
+      "date": "2026-01-25",
+      "title_en": "EIP-3540 flagged stagnant",
+      "note_en": "(eth-bot), submitted; EIP-7793: move to Stagnant (eth-bot), merged; EIP-8030: add EIP-7951 to requires (jenniferzelo), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7793 进入 Stagnant",
+      "note": "EIP-3540 被标记 stagnant（eth-bot）提交；EIP-7793 进入 Stagnant（eth-bot）合并；EIP-8030：requires 加入 EIP-7951（jenniferzelo）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11009",
+      "date": "2026-01-25",
+      "title_en": "EIP-7793: move to Stagnant",
+      "note_en": "EIP-3540 flagged stagnant (eth-bot), submitted; EIP-7793: move to Stagnant (eth-bot), merged; EIP-8030: add EIP-7951 to requires (jenniferzelo), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8030：requires 加入 EIP-7951",
+      "note": "EIP-3540 被标记 stagnant（eth-bot）提交；EIP-7793 进入 Stagnant（eth-bot）合并；EIP-8030：requires 加入 EIP-7951（jenniferzelo）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11173",
+      "date": "2026-01-25",
+      "title_en": "EIP-8030: add EIP-7951 to requires",
+      "note_en": "EIP-3540 flagged stagnant (eth-bot), submitted; EIP-7793: move to Stagnant (eth-bot), merged; EIP-8030: add EIP-7951 to requires (jenniferzelo), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tkstanczak：两篇文章合读，了解量子威胁现状与对现有区块链的风险",
+      "note": "09:25；fede_intern：Agent 主导的世界里以太坊至关重要，需要多客户端 07:18；leanEthereum：EthCC 前周末的 zkEVM 与后量子两场活动 05:08。",
+      "url": "https://x.com/tkstanczak/status/2015249704699973876",
+      "date": "2026-01-25",
+      "title_en": "tkstanczak: read both together for the current state of quantum threats and risks to blockchains",
+      "note_en": "09:25; fede_intern: Ethereum will be crucial in an agent run world and needs multiple clients, 07:18; leanEthereum: zkEVM and post-quantum side events the weekend before EthCC, 05:08.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：Agent 主导的世界里以太坊至关重要，需要多客户端",
+      "note": "tkstanczak：两篇文章合读，了解量子威胁现状与对现有区块链的风险 09:25；fede_intern：Agent 主导的世界里以太坊至关重要，需要多客户端 07:18；leanEthereum：EthCC 前周末的 zkEVM 与后量子两场活动 05:08。",
+      "url": "https://x.com/fede_intern/status/2015217722452513033",
+      "date": "2026-01-25",
+      "title_en": "fede_intern: Ethereum will be crucial in an agent run world and needs multiple clients",
+      "note_en": "Tkstanczak: read both together for the current state of quantum threats and risks to blockchains, 09:25; fede_intern: Ethereum will be crucial in an agent run world and needs multiple clients, 07:18; leanEthereum: zkEVM and post-quantum side events the weekend before EthCC, 05:08.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "leanEthereum：EthCC 前周末的 zkEVM 与后量子两场活动",
+      "note": "tkstanczak：两篇文章合读，了解量子威胁现状与对现有区块链的风险 09:25；fede_intern：Agent 主导的世界里以太坊至关重要，需要多客户端 07:18；leanEthereum：EthCC 前周末的 zkEVM 与后量子两场活动 05:08。",
+      "url": "https://x.com/leanEthereum/status/2015185045858746633",
+      "date": "2026-01-25",
+      "title_en": "leanEthereum: zkEVM and post-quantum side events the weekend before EthCC",
+      "note_en": "Tkstanczak: read both together for the current state of quantum threats and risks to blockchains, 09:25; fede_intern: Ethereum will be crucial in an agent run world and needs multiple clients, 07:18; leanEthereum: zkEVM and post-quantum side events the weekend before EthCC, 05:08.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8134-hardfork-meta-bpo1/27582",
+    "credit": "Ethereum Magicians, EIP-8134: Hardfork Meta - BPO1",
+    "local_path": "assets/2026-01-25.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8134: Hardfork Meta - BPO1"
+  },
+  "keywords_en": [
+    "The moat from moving EOAs to smart contract accounts",
+    "a cell level deltas EIP for data column broadcast",
+    "the state of quantum threats",
+    "the BPO1 meta EIP thread",
+    "several EIPs flagged stagnant",
+    "client diversity for an agent world"
+  ],
+  "summary_en": "A quiet Sunday. zengjiajun_eth argued moving Ethereum from EOAs to smart contract accounts is not only a security and UX upgrade but deepens the moat, so EVM forks cannot lure users away at near zero switching cost. MarcoPolo submitted a cell level deltas EIP for data column broadcast."
+}

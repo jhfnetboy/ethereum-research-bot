@@ -1,0 +1,129 @@
+{
+  "date": "2026-01-23",
+  "keywords": [
+    "pq-devnet-2 达成并用 leanVM 聚合后量子签名",
+    "Vitalik 2026 年夺回计算自主权",
+    "dYdX v3 关停 452 天后仍可退出",
+    "ERC-8137 4337 账户跨链执行",
+    "升级命名 EIP-8133",
+    "Ethereal news #8"
+  ],
+  "summary": "leanEthereum 宣布多个团队达成 pq-devnet-2，leanCL 客户端已通过 leanVM 聚合后量子签名。VitalikButerin 称 2026 年要夺回计算自主权，并分享自己换用的开源加密软件。donnoh_eth 提醒 dYdX v3 关停 452 天后用户仍能自行退出，因其是通过“离场测试”的 Stage 1 Rollup。",
+  "items": [
+    {
+      "topic": "交易签名：后量子签名聚合",
+      "title": "leanEthereum：多个团队达成 pq-devnet-2，突破在于 leanCL 团队已通过 leanVM 聚合后量子签名",
+      "note": "20:34。",
+      "url": "https://x.com/leanEthereum/status/2014693267498008897",
+      "date": "2026-01-23",
+      "title_en": "leanEthereum: teams reached pq-devnet-2, and the breakthrough is that leanCL teams now aggregate post-quantum signatures via leanVM",
+      "note_en": "20:34.",
+      "topic_en": "Signatures: post-quantum aggregation"
+    },
+    {
+      "topic": "隐私与自主权",
+      "title": "VitalikButerin：2026 年是夺回计算自主权的一年，且远不止区块链领域，2025 年他几乎完全转用开源加密去中心化文档等工具",
+      "note": "04:45。",
+      "url": "https://x.com/VitalikButerin/status/2014454477152256415",
+      "date": "2026-01-23",
+      "title_en": "VitalikButerin: 2026 is the year to take back computing self sovereignty, well beyond blockchains, and in 2025 he switched almost fully to open source encrypted decentralized docs and similar tools",
+      "note_en": "04:45.",
+      "topic_en": "Privacy and self sovereignty"
+    },
+    {
+      "topic": "隐私与自主权",
+      "title": "donnoh_eth：dYdX v3 关停 452 天后，用户仍用 L2BEAT 构建的开源前端自行退出，只因它是通过离场测试的 Stage 1 Rollup",
+      "note": "21:56。",
+      "url": "https://x.com/donnoh_eth/status/2014713809491898784",
+      "date": "2026-01-23",
+      "title_en": "donnoh_eth: 452 days after dYdX v3 shut down, users still exit on their own through an open source frontend built at L2BEAT, only possible because it is a Stage 1 rollup that passes the walkaway test",
+      "note_en": "21:56.",
+      "topic_en": "Privacy and self sovereignty"
+    },
+    {
+      "topic": "账户：4337 跨链",
+      "title": "Magicians：ERC-8137 ERC-4337 账户的无信任跨链执行",
+      "note": "23:40：定义 WeissChannels 协议扩展，单签名、原子、无托管跨链执行。",
+      "url": "https://ethereum-magicians.org/t/erc-8137-trustless-cross-chain-execution-for-erc-4337-accounts/27577",
+      "date": "2026-01-23",
+      "title_en": "Magicians: ERC-8137 Trustless Cross-Chain Execution for ERC-4337 Accounts",
+      "note_en": "23:40: defines the WeissChannels extension for single signature, atomic, non custodial cross chain execution.",
+      "topic_en": "Accounts: 4337 cross chain"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：升级命名",
+      "note": "（poojaranjan）提交，EIP-8133 讨论帖 22:16；EIP-7708：加入测试用例（Carsons-Eels）提交；ERC-7634 进入 Final（OniReimu）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11161",
+      "date": "2026-01-23",
+      "title_en": "Add EIP: Upgrade Nomenclature",
+      "note_en": "(poojaranjan), submitted, with the EIP-8133 thread, 22:16; EIP-7708: add test cases (Carsons-Eels), submitted; ERC-7634: move to Final (OniReimu), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8133 讨论帖",
+      "note": "新增 EIP：升级命名（poojaranjan）提交，EIP-8133 讨论帖 22:16；EIP-7708：加入测试用例（Carsons-Eels）提交；ERC-7634 进入 Final（OniReimu）合并。",
+      "url": "https://ethereum-magicians.org/t/eip-8133-upgrade-nomenclature/27575",
+      "date": "2026-01-23",
+      "title_en": "EIP-8133 thread",
+      "note_en": "Add EIP: Upgrade Nomenclature (poojaranjan), submitted, with the EIP-8133 thread, 22:16; EIP-7708: add test cases (Carsons-Eels), submitted; ERC-7634: move to Final (OniReimu), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7708：加入测试用例",
+      "note": "新增 EIP：升级命名（poojaranjan）提交，EIP-8133 讨论帖 22:16；EIP-7708：加入测试用例（Carsons-Eels）提交；ERC-7634 进入 Final（OniReimu）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11160",
+      "date": "2026-01-23",
+      "title_en": "EIP-7708: add test cases",
+      "note_en": "Add EIP: Upgrade Nomenclature (poojaranjan), submitted, with the EIP-8133 thread, 22:16; EIP-7708: add test cases (Carsons-Eels), submitted; ERC-7634: move to Final (OniReimu), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7634 进入 Final",
+      "note": "新增 EIP：升级命名（poojaranjan）提交，EIP-8133 讨论帖 22:16；EIP-7708：加入测试用例（Carsons-Eels）提交；ERC-7634 进入 Final（OniReimu）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1405",
+      "date": "2026-01-23",
+      "title_en": "ERC-7634: move to Final",
+      "note_en": "Add EIP: Upgrade Nomenclature (poojaranjan), submitted, with the EIP-8133 thread, 22:16; EIP-7708: add test cases (Carsons-Eels), submitted; ERC-7634: move to Final (OniReimu), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EtherealnewsHQ：Ethereal news #8 发布，含 NYSE 代币化证券平台与 Glamsterdam",
+      "note": "18:46；fede_intern：ethrex 是首个从设计之初就原生支持 ZK 的以太坊客户端 08:13。",
+      "url": "https://x.com/EtherealnewsHQ/status/2014666009836425516",
+      "date": "2026-01-23",
+      "title_en": "EtherealnewsHQ: Ethereal news #8 is out, with the NYSE tokenized securities platform and Glamsterdam",
+      "note_en": "18:46; fede_intern: ethrex is the first Ethereum client designed from the start to support ZK natively, 08:13.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：ethrex 是首个从设计之初就原生支持 ZK 的以太坊客户端",
+      "note": "EtherealnewsHQ：Ethereal news #8 发布，含 NYSE 代币化证券平台与 Glamsterdam 18:46；fede_intern：ethrex 是首个从设计之初就原生支持 ZK 的以太坊客户端 08:13。",
+      "url": "https://x.com/fede_intern/status/2014506636237234508",
+      "date": "2026-01-23",
+      "title_en": "fede_intern: ethrex is the first Ethereum client designed from the start to support ZK natively",
+      "note_en": "EtherealnewsHQ: Ethereal news #8 is out, with the NYSE tokenized securities platform and Glamsterdam, 18:46; fede_intern: ethrex is the first Ethereum client designed from the start to support ZK natively, 08:13.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8137-trustless-cross-chain-execution-for-erc-4337-accounts/27577",
+    "credit": "Ethereum Magicians, ERC-8137: Trustless Cross-Chain Execution for ERC-4337 Accounts",
+    "local_path": "assets/2026-01-23.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8137: Trustless Cross-Chain Execution for ERC-4337 Accounts"
+  },
+  "keywords_en": [
+    "pq-devnet-2 reached with post-quantum signatures aggregated via leanVM",
+    "Vitalik on taking back computing self sovereignty in 2026",
+    "dYdX v3 exits still working 452 days after shutdown",
+    "ERC-8137 cross chain execution for 4337 accounts",
+    "Upgrade Nomenclature EIP-8133",
+    "Ethereal news #8"
+  ],
+  "summary_en": "leanEthereum said several teams reached pq-devnet-2, with leanCL clients now aggregating post-quantum signatures through leanVM. VitalikButerin said 2026 is the year to take back computing self sovereignty and shared the open source encrypted tools he switched to. donnoh_eth noted dYdX v3 users can still exit 452 days after shutdown because it is a Stage 1 rollup that passes the walkaway test."
+}

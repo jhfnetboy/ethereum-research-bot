@@ -1,0 +1,203 @@
+{
+  "date": "2026-01-22",
+  "keywords": [
+    "账户配置式 AA 初稿",
+    "EIP-7981 访问列表计入 calldata 下限合并",
+    "授权数据计入 EIP-7623 下限",
+    "ACDC #173 Glamsterdam 6 至 8 月上线",
+    "钱包 gas limit 覆盖能力 ERC",
+    "Railgun 隐私",
+    "1 秒子槽与 CEX-DEX 套利",
+    "benjaminion 加入 EF 推进快速最终性"
+  ],
+  "summary": "chunter-cb 提交账户配置式 AA 的初稿 EIP。nerolation 提交并合并 EIP-7981，把访问列表成本计入 EIP-7623 下限，同日提交授权数据计入下限的 EIP。ACDC #173 定下 Glamsterdam 主网 6 至 8 月、公共测试网约 5 月；ePBS 若来不及可不随 Glamsterdam 上线。ethereum 介绍 Railgun。",
+  "items": [
+    {
+      "topic": "原生 AA：账户配置初稿",
+      "title": "新增 EIP：通过链上账户配置实现账户抽象",
+      "note": "与 新增 EIP：通过账户配置实现账户抽象（chunter-cb）提交，后续版本于 1 月 28 日重提。",
+      "url": "https://github.com/ethereum/EIPs/pull/11143",
+      "date": "2026-01-22",
+      "title_en": "Add EIP: Account Abstraction via Onchain Account Configurations",
+      "note_en": "And Add EIP: Account Abstraction by Account Configuration (chunter-cb), submitted, with a later version resubmitted on January 28.",
+      "topic_en": "Native AA: account configuration draft"
+    },
+    {
+      "topic": "原生 AA：账户配置初稿",
+      "title": "新增 EIP：通过账户配置实现账户抽象",
+      "note": "新增 EIP：通过链上账户配置实现账户抽象 与 新增 EIP：通过账户配置实现账户抽象（chunter-cb）提交，后续版本于 1 月 28 日重提。",
+      "url": "https://github.com/ethereum/EIPs/pull/11144",
+      "date": "2026-01-22",
+      "title_en": "Add EIP: Account Abstraction by Account Configuration",
+      "note_en": "Add EIP: Account Abstraction via Onchain Account Configurations and Add EIP: Account Abstraction by Account Configuration (chunter-cb), submitted, with a later version resubmitted on January 28.",
+      "topic_en": "Native AA: account configuration draft"
+    },
+    {
+      "topic": "Gas：calldata 下限补漏",
+      "title": "EIP-7981：把访问列表成本计入 EIP-7623 下限公式",
+      "note": "（nerolation）提交并合并：访问列表数据成本计入固有 gas，其 token 计入下限计算，防止绕过 EIP-7623 calldata 下限。",
+      "url": "https://github.com/ethereum/EIPs/pull/11141",
+      "date": "2026-01-22",
+      "title_en": "EIP-7981: add access list cost to the EIP-7623 floor formula",
+      "note_en": "(nerolation), submitted and merged: access list data cost joins intrinsic gas and its tokens join the floor calculation, preventing a bypass of EIP-7623 calldata floor pricing.",
+      "topic_en": "Gas: closing calldata floor gaps"
+    },
+    {
+      "topic": "Gas：calldata 下限补漏",
+      "title": "新增 EIP：授权数据计入 EIP-7623 下限",
+      "note": "（nerolation）提交，EIP-8131 讨论帖 17:01。",
+      "url": "https://github.com/ethereum/EIPs/pull/11148",
+      "date": "2026-01-22",
+      "title_en": "Add EIP: Add Auth Data to EIP-7623 Floor",
+      "note_en": "(nerolation), submitted, with the EIP-8131 thread, 17:01.",
+      "topic_en": "Gas: closing calldata floor gaps"
+    },
+    {
+      "topic": "Gas：calldata 下限补漏",
+      "title": "EIP-8131 讨论帖",
+      "note": "新增 EIP：授权数据计入 EIP-7623 下限（nerolation）提交，EIP-8131 讨论帖 17:01。",
+      "url": "https://ethereum-magicians.org/t/eip-8131-add-auth-data-to-eip-7623-floor/27567",
+      "date": "2026-01-22",
+      "title_en": "EIP-8131 thread",
+      "note_en": "Add EIP: Add Auth Data to EIP-7623 Floor (nerolation), submitted, with the EIP-8131 thread, 17:01.",
+      "topic_en": "Gas: closing calldata floor gaps"
+    },
+    {
+      "topic": "Gas：calldata 下限补漏",
+      "title": "新增 ERC：钱包调用 gas limit 覆盖能力",
+      "note": "（ajhodges）提交：为 EIP-5792 增加 gasLimitOverride，让应用在 wallet_sendCalls 中为每个调用指定 gas limit。",
+      "url": "https://github.com/ethereum/ERCs/pull/1485",
+      "date": "2026-01-22",
+      "title_en": "Add ERC: Wallet Call Gas Limit Override Capability",
+      "note_en": "(ajhodges), submitted: adds gasLimitOverride to EIP-5792 so apps can set per call gas limits in wallet_sendCalls.",
+      "topic_en": "Gas: closing calldata floor gaps"
+    },
+    {
+      "topic": "会议：ACDC #173",
+      "title": "ACDC #173",
+      "note": "21:00，据 Ethereal news #8：Glamsterdam 主网目标 6 至 8 月（以便一年两次升级），公共测试网约 5 月，devnet 开发约 4 月完成；epbs-devnet-0 目标 2 月底，ePBS 若未就绪可不随 Glamsterdam 上线；Hegotá 头号提案截止 2 月 4 日；blob-devnet-0 已上线，是 BPO3 的前提。",
+      "url": "https://forkcast.org/calls/acdc/173",
+      "date": "2026-01-22",
+      "title_en": "ACDC #173",
+      "note_en": "21:00, per Ethereal news #8: Glamsterdam mainnet targets June to August to allow two upgrades a year, public testnets around May and devnets done around April; epbs-devnet-0 targets late February, with an option to ship Glamsterdam without ePBS; the Hegotá headliner deadline is February 4; blob-devnet-0 launched, a prerequisite for BPO3.",
+      "topic_en": "Calls: ACDC #173"
+    },
+    {
+      "topic": "会议：ACDC #173",
+      "title": "Ethereal news #8",
+      "note": "ACDC #173 21:00，据 Ethereal news #8：Glamsterdam 主网目标 6 至 8 月（以便一年两次升级），公共测试网约 5 月，devnet 开发约 4 月完成；epbs-devnet-0 目标 2 月底，ePBS 若未就绪可不随 Glamsterdam 上线；Hegotá 头号提案截止 2 月 4 日；blob-devnet-0 已上线，是 BPO3 的前提。",
+      "url": "https://ethereal.news/ethereal-news-weekly-8/",
+      "date": "2026-01-22",
+      "title_en": "Ethereal news #8",
+      "note_en": "ACDC #173, 21:00, per Ethereal news #8: Glamsterdam mainnet targets June to August to allow two upgrades a year, public testnets around May and devnets done around April; epbs-devnet-0 targets late February, with an option to ship Glamsterdam without ePBS; the Hegotá headliner deadline is February 4; blob-devnet-0 launched, a prerequisite for BPO3.",
+      "topic_en": "Calls: ACDC #173"
+    },
+    {
+      "topic": "会议：ACDC #173",
+      "title": "epbs-devnet-0",
+      "note": "ACDC #173 21:00，据 Ethereal news #8：Glamsterdam 主网目标 6 至 8 月（以便一年两次升级），公共测试网约 5 月，devnet 开发约 4 月完成；epbs-devnet-0 目标 2 月底，ePBS 若未就绪可不随 Glamsterdam 上线；Hegotá 头号提案截止 2 月 4 日；blob-devnet-0 已上线，是 BPO3 的前提。",
+      "url": "https://notes.ethereum.org/@ethpandaops/epbs-devnet-0",
+      "date": "2026-01-22",
+      "title_en": "epbs-devnet-0",
+      "note_en": "ACDC #173, 21:00, per Ethereal news #8: Glamsterdam mainnet targets June to August to allow two upgrades a year, public testnets around May and devnets done around April; epbs-devnet-0 targets late February, with an option to ship Glamsterdam without ePBS; the Hegotá headliner deadline is February 4; blob-devnet-0 launched, a prerequisite for BPO3.",
+      "topic_en": "Calls: ACDC #173"
+    },
+    {
+      "topic": "会议：ACDC #173",
+      "title": "blob-devnet-0",
+      "note": "ACDC #173 21:00，据 Ethereal news #8：Glamsterdam 主网目标 6 至 8 月（以便一年两次升级），公共测试网约 5 月，devnet 开发约 4 月完成；epbs-devnet-0 目标 2 月底，ePBS 若未就绪可不随 Glamsterdam 上线；Hegotá 头号提案截止 2 月 4 日；blob-devnet-0 已上线，是 BPO3 的前提。",
+      "url": "https://notes.ethereum.org/@ethpandaops/blob-devnet-0",
+      "date": "2026-01-22",
+      "title_en": "blob-devnet-0",
+      "note_en": "ACDC #173, 21:00, per Ethereal news #8: Glamsterdam mainnet targets June to August to allow two upgrades a year, public testnets around May and devnets done around April; epbs-devnet-0 targets late February, with an option to ship Glamsterdam without ePBS; the Hegotá headliner deadline is February 4; blob-devnet-0 launched, a prerequisite for BPO3.",
+      "topic_en": "Calls: ACDC #173"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：1 秒子槽如何改变以太坊上的 CEX-DEX 套利",
+      "note": "19:16；ethresear.ch：在 10 GigaGas/s 吞吐下缩小 BAL 体积 18:30；EIP-7928：BAL 移入 engine_getPayloadBodiesV2 响应（nerolation）提交并合并；EIP-7892 进入 Final（poojaranjan）提交并合并。",
+      "url": "https://ethresear.ch/t/second-thoughts-how-1-second-subslots-transform-cex-dex-arbitrage-on-ethereum/23923",
+      "date": "2026-01-22",
+      "title_en": "ethresear.ch: how 1 second subslots transform CEX-DEX arbitrage on Ethereum",
+      "note_en": "19:16; ethresear.ch: reducing BAL size with 10 GigaGas/s throughput in the presence of I/O, 18:30; EIP-7928: move BAL into the engine_getPayloadBodiesV2 response (nerolation), submitted and merged; EIP-7892: move to Final (poojaranjan), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：在 10 GigaGas/s 吞吐下缩小 BAL 体积",
+      "note": "ethresear.ch：1 秒子槽如何改变以太坊上的 CEX-DEX 套利 19:16；ethresear.ch：在 10 GigaGas/s 吞吐下缩小 BAL 体积 18:30；EIP-7928：BAL 移入 engine_getPayloadBodiesV2 响应（nerolation）提交并合并；EIP-7892 进入 Final（poojaranjan）提交并合并。",
+      "url": "https://ethresear.ch/t/reducing-bal-size-with-10-gigagas-s-evm-throughput-in-the-presence-of-i-o/23920",
+      "date": "2026-01-22",
+      "title_en": "ethresear.ch: reducing BAL size with 10 GigaGas/s throughput in the presence of I/O",
+      "note_en": "Ethresear.ch: how 1 second subslots transform CEX-DEX arbitrage on Ethereum, 19:16; ethresear.ch: reducing BAL size with 10 GigaGas/s throughput in the presence of I/O, 18:30; EIP-7928: move BAL into the engine_getPayloadBodiesV2 response (nerolation), submitted and merged; EIP-7892: move to Final (poojaranjan), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：BAL 移入 engine_getPayloadBodiesV2 响应",
+      "note": "ethresear.ch：1 秒子槽如何改变以太坊上的 CEX-DEX 套利 19:16；ethresear.ch：在 10 GigaGas/s 吞吐下缩小 BAL 体积 18:30；EIP-7928：BAL 移入 engine_getPayloadBodiesV2 响应（nerolation）提交并合并；EIP-7892 进入 Final（poojaranjan）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11150",
+      "date": "2026-01-22",
+      "title_en": "EIP-7928: move BAL into the engine_getPayloadBodiesV2 response",
+      "note_en": "Ethresear.ch: how 1 second subslots transform CEX-DEX arbitrage on Ethereum, 19:16; ethresear.ch: reducing BAL size with 10 GigaGas/s throughput in the presence of I/O, 18:30; EIP-7928: move BAL into the engine_getPayloadBodiesV2 response (nerolation), submitted and merged; EIP-7892: move to Final (poojaranjan), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7892 进入 Final",
+      "note": "ethresear.ch：1 秒子槽如何改变以太坊上的 CEX-DEX 套利 19:16；ethresear.ch：在 10 GigaGas/s 吞吐下缩小 BAL 体积 18:30；EIP-7928：BAL 移入 engine_getPayloadBodiesV2 响应（nerolation）提交并合并；EIP-7892 进入 Final（poojaranjan）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11152",
+      "date": "2026-01-22",
+      "title_en": "EIP-7892: move to Final",
+      "note_en": "Ethresear.ch: how 1 second subslots transform CEX-DEX arbitrage on Ethereum, 19:16; ethresear.ch: reducing BAL size with 10 GigaGas/s throughput in the presence of I/O, 18:30; EIP-7928: move BAL into the engine_getPayloadBodiesV2 response (nerolation), submitted and merged; EIP-7892: move to Final (poojaranjan), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：Railgun 基于以太坊，用零知识证明实现隐私转账与 DeFi 交互",
+      "note": "02:35；benjaminion_xyz：结束退休加入 EF，推动快速最终性上主网 23:49；peter_szilagyi：发布 Rust 与 Go 后量子密码库 21:09。",
+      "url": "https://x.com/ethereum/status/2014059207855841450",
+      "date": "2026-01-22",
+      "title_en": "ethereum: Railgun is built on Ethereum, using zero knowledge proofs for shielded transfers and DeFi",
+      "note_en": "02:35; benjaminion_xyz: back from retirement at the EF to shepherd fast finality to mainnet, 23:49; peter_szilagyi: published post-quantum cryptography packages for Rust and Go, 21:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "benjaminion_xyz：结束退休加入 EF，推动快速最终性上主网",
+      "note": "ethereum：Railgun 基于以太坊，用零知识证明实现隐私转账与 DeFi 交互 02:35；benjaminion_xyz：结束退休加入 EF，推动快速最终性上主网 23:49；peter_szilagyi：发布 Rust 与 Go 后量子密码库 21:09。",
+      "url": "https://x.com/benjaminion_xyz/status/2014379792561283338",
+      "date": "2026-01-22",
+      "title_en": "benjaminion_xyz: back from retirement at the EF to shepherd fast finality to mainnet",
+      "note_en": "Ethereum: Railgun is built on Ethereum, using zero knowledge proofs for shielded transfers and DeFi, 02:35; benjaminion_xyz: back from retirement at the EF to shepherd fast finality to mainnet, 23:49; peter_szilagyi: published post-quantum cryptography packages for Rust and Go, 21:09.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：发布 Rust 与 Go 后量子密码库",
+      "note": "ethereum：Railgun 基于以太坊，用零知识证明实现隐私转账与 DeFi 交互 02:35；benjaminion_xyz：结束退休加入 EF，推动快速最终性上主网 23:49；peter_szilagyi：发布 Rust 与 Go 后量子密码库 21:09。",
+      "url": "https://x.com/peter_szilagyi/status/2014339747791986966",
+      "date": "2026-01-22",
+      "title_en": "peter_szilagyi: published post-quantum cryptography packages for Rust and Go",
+      "note_en": "Ethereum: Railgun is built on Ethereum, using zero knowledge proofs for shielded transfers and DeFi, 02:35; benjaminion_xyz: back from retirement at the EF to shepherd fast finality to mainnet, 23:49; peter_szilagyi: published post-quantum cryptography packages for Rust and Go, 21:09.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8131-add-auth-data-to-eip-7623-floor/27567",
+    "credit": "Ethereum Magicians, EIP-8131: Add Auth Data to EIP-7623 Floor",
+    "local_path": "assets/2026-01-22.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8131: Add Auth Data to EIP-7623 Floor"
+  },
+  "keywords_en": [
+    "A first account configuration AA draft",
+    "EIP-7981 counts access lists in the calldata floor and merges",
+    "authorization data in the EIP-7623 floor",
+    "ACDC #173 targets Glamsterdam for June to August",
+    "a wallet gas limit override ERC",
+    "Railgun privacy",
+    "1 second subslots and CEX-DEX arbitrage",
+    "benjaminion joins the EF for fast finality"
+  ],
+  "summary_en": "chunter-cb submitted first drafts of an account configuration AA EIP. nerolation submitted and merged EIP-7981, counting access list cost in the EIP-7623 floor, and the same day submitted an EIP adding authorization data to the floor. ACDC #173 set Glamsterdam mainnet for June to August with public testnets around May, with an option to ship without ePBS if it is not ready. ethereum featured Railgun."
+}

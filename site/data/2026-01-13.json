@@ -1,0 +1,141 @@
+{
+  "date": "2026-01-13",
+  "keywords": [
+    "EIP-7932 的 sigrecover 返回值补齐到 32 字节",
+    "EIP-7928 BAL 进一步澄清访问定义",
+    "EIP-7773 依 ACDC #172 处理 EIP-8070",
+    "无服务器隐私优先的 dApp 本地通知",
+    "ERC-7888 泛化支持多种状态承诺",
+    "leanSpec 变为可运行的规范客户端",
+    "Cloudflare 后量子签名综述"
+  ],
+  "summary": "SirSpudlington 把 EIP-7932 的 sigrecover 返回值补齐到 32 字节，提交并合并，这是多签名算法账户的基础预编译。nerolation 提交 EIP-7928 BAL 访问定义的进一步澄清。nicosampler 提出完全在客户端运行的 dApp 通知架构，不需要中心化后端。",
+  "items": [
+    {
+      "topic": "签名：EIP-7932",
+      "title": "EIP-7932：sigrecover 返回值补齐到 32 字节",
+      "note": "（SirSpudlington）提交并合并；EIP-7973：记录访问 gas 参数（Fibonacci747）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11065",
+      "date": "2026-01-13",
+      "title_en": "EIP-7932: pad the sigrecover return value to 32 bytes",
+      "note_en": "(SirSpudlington), submitted and merged; EIP-7973: document access gas parameters (Fibonacci747), submitted.",
+      "topic_en": "Signatures: EIP-7932"
+    },
+    {
+      "topic": "签名：EIP-7932",
+      "title": "EIP-7973：记录访问 gas 参数",
+      "note": "EIP-7932：sigrecover 返回值补齐到 32 字节（SirSpudlington）提交并合并；EIP-7973：记录访问 gas 参数（Fibonacci747）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11064",
+      "date": "2026-01-13",
+      "title_en": "EIP-7973: document access gas parameters",
+      "note_en": "EIP-7932: pad the sigrecover return value to 32 bytes (SirSpudlington), submitted and merged; EIP-7973: document access gas parameters (Fibonacci747), submitted.",
+      "topic_en": "Signatures: EIP-7932"
+    },
+    {
+      "topic": "升级规范：BAL 与范围",
+      "title": "EIP-7928：进一步澄清“访问”",
+      "note": "（nerolation）提交；EIP-7773：依 ACDC #172 决定处理 EIP-8070（nixorokish）提交；ACDC #173 议程，1 月 22 日 00:27。",
+      "url": "https://github.com/ethereum/EIPs/pull/11066",
+      "date": "2026-01-13",
+      "title_en": "EIP-7928: further clarify access",
+      "note_en": "(nerolation), submitted; EIP-7773: EIP-8070 decision from ACDC #172 (nixorokish), submitted; ACDC #173 agenda, Jan 22, 00:27.",
+      "topic_en": "Upgrade specs: BAL and scope"
+    },
+    {
+      "topic": "升级规范：BAL 与范围",
+      "title": "EIP-7773：依 ACDC #172 决定处理 EIP-8070",
+      "note": "EIP-7928：进一步澄清“访问”（nerolation）提交；EIP-7773：依 ACDC #172 决定处理 EIP-8070（nixorokish）提交；ACDC #173 议程，1 月 22 日 00:27。",
+      "url": "https://github.com/ethereum/EIPs/pull/11070",
+      "date": "2026-01-13",
+      "title_en": "EIP-7773: EIP-8070 decision from ACDC #172",
+      "note_en": "EIP-7928: further clarify access (nerolation), submitted; EIP-7773: EIP-8070 decision from ACDC #172 (nixorokish), submitted; ACDC #173 agenda, Jan 22, 00:27.",
+      "topic_en": "Upgrade specs: BAL and scope"
+    },
+    {
+      "topic": "升级规范：BAL 与范围",
+      "title": "ACDC #173 议程，1 月 22 日",
+      "note": "EIP-7928：进一步澄清“访问”（nerolation）提交；EIP-7773：依 ACDC #172 决定处理 EIP-8070（nixorokish）提交；ACDC #173 议程，1 月 22 日 00:27。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-173-jan-22-2026/27425",
+      "date": "2026-01-13",
+      "title_en": "ACDC #173 agenda, Jan 22",
+      "note_en": "EIP-7928: further clarify access (nerolation), submitted; EIP-7773: EIP-8070 decision from ACDC #172 (nixorokish), submitted; ACDC #173 agenda, Jan 22, 00:27.",
+      "topic_en": "Upgrade specs: BAL and scope"
+    },
+    {
+      "topic": "隐私：本地通知",
+      "title": "Magicians：无服务器、隐私优先的 dApp 本地通知架构",
+      "note": "（nicosampler）20:35：用 Service Worker 与直接合约调用在客户端监控事件，例如借贷接近清算，无需中心化后端或第三方消息协议。",
+      "url": "https://ethereum-magicians.org/t/architecture-proposal-serverless-privacy-first-local-notifications-for-dapps/27429",
+      "date": "2026-01-13",
+      "title_en": "Magicians: serverless, privacy first local notifications for dApps",
+      "note_en": "(nicosampler), 20:35: monitors events such as a loan nearing liquidation client side with Service Workers and direct contract calls, with no central backend or third party messaging.",
+      "topic_en": "Privacy: local notifications"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7888：泛化以支持多种状态承诺方案",
+      "note": "（luiz-lvj）1 月 7 日提交后合并；新增 ERC：面向 Agent 协作的 ENS 信任注册表（KBryan）2025 年 12 月 17 日提交后合并；ERC-7893 进入 Review（SeanLuis）2025 年 9 月 23 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1459",
+      "date": "2026-01-13",
+      "title_en": "ERC-7888: generalize to multiple state commitment schemes",
+      "note_en": "(luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 23, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：面向 Agent 协作的 ENS 信任注册表",
+      "note": "ERC-7888：泛化以支持多种状态承诺方案（luiz-lvj）1 月 7 日提交后合并；新增 ERC：面向 Agent 协作的 ENS 信任注册表（KBryan）2025 年 12 月 17 日提交后合并；ERC-7893 进入 Review（SeanLuis）2025 年 9 月 23 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1412",
+      "date": "2026-01-13",
+      "title_en": "Add ERC: ENS Trust Registry for Agent Coordination",
+      "note_en": "ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 23, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7893 进入 Review",
+      "note": "ERC-7888：泛化以支持多种状态承诺方案（luiz-lvj）1 月 7 日提交后合并；新增 ERC：面向 Agent 协作的 ENS 信任注册表（KBryan）2025 年 12 月 17 日提交后合并；ERC-7893 进入 Review（SeanLuis）2025 年 9 月 23 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1223",
+      "date": "2026-01-13",
+      "title_en": "ERC-7893: move to Review",
+      "note_en": "ERC-7888: generalize to multiple state commitment schemes (luiz-lvj), merged after submission on January 7; Add ERC: ENS Trust Registry for Agent Coordination (KBryan), merged after submission on December 17, 2025; ERC-7893: move to Review (SeanLuis), merged after submission on September 23, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：把 leanSpec 从纯 Python 规范变成可运行、无依赖的规范客户端",
+      "note": "16:38；zooko：推荐 Cloudflare 的后量子数字签名现状综述 02:47。",
+      "url": "https://x.com/tcoratger/status/2011009953117741186",
+      "date": "2026-01-13",
+      "title_en": "tcoratger: turning leanSpec from a pure Python spec into a runnable, dependency free spec client",
+      "note_en": "16:38; zooko: recommends Cloudflare's survey of the state of post-quantum signatures, 02:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "zooko：推荐 Cloudflare 的后量子数字签名现状综述",
+      "note": "tcoratger：把 leanSpec 从纯 Python 规范变成可运行、无依赖的规范客户端 16:38；zooko：推荐 Cloudflare 的后量子数字签名现状综述 02:47。",
+      "url": "https://x.com/zooko/status/2010800929914949700",
+      "date": "2026-01-13",
+      "title_en": "zooko: recommends Cloudflare's survey of the state of post-quantum signatures",
+      "note_en": "Tcoratger: turning leanSpec from a pure Python spec into a runnable, dependency free spec client, 16:38; zooko: recommends Cloudflare's survey of the state of post-quantum signatures, 02:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/architecture-proposal-serverless-privacy-first-local-notifications-for-dapps/27429",
+    "credit": "Ethereum Magicians, Serverless, Privacy-First Local Notifications for dApps",
+    "local_path": "assets/2026-01-13.jpg",
+    "credit_en": "Ethereum Magicians, Serverless, Privacy-First Local Notifications for dApps"
+  },
+  "keywords_en": [
+    "EIP-7932 pads the sigrecover return value to 32 bytes",
+    "EIP-7928 BAL further clarifies access",
+    "EIP-7773 handles EIP-8070 per ACDC #172",
+    "serverless privacy first local notifications for dApps",
+    "ERC-7888 generalized to multiple state commitment schemes",
+    "leanSpec becomes a runnable spec client",
+    "a Cloudflare survey of post-quantum signatures"
+  ],
+  "summary_en": "SirSpudlington padded the EIP-7932 sigrecover return value to 32 bytes, submitted and merged, a base precompile for accounts using several signature algorithms. nerolation submitted a further clarification of access in EIP-7928 BAL. nicosampler proposed a dApp notification architecture that runs fully client side with no central backend."
+}

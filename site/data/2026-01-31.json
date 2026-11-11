@@ -1,0 +1,109 @@
+{
+  "date": "2026-01-31",
+  "keywords": [
+    "新的账户抽象 EIP",
+    "ERC-8004 与 x402 结合信贷",
+    "Stage 2 前 blob 空间无用论",
+    "自主权 Agent NFT EIP",
+    "ERC-7828 校验和澄清",
+    "许可金库注册接口 ERC-8245"
+  ],
+  "summary": "fede_intern 转发新的账户抽象 EIP。binji_x 与 tkstanczak 讨论把 ERC-8004、x402 与 DeFi 信贷结合。colludingnode 认为 Stage 2 之前 blob 空间无意义，因为安全委员会可以应对任意规模的数据扣留。",
+  "items": [
+    {
+      "topic": "账户与 Agent",
+      "title": "fede_intern：新的账户抽象 EIP",
+      "note": "03:10。",
+      "url": "https://x.com/fede_intern/status/2017329665917018573",
+      "date": "2026-01-31",
+      "title_en": "fede_intern: a new account abstraction EIP",
+      "note_en": "03:10.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "账户与 Agent",
+      "title": "binji_x：DeFi 信贷、ERC-8004、x402 与 AI 应结合起来，这可能是金融科技最大的机会之一",
+      "note": "21:03；tkstanczak：在以太坊上构建，把 ERC-8004 与 x402、Base 等连接起来 17:19；新增 EIP：自主权 Agent NFT（mruderman）提交。",
+      "url": "https://x.com/binji_x/status/2017599732651331892",
+      "date": "2026-01-31",
+      "title_en": "binji_x: DeFi credit, ERC-8004, x402 and AI should be combined, possibly one of the biggest opportunities in fintech",
+      "note_en": "21:03; tkstanczak: build on Ethereum and connect ERC-8004 with x402, Base and others, 17:19; Add EIP: Self-Sovereign Agent NFTs (mruderman), submitted.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "账户与 Agent",
+      "title": "tkstanczak：在以太坊上构建，把 ERC-8004 与 x402、Base 等连接起来",
+      "note": "binji_x：DeFi 信贷、ERC-8004、x402 与 AI 应结合起来，这可能是金融科技最大的机会之一 21:03；tkstanczak：在以太坊上构建，把 ERC-8004 与 x402、Base 等连接起来 17:19；新增 EIP：自主权 Agent NFT（mruderman）提交。",
+      "url": "https://x.com/tkstanczak/status/2017543374178553991",
+      "date": "2026-01-31",
+      "title_en": "tkstanczak: build on Ethereum and connect ERC-8004 with x402, Base and others",
+      "note_en": "Binji_x: DeFi credit, ERC-8004, x402 and AI should be combined, possibly one of the biggest opportunities in fintech, 21:03; tkstanczak: build on Ethereum and connect ERC-8004 with x402, Base and others, 17:19; Add EIP: Self-Sovereign Agent NFTs (mruderman), submitted.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "账户与 Agent",
+      "title": "新增 EIP：自主权 Agent NFT",
+      "note": "binji_x：DeFi 信贷、ERC-8004、x402 与 AI 应结合起来，这可能是金融科技最大的机会之一 21:03；tkstanczak：在以太坊上构建，把 ERC-8004 与 x402、Base 等连接起来 17:19；新增 EIP：自主权 Agent NFT（mruderman）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11228",
+      "date": "2026-01-31",
+      "title_en": "Add EIP: Self-Sovereign Agent NFTs",
+      "note_en": "Binji_x: DeFi credit, ERC-8004, x402 and AI should be combined, possibly one of the biggest opportunities in fintech, 21:03; tkstanczak: build on Ethereum and connect ERC-8004 with x402, Base and others, 17:19; Add EIP: Self-Sovereign Agent NFTs (mruderman), submitted.",
+      "topic_en": "Accounts and agents"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7828：澄清校验和并加入版本部分",
+      "note": "（0xMonoAx）合并；ERC-8245：许可金库注册接口 01:20。",
+      "url": "https://github.com/ethereum/ERCs/pull/1483",
+      "date": "2026-01-31",
+      "title_en": "ERC-7828: clarify checksums and add a versioning section",
+      "note_en": "(0xMonoAx), merged; ERC-8245: Permissioned Vault Registrar Interface, 01:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8245：许可金库注册接口",
+      "note": "ERC-7828：澄清校验和并加入版本部分（0xMonoAx）合并；ERC-8245：许可金库注册接口 01:20。",
+      "url": "https://ethereum-magicians.org/t/erc-8245-permissioned-vault-registrar-interface/27627",
+      "date": "2026-01-31",
+      "title_en": "ERC-8245: Permissioned Vault Registrar Interface",
+      "note_en": "ERC-7828: clarify checksums and add a versioning section (0xMonoAx), merged; ERC-8245: Permissioned Vault Registrar Interface, 01:20.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：Stage 2 之前 blob 空间没有意义，安全委员会可应对任意规模的数据扣留",
+      "note": "06:12；fede_intern：Lambda 从 zk L2 生态转向协议层工作 22:10。",
+      "url": "https://x.com/colludingnode/status/2017375286514397339",
+      "date": "2026-01-31",
+      "title_en": "colludingnode: blob space is useless before Stage 2, since security councils can respond to data withholding of any size",
+      "note_en": "06:12; fede_intern: Lambda moved from the zk L2 ecosystem deeper into protocol work, 22:10.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：Lambda 从 zk L2 生态转向协议层工作",
+      "note": "colludingnode：Stage 2 之前 blob 空间没有意义，安全委员会可应对任意规模的数据扣留 06:12；fede_intern：Lambda 从 zk L2 生态转向协议层工作 22:10。",
+      "url": "https://x.com/fede_intern/status/2017616463482208545",
+      "date": "2026-01-31",
+      "title_en": "fede_intern: Lambda moved from the zk L2 ecosystem deeper into protocol work",
+      "note_en": "Colludingnode: blob space is useless before Stage 2, since security councils can respond to data withholding of any size, 06:12; fede_intern: Lambda moved from the zk L2 ecosystem deeper into protocol work, 22:10.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/erc-8245-permissioned-vault-registrar-interface/27627",
+    "credit": "Ethereum Magicians, ERC-8245: Permissioned Vault Registrar Interface",
+    "local_path": "assets/2026-01-31.jpg",
+    "credit_en": "Ethereum Magicians, ERC-8245: Permissioned Vault Registrar Interface"
+  },
+  "keywords_en": [
+    "A new account abstraction EIP",
+    "ERC-8004 with x402 for credit",
+    "blob space being useless before Stage 2",
+    "a self-sovereign agent NFT EIP",
+    "ERC-7828 checksum clarifications",
+    "permissioned vault registrar ERC-8245"
+  ],
+  "summary_en": "fede_intern shared a new account abstraction EIP. binji_x and tkstanczak discussed combining ERC-8004, x402 and DeFi credit. colludingnode argued blob space is useless before Stage 2, since security councils can respond to data withholding of any size."
+}

@@ -1,0 +1,139 @@
+{
+  "date": "2026-02-04",
+  "keywords": [
+    "EIP-8037 多维计量的聚合函数分析",
+    "BAL 边车 EIP",
+    "ERC-8004 上线 Base",
+    "L2 路线争论",
+    "EIP-8141 补充依赖",
+    "ERC-8049 合约级链上元数据合并"
+  ],
+  "summary": "misilva73 分析 EIP-8037 多维计量中不同聚合函数在不同需求弹性下的表现，聚合方式决定状态 gas 与突发 gas 如何共同设定基础费。nerolation 提交 BAL 边车 EIP，让区块访问列表独立于执行载荷传输。Vitalik 前一晚的 L2 帖引发讨论，jessepollak 宣布 ERC-8004 上线 Base。",
+  "items": [
+    {
+      "topic": "Gas：多维计量",
+      "title": "ethresear.ch：EIP-8037 在不同弹性下的聚合函数分析",
+      "note": "（misilva73）19:30：比较求和等三种聚合函数，聚合方式决定状态 gas 与突发 gas 如何共同设定基础费，进而影响吞吐与状态增长。",
+      "url": "https://ethresear.ch/t/analysis-of-different-aggregation-functions-for-eip-8037-under-different-elasticity-regimes/24033",
+      "date": "2026-02-04",
+      "title_en": "ethresear.ch: aggregation functions for EIP-8037 under different elasticity regimes",
+      "note_en": "(misilva73), 19:30: compares three aggregation functions including Sum, since aggregation decides how state gas and burst gas jointly set the base fee, which drives throughput and state growth.",
+      "topic_en": "Gas: multidimensional metering"
+    },
+    {
+      "topic": "协议规范",
+      "title": "新增 EIP：区块访问列表边车",
+      "note": "（nerolation）提交：BAL 与执行载荷分离、独立传输，载荷到达前即可用于预取或计算后状态根。",
+      "url": "https://github.com/ethereum/EIPs/pull/11254",
+      "date": "2026-02-04",
+      "title_en": "Add EIP: Block Access List Sidecars",
+      "note_en": "(nerolation), submitted: separates the BAL from the execution payload so it travels independently and can be used for prefetching or the post state root before the payload arrives.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "EIP-8141：requires 加入 EIP-1559",
+      "note": "（BonyHanter83）提交；EIP-7732：更新共识规范链接（potuz）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11251",
+      "date": "2026-02-04",
+      "title_en": "EIP-8141: add EIP-1559 to requires",
+      "note_en": "(BonyHanter83), submitted; EIP-7732: update consensus links (potuz), submitted and merged.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "协议规范",
+      "title": "EIP-7732：更新共识规范链接",
+      "note": "EIP-8141：requires 加入 EIP-1559（BonyHanter83）提交；EIP-7732：更新共识规范链接（potuz）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11247",
+      "date": "2026-02-04",
+      "title_en": "EIP-7732: update consensus links",
+      "note_en": "EIP-8141: add EIP-1559 to requires (BonyHanter83), submitted; EIP-7732: update consensus links (potuz), submitted and merged.",
+      "topic_en": "Protocol specs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC 8049：合约级链上元数据",
+      "note": "（nxt3d）合并；新增 ERC：二叉树局部性布局（weiihann）提交；ACDT #69 议程 23:50。",
+      "url": "https://github.com/ethereum/ERCs/pull/1260",
+      "date": "2026-02-04",
+      "title_en": "Add ERC 8049: Contract-Level Onchain Metadata",
+      "note_en": "(nxt3d), merged; Add ERC: Locality-Preserving Layout for Binary Trie (weiihann), submitted; ACDT #69 agenda, 23:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：二叉树局部性布局",
+      "note": "新增 ERC 8049：合约级链上元数据（nxt3d）合并；新增 ERC：二叉树局部性布局（weiihann）提交；ACDT #69 议程 23:50。",
+      "url": "https://github.com/ethereum/ERCs/pull/1510",
+      "date": "2026-02-04",
+      "title_en": "Add ERC: Locality-Preserving Layout for Binary Trie",
+      "note_en": "Add ERC 8049: Contract-Level Onchain Metadata (nxt3d), merged; Add ERC: Locality-Preserving Layout for Binary Trie (weiihann), submitted; ACDT #69 agenda, 23:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #69 议程",
+      "note": "新增 ERC 8049：合约级链上元数据（nxt3d）合并；新增 ERC：二叉树局部性布局（weiihann）提交；ACDT #69 议程 23:50。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-69-february-9-2026/27651",
+      "date": "2026-02-04",
+      "title_en": "ACDT #69 agenda",
+      "note_en": "Add ERC 8049: Contract-Level Onchain Metadata (nxt3d), merged; Add ERC: Locality-Preserving Layout for Binary Trie (weiihann), submitted; ACDT #69 agenda, 23:50.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "jessepollak：ERC-8004 上线 Base，任何 Agent 都可注册",
+      "note": "00:45；jessepollak：L1 扩容是全生态的胜利，L2 不能只做更便宜的以太坊 03:41；binji_x：L2 路线没有被拆掉，而是演进了 02:08；tkstanczak：对 Vitalik L2 帖的个人解读 15:47。",
+      "url": "https://x.com/jessepollak/status/2018742589013557674",
+      "date": "2026-02-04",
+      "title_en": "jessepollak: ERC-8004 is live on Base, any agent can register",
+      "note_en": "00:45; jessepollak: L1 scaling is a win for everyone, and L2s cannot just be a cheaper Ethereum, 03:41; binji_x: the L2 roadmap was not dismantled, it evolved, 02:08; tkstanczak: a personal reading of Vitalik's L2 post, 15:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "jessepollak：L1 扩容是全生态的胜利，L2 不能只做更便宜的以太坊",
+      "note": "jessepollak：ERC-8004 上线 Base，任何 Agent 都可注册 00:45；jessepollak：L1 扩容是全生态的胜利，L2 不能只做更便宜的以太坊 03:41；binji_x：L2 路线没有被拆掉，而是演进了 02:08；tkstanczak：对 Vitalik L2 帖的个人解读 15:47。",
+      "url": "https://x.com/jessepollak/status/2018786985402597742",
+      "date": "2026-02-04",
+      "title_en": "jessepollak: L1 scaling is a win for everyone, and L2s cannot just be a cheaper Ethereum",
+      "note_en": "Jessepollak: ERC-8004 is live on Base, any agent can register, 00:45; jessepollak: L1 scaling is a win for everyone, and L2s cannot just be a cheaper Ethereum, 03:41; binji_x: the L2 roadmap was not dismantled, it evolved, 02:08; tkstanczak: a personal reading of Vitalik's L2 post, 15:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：L2 路线没有被拆掉，而是演进了",
+      "note": "jessepollak：ERC-8004 上线 Base，任何 Agent 都可注册 00:45；jessepollak：L1 扩容是全生态的胜利，L2 不能只做更便宜的以太坊 03:41；binji_x：L2 路线没有被拆掉，而是演进了 02:08；tkstanczak：对 Vitalik L2 帖的个人解读 15:47。",
+      "url": "https://x.com/binji_x/status/2018763646231572608",
+      "date": "2026-02-04",
+      "title_en": "binji_x: the L2 roadmap was not dismantled, it evolved",
+      "note_en": "Jessepollak: ERC-8004 is live on Base, any agent can register, 00:45; jessepollak: L1 scaling is a win for everyone, and L2s cannot just be a cheaper Ethereum, 03:41; binji_x: the L2 roadmap was not dismantled, it evolved, 02:08; tkstanczak: a personal reading of Vitalik's L2 post, 15:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tkstanczak：对 Vitalik L2 帖的个人解读",
+      "note": "jessepollak：ERC-8004 上线 Base，任何 Agent 都可注册 00:45；jessepollak：L1 扩容是全生态的胜利，L2 不能只做更便宜的以太坊 03:41；binji_x：L2 路线没有被拆掉，而是演进了 02:08；tkstanczak：对 Vitalik L2 帖的个人解读 15:47。",
+      "url": "https://x.com/tkstanczak/status/2018969582506328077",
+      "date": "2026-02-04",
+      "title_en": "tkstanczak: a personal reading of Vitalik's L2 post",
+      "note_en": "Jessepollak: ERC-8004 is live on Base, any agent can register, 00:45; jessepollak: L1 scaling is a win for everyone, and L2s cannot just be a cheaper Ethereum, 03:41; binji_x: the L2 roadmap was not dismantled, it evolved, 02:08; tkstanczak: a personal reading of Vitalik's L2 post, 15:47.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/analysis-of-different-aggregation-functions-for-eip-8037-under-different-elasticity-regimes/24033",
+    "credit": "ethresear.ch, Analysis of different aggregation functions for EIP-8037",
+    "local_path": "assets/2026-02-04.jpg",
+    "credit_en": "ethresear.ch, Analysis of different aggregation functions for EIP-8037"
+  },
+  "keywords_en": [
+    "Aggregation functions for EIP-8037 multidimensional metering",
+    "a Block Access List sidecars EIP",
+    "ERC-8004 live on Base",
+    "the L2 roadmap debate",
+    "EIP-8141 dependency update",
+    "ERC-8049 contract level onchain metadata merged"
+  ],
+  "summary_en": "misilva73 analyzed aggregation functions for EIP-8037 multidimensional metering under different demand elasticities, since aggregation decides how state gas and burst gas jointly set the base fee. nerolation submitted a BAL sidecars EIP so block access lists travel separately from the execution payload. Vitalik's L2 post from the night before drew debate, and jessepollak announced ERC-8004 live on Base."
+}

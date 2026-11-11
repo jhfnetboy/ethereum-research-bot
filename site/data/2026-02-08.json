@@ -1,0 +1,159 @@
+{
+  "date": "2026-02-08",
+  "keywords": [
+    "EVM 上后量子验签的三种执行方式",
+    "Agent 注册表 ERC",
+    "Facet-Based Diamonds ERC-8153",
+    "ERC-721 历史所有权扩展",
+    "三个 EIP 被标记 stagnant",
+    "Rollup 路线六年反思"
+  ],
+  "summary": "周日。Magicians 讨论指出，EVM 上的后量子验签被混为一谈：原生合约验证、ZK 证明与协议层强制是不同路线，混用会让 gas 对比失真。nxt3d 提交两份 Agent 注册表 ERC，mudgen 提交 Facet-Based Diamonds。",
+  "items": [
+    {
+      "topic": "交易签名：后量子验签的路线",
+      "title": "Magicians：EVM 上的后量子，别把原生、ZK 与协议强制混在一起",
+      "note": "（pipavlo82）06:54：讨论 Falcon、Dilithium、ML-DSA 的 gas 时，若不先区分合约内原生验证、ZK 证明验证与协议层强制，比较在结构上就有误导。",
+      "url": "https://ethereum-magicians.org/t/pq-on-evm-stop-mixing-native-zk-and-protocol-enforcement/27680",
+      "date": "2026-02-08",
+      "title_en": "Magicians: PQ on EVM, stop mixing native, ZK and protocol enforcement",
+      "note_en": "(pipavlo82), 06:54: gas comparisons of Falcon, Dilithium and ML-DSA are structurally misleading unless native in contract verification, ZK proof verification and protocol enforcement are separated first.",
+      "topic_en": "Transaction signatures: post-quantum verification lanes"
+    },
+    {
+      "topic": "ERC",
+      "title": "新增 ERC：最小 Agent 注册表",
+      "note": "（nxt3d）提交；新增 ERC：多链 Agent 与 Agent 关系（nxt3d）提交；新增 ERC：Facet-Based Diamonds（mudgen）提交，ERC-8153 讨论帖 09:23；ERC-8169：ERC-721 历史所有权扩展 07:29。",
+      "url": "https://github.com/ethereum/ERCs/pull/1523",
+      "date": "2026-02-08",
+      "title_en": "Add ERC: Minimal Agent Registry",
+      "note_en": "(nxt3d), submitted; Add ERC: Multichain Agents and Agent Relationships (nxt3d), submitted; Add ERC: Facet-Based Diamonds (mudgen), submitted, with the ERC-8153 thread, 09:23; ERC-8169: Historical Ownership Extension for ERC-721, 07:29.",
+      "topic_en": "ERCs"
+    },
+    {
+      "topic": "ERC",
+      "title": "新增 ERC：多链 Agent 与 Agent 关系",
+      "note": "新增 ERC：最小 Agent 注册表（nxt3d）提交；新增 ERC：多链 Agent 与 Agent 关系（nxt3d）提交；新增 ERC：Facet-Based Diamonds（mudgen）提交，ERC-8153 讨论帖 09:23；ERC-8169：ERC-721 历史所有权扩展 07:29。",
+      "url": "https://github.com/ethereum/ERCs/pull/1525",
+      "date": "2026-02-08",
+      "title_en": "Add ERC: Multichain Agents and Agent Relationships",
+      "note_en": "Add ERC: Minimal Agent Registry (nxt3d), submitted; Add ERC: Multichain Agents and Agent Relationships (nxt3d), submitted; Add ERC: Facet-Based Diamonds (mudgen), submitted, with the ERC-8153 thread, 09:23; ERC-8169: Historical Ownership Extension for ERC-721, 07:29.",
+      "topic_en": "ERCs"
+    },
+    {
+      "topic": "ERC",
+      "title": "新增 ERC：Facet-Based Diamonds",
+      "note": "新增 ERC：最小 Agent 注册表（nxt3d）提交；新增 ERC：多链 Agent 与 Agent 关系（nxt3d）提交；新增 ERC：Facet-Based Diamonds（mudgen）提交，ERC-8153 讨论帖 09:23；ERC-8169：ERC-721 历史所有权扩展 07:29。",
+      "url": "https://github.com/ethereum/ERCs/pull/1524",
+      "date": "2026-02-08",
+      "title_en": "Add ERC: Facet-Based Diamonds",
+      "note_en": "Add ERC: Minimal Agent Registry (nxt3d), submitted; Add ERC: Multichain Agents and Agent Relationships (nxt3d), submitted; Add ERC: Facet-Based Diamonds (mudgen), submitted, with the ERC-8153 thread, 09:23; ERC-8169: Historical Ownership Extension for ERC-721, 07:29.",
+      "topic_en": "ERCs"
+    },
+    {
+      "topic": "ERC",
+      "title": "ERC-8153 讨论帖",
+      "note": "新增 ERC：最小 Agent 注册表（nxt3d）提交；新增 ERC：多链 Agent 与 Agent 关系（nxt3d）提交；新增 ERC：Facet-Based Diamonds（mudgen）提交，ERC-8153 讨论帖 09:23；ERC-8169：ERC-721 历史所有权扩展 07:29。",
+      "url": "https://ethereum-magicians.org/t/erc-8153-facet-based-diamonds/27685",
+      "date": "2026-02-08",
+      "title_en": "ERC-8153 thread",
+      "note_en": "Add ERC: Minimal Agent Registry (nxt3d), submitted; Add ERC: Multichain Agents and Agent Relationships (nxt3d), submitted; Add ERC: Facet-Based Diamonds (mudgen), submitted, with the ERC-8153 thread, 09:23; ERC-8169: Historical Ownership Extension for ERC-721, 07:29.",
+      "topic_en": "ERCs"
+    },
+    {
+      "topic": "ERC",
+      "title": "ERC-8169：ERC-721 历史所有权扩展",
+      "note": "新增 ERC：最小 Agent 注册表（nxt3d）提交；新增 ERC：多链 Agent 与 Agent 关系（nxt3d）提交；新增 ERC：Facet-Based Diamonds（mudgen）提交，ERC-8153 讨论帖 09:23；ERC-8169：ERC-721 历史所有权扩展 07:29。",
+      "url": "https://ethereum-magicians.org/t/erc-8169-historical-ownership-extension-for-erc-721/27682",
+      "date": "2026-02-08",
+      "title_en": "ERC-8169: Historical Ownership Extension for ERC-721",
+      "note_en": "Add ERC: Minimal Agent Registry (nxt3d), submitted; Add ERC: Multichain Agents and Agent Relationships (nxt3d), submitted; Add ERC: Facet-Based Diamonds (mudgen), submitted, with the ERC-8153 thread, 09:23; ERC-8169: Historical Ownership Extension for ERC-721, 07:29.",
+      "topic_en": "ERCs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7792 被标记 stagnant",
+      "note": "、EIP-7862 被标记 stagnant、EIP-7919 被标记 stagnant（eth-bot）提交；ERC-8110：加入隔离域（0x76agabond）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11283",
+      "date": "2026-02-08",
+      "title_en": "EIP-7792 flagged stagnant",
+      "note_en": "EIP-7862 flagged stagnant, EIP-7919 flagged stagnant (eth-bot), submitted; ERC-8110: add Isolated Domain (0x76agabond), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7862 被标记 stagnant",
+      "note": "EIP-7792 被标记 stagnant、EIP-7862 被标记 stagnant、EIP-7919 被标记 stagnant（eth-bot）提交；ERC-8110：加入隔离域（0x76agabond）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11284",
+      "date": "2026-02-08",
+      "title_en": "EIP-7862 flagged stagnant",
+      "note_en": "EIP-7792 flagged stagnant, EIP-7862 flagged stagnant, EIP-7919 flagged stagnant (eth-bot), submitted; ERC-8110: add Isolated Domain (0x76agabond), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7919 被标记 stagnant",
+      "note": "EIP-7792 被标记 stagnant、EIP-7862 被标记 stagnant、EIP-7919 被标记 stagnant（eth-bot）提交；ERC-8110：加入隔离域（0x76agabond）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11285",
+      "date": "2026-02-08",
+      "title_en": "EIP-7919 flagged stagnant",
+      "note_en": "EIP-7792 flagged stagnant, EIP-7862 flagged stagnant, EIP-7919 flagged stagnant (eth-bot), submitted; ERC-8110: add Isolated Domain (0x76agabond), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8110：加入隔离域",
+      "note": "EIP-7792 被标记 stagnant、EIP-7862 被标记 stagnant、EIP-7919 被标记 stagnant（eth-bot）提交；ERC-8110：加入隔离域（0x76agabond）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1526",
+      "date": "2026-02-08",
+      "title_en": "ERC-8110: add Isolated Domain",
+      "note_en": "EIP-7792 flagged stagnant, EIP-7862 flagged stagnant, EIP-7919 flagged stagnant (eth-bot), submitted; ERC-8110: add Isolated Domain (0x76agabond), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：Vitalik 对 Rollup 路线六年的细致反思",
+      "note": "05:42；VitalikButerin：今后改称 Twitter 为 X 16:48；peter_szilagyi：Agent 撒谎问题不在提示词 23:31。",
+      "url": "https://x.com/colludingnode/status/2020267062996984242",
+      "date": "2026-02-08",
+      "title_en": "colludingnode: Vitalik gives a nuanced reflection on six years of the rollup centric roadmap",
+      "note_en": "05:42; VitalikButerin: calling Twitter X from now on, 16:48; peter_szilagyi: agent lying is not a prompt problem, 23:31.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：今后改称 Twitter 为 X",
+      "note": "colludingnode：Vitalik 对 Rollup 路线六年的细致反思 05:42；VitalikButerin：今后改称 Twitter 为 X 16:48；peter_szilagyi：Agent 撒谎问题不在提示词 23:31。",
+      "url": "https://x.com/VitalikButerin/status/2020434651999764517",
+      "date": "2026-02-08",
+      "title_en": "VitalikButerin: calling Twitter X from now on",
+      "note_en": "Colludingnode: Vitalik gives a nuanced reflection on six years of the rollup centric roadmap, 05:42; VitalikButerin: calling Twitter X from now on, 16:48; peter_szilagyi: agent lying is not a prompt problem, 23:31.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：Agent 撒谎问题不在提示词",
+      "note": "colludingnode：Vitalik 对 Rollup 路线六年的细致反思 05:42；VitalikButerin：今后改称 Twitter 为 X 16:48；peter_szilagyi：Agent 撒谎问题不在提示词 23:31。",
+      "url": "https://x.com/peter_szilagyi/status/2020535984148959317",
+      "date": "2026-02-08",
+      "title_en": "peter_szilagyi: agent lying is not a prompt problem",
+      "note_en": "Colludingnode: Vitalik gives a nuanced reflection on six years of the rollup centric roadmap, 05:42; VitalikButerin: calling Twitter X from now on, 16:48; peter_szilagyi: agent lying is not a prompt problem, 23:31.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/pq-on-evm-stop-mixing-native-zk-and-protocol-enforcement/27680",
+    "credit": "Ethereum Magicians, PQ on EVM: Stop Mixing Native, ZK and Protocol Enforcement",
+    "local_path": "assets/2026-02-08.jpg",
+    "credit_en": "Ethereum Magicians, PQ on EVM: Stop Mixing Native, ZK and Protocol Enforcement"
+  },
+  "keywords_en": [
+    "Three enforcement lanes for post-quantum verification on the EVM",
+    "agent registry ERCs",
+    "Facet-Based Diamonds ERC-8153",
+    "a historical ownership extension for ERC-721",
+    "three EIPs flagged stagnant",
+    "six years of the rollup roadmap"
+  ],
+  "summary_en": "Sunday. A Magicians post argued that post-quantum verification on the EVM conflates native contract verification, ZK proofs and protocol enforcement, which makes gas comparisons misleading. nxt3d submitted two agent registry ERCs and mudgen submitted Facet-Based Diamonds."
+}

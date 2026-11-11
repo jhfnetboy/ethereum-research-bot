@@ -1,0 +1,120 @@
+{
+  "date": "2026-01-11",
+  "keywords": [
+    "EIP-8123 查询交易 gas 上限的 JSON-RPC 方法",
+    "钱包连接中介透明化预草案",
+    "mev-boost 缺少 relay 黑名单会浪费槽位",
+    "FOCIL 与 MCP 抗审查之辨",
+    "EIP-712 encodeType 排序示例",
+    "ERC-8033 Agent 委员会预言机"
+  ],
+  "summary": "PaulRBerg 提交 EIP-8123，新增 eth_txLimitGasCap 方法，用于查询 EIP-7825 的单笔交易 gas 上限。Madeindreams 发起预草案讨论，主张让钱包与 dApp 之间的连接器与 SDK 中介显式可见。0x_WeakSheep 指出 mev-boost 不惩罚不交付的 relay，验证者会等约 4 秒再回退。",
+  "items": [
+    {
+      "topic": "交易：gas 上限可查询",
+      "title": "Magicians：EIP-8123 交易 gas 上限的 JSON-RPC 方法",
+      "note": "（PaulRBerg）19:30：新增 eth_txLimitGasCap，用于查询 EIP-7825 的单笔交易 gas 上限；对应 PR 提交。",
+      "url": "https://ethereum-magicians.org/t/eip-8123-json-rpc-method-for-transaction-gas-limit-cap/27417",
+      "date": "2026-01-11",
+      "title_en": "Magicians: EIP-8123 JSON-RPC Method for Transaction Gas Limit Cap",
+      "note_en": "(PaulRBerg), 19:30: adds eth_txLimitGasCap to query the EIP-7825 per transaction gas cap; the PR was submitted.",
+      "topic_en": "Transactions: a queryable gas cap"
+    },
+    {
+      "topic": "交易：gas 上限可查询",
+      "title": "PR",
+      "note": "Magicians：EIP-8123 交易 gas 上限的 JSON-RPC 方法（PaulRBerg）19:30：新增 eth_txLimitGasCap，用于查询 EIP-7825 的单笔交易 gas 上限；对应 PR 提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11061",
+      "date": "2026-01-11",
+      "title_en": "PR",
+      "note_en": "Magicians: EIP-8123 JSON-RPC Method for Transaction Gas Limit Cap (PaulRBerg), 19:30: adds eth_txLimitGasCap to query the EIP-7825 per transaction gas cap; the PR was submitted.",
+      "topic_en": "Transactions: a queryable gas cap"
+    },
+    {
+      "topic": "钱包与出块",
+      "title": "Magicians：EIP 预草案，连接器透明，让钱包连接中介显式化",
+      "note": "（Madeindreams）08:24：钱包常被视为信任锚，但实际连接经由连接器、SDK 等基础设施中介，用户看不到。",
+      "url": "https://ethereum-magicians.org/t/discussion-topic-for-eip-pre-draft-connector-transparency-making-wallet-connection-mediation-explicit/27415",
+      "date": "2026-01-11",
+      "title_en": "Magicians: EIP pre draft, connector transparency, making wallet connection mediation explicit",
+      "note_en": "(Madeindreams), 08:24: wallets are treated as the trust anchor, yet real connections pass through connectors, SDKs and other infrastructure users cannot see.",
+      "topic_en": "Wallets and block production"
+    },
+    {
+      "topic": "钱包与出块",
+      "title": "Magicians：mev-boost 缺少 relay 黑名单可能浪费槽位",
+      "note": "（0x_WeakSheep）15:23；_julianma：MCP 的选择性抗审查实为截止后审查，FOCIL 规定截止前交易必须打包 00:01。",
+      "url": "https://ethereum-magicians.org/t/potential-risk-missing-relay-blacklisting-in-mev-boost-can-waste-slots/27416",
+      "date": "2026-01-11",
+      "title_en": "Magicians: missing relay blacklisting in mev-boost can waste slots",
+      "note_en": "(0x_WeakSheep), 15:23; _julianma: selective censorship resistance in MCP really means censoring after a deadline, while FOCIL says transactions sent before the deadline must be included, 00:01.",
+      "topic_en": "Wallets and block production"
+    },
+    {
+      "topic": "钱包与出块",
+      "title": "_julianma：MCP 的选择性抗审查实为截止后审查，FOCIL 规定截止前交易必须打包",
+      "note": "Magicians：mev-boost 缺少 relay 黑名单可能浪费槽位（0x_WeakSheep）15:23；_julianma：MCP 的选择性抗审查实为截止后审查，FOCIL 规定截止前交易必须打包 00:01。",
+      "url": "https://x.com/_julianma/status/2010034365858800053",
+      "date": "2026-01-11",
+      "title_en": "_julianma: selective censorship resistance in MCP really means censoring after a deadline, while FOCIL says transactions sent before the deadline must be included",
+      "note_en": "Magicians: missing relay blacklisting in mev-boost can waste slots (0x_WeakSheep), 15:23; _julianma: selective censorship resistance in MCP really means censoring after a deadline, while FOCIL says transactions sent before the deadline must be included, 00:01.",
+      "topic_en": "Wallets and block production"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-712：扩充 encodeType 示例以说明排序",
+      "note": "（gibson042）提交；ERC-8033：Agent 委员会预言机（phiraml）2025 年 12 月 23 日提交后合并；新增 ERC：ERC-20 别名元数据扩展（deepu-synergetics）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11057",
+      "date": "2026-01-11",
+      "title_en": "EIP-712: expand the encodeType example to clarify sorting",
+      "note_en": "(gibson042), submitted; ERC-8033: Agent Council Oracles (phiraml), merged after submission on December 23, 2025; Add ERC: ERC-20 Alias Metadata Extension (deepu-synergetics), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8033：Agent 委员会预言机",
+      "note": "EIP-712：扩充 encodeType 示例以说明排序（gibson042）提交；ERC-8033：Agent 委员会预言机（phiraml）2025 年 12 月 23 日提交后合并；新增 ERC：ERC-20 别名元数据扩展（deepu-synergetics）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1422",
+      "date": "2026-01-11",
+      "title_en": "ERC-8033: Agent Council Oracles",
+      "note_en": "EIP-712: expand the encodeType example to clarify sorting (gibson042), submitted; ERC-8033: Agent Council Oracles (phiraml), merged after submission on December 23, 2025; Add ERC: ERC-20 Alias Metadata Extension (deepu-synergetics), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：ERC-20 别名元数据扩展",
+      "note": "EIP-712：扩充 encodeType 示例以说明排序（gibson042）提交；ERC-8033：Agent 委员会预言机（phiraml）2025 年 12 月 23 日提交后合并；新增 ERC：ERC-20 别名元数据扩展（deepu-synergetics）提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/1465",
+      "date": "2026-01-11",
+      "title_en": "Add ERC: ERC-20 Alias Metadata Extension",
+      "note_en": "EIP-712: expand the encodeType example to clarify sorting (gibson042), submitted; ERC-8033: Agent Council Oracles (phiraml), merged after submission on December 23, 2025; Add ERC: ERC-20 Alias Metadata Extension (deepu-synergetics), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "RPC Standards #18，1 月 12 日",
+      "note": "20:55。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-18-jan-12-2026/27418",
+      "date": "2026-01-11",
+      "title_en": "RPC Standards #18, Jan 12",
+      "note_en": "20:55.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8123-json-rpc-method-for-transaction-gas-limit-cap/27417",
+    "credit": "Ethereum Magicians, EIP-8123 JSON-RPC Method for Transaction Gas Limit Cap",
+    "local_path": "assets/2026-01-11.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8123 JSON-RPC Method for Transaction Gas Limit Cap"
+  },
+  "keywords_en": [
+    "EIP-8123",
+    "a JSON-RPC method for the transaction gas limit cap",
+    "a pre draft on making wallet connection mediation explicit",
+    "missing relay blacklisting in mev-boost wasting slots",
+    "FOCIL versus MCP on censorship resistance",
+    "an EIP-712 encodeType sorting example",
+    "ERC-8033 agent council oracles"
+  ],
+  "summary_en": "PaulRBerg submitted EIP-8123, adding eth_txLimitGasCap to query the EIP-7825 per transaction gas cap. Madeindreams opened a pre draft discussion on making connector and SDK mediation between wallets and dApps explicit. 0x_WeakSheep noted mev-boost does not penalize relays that fail to deliver, so validators wait about 4 seconds before falling back."
+}

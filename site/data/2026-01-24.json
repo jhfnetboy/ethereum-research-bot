@@ -1,0 +1,129 @@
+{
+  "date": "2026-01-24",
+  "keywords": [
+    "EF 成立后量子团队",
+    "以太坊为抗量子而生",
+    "ERC-4337 账户的跨链执行 WeissChannels",
+    "BPO1 与 BPO2 元 EIP",
+    "Vitalik 谈机构与密码朋克",
+    "跨链 Hooks 调用 ERC 合并"
+  ],
+  "summary": "drakefjustin 宣布 EF 长期量子战略的转折：成立新的后量子团队，由 tcoratger 领导，leanVM 核心成员 Emile 加入。eil-docbot 提交 ERC-4337 账户的跨链执行 ERC（WeissChannels），一次签名即可原子跨链执行。poojaranjan 提交 BPO1 与 BPO2 硬分叉元 EIP。",
+  "items": [
+    {
+      "topic": "交易签名：EF 后量子团队",
+      "title": "drakefjustin：EF 长期量子战略的转折点，成立由 tcoratger 领导的后量子团队，leanVM 核心成员 Emile 加入",
+      "note": "03:05；ethereum：以太坊为抗量子而生 03:48；leanEthereum：EF 的长期量子战略 08:01。",
+      "url": "https://x.com/drakefjustin/status/2014791629408784816",
+      "date": "2026-01-24",
+      "title_en": "drakefjustin: an inflection in the EF's long term quantum strategy, with a new post-quantum team led by tcoratger and joined by Emile from the leanVM core team",
+      "note_en": "03:05; ethereum: Ethereum is for quantum resistance, 03:48; leanEthereum: the EF's long term quantum strategy, 08:01.",
+      "topic_en": "Signatures: the EF post-quantum team"
+    },
+    {
+      "topic": "交易签名：EF 后量子团队",
+      "title": "ethereum：以太坊为抗量子而生",
+      "note": "drakefjustin：EF 长期量子战略的转折点，成立由 tcoratger 领导的后量子团队，leanVM 核心成员 Emile 加入 03:05；ethereum：以太坊为抗量子而生 03:48；leanEthereum：EF 的长期量子战略 08:01。",
+      "url": "https://x.com/ethereum/status/2014802532103815230",
+      "date": "2026-01-24",
+      "title_en": "ethereum: Ethereum is for quantum resistance",
+      "note_en": "Drakefjustin: an inflection in the EF's long term quantum strategy, with a new post-quantum team led by tcoratger and joined by Emile from the leanVM core team, 03:05; ethereum: Ethereum is for quantum resistance, 03:48; leanEthereum: the EF's long term quantum strategy, 08:01.",
+      "topic_en": "Signatures: the EF post-quantum team"
+    },
+    {
+      "topic": "交易签名：EF 后量子团队",
+      "title": "leanEthereum：EF 的长期量子战略",
+      "note": "drakefjustin：EF 长期量子战略的转折点，成立由 tcoratger 领导的后量子团队，leanVM 核心成员 Emile 加入 03:05；ethereum：以太坊为抗量子而生 03:48；leanEthereum：EF 的长期量子战略 08:01。",
+      "url": "https://x.com/leanEthereum/status/2014866108415725637",
+      "date": "2026-01-24",
+      "title_en": "leanEthereum: the EF's long term quantum strategy",
+      "note_en": "Drakefjustin: an inflection in the EF's long term quantum strategy, with a new post-quantum team led by tcoratger and joined by Emile from the leanVM core team, 03:05; ethereum: Ethereum is for quantum resistance, 03:48; leanEthereum: the EF's long term quantum strategy, 08:01.",
+      "topic_en": "Signatures: the EF post-quantum team"
+    },
+    {
+      "topic": "账户：4337 跨链执行",
+      "title": "新增 ERC：WeissChannels，ERC-4337 账户的跨链执行",
+      "note": "（eil-docbot）提交：为 4337 智能账户提供单签名、原子、无托管的跨链执行，使用由 L1 乐观担保的临时状态通道。",
+      "url": "https://github.com/ethereum/ERCs/pull/1486",
+      "date": "2026-01-24",
+      "title_en": "Add ERC: WeissChannels, cross chain execution for ERC-4337 accounts",
+      "note_en": "(eil-docbot), submitted: single signature, atomic, non custodial cross chain execution for 4337 smart accounts, using ephemeral just in time state channels secured optimistically by L1.",
+      "topic_en": "Accounts: 4337 cross chain execution"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：硬分叉元 EIP BPO1",
+      "note": "与 BPO2（poojaranjan）提交；新增 ERC：通过 Hooks 跨链调用函数（nxt3d）合并；ERC-8056：依讨论更新（cridmann）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11164",
+      "date": "2026-01-24",
+      "title_en": "Add EIP: Hardfork Meta BPO1",
+      "note_en": "And BPO2 (poojaranjan), submitted; Add ERC: Cross-Chain Function Calls via Hooks (nxt3d), merged; ERC-8056: update from discussions (cridmann), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "BPO2",
+      "note": "新增 EIP：硬分叉元 EIP BPO1 与 BPO2（poojaranjan）提交；新增 ERC：通过 Hooks 跨链调用函数（nxt3d）合并；ERC-8056：依讨论更新（cridmann）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11165",
+      "date": "2026-01-24",
+      "title_en": "BPO2",
+      "note_en": "Add EIP: Hardfork Meta BPO1 and BPO2 (poojaranjan), submitted; Add ERC: Cross-Chain Function Calls via Hooks (nxt3d), merged; ERC-8056: update from discussions (cridmann), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：通过 Hooks 跨链调用函数",
+      "note": "新增 EIP：硬分叉元 EIP BPO1 与 BPO2（poojaranjan）提交；新增 ERC：通过 Hooks 跨链调用函数（nxt3d）合并；ERC-8056：依讨论更新（cridmann）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1456",
+      "date": "2026-01-24",
+      "title_en": "Add ERC: Cross-Chain Function Calls via Hooks",
+      "note_en": "Add EIP: Hardfork Meta BPO1 and BPO2 (poojaranjan), submitted; Add ERC: Cross-Chain Function Calls via Hooks (nxt3d), merged; ERC-8056: update from discussions (cridmann), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8056：依讨论更新",
+      "note": "新增 EIP：硬分叉元 EIP BPO1 与 BPO2（poojaranjan）提交；新增 ERC：通过 Hooks 跨链调用函数（nxt3d）合并；ERC-8056：依讨论更新（cridmann）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1449",
+      "date": "2026-01-24",
+      "title_en": "ERC-8056: update from discussions",
+      "note_en": "Add EIP: Hardfork Meta BPO1 and BPO2 (poojaranjan), submitted; Add ERC: Cross-Chain Function Calls via Hooks (nxt3d), merged; ERC-8056: update from discussions (cridmann), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：机构与密码朋克的关系很复杂，需要正确理解",
+      "note": "05:12；binji_x：为什么这一量子战略是以太坊史上最重要的公告之一 03:19。",
+      "url": "https://x.com/VitalikButerin/status/2014823681042874455",
+      "date": "2026-01-24",
+      "title_en": "VitalikButerin: the relationship between institutions and cypherpunks is complex and needs proper understanding",
+      "note_en": "05:12; binji_x: why this quantum strategy is one of the most important announcements in Ethereum's history, 03:19.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：为什么这一量子战略是以太坊史上最重要的公告之一",
+      "note": "VitalikButerin：机构与密码朋克的关系很复杂，需要正确理解 05:12；binji_x：为什么这一量子战略是以太坊史上最重要的公告之一 03:19。",
+      "url": "https://x.com/binji_x/status/2014795045581332551",
+      "date": "2026-01-24",
+      "title_en": "binji_x: why this quantum strategy is one of the most important announcements in Ethereum's history",
+      "note_en": "VitalikButerin: the relationship between institutions and cypherpunks is complex and needs proper understanding, 05:12; binji_x: why this quantum strategy is one of the most important announcements in Ethereum's history, 03:19.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/ERCs/pull/1486",
+    "credit": "GitHub, ethereum/ERCs PR 1486",
+    "local_path": "assets/2026-01-24.jpg",
+    "credit_en": "GitHub, ethereum/ERCs PR 1486"
+  },
+  "keywords_en": [
+    "The EF forms a post-quantum team",
+    "Ethereum is for quantum resistance",
+    "WeissChannels cross chain execution for ERC-4337 accounts",
+    "BPO1 and BPO2 meta EIPs",
+    "Vitalik on institutions and cypherpunks",
+    "a cross chain function calls via hooks ERC merged"
+  ],
+  "summary_en": "drakefjustin announced an inflection in the EF's long term quantum strategy: a new post-quantum team led by tcoratger, joined by Emile from the leanVM core team. eil-docbot submitted a cross chain execution ERC for ERC-4337 accounts (WeissChannels), with atomic cross chain execution from one signature. poojaranjan submitted the BPO1 and BPO2 hardfork meta EIPs."
+}

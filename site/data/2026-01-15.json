@@ -1,0 +1,173 @@
+{
+  "date": "2026-01-15",
+  "keywords": [
+    "ACDE #228 EIP-7954 列为 CFI 并拒绝七项 EIP",
+    "EIP-8037 待下次 ACDT 决定",
+    "用状态证明做信任最小化的交易模拟",
+    "批量优先费 EIP 合并",
+    "交易 gas 上限 RPC 方法合并",
+    "EIP-7799 手续费日志",
+    "AI Agent 验证 ERC-8126",
+    "Fusaka 后 blob 分析"
+  ],
+  "summary": "ACDE #228：EIP-7954 合约大小上限提到 32KiB 列为 CFI；EIP-8037 状态创建 gas 上调待下次 ACDT 决定；EIP-7793 条件交易、EIP-5920 PAY 操作码、EIP-8051 ML-DSA 预编译等七项被拒。Sednaoui 提出用 MPT 证明与多节点共识验证交易模拟，避免钱包盲信 RPC。etan-status 的批量优先费与 EIP-7799 手续费日志合并。",
+  "items": [
+    {
+      "topic": "会议：ACDE #228",
+      "title": "ACDE #228",
+      "note": "21:00，据 Ethereal news #7：Glamsterdam 目标 2026 年 6 月；EIP-7954 合约大小上限提高到 32KiB 列为 CFI；EIP-8037 状态创建 gas 上调待下次 ACDT 决定；EIP-7793 条件交易、EIP-5920 PAY 操作码、EIP-8051 ML-DSA 验签预编译、EIP-7971、EIP-8032、EIP-7907 与 EIP-7903 被拒；另见 poojaranjan19 的会议速记 23:11。",
+      "url": "https://forkcast.org/calls/acde/228",
+      "date": "2026-01-15",
+      "title_en": "ACDE #228",
+      "note_en": "21:00, per Ethereal news #7: Glamsterdam targets June 2026; EIP-7954, raising the contract size limit to 32KiB, is CFI; the EIP-8037 state creation gas increase goes to the next ACDT; EIP-7793 conditional transactions, the EIP-5920 PAY opcode, the EIP-8051 ML-DSA verification precompile, EIP-7971, EIP-8032, EIP-7907 and EIP-7903 were declined; see also poojaranjan19's recap, 23:11.",
+      "topic_en": "Calls: ACDE #228"
+    },
+    {
+      "topic": "会议：ACDE #228",
+      "title": "Ethereal news #7",
+      "note": "ACDE #228 21:00，据 Ethereal news #7：Glamsterdam 目标 2026 年 6 月；EIP-7954 合约大小上限提高到 32KiB 列为 CFI；EIP-8037 状态创建 gas 上调待下次 ACDT 决定；EIP-7793 条件交易、EIP-5920 PAY 操作码、EIP-8051 ML-DSA 验签预编译、EIP-7971、EIP-8032、EIP-7907 与 EIP-7903 被拒；另见 poojaranjan19 的会议速记 23:11。",
+      "url": "https://ethereal.news/ethereal-news-weekly-7/",
+      "date": "2026-01-15",
+      "title_en": "Ethereal news #7",
+      "note_en": "ACDE #228, 21:00, per Ethereal news #7: Glamsterdam targets June 2026; EIP-7954, raising the contract size limit to 32KiB, is CFI; the EIP-8037 state creation gas increase goes to the next ACDT; EIP-7793 conditional transactions, the EIP-5920 PAY opcode, the EIP-8051 ML-DSA verification precompile, EIP-7971, EIP-8032, EIP-7907 and EIP-7903 were declined; see also poojaranjan19's recap, 23:11.",
+      "topic_en": "Calls: ACDE #228"
+    },
+    {
+      "topic": "会议：ACDE #228",
+      "title": "EIP-7954",
+      "note": "ACDE #228 21:00，据 Ethereal news #7：Glamsterdam 目标 2026 年 6 月；EIP-7954 合约大小上限提高到 32KiB 列为 CFI；EIP-8037 状态创建 gas 上调待下次 ACDT 决定；EIP-7793 条件交易、EIP-5920 PAY 操作码、EIP-8051 ML-DSA 验签预编译、EIP-7971、EIP-8032、EIP-7907 与 EIP-7903 被拒；另见 poojaranjan19 的会议速记 23:11。",
+      "url": "https://forkcast.org/eips/7954/",
+      "date": "2026-01-15",
+      "title_en": "EIP-7954",
+      "note_en": "ACDE #228, 21:00, per Ethereal news #7: Glamsterdam targets June 2026; EIP-7954, raising the contract size limit to 32KiB, is CFI; the EIP-8037 state creation gas increase goes to the next ACDT; EIP-7793 conditional transactions, the EIP-5920 PAY opcode, the EIP-8051 ML-DSA verification precompile, EIP-7971, EIP-8032, EIP-7907 and EIP-7903 were declined; see also poojaranjan19's recap, 23:11.",
+      "topic_en": "Calls: ACDE #228"
+    },
+    {
+      "topic": "会议：ACDE #228",
+      "title": "EIP-8037",
+      "note": "ACDE #228 21:00，据 Ethereal news #7：Glamsterdam 目标 2026 年 6 月；EIP-7954 合约大小上限提高到 32KiB 列为 CFI；EIP-8037 状态创建 gas 上调待下次 ACDT 决定；EIP-7793 条件交易、EIP-5920 PAY 操作码、EIP-8051 ML-DSA 验签预编译、EIP-7971、EIP-8032、EIP-7907 与 EIP-7903 被拒；另见 poojaranjan19 的会议速记 23:11。",
+      "url": "https://forkcast.org/eips/8037/",
+      "date": "2026-01-15",
+      "title_en": "EIP-8037",
+      "note_en": "ACDE #228, 21:00, per Ethereal news #7: Glamsterdam targets June 2026; EIP-7954, raising the contract size limit to 32KiB, is CFI; the EIP-8037 state creation gas increase goes to the next ACDT; EIP-7793 conditional transactions, the EIP-5920 PAY opcode, the EIP-8051 ML-DSA verification precompile, EIP-7971, EIP-8032, EIP-7907 and EIP-7903 were declined; see also poojaranjan19's recap, 23:11.",
+      "topic_en": "Calls: ACDE #228"
+    },
+    {
+      "topic": "会议：ACDE #228",
+      "title": "poojaranjan19 的会议速记",
+      "note": "ACDE #228 21:00，据 Ethereal news #7：Glamsterdam 目标 2026 年 6 月；EIP-7954 合约大小上限提高到 32KiB 列为 CFI；EIP-8037 状态创建 gas 上调待下次 ACDT 决定；EIP-7793 条件交易、EIP-5920 PAY 操作码、EIP-8051 ML-DSA 验签预编译、EIP-7971、EIP-8032、EIP-7907 与 EIP-7903 被拒；另见 poojaranjan19 的会议速记 23:11。",
+      "url": "https://x.com/poojaranjan19/status/2011833637369757829",
+      "date": "2026-01-15",
+      "title_en": "poojaranjan19's recap",
+      "note_en": "ACDE #228, 21:00, per Ethereal news #7: Glamsterdam targets June 2026; EIP-7954, raising the contract size limit to 32KiB, is CFI; the EIP-8037 state creation gas increase goes to the next ACDT; EIP-7793 conditional transactions, the EIP-5920 PAY opcode, the EIP-8051 ML-DSA verification precompile, EIP-7971, EIP-8032, EIP-7907 and EIP-7903 were declined; see also poojaranjan19's recap, 23:11.",
+      "topic_en": "Calls: ACDE #228"
+    },
+    {
+      "topic": "交易：钱包安全的模拟",
+      "title": "ethresear.ch：用状态证明做信任最小化的交易模拟",
+      "note": "（Sednaoui）14:54：交易模拟对钱包安全至关重要，但目前要盲信 RPC 提供的状态；文章用 MPT 证明与多节点共识在密码学上验证模拟所用状态。",
+      "url": "https://ethresear.ch/t/trust-minimized-transaction-simulation-using-state-proofs/23857",
+      "date": "2026-01-15",
+      "title_en": "ethresear.ch: Trust minimized transaction simulation using state proofs",
+      "note_en": "(Sednaoui), 14:54: simulation is critical to wallet safety but today relies on blindly trusting RPC state, so the post uses MPT proofs and multi node consensus to verify the state behind simulations.",
+      "topic_en": "Transactions: simulation for wallet safety"
+    },
+    {
+      "topic": "Gas 与手续费",
+      "title": "新增 EIP：区块末尾批量支付优先费",
+      "note": "（etan-status）合并，2025 年 12 月 30 日提交，从 EIP-7799 系统日志拆出；EIP-7799：加入手续费日志（etan-status）提交并合并；新增 EIP：交易 gas 上限的 RPC 方法（PaulRBerg）1 月 11 日提交后合并；EIP-7778：说明与 calldata 下限的关系（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10997",
+      "date": "2026-01-15",
+      "title_en": "Add EIP: Batch priority fees at end of block",
+      "note_en": "(etan-status), merged after submission on December 30, 2025, split from EIP-7799 system logs; EIP-7799: add a fee payment log (etan-status), submitted and merged; Add EIP: RPC Method for Transaction Gas Limit Cap (PaulRBerg), merged after submission on January 11; EIP-7778: clarify interaction with the calldata floor (nerolation), submitted.",
+      "topic_en": "Gas and fees"
+    },
+    {
+      "topic": "Gas 与手续费",
+      "title": "EIP-7799：加入手续费日志",
+      "note": "新增 EIP：区块末尾批量支付优先费（etan-status）合并，2025 年 12 月 30 日提交，从 EIP-7799 系统日志拆出；EIP-7799：加入手续费日志（etan-status）提交并合并；新增 EIP：交易 gas 上限的 RPC 方法（PaulRBerg）1 月 11 日提交后合并；EIP-7778：说明与 calldata 下限的关系（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11091",
+      "date": "2026-01-15",
+      "title_en": "EIP-7799: add a fee payment log",
+      "note_en": "Add EIP: Batch priority fees at end of block (etan-status), merged after submission on December 30, 2025, split from EIP-7799 system logs; EIP-7799: add a fee payment log (etan-status), submitted and merged; Add EIP: RPC Method for Transaction Gas Limit Cap (PaulRBerg), merged after submission on January 11; EIP-7778: clarify interaction with the calldata floor (nerolation), submitted.",
+      "topic_en": "Gas and fees"
+    },
+    {
+      "topic": "Gas 与手续费",
+      "title": "新增 EIP：交易 gas 上限的 RPC 方法",
+      "note": "新增 EIP：区块末尾批量支付优先费（etan-status）合并，2025 年 12 月 30 日提交，从 EIP-7799 系统日志拆出；EIP-7799：加入手续费日志（etan-status）提交并合并；新增 EIP：交易 gas 上限的 RPC 方法（PaulRBerg）1 月 11 日提交后合并；EIP-7778：说明与 calldata 下限的关系（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11061",
+      "date": "2026-01-15",
+      "title_en": "Add EIP: RPC Method for Transaction Gas Limit Cap",
+      "note_en": "Add EIP: Batch priority fees at end of block (etan-status), merged after submission on December 30, 2025, split from EIP-7799 system logs; EIP-7799: add a fee payment log (etan-status), submitted and merged; Add EIP: RPC Method for Transaction Gas Limit Cap (PaulRBerg), merged after submission on January 11; EIP-7778: clarify interaction with the calldata floor (nerolation), submitted.",
+      "topic_en": "Gas and fees"
+    },
+    {
+      "topic": "Gas 与手续费",
+      "title": "EIP-7778：说明与 calldata 下限的关系",
+      "note": "新增 EIP：区块末尾批量支付优先费（etan-status）合并，2025 年 12 月 30 日提交，从 EIP-7799 系统日志拆出；EIP-7799：加入手续费日志（etan-status）提交并合并；新增 EIP：交易 gas 上限的 RPC 方法（PaulRBerg）1 月 11 日提交后合并；EIP-7778：说明与 calldata 下限的关系（nerolation）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11090",
+      "date": "2026-01-15",
+      "title_en": "EIP-7778: clarify interaction with the calldata floor",
+      "note_en": "Add EIP: Batch priority fees at end of block (etan-status), merged after submission on December 30, 2025, split from EIP-7799 system logs; EIP-7799: add a fee payment log (etan-status), submitted and merged; Add EIP: RPC Method for Transaction Gas Limit Cap (PaulRBerg), merged after submission on January 11; EIP-7778: clarify interaction with the calldata floor (nerolation), submitted.",
+      "topic_en": "Gas and fees"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：ERC-8126 AI Agent 验证",
+      "note": "22:51；ethresear.ch：Fusaka 与 BPO 更新后的 blob 分析 00:10；EIP-8024：定义代码末尾的行为（frangio）提交并合并。",
+      "url": "https://ethereum-magicians.org/t/erc-8126-ai-agent-verification/27445",
+      "date": "2026-01-15",
+      "title_en": "Magicians: ERC-8126 AI Agent Verification",
+      "note_en": "22:51; ethresear.ch: blob analysis after Fusaka and BPO updates, 00:10; EIP-8024: specify behavior at end of code (frangio), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Fusaka 与 BPO 更新后的 blob 分析",
+      "note": "Magicians：ERC-8126 AI Agent 验证 22:51；ethresear.ch：Fusaka 与 BPO 更新后的 blob 分析 00:10；EIP-8024：定义代码末尾的行为（frangio）提交并合并。",
+      "url": "https://ethresear.ch/t/blob-analysis-after-fusaka-and-bpo-updates/23853",
+      "date": "2026-01-15",
+      "title_en": "ethresear.ch: blob analysis after Fusaka and BPO updates",
+      "note_en": "Magicians: ERC-8126 AI Agent Verification, 22:51; ethresear.ch: blob analysis after Fusaka and BPO updates, 00:10; EIP-8024: specify behavior at end of code (frangio), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8024：定义代码末尾的行为",
+      "note": "Magicians：ERC-8126 AI Agent 验证 22:51；ethresear.ch：Fusaka 与 BPO 更新后的 blob 分析 00:10；EIP-8024：定义代码末尾的行为（frangio）提交并合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11085",
+      "date": "2026-01-15",
+      "title_en": "EIP-8024: specify behavior at end of code",
+      "note_en": "Magicians: ERC-8126 AI Agent Verification, 22:51; ethresear.ch: blob analysis after Fusaka and BPO updates, 00:10; EIP-8024: specify behavior at end of code (frangio), submitted and merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ProtocolGuild：Protocol Guild 的 184 名成员覆盖客户端开发、研究与升级协调等领域",
+      "note": "22:56。",
+      "url": "https://x.com/ProtocolGuild/status/2011829754018865191",
+      "date": "2026-01-15",
+      "title_en": "ProtocolGuild: Protocol Guild's 184 members span client development, research and upgrade coordination",
+      "note_en": "22:56.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/trust-minimized-transaction-simulation-using-state-proofs/23857",
+    "credit": "ethresear.ch, Trust minimized transaction simulation using state proofs",
+    "local_path": "assets/2026-01-15.jpg",
+    "credit_en": "ethresear.ch, Trust minimized transaction simulation using state proofs"
+  },
+  "keywords_en": [
+    "ACDE #228 lists EIP-7954 as CFI and declines seven EIPs",
+    "EIP-8037 left to the next ACDT",
+    "trust minimized transaction simulation with state proofs",
+    "a batch priority fees EIP merged",
+    "a transaction gas limit cap RPC method merged",
+    "an EIP-7799 fee payment log",
+    "AI agent verification ERC-8126",
+    "blob analysis after Fusaka"
+  ],
+  "summary_en": "ACDE #228: EIP-7954, raising the contract size limit to 32KiB, is CFI; the EIP-8037 state creation gas increase goes to the next ACDT; seven EIPs including EIP-7793 conditional transactions, EIP-5920 PAY and the EIP-8051 ML-DSA precompile were declined. Sednaoui proposed verifying transaction simulation with MPT proofs and multi node consensus so wallets need not blindly trust RPCs. etan-status's batch priority fees and EIP-7799 fee payment log merged."
+}

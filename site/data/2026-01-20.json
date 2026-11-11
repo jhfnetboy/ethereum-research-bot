@@ -1,0 +1,161 @@
+{
+  "date": "2026-01-20",
+  "keywords": [
+    "Vitalik 提出协议原生 DVT 质押",
+    "Glamsterdam 最坏区块大小与 calldata 重定价",
+    "Checkpoint #8 发布",
+    "EIP-7773 依 ACDE #228 更新 CFI 与 DFI",
+    "临时合约存储 EIP 合并",
+    "7702 账户隐身地址",
+    "ERC-8128 以太坊签名 HTTP 请求"
+  ],
+  "summary": "VitalikButerin 提出协议原生 DVT：质押密钥在少数节点间秘密分享，所有签名阈值签署，超过三分之二节点正常即可避免罚没。Nero_eth 分析 Glamsterdam 的最坏区块大小与 calldata 重定价。nixorokish 在以太坊博客发布 Checkpoint #8 核心开发会议综述。EIP-7773 依 ACDE #228 更新并合并，EIP-7954 列入 CFI。",
+  "items": [
+    {
+      "topic": "Gas：最坏区块大小",
+      "title": "ethresear.ch：Glamsterdam 的最坏区块大小与 calldata 重定价",
+      "note": "（Nero_eth）20:59：最坏区块大小问题多来自对抗性构造而非正常使用，平均区块很小但最坏情况不然。",
+      "url": "https://ethresear.ch/t/worst-case-block-size-and-calldata-repricing-for-glamsterdam/23895",
+      "date": "2026-01-20",
+      "title_en": "ethresear.ch: Worst-Case Block Size and Calldata Repricing for Glamsterdam",
+      "note_en": "(Nero_eth), 20:59: worst case block size keeps surfacing through adversarial constructions rather than honest use; average blocks are small but worst cases are not.",
+      "topic_en": "Gas: worst case block size"
+    },
+    {
+      "topic": "质押：原生 DVT",
+      "title": "ethresear.ch：以太坊质押的原生 DVT",
+      "note": "（vbuterin）20:51：密钥在几个节点间秘密分享、所有签名阈值签署，只要超过三分之二节点正常就不会被罚没或遭受不活跃惩罚。",
+      "url": "https://ethresear.ch/t/native-dvt-for-ethereum-staking/23894",
+      "date": "2026-01-20",
+      "title_en": "ethresear.ch: Native DVT for Ethereum staking",
+      "note_en": "(vbuterin), 20:51: the key is secret shared across a few nodes and every signature is threshold signed, so stakers avoid slashing and inactivity leaks as long as more than two thirds of nodes are correct.",
+      "topic_en": "Staking: native DVT"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "Magicians：7702 账户的隐身地址与子账户",
+      "note": "17:33；Magicians：ERC-8128 用以太坊账户签名 HTTP 请求 05:22。",
+      "url": "https://ethereum-magicians.org/t/stealth-address-sub-accounts-for-7702-account/27540",
+      "date": "2026-01-20",
+      "title_en": "Magicians: stealth address and sub accounts for 7702 accounts",
+      "note_en": "17:33; Magicians: ERC-8128 Signed HTTP Requests with Ethereum, 05:22.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "隐私与账户",
+      "title": "Magicians：ERC-8128 用以太坊账户签名 HTTP 请求",
+      "note": "Magicians：7702 账户的隐身地址与子账户 17:33；Magicians：ERC-8128 用以太坊账户签名 HTTP 请求 05:22。",
+      "url": "https://ethereum-magicians.org/t/erc-8128-signed-http-requests-with-ethereum/27515",
+      "date": "2026-01-20",
+      "title_en": "Magicians: ERC-8128 Signed HTTP Requests with Ethereum",
+      "note_en": "Magicians: stealth address and sub accounts for 7702 accounts, 17:33; Magicians: ERC-8128 Signed HTTP Requests with Ethereum, 05:22.",
+      "topic_en": "Privacy and accounts"
+    },
+    {
+      "topic": "升级范围",
+      "title": "nixorokish：以太坊博客发布 Checkpoint #8，回顾 Fusaka 与 BPO、Glamsterdam 进展与 Hegotá 功能遴选",
+      "note": "21:49；EIP-7773：依 ACDE #228 更新 CFI/DFI（joshdavislight）合并，1 月 15 日提交：EIP-7954 列为 CFI，EIP-7793、5920、8051、7971、8032、7907、7903 列为 DFI。",
+      "url": "https://x.com/nixorokish/status/2013625022133477768",
+      "date": "2026-01-20",
+      "title_en": "nixorokish: Checkpoint #8 is on the Ethereum blog, covering the Fusaka and BPO recap, Glamsterdam progress and Hegotá feature selection",
+      "note_en": "21:49; EIP-7773: CFI and DFI per ACDE #228 (joshdavislight), merged after submission on January 15: EIP-7954 is CFI, and EIP-7793, 5920, 8051, 7971, 8032, 7907 and 7903 are DFI.",
+      "topic_en": "Upgrade scope"
+    },
+    {
+      "topic": "升级范围",
+      "title": "EIP-7773：依 ACDE #228 更新 CFI/DFI",
+      "note": "nixorokish：以太坊博客发布 Checkpoint #8，回顾 Fusaka 与 BPO、Glamsterdam 进展与 Hegotá 功能遴选 21:49；EIP-7773：依 ACDE #228 更新 CFI/DFI（joshdavislight）合并，1 月 15 日提交：EIP-7954 列为 CFI，EIP-7793、5920、8051、7971、8032、7907、7903 列为 DFI。",
+      "url": "https://github.com/ethereum/EIPs/pull/11092",
+      "date": "2026-01-20",
+      "title_en": "EIP-7773: CFI and DFI per ACDE #228",
+      "note_en": "Nixorokish: Checkpoint #8 is on the Ethereum blog, covering the Fusaka and BPO recap, Glamsterdam progress and Hegotá feature selection, 21:49; EIP-7773: CFI and DFI per ACDE #228 (joshdavislight), merged after submission on January 15: EIP-7954 is CFI, and EIP-7793, 5920, 8051, 7971, 8032, 7907 and 7903 are DFI.",
+      "topic_en": "Upgrade scope"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：临时合约存储",
+      "note": "（weiihann）合并；新增 EIP：MEVless Protocol（Lawliet-Chan）合并；EIP-7934 进入 Final（poojaranjan）提交并合并；ACDT #67 议程 02:45。",
+      "url": "https://github.com/ethereum/EIPs/pull/11081",
+      "date": "2026-01-20",
+      "title_en": "Add EIP: Temporary Contract Storage",
+      "note_en": "(weiihann), merged; Add EIP: MEVless Protocol (Lawliet-Chan), merged; EIP-7934: move to Final (poojaranjan), submitted and merged; ACDT #67 agenda, 02:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：MEVless Protocol",
+      "note": "新增 EIP：临时合约存储（weiihann）合并；新增 EIP：MEVless Protocol（Lawliet-Chan）合并；EIP-7934 进入 Final（poojaranjan）提交并合并；ACDT #67 议程 02:45。",
+      "url": "https://github.com/ethereum/EIPs/pull/10855",
+      "date": "2026-01-20",
+      "title_en": "Add EIP: MEVless Protocol",
+      "note_en": "Add EIP: Temporary Contract Storage (weiihann), merged; Add EIP: MEVless Protocol (Lawliet-Chan), merged; EIP-7934: move to Final (poojaranjan), submitted and merged; ACDT #67 agenda, 02:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7934 进入 Final",
+      "note": "新增 EIP：临时合约存储（weiihann）合并；新增 EIP：MEVless Protocol（Lawliet-Chan）合并；EIP-7934 进入 Final（poojaranjan）提交并合并；ACDT #67 议程 02:45。",
+      "url": "https://github.com/ethereum/EIPs/pull/11112",
+      "date": "2026-01-20",
+      "title_en": "EIP-7934: move to Final",
+      "note_en": "Add EIP: Temporary Contract Storage (weiihann), merged; Add EIP: MEVless Protocol (Lawliet-Chan), merged; EIP-7934: move to Final (poojaranjan), submitted and merged; ACDT #67 agenda, 02:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #67 议程",
+      "note": "新增 EIP：临时合约存储（weiihann）合并；新增 EIP：MEVless Protocol（Lawliet-Chan）合并；EIP-7934 进入 Final（poojaranjan）提交并合并；ACDT #67 议程 02:45。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-67-january-26-2026/27511",
+      "date": "2026-01-20",
+      "title_en": "ACDT #67 agenda",
+      "note_en": "Add EIP: Temporary Contract Storage (weiihann), merged; Add EIP: MEVless Protocol (Lawliet-Chan), merged; EIP-7934: move to Final (poojaranjan), submitted and merged; ACDT #67 agenda, 02:45.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：以太坊是全球金融机构的首选，35 个机构采用案例",
+      "note": "01:10；trailofbits：开源 17 个 Claude 安全技能 19:01；tcoratger：LeanSpec 配套书，用平实语言解释 Lean Consensus 01:43。",
+      "url": "https://x.com/ethereum/status/2013313143728992700",
+      "date": "2026-01-20",
+      "title_en": "ethereum: Ethereum is the top choice for global financial institutions, 35 adoption stories",
+      "note_en": "01:10; trailofbits: 17 Claude security skills, open sourced, 19:01; tcoratger: a companion book to LeanSpec explaining Lean Consensus in plain English, 01:43.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trailofbits：开源 17 个 Claude 安全技能",
+      "note": "ethereum：以太坊是全球金融机构的首选，35 个机构采用案例 01:10；trailofbits：开源 17 个 Claude 安全技能 19:01；tcoratger：LeanSpec 配套书，用平实语言解释 Lean Consensus 01:43。",
+      "url": "https://x.com/trailofbits/status/2013582670467309643",
+      "date": "2026-01-20",
+      "title_en": "trailofbits: 17 Claude security skills, open sourced",
+      "note_en": "Ethereum: Ethereum is the top choice for global financial institutions, 35 adoption stories, 01:10; trailofbits: 17 Claude security skills, open sourced, 19:01; tcoratger: a companion book to LeanSpec explaining Lean Consensus in plain English, 01:43.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：LeanSpec 配套书，用平实语言解释 Lean Consensus",
+      "note": "ethereum：以太坊是全球金融机构的首选，35 个机构采用案例 01:10；trailofbits：开源 17 个 Claude 安全技能 19:01；tcoratger：LeanSpec 配套书，用平实语言解释 Lean Consensus 01:43。",
+      "url": "https://x.com/tcoratger/status/2013321482525417818",
+      "date": "2026-01-20",
+      "title_en": "tcoratger: a companion book to LeanSpec explaining Lean Consensus in plain English",
+      "note_en": "Ethereum: Ethereum is the top choice for global financial institutions, 35 adoption stories, 01:10; trailofbits: 17 Claude security skills, open sourced, 19:01; tcoratger: a companion book to LeanSpec explaining Lean Consensus in plain English, 01:43.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/native-dvt-for-ethereum-staking/23894",
+    "credit": "ethresear.ch, Native DVT for Ethereum staking",
+    "local_path": "assets/2026-01-20.jpg",
+    "credit_en": "ethresear.ch, Native DVT for Ethereum staking"
+  },
+  "keywords_en": [
+    "Vitalik proposes native DVT staking",
+    "worst case block size and calldata repricing for Glamsterdam",
+    "Checkpoint #8 published",
+    "EIP-7773 updates CFI and DFI per ACDE #228",
+    "the temporary contract storage EIP merged",
+    "stealth addresses for 7702 accounts",
+    "ERC-8128 signed HTTP requests with Ethereum"
+  ],
+  "summary_en": "VitalikButerin proposed native DVT: the staking key is secret shared across a few nodes with threshold signatures, staying safe from slashing as long as more than two thirds of nodes work. Nero_eth analyzed worst case block size and calldata repricing for Glamsterdam. nixorokish published the Checkpoint #8 core dev recap on the Ethereum blog. EIP-7773 was updated per ACDE #228 and merged, listing EIP-7954 as CFI."
+}

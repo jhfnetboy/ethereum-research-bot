@@ -1,0 +1,141 @@
+{
+  "date": "2026-01-27",
+  "keywords": [
+    "FOCIL 正式提为 Hegotá 头号提案",
+    "Vitalik 谈扩容层级",
+    "逐操作码证明耗时",
+    "BAL 加入首次访问索引",
+    "BPO3 元 EIP",
+    "基于哈希的抗量子升级防护",
+    "以太坊为抗量子而生"
+  ],
+  "summary": "soispoke 等正式把 FOCIL（EIP-7805）提为 Hegotá 头号提案。VitalikButerin 提出扩容层级：计算比数据容易扩，数据比状态容易扩。Nethermind 研究测量逐操作码证明耗时。nerolation 提交在 BAL 中加入首次访问索引。",
+  "items": [
+    {
+      "topic": "交易：FOCIL 抗审查",
+      "title": "Magicians：Hegotá 头号提案 FOCIL（EIP-7805）",
+      "note": "21:33；soispoke：正式把 FOCIL 提为 Hegotá 头号提案 21:35；_julianma：FOCIL 是从零到一的网络原语，还可成为其他功能的基础 21:55。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-focil-eip-7805/27604",
+      "date": "2026-01-27",
+      "title_en": "Magicians: Hegotá headliner proposal FOCIL (EIP-7805)",
+      "note_en": "21:33; soispoke: FOCIL is now officially proposed as a Hegotá headliner, 21:35; _julianma: FOCIL is a zero to one network primitive that can also be a building block for more, 21:55.",
+      "topic_en": "Transactions: FOCIL censorship resistance"
+    },
+    {
+      "topic": "交易：FOCIL 抗审查",
+      "title": "soispoke：正式把 FOCIL 提为 Hegotá 头号提案",
+      "note": "Magicians：Hegotá 头号提案 FOCIL（EIP-7805） 21:33；soispoke：正式把 FOCIL 提为 Hegotá 头号提案 21:35；_julianma：FOCIL 是从零到一的网络原语，还可成为其他功能的基础 21:55。",
+      "url": "https://x.com/soispoke/status/2016158081877471448",
+      "date": "2026-01-27",
+      "title_en": "soispoke: FOCIL is now officially proposed as a Hegotá headliner",
+      "note_en": "Magicians: Hegotá headliner proposal FOCIL (EIP-7805), 21:33; soispoke: FOCIL is now officially proposed as a Hegotá headliner, 21:35; _julianma: FOCIL is a zero to one network primitive that can also be a building block for more, 21:55.",
+      "topic_en": "Transactions: FOCIL censorship resistance"
+    },
+    {
+      "topic": "交易：FOCIL 抗审查",
+      "title": "_julianma：FOCIL 是从零到一的网络原语，还可成为其他功能的基础",
+      "note": "Magicians：Hegotá 头号提案 FOCIL（EIP-7805） 21:33；soispoke：正式把 FOCIL 提为 Hegotá 头号提案 21:35；_julianma：FOCIL 是从零到一的网络原语，还可成为其他功能的基础 21:55。",
+      "url": "https://x.com/_julianma/status/2016163188266484055",
+      "date": "2026-01-27",
+      "title_en": "_julianma: FOCIL is a zero to one network primitive that can also be a building block for more",
+      "note_en": "Magicians: Hegotá headliner proposal FOCIL (EIP-7805), 21:33; soispoke: FOCIL is now officially proposed as a Hegotá headliner, 21:35; _julianma: FOCIL is a zero to one network primitive that can also be a building block for more, 21:55.",
+      "topic_en": "Transactions: FOCIL censorship resistance"
+    },
+    {
+      "topic": "扩容与证明",
+      "title": "VitalikButerin：区块链的扩容层级是计算大于数据大于状态，计算可以并行、借助 builder 提示或直接用证明替代",
+      "note": "08:51；ethresear.ch：测量逐操作码证明耗时（linoscope）19:32。",
+      "url": "https://x.com/VitalikButerin/status/2015965780727496907",
+      "date": "2026-01-27",
+      "title_en": "VitalikButerin: the scaling hierarchy is computation over data over state, since computation can be parallelized, aided by builder hints or replaced by a proof",
+      "note_en": "08:51; ethresear.ch: Measuring Per-Opcode Proving Time (linoscope), 19:32.",
+      "topic_en": "Scaling and proving"
+    },
+    {
+      "topic": "扩容与证明",
+      "title": "ethresear.ch：测量逐操作码证明耗时",
+      "note": "VitalikButerin：区块链的扩容层级是计算大于数据大于状态，计算可以并行、借助 builder 提示或直接用证明替代 08:51；ethresear.ch：测量逐操作码证明耗时（linoscope）19:32。",
+      "url": "https://ethresear.ch/t/measuring-per-opcode-proving-time/23955",
+      "date": "2026-01-27",
+      "title_en": "ethresear.ch: Measuring Per-Opcode Proving Time",
+      "note_en": "VitalikButerin: the scaling hierarchy is computation over data over state, since computation can be parallelized, aided by builder hints or replaced by a proof, 08:51; ethresear.ch: Measuring Per-Opcode Proving Time (linoscope), 19:32.",
+      "topic_en": "Scaling and proving"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7928：BAL 加入首次访问索引",
+      "note": "（nerolation）提交；新增 EIP：硬分叉元 EIP BPO3（poojaranjan）提交；Magicians：HQRUS 基于哈希的抗量子升级防护 21:17；ERC 8119：参数化存储键（nxt3d）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11181",
+      "date": "2026-01-27",
+      "title_en": "EIP-7928: add first accessed indices to BAL",
+      "note_en": "(nerolation), submitted; Add EIP: Hardfork Meta BPO3 (poojaranjan), submitted; Magicians: HQRUS, Hash-Based Quantum-Resistant Upgrade Shield, 21:17; ERC 8119: Parameterized Storage Keys (nxt3d), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：硬分叉元 EIP BPO3",
+      "note": "EIP-7928：BAL 加入首次访问索引（nerolation）提交；新增 EIP：硬分叉元 EIP BPO3（poojaranjan）提交；Magicians：HQRUS 基于哈希的抗量子升级防护 21:17；ERC 8119：参数化存储键（nxt3d）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11182",
+      "date": "2026-01-27",
+      "title_en": "Add EIP: Hardfork Meta BPO3",
+      "note_en": "EIP-7928: add first accessed indices to BAL (nerolation), submitted; Add EIP: Hardfork Meta BPO3 (poojaranjan), submitted; Magicians: HQRUS, Hash-Based Quantum-Resistant Upgrade Shield, 21:17; ERC 8119: Parameterized Storage Keys (nxt3d), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：HQRUS 基于哈希的抗量子升级防护",
+      "note": "EIP-7928：BAL 加入首次访问索引（nerolation）提交；新增 EIP：硬分叉元 EIP BPO3（poojaranjan）提交；Magicians：HQRUS 基于哈希的抗量子升级防护 21:17；ERC 8119：参数化存储键（nxt3d）合并。",
+      "url": "https://ethereum-magicians.org/t/hqrus-hash-based-quantum-resistant-upgrade-shield/27603",
+      "date": "2026-01-27",
+      "title_en": "Magicians: HQRUS, Hash-Based Quantum-Resistant Upgrade Shield",
+      "note_en": "EIP-7928: add first accessed indices to BAL (nerolation), submitted; Add EIP: Hardfork Meta BPO3 (poojaranjan), submitted; Magicians: HQRUS, Hash-Based Quantum-Resistant Upgrade Shield, 21:17; ERC 8119: Parameterized Storage Keys (nxt3d), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC 8119：参数化存储键",
+      "note": "EIP-7928：BAL 加入首次访问索引（nerolation）提交；新增 EIP：硬分叉元 EIP BPO3（poojaranjan）提交；Magicians：HQRUS 基于哈希的抗量子升级防护 21:17；ERC 8119：参数化存储键（nxt3d）合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1455",
+      "date": "2026-01-27",
+      "title_en": "ERC 8119: Parameterized Storage Keys",
+      "note_en": "EIP-7928: add first accessed indices to BAL (nerolation), submitted; Add EIP: Hardfork Meta BPO3 (poojaranjan), submitted; Magicians: HQRUS, Hash-Based Quantum-Resistant Upgrade Shield, 21:17; ERC 8119: Parameterized Storage Keys (nxt3d), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：以太坊为抗量子而生",
+      "note": "01:04；peter_szilagyi：不再有理由不用后量子密码学，桌面、云、移动与 Web 都已覆盖 22:03。",
+      "url": "https://x.com/ethereum/status/2015848389825724455",
+      "date": "2026-01-27",
+      "title_en": "ethereum: Ethereum is for quantum resistance",
+      "note_en": "01:04; peter_szilagyi: no excuse left for not using post-quantum cryptography, with desktop, cloud, mobile and web covered, 22:03.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "peter_szilagyi：不再有理由不用后量子密码学，桌面、云、移动与 Web 都已覆盖",
+      "note": "ethereum：以太坊为抗量子而生 01:04；peter_szilagyi：不再有理由不用后量子密码学，桌面、云、移动与 Web 都已覆盖 22:03。",
+      "url": "https://x.com/peter_szilagyi/status/2016165140287176778",
+      "date": "2026-01-27",
+      "title_en": "peter_szilagyi: no excuse left for not using post-quantum cryptography, with desktop, cloud, mobile and web covered",
+      "note_en": "Ethereum: Ethereum is for quantum resistance, 01:04; peter_szilagyi: no excuse left for not using post-quantum cryptography, with desktop, cloud, mobile and web covered, 22:03.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-focil-eip-7805/27604",
+    "credit": "Ethereum Magicians, Hegotá Headliner Proposal: FOCIL, EIP-7805",
+    "local_path": "assets/2026-01-27.jpg",
+    "credit_en": "Ethereum Magicians, Hegotá Headliner Proposal: FOCIL, EIP-7805"
+  },
+  "keywords_en": [
+    "FOCIL formally proposed as a Hegotá headliner",
+    "Vitalik on the scaling hierarchy",
+    "per opcode proving time",
+    "first accessed indices in BALs",
+    "the BPO3 meta EIP",
+    "a hash based quantum resistant upgrade shield",
+    "Ethereum is for quantum resistance"
+  ],
+  "summary_en": "soispoke and coauthors formally proposed FOCIL (EIP-7805) as a Hegotá headliner. VitalikButerin laid out a scaling hierarchy: computation scales more easily than data, and data more easily than state. Nethermind research measured per opcode proving time. nerolation submitted first accessed indices for BALs."
+}

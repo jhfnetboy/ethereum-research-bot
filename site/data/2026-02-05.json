@@ -1,0 +1,201 @@
+{
+  "date": "2026-02-05",
+  "keywords": [
+    "Vitalik 提出用新形式的状态超扩容",
+    "LUCID 加密内存池 Hegotá 头号提案",
+    "ACDC #174 FOCIL 最可能成为共识层头号",
+    "EIP-7976 calldata 下限升至 64/64",
+    "ERC-8004 AI Agent 标准",
+    "EIP-7918 与 Fusaka 元 EIP 定稿",
+    "Aztec 新测试网"
+  ],
+  "summary": "VitalikButerin 发文提出通过创造新形式的状态实现状态超扩容。jflo 等人提出 Hegotá 头号候选 LUCID 加密内存池：FOCIL 无法保护易受 MEV 影响的交易，LUCID 补上这一点。ACDC #174 认为 FOCIL 最可能成为共识层头号提案，下次 ACDC 选定。nerolation 提交把 EIP-7976 calldata 下限提高到 64/64。",
+  "items": [
+    {
+      "topic": "交易隐私：LUCID 加密内存池",
+      "title": "Magicians：Hegotá 头号提案 LUCID 加密内存池",
+      "note": "（jflo，作者 Anders Elowsson、Julian Ma、Justin Florentine）09:37：FOCIL 让包含者传播必须进入下一槽的交易列表以抗审查，但无法保护易被 MEV 提取的交易；配套的 ethresear.ch：LUCID，带分布式载荷传播的加密内存池 08:10。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-lucid-encrypted-mempool/27658",
+      "date": "2026-02-05",
+      "title_en": "Magicians: Hegotá headliner LUCID encrypted mempool",
+      "note_en": "(jflo, authors Anders Elowsson, Julian Ma, Justin Florentine), 09:37: FOCIL lets includers propagate lists of transactions that must land next slot for censorship resistance, but cannot protect transactions open to MEV extraction; companion post ethresear.ch: LUCID, encrypted mempool with distributed payload propagation, 08:10.",
+      "topic_en": "Transaction privacy: the LUCID encrypted mempool"
+    },
+    {
+      "topic": "交易隐私：LUCID 加密内存池",
+      "title": "ethresear.ch：LUCID，带分布式载荷传播的加密内存池",
+      "note": "Magicians：Hegotá 头号提案 LUCID 加密内存池（jflo，作者 Anders Elowsson、Julian Ma、Justin Florentine）09:37：FOCIL 让包含者传播必须进入下一槽的交易列表以抗审查，但无法保护易被 MEV 提取的交易；配套的 ethresear.ch：LUCID，带分布式载荷传播的加密内存池 08:10。",
+      "url": "https://ethresear.ch/t/lucid-encrypted-mempool-with-distributed-payload-propagation/24042",
+      "date": "2026-02-05",
+      "title_en": "ethresear.ch: LUCID, encrypted mempool with distributed payload propagation",
+      "note_en": "Magicians: Hegotá headliner LUCID encrypted mempool (jflo, authors Anders Elowsson, Julian Ma, Justin Florentine), 09:37: FOCIL lets includers propagate lists of transactions that must land next slot for censorship resistance, but cannot protect transactions open to MEV extraction; companion post ethresear.ch: LUCID, encrypted mempool with distributed payload propagation, 08:10.",
+      "topic_en": "Transaction privacy: the LUCID encrypted mempool"
+    },
+    {
+      "topic": "Gas 与状态",
+      "title": "VitalikButerin：通过创造新形式的状态来超扩容以太坊状态",
+      "note": "22:45，全文见 ethresear.ch 22:38：未来五年需扩展执行、数据与状态三种资源，目标是 L1 千倍扩容。",
+      "url": "https://x.com/VitalikButerin/status/2019437232315056267",
+      "date": "2026-02-05",
+      "title_en": "VitalikButerin: hyper-scaling Ethereum state by creating new forms of state",
+      "note_en": "22:45, full text on ethresear.ch, 22:38: scaling over the next five years means scaling execution, data and state, toward 1000x on L1.",
+      "topic_en": "Gas and state"
+    },
+    {
+      "topic": "Gas 与状态",
+      "title": "ethresear.ch",
+      "note": "VitalikButerin：通过创造新形式的状态来超扩容以太坊状态 22:45，全文见 ethresear.ch 22:38：未来五年需扩展执行、数据与状态三种资源，目标是 L1 千倍扩容。",
+      "url": "https://ethresear.ch/t/hyper-scaling-state-by-creating-new-forms-of-state/24052",
+      "date": "2026-02-05",
+      "title_en": "ethresear.ch",
+      "note_en": "VitalikButerin: hyper-scaling Ethereum state by creating new forms of state, 22:45, full text on ethresear.ch, 22:38: scaling over the next five years means scaling execution, data and state, toward 1000x on L1.",
+      "topic_en": "Gas and state"
+    },
+    {
+      "topic": "Gas 与状态",
+      "title": "EIP-7976：calldata 下限提高到 64/64",
+      "note": "（nerolation）提交：每字节由 15/60 改为 64/64 gas，10 MiB 载荷所需 gas 从约 1.05 亿升至约 6.71 亿。",
+      "url": "https://github.com/ethereum/EIPs/pull/11264",
+      "date": "2026-02-05",
+      "title_en": "EIP-7976: increase the floor data cost to 64/64",
+      "note_en": "(nerolation), submitted: from 15/60 to 64/64 gas per byte, raising a 10 MiB payload from about 105M to about 671M gas.",
+      "topic_en": "Gas and state"
+    },
+    {
+      "topic": "会议：ACDC #174",
+      "title": "ACDC #174",
+      "note": "21:00，据 Ethereal news #10：Hegotá 共识层头号候选为 FOCIL（EIP-7805） 与 部分重建与 2D PeerDAS，FOCIL 获客户端团队强力支持，下次 ACDC 选定；EIP-8136 cell 级增量向后兼容，以功能开关启用，无需升级。",
+      "url": "https://forkcast.org/calls/acdc/174",
+      "date": "2026-02-05",
+      "title_en": "ACDC #174",
+      "note_en": "21:00, per Ethereal news #10: Hegotá consensus headliner candidates are FOCIL (EIP-7805) and partial reconstruction and 2D PeerDAS, with strong client support for FOCIL and a pick at the next ACDC; EIP-8136 cell level deltas are backwards compatible and ship behind a feature flag without an upgrade.",
+      "topic_en": "Calls: ACDC #174"
+    },
+    {
+      "topic": "会议：ACDC #174",
+      "title": "Ethereal news #10",
+      "note": "ACDC #174 21:00，据 Ethereal news #10：Hegotá 共识层头号候选为 FOCIL（EIP-7805） 与 部分重建与 2D PeerDAS，FOCIL 获客户端团队强力支持，下次 ACDC 选定；EIP-8136 cell 级增量向后兼容，以功能开关启用，无需升级。",
+      "url": "https://ethereal.news/ethereal-news-weekly-10/",
+      "date": "2026-02-05",
+      "title_en": "Ethereal news #10",
+      "note_en": "ACDC #174, 21:00, per Ethereal news #10: Hegotá consensus headliner candidates are FOCIL (EIP-7805) and partial reconstruction and 2D PeerDAS, with strong client support for FOCIL and a pick at the next ACDC; EIP-8136 cell level deltas are backwards compatible and ship behind a feature flag without an upgrade.",
+      "topic_en": "Calls: ACDC #174"
+    },
+    {
+      "topic": "会议：ACDC #174",
+      "title": "FOCIL（EIP-7805）",
+      "note": "ACDC #174 21:00，据 Ethereal news #10：Hegotá 共识层头号候选为 FOCIL（EIP-7805） 与 部分重建与 2D PeerDAS，FOCIL 获客户端团队强力支持，下次 ACDC 选定；EIP-8136 cell 级增量向后兼容，以功能开关启用，无需升级。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-proposal-focil-eip-7805/27604",
+      "date": "2026-02-05",
+      "title_en": "FOCIL (EIP-7805)",
+      "note_en": "ACDC #174, 21:00, per Ethereal news #10: Hegotá consensus headliner candidates are FOCIL (EIP-7805) and partial reconstruction and 2D PeerDAS, with strong client support for FOCIL and a pick at the next ACDC; EIP-8136 cell level deltas are backwards compatible and ship behind a feature flag without an upgrade.",
+      "topic_en": "Calls: ACDC #174"
+    },
+    {
+      "topic": "会议：ACDC #174",
+      "title": "部分重建与 2D PeerDAS",
+      "note": "ACDC #174 21:00，据 Ethereal news #10：Hegotá 共识层头号候选为 FOCIL（EIP-7805） 与 部分重建与 2D PeerDAS，FOCIL 获客户端团队强力支持，下次 ACDC 选定；EIP-8136 cell 级增量向后兼容，以功能开关启用，无需升级。",
+      "url": "https://ethereum-magicians.org/t/hegota-headliner-partial-reconstruction-and-2d-peerdas/27652",
+      "date": "2026-02-05",
+      "title_en": "partial reconstruction and 2D PeerDAS",
+      "note_en": "ACDC #174, 21:00, per Ethereal news #10: Hegotá consensus headliner candidates are FOCIL (EIP-7805) and partial reconstruction and 2D PeerDAS, with strong client support for FOCIL and a pick at the next ACDC; EIP-8136 cell level deltas are backwards compatible and ship behind a feature flag without an upgrade.",
+      "topic_en": "Calls: ACDC #174"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7918 进入 Final",
+      "note": "（anderselowsson）合并；EIP-7607 进入 Final（nixorokish）合并；EIP-7966：明确内存池行为与错误响应（silver-rise）合并；新增 EIP：验证者自定义提款阈值（dgusakov）提交；新增 EIP：多点 KZG 求值预编译（protocolwhisper）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/10891",
+      "date": "2026-02-05",
+      "title_en": "EIP-7918: move to Final",
+      "note_en": "(anderselowsson), merged; EIP-7607: move to Final (nixorokish), merged; EIP-7966: clarify mempool behavior and error response (silver-rise), merged; Add EIP: custom sweep threshold for validators (dgusakov), submitted; Add EIP: Multi KZG Point Evaluation Precompile (protocolwhisper), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7607 进入 Final",
+      "note": "EIP-7918 进入 Final（anderselowsson）合并；EIP-7607 进入 Final（nixorokish）合并；EIP-7966：明确内存池行为与错误响应（silver-rise）合并；新增 EIP：验证者自定义提款阈值（dgusakov）提交；新增 EIP：多点 KZG 求值预编译（protocolwhisper）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11237",
+      "date": "2026-02-05",
+      "title_en": "EIP-7607: move to Final",
+      "note_en": "EIP-7918: move to Final (anderselowsson), merged; EIP-7607: move to Final (nixorokish), merged; EIP-7966: clarify mempool behavior and error response (silver-rise), merged; Add EIP: custom sweep threshold for validators (dgusakov), submitted; Add EIP: Multi KZG Point Evaluation Precompile (protocolwhisper), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7966：明确内存池行为与错误响应",
+      "note": "EIP-7918 进入 Final（anderselowsson）合并；EIP-7607 进入 Final（nixorokish）合并；EIP-7966：明确内存池行为与错误响应（silver-rise）合并；新增 EIP：验证者自定义提款阈值（dgusakov）提交；新增 EIP：多点 KZG 求值预编译（protocolwhisper）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11189",
+      "date": "2026-02-05",
+      "title_en": "EIP-7966: clarify mempool behavior and error response",
+      "note_en": "EIP-7918: move to Final (anderselowsson), merged; EIP-7607: move to Final (nixorokish), merged; EIP-7966: clarify mempool behavior and error response (silver-rise), merged; Add EIP: custom sweep threshold for validators (dgusakov), submitted; Add EIP: Multi KZG Point Evaluation Precompile (protocolwhisper), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：验证者自定义提款阈值",
+      "note": "EIP-7918 进入 Final（anderselowsson）合并；EIP-7607 进入 Final（nixorokish）合并；EIP-7966：明确内存池行为与错误响应（silver-rise）合并；新增 EIP：验证者自定义提款阈值（dgusakov）提交；新增 EIP：多点 KZG 求值预编译（protocolwhisper）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11265",
+      "date": "2026-02-05",
+      "title_en": "Add EIP: custom sweep threshold for validators",
+      "note_en": "EIP-7918: move to Final (anderselowsson), merged; EIP-7607: move to Final (nixorokish), merged; EIP-7966: clarify mempool behavior and error response (silver-rise), merged; Add EIP: custom sweep threshold for validators (dgusakov), submitted; Add EIP: Multi KZG Point Evaluation Precompile (protocolwhisper), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：多点 KZG 求值预编译",
+      "note": "EIP-7918 进入 Final（anderselowsson）合并；EIP-7607 进入 Final（nixorokish）合并；EIP-7966：明确内存池行为与错误响应（silver-rise）合并；新增 EIP：验证者自定义提款阈值（dgusakov）提交；新增 EIP：多点 KZG 求值预编译（protocolwhisper）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11266",
+      "date": "2026-02-05",
+      "title_en": "Add EIP: Multi KZG Point Evaluation Precompile",
+      "note_en": "EIP-7918: move to Final (anderselowsson), merged; EIP-7607: move to Final (nixorokish), merged; EIP-7966: clarify mempool behavior and error response (silver-rise), merged; Add EIP: custom sweep threshold for validators (dgusakov), submitted; Add EIP: Multi KZG Point Evaluation Precompile (protocolwhisper), submitted.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ethereum：以太坊为 AI 而生，ERC-8004 由 EF dAI 团队、MetaMask、Google、Coinbase 等制定，定义 Agent 如何互相发现、评价、付费与验证",
+      "note": "00:57；VitalikButerin：再造一条 EVM 链加一周延迟的乐观桥，就像分叉 Compound 做治理 16:26；aztecnetwork：Aztec 新测试网上线 21:53。",
+      "url": "https://x.com/ethereum/status/2019108176042553841",
+      "date": "2026-02-05",
+      "title_en": "ethereum: Ethereum is for AI, ERC-8004 by the EF dAI team, MetaMask, Google, Coinbase and others defines how agents discover, review, pay and verify each other",
+      "note_en": "00:57; VitalikButerin: yet another EVM chain with a one week optimistic bridge is like forking Compound for governance, 16:26; aztecnetwork: Aztec's new testnet is live, 21:53.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：再造一条 EVM 链加一周延迟的乐观桥，就像分叉 Compound 做治理",
+      "note": "ethereum：以太坊为 AI 而生，ERC-8004 由 EF dAI 团队、MetaMask、Google、Coinbase 等制定，定义 Agent 如何互相发现、评价、付费与验证 00:57；VitalikButerin：再造一条 EVM 链加一周延迟的乐观桥，就像分叉 Compound 做治理 16:26；aztecnetwork：Aztec 新测试网上线 21:53。",
+      "url": "https://x.com/VitalikButerin/status/2019341766407725170",
+      "date": "2026-02-05",
+      "title_en": "VitalikButerin: yet another EVM chain with a one week optimistic bridge is like forking Compound for governance",
+      "note_en": "Ethereum: Ethereum is for AI, ERC-8004 by the EF dAI team, MetaMask, Google, Coinbase and others defines how agents discover, review, pay and verify each other, 00:57; VitalikButerin: yet another EVM chain with a one week optimistic bridge is like forking Compound for governance, 16:26; aztecnetwork: Aztec's new testnet is live, 21:53.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "aztecnetwork：Aztec 新测试网上线",
+      "note": "ethereum：以太坊为 AI 而生，ERC-8004 由 EF dAI 团队、MetaMask、Google、Coinbase 等制定，定义 Agent 如何互相发现、评价、付费与验证 00:57；VitalikButerin：再造一条 EVM 链加一周延迟的乐观桥，就像分叉 Compound 做治理 16:26；aztecnetwork：Aztec 新测试网上线 21:53。",
+      "url": "https://x.com/aztecnetwork/status/2019424211828412695",
+      "date": "2026-02-05",
+      "title_en": "aztecnetwork: Aztec's new testnet is live",
+      "note_en": "Ethereum: Ethereum is for AI, ERC-8004 by the EF dAI team, MetaMask, Google, Coinbase and others defines how agents discover, review, pay and verify each other, 00:57; VitalikButerin: yet another EVM chain with a one week optimistic bridge is like forking Compound for governance, 16:26; aztecnetwork: Aztec's new testnet is live, 21:53.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/hyper-scaling-state-by-creating-new-forms-of-state/24052",
+    "credit": "ethresear.ch, Hyper-scaling state by creating new forms of state",
+    "local_path": "assets/2026-02-05.jpg",
+    "credit_en": "ethresear.ch, Hyper-scaling state by creating new forms of state"
+  },
+  "keywords_en": [
+    "Vitalik proposes hyper-scaling state through new forms of state",
+    "the LUCID encrypted mempool Hegotá headliner",
+    "ACDC #174 sees FOCIL as the likely consensus headliner",
+    "EIP-7976 raises the calldata floor to 64/64",
+    "the ERC-8004 AI agent standard",
+    "EIP-7918 and the Fusaka meta EIP go Final",
+    "a new Aztec testnet"
+  ],
+  "summary_en": "VitalikButerin proposed hyper-scaling state by creating new forms of state. jflo and coauthors proposed the LUCID encrypted mempool as a Hegotá headliner: FOCIL cannot protect MEV exposed transactions, and LUCID fills that gap. ACDC #174 saw FOCIL as the likely consensus headliner, to be chosen at the next ACDC. nerolation submitted raising the EIP-7976 calldata floor to 64/64."
+}

@@ -1,0 +1,171 @@
+{
+  "date": "2026-01-19",
+  "keywords": [
+    "ACDT #66 敲定 Glamsterdam CFI 范围含 EIP-8037",
+    "bal-devnet-2 加入四个非头号 EIP",
+    "zkEVM 时代 gas 应反映证明成本",
+    "委员会式 FOCIL EIP",
+    "EIP-7778 新增 gas_spent 收据字段",
+    "SEAL 的受限钱包框架",
+    "原生 Rollup EIP-8079"
+  ],
+  "summary": "ACDT #66：bal-devnet-2 目标 1 月底，加入 SLOTNUM、SWAPN 等操作码、ETH 转账日志与无退款区块 gas 计算；Glamsterdam CFI 范围敲定，EIP-8037 状态创建 gas 上调在内，需要应用开发者对动态成本提供反馈。ladislaus0x 解释 zkEVM 时代如何让 gas 反映证明成本以防 DoS。",
+  "items": [
+    {
+      "topic": "会议：ACDT #66",
+      "title": "ACDT #66",
+      "note": "21:00，据 Ethereal news #8：bal-devnet-2 目标 1 月底，加入 EIP-7843 SLOTNUM、EIP-8024 SWAPN/DUPN/EXCHANGE、EIP-7708 ETH 转账日志与 EIP-7778 无退款区块 gas 计算；CFI 范围敲定，包括 EIP-8037 状态创建 gas 上调，Marius van der Wijden 的 解读 指出它让 gas limit 提高时无需每次重新定价状态操作，应用开发者需对动态成本提供反馈。",
+      "url": "https://forkcast.org/calls/acdt/066",
+      "date": "2026-01-19",
+      "title_en": "ACDT #66",
+      "note_en": "21:00, per Ethereal news #8: bal-devnet-2 targets late January with EIP-7843 SLOTNUM, EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfer logs and EIP-7778 refund free block gas accounting; CFI scope is final, including the EIP-8037 state creation gas increase, and Marius van der Wijden's explainer notes it allows gas limit increases without repricing state operations each time, with app developer feedback needed on the dynamic cost.",
+      "topic_en": "Calls: ACDT #66"
+    },
+    {
+      "topic": "会议：ACDT #66",
+      "title": "Ethereal news #8",
+      "note": "ACDT #66 21:00，据 Ethereal news #8：bal-devnet-2 目标 1 月底，加入 EIP-7843 SLOTNUM、EIP-8024 SWAPN/DUPN/EXCHANGE、EIP-7708 ETH 转账日志与 EIP-7778 无退款区块 gas 计算；CFI 范围敲定，包括 EIP-8037 状态创建 gas 上调，Marius van der Wijden 的 解读 指出它让 gas limit 提高时无需每次重新定价状态操作，应用开发者需对动态成本提供反馈。",
+      "url": "https://ethereal.news/ethereal-news-weekly-8/",
+      "date": "2026-01-19",
+      "title_en": "Ethereal news #8",
+      "note_en": "ACDT #66, 21:00, per Ethereal news #8: bal-devnet-2 targets late January with EIP-7843 SLOTNUM, EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfer logs and EIP-7778 refund free block gas accounting; CFI scope is final, including the EIP-8037 state creation gas increase, and Marius van der Wijden's explainer notes it allows gas limit increases without repricing state operations each time, with app developer feedback needed on the dynamic cost.",
+      "topic_en": "Calls: ACDT #66"
+    },
+    {
+      "topic": "会议：ACDT #66",
+      "title": "bal-devnet-2",
+      "note": "ACDT #66 21:00，据 Ethereal news #8：bal-devnet-2 目标 1 月底，加入 EIP-7843 SLOTNUM、EIP-8024 SWAPN/DUPN/EXCHANGE、EIP-7708 ETH 转账日志与 EIP-7778 无退款区块 gas 计算；CFI 范围敲定，包括 EIP-8037 状态创建 gas 上调，Marius van der Wijden 的 解读 指出它让 gas limit 提高时无需每次重新定价状态操作，应用开发者需对动态成本提供反馈。",
+      "url": "https://notes.ethereum.org/@ethpandaops/bal-devnet-2",
+      "date": "2026-01-19",
+      "title_en": "bal-devnet-2",
+      "note_en": "ACDT #66, 21:00, per Ethereal news #8: bal-devnet-2 targets late January with EIP-7843 SLOTNUM, EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfer logs and EIP-7778 refund free block gas accounting; CFI scope is final, including the EIP-8037 state creation gas increase, and Marius van der Wijden's explainer notes it allows gas limit increases without repricing state operations each time, with app developer feedback needed on the dynamic cost.",
+      "topic_en": "Calls: ACDT #66"
+    },
+    {
+      "topic": "会议：ACDT #66",
+      "title": "EIP-8037",
+      "note": "ACDT #66 21:00，据 Ethereal news #8：bal-devnet-2 目标 1 月底，加入 EIP-7843 SLOTNUM、EIP-8024 SWAPN/DUPN/EXCHANGE、EIP-7708 ETH 转账日志与 EIP-7778 无退款区块 gas 计算；CFI 范围敲定，包括 EIP-8037 状态创建 gas 上调，Marius van der Wijden 的 解读 指出它让 gas limit 提高时无需每次重新定价状态操作，应用开发者需对动态成本提供反馈。",
+      "url": "https://forkcast.org/eips/8037/",
+      "date": "2026-01-19",
+      "title_en": "EIP-8037",
+      "note_en": "ACDT #66, 21:00, per Ethereal news #8: bal-devnet-2 targets late January with EIP-7843 SLOTNUM, EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfer logs and EIP-7778 refund free block gas accounting; CFI scope is final, including the EIP-8037 state creation gas increase, and Marius van der Wijden's explainer notes it allows gas limit increases without repricing state operations each time, with app developer feedback needed on the dynamic cost.",
+      "topic_en": "Calls: ACDT #66"
+    },
+    {
+      "topic": "会议：ACDT #66",
+      "title": "解读",
+      "note": "ACDT #66 21:00，据 Ethereal news #8：bal-devnet-2 目标 1 月底，加入 EIP-7843 SLOTNUM、EIP-8024 SWAPN/DUPN/EXCHANGE、EIP-7708 ETH 转账日志与 EIP-7778 无退款区块 gas 计算；CFI 范围敲定，包括 EIP-8037 状态创建 gas 上调，Marius van der Wijden 的 解读 指出它让 gas limit 提高时无需每次重新定价状态操作，应用开发者需对动态成本提供反馈。",
+      "url": "https://notes.ethereum.org/@MariusVanDerWijden/SJD3CGdSbx",
+      "date": "2026-01-19",
+      "title_en": "explainer",
+      "note_en": "ACDT #66, 21:00, per Ethereal news #8: bal-devnet-2 targets late January with EIP-7843 SLOTNUM, EIP-8024 SWAPN, DUPN and EXCHANGE, EIP-7708 ETH transfer logs and EIP-7778 refund free block gas accounting; CFI scope is final, including the EIP-8037 state creation gas increase, and Marius van der Wijden's explainer notes it allows gas limit increases without repricing state operations each time, with app developer feedback needed on the dynamic cost.",
+      "topic_en": "Calls: ACDT #66"
+    },
+    {
+      "topic": "Gas：证明成本",
+      "title": "ladislaus0x：L1 zkEVM 要规模化，gas 必须反映实际证明开销，系列第二篇解释如何对齐成本以防 DoS",
+      "note": "21:41；EIP-8037：澄清状态创建操作的常规 gas 成本（fradamt）提交并合并；EIP-7778：新增 gas_spent 收据字段（nerolation）合并。",
+      "url": "https://x.com/ladislaus0x/status/2013260533084876941",
+      "date": "2026-01-19",
+      "title_en": "ladislaus0x: for L1-zkEVM to scale, gas must reflect the actual effort of proving, and part 2 of the series explains aligning costs to prevent DoS",
+      "note_en": "21:41; EIP-8037: clarify regular gas costs for state creation operations (fradamt), submitted and merged; EIP-7778: add a gas_spent receipt field (nerolation), merged.",
+      "topic_en": "Gas: proving cost"
+    },
+    {
+      "topic": "Gas：证明成本",
+      "title": "EIP-8037：澄清状态创建操作的常规 gas 成本",
+      "note": "ladislaus0x：L1 zkEVM 要规模化，gas 必须反映实际证明开销，系列第二篇解释如何对齐成本以防 DoS 21:41；EIP-8037：澄清状态创建操作的常规 gas 成本（fradamt）提交并合并；EIP-7778：新增 gas_spent 收据字段（nerolation）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11107",
+      "date": "2026-01-19",
+      "title_en": "EIP-8037: clarify regular gas costs for state creation operations",
+      "note_en": "Ladislaus0x: for L1-zkEVM to scale, gas must reflect the actual effort of proving, and part 2 of the series explains aligning costs to prevent DoS, 21:41; EIP-8037: clarify regular gas costs for state creation operations (fradamt), submitted and merged; EIP-7778: add a gas_spent receipt field (nerolation), merged.",
+      "topic_en": "Gas: proving cost"
+    },
+    {
+      "topic": "Gas：证明成本",
+      "title": "EIP-7778：新增 gas_spent 收据字段",
+      "note": "ladislaus0x：L1 zkEVM 要规模化，gas 必须反映实际证明开销，系列第二篇解释如何对齐成本以防 DoS 21:41；EIP-8037：澄清状态创建操作的常规 gas 成本（fradamt）提交并合并；EIP-7778：新增 gas_spent 收据字段（nerolation）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11099",
+      "date": "2026-01-19",
+      "title_en": "EIP-7778: add a gas_spent receipt field",
+      "note_en": "Ladislaus0x: for L1-zkEVM to scale, gas must reflect the actual effort of proving, and part 2 of the series explains aligning costs to prevent DoS, 21:41; EIP-8037: clarify regular gas costs for state creation operations (fradamt), submitted and merged; EIP-7778: add a gas_spent receipt field (nerolation), merged.",
+      "topic_en": "Gas: proving cost"
+    },
+    {
+      "topic": "交易：FOCIL",
+      "title": "新增 EIP：委员会式分叉选择强制包含列表（FOCIL）",
+      "note": "（soispoke）提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11104",
+      "date": "2026-01-19",
+      "title_en": "Add EIP: Committee-based, Fork-choice enforced Inclusion Lists (FOCIL)",
+      "note_en": "(soispoke), submitted.",
+      "topic_en": "Transactions: FOCIL"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 EIP：不可转让代币标准",
+      "note": "（Vantana1995）提交；RPC Standards #19 议程 22:57。",
+      "url": "https://github.com/ethereum/EIPs/pull/11105",
+      "date": "2026-01-19",
+      "title_en": "Add EIP: Non-Transferable Token Standard",
+      "note_en": "(Vantana1995), submitted; RPC Standards #19 agenda, 22:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "RPC Standards #19 议程",
+      "note": "新增 EIP：不可转让代币标准（Vantana1995）提交；RPC Standards #19 议程 22:57。",
+      "url": "https://ethereum-magicians.org/t/rpc-standards-19-jan-26-2026/27508",
+      "date": "2026-01-19",
+      "title_en": "RPC Standards #19 agenda",
+      "note_en": "Add EIP: Non-Transferable Token Standard (Vantana1995), submitted; RPC Standards #19 agenda, 22:57.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "_SEAL_Org：本月框架聚焦受限钱包，关键交易多发生在无法物理隔离的热钱包",
+      "note": "22:04；donnoh_eth：原生 Rollup（EIP-8079）旨在大幅简化 EVM 等价 Rollup 02:27；VitalikButerin：我们需要更多、更好的 DAO 14:03。",
+      "url": "https://x.com/_SEAL_Org/status/2013266425394147379",
+      "date": "2026-01-19",
+      "title_en": "_SEAL_Org: this month's framework spotlight is encumbered wallets, since critical transactions happen in hot wallets that cannot be air gapped",
+      "note_en": "22:04; donnoh_eth: native rollups (EIP-8079) aim to massively simplify EVM equivalent rollups, 02:27; VitalikButerin: we need more and better DAOs, 14:03.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "donnoh_eth：原生 Rollup（EIP-8079）旨在大幅简化 EVM 等价 Rollup",
+      "note": "_SEAL_Org：本月框架聚焦受限钱包，关键交易多发生在无法物理隔离的热钱包 22:04；donnoh_eth：原生 Rollup（EIP-8079）旨在大幅简化 EVM 等价 Rollup 02:27；VitalikButerin：我们需要更多、更好的 DAO 14:03。",
+      "url": "https://x.com/donnoh_eth/status/2012970141374349341",
+      "date": "2026-01-19",
+      "title_en": "donnoh_eth: native rollups (EIP-8079) aim to massively simplify EVM equivalent rollups",
+      "note_en": "_SEAL_Org: this month's framework spotlight is encumbered wallets, since critical transactions happen in hot wallets that cannot be air gapped, 22:04; donnoh_eth: native rollups (EIP-8079) aim to massively simplify EVM equivalent rollups, 02:27; VitalikButerin: we need more and better DAOs, 14:03.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：我们需要更多、更好的 DAO",
+      "note": "_SEAL_Org：本月框架聚焦受限钱包，关键交易多发生在无法物理隔离的热钱包 22:04；donnoh_eth：原生 Rollup（EIP-8079）旨在大幅简化 EVM 等价 Rollup 02:27；VitalikButerin：我们需要更多、更好的 DAO 14:03。",
+      "url": "https://x.com/VitalikButerin/status/2013145235447042067",
+      "date": "2026-01-19",
+      "title_en": "VitalikButerin: we need more and better DAOs",
+      "note_en": "_SEAL_Org: this month's framework spotlight is encumbered wallets, since critical transactions happen in hot wallets that cannot be air gapped, 22:04; donnoh_eth: native rollups (EIP-8079) aim to massively simplify EVM equivalent rollups, 02:27; VitalikButerin: we need more and better DAOs, 14:03.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11104",
+    "credit": "GitHub, ethereum/EIPs PR 11104",
+    "local_path": "assets/2026-01-19.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR 11104"
+  },
+  "keywords_en": [
+    "ACDT #66 finalizes Glamsterdam CFI scope including EIP-8037",
+    "bal-devnet-2 adds four non headliner EIPs",
+    "gas should reflect proving cost in the zkEVM era",
+    "a committee based FOCIL EIP",
+    "EIP-7778 adds a gas_spent receipt field",
+    "SEAL's encumbered wallet framework",
+    "native rollups EIP-8079"
+  ],
+  "summary_en": "ACDT #66: bal-devnet-2 targets late January and adds the SLOTNUM and SWAPN family opcodes, ETH transfer logs and refund free block gas accounting; Glamsterdam CFI scope was finalized, including the EIP-8037 state creation gas increase, with app developer feedback needed on dynamic costs. ladislaus0x explained how gas will reflect proving cost in the zkEVM era to prevent DoS."
+}

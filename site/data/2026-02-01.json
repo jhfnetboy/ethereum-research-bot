@@ -1,0 +1,87 @@
+{
+  "date": "2026-02-01",
+  "keywords": [
+    "EIP-7928 为 BAL 设条目上限",
+    "Vitalik 谈创作者币",
+    "智能凭证解析接口 ERC",
+    "ERC-8109 移除 upgradeDiamonds",
+    "STARK 与后量子"
+  ],
+  "summary": "周日较安静。nerolation 提交为 BAL 可包含的条目设上限，以防 DoS。VitalikButerin 发文谈他会如何设计创作者币。",
+  "items": [
+    {
+      "topic": "协议：BAL 防 DoS",
+      "title": "EIP-7928：限制 BAL 最大条目数",
+      "note": "（nerolation）提交：为 BAL 实际可包含的内容设上限有助于防 DoS，执行规范同步修改。",
+      "url": "https://github.com/ethereum/EIPs/pull/11234",
+      "date": "2026-02-01",
+      "title_en": "EIP-7928: cap max items in BAL",
+      "note_en": "(nerolation), submitted: capping what a BAL can realistically contain helps against DoS, with a matching execution spec change.",
+      "topic_en": "Protocol: BAL DoS limits"
+    },
+    {
+      "topic": "ERC",
+      "title": "新增 ERC：智能凭证解析接口",
+      "note": "（nxt3d）提交；ERC-8109：移除 upgradeDiamonds（mudgen）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1504",
+      "date": "2026-02-01",
+      "title_en": "Add ERC: Smart Credential Resolution Interface",
+      "note_en": "(nxt3d), submitted; ERC-8109: remove the upgradeDiamonds function (mudgen), submitted and merged.",
+      "topic_en": "ERCs"
+    },
+    {
+      "topic": "ERC",
+      "title": "ERC-8109：移除 upgradeDiamonds",
+      "note": "新增 ERC：智能凭证解析接口（nxt3d）提交；ERC-8109：移除 upgradeDiamonds（mudgen）提交并合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1505",
+      "date": "2026-02-01",
+      "title_en": "ERC-8109: remove the upgradeDiamonds function",
+      "note_en": "Add ERC: Smart Credential Resolution Interface (nxt3d), submitted; ERC-8109: remove the upgradeDiamonds function (mudgen), submitted and merged.",
+      "topic_en": "ERCs"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7612 被标记 stagnant",
+      "note": "（eth-bot）合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11101",
+      "date": "2026-02-01",
+      "title_en": "EIP-7612 flagged stagnant",
+      "note_en": "(eth-bot), merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：我会怎样做创作者币，回顾十年内容激励尝试",
+      "note": "20:42；EliBenSasson：STARK 早在隐私与后量子成为热门话题前就已是答案 22:12。",
+      "url": "https://x.com/VitalikButerin/status/2017956762347835488",
+      "date": "2026-02-01",
+      "title_en": "VitalikButerin: how I would do creator coins, after ten years of content incentive attempts",
+      "note_en": "20:42; EliBenSasson: STARKs were the answer to privacy and post-quantum security before those topics were popular, 22:12.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "EliBenSasson：STARK 早在隐私与后量子成为热门话题前就已是答案",
+      "note": "VitalikButerin：我会怎样做创作者币，回顾十年内容激励尝试 20:42；EliBenSasson：STARK 早在隐私与后量子成为热门话题前就已是答案 22:12。",
+      "url": "https://x.com/EliBenSasson/status/2017979347429106065",
+      "date": "2026-02-01",
+      "title_en": "EliBenSasson: STARKs were the answer to privacy and post-quantum security before those topics were popular",
+      "note_en": "VitalikButerin: how I would do creator coins, after ten years of content incentive attempts, 20:42; EliBenSasson: STARKs were the answer to privacy and post-quantum security before those topics were popular, 22:12.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://github.com/ethereum/EIPs/pull/11234",
+    "credit": "GitHub, ethereum/EIPs PR 11234",
+    "local_path": "assets/2026-02-01.jpg",
+    "credit_en": "GitHub, ethereum/EIPs PR 11234"
+  },
+  "keywords_en": [
+    "EIP-7928 caps BAL items",
+    "Vitalik on creator coins",
+    "a smart credential resolution interface ERC",
+    "ERC-8109 drops upgradeDiamonds",
+    "STARKs and post-quantum"
+  ],
+  "summary_en": "A quiet Sunday. nerolation submitted a cap on how many items a BAL can contain, to limit DoS. VitalikButerin wrote on how he would design creator coins."
+}

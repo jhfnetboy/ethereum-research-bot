@@ -1,0 +1,142 @@
+{
+  "date": "2026-02-02",
+  "keywords": [
+    "从 Tornado Cash 地址存入 69",
+    "420 ETH 质押",
+    "实时证明实现 Rollup 同步可组合",
+    "提前拒绝恶意 BAL",
+    "ACDT #68 epbs-devnet-0 目标 2 月底",
+    "3",
+    "600 万 ETH 质押",
+    "ERC-8143 智能凭证"
+  ],
+  "summary": "pcaversaccio 从自己的 Tornado Cash 地址直接向信标链存款合约存入 69,420 ETH，示范隐私工具的正当用途。jbaylina 发文论述基于实时证明的 Rollup 同步可组合。Nero_eth 提出提前拒绝恶意 BAL 的方法。ACDT #68 表示 epbs-devnet-0 仍以 2 月底为目标。",
+  "items": [
+    {
+      "topic": "隐私：Tornado Cash 的正当用途",
+      "title": "pcaversaccio：从 Tornado Cash 地址直接向信标链存款合约存入 69,420 ETH，今后的提款与资助交易都将带有 Tornado 来源，这是正当使用的先例",
+      "note": "05:56。",
+      "url": "https://x.com/pcaversaccio/status/2018096078936318021",
+      "date": "2026-02-02",
+      "title_en": "pcaversaccio: deposited 69,420 ETH into the beacon deposit contract straight from a Tornado Cash address, so every future withdrawal and grant carries Tornado provenance, a precedent for good use",
+      "note_en": "05:56.",
+      "topic_en": "Privacy: legitimate Tornado Cash use"
+    },
+    {
+      "topic": "Rollup 与 BAL",
+      "title": "ethresear.ch：通过实时证明实现 Rollup 之间的同步可组合",
+      "note": "（jbaylina）14:55：基于 Rollup 无特权排序器，任何人都可提议区块，配合实时证明可在同一槽内跨 Rollup 组合调用。",
+      "url": "https://ethresear.ch/t/synchronous-composability-between-rollups-via-realtime-proving/23998",
+      "date": "2026-02-02",
+      "title_en": "ethresear.ch: Synchronous Composability Between Rollups via Realtime Proving",
+      "note_en": "(jbaylina), 14:55: based rollups have no privileged sequencer, so anyone can propose blocks, and with realtime proving calls can compose across rollups within one slot.",
+      "topic_en": "Rollups and BALs"
+    },
+    {
+      "topic": "Rollup 与 BAL",
+      "title": "ethresear.ch：提前拒绝恶意 BAL",
+      "note": "（Nero_eth）13:23：EIP-7928 要求 builder 声明区块执行访问的全部状态位置，文章讨论如何在执行前识别并拒绝虚报的 BAL。",
+      "url": "https://ethresear.ch/t/early-rejection-of-adversarial-bals/23995",
+      "date": "2026-02-02",
+      "title_en": "ethresear.ch: Early Rejection of Adversarial BALs",
+      "note_en": "(Nero_eth), 13:23: EIP-7928 requires builders to declare all state locations a block touches, and the post covers spotting and rejecting false BALs before execution.",
+      "topic_en": "Rollups and BALs"
+    },
+    {
+      "topic": "会议：ACDT #68",
+      "title": "ACDT #68",
+      "note": "21:00，据 Ethereal news #10：EIP-7732 ePBS 的 epbs-devnet-0 仍以 2 月底为目标，基于共识规范 v1.7.0-alpha.2 子集。",
+      "url": "https://forkcast.org/calls/acdt/068/",
+      "date": "2026-02-02",
+      "title_en": "ACDT #68",
+      "note_en": "21:00, per Ethereal news #10: EIP-7732 ePBS epbs-devnet-0 still targets late February, based on a subset of consensus spec v1.7.0-alpha.2.",
+      "topic_en": "Calls: ACDT #68"
+    },
+    {
+      "topic": "会议：ACDT #68",
+      "title": "Ethereal news #10",
+      "note": "ACDT #68 21:00，据 Ethereal news #10：EIP-7732 ePBS 的 epbs-devnet-0 仍以 2 月底为目标，基于共识规范 v1.7.0-alpha.2 子集。",
+      "url": "https://ethereal.news/ethereal-news-weekly-10/",
+      "date": "2026-02-02",
+      "title_en": "Ethereal news #10",
+      "note_en": "ACDT #68, 21:00, per Ethereal news #10: EIP-7732 ePBS epbs-devnet-0 still targets late February, based on a subset of consensus spec v1.7.0-alpha.2.",
+      "topic_en": "Calls: ACDT #68"
+    },
+    {
+      "topic": "会议：ACDT #68",
+      "title": "epbs-devnet-0",
+      "note": "ACDT #68 21:00，据 Ethereal news #10：EIP-7732 ePBS 的 epbs-devnet-0 仍以 2 月底为目标，基于共识规范 v1.7.0-alpha.2 子集。",
+      "url": "https://notes.ethereum.org/@ethpandaops/epbs-devnet-0",
+      "date": "2026-02-02",
+      "title_en": "epbs-devnet-0",
+      "note_en": "ACDT #68, 21:00, per Ethereal news #10: EIP-7732 ePBS epbs-devnet-0 still targets late February, based on a subset of consensus spec v1.7.0-alpha.2.",
+      "topic_en": "Calls: ACDT #68"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7828：重复项与可选校验和写法",
+      "note": "（0xrcinus）提交并合并；ERC-8143：智能凭证统一解析接口 12:06；Trustless Log Index 专场 #2 议程 09:16。",
+      "url": "https://github.com/ethereum/ERCs/pull/1507",
+      "date": "2026-02-02",
+      "title_en": "ERC-7828: duplication and optional checksum notation",
+      "note_en": "(0xrcinus), submitted and merged; ERC-8143: Smart Credentials, uniform credential resolution interface, 12:06; Trustless Log Index breakout #2 agenda, 09:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8143：智能凭证统一解析接口",
+      "note": "ERC-7828：重复项与可选校验和写法（0xrcinus）提交并合并；ERC-8143：智能凭证统一解析接口 12:06；Trustless Log Index 专场 #2 议程 09:16。",
+      "url": "https://ethereum-magicians.org/t/erc-8143-smart-credentials-uniform-credential-resolution-interface/27642",
+      "date": "2026-02-02",
+      "title_en": "ERC-8143: Smart Credentials, uniform credential resolution interface",
+      "note_en": "ERC-7828: duplication and optional checksum notation (0xrcinus), submitted and merged; ERC-8143: Smart Credentials, uniform credential resolution interface, 12:06; Trustless Log Index breakout #2 agenda, 09:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trustless Log Index 专场 #2 议程",
+      "note": "ERC-7828：重复项与可选校验和写法（0xrcinus）提交并合并；ERC-8143：智能凭证统一解析接口 12:06；Trustless Log Index 专场 #2 议程 09:16。",
+      "url": "https://ethereum-magicians.org/t/trustless-log-index-breakout-2-feb-3-2026/27639",
+      "date": "2026-02-02",
+      "title_en": "Trustless Log Index breakout #2 agenda",
+      "note_en": "ERC-7828: duplication and optional checksum notation (0xrcinus), submitted and merged; ERC-8143: Smart Credentials, uniform credential resolution interface, 12:06; Trustless Log Index breakout #2 agenda, 09:16.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "terencechain：3,600 万 ETH 质押，约 800 亿美元经济安全，验证者参与率超 99%，激活队列约 400 万 ETH",
+      "note": "09:14；VitalikButerin：链上机制设计的未来大多符合同一模式 13:21。",
+      "url": "https://x.com/terencechain/status/2018145862782996787",
+      "date": "2026-02-02",
+      "title_en": "terencechain: 36M ETH staked, about $80B of economic security, validator participation above 99%, about 4M ETH in the activation queue",
+      "note_en": "09:14; VitalikButerin: the future of onchain mechanism design mostly fits one pattern, 13:21.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：链上机制设计的未来大多符合同一模式",
+      "note": "terencechain：3,600 万 ETH 质押，约 800 亿美元经济安全，验证者参与率超 99%，激活队列约 400 万 ETH 09:14；VitalikButerin：链上机制设计的未来大多符合同一模式 13:21。",
+      "url": "https://x.com/VitalikButerin/status/2018208031201190294",
+      "date": "2026-02-02",
+      "title_en": "VitalikButerin: the future of onchain mechanism design mostly fits one pattern",
+      "note_en": "Terencechain: 36M ETH staked, about $80B of economic security, validator participation above 99%, about 4M ETH in the activation queue, 09:14; VitalikButerin: the future of onchain mechanism design mostly fits one pattern, 13:21.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/synchronous-composability-between-rollups-via-realtime-proving/23998",
+    "credit": "ethresear.ch, Synchronous Composability Between Rollups via Realtime Proving",
+    "local_path": "assets/2026-02-02.jpg",
+    "credit_en": "ethresear.ch, Synchronous Composability Between Rollups via Realtime Proving"
+  },
+  "keywords_en": [
+    "69",
+    "420 ETH staked straight from a Tornado Cash address",
+    "synchronous rollup composability via realtime proving",
+    "early rejection of adversarial BALs",
+    "ACDT #68 targets epbs-devnet-0 for late February",
+    "36M ETH staked",
+    "ERC-8143 smart credentials"
+  ],
+  "summary_en": "pcaversaccio deposited 69,420 ETH into the beacon deposit contract straight from his Tornado Cash address, showing a legitimate use of privacy tools. jbaylina wrote on synchronous rollup composability via realtime proving. Nero_eth proposed early rejection of adversarial BALs. ACDT #68 kept epbs-devnet-0 targeted for late February."
+}

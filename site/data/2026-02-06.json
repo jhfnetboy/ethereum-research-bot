@@ -1,0 +1,193 @@
+{
+  "date": "2026-02-06",
+  "keywords": [
+    "EIP-8141 frame 交易关闭 EIP-3607 检查",
+    "授权数据计入 EIP-7623 calldata 下限",
+    "Block-in-Blobs EIP 合并",
+    "BPO1 元 EIP 合并",
+    "ZK Agent 支付验证 ERC-8150",
+    "验证者自定义提款阈值 EIP-8148",
+    "EF 万亿美元安全仪表盘",
+    "放弃 L1 内置无状态之争"
+  ],
+  "summary": "Thegaram 提交让 EIP-8141 frame 交易不做 EIP-3607 检查。nerolation 的“授权数据计入 EIP-7623 下限”EIP 合并，EIP-7702 授权列表从此按 calldata 下限计费。kevaundray 的 Block-in-Blobs EIP 合并。EF 上线万亿美元安全仪表盘。jqhc 提交 ZK Agent 支付验证 ERC：Agent 须证明交易符合用户签名的意图才能动用资金。",
+  "items": [
+    {
+      "topic": "原生 AA 与授权计费",
+      "title": "EIP-8141：frame 交易关闭 EIP-3607 检查",
+      "note": "（Thegaram）提交，讨论见 EIP-8141 Magicians 帖。",
+      "url": "https://github.com/ethereum/EIPs/pull/11272",
+      "date": "2026-02-06",
+      "title_en": "EIP-8141: disable the EIP-3607 check for frame transactions",
+      "note_en": "(Thegaram), submitted, with discussion in the EIP-8141 Magicians thread.",
+      "topic_en": "Native AA and authorization pricing"
+    },
+    {
+      "topic": "原生 AA 与授权计费",
+      "title": "EIP-8141 Magicians 帖",
+      "note": "EIP-8141：frame 交易关闭 EIP-3607 检查（Thegaram）提交，讨论见 EIP-8141 Magicians 帖。",
+      "url": "https://ethereum-magicians.org/t/eip-8141-frame-transaction/27617/26",
+      "date": "2026-02-06",
+      "title_en": "EIP-8141 Magicians thread",
+      "note_en": "EIP-8141: disable the EIP-3607 check for frame transactions (Thegaram), submitted, with discussion in the EIP-8141 Magicians thread.",
+      "topic_en": "Native AA and authorization pricing"
+    },
+    {
+      "topic": "原生 AA 与授权计费",
+      "title": "新增 EIP：授权数据计入 EIP-7623 下限",
+      "note": "（nerolation）合并，1 月 22 日提交。",
+      "url": "https://github.com/ethereum/EIPs/pull/11148",
+      "date": "2026-02-06",
+      "title_en": "Add EIP: Add Auth Data to EIP-7623 Floor",
+      "note_en": "(nerolation), merged after submission on January 22.",
+      "topic_en": "Native AA and authorization pricing"
+    },
+    {
+      "topic": "交易：Agent 支付",
+      "title": "新增 ERC：零知识 Agent 支付验证",
+      "note": "（jqhc）提交，ERC-8150 讨论帖 13:51：受 ERC-8004 启发，用户为 Agent 的一批交易签名，Agent 必须提交 ZK 证明其交易与用户签名意图一致，验证通过后资金才会转出。",
+      "url": "https://github.com/ethereum/ERCs/pull/1519",
+      "date": "2026-02-06",
+      "title_en": "Add ERC: Zero-Knowledge Agent Payment Verification",
+      "note_en": "(jqhc), submitted, with the ERC-8150 thread, 13:51: inspired by ERC-8004, users sign off on an agent's batch, and the agent must submit a ZK proof that its transactions match the signed intent before any funds move.",
+      "topic_en": "Transactions: agent payments"
+    },
+    {
+      "topic": "交易：Agent 支付",
+      "title": "ERC-8150 讨论帖",
+      "note": "新增 ERC：零知识 Agent 支付验证（jqhc）提交，ERC-8150 讨论帖 13:51：受 ERC-8004 启发，用户为 Agent 的一批交易签名，Agent 必须提交 ZK 证明其交易与用户签名意图一致，验证通过后资金才会转出。",
+      "url": "https://ethereum-magicians.org/t/erc-8150-zero-knowledge-agent-payment-verification/27665",
+      "date": "2026-02-06",
+      "title_en": "ERC-8150 thread",
+      "note_en": "Add ERC: Zero-Knowledge Agent Payment Verification (jqhc), submitted, with the ERC-8150 thread, 13:51: inspired by ERC-8004, users sign off on an agent's batch, and the agent must submit a ZK proof that its transactions match the signed intent before any funds move.",
+      "topic_en": "Transactions: agent payments"
+    },
+    {
+      "topic": "协议与安全",
+      "title": "新增 EIP：Block-in-Blobs（BiB）",
+      "note": "（kevaundray）合并，1 月 30 日提交；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
+      "url": "https://github.com/ethereum/EIPs/pull/11212",
+      "date": "2026-02-06",
+      "title_en": "Add EIP: Block-in-Blobs (BiB)",
+      "note_en": "(kevaundray), merged after submission on January 30; Add EIP: Hardfork Meta BPO1 (poojaranjan), merged; Magicians: EIP-8148 custom sweep threshold for validators, 16:59: validators with 0x02 or 0x03 compounding credentials can set the balance above which rewards are swept to the withdrawal address.",
+      "topic_en": "Protocol and security"
+    },
+    {
+      "topic": "协议与安全",
+      "title": "新增 EIP：硬分叉元 EIP BPO1",
+      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）合并，1 月 30 日提交；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
+      "url": "https://github.com/ethereum/EIPs/pull/11164",
+      "date": "2026-02-06",
+      "title_en": "Add EIP: Hardfork Meta BPO1",
+      "note_en": "Add EIP: Block-in-Blobs (BiB) (kevaundray), merged after submission on January 30; Add EIP: Hardfork Meta BPO1 (poojaranjan), merged; Magicians: EIP-8148 custom sweep threshold for validators, 16:59: validators with 0x02 or 0x03 compounding credentials can set the balance above which rewards are swept to the withdrawal address.",
+      "topic_en": "Protocol and security"
+    },
+    {
+      "topic": "协议与安全",
+      "title": "Magicians：EIP-8148 验证者自定义提款阈值",
+      "note": "新增 EIP：Block-in-Blobs（BiB）（kevaundray）合并，1 月 30 日提交；新增 EIP：硬分叉元 EIP BPO1（poojaranjan）合并；Magicians：EIP-8148 验证者自定义提款阈值 16:59：0x02、0x03 复利提款凭证的验证者可设定余额超过多少才把奖励划到提款地址。",
+      "url": "https://ethereum-magicians.org/t/eip-8148-custom-sweep-threshold-for-validators/27669",
+      "date": "2026-02-06",
+      "title_en": "Magicians: EIP-8148 custom sweep threshold for validators",
+      "note_en": "Add EIP: Block-in-Blobs (BiB) (kevaundray), merged after submission on January 30; Add EIP: Hardfork Meta BPO1 (poojaranjan), merged; Magicians: EIP-8148 custom sweep threshold for validators, 16:59: validators with 0x02 or 0x03 compounding credentials can set the balance above which rewards are swept to the withdrawal address.",
+      "topic_en": "Protocol and security"
+    },
+    {
+      "topic": "协议与安全",
+      "title": "ethereumfndn：EF 上线万亿美元安全仪表盘，全面展示生态安全状况",
+      "note": "01:50。",
+      "url": "https://x.com/ethereumfndn/status/2019483909332107632",
+      "date": "2026-02-06",
+      "title_en": "ethereumfndn: the EF launched the One Trillion Dollar Security dashboard, a full view of ecosystem security",
+      "note_en": "01:50.",
+      "topic_en": "Protocol and security"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8037：更新遗留旧值",
+      "note": "（fradamt）提交并合并；EIP-8051：定义 ML-DSA beta 范数界（yyhrnk）合并；ethresear.ch：RLNC 的线性同态签名 22:11；EIP-8149：多点 KZG 求值预编译 18:33。",
+      "url": "https://github.com/ethereum/EIPs/pull/11271",
+      "date": "2026-02-06",
+      "title_en": "EIP-8037: update leftover old value",
+      "note_en": "(fradamt), submitted and merged; EIP-8051: define the ML-DSA beta norm bound (yyhrnk), merged; ethresear.ch: linearly homomorphic signatures for RLNC, 22:11; EIP-8149: Multi KZG Point Evaluation Precompile, 18:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8051：定义 ML-DSA beta 范数界",
+      "note": "EIP-8037：更新遗留旧值（fradamt）提交并合并；EIP-8051：定义 ML-DSA beta 范数界（yyhrnk）合并；ethresear.ch：RLNC 的线性同态签名 22:11；EIP-8149：多点 KZG 求值预编译 18:33。",
+      "url": "https://github.com/ethereum/EIPs/pull/11040",
+      "date": "2026-02-06",
+      "title_en": "EIP-8051: define the ML-DSA beta norm bound",
+      "note_en": "EIP-8037: update leftover old value (fradamt), submitted and merged; EIP-8051: define the ML-DSA beta norm bound (yyhrnk), merged; ethresear.ch: linearly homomorphic signatures for RLNC, 22:11; EIP-8149: Multi KZG Point Evaluation Precompile, 18:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：RLNC 的线性同态签名",
+      "note": "EIP-8037：更新遗留旧值（fradamt）提交并合并；EIP-8051：定义 ML-DSA beta 范数界（yyhrnk）合并；ethresear.ch：RLNC 的线性同态签名 22:11；EIP-8149：多点 KZG 求值预编译 18:33。",
+      "url": "https://ethresear.ch/t/linearly-homomorphic-signatures-for-rlnc/24072",
+      "date": "2026-02-06",
+      "title_en": "ethresear.ch: linearly homomorphic signatures for RLNC",
+      "note_en": "EIP-8037: update leftover old value (fradamt), submitted and merged; EIP-8051: define the ML-DSA beta norm bound (yyhrnk), merged; ethresear.ch: linearly homomorphic signatures for RLNC, 22:11; EIP-8149: Multi KZG Point Evaluation Precompile, 18:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8149：多点 KZG 求值预编译",
+      "note": "EIP-8037：更新遗留旧值（fradamt）提交并合并；EIP-8051：定义 ML-DSA beta 范数界（yyhrnk）合并；ethresear.ch：RLNC 的线性同态签名 22:11；EIP-8149：多点 KZG 求值预编译 18:33。",
+      "url": "https://ethereum-magicians.org/t/eip-8149-multi-kzg-point-evaluation-precompile/27671",
+      "date": "2026-02-06",
+      "title_en": "EIP-8149: Multi KZG Point Evaluation Precompile",
+      "note_en": "EIP-8037: update leftover old value (fradamt), submitted and merged; EIP-8051: define the ML-DSA beta norm bound (yyhrnk), merged; ethresear.ch: linearly homomorphic signatures for RLNC, 22:11; EIP-8149: Multi KZG Point Evaluation Precompile, 18:33.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tkstanczak：作为核心开发者发问，为何不放弃复杂的 L1 内置无状态方案，承认 L2 就是状态扩容的答案",
+      "note": "14:28；gballet：将在 ETHCC 戛纳举办 Stateless Summit 16:22；binji_x：市场上的量子恐惧 03:21。",
+      "url": "https://x.com/tkstanczak/status/2019674509390016838",
+      "date": "2026-02-06",
+      "title_en": "tkstanczak: as a core dev, why not drop the complex built-in L1 stateless effort and accept L2s as the state scaling answer",
+      "note_en": "14:28; gballet: a Stateless Summit is coming at ETHCC in Cannes, 16:22; binji_x: the quantum fear moving through markets, 03:21.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gballet：将在 ETHCC 戛纳举办 Stateless Summit",
+      "note": "tkstanczak：作为核心开发者发问，为何不放弃复杂的 L1 内置无状态方案，承认 L2 就是状态扩容的答案 14:28；gballet：将在 ETHCC 戛纳举办 Stateless Summit 16:22；binji_x：市场上的量子恐惧 03:21。",
+      "url": "https://x.com/gballet/status/2019703358140112948",
+      "date": "2026-02-06",
+      "title_en": "gballet: a Stateless Summit is coming at ETHCC in Cannes",
+      "note_en": "Tkstanczak: as a core dev, why not drop the complex built-in L1 stateless effort and accept L2s as the state scaling answer, 14:28; gballet: a Stateless Summit is coming at ETHCC in Cannes, 16:22; binji_x: the quantum fear moving through markets, 03:21.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：市场上的量子恐惧",
+      "note": "tkstanczak：作为核心开发者发问，为何不放弃复杂的 L1 内置无状态方案，承认 L2 就是状态扩容的答案 14:28；gballet：将在 ETHCC 戛纳举办 Stateless Summit 16:22；binji_x：市场上的量子恐惧 03:21。",
+      "url": "https://x.com/binji_x/status/2019506728661135540",
+      "date": "2026-02-06",
+      "title_en": "binji_x: the quantum fear moving through markets",
+      "note_en": "Tkstanczak: as a core dev, why not drop the complex built-in L1 stateless effort and accept L2s as the state scaling answer, 14:28; gballet: a Stateless Summit is coming at ETHCC in Cannes, 16:22; binji_x: the quantum fear moving through markets, 03:21.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/eip-8148-custom-sweep-threshold-for-validators/27669",
+    "credit": "Ethereum Magicians, EIP-8148: Custom sweep threshold for validators",
+    "local_path": "assets/2026-02-06.jpg",
+    "credit_en": "Ethereum Magicians, EIP-8148: Custom sweep threshold for validators"
+  },
+  "keywords_en": [
+    "EIP-8141 frame transactions skip the EIP-3607 check",
+    "authorization data counted in the EIP-7623 calldata floor",
+    "Block-in-Blobs EIP merged",
+    "BPO1 meta EIP merged",
+    "ZK agent payment verification ERC-8150",
+    "custom validator sweep thresholds EIP-8148",
+    "the EF trillion dollar security dashboard",
+    "a debate over dropping built-in L1 statelessness"
+  ],
+  "summary_en": "Thegaram submitted skipping the EIP-3607 check for EIP-8141 frame transactions. nerolation's EIP adding authorization data to the EIP-7623 floor merged, so EIP-7702 authorization lists now count toward the calldata floor. kevaundray's Block-in-Blobs EIP merged. The EF launched the Trillion Dollar Security dashboard. jqhc submitted a ZK agent payment verification ERC where agents must prove transactions match the user's signed intent before funds move."
+}

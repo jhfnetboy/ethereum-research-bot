@@ -1,0 +1,141 @@
+{
+  "date": "2026-01-14",
+  "keywords": [
+    "EIP-8037 的双资源计量 gas 方程",
+    "EIP-7907 数据分析",
+    "EIP-8070 依 ACDC #172 列为 CFI",
+    "临时合约存储 EIP",
+    "zkEVM 安全综述",
+    "Vitalik 回顾 2014 年愿景",
+    "ERC-8004 改回 Draft"
+  ],
+  "summary": "aelowsson 为 EIP-8037 提出双资源计量 gas 方程，回应提高状态创建成本可能挤占常规 gas、妨碍扩容的担忧。nixorokish 依 ACDC #172 的决定把 EIP-8070 从 PFI 改为 CFI 并合并。weiihann 提交临时合约存储 EIP。",
+  "items": [
+    {
+      "topic": "Gas：EIP-8037 的计量",
+      "title": "ethresear.ch：EIP-8037 的双资源计量 gas 方程",
+      "note": "（aelowsson）03:49：EIP-8037 统一并提高状态创建 gas，担忧在于用户把更多 gas limit 花在状态创建上会挤占常规使用，文章给出把两种资源分开计量的方程。",
+      "url": "https://ethresear.ch/t/two-resource-metered-gas-equations-for-eip-8037/23849",
+      "date": "2026-01-14",
+      "title_en": "ethresear.ch: Two-resource metered-gas equations for EIP-8037",
+      "note_en": "(aelowsson), 03:49: EIP-8037 harmonizes and raises state creation gas, and the concern is that users spending more of the gas limit on state creation crowd out regular use, so the post gives equations that meter the two resources separately.",
+      "topic_en": "Gas: metering EIP-8037"
+    },
+    {
+      "topic": "Gas：EIP-8037 的计量",
+      "title": "ethresear.ch：EIP-7907 的数据分析",
+      "note": "06:53。",
+      "url": "https://ethresear.ch/t/data-driven-analysis-on-eip-7907/23850",
+      "date": "2026-01-14",
+      "title_en": "ethresear.ch: data driven analysis of EIP-7907",
+      "note_en": "06:53.",
+      "topic_en": "Gas: metering EIP-8037"
+    },
+    {
+      "topic": "升级范围与存储",
+      "title": "EIP-7773：依 ACDC #172 决定把 EIP-8070 列为 CFI",
+      "note": "（nixorokish）1 月 13 日提交后合并；新增 EIP：临时合约存储（weiihann）提交；EIP-7778：修正许可并改进措辞（nerolation）1 月 13 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11070",
+      "date": "2026-01-14",
+      "title_en": "EIP-7773: move EIP-8070 to CFI per ACDC #172",
+      "note_en": "(nixorokish), merged after submission on January 13; Add EIP: Temporary Contract Storage (weiihann), submitted; EIP-7778: correct license and improve wording (nerolation), merged after submission on January 13.",
+      "topic_en": "Upgrade scope and storage"
+    },
+    {
+      "topic": "升级范围与存储",
+      "title": "新增 EIP：临时合约存储",
+      "note": "EIP-7773：依 ACDC #172 决定把 EIP-8070 列为 CFI（nixorokish）1 月 13 日提交后合并；新增 EIP：临时合约存储（weiihann）提交；EIP-7778：修正许可并改进措辞（nerolation）1 月 13 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11081",
+      "date": "2026-01-14",
+      "title_en": "Add EIP: Temporary Contract Storage",
+      "note_en": "EIP-7773: move EIP-8070 to CFI per ACDC #172 (nixorokish), merged after submission on January 13; Add EIP: Temporary Contract Storage (weiihann), submitted; EIP-7778: correct license and improve wording (nerolation), merged after submission on January 13.",
+      "topic_en": "Upgrade scope and storage"
+    },
+    {
+      "topic": "升级范围与存储",
+      "title": "EIP-7778：修正许可并改进措辞",
+      "note": "EIP-7773：依 ACDC #172 决定把 EIP-8070 列为 CFI（nixorokish）1 月 13 日提交后合并；新增 EIP：临时合约存储（weiihann）提交；EIP-7778：修正许可并改进措辞（nerolation）1 月 13 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11071",
+      "date": "2026-01-14",
+      "title_en": "EIP-7778: correct license and improve wording",
+      "note_en": "EIP-7773: move EIP-8070 to CFI per ACDC #172 (nixorokish), merged after submission on January 13; Add EIP: Temporary Contract Storage (weiihann), submitted; EIP-7778: correct license and improve wording (nerolation), merged after submission on January 13.",
+      "topic_en": "Upgrade scope and storage"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8004 改回 Draft",
+      "note": "（SamWilsn）提交并合并；EIP-7932 进入 Review（SirSpudlington）提交；新增 ERC：可引用 NFT 版税（richard-620）2025 年 9 月 30 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1470",
+      "date": "2026-01-14",
+      "title_en": "ERC-8004: move to Draft",
+      "note_en": "(SamWilsn), submitted and merged; EIP-7932: move to Review (SirSpudlington), submitted; Add ERC: Referable NFT Royalties (richard-620), merged after submission on September 30, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7932 进入 Review",
+      "note": "ERC-8004 改回 Draft（SamWilsn）提交并合并；EIP-7932 进入 Review（SirSpudlington）提交；新增 ERC：可引用 NFT 版税（richard-620）2025 年 9 月 30 日提交后合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/11079",
+      "date": "2026-01-14",
+      "title_en": "EIP-7932: move to Review",
+      "note_en": "ERC-8004: move to Draft (SamWilsn), submitted and merged; EIP-7932: move to Review (SirSpudlington), submitted; Add ERC: Referable NFT Royalties (richard-620), merged after submission on September 30, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新增 ERC：可引用 NFT 版税",
+      "note": "ERC-8004 改回 Draft（SamWilsn）提交并合并；EIP-7932 进入 Review（SirSpudlington）提交；新增 ERC：可引用 NFT 版税（richard-620）2025 年 9 月 30 日提交后合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/1227",
+      "date": "2026-01-14",
+      "title_en": "Add ERC: Referable NFT Royalties",
+      "note_en": "ERC-8004: move to Draft (SamWilsn), submitted and merged; EIP-7932: move to Review (SirSpudlington), submitted; Add ERC: Referable NFT Royalties (richard-620), merged after submission on September 30, 2025.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "VitalikButerin：2014 年的愿景是无需许可的去中心化应用支撑金融、社交、出行、治理与众筹",
+      "note": "13:32；tcoratger：zkEVM 从业者必读的 zkEVM 安全综述 21:34；fede_intern：ethlambda 快速推进 21:36。",
+      "url": "https://x.com/VitalikButerin/status/2011325527567544393",
+      "date": "2026-01-14",
+      "title_en": "VitalikButerin: the 2014 vision of permissionless decentralized apps for finance, social, ride sharing, governance and crowdfunding",
+      "note_en": "13:32; tcoratger: a must read zkEVM Security Overview, 21:34; fede_intern: ethlambda is moving fast, 21:36.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "tcoratger：zkEVM 从业者必读的 zkEVM 安全综述",
+      "note": "VitalikButerin：2014 年的愿景是无需许可的去中心化应用支撑金融、社交、出行、治理与众筹 13:32；tcoratger：zkEVM 从业者必读的 zkEVM 安全综述 21:34；fede_intern：ethlambda 快速推进 21:36。",
+      "url": "https://x.com/tcoratger/status/2011446844061298884",
+      "date": "2026-01-14",
+      "title_en": "tcoratger: a must read zkEVM Security Overview",
+      "note_en": "VitalikButerin: the 2014 vision of permissionless decentralized apps for finance, social, ride sharing, governance and crowdfunding, 13:32; tcoratger: a must read zkEVM Security Overview, 21:34; fede_intern: ethlambda is moving fast, 21:36.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "fede_intern：ethlambda 快速推进",
+      "note": "VitalikButerin：2014 年的愿景是无需许可的去中心化应用支撑金融、社交、出行、治理与众筹 13:32；tcoratger：zkEVM 从业者必读的 zkEVM 安全综述 21:34；fede_intern：ethlambda 快速推进 21:36。",
+      "url": "https://x.com/fede_intern/status/2011447216310038612",
+      "date": "2026-01-14",
+      "title_en": "fede_intern: ethlambda is moving fast",
+      "note_en": "VitalikButerin: the 2014 vision of permissionless decentralized apps for finance, social, ride sharing, governance and crowdfunding, 13:32; tcoratger: a must read zkEVM Security Overview, 21:34; fede_intern: ethlambda is moving fast, 21:36.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/two-resource-metered-gas-equations-for-eip-8037/23849",
+    "credit": "ethresear.ch, Two-resource metered-gas equations for EIP-8037",
+    "local_path": "assets/2026-01-14.jpg",
+    "credit_en": "ethresear.ch, Two-resource metered-gas equations for EIP-8037"
+  },
+  "keywords_en": [
+    "Two resource metered gas equations for EIP-8037",
+    "data driven analysis of EIP-7907",
+    "EIP-8070 moved to CFI per ACDC #172",
+    "a temporary contract storage EIP",
+    "a zkEVM security overview",
+    "Vitalik revisits the 2014 vision",
+    "ERC-8004 moved back to Draft"
+  ],
+  "summary_en": "aelowsson proposed two resource metered gas equations for EIP-8037, answering the concern that pricier state creation crowds out regular gas and slows scaling. nixorokish moved EIP-8070 from PFI to CFI per the ACDC #172 decision, merged. weiihann submitted a temporary contract storage EIP."
+}
