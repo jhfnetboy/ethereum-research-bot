@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-12",
+  "keywords": [
+    "pqai27",
+    "后量子",
+    "Hegotá",
+    "Frame Transactions",
+    "EIP-8288"
+  ],
+  "summary": "Ethlabs 在 Ethereum Magicians 发布 pqai27 提案，主张以太坊在 2027 年完成后量子和后 AI 加固，Hegotá 优先 Frames 与后量子账户，FOCIL 让路，Ethlabs 自己撤回 quick slots。今晚 ACDC #191 会简短讨论。账户相关的 EIP-8141、EIP-8250、EIP-8151、EIP-8288 都有新的修订 PR。",
+  "items": [
+    {
+      "topic": "pqai27：Ethlabs 提议 2027 年完成后量子与后 AI 加固",
+      "title": "Ethlabs：An Ethlabs view on post-quantum and post-AI timelines: pqai27",
+      "note": "2026-11-12 03:51 发布于 Magicians。核心主张：以太坊应在 2027 年达到 pqai-ready，即共识层后量子化、每个用户的账户都有后量子迁移路径，同时保持 Glamsterdam 带来的扩容容量；pqai-scaled（后量子交易和 blob 满容量运行）是 2027 年的延伸目标。",
+      "url": "https://ethereum-magicians.org/t/an-ethlabs-view-on-post-quantum-and-post-ai-timelines-pqai27/30351",
+      "date": "2026-11-12",
+      "title_en": "Ethlabs: An Ethlabs view on post-quantum and post-AI timelines: pqai27",
+      "note_en": "Posted on Magicians at 03:51 on 2026-11-12. The core claim is that Ethereum should reach \"pqai-ready\" in 2027: consensus is post-quantum and every user has a post-quantum migration path for their account, while keeping the capacity Glamsterdam delivers. \"pqai-scaled\", with post-quantum transactions and blobs at full capacity, is the stretch goal for 2027.",
+      "topic_en": "pqai27: Ethlabs wants post-quantum and post-AI hardening done in 2027"
+    },
+    {
+      "topic": "pqai27：Ethlabs 提议 2027 年完成后量子与后 AI 加固",
+      "title": "Ethlabs 在 X 上发布 pqai27",
+      "note": "2026-11-12 03:56，说明这是给以太坊治理流程的输入。",
+      "url": "https://x.com/ethlabs_org/status/2120621682889052345",
+      "date": "2026-11-12",
+      "title_en": "Ethlabs announces pqai27 on X",
+      "note_en": "At 03:56 on 2026-11-12, framed as input into Ethereum's governance process.",
+      "topic_en": "pqai27: Ethlabs wants post-quantum and post-AI hardening done in 2027"
+    },
+    {
+      "topic": "pqai27：Ethlabs 提议 2027 年完成后量子与后 AI 加固",
+      "title": "Barnabé：重新排序意味着放弃一些我们珍视的提案",
+      "note": "2026-11-12 04:43，指出后量子工作本身也会带来新的 pq-ready 账户（基于 Frame Transactions）。",
+      "url": "https://x.com/barnabemonnot/status/2120633537464316150",
+      "date": "2026-11-12",
+      "title_en": "Barnabé: reprioritizing means giving up proposals dear to us",
+      "note_en": "At 04:43 on 2026-11-12, noting that the post-quantum work also brings new pq-ready accounts built on Frame Transactions.",
+      "topic_en": "pqai27: Ethlabs wants post-quantum and post-AI hardening done in 2027"
+    },
+    {
+      "topic": "pqai27：Ethlabs 提议 2027 年完成后量子与后 AI 加固",
+      "title": "Caspar 在 ACDC #191 议程中申请讨论 pqai27",
+      "note": "2026-11-12 06:49 留言。",
+      "url": "https://github.com/ethereum/pm/issues/2291",
+      "date": "2026-11-12",
+      "title_en": "Caspar asks to discuss pqai27 on the ACDC #191 agenda",
+      "note_en": "Comment posted at 06:49 on 2026-11-12.",
+      "topic_en": "pqai27: Ethlabs wants post-quantum and post-AI hardening done in 2027"
+    },
+    {
+      "topic": "账户抽象与交易：Frames 生态的 EIP 一夜四改",
+      "title": "EIP-8141 补充：SENDER frame 何时让交易在执行前就无效",
+      "note": "2026-11-12 07:12 提交：只有带 APPROVE_EXECUTION 标志的 frame 能设置 sender_approved，所以前面没有这种 frame 的 SENDER frame 一定失败，builder 和 mempool 可以不执行就丢弃。",
+      "url": "https://github.com/ethereum/EIPs/pull/12656",
+      "date": "2026-11-12",
+      "title_en": "EIP-8141 note: when a SENDER frame makes a transaction invalid before execution",
+      "note_en": "Opened at 07:12 on 2026-11-12. Only a frame flagged APPROVE_EXECUTION can set sender_approved, so a SENDER frame with no such frame before it always fails, and builders and mempools can drop the transaction without executing anything.",
+      "topic_en": "Account abstraction and transactions: four overnight changes across the Frames EIPs"
+    },
+    {
+      "topic": "账户抽象与交易：Frames 生态的 EIP 一夜四改",
+      "title": "EIP-8250 更新：一次性 keyed 交易可通过静态和 mempool 检查",
+      "note": "2026-11-12 07:12 提交：nonce_seq 等于 MAX_NONCE_SEQ 且所选 key 都为 0 时视为可执行，不算 nonce 溢出；重放保护不变。",
+      "url": "https://github.com/ethereum/EIPs/pull/12659",
+      "date": "2026-11-12",
+      "title_en": "EIP-8250 update: single-use keyed transactions pass static and mempool checks",
+      "note_en": "Opened at 07:12 on 2026-11-12. When nonce_seq equals MAX_NONCE_SEQ and every selected key reads zero, the transaction counts as executable rather than a nonce overflow. Replay protection is unchanged.",
+      "topic_en": "Account abstraction and transactions: four overnight changes across the Frames EIPs"
+    },
+    {
+      "topic": "账户抽象与交易：Frames 生态的 EIP 一夜四改",
+      "title": "EIP-8151 更新：为 recovered signer 增加公共 mempool 规则",
+      "note": "2026-11-12 01:20 提交：在 EIP-8151 下 ecRecover 会读取恢复地址的代码，EIP-8141 的验证前缀因此可能依赖第三方账户，这个 PR 补上对应的 mempool 规则。",
+      "url": "https://github.com/ethereum/EIPs/pull/12653",
+      "date": "2026-11-12",
+      "title_en": "EIP-8151 update: public mempool rules for recovered signers",
+      "note_en": "Opened at 01:20 on 2026-11-12. Under EIP-8151, ecRecover reads the recovered address's code, so an EIP-8141 validation prefix can depend on a third-party account. This PR adds the matching mempool rules.",
+      "topic_en": "Account abstraction and transactions: four overnight changes across the Frames EIPs"
+    },
+    {
+      "topic": "账户抽象与交易：Frames 生态的 EIP 一夜四改",
+      "title": "EIP-8288 更新：批量处理通用签名声明",
+      "note": "2026-11-12 04:49 提交：允许一个用户选择的批处理程序为多笔交易、多种签名方案一起出证明；PR 中给出的成本是每个声明 30,000 intrinsic proof-share gas 加 3,000 验证 gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/12654",
+      "date": "2026-11-12",
+      "title_en": "EIP-8288 update: batched generic signature claims",
+      "note_en": "Opened at 04:49 on 2026-11-12. One user-selected batch program can prove claims for several transactions and signature schemes at once. The PR puts the cost at 30,000 intrinsic proof-share gas plus 3,000 verification gas per claim.",
+      "topic_en": "Account abstraction and transactions: four overnight changes across the Frames EIPs"
+    },
+    {
+      "topic": "账户抽象与交易：Frames 生态的 EIP 一夜四改",
+      "title": "EIP-8288 更新：dependency triple 使用 EIP-8141 的 leanSPHINCS scheme id",
+      "note": "2026-11-12 07:12 提交，让同一个 leanSPHINCS 密钥在两个 EIP 里用同一个编号（目前是 0x3）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12657",
+      "date": "2026-11-12",
+      "title_en": "EIP-8288 update: use the EIP-8141 leanSPHINCS scheme id in dependency triples",
+      "note_en": "Opened at 07:12 on 2026-11-12, so one leanSPHINCS key carries the same number (currently 0x3) in both EIPs.",
+      "topic_en": "Account abstraction and transactions: four overnight changes across the Frames EIPs"
+    },
+    {
+      "topic": "账户抽象与交易：Frames 生态的 EIP 一夜四改",
+      "title": "新 EIP 草案：eth/73 证明封装传播",
+      "note": "2026-11-12 04:50 提交，基于 EIP-8288，允许把原始签名直接提交给聚合者，不必先生成 STARK。",
+      "url": "https://github.com/ethereum/EIPs/pull/12655",
+      "date": "2026-11-12",
+      "title_en": "New draft EIP: eth/73 proof wrapper propagation",
+      "note_en": "Opened at 04:50 on 2026-11-12. Building on EIP-8288, it lets raw signatures go straight to aggregators without first producing a STARK.",
+      "topic_en": "Account abstraction and transactions: four overnight changes across the Frames EIPs"
+    },
+    {
+      "topic": "账户抽象与交易：Frames 生态的 EIP 一夜四改",
+      "title": "pm #2295",
+      "note": "11/17 的 Frame Transaction Breakout #8（pm #2295），以及 pqai27 是否让 Frames 的范围变化（提案提到可能有更轻量的 Frames 变体）。",
+      "url": "https://github.com/ethereum/pm/issues/2295",
+      "date": "2026-11-12",
+      "title_en": "pm #2295",
+      "note_en": "Frame Transaction Breakout #8 on 11/17 (pm #2295), and whether pqai27 changes the scope of Frames, since the proposal mentions possible lighter variants.",
+      "topic_en": "Account abstraction and transactions: four overnight changes across the Frames EIPs"
+    },
+    {
+      "topic": "基础设施：BAL 加入 code read，弹性容量的新思路",
+      "title": "新 EIP 草案：Code Reads in Block-Level Access Lists",
+      "note": "2026-11-12 07:12 由 LukaszRozmej 提交：在 EIP-7928 的 AccountChanges 中加入 code_hash，这样 BAL 能列出区块读取的全部区块前状态，无状态客户端或证明者只用区块、BAL 和状态快照就能组装输入，不必先执行区块。对应的 Magicians 讨论帖 于 2026-11-12 07:14 开启。",
+      "url": "https://github.com/ethereum/EIPs/pull/12658",
+      "date": "2026-11-12",
+      "title_en": "New draft EIP: Code Reads in Block-Level Access Lists",
+      "note_en": "Opened by LukaszRozmej at 07:12 on 2026-11-12. It adds a code_hash to EIP-7928's AccountChanges, so the BAL names every piece of pre-block state a block reads and a stateless client or prover can build its input from the block, the BAL and a state snapshot without executing the block. The Magicians discussion thread opened at 07:14 on 2026-11-12.",
+      "topic_en": "Infrastructure: code reads in BAL, and a case for elastic capacity"
+    },
+    {
+      "topic": "基础设施：BAL 加入 code read，弹性容量的新思路",
+      "title": "Magicians 讨论帖",
+      "note": "新 EIP 草案：Code Reads in Block-Level Access Lists 2026-11-12 07:12 由 LukaszRozmej 提交：在 EIP-7928 的 AccountChanges 中加入 code_hash，这样 BAL 能列出区块读取的全部区块前状态，无状态客户端或证明者只用区块、BAL 和状态快照就能组装输入，不必先执行区块。对应的 Magicians 讨论帖 于 2026-11-12 07:14 开启。",
+      "url": "https://ethereum-magicians.org/t/code-reads-in-block-level-access-lists-extension-to-eip-7928/30354",
+      "date": "2026-11-12",
+      "title_en": "Magicians discussion thread",
+      "note_en": "New draft EIP: Code Reads in Block-Level Access Lists Opened by LukaszRozmej at 07:12 on 2026-11-12. It adds a code_hash to EIP-7928's AccountChanges, so the BAL names every piece of pre-block state a block reads and a stateless client or prover can build its input from the block, the BAL and a state snapshot without executing the block. The Magicians discussion thread opened at 07:14 on 2026-11-12.",
+      "topic_en": "Infrastructure: code reads in BAL, and a case for elastic capacity"
+    },
+    {
+      "topic": "基础设施：BAL 加入 code read，弹性容量的新思路",
+      "title": "ethresear.ch：Elastic Ethereum",
+      "note": "2026-11-11 18:40 由 cskiraly 发布的观点帖：主张按测得的资源压力动态调整容量，像 TCP 拥塞控制那样，而不是固定 gas 上限加安全余量。文中引用主网数据称，区块中位数在首次被看到后 0.38 秒到达 95% 的上报节点（99 分位区块为 0.70 秒）。",
+      "url": "https://ethresear.ch/t/elastic-ethereum/26236",
+      "date": "2026-11-11",
+      "title_en": "ethresear.ch: Elastic Ethereum",
+      "note_en": "An opinion post by cskiraly at 18:40 on 2026-11-11. It argues for adjusting capacity to measured resource pressure, the way TCP congestion control does, instead of a fixed gas limit plus a safety margin. Citing mainnet data, it says the median block reaches 95% of reporting nodes 0.38 seconds after it is first seen (0.70 seconds for the 99th percentile block).",
+      "topic_en": "Infrastructure: code reads in BAL, and a case for elastic capacity"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 收录 Tacit Pay",
+      "note": "2026-11-11 21:38：浏览器内生成证明的私密 ETH 支付，隐藏发送方、接收方和金额；合约不可升级、不可暂停，用户可独立提款。",
+      "url": "https://x.com/ethbeat_org/status/2120526546436010384",
+      "date": "2026-11-11",
+      "title_en": "ETHBEAT lists Tacit Pay",
+      "note_en": "At 21:38 on 2026-11-11: private ETH payments with proofs generated in the browser, hiding sender, recipient and amount. The contracts cannot be upgraded or paused, and users can withdraw on their own.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT：Tacit Pay 的 trusted setup 评级为红色",
+      "note": "2026-11-11 21:38：仪式记录了 176 次贡献，但没有公开贡献，且同一个 key 可以重复贡献；页面显示累计 221 笔存款、30 天 96 笔、只有 1 个活跃 relayer。使用前要知道匿名集很小。",
+      "url": "https://x.com/ethbeat_org/status/2120526562139197671",
+      "date": "2026-11-11",
+      "title_en": "ETHBEAT rates Tacit Pay's trusted setup red",
+      "note_en": "At 21:38 on 2026-11-11: the ceremony recorded 176 contributions, but none were public and one key could contribute repeatedly. The page shows 221 deposits in total, 96 over 30 days and a single active relayer. Know that the anonymity set is small before you use it.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8282 规范与 sys-asm 实现同步",
+      "note": "2026-11-12 04:09 合并，接续前几天形式化验证发现的规范差异。",
+      "url": "https://github.com/ethereum/EIPs/pull/12120",
+      "date": "2026-11-12",
+      "title_en": "EIP-8282 spec synced with the sys-asm implementation",
+      "note_en": "Merged at 04:09 on 2026-11-12, following the spec mismatch that formal verification found earlier this week.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "jtraglia 申请在 ACDC #191 讨论 consensus-specs #5770（Glamsterdam）",
+      "note": "2026-11-11 22:36：新增使用 RLP 的 compute_execution_block_hash 检查。",
+      "url": "https://github.com/ethereum/pm/issues/2291",
+      "date": "2026-11-11",
+      "title_en": "jtraglia asks to discuss consensus-specs #5770 (Glamsterdam) at ACDC #191",
+      "note_en": "At 22:36 on 2026-11-11: it adds a compute_execution_block_hash check that uses RLP.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7730 更新：两个以上数组字段时必须指定 iteration",
+      "note": "2026-11-11 20:04 提交，影响钱包的清晰签名（clear signing）显示格式。",
+      "url": "https://github.com/ethereum/ERCs/pull/2165",
+      "date": "2026-11-11",
+      "title_en": "ERC-7730 update: require iteration for two or more array fields",
+      "note_en": "Opened at 20:04 on 2026-11-11. It affects how wallets display clear signing formats.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8446：CCIP-Read 的跨链客户端网关",
+      "note": "2026-11-12 01:17 开启讨论。",
+      "url": "https://ethereum-magicians.org/t/erc-8446-cross-chain-client-gateway-for-ccip-read/30345",
+      "date": "2026-11-12",
+      "title_en": "ERC-8446: Cross-Chain Client Gateway for CCIP-Read",
+      "note_en": "Discussion opened at 01:17 on 2026-11-12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8493：Onchain URI Scheme",
+      "note": "2026-11-12 01:03 开启讨论。",
+      "url": "https://ethereum-magicians.org/t/erc-8493-onchain-uri-scheme/30344",
+      "date": "2026-11-12",
+      "title_en": "ERC-8493: Onchain URI Scheme",
+      "note_en": "Discussion opened at 01:03 on 2026-11-12.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Seam，在 Base 上用 EIP-152 验证 Zcash 区块头",
+      "note": "2026-11-12 03:55：文中称每个区块头约 626k gas，其中 Equihash 占 361k。",
+      "url": "https://ethresear.ch/t/seam-verifying-zcash-headers-on-base-with-eip-152-and-proving-shielded-payments-without-linking-the-chains/26239",
+      "date": "2026-11-12",
+      "title_en": "ethresear.ch: Seam, verifying Zcash headers on Base with EIP-152",
+      "note_en": "At 03:55 on 2026-11-12. The post says each header costs about 626k gas, 361k of it for Equihash.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Ryan Berckmans 支持 pqai27",
+      "note": "2026-11-12 04:25，把提案概括为“Hegotá headliner 改成 PQ 和 Frames，暂停 FOCIL，PQ 2027 年上线”。",
+      "url": "https://x.com/ryanberckmans/status/2120629084799574240",
+      "date": "2026-11-12",
+      "title_en": "Ryan Berckmans backs pqai27",
+      "note_en": "At 04:25 on 2026-11-12, summing it up as \"make Hegotá's headliners PQ and Frames, pause FOCIL, ship PQ in 2027\".",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Julian Ma：多年的安全与后量子投入即将见效",
+      "note": "2026-11-12 04:34。",
+      "url": "https://x.com/_julianma/status/2120631182941729111",
+      "date": "2026-11-12",
+      "title_en": "Julian Ma: years of security and post-quantum work are about to pay off",
+      "note_en": "At 04:34 on 2026-11-12.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji：这是自 Merge 和 1559 以来，开发者和持币者第一次能为同一件事团结起来",
+      "note": "2026-11-12 05:06。",
+      "url": "https://x.com/binji_x/status/2120639382051070029",
+      "date": "2026-11-12",
+      "title_en": "binji: the first time since the Merge and 1559 that devs and holders can rally behind one thing",
+      "note_en": "At 05:06 on 2026-11-12.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Caspar：pqai 让以太坊加倍押注“中立可靠的信任根”",
+      "note": "2026-11-12 06:07。",
+      "url": "https://x.com/casparschwa/status/2120654624348668271",
+      "date": "2026-11-12",
+      "title_en": "Caspar: pqai lets Ethereum double down on being the neutral, dependable root of trust",
+      "note_en": "At 06:07 on 2026-11-12.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "有用户追问 pqai27 是否需要 240 万验证者排队退出再进入来换密钥",
+      "note": "2026-11-12 04:37，这是社区对验证者迁移可行性的典型疑问。",
+      "url": "https://x.com/pashak17/status/2120632103415005646",
+      "date": "2026-11-12",
+      "title_en": "A user asks whether pqai27 means 2.4 million validators queueing to exit and re-enter to change keys",
+      "note_en": "At 04:37 on 2026-11-12, a typical community question about whether validator migration is feasible.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "lightclient 转发 DeepMind 用 AI 写 Lean 证明验证 Signal 协议的新闻",
+      "note": "2026-11-11 15:45，约 1,700 个赞（读取于 2026-11-12），呼应 pqai27 里“形式化验证加速”的论点；Toni Wahrstätter 回应称难点在于证明后的规范是否等于非正式意图 2026-11-11 23:19。",
+      "url": "https://x.com/lightclients/status/2120437790395801657",
+      "date": "2026-11-11",
+      "title_en": "lightclient shares DeepMind's AI-written Lean proofs verifying the Signal protocol",
+      "note_en": "At 15:45 on 2026-11-11, with about 1,700 likes (read on 2026-11-12), echoing pqai27's point about faster formal verification. Toni Wahrstätter replies that the hard part is whether the proven spec matches the informal intent At 23:19 on 2026-11-11.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Toni Wahrstätter 回应称难点在于证明后的规范是否等于非正式意图",
+      "note": "lightclient 转发 DeepMind 用 AI 写 Lean 证明验证 Signal 协议的新闻 2026-11-11 15:45，约 1,700 个赞（读取于 2026-11-12），呼应 pqai27 里“形式化验证加速”的论点；Toni Wahrstätter 回应称难点在于证明后的规范是否等于非正式意图 2026-11-11 23:19。",
+      "url": "https://x.com/nero_eth/status/2120551930053238821",
+      "date": "2026-11-11",
+      "title_en": "Toni Wahrstätter replies that the hard part is whether the proven spec matches the informal intent",
+      "note_en": "Lightclient shares DeepMind's AI-written Lean proofs verifying the Signal protocol At 15:45 on 2026-11-11, with about 1,700 likes (read on 2026-11-12), echoing pqai27's point about faster formal verification. Toni Wahrstätter replies that the hard part is whether the proven spec matches the informal intent At 23:19 on 2026-11-11.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Magicians 上 ERC-XXXX Protected Accounts for Fungible Tokens 讨论继续",
+      "note": "截至 2026-11-12 共 11 帖，话题是代币层面的账户保护。",
+      "url": "https://ethereum-magicians.org/t/erc-xxxx-protected-accounts-for-fungible-tokens/30297",
+      "date": "2026-11-12",
+      "title_en": "The Magicians thread on ERC-XXXX Protected Accounts for Fungible Tokens keeps going",
+      "note_en": "With 11 posts as of 2026-11-12, focused on account protection at the token level.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/an-ethlabs-view-on-post-quantum-and-post-ai-timelines-pqai27/30351",
+    "credit": "Ethlabs，Ethereum Magicians",
+    "local_path": "assets/2026-11-12.jpg",
+    "credit_en": "Ethlabs, Ethereum Magicians"
+  },
+  "keywords_en": [
+    "pqai27",
+    "post-quantum",
+    "Hegotá",
+    "Frame Transactions",
+    "EIP-8288"
+  ],
+  "summary_en": "Ethlabs posted its pqai27 proposal on Ethereum Magicians, arguing that Ethereum should become post-quantum and post-AI hardened in 2027. Hegotá would prioritize Frames and post-quantum accounts, FOCIL would step aside, and Ethlabs is withdrawing quick slots. It gets a short slot on tonight's ACDC #191, and the account-related EIP-8141, EIP-8250, EIP-8151 and EIP-8288 all picked up new revision PRs."
+}
