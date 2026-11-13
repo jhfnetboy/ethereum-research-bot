@@ -1,0 +1,247 @@
+{
+  "date": "2026-11-13",
+  "keywords": [
+    "ACDC #191",
+    "后量子",
+    "EIP-8483",
+    "EIP-8430",
+    "FOCIL"
+  ],
+  "summary": "ACDC #191 把后量子和后 AI 加固定为首要议题，讨论把紧迫度从 DEFCON 4 提到 2 至 3，EIP-8483（后量子材料注册）获得 Hegotá 的 PFI 状态。FOCIL 和 quick slots 的去留、后量子 Gasper 还是 decoupled consensus 都还没定。账户方向上 EIP-8430（AA 交易类型）调整赞助交易的计费，新草案 EIP-8500 处理 FOCIL 与 Frame 交易的兼容。",
+  "items": [
+    {
+      "topic": "ACDC #191：后量子成为首要议题，Hegotá 范围未定",
+      "title": "ACDC #191 会议纪要",
+      "note": "2026-11-13 00:04 发布（会议于 2026-11-12 21:00 举行，Ben Edgington 首次主持）。纪要写明：会议讨论是否把后量子和后 AI 加固的紧迫度从 DEFCON 4 提到 DEFCON 2 至 3，理由是 AI 数学能力进展快于预期；Hegotá 是否纳入 FOCIL 和 quick slots 有争论；后量子 Gasper 被认为复杂，需要和后量子 decoupled consensus（PQDC）对比评估；EIP-8483 后量子材料注册被接受为 Hegotá 的 PFI。下次 ACDC 定在 11 月 26 日。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-191-november-12-2026/30139",
+      "date": "2026-11-13",
+      "title_en": "ACDC #191 meeting notes",
+      "note_en": "Were posted 2026-11-13 00:04 (the call ran 2026-11-12 21:00, with Ben Edgington chairing for the first time). The notes say the call debated raising the urgency of post-quantum and post-AI hardening from DEFCON 4 to DEFCON 2 or 3, because AI math capabilities are moving faster than expected. Including FOCIL and quick slots in Hegotá was contested. Post-quantum Gasper was seen as complex and needs to be weighed against post-quantum decoupled consensus (PQDC). EIP-8483, post-quantum material registration, was accepted as PFI for Hegotá. The next ACDC is set for November 26.",
+      "topic_en": "ACDC #191: post-quantum moves to the top, Hegotá scope still open"
+    },
+    {
+      "topic": "ACDC #191：后量子成为首要议题，Hegotá 范围未定",
+      "title": "EIP-8483 PR：编辑 jochem-brouwer 建议先合并草案版本",
+      "note": "2026-11-12 22:44 留言。该 EIP 用 EIP-7685 请求类型和预部署合约，让验证者的提款地址为每个验证者登记 32 字节的后量子材料，存入 beacon state，供将来的后量子迁移分叉使用。",
+      "url": "https://github.com/ethereum/EIPs/pull/12609",
+      "date": "2026-11-12",
+      "title_en": "On the EIP-8483 PR, editor jochem-brouwer suggested merging a draft version first",
+      "note_en": "In a comment at 2026-11-12 22:44. The EIP adds an EIP-7685 request type and a predeploy so a validator's withdrawal address can register 32 bytes of post-quantum material per validator in the beacon state, for use by a future post-quantum migration fork.",
+      "topic_en": "ACDC #191: post-quantum moves to the top, Hegotá scope still open"
+    },
+    {
+      "topic": "ACDC #191：后量子成为首要议题，Hegotá 范围未定",
+      "title": "EIP 草案：leanVM 聚合以影子模式与 BLS 并行运行",
+      "note": "2026-11-12 22:38 由 sauliusgrigaitis 发布：验证者同时产生 BLS 签名和后量子哈希签名，共识只认 BLS，leanVM 的聚合和证明只做测量对比；等到 BLS 不再安全时，用紧急硬分叉切到 leanVM。这对应纪要里 saulius 要写的“分阶段上线”提案。",
+      "url": "https://ethereum-magicians.org/t/eip-draft-run-leanvm-aggregation-in-shadow-mode-alongside-bls-until-pq-ai-day/30367",
+      "date": "2026-11-12",
+      "title_en": "Draft EIP: run leanVM aggregation in shadow mode alongside BLS",
+      "note_en": "Posted 2026-11-12 22:38 by sauliusgrigaitis. Validators would produce both a BLS signature and a post-quantum hash-based signature, consensus would rely on BLS alone, and leanVM aggregates and proofs would only be measured and compared. Once BLS is no longer safe, an emergency hard fork would switch over to leanVM. This matches the staged rollout write-up assigned to saulius in the notes.",
+      "topic_en": "ACDC #191: post-quantum moves to the top, Hegotá scope still open"
+    },
+    {
+      "topic": "账户抽象与交易：EIP-8430 改赞助计费，EIP-8500 对接 FOCIL",
+      "title": "EIP-8430（AA Transaction Type）PR 新提交：赞助交易要为 sender 的账户访问付费",
+      "note": "2026-11-13 04:58 推送。EIP-8430 是从 EIP-8130 拆出来的独立 EIP-2718 交易类型，不依赖 Keystore，现有 EOA 用原生 secp256k1 就能用：分阶段批量调用、gas 代付（bound 和 open 两种 payer 模式）、2D nonce 与免 nonce 模式，以及交易内的 EIP-7702 式代码委托。",
+      "url": "https://github.com/ethereum/EIPs/pull/12385",
+      "date": "2026-11-13",
+      "title_en": "A new commit on the EIP-8430 (AA Transaction Type) PR makes sponsored transactions pay for the sender's account access",
+      "note_en": "Pushed 2026-11-13 04:58. EIP-8430 is a standalone EIP-2718 transaction type split out of EIP-8130 with no Keystore dependency. Today's EOAs can use it with native secp256k1: phased call batching, gas sponsorship (bound and open payer modes), 2D nonces and a nonce-free mode, and in-band EIP-7702-style code delegation.",
+      "topic_en": "Account abstraction and transactions: EIP-8430 reprices sponsorship, EIP-8500 connects to FOCIL"
+    },
+    {
+      "topic": "账户抽象与交易：EIP-8430 改赞助计费，EIP-8500 对接 FOCIL",
+      "title": "新 EIP 草案 EIP-8500：Frame 交易的 FOCIL 遗漏见证",
+      "note": "2026-11-13 07:53 由 AnkushinDaniil 提交，建立在 EIP-7805（FOCIL）和 EIP-8369 之上：payload envelope 携带遗漏判定依赖的已签名包含列表，bid 承诺其根；被遗漏的 Frame 交易在一个由 BAL 推导出的检查点判定；每笔和每个包含列表的 gas 上限是必须项，具体数值待测。",
+      "url": "https://github.com/ethereum/EIPs/pull/12663",
+      "date": "2026-11-13",
+      "title_en": "New draft EIP-8500: FOCIL omission witnesses for Frame transactions",
+      "note_en": "Opened 2026-11-13 07:53 by AnkushinDaniil and built on EIP-7805 (FOCIL) and EIP-8369. The payload envelope carries the signed inclusion lists an omission relies on, and the bid commits to their root. An omitted Frame transaction is judged at a check point derived from the BAL. Per-transaction and per-list gas caps are mandatory, with values still to be measured.",
+      "topic_en": "Account abstraction and transactions: EIP-8430 reprices sponsorship, EIP-8500 connects to FOCIL"
+    },
+    {
+      "topic": "账户抽象与交易：EIP-8430 改赞助计费，EIP-8500 对接 FOCIL",
+      "title": "EIP-8288 PR：启用批量 leanSTARK 声明",
+      "note": "在 2026-11-12 16:57 到 2026-11-13 05:52 之间推送了 19 次修订：一个批处理叶子可以为多笔交易各自建立独立声明，重新分组不需要重新签名；应用可以出钱为未来的后量子 passkey 批量证明；每个叶子的声明数上限由基准测试决定。",
+      "url": "https://github.com/ethereum/EIPs/pull/12654",
+      "date": "2026-11-12",
+      "title_en": "The EIP-8288 PR enabling batched leanSTARK claims",
+      "note_en": "Got 19 revisions between 2026-11-12 16:57 and 2026-11-13 05:52. One batch leaf can establish independent claims for multiple transactions, regrouping needs no new signature, applications can fund proving for future post-quantum passkeys, and the claim cap per leaf will be set by benchmarks.",
+      "topic_en": "Account abstraction and transactions: EIP-8430 reprices sponsorship, EIP-8500 connects to FOCIL"
+    },
+    {
+      "topic": "账户抽象与交易：EIP-8430 改赞助计费，EIP-8500 对接 FOCIL",
+      "title": "eth/73 证明封装传播的 EIP 草案 PR 被关闭",
+      "note": "2026-11-12 23:49，未合并。它原本要在 EIP-8437 中加入原始签名直接提交给聚合者的模式。",
+      "url": "https://github.com/ethereum/EIPs/pull/12655",
+      "date": "2026-11-12",
+      "title_en": "The draft EIP PR for eth/73 proof wrapper propagation was closed",
+      "note_en": "At 2026-11-12 23:49 without merging. It would have added a mode to EIP-8437 for submitting raw signatures directly to aggregators.",
+      "topic_en": "Account abstraction and transactions: EIP-8430 reprices sponsorship, EIP-8500 connects to FOCIL"
+    },
+    {
+      "topic": "账户抽象与交易：EIP-8430 改赞助计费，EIP-8500 对接 FOCIL",
+      "title": "pm #2295",
+      "note": "11/17 的 Frame Transaction Breakout #8（pm #2295）。",
+      "url": "https://github.com/ethereum/pm/issues/2295",
+      "date": "2026-11-13",
+      "title_en": "pm #2295",
+      "note_en": "Frame Transaction Breakout #8 on 11/17 (pm #2295).",
+      "topic_en": "Account abstraction and transactions: EIP-8430 reprices sponsorship, EIP-8500 connects to FOCIL"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：More Meters or More Prices? 一维与多维费用机制对比",
+      "note": "2026-11-12 22:28 由 Fei Wu 发布（EF 实习期间完成）：比较 EIP-7999 多维费用市场与 Glamsterdam 后的一维方案；文中称最强的一维基准在区块级需求波动下每块提供 1.519 亿到 1.779 亿执行 gas，状态增长每年 86.0 到 88.1 GiB，低于 120 GiB 的目标。对理解 gas 上限和状态 gas 定价有参考价值。",
+      "url": "https://ethresear.ch/t/more-meters-or-more-prices-one-vs-multi-dimensional-fee-mechanisms-on-ethereum/26244",
+      "date": "2026-11-12",
+      "title_en": "ethresear.ch: More Meters or More Prices? One- vs. multi-dimensional fee mechanisms on Ethereum",
+      "note_en": "Posted 2026-11-12 22:28 by Fei Wu (work done during an EF internship). It compares EIP-7999's multidimensional fee market with the post-Glamsterdam one-dimensional design. The post says the strongest one-dimensional benchmark delivers 151.9M to 177.9M execution gas per block under block-level demand variation, with 86.0 to 88.1 GiB/year of state growth against a 120 GiB target. Useful background on gas limits and state gas pricing.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8426 合并：共享账户授权、链接范围和 EIP-7702 控制证明",
+      "note": "2026-11-13 02:40 合并：补充在同一持有人账户上为每个 token 安装作用域授权（如 session key）时的并发问题和三种处理办法。",
+      "url": "https://github.com/ethereum/ERCs/pull/2169",
+      "date": "2026-11-13",
+      "title_en": "ERC-8426 merged: shared-account authority, link scope and an EIP-7702 control proof",
+      "note_en": "At 2026-11-13 02:40. It documents a race when installing per-token scoped authorities (such as session keys) on one holder account, with three remedies.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-7984 更新：事件触发规则改写到事件规范中",
+      "note": "2026-11-12 19:30 合并，ERC-7984 是机密（加密余额）代币标准，属于隐私方向的应用层标准。",
+      "url": "https://github.com/ethereum/ERCs/pull/2167",
+      "date": "2026-11-12",
+      "title_en": "ERC-7984 update: event emission now defined in the event specs",
+      "note_en": "Merged 2026-11-12 19:30. ERC-7984 is the confidential (encrypted balance) token standard, an app-layer privacy standard.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：2-of-2 MPC 钱包设计讨论",
+      "note": "2026-11-12 16:22 开帖；Zealynx 在 2026-11-13 01:31 回复指出 Lindell17 协议的 CVE-2023-33242 风险，并提醒这类钱包本质是 EOA，一次 EIP-7702 授权（chain_id 为 0 时）就能把账户在所有链上委托出去。用 MPC 钱包的用户要留意签名界面是否显示 7702 授权。",
+      "url": "https://ethereum-magicians.org/t/a-2-of-2-mpc-wallet-with-qr-setup-and-nfc-signing/30364",
+      "date": "2026-11-12",
+      "title_en": "Magicians: a 2-of-2 MPC wallet design",
+      "note_en": "Opened 2026-11-12 16:22. Zealynx replied at 2026-11-13 01:31, flagging the Lindell17 CVE-2023-33242 risk and noting that such a wallet is still an EOA, so a single EIP-7702 authorization (with chain_id 0) can delegate the account on every chain. MPC wallet users should check that their signing screen clearly shows 7702 authorizations.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：Bogotá 之后执行层升级命名讨论",
+      "note": "2026-11-13 07:09 abcoathup 回复，赞成直接跳到 Bangkok，最终由 ACD 决定。",
+      "url": "https://ethereum-magicians.org/t/devcon-city-name-for-execution-layer-upgrade-after-bogota/30195",
+      "date": "2026-11-13",
+      "title_en": "Magicians: naming the execution layer upgrade after Bogotá",
+      "note_en": "Abcoathup replied 2026-11-13 07:09 backing a jump straight to Bangkok. ACD makes the final call.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Thomas Coratger：EthLib 进展",
+      "note": "2026-11-12 21:41：形式化验证组件已覆盖执行、共识、网络和密码学，欢迎贡献。",
+      "url": "https://x.com/tcoratger/status/2120889719546339684",
+      "date": "2026-11-12",
+      "title_en": "Thomas Coratger on EthLib progress",
+      "note_en": "2026-11-12 21:41: formally verified components now span execution, consensus, networking and cryptography, and contributions are welcome.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Toni Wahrstätter 的总结：后量子已成以太坊最大焦点",
+      "note": "2026-11-12 13:20，认为大家基本同意怎么做，剩下的分歧是什么时候、多快。",
+      "url": "https://x.com/nero_eth/status/2120763635072934122",
+      "date": "2026-11-12",
+      "title_en": "Toni Wahrstätter's summary: post-quantum is now Ethereum's biggest focus",
+      "note_en": "2026-11-12 13:20. He thinks people mostly agree on how and are arguing about when and how fast.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "lightclient：2027 年不太可能做到 pqai",
+      "note": "2026-11-12 12:13，认为分叉慢是 100% 在线的代价，除非 ECDSA 被证明确实已经变弱。",
+      "url": "https://x.com/lightclients/status/2120746806996820453",
+      "date": "2026-11-12",
+      "title_en": "lightclient: being pqai in 2027 is unlikely",
+      "note_en": "2026-11-12 12:13. Slow forks are the price of 100% uptime, unless ECDSA is actually shown to be degraded.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "soispoke：2027 年发 4 个分叉不会发生",
+      "note": "2026-11-12 16:22，指 Glamsterdam、Hegotá EL、Hegotá CL 和 I*，主张计划要有野心但可执行。",
+      "url": "https://x.com/soispoke/status/2120809354794303753",
+      "date": "2026-11-12",
+      "title_en": "soispoke: four forks in 2027 is not going to happen",
+      "note_en": "2026-11-12 16:22, meaning Glamsterdam, Hegotá EL, Hegotá CL and I*. Plans should be ambitious but doable.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Francesco：先就优先级达成一致，并严格承担取舍的后果",
+      "note": "2026-11-12 14:18。",
+      "url": "https://x.com/fradamt/status/2120778365082960218",
+      "date": "2026-11-12",
+      "title_en": "Francesco: agree on priorities first, and be strict about the consequences",
+      "note_en": "2026-11-12 14:18.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：核心开发者已经排定 Frame 交易，它不是唯一的后量子账户路径",
+      "note": "2026-11-12 19:40。",
+      "url": "https://x.com/barnabemonnot/status/2120859329892868481",
+      "date": "2026-11-12",
+      "title_en": "Barnabé: core devs have already scheduled Frame transactions, which is not the only path to PQ-secure accounts",
+      "note_en": "2026-11-12 19:40.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Ethlabs 分享 Justin Drake 在 London 论坛谈 pqai27",
+      "note": "2026-11-12 18:28。",
+      "url": "https://x.com/ethlabs_org/status/2120841088944717901",
+      "date": "2026-11-12",
+      "title_en": "Ethlabs shares Justin Drake's take on pqai27 at a London forum",
+      "note_en": "2026-11-12 18:28.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Ethereal news 第 46 期最多点击的链接",
+      "note": "2026-11-13 05:10，前几名是 Vitalik 的 Digital minimalism、他在 Devcon 的演讲，以及 Justin Drake 和 kevaundray 的后量子与后 AI 过渡演讲。",
+      "url": "https://x.com/EtherealnewsHQ/status/2121002650422718480",
+      "date": "2026-11-13",
+      "title_en": "Ethereal news weekly #46 top clicked links",
+      "note_en": "2026-11-13 05:10: Vitalik's Digital minimalism, his Devcon talk, and the Justin Drake and kevaundray talk on the post-quantum and post-AI transition led the list.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Thomas Coratger 转述 Devcon Mumbai 的形式化验证演讲",
+      "note": "2026-11-13 04:54：AI 找 bug 的速度前所未有，数学证明是根本防线。",
+      "url": "https://x.com/tcoratger/status/2120998743302345049",
+      "date": "2026-11-13",
+      "title_en": "Thomas Coratger relays a Devcon Mumbai talk on formal verification",
+      "note_en": "2026-11-13 04:54: AI is finding bugs at an unprecedented rate, and mathematical proofs are the real defense.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-191-november-12-2026/30139",
+    "credit": "Ethereum Magicians",
+    "local_path": "assets/2026-11-13.jpg",
+    "credit_en": "Ethereum Magicians"
+  },
+  "keywords_en": [
+    "ACDC #191",
+    "post-quantum",
+    "EIP-8483",
+    "EIP-8430",
+    "FOCIL"
+  ],
+  "summary_en": "ACDC #191 made post-quantum and post-AI hardening the top agenda item, debating whether to raise the urgency from DEFCON 4 to DEFCON 2 or 3, and EIP-8483 (post-quantum material registration) was accepted as PFI for Hegotá. Whether FOCIL and quick slots stay, and whether to pursue post-quantum Gasper or decoupled consensus, is still open. On accounts, EIP-8430 (the AA transaction type) changes how sponsored transactions are charged, and a new draft, EIP-8500, makes Frame transactions work with FOCIL."
+}
