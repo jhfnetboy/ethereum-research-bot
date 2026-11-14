@@ -1,0 +1,327 @@
+{
+  "date": "2026-11-14",
+  "keywords": [
+    "后量子账户",
+    "EIP-8288",
+    "ERC-8499",
+    "Hegotá 范围",
+    "Gas 重新定价"
+  ],
+  "summary": "后量子账户的工程细节在一天内推进明显：EIP-8288 合并了 leanSPHINCS 公钥格式修正，批量证明方案合并成一份新的“通用证明验证与批处理”草案；ERC-8499 草案提出用 BIP-39 助记词派生哈希签名密钥。Toni 表示核心开发者可能在两周内重新审视 Hegotá 范围、收窄到后量子；EIP-8037 和 EIP-8038 重新定价的审计结论 11-16 公布。",
+  "items": [
+    {
+      "topic": "后量子账户：签名聚合和密钥派生的具体规格成形",
+      "title": "EIP-8288 合并：leanSPHINCS 公钥改为 PK.seed || PK.root",
+      "note": "2026-11-14 04:48 合并。作者 VanshSahay 说明 EthLib 和 leanVM 都已把 leanSPHINCS 改成 FIPS 205 布局，旧的 public parameter 字段不再存在；他是在 go-ethereum 里实现该方案时发现，两边的测试向量只在新顺序下能通过。",
+      "url": "https://github.com/ethereum/EIPs/pull/12666",
+      "date": "2026-11-14",
+      "title_en": "EIP-8288 merged: the leanSPHINCS public key is now PK.seed || PK.root",
+      "note_en": "Merged 2026-11-14 04:48. Author VanshSahay notes that EthLib and leanVM both moved leanSPHINCS to the FIPS 205 layout and dropped the old public parameter. He caught the mismatch while implementing the scheme in go-ethereum, where the known-answer tests from both projects only pass with the new order.",
+      "topic_en": "Post-quantum accounts: concrete specs for signature aggregation and key derivation"
+    },
+    {
+      "topic": "后量子账户：签名聚合和密钥派生的具体规格成形",
+      "title": "新 EIP 草案：Generic Proof Verification and Batching",
+      "note": "2026-11-13 19:21 由 Marchhill 提交，到 2026-11-14 05:00 仍在连续修改。它启用 EIP-8288 预留的 LEANSTARK_SCHEME，并加入赞助批量证明：赞助者为每个批处理叶子付一次费，成员交易按声明付费，任意有效子集都能被打包而不需要成员重新签名；折扣声明只走 builder 直连，普通单笔证明保留公共 mempool 资格。PR 写明所有 gas 数值和上限都是临时的，激活前要在给定硬件上测出满块完成时间和内存。",
+      "url": "https://github.com/ethereum/EIPs/pull/12664",
+      "date": "2026-11-13",
+      "title_en": "New EIP draft: Generic Proof Verification and Batching",
+      "note_en": "Opened by Marchhill on 2026-11-13 19:21 and still being revised at 2026-11-14 05:00. It turns on EIP-8288's reserved LEANSTARK_SCHEME and adds sponsored batch proofs: a sponsor pays once per batch leaf, member transactions pay per claim, and any valid subset can be included without members signing again. Discounted claims go builder-direct only, while ordinary single proofs stay eligible for the public mempool. The PR says every gas value and bound is provisional, and activation requires measured full-block completion time and memory on stated hardware.",
+      "topic_en": "Post-quantum accounts: concrete specs for signature aggregation and key derivation"
+    },
+    {
+      "topic": "后量子账户：签名聚合和密钥派生的具体规格成形",
+      "title": "EIP-8288 批量 leanSTARK 声明 PR 关闭",
+      "note": "2026-11-14 05:28 前后关闭，未合并，说明写明已被上面的新草案取代。",
+      "url": "https://github.com/ethereum/EIPs/pull/12654",
+      "date": "2026-11-14",
+      "title_en": "EIP-8288 batched leanSTARK claims PR closed",
+      "note_en": "Around 2026-11-14 05:28 without merging; its description says the new draft above supersedes it.",
+      "topic_en": "Post-quantum accounts: concrete specs for signature aggregation and key derivation"
+    },
+    {
+      "topic": "后量子账户：签名聚合和密钥派生的具体规格成形",
+      "title": "ERC-8499：从 BIP-39 派生哈希签名密钥",
+      "note": "2026-11-13 17:34 由 johba 开帖（ERC PR #2172 同日 17:41 提交）。覆盖 leanSPHINCS、SLH-DSA、WOTS、FORS、XMSS。作者列出现状：有的钱包从 BIP-39 熵用 Keccak-256 派生，有的再做一次 PBKDF2，有的对 BIP-39 seed 做 HMAC-SHA512，所以同一助记词在不同钱包里得到不同密钥。2026-11-14 02:38 的回复补充：换参数集后，恢复钱包会派生它支持的每种密钥类型，再看账户当前接受哪一个；旧密钥类型也要继续派生，因为账户地址可能是用旧密钥算出来的。",
+      "url": "https://ethereum-magicians.org/t/erc-8499-hash-based-key-derivation-from-bip-39/30375",
+      "date": "2026-11-13",
+      "title_en": "ERC-8499: Hash-Based Key Derivation from BIP-39",
+      "note_en": "Thread opened by johba on 2026-11-13 17:34 (ERC PR #2172 followed at 17:41). It covers leanSPHINCS, SLH-DSA, WOTS, FORS and XMSS. The author lays out today's split: some wallets derive from the BIP-39 entropy with Keccak-256, some run a second PBKDF2, and some apply HMAC-SHA512 to the BIP-39 seed, so one phrase gives different keys in different wallets. A reply at 2026-11-14 02:38 adds that after a parameter-set change, a restoring wallet derives every key type it supports and checks which one the account accepts, and it must keep deriving retired key types because the account address may have come from the old key.",
+      "topic_en": "Post-quantum accounts: concrete specs for signature aggregation and key derivation"
+    },
+    {
+      "topic": "后量子账户：签名聚合和密钥派生的具体规格成形",
+      "title": "ERC PR #2172",
+      "note": "ERC-8499：从 BIP-39 派生哈希签名密钥 2026-11-13 17:34 由 johba 开帖（ERC PR #2172 同日 17:41 提交）。覆盖 leanSPHINCS、SLH-DSA、WOTS、FORS、XMSS。作者列出现状：有的钱包从 BIP-39 熵用 Keccak-256 派生，有的再做一次 PBKDF2，有的对 BIP-39 seed 做 HMAC-SHA512，所以同一助记词在不同钱包里得到不同密钥。2026-11-14 02:38 的回复补充：换参数集后，恢复钱包会派生它支持的每种密钥类型，再看账户当前接受哪一个；旧密钥类型也要继续派生，因为账户地址可能是用旧密钥算出来的。",
+      "url": "https://github.com/ethereum/ERCs/pull/2172",
+      "date": "2026-11-13",
+      "title_en": "ERC PR #2172",
+      "note_en": "ERC-8499: Hash-Based Key Derivation from BIP-39, thread opened by johba on 2026-11-13 17:34 (ERC PR #2172 followed at 17:41). It covers leanSPHINCS, SLH-DSA, WOTS, FORS and XMSS. The author lays out today's split: some wallets derive from the BIP-39 entropy with Keccak-256, some run a second PBKDF2, and some apply HMAC-SHA512 to the BIP-39 seed, so one phrase gives different keys in different wallets. A reply at 2026-11-14 02:38 adds that after a parameter-set change, a restoring wallet derives every key type it supports and checks which one the account accepts, and it must keep deriving retired key types because the account address may have come from the old key.",
+      "topic_en": "Post-quantum accounts: concrete specs for signature aggregation and key derivation"
+    },
+    {
+      "topic": "后量子账户：签名聚合和密钥派生的具体规格成形",
+      "title": "EIP-8310 后量子 Keystore 讨论",
+      "note": "2026-11-14 03:09 johba 追问：keystore 文件丢失后，能不能像 ERC-2333 之于 BLS 那样从助记词恢复 XMSS 种子；ERC-8499 有意不从助记词重建有状态密钥。",
+      "url": "https://ethereum-magicians.org/t/eip-8310-post-quantum-keystore-for-stateful-keys/28853",
+      "date": "2026-11-14",
+      "title_en": "EIP-8310 post-quantum keystore thread",
+      "note_en": "At 2026-11-14 03:09 johba asked whether an XMSS seed can be recovered from a mnemonic if the keystore file is lost, the way ERC-2333 works for BLS. ERC-8499 deliberately does not rebuild stateful keys from a phrase.",
+      "topic_en": "Post-quantum accounts: concrete specs for signature aggregation and key derivation"
+    },
+    {
+      "topic": "后量子账户：签名聚合和密钥派生的具体规格成形",
+      "title": "EIP-8141 加入 leanSPHINCS 的 PR",
+      "note": "2026-11-14 04:20 有更新，仍未合并；Frame 交易采用哪种后量子签名方案和它直接相关。",
+      "url": "https://github.com/ethereum/EIPs/pull/12616",
+      "date": "2026-11-14",
+      "title_en": "EIP-8141 PR adding leanSPHINCS",
+      "note_en": "The EIP-8141 PR adding leanSPHINCS was updated at 2026-11-14 04:20 and is still open. Which post-quantum scheme Frame transactions adopt depends on it.",
+      "topic_en": "Post-quantum accounts: concrete specs for signature aggregation and key derivation"
+    },
+    {
+      "topic": "账户抽象与 mempool：Frame 交易的验证依赖和委托规则",
+      "title": "EIP-8151 新增公共 mempool 规则",
+      "note": "2026-11-13 13:44 推送修订、16:00 作者回复评审。背景：EIP-8151 让 ecRecover 读取被恢复地址的代码，所以 EIP-8141 Frame 交易的验证前缀调用 ecRecover 时，可能依赖第三方账户。新规则把每个被恢复的地址及其代码类别（空或已委托，还是其他代码）记为 signer 依赖，类别变化时重新验证；按被恢复地址限制待处理交易数，canonical 签名哈希和其他摘要分开配额，pay frame 的恢复按每个 paymaster 计一次。",
+      "url": "https://github.com/ethereum/EIPs/pull/12653",
+      "date": "2026-11-13",
+      "title_en": "EIP-8151 adds public mempool rules",
+      "note_en": "With a revision pushed at 2026-11-13 13:44 and an author reply to review at 16:00. Background: EIP-8151 makes ecRecover read the recovered address's code, so an EIP-8141 Frame transaction whose validation prefix calls ecRecover can depend on a third-party account. The new rules record each recovered address and its code class (empty or delegated, versus other code) as a signer dependency and revalidate when the class changes. They cap pending transactions per recovered address, with separate shares for the canonical signature hash and other digests, and count pay-frame recoveries once per paymaster.",
+      "topic_en": "Account abstraction and the mempool: validation dependencies and delegation rules for Frame transactions"
+    },
+    {
+      "topic": "账户抽象与 mempool：Frame 交易的验证依赖和委托规则",
+      "title": "EIP-8430（AA Transaction Type）新提交：代码委托条目必须使用 nonce_key 0",
+      "note": "2026-11-13 21:49 推送。EIP-8430 支持 2D nonce，key 0 就是账户原本的 nonce；这条规则把交易内的 EIP-7702 式委托绑定到主 nonce 序列上。",
+      "url": "https://github.com/ethereum/EIPs/pull/12385",
+      "date": "2026-11-13",
+      "title_en": "EIP-8430 (AA Transaction Type) new commit: a delegation entry requires nonce_key 0",
+      "note_en": "Pushed 2026-11-13 21:49. EIP-8430 supports 2D nonces where key 0 is the account's normal nonce, and this rule ties in-transaction EIP-7702-style delegation to that main nonce sequence.",
+      "topic_en": "Account abstraction and the mempool: validation dependencies and delegation rules for Frame transactions"
+    },
+    {
+      "topic": "账户抽象与 mempool：Frame 交易的验证依赖和委托规则",
+      "title": "EIP-8497：Frame 交易的 FOCIL 遗漏见证",
+      "note": "2026-11-13 17:58 和 19:44 两次修订（按写入者的列表数量加权、证明双重签名者）。更正：昨日日报把这份草案写成 EIP-8500，PR 里的文件名是 eip-8497.md，Ethereal news 第 47 期也列为 EIP-8497。",
+      "url": "https://github.com/ethereum/EIPs/pull/12663",
+      "date": "2026-11-13",
+      "title_en": "EIP-8497: FOCIL omission witnesses for Frame transactions",
+      "note_en": "Got two revisions at 2026-11-13 17:58 and 19:44 (weighting writers by listing count, proving equivocators). Correction: yesterday's report called this draft EIP-8500. The file in the PR is eip-8497.md, and Ethereal news #47 also lists it as EIP-8497.",
+      "topic_en": "Account abstraction and the mempool: validation dependencies and delegation rules for Frame transactions"
+    },
+    {
+      "topic": "账户抽象与 mempool：Frame 交易的验证依赖和委托规则",
+      "title": "pm #2295",
+      "note": "11-17 的 Frame Transaction Breakout #8（pm #2295）。",
+      "url": "https://github.com/ethereum/pm/issues/2295",
+      "date": "2026-11-14",
+      "title_en": "pm #2295",
+      "note_en": "Frame Transaction Breakout #8 on November 17 (pm #2295).",
+      "topic_en": "Account abstraction and the mempool: validation dependencies and delegation rules for Frame transactions"
+    },
+    {
+      "topic": "Hegotá 范围与 Gas 重新定价",
+      "title": "Toni Wahrstätter：核心开发者可能在约两周内重审 Hegotá 范围",
+      "note": "2026-11-13 17:00：考虑收窄到后量子是否能更快推进，重新考虑 FOCIL 以及扩容、缩短 slot 的功能是很大的一步。",
+      "url": "https://x.com/nero_eth/status/2121181295103377865",
+      "date": "2026-11-13",
+      "title_en": "Toni Wahrstätter: core devs may revisit Hegotá scope in about two weeks",
+      "note_en": "2026-11-13 17:00. The question is whether a narrower post-quantum focus would move faster; reconsidering FOCIL and features that scale or shorten slots would be a significant step.",
+      "topic_en": "Hegotá scope and gas repricing"
+    },
+    {
+      "topic": "Hegotá 范围与 Gas 重新定价",
+      "title": "Barnabé：pqai27 是 Ethlabs 的提案，不是已达成的共识",
+      "note": "2026-11-13 15:28，提醒外界不要把路线提案理解为已经被批准。",
+      "url": "https://x.com/barnabemonnot/status/2121158282593083855",
+      "date": "2026-11-13",
+      "title_en": "Barnabé: pqai27 is an Ethlabs proposal, not a ratified consensus",
+      "note_en": "2026-11-13 15:28, cautioning against reading a roadmap proposal as already approved.",
+      "topic_en": "Hegotá scope and gas repricing"
+    },
+    {
+      "topic": "Hegotá 范围与 Gas 重新定价",
+      "title": "Ethereal news 第 47 期",
+      "note": "2026-11-13 发布，记录：quick slots（EIP-8198）因后量子优先被 Ethlabs 撤回、标为 DFI；Mumbai 研讨会上对 Q day 的估计从 12 个月前的 2032 年提前到 2029 年；Dedaub、ChainSecurity 和 EF 会在 11-16 的 ACDT #103 公布 EIP-8037 和 EIP-8038 审计发现，11-19 的 ACDE #249 讨论下一步（改规格或排期 Hoodi 测试网）；新 EIP 包括 EIP-8487（执行额度与计费额度分离）和 EIP-8488（用于 gas 重新定价的版本化 opcode）。",
+      "url": "https://ethereal.news/ethereal-news-weekly-47/",
+      "date": "2026-11-13",
+      "title_en": "Ethereal news weekly #47",
+      "note_en": "Published 2026-11-13, records that Ethlabs withdrew quick slots (EIP-8198) to focus on post-quantum and it is now DFI; that the Mumbai workshops put the Q-day estimate at 2029, down from 2032 a year ago; that Dedaub, ChainSecurity and the EF will present EIP-8037 and EIP-8038 audit findings at ACDT #103 on November 16, with next steps (spec changes or Hoodi scheduling) at ACDE #249 on November 19; and new EIPs including EIP-8487 (separate execution credits and billing credits) and EIP-8488 (versioned opcodes for gas repricing).",
+      "topic_en": "Hegotá scope and gas repricing"
+    },
+    {
+      "topic": "Hegotá 范围与 Gas 重新定价",
+      "title": "PQ-CL Breakout #1",
+      "note": "2026-11-14 04:28 建档：后量子共识层工作会，11-17 21:00 首次召开，120 分钟，会议配置为每周二、三、五。",
+      "url": "https://github.com/ethereum/pm/issues/2304",
+      "date": "2026-11-14",
+      "title_en": "PQ-CL Breakout #1",
+      "note_en": "Was filed at 2026-11-14 04:28: a post-quantum consensus layer working session, first meeting November 17 at 21:00 for 120 minutes, configured to recur every Tuesday, Wednesday and Friday.",
+      "topic_en": "Hegotá scope and gas repricing"
+    },
+    {
+      "topic": "Hegotá 范围与 Gas 重新定价",
+      "title": "ladislaus：后量子会让今天的重新定价争论显得很小",
+      "note": "2026-11-13 21:41，指出 ecrecover、permit 和不可升级合约在后量子迁移中会带来更大的兼容性问题。",
+      "url": "https://x.com/ladislaus0x/status/2121251993507299762",
+      "date": "2026-11-13",
+      "title_en": "ladislaus: post-quantum will make today's repricing debate look small",
+      "note_en": "2026-11-13 21:41, pointing to ecrecover, permits and immutable contracts as bigger compatibility problems in a post-quantum migration.",
+      "topic_en": "Hegotá scope and gas repricing"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Hardhat v3.22.0 发布",
+      "note": "（据 Ethereal news 第 47 期，2026-11-13）：实验性 Glamsterdam 支持加入 EIP-8038 状态访问重新定价。合约开发者可以用它提前估算重新定价后的 gas。",
+      "url": "https://github.com/NomicFoundation/hardhat/releases/tag/hardhat%403.22.0",
+      "date": "2026-11-13",
+      "title_en": "Hardhat v3.22.0",
+      "note_en": "(per Ethereal news #47, 2026-11-13) adds EIP-8038 state access repricing to its experimental Glamsterdam support, so contract developers can estimate post-repricing gas now.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：通过 Across 从 Base、Arbitrum、HyperEVM 等链私密跨链进入 zk.money",
+      "note": "2026-11-14 01:43，可提回任意 EVM 链。隐私方向的实际可用工具。",
+      "url": "https://x.com/aztecnetwork/status/2121313052343865753",
+      "date": "2026-11-14",
+      "title_en": "Aztec: private bridging into zk.money from Base, Arbitrum, HyperEVM and more via Across",
+      "note_en": "2026-11-14 01:43, with withdrawals to any EVM chain. A privacy tool you can actually use today.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EEZ 上的私密转账演示",
+      "note": "2026-11-13 21:28：Bermuda Bay 团队演示从以太坊存入 USDC 到 Rollup X 的私密余额，公开余额和私密余额并存。",
+      "url": "https://x.com/etheconomiczone/status/2121248833812217865",
+      "date": "2026-11-13",
+      "title_en": "Private transfer demo on EEZ",
+      "note_en": "2026-11-13 21:28: the Bermuda Bay team deposits USDC from Ethereum into a private balance on Rollup X, with public and private balances side by side.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 评估 Phylax 断路器",
+      "note": "2026-11-13 22:17：应用定义规则，由区块构建者在建块时拦截违规交易；文章讨论其风险和对 Rollup Stage 1 的影响。",
+      "url": "https://x.com/ethbeat_org/status/2121261274805739822",
+      "date": "2026-11-13",
+      "title_en": "ETHBEAT reviews Phylax circuit breakers",
+      "note_en": "2026-11-13 22:17: apps define rules and block builders drop violating transactions during block building; the piece covers the risks and the impact on rollup Stage 1.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8426 合并：失去资格的账户移出已发放集合",
+      "note": "2026-11-14 01:07 合并，只加一句规范文字。",
+      "url": "https://github.com/ethereum/ERCs/pull/2173",
+      "date": "2026-11-14",
+      "title_en": "ERC-8426 merged: an account that lost entitlement leaves the issued set",
+      "note_en": "Merged 2026-11-14 01:07, a one-sentence spec clarification.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048 PR：元数据权限改为整个集合范围",
+      "note": "2026-11-14 07:26 提交。",
+      "url": "https://github.com/ethereum/ERCs/pull/2174",
+      "date": "2026-11-14",
+      "title_en": "ERC-8048 PR: metadata authority becomes collection-wide",
+      "note_en": "Opened 2026-11-14 07:26.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Magicians：Bogotá 之后执行层升级命名",
+      "note": "2026-11-14 01:53 仍有回复支持 Bangkok，理由是名字无歧义、易于 ASCII 书写。",
+      "url": "https://ethereum-magicians.org/t/devcon-city-name-for-execution-layer-upgrade-after-bogota/30195",
+      "date": "2026-11-14",
+      "title_en": "Magicians: naming the execution layer upgrade after Bogotá",
+      "note_en": "Another reply at 2026-11-14 01:53 backs Bangkok as unambiguous and ASCII-friendly.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Devcon 9 日期调整为 2027-10-12 至 14，地点 Lisbon CCL",
+      "note": "2026-11-13 19:18 公布。",
+      "url": "https://x.com/EFDevcon/status/2121216198507643333",
+      "date": "2027-10-12",
+      "title_en": "Devcon 9 moves to 2027-10-12 to 14 at CCL in Lisbon",
+      "note_en": "Announced 2026-11-13 19:18.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news 第 47 期",
+      "note": "客户端与安全（据 Ethereal news 第 47 期）：Lighthouse v8.3.3 是高优先级安全更新；Reth v2.11.0 并行化 EIP-7702 授权恢复；Across 域名经 Namecheap 被劫持、Gnosis Pay 旧系统数据泄露，相关用户请核对官方公告。",
+      "url": "https://ethereal.news/ethereal-news-weekly-47/",
+      "date": "2026-11-14",
+      "title_en": "Ethereal news weekly #47",
+      "note_en": "Clients and security (per Ethereal news weekly #47): Lighthouse v8.3.3 is a high-priority security release; Reth v2.11.0 parallelizes EIP-7702 authorization recovery; Across had its domain hijacked through Namecheap and Gnosis Pay reported a breach of a legacy system, so affected users should check the official notices.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Ethlabs：ETH 作为价值储存的观点合集",
+      "note": "2026-11-14 04:17；Barnabé 补充 ethereum:native 将是后量子的价值储存 2026-11-14 04:25。",
+      "url": "https://x.com/ethlabs_org/status/2121351697310072967",
+      "date": "2026-11-14",
+      "title_en": "Ethlabs collects takes on ETH as a store of value",
+      "note_en": "2026-11-14 04:17; Barnabé adds that ethereum:native will be a post-quantum store of value, 2026-11-14 04:25.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé 补充 ethereum:native 将是后量子的价值储存",
+      "note": "Ethlabs：ETH 作为价值储存的观点合集 2026-11-14 04:17；Barnabé 补充 ethereum:native 将是后量子的价值储存 2026-11-14 04:25。",
+      "url": "https://x.com/barnabemonnot/status/2121353713445204207",
+      "date": "2026-11-14",
+      "title_en": "Barnabé adds that ethereum:native will be a post-quantum store of value",
+      "note_en": "Ethlabs collects takes on ETH as a store of value, 2026-11-14 04:17; Barnabé adds that ethereum:native will be a post-quantum store of value, 2026-11-14 04:25.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "trent_vanepps：路线图正在为 2027 年前应对后量子紧急重排",
+      "note": "2026-11-13 23:13，并反对硬上限式的安全预算。",
+      "url": "https://x.com/trent_vanepps/status/2121275193158963392",
+      "date": "2026-11-13",
+      "title_en": "trent_vanepps: the roadmap is being urgently reordered to tackle post-quantum by 2027",
+      "note_en": "2026-11-13 23:13, and he argues against a hard-cap security budget.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson：量子灾难像飓风会逐步累积，AI 威胁不同",
+      "note": "2026-11-13 21:32，强调密码学敏捷性。",
+      "url": "https://x.com/EliBenSasson/status/2121249956547993855",
+      "date": "2026-11-13",
+      "title_en": "Eli Ben-Sasson: a quantum catastrophe builds up like a hurricane, an AI one is different",
+      "note_en": "2026-11-13 21:32, stressing crypto agility.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé：节点会承担越来越分化的角色",
+      "note": "2026-11-13 20:11。",
+      "url": "https://x.com/barnabemonnot/status/2121335208431468895",
+      "date": "2026-11-13",
+      "title_en": "Barnabé: nodes will take on increasingly differentiated roles",
+      "note_en": "2026-11-13 20:11.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethereal.news/ethereal-news-weekly-47/",
+    "credit": "Ethereal news",
+    "local_path": "assets/2026-11-14.jpg",
+    "credit_en": "Ethereal news"
+  },
+  "keywords_en": [
+    "post-quantum accounts",
+    "EIP-8288",
+    "ERC-8499",
+    "Hegotá scope",
+    "gas repricing"
+  ],
+  "summary_en": "Post-quantum account engineering moved quickly in a single day. EIP-8288 merged a fix to the leanSPHINCS public key format, and its batched proof work was folded into a new draft, \"Generic Proof Verification and Batching\". A new draft, ERC-8499, proposes deriving hash-based signing keys from BIP-39 phrases. Toni says core devs may revisit the Hegotá scope within two weeks and narrow it toward post-quantum, and audit findings on the EIP-8037 and EIP-8038 repricings land on November 16."
+}
