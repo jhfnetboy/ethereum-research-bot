@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-15",
+  "keywords": [
+    "EIP-8500",
+    "后量子证明批处理",
+    "EIP-8151",
+    "ERC-8499",
+    "EIP-8037/8038 审计"
+  ],
+  "summary": "周六整体安静，但后量子交易成本有了第一批实测数据：批量证明草案获分配编号 EIP-8500，作者 Marchhill 用实测建议把 leanSPHINCS 验证 gas 从 15,400 降到 3,000、leanSTARK 从 572,000 降到 30,000（均为临时值）。EIP-8151 的公共 mempool 规则获评审认可；ERC-8499 讨论转向助记词指纹设计。11-16 晚 ACDT #103 将公布 EIP-8037/8038 重新定价审计结论。",
+  "items": [
+    {
+      "topic": "后量子交易成本：EIP-8500 的实测与降价建议",
+      "title": "EIP-8500 草案：Batched Generic Proof Dependencies",
+      "note": "2026-11-14 14:22 至 22:35 间，作者 Marchhill 连续提交 7 次修改，其中“把批处理简化为普通的通用依赖”“把 mempool 验证预算和 gas 校准分开”“区块依赖数量的上限独立于 gas limit”。2026-11-15 06:17 编辑 abcoathup 在评审里建议改为 eip: 8500，即分配了正式编号。",
+      "url": "https://github.com/ethereum/EIPs/pull/12664",
+      "date": "2026-11-14",
+      "title_en": "EIP-8500 draft: Batched Generic Proof Dependencies",
+      "note_en": "Between 14:22 and 22:35 on 2026-11-14, author Marchhill pushed 7 revisions, including \"simplify batching to ordinary generic dependencies\", \"separate mempool verification budgets from gas calibration\" and \"bound block dependencies independently of the gas limit\". At 06:17 on 2026-11-15, editor abcoathup suggested eip: 8500 in a review, assigning the official number.",
+      "topic_en": "Post-quantum transaction costs: EIP-8500 benchmarks and proposed cuts"
+    },
+    {
+      "topic": "后量子交易成本：EIP-8500 的实测与降价建议",
+      "title": "NethermindEth/lean-bindings #13",
+      "note": "EIP-8500 的文件名与 Magicians 讨论帖更新，以及 NethermindEth/lean-bindings #13 校准套件的完整数据。",
+      "url": "https://github.com/NethermindEth/lean-bindings/pull/13",
+      "date": "2026-11-15",
+      "title_en": "NethermindEth/lean-bindings #13",
+      "note_en": "The EIP-8500 filename and Magicians thread updates, plus the full data from the calibration suite in NethermindEth/lean-bindings #13.",
+      "topic_en": "Post-quantum transaction costs: EIP-8500 benchmarks and proposed cuts"
+    },
+    {
+      "topic": "后量子交易成本：EIP-8500 的实测与降价建议",
+      "title": "EIP-8141 加入 leanSPHINCS 的 PR",
+      "note": "2026-11-15 03:33 仍有更新、未合并；Frame 交易用哪种后量子签名决定 EIP-8500 的实际负载。",
+      "url": "https://github.com/ethereum/EIPs/pull/12616",
+      "date": "2026-11-15",
+      "title_en": "The PR adding leanSPHINCS to EIP-8141",
+      "note_en": "Was updated again at 03:33 on 2026-11-15 and is still unmerged. Which post-quantum signature Frame transactions adopt determines the real load on EIP-8500.",
+      "topic_en": "Post-quantum transaction costs: EIP-8500 benchmarks and proposed cuts"
+    },
+    {
+      "topic": "账户抽象：EIP-8151 mempool 规则和 EIP-7702 委托的可验证性",
+      "title": "EIP-8151 公共 mempool 规则 PR 获评审认可",
+      "note": "2026-11-15 02:59 colinlyguo 留言建议补充理由：对“其他摘要”这一类，风险不只是签名重用；已知公钥时，若摘要由攻击者选择，可以构造一组 (digest, v, r, s) 恢复出目标地址而无需私钥。03:08 给出评审结论“lgtm，只补充理由”。PR 尚未合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12653",
+      "date": "2026-11-15",
+      "title_en": "EIP-8151 public mempool rules PR approved by a reviewer",
+      "note_en": "At 02:59 on 2026-11-15, colinlyguo suggested strengthening the rationale: for the \"any other digest\" case the risk isn't just signature reuse. Given a known public key and an attacker-chosen digest, an attacker can build a (digest, v, r, s) tuple that recovers the target address without the private key. At 03:08 the review concluded \"lgtm, only a rationale supplement\". The PR isn't merged yet.",
+      "topic_en": "Account abstraction: EIP-8151 mempool rules and verifying EIP-7702 delegations"
+    },
+    {
+      "topic": "账户抽象：EIP-8151 mempool 规则和 EIP-7702 委托的可验证性",
+      "title": "EIP-8477（近期区块绑定的委托授权）讨论",
+      "note": "2026-11-14 16:46 Helkomine 反对继续给 EIP-7702 加功能：7702 的目标是让 EOA 逐步过渡到智能账户，且 ECDSA 在后量子时代会被淘汰，继续加固它动力不足。",
+      "url": "https://ethereum-magicians.org/t/eip-8477-recent-block-bound-delegation-authorizations/30269",
+      "date": "2026-11-14",
+      "title_en": "EIP-8477 (recent block bound delegation authorizations) discussion",
+      "note_en": "At 16:46 on 2026-11-14, Helkomine argued against adding features to EIP-7702: its goal is to move EOAs gradually toward smart accounts, and ECDSA will be phased out in a post-quantum world, so there's little reason to keep hardening it.",
+      "topic_en": "Account abstraction: EIP-8151 mempool rules and verifying EIP-7702 delegations"
+    },
+    {
+      "topic": "账户抽象：EIP-8151 mempool 规则和 EIP-7702 委托的可验证性",
+      "title": "Magicians：如何验证已部署合约仍在运行审计过的代码",
+      "note": "2026-11-14 22:17 thomasharris 指出 eth_getProof 可以证明某个 EIP-7702 账户在特定区块的 codeHash（即 0xef0100||address），但重新委托没有事件。2026-11-15 01:01 Zealynx 补充：同一区块内可以先换走再换回，按区块扫 codeHash 会漏掉；比较时段两端的 nonce 更可靠，因为每次生效的授权都会让 nonce 加一。",
+      "url": "https://ethereum-magicians.org/t/checking-that-a-deployed-contract-still-runs-the-audited-commit/30318",
+      "date": "2026-11-14",
+      "title_en": "Magicians: checking that a deployed contract still runs the audited commit",
+      "note_en": "At 22:17 on 2026-11-14, thomasharris noted that eth_getProof can prove an EIP-7702 account's codeHash (that is, 0xef0100||address) at a given block, but redelegation emits no event. At 01:01 on 2026-11-15, Zealynx added that an account can switch away and back within one block, so scanning codeHash per block can miss it. Comparing the nonce at both ends of the period is more reliable, since every applied authorization bumps the nonce by one.",
+      "topic_en": "Account abstraction: EIP-8151 mempool rules and verifying EIP-7702 delegations"
+    },
+    {
+      "topic": "账户抽象：EIP-8151 mempool 规则和 EIP-7702 委托的可验证性",
+      "title": "pm #2295",
+      "note": "11-17 Frame Transaction Breakout #8（pm #2295）是否讨论 EIP-8151 合并。",
+      "url": "https://github.com/ethereum/pm/issues/2295",
+      "date": "2026-11-15",
+      "title_en": "pm #2295",
+      "note_en": "Whether Frame Transaction Breakout #8 on 11-17 (pm #2295) discusses merging EIP-8151.",
+      "topic_en": "Account abstraction: EIP-8151 mempool rules and verifying EIP-7702 delegations"
+    },
+    {
+      "topic": "后量子钱包与 Gas 重新定价排期",
+      "title": "ERC-8499 讨论：助记词指纹和有状态密钥",
+      "note": "2026-11-14 16:16 SergeevDmitry 确认作者已在恢复章节加入“旧密钥类型也要派生”；2026-11-15 01:04 Zealynx 建议固定指纹格式，并从公钥（例如账户 0 的 SLH-DSA-SHA2-128s 公钥）计算，类似 BIP-32 从主公钥取指纹；若直接从种子计算，拿到写有指纹的纸的人可以按 PBKDF2 速度离线猜 passphrase。对有状态密钥，他支持随机选叶子，因为设备复位或闪存回滚会让计数器重复。",
+      "url": "https://ethereum-magicians.org/t/erc-8499-hash-based-key-derivation-from-bip-39/30375",
+      "date": "2026-11-14",
+      "title_en": "ERC-8499 discussion: mnemonic fingerprints and stateful keys",
+      "note_en": "At 16:16 on 2026-11-14, SergeevDmitry confirmed the author had added \"keep deriving old key types\" to the restore section. At 01:04 on 2026-11-15, Zealynx suggested fixing the fingerprint format and computing it from a public key (for example account 0's SLH-DSA-SHA2-128s key), the way BIP-32 takes its fingerprint from the master public key. If it's computed straight from the seed, anyone holding the paper with the fingerprint can test passphrase guesses offline at PBKDF2 speed. For stateful keys he backs picking leaves at random, because a device reset or a rolled-back flash makes a counter repeat.",
+      "topic_en": "Post-quantum wallets and the gas repricing timeline"
+    },
+    {
+      "topic": "后量子钱包与 Gas 重新定价排期",
+      "title": "ACDT #103 议程",
+      "note": "2026-11-14 16:30 更新：11-16 21:00 由 MariusVanDerWijden 介绍 EIP-8037/8038 现状，ChainSecurity 和 Dedaub 公布独立审计结论，EF 介绍内部调查和应用方沟通结果，其中列出 Juicebox 协议的兼容性 PoC；另一项是在两个 consensus-specs PR 中选定 payload binding 方案，以解锁共识规范发布。",
+      "url": "https://github.com/ethereum/pm/issues/2299",
+      "date": "2026-11-14",
+      "title_en": "ACDT #103 agenda",
+      "note_en": "Updated at 16:30 on 2026-11-14. At 21:00 on 11-16, MariusVanDerWijden gives the EIP-8037/8038 status, ChainSecurity and Dedaub present independent audit findings, and the EF covers its internal investigations and app team outreach, including compatibility PoCs for the Juicebox protocol. The call also picks one of two consensus-specs PRs for payload binding, to unblock the consensus spec release.",
+      "topic_en": "Post-quantum wallets and the gas repricing timeline"
+    },
+    {
+      "topic": "后量子钱包与 Gas 重新定价排期",
+      "title": "ACDE #249",
+      "note": "11-19 21:00，议程 Glamsterdam、Hegotá；ACDC #192 2026-11-14 16:11 建档，11-26 21:00。",
+      "url": "https://github.com/ethereum/pm/issues/2285",
+      "date": "2026-11-14",
+      "title_en": "ACDE #249",
+      "note_en": "Is at 21:00 on 11-19 with Glamsterdam and Hegotá on the agenda; ACDC #192 was created at 16:11 on 2026-11-14 for 21:00 on 11-26.",
+      "topic_en": "Post-quantum wallets and the gas repricing timeline"
+    },
+    {
+      "topic": "后量子钱包与 Gas 重新定价排期",
+      "title": "ACDC #192",
+      "note": "ACDE #249 11-19 21:00，议程 Glamsterdam、Hegotá；ACDC #192 2026-11-14 16:11 建档，11-26 21:00。",
+      "url": "https://github.com/ethereum/pm/issues/2305",
+      "date": "2026-11-14",
+      "title_en": "ACDC #192",
+      "note_en": "ACDE #249 is at 21:00 on 11-19 with Glamsterdam and Hegotá on the agenda; ACDC #192 was created at 16:11 on 2026-11-14 for 21:00 on 11-26.",
+      "topic_en": "Post-quantum wallets and the gas repricing timeline"
+    },
+    {
+      "topic": "后量子钱包与 Gas 重新定价排期",
+      "title": "glamsterdam-gas-invariants",
+      "note": "合约开发者可以先用 glamsterdam-gas-invariants 对照自己的合约是否依赖可能改变的 gas 假设。",
+      "url": "https://github.com/ethereum/glamsterdam-gas-invariants",
+      "date": "2026-11-15",
+      "title_en": "glamsterdam-gas-invariants",
+      "note_en": "Contract developers can already check glamsterdam-gas-invariants to see whether their contracts rely on gas assumptions that may change.",
+      "topic_en": "Post-quantum wallets and the gas repricing timeline"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethereal news：第 47 期收录的新 ERC",
+      "note": "2026-11-15 06:00 列出 ERC-8489 到 8494 等，多数是 AI agent 相关（信息流、任务托管结算扣款等），以及 ERC-8493 链上 URI 方案。其中 ERC-8489 和 ERC-8490 来自同一作者 garyyang-finchip。agent 类 ERC 数量多，使用前先看讨论成熟度。",
+      "url": "https://x.com/EtherealnewsHQ/status/2121740134014132689",
+      "date": "2026-11-15",
+      "title_en": "Ethereal news: new ERCs in issue #47",
+      "note_en": "At 06:00 on 2026-11-15 it listed ERC-8489 through 8494 and others, mostly about AI agents (information flow, settlement deductions for task escrows and so on), plus the ERC-8493 onchain URI scheme. ERC-8489 and ERC-8490 come from the same author, garyyang-finchip. There are a lot of agent ERCs, so check how mature the discussion is before building on one.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8495 Token Metadata JSON Schema",
+      "note": "2026-11-15 06:43 仍在修改。代币元数据格式统一后，钱包和浏览器展示会更一致。",
+      "url": "https://github.com/ethereum/ERCs/pull/2163",
+      "date": "2026-11-15",
+      "title_en": "ERC-8495 Token Metadata JSON Schema",
+      "note_en": "Still being revised as of 06:43 on 2026-11-15. A shared token metadata format would make wallets and explorers display tokens more consistently.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "新 ERC PR：Generative Engine Optimization Framework",
+      "note": "2026-11-15 00:47 提交，同作者还有多份 agent 类 ERC 在推进。",
+      "url": "https://github.com/ethereum/ERCs/pull/2176",
+      "date": "2026-11-15",
+      "title_en": "New ERC PR: Generative Engine Optimization Framework",
+      "note_en": "Opened at 00:47 on 2026-11-15; the same author has several other agent ERCs in progress.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8048 PR #2174 合并",
+      "note": "2026-11-14 08:21：元数据权限改为整个集合范围（昨日日报记录为提交，本期确认已合并）。",
+      "url": "https://github.com/ethereum/ERCs/pull/2174",
+      "date": "2026-11-14",
+      "title_en": "ERC-8048 PR #2174 merged",
+      "note_en": "At 08:21 on 2026-11-14: metadata authority is now collection-wide (yesterday's report logged it as opened; it's now confirmed merged).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：PropAMM 在以太坊主网的成交",
+      "note": "2026-11-15 06:24 有新回复，讨论同区块报价的主动做市 AMM。",
+      "url": "https://ethresear.ch/t/propamm-fills-on-ethereum-mainnet-and-propamm-support-for-tembri-toolbox-same-block-quotes-a-small-spread-and-flow-taken-from-lagging-amms/26201",
+      "date": "2026-11-15",
+      "title_en": "ethresear.ch: PropAMM fills on Ethereum mainnet",
+      "note_en": "Got a new reply at 06:24 on 2026-11-15, on proactive market maker AMMs quoting within the same block.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "ansgar：ETH 作为价值储存不应意味着以太坊缩成 ETH 转账层",
+      "note": "2026-11-15 00:18，应该争取的是 ETH 因以太坊本身成功而成功。",
+      "url": "https://x.com/adietrichs/status/2121653952995373202",
+      "date": "2026-11-15",
+      "title_en": "ansgar: ETH as a store of value shouldn't mean Ethereum shrinks to an ETH transport layer",
+      "note_en": "00:18 on 2026-11-15. The outcome worth fighting for is ETH succeeding because Ethereum itself succeeds.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Caspar：ETH 作为价值储存本身就是有雄心的路线",
+      "note": "2026-11-15 02:54，以太坊作为“文明级信任根”比短期追求收入更有价值。",
+      "url": "https://x.com/casparschwa/status/2121693183566369081",
+      "date": "2026-11-15",
+      "title_en": "Caspar: ETH as a store of value is the ambitious path",
+      "note_en": "02:54 on 2026-11-15. Ethereum as a civilizational root of trust is worth far more than optimizing for revenue today.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik：监控系统应尽量“非 agent 化”",
+      "note": "2026-11-14 11:28 回复讨论，随后提到他资助的开放可验证硬件项目 2026-11-14 11:43。",
+      "url": "https://x.com/VitalikButerin/status/2121460332166295976",
+      "date": "2026-11-14",
+      "title_en": "Vitalik: make monitoring systems as un-agentic as possible",
+      "note_en": "A reply at 11:28 on 2026-11-14, followed by a pointer to an open and verifiable hardware project he's funding at 11:43.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "提到他资助的开放可验证硬件项目",
+      "note": "Vitalik：监控系统应尽量“非 agent 化” 2026-11-14 11:28 回复讨论，随后提到他资助的开放可验证硬件项目 2026-11-14 11:43。",
+      "url": "https://x.com/VitalikButerin/status/2121463950126845969",
+      "date": "2026-11-14",
+      "title_en": "a pointer to an open and verifiable hardware project he's funding",
+      "note_en": "Vitalik: make monitoring systems as un-agentic as possible a reply at 11:28 on 2026-11-14, followed by a pointer to an open and verifiable hardware project he's funding at 11:43.",
+      "topic_en": "Community"
+    }
+  ],
+  "keywords_en": [
+    "EIP-8500",
+    "post-quantum proof batching",
+    "EIP-8151",
+    "ERC-8499",
+    "EIP-8037/8038 audits"
+  ],
+  "summary_en": "A quiet Saturday overall, but post-quantum transaction costs got their first real measurements. The proof batching draft was assigned EIP-8500, and its author Marchhill used benchmarks to argue for cutting leanSPHINCS verification gas from 15,400 to 3,000 and leanSTARK from 572,000 to 30,000 (all provisional). EIP-8151's public mempool rules got a reviewer's approval, and ERC-8499 discussion moved on to mnemonic fingerprint design. The EIP-8037/8038 repricing audit findings land at ACDT #103 on the evening of 11-16."
+}
