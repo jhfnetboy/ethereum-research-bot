@@ -1,0 +1,447 @@
+{
+  "date": "2026-11-17",
+  "keywords": [
+    "ACDT #103",
+    "EIP-8037/8038",
+    "EIP-8288 leanPCS",
+    "EIP-8141 Frame 交易",
+    "EIP-8151"
+  ],
+  "summary": "ACDT #103 公布了 Glamsterdam 重新定价的审计结果：ChainSecurity 与 EF 内部检索合计约 200 项发现，多数容易缓解，但会上没有决定是否从 Amsterdam 移除 EIP-8037，留给 11-19 的 ACDE。Vitalik 发文支持 EIP-8037，并列出一份“未来大概率会变”的协议特性清单，其中包括 ecrecover 将变成有状态、交易格式可能只剩 EIP-8141。他同时表示已转向“全力看好”EIP-8288 的 leanPCS 路线，今晚 21:00 的 Frame 交易 Breakout #8 会讨论它。",
+  "items": [
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "ACDT #103 会议纪要",
+      "note": "2026-11-17 00:03 发布在 Magicians（自动生成的 Zoom 纪要，个别人名和 EIP 编号转写有误），录像同时上线。纪要要点：",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-103-november-16-2026/30326",
+      "date": "2026-11-17",
+      "title_en": "ACDT #103 meeting summary",
+      "note_en": "The ACDT #103 meeting summary went up on Magicians at 00:03 on 2026-11-17 (an auto-generated Zoom summary, with a few names and EIP numbers transcribed wrong), along with the recording. Key points:",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "录像",
+      "note": "ACDT #103 会议纪要 2026-11-17 00:03 发布在 Magicians（自动生成的 Zoom 纪要，个别人名和 EIP 编号转写有误），录像同时上线。纪要要点：",
+      "url": "https://youtu.be/ltmaae3DFY0",
+      "date": "2026-11-17",
+      "title_en": "recording",
+      "note_en": "The ACDT #103 meeting summary went up on Magicians at 00:03 on 2026-11-17 (an auto-generated Zoom summary, with a few names and EIP numbers transcribed wrong), along with the recording. Key points:",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "Vitalik：我对 EIP-8037 的看法",
+      "note": "2026-11-16 11:56，附 Fileverse 文档。从帖子配图可读到：",
+      "url": "https://x.com/VitalikButerin/status/2122192027274321946",
+      "date": "2026-11-16",
+      "title_en": "Vitalik: my views on EIP-8037",
+      "note_en": "At 11:56 on 2026-11-16, with a Fileverse document. From the screenshots in the post:",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "Fileverse 文档",
+      "note": "Vitalik：我对 EIP-8037 的看法 2026-11-16 11:56，附 Fileverse 文档。从帖子配图可读到：",
+      "url": "https://docs.fileverse.io/document/dUHG8ythBk3jJuQEjcE7m6",
+      "date": "2026-11-16",
+      "title_en": "Fileverse document",
+      "note_en": "Vitalik: my views on EIP-8037 at 11:56 on 2026-11-16, with a Fileverse document. From the screenshots in the post:",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "Vitalik 回复空投与状态成本",
+      "note": "2026-11-16 13:15：已经建议空投改用 Merkle 树（发行方只发根，用户自付 gas 领取）；长期应改用 UTXO 和（为隐私）keyed nonce 存代币余额。另一条回复 13:18 说中期应用会转向“多计算、少状态”，而执行密集型应用（如隐私协议）会更敢于加大用量。",
+      "url": "https://x.com/VitalikButerin/status/2122211943398449206",
+      "date": "2026-11-16",
+      "title_en": "Vitalik replying on airdrops and state costs",
+      "note_en": "At 13:15 on 2026-11-16: airdrops are already advised to use Merkle trees (the issuer posts the root and each user pays to claim), and longer term token balances should live in UTXOs and, for privacy, keyed nonces. In another reply at 13:18 he says apps will retool toward more computation and less state in the medium run, and execution-heavy apps such as privacy protocols will get bolder about using more.",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "另一条回复",
+      "note": "Vitalik 回复空投与状态成本 2026-11-16 13:15：已经建议空投改用 Merkle 树（发行方只发根，用户自付 gas 领取）；长期应改用 UTXO 和（为隐私）keyed nonce 存代币余额。另一条回复 13:18 说中期应用会转向“多计算、少状态”，而执行密集型应用（如隐私协议）会更敢于加大用量。",
+      "url": "https://x.com/VitalikButerin/status/2122212649320759507",
+      "date": "2026-11-16",
+      "title_en": "another reply",
+      "note_en": "Vitalik replying on airdrops and state costs at 13:15 on 2026-11-16: airdrops are already advised to use Merkle trees (the issuer posts the root and each user pays to claim), and longer term token balances should live in UTXOs and, for privacy, keyed nonces. In another reply at 13:18 he says apps will retool toward more computation and less state in the medium run, and execution-heavy apps such as privacy protocols will get bolder about using more.",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "Toni Wahrstätter 谈状态的取舍",
+      "note": "2026-11-16 15:09：状态增长慢于 EIP-8037 原先的预估，但在 2 亿 gas 上限且不上相关 EIP 时，每年仍会新增约 255 GiB 状态；后量子和隐私交易需要更多 gas，不提高 gas 上限等于降低吞吐。",
+      "url": "https://x.com/nero_eth/status/2122240742114410573",
+      "date": "2026-11-16",
+      "title_en": "Toni Wahrstätter on the state trade-off",
+      "note_en": "At 15:09 on 2026-11-16: state is growing more slowly than EIP-8037 first assumed, but at a 200M gas limit without the relevant EIPs it would still add about 255 GiB a year. Post-quantum and privacy transactions need more gas, so not raising the gas limit effectively cuts throughput.",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "pcaversaccio 在 ACDT #103 议题下的长评",
+      "note": "2026-11-16 17:31（X 帖 17:34）：不要把共识兼容性和应用兼容性混为一谈；glamsterdam-gas-invariants 列出的 8 条假设里，有些涉及退款、嵌套调用、revert 和 gasleft() 等执行语义，可能影响控制流和安全假设，这些没有早早被当作一等不变量纳入规范和验证流程。",
+      "url": "https://github.com/ethereum/pm/issues/2299#issuecomment-6913931359",
+      "date": "2026-11-16",
+      "title_en": "pcaversaccio's long comment on the ACDT #103 issue",
+      "note_en": "At 17:31 on 2026-11-16 (plus an X post at 17:34): don't confuse consensus compatibility with application compatibility. Some of the eight assumptions in glamsterdam-gas-invariants concern execution semantics such as refunds, nested calls, reverts and gasleft(), which can affect control flow and security, and they weren't treated as first-class invariants in the spec and validation process early enough.",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "X 帖",
+      "note": "pcaversaccio 在 ACDT #103 议题下的长评 2026-11-16 17:31（X 帖 17:34）：不要把共识兼容性和应用兼容性混为一谈；glamsterdam-gas-invariants 列出的 8 条假设里，有些涉及退款、嵌套调用、revert 和 gasleft() 等执行语义，可能影响控制流和安全假设，这些没有早早被当作一等不变量纳入规范和验证流程。",
+      "url": "https://x.com/pcaversaccio/status/2122277228855836959",
+      "date": "2026-11-16",
+      "title_en": "X post",
+      "note_en": "Pcaversaccio's long comment on the ACDT #103 issue at 17:31 on 2026-11-16 (plus an X post at 17:34): don't confuse consensus compatibility with application compatibility. Some of the eight assumptions in glamsterdam-gas-invariants concern execution semantics such as refunds, nested calls, reverts and gasleft(), which can affect control flow and security, and they weren't treated as first-class invariants in the spec and validation process early enough.",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "milonite 提出“同交易内创建再销毁”的退还问题",
+      "note": "2026-11-16 19:56：EIP-8037 对同一交易内创建并自毁的合约仍收取 183,600 的账户创建 state gas，CREATE 从 32,000 涨到约 195,600（约 6 倍），用这种模式的整笔交易涨 1.6 到 2.8 倍。该模式用于临时充值地址等场景，主网约每天 2,100 个（2026-11-06），8 月约 1,200 个。原文的退还条款在 2026 年 5 月被 PR #11611 删除，恢复提案 PR #12249 被关闭；作者请求重新考虑，并指出 TCREATE（EIP-8360）不在 Glamsterdam 里，也不能直接替代已发出的地址。",
+      "url": "https://github.com/ethereum/pm/issues/2299#issuecomment-6917033995",
+      "date": "2026-11-16",
+      "title_en": "milonite on create-and-destroy refunds",
+      "note_en": "At 19:56 on 2026-11-16: EIP-8037 still charges the full 183,600 state gas for account creation when a contract is created and self-destructed in the same transaction. CREATE goes from 32,000 to about 195,600 gas (roughly 6x), and whole transactions using the pattern cost 1.6x to 2.8x more. The pattern is used for temporary deposit addresses and similar flows, at about 2,100 contracts a day on mainnet (2026-11-06), up from about 1,200 in August. The original refund section was removed by PR #11611 in May 2026 and the proposal to restore it, PR #12249, was closed. The author asks for it to be reconsidered and notes TCREATE (EIP-8360) isn't in Glamsterdam and can't replace addresses already issued.",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "Glamsterdam 重新定价：ACDT #103 审计结果与 Vitalik 的立场",
+      "title": "ACDE #249",
+      "note": "11-19 21:00 是否保留 EIP-8037，以及是否恢复同交易内创建销毁的 state gas 退还。",
+      "url": "https://github.com/ethereum/pm/issues/2285",
+      "date": "2026-11-17",
+      "title_en": "ACDE #249",
+      "note_en": "Whether ACDE #249 at 21:00 on 11-19 keeps EIP-8037, and whether the state gas refund for contracts created and destroyed in the same transaction comes back.",
+      "topic_en": "Glamsterdam repricing: ACDT #103 audit results and Vitalik's position"
+    },
+    {
+      "topic": "EIP-8288 与 leanPCS：后量子签名和隐私证明的聚合路线",
+      "title": "Vitalik 长帖：从认为 leanPCS 是胡扯到全力看好",
+      "note": "2026-11-16 14:42：",
+      "url": "https://x.com/VitalikButerin/status/2122233780371083553",
+      "date": "2026-11-16",
+      "title_en": "Vitalik's long post on going from thinking leanPCS is total bull to being a total bull",
+      "note_en": "At 14:42 on 2026-11-16:",
+      "topic_en": "EIP-8288 and leanPCS: an aggregation path for post-quantum signatures and privacy proofs"
+    },
+    {
+      "topic": "EIP-8288 与 leanPCS：后量子签名和隐私证明的聚合路线",
+      "title": "soispoke：leanPCS 的 EIP 即将发布",
+      "note": "2026-11-16 17:22，理由是不必先说服所有人内置一个新 ISA。",
+      "url": "https://x.com/soispoke/status/2122274148038672692",
+      "date": "2026-11-16",
+      "title_en": "soispoke: a leanPCS EIP is coming soon",
+      "note_en": "At 17:22 on 2026-11-16, since it avoids having to convince everyone to enshrine a new ISA first.",
+      "topic_en": "EIP-8288 and leanPCS: an aggregation path for post-quantum signatures and privacy proofs"
+    },
+    {
+      "topic": "EIP-8288 与 leanPCS：后量子签名和隐私证明的聚合路线",
+      "title": "Toni Wahrstätter：EIP-8288 对隐私协议的意义",
+      "note": "2026-11-16 16:13：现在每笔隐私交易各带一个 ZK 证明、各自验证；有了 leanSTARK/leanPCS，可以在 mempool 聚合后一次批量验证，数据和计算都更少。",
+      "url": "https://x.com/nero_eth/status/2122256845079203897",
+      "date": "2026-11-16",
+      "title_en": "Toni Wahrstätter on what EIP-8288 means for privacy protocols",
+      "note_en": "At 16:13 on 2026-11-16: today every privacy transaction carries its own ZK proof and each is verified separately; with leanSTARK/leanPCS they can be aggregated in the mempool and batch-verified once, with less data and less compute.",
+      "topic_en": "EIP-8288 and leanPCS: an aggregation path for post-quantum signatures and privacy proofs"
+    },
+    {
+      "topic": "EIP-8288 与 leanPCS：后量子签名和隐私证明的聚合路线",
+      "title": "ethresear.ch：EIP-8288 的后量子签名聚合实测",
+      "note": "2026-11-16 23:33，MultiVM Labs 的 manel1874 在 leanVM 下证明 Falcon-512、ML-DSA-44、FORS、Raccoon-128、Raccoon-G 五种签名的验证（Apple M4 Pro、24 GiB）。前四种能放进一个 leanSTARK；Raccoon-G 约 8.39 亿见证字超过 2.68 亿的上限，只能拆成 5 个证明再递归聚合。单签名测量中只有 Falcon-512 和 FORS 的峰值内存低于 4 GiB，因此更适合浏览器钱包。作者提出钱包本地签名、交给不受信任的外部聚合器出证明的流程，并指出 8288 草案里 LEANSTARK_SCHEME 仍为保留值、MAX_LEANSTARK_DEPS_PER_WRAPPER=1 需要调整。作者也在 EIP-8288 讨论帖 23:42 引用了这组数据。",
+      "url": "https://ethresear.ch/t/exploring-post-quantum-signature-aggregation-for-eip-8288/26261",
+      "date": "2026-11-16",
+      "title_en": "ethresear.ch: benchmarking post-quantum signature aggregation for EIP-8288",
+      "note_en": "At 23:33 on 2026-11-16. manel1874 of MultiVM Labs proved verification of five schemes under leanVM (Falcon-512, ML-DSA-44, FORS, Raccoon-128 and Raccoon-G) on an Apple M4 Pro with 24 GiB. The first four fit in a single leanSTARK; Raccoon-G needs about 839 million witness words against a 268 million cap, so it was split into five proofs and aggregated recursively. In single-signature runs only Falcon-512 and FORS peaked below 4 GiB of memory, which makes them the plausible browser candidates. The post sketches a flow where the wallet signs locally and an untrusted external aggregator produces the proof, and notes that LEANSTARK_SCHEME is still reserved in the 8288 draft and MAX_LEANSTARK_DEPS_PER_WRAPPER=1 would need revisiting. The author also cited these numbers in the EIP-8288 discussion thread at 23:42.",
+      "topic_en": "EIP-8288 and leanPCS: an aggregation path for post-quantum signatures and privacy proofs"
+    },
+    {
+      "topic": "EIP-8288 与 leanPCS：后量子签名和隐私证明的聚合路线",
+      "title": "EIP-8288 讨论帖",
+      "note": "ethresear.ch：EIP-8288 的后量子签名聚合实测 2026-11-16 23:33，MultiVM Labs 的 manel1874 在 leanVM 下证明 Falcon-512、ML-DSA-44、FORS、Raccoon-128、Raccoon-G 五种签名的验证（Apple M4 Pro、24 GiB）。前四种能放进一个 leanSTARK；Raccoon-G 约 8.39 亿见证字超过 2.68 亿的上限，只能拆成 5 个证明再递归聚合。单签名测量中只有 Falcon-512 和 FORS 的峰值内存低于 4 GiB，因此更适合浏览器钱包。作者提出钱包本地签名、交给不受信任的外部聚合器出证明的流程，并指出 8288 草案里 LEANSTARK_SCHEME 仍为保留值、MAX_LEANSTARK_DEPS_PER_WRAPPER=1 需要调整。作者也在 EIP-8288 讨论帖 23:42 引用了这组数据。",
+      "url": "https://ethereum-magicians.org/t/eip-8288-frame-type-for-pq-sig-and-stark-aggregation/28723",
+      "date": "2026-11-16",
+      "title_en": "EIP-8288 discussion thread",
+      "note_en": "Ethresear.ch: benchmarking post-quantum signature aggregation for EIP-8288 at 23:33 on 2026-11-16. manel1874 of MultiVM Labs proved verification of five schemes under leanVM (Falcon-512, ML-DSA-44, FORS, Raccoon-128 and Raccoon-G) on an Apple M4 Pro with 24 GiB. The first four fit in a single leanSTARK; Raccoon-G needs about 839 million witness words against a 268 million cap, so it was split into five proofs and aggregated recursively. In single-signature runs only Falcon-512 and FORS peaked below 4 GiB of memory, which makes them the plausible browser candidates. The post sketches a flow where the wallet signs locally and an untrusted external aggregator produces the proof, and notes that LEANSTARK_SCHEME is still reserved in the 8288 draft and MAX_LEANSTARK_DEPS_PER_WRAPPER=1 would need revisiting. The author also cited these numbers in the EIP-8288 discussion thread at 23:42.",
+      "topic_en": "EIP-8288 and leanPCS: an aggregation path for post-quantum signatures and privacy proofs"
+    },
+    {
+      "topic": "EIP-8288 与 leanPCS：后量子签名和隐私证明的聚合路线",
+      "title": "Frame 交易 Breakout #8",
+      "note": "今天 2026-11-17 21:00 召开，议程包括 L1 R&D 与 Devcon 小结、EIP-8288/leanPCS 的未来兼容性、devnet 状态和规范变化，并征集钱包、工具和应用开发者的反馈。",
+      "url": "https://github.com/ethereum/pm/issues/2295",
+      "date": "2026-11-17",
+      "title_en": "Frame Transaction Breakout #8",
+      "note_en": "Meets today, 2026-11-17, at 21:00. The agenda covers an L1 R&D and Devcon recap, future compatibility with EIP-8288 and leanPCS, devnet status and spec changes, and a call for feedback from wallets, tooling and app developers.",
+      "topic_en": "EIP-8288 and leanPCS: an aggregation path for post-quantum signatures and privacy proofs"
+    },
+    {
+      "topic": "Frame 交易账户：mempool 规则、权限分级和密钥恢复",
+      "title": "EIP-8151 PR #12653 合并",
+      "note": "2026-11-16 17:09，新增公共 mempool 规则。EIP-8151 让 ecRecover 只对“无代码或 EIP-7702 委托”的账户返回结果，因此 EIP-8141 验证前缀里调用它会依赖第三方账户的代码。新规则：把每个被恢复的地址及其代码类别记为签名者依赖（tx.sender 除外），类别变化时重新验证；限制依赖同一恢复地址的待处理交易数，并按摘要分两档（针对本交易签名哈希 TXPARAM(0x08) 的恢复占保留份额，其他摘要占更小的份额，因为任何人都能拿到旧签名重放）；paymaster 的恢复每个 paymaster 只计一次。",
+      "url": "https://github.com/ethereum/EIPs/pull/12653",
+      "date": "2026-11-16",
+      "title_en": "EIP-8151 PR #12653 merged",
+      "note_en": "At 17:09 on 2026-11-16, adding public mempool rules. EIP-8151 makes ecRecover return a result only for accounts with no code or an EIP-7702 delegation, so an EIP-8141 validation prefix that calls it depends on a third party's code. The new rules record each recovered address and its code class as a signer dependency (except tx.sender) and revalidate when the class changes. They cap pending transactions per recovered address in two shares: recoveries over this transaction's signature hash, TXPARAM(0x08), use a reserved share, while other digests get a smaller one, because anyone can replay an old signature. Paymaster recoveries count once per paymaster.",
+      "topic_en": "Frame transaction accounts: mempool rules, permission levels and key recovery"
+    },
+    {
+      "topic": "Frame 交易账户：mempool 规则、权限分级和密钥恢复",
+      "title": "EIP-8141 PR #12670",
+      "note": "2026-11-16 17:51 提交，在 8141 的策略摘要、直接评估和重新验证部分加上指向 8151 规则的条目。",
+      "url": "https://github.com/ethereum/EIPs/pull/12670",
+      "date": "2026-11-16",
+      "title_en": "EIP-8141 PR #12670",
+      "note_en": "Opened at 17:51 on 2026-11-16, adds pointers to the 8151 rules in 8141's policy summary, direct evaluation and revalidation sections.",
+      "topic_en": "Frame transaction accounts: mempool rules, permission levels and key recovery"
+    },
+    {
+      "topic": "Frame 交易账户：mempool 规则、权限分级和密钥恢复",
+      "title": "EIP-8141 PR #12668",
+      "note": "2026-11-16 14:00 由 nerolation 提交：SPHINCS 账户把签名放进 ARBITRARY 条目（msg 为空），VERIFY frame 用 SIGDATACOPY 读取并按签名哈希和公钥校验后批准，不需要新的签名方案。",
+      "url": "https://github.com/ethereum/EIPs/pull/12668",
+      "date": "2026-11-16",
+      "title_en": "EIP-8141 PR #12668",
+      "note_en": "Opened by nerolation at 14:00 on 2026-11-16: a SPHINCS account puts its signature in an ARBITRARY entry with an empty msg, and its VERIFY frame reads it with SIGDATACOPY, checks it against the signature hash and its public key, and approves. No new signature scheme is needed.",
+      "topic_en": "Frame transaction accounts: mempool rules, permission levels and key recovery"
+    },
+    {
+      "topic": "Frame 交易账户：mempool 规则、权限分级和密钥恢复",
+      "title": "ethresear.ch：ERC-8403 账户即一个哈希",
+      "note": "2026-11-17 00:53，johba 给出在运行 Nethermind EIP-8141 原型的 Daisugi 上、用哈希签名 Frame 账户的回执数据（签名在 EVM 里验证，未聚合）：",
+      "url": "https://ethresear.ch/t/erc-8403-an-account-as-one-hash-and-post-quantum-keys/26147",
+      "date": "2026-11-17",
+      "title_en": "ethresear.ch: ERC-8403, an account as one hash",
+      "note_en": "At 00:53 on 2026-11-17. johba posted receipt data from a frame account with hash-based keys on Daisugi, which runs Nethermind's EIP-8141 prototype (signatures verified in the EVM, no aggregation):",
+      "topic_en": "Frame transaction accounts: mempool rules, permission levels and key recovery"
+    },
+    {
+      "topic": "Frame 交易账户：mempool 规则、权限分级和密钥恢复",
+      "title": "AnkushinDaniil 回复",
+      "note": "04:56：权限应写进叶子谓词，但必须在 VERIFY 里检查；建议在 slot 字中加一位，置位后拒绝任何指向账户自身的 sender frame，估计约多 2k gas。",
+      "url": "https://ethresear.ch/t/erc-8403-an-account-as-one-hash-and-post-quantum-keys/26147/4",
+      "date": "2026-11-17",
+      "title_en": "AnkushinDaniil replied",
+      "note_en": "At 04:56: the permission belongs in the leaf predicate but has to be checked in VERIFY. He suggests one bit in the slot word that, when set, makes validation refuse any sender frame targeting the account itself, for roughly 2k extra gas.",
+      "topic_en": "Frame transaction accounts: mempool rules, permission levels and key recovery"
+    },
+    {
+      "topic": "Frame 交易账户：mempool 规则、权限分级和密钥恢复",
+      "title": "ERC-8499 讨论",
+      "note": "2026-11-16 20:26 至 20:28，作者 johba 回应两点：签名计数是状态，助记词恢复不了，所以签名上限可能被用到的密钥类型，从助记词派生的密钥只用于给其他密钥做认证，每台设备用自己的密钥签名；恢复后找不到在用密钥时，钱包要说明尝试过哪些密钥类型、其他钱包可能找得到。",
+      "url": "https://ethereum-magicians.org/t/erc-8499-hash-based-key-derivation-from-bip-39/30375",
+      "date": "2026-11-16",
+      "title_en": "ERC-8499 discussion",
+      "note_en": "20:26 to 20:28 on 2026-11-16. Author johba addressed two points. A signature count is state and a phrase restores none, so for key types whose limit could realistically be reached, the phrase-derived key should only certify other keys and each device should sign with its own. And when a restore finds no key in use, the wallet should say which key types it tried and that another wallet might find keys it didn't.",
+      "topic_en": "Frame transaction accounts: mempool rules, permission levels and key recovery"
+    },
+    {
+      "topic": "Frame 交易账户：mempool 规则、权限分级和密钥恢复",
+      "title": "Magicians：多链同址 Safe 的检查范围",
+      "note": "2026-11-17 00:58，Zealynx 补充：除签名者和门限外，已启用的 module 可以不经签名调用 execTransactionFromModule，1.3.0 起的 guard 可以否决所有者签名的交易，所以每条链都要读 getModulesPaginated 和 guard 槽位。",
+      "url": "https://ethereum-magicians.org/t/checking-that-a-deployed-contract-still-runs-the-audited-commit/30318",
+      "date": "2026-11-17",
+      "title_en": "Magicians: what to check on a Safe deployed at the same address across chains",
+      "note_en": "At 00:58 on 2026-11-17. Zealynx added that owners and threshold aren't the whole picture: an enabled module can call execTransactionFromModule with no signatures, and from 1.3.0 a guard can veto anything the owners sign, so every chain also needs reads of getModulesPaginated and the guard slot.",
+      "topic_en": "Frame transaction accounts: mempool rules, permission levels and key recovery"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Trezor 发货合作方 Skladon 数据泄露",
+      "note": "The Block 2026-11-16 报道：约 2.7 万个 2026-08-09 至 11-07 的订单的姓名、电话、地址、邮箱和购买明细被导出，Trezor 系统和钱包备份未受影响，已有用户接到诈骗电话。买过的用户对任何“订单相关”的联系保持警惕，绝不提供助记词。",
+      "url": "https://trezor.io/blog/news/data-breach-at-trezor-shipping-partner-skladon",
+      "date": "2026-11-16",
+      "title_en": "Data breach at Trezor shipping partner Skladon",
+      "note_en": "Reported by The Block on 2026-11-16: names, phone numbers, addresses, emails and purchase details for about 27,000 orders placed from 2026-08-09 to 11-07 were exported. Trezor's systems and wallet backups weren't affected, but some customers have already had scam calls. If you ordered in that window, treat any order-related contact as suspicious and never share your recovery phrase.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "The Block",
+      "note": "Trezor 发货合作方 Skladon 数据泄露，The Block 2026-11-16 报道：约 2.7 万个 2026-08-09 至 11-07 的订单的姓名、电话、地址、邮箱和购买明细被导出，Trezor 系统和钱包备份未受影响，已有用户接到诈骗电话。买过的用户对任何“订单相关”的联系保持警惕，绝不提供助记词。",
+      "url": "https://www.theblock.co/news/business/2026-11-16-trezor-hit-another-shipping-partner-data-leak-affecting-27000-skladon-orders-441524",
+      "date": "2026-11-16",
+      "title_en": "The Block",
+      "note_en": "Data breach at Trezor shipping partner Skladon, reported by The Block on 2026-11-16: names, phone numbers, addresses, emails and purchase details for about 27,000 orders placed from 2026-08-09 to 11-07 were exported. Trezor's systems and wallet backups weren't affected, but some customers have already had scam calls. If you ordered in that window, treat any order-related contact as suspicious and never share your recovery phrase.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Peraire-Bueno 兄弟 MEV 案被判无罪",
+      "note": "2026-11-16：法官认为检方未能证明 2023 年那次约 2500 万美元的 MEV-Boost 利用中存在重大虚假陈述，判决电信欺诈等指控不成立。",
+      "url": "https://www.theblock.co/news/regulation/2026-11-16-peraire-bueno-brothers-acquitted-ethereum-mev-wire-fraud-441425",
+      "date": "2026-11-16",
+      "title_en": "The Peraire-Bueno brothers were acquitted in the MEV case",
+      "note_en": "On 2026-11-16. The judge found prosecutors hadn't shown any material misrepresentation in the 2023 MEV-Boost exploit worth about $25 million, so the wire fraud and related charges failed.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 收录 Codex 和 Doma",
+      "note": "2026-11-16 21:53：两者都因部署的 fault proof 不可用而列入 Others，同一个 Conduit 多签 4/11 可无延迟升级核心合约，用户没有退出窗口。使用这类链时要知道提款依赖白名单提议者。",
+      "url": "https://x.com/ethbeat_org/status/2122342381215195505",
+      "date": "2026-11-16",
+      "title_en": "ETHBEAT added Codex and Doma",
+      "note_en": "At 21:53 on 2026-11-16. Both sit in Others because their deployed fault proofs don't work, and the same Conduit 4-of-11 multisig can upgrade core contracts with no delay and no exit window. If you use these chains, know that withdrawals depend on whitelisted proposers.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 转发 donnoh 的 Devcon 演讲片段",
+      "note": "2026-11-17 00:01：即使交易金额加密，公开的存款也会给可转出金额设上限，多笔交易的上限叠加后可能推出隐藏金额。用隐私协议时避免金额和时间上的关联。",
+      "url": "https://x.com/ethbeat_org/status/2122374447030055412",
+      "date": "2026-11-17",
+      "title_en": "ETHBEAT shared a clip of donnoh's Devcon talk",
+      "note_en": "At 00:01 on 2026-11-17: even with encrypted amounts, a public deposit caps what you can send, and combining those caps across transactions can sometimes reveal the hidden amounts. When using privacy protocols, avoid linking amounts and timing.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie 每周活跃应用",
+      "note": "2026-11-16 22:16：11-09 至 11-15 共 1,219 个活跃应用，跨链 517、以太坊 L1 345、Base 117、Arbitrum 66、Starknet 25。",
+      "url": "https://x.com/growthepie_eth/status/2122348106976993529",
+      "date": "2026-11-16",
+      "title_en": "growthepie weekly active apps",
+      "note_en": "At 22:16 on 2026-11-16: 1,219 active apps for 11-09 to 11-15, with 517 cross-chain, 345 on Ethereum L1, 117 on Base, 66 on Arbitrum and 25 on Starknet.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPIP #132",
+      "note": "11-18 23:00 召开；abcoathup 评论 2026-11-17 07:03 主张用 AI 审查 PR、自动分配编号、通过检查后自动合并。",
+      "url": "https://github.com/ethereum/pm/issues/2288",
+      "date": "2026-11-17",
+      "title_en": "EIPIP #132",
+      "note_en": "Meets at 23:00 on 11-18. In a comment at 07:03 on 2026-11-17, abcoathup argues for AI review of PRs, automatic number assignment and auto-merging once checks pass.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "abcoathup 评论",
+      "note": "EIPIP #132 11-18 23:00 召开；abcoathup 评论 2026-11-17 07:03 主张用 AI 审查 PR、自动分配编号、通过检查后自动合并。",
+      "url": "https://github.com/ethereum/pm/issues/2288#issuecomment-6933236689",
+      "date": "2026-11-17",
+      "title_en": "comment",
+      "note_en": "EIPIP #132 meets at 23:00 on 11-18. In a comment at 07:03 on 2026-11-17, abcoathup argues for AI review of PRs, automatic number assignment and auto-merging once checks pass.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "FOCIL Breakout #46",
+      "note": "今天 20:00；ACDT #104 11-23 21:00，CL 部分延续 consensus-specs #5770 和 #5820。",
+      "url": "https://github.com/ethereum/pm/issues/2289",
+      "date": "2026-11-17",
+      "title_en": "FOCIL Breakout #46",
+      "note_en": "Is today at 20:00; ACDT #104 is at 21:00 on 11-23, with the CL part carrying over consensus-specs #5770 and #5820.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDT #104",
+      "note": "FOCIL Breakout #46 今天 20:00；ACDT #104 11-23 21:00，CL 部分延续 consensus-specs #5770 和 #5820。",
+      "url": "https://github.com/ethereum/pm/issues/2306",
+      "date": "2026-11-17",
+      "title_en": "ACDT #104",
+      "note_en": "FOCIL Breakout #46 is today at 20:00; ACDT #104 is at 21:00 on 11-23, with the CL part carrying over consensus-specs #5770 and #5820.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPsInsight：RPC Standards #38 回顾",
+      "note": "2026-11-17 00:24：一批文档、修复和 eth_simulate PR 准备合并。",
+      "url": "https://x.com/EIPsInsight/status/2122380221030818199",
+      "date": "2026-11-17",
+      "title_en": "EIPsInsight: RPC Standards #38 recap",
+      "note_en": "At 00:24 on 2026-11-17: a batch of docs, fixes and eth_simulate PRs is set to merge.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8426 Wallet Pass 扩展",
+      "note": "2026-11-17 04:36 至 06:54：作者演示把 NFT 卡片放进 Apple/Google Wallet，在锁屏上点按即可投票，并已修复审阅者复现的 4 个问题（npm 0.5.1）。",
+      "url": "https://ethereum-magicians.org/t/erc-8426-wallet-pass-extension-for-nfts/29358",
+      "date": "2026-11-17",
+      "title_en": "ERC-8426 Wallet Pass extension",
+      "note_en": "04:36 to 06:54 on 2026-11-17: the author demoed an NFT card in Apple or Google Wallet that lets you vote with a tap from the lock screen, and fixed four issues a reviewer reproduced (npm 0.5.1).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Barnabé Monnot 回应 Mike Neuder",
+      "note": "2026-11-16 13:50：Frames 给执行层带来密码学敏捷性，先给一种签名方案特权并不排斥其他方案；共识层敏捷性较低，主要问题是性能，比如是否必须支持 DVT（签名大小翻倍）。",
+      "url": "https://x.com/barnabemonnot/status/2122220858362007959",
+      "date": "2026-11-16",
+      "title_en": "Barnabé Monnot responding to Mike Neuder",
+      "note_en": "At 13:50 on 2026-11-16: Frames give the execution layer cryptographic agility, and privileging one signature scheme early doesn't exclude others. The consensus layer has less agility built in, and the main question there is performance, for example whether DVT support is required, which doubles signature sizes.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Caspar：以太坊的后量子准备主要是优先级问题",
+      "note": "2026-11-16 22:05。",
+      "url": "https://x.com/casparschwa/status/2122345278434881857",
+      "date": "2026-11-16",
+      "title_en": "Caspar: Ethereum's post-quantum readiness is mostly a question of prioritization",
+      "note_en": "At 22:05 on 2026-11-16.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "lightclients 转发 kennyistyping",
+      "note": "2026-11-16 23:57：“为了 meme 而急着上 PQ 似乎是个坏主意”。",
+      "url": "https://x.com/lightclients/status/2122373454733390205",
+      "date": "2026-11-16",
+      "title_en": "lightclients reposted kennyistyping",
+      "note_en": "At 23:57 on 2026-11-16: \"Rushing into PQ for memetic reasons seems like a bad idea.\"",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Pooja Ranjan 的 ACDT 小结",
+      "note": "2026-11-16 23:13：核心问题是以太坊如何在演进中不意外破坏现有应用，并让开发者和企业有足够信息和时间准备。",
+      "url": "https://x.com/poojaranjan19/status/2122362364028674141",
+      "date": "2026-11-16",
+      "title_en": "Pooja Ranjan's ACDT takeaway",
+      "note_en": "At 23:13 on 2026-11-16: the core question is how Ethereum can evolve without unexpectedly breaking existing apps while giving developers and enterprises enough information and time to prepare.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Hegotá 吉祥物帖",
+      "note": "2026-11-17 02:59，abcoathup 提到 Hegotá 范围可能因 pqai 调整，包括可能推迟 FOCIL，甚至把升级拆成执行层和共识层两次。",
+      "url": "https://ethereum-magicians.org/t/mascot-needed-for-hegota-upgrade/28327",
+      "date": "2026-11-17",
+      "title_en": "The Hegotá mascot thread",
+      "note_en": "At 02:59 on 2026-11-17: abcoathup notes Hegotá's scope may change for pqai, possibly delaying FOCIL or even splitting the upgrade into separate execution and consensus layer upgrades.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LambdaClass：Mission 2028",
+      "note": "2026-11-17 01:33，后量子系列首篇，讲 ethrex 和 ethlambda 如何帮助以太坊在 2028 年前做好后量子准备。",
+      "url": "https://x.com/class_lambda/status/2122397619964010670",
+      "date": "2026-11-17",
+      "title_en": "LambdaClass: Mission 2028",
+      "note_en": "At 01:33 on 2026-11-17, the first in a post-quantum series on how ethrex and ethlambda can help Ethereum be post-quantum ready by 2028.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/exploring-post-quantum-signature-aggregation-for-eip-8288/26261",
+    "credit": "ethresear.ch，Manuel B. Santos（MultiVM Labs）",
+    "local_path": "assets/2026-11-17.jpg",
+    "credit_en": "ethresear.ch, Manuel B. Santos (MultiVM Labs)"
+  },
+  "keywords_en": [
+    "ACDT #103",
+    "EIP-8037/8038",
+    "EIP-8288 leanPCS",
+    "EIP-8141 frame transactions",
+    "EIP-8151"
+  ],
+  "summary_en": "ACDT #103 heard the audit results on the Glamsterdam repricing. ChainSecurity and the EF's internal search found about 200 issues between them, most of them easy to mitigate, but the call didn't decide whether to pull EIP-8037 from Amsterdam and left that to ACDE on 11-19. Vitalik came out in support of EIP-8037 and listed protocol features he expects to change, including a stateful ecrecover and possibly EIP-8141 as the only transaction type. He also says he's now a \"total bull\" on the leanPCS route for EIP-8288, which is on the agenda for tonight's Frame Transaction Breakout #8 at 21:00."
+}
