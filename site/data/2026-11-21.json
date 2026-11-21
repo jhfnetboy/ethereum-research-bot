@@ -1,0 +1,487 @@
+{
+  "date": "2026-11-21",
+  "keywords": [
+    "ACDE #249",
+    "EIP-8037 去留",
+    "Hegotá 范围",
+    "leanSPHINCS 依赖 frame",
+    "MAX_VERIFY_GAS"
+  ],
+  "summary": "ACDE #249 形成粗略共识：Glamsterdam 按现有规范推进，EIP-8037 不改，Hoodi 测试网分叉暂定 12 月 14 日那一周，下次 ACDC 做最终决定；ChainSecurity 公开的影响评估显示 200 个问题里 182 个与写死的 gas 预算有关。Hegotá 方面，“取消 frames 改为内置 PQ”的选项无人支持，各客户端团队需在下周末前提交书面立场，FOCIL 去留交给接下来两次 ACDC。把 EIP-8141 的 MAX_VERIFY_GAS 提到 30 万的 PR 补齐了 7 个执行层客户端的基准，最坏情况拒绝耗时中位数 3.1 到 5.3 毫秒。",
+  "items": [
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "Besu 关于 EIP-8037 和 Glamsterdam 的立场",
+      "note": "2026-11-19 14:26，jflo 在 ACDE 议题下给出两个选项：推迟 Glamsterdam 并极窄地修改 EIP-8037 中“剩余 gas 会增加”的新行为（放弃 Sepolia），或把 EIP-8037 移出 Glamsterdam 放进 Hegotá。Besu 倾向前者，认为写死 gas 价格的合约损坏可以接受，但 try/catch 类函数被破坏不可接受。Ansgar 的回复 19:26 指出还有“按现状发布”的第三个选项，且修改 EIP-8037 只能缓解少数受影响合约，多数问题来自写死的 gas 价格。",
+      "url": "https://github.com/ethereum/pm/issues/2285#issuecomment-7002670394",
+      "date": "2026-11-19",
+      "title_en": "Besu's position on EIP-8037 and Glamsterdam",
+      "note_en": "2026-11-19 14:26. jflo posted two options on the ACDE issue: delay Glamsterdam and make an extremely narrow change to EIP-8037's new \"remaining gas can increase\" behaviour (sacrificing Sepolia), or move EIP-8037 out of Glamsterdam into Hegotá. Besu prefers the first. It sees broken contracts with hard-coded gas pricing as an acceptable loss, but not broken try/catch-style functions. Ansgar's reply at 19:26 pointed out a third option, shipping as is, and noted that changing EIP-8037 would only help a minority of affected contracts, since most breakage comes from hard-coded gas pricing.",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "Ansgar 的回复",
+      "note": "Besu 关于 EIP-8037 和 Glamsterdam 的立场 2026-11-19 14:26，jflo 在 ACDE 议题下给出两个选项：推迟 Glamsterdam 并极窄地修改 EIP-8037 中“剩余 gas 会增加”的新行为（放弃 Sepolia），或把 EIP-8037 移出 Glamsterdam 放进 Hegotá。Besu 倾向前者，认为写死 gas 价格的合约损坏可以接受，但 try/catch 类函数被破坏不可接受。Ansgar 的回复 19:26 指出还有“按现状发布”的第三个选项，且修改 EIP-8037 只能缓解少数受影响合约，多数问题来自写死的 gas 价格。",
+      "url": "https://github.com/ethereum/pm/issues/2285#issuecomment-7009075594",
+      "date": "2026-11-19",
+      "title_en": "Ansgar's reply",
+      "note_en": "Besu's position on EIP-8037 and Glamsterdam, 2026-11-19 14:26. jflo posted two options on the ACDE issue: delay Glamsterdam and make an extremely narrow change to EIP-8037's new \"remaining gas can increase\" behaviour (sacrificing Sepolia), or move EIP-8037 out of Glamsterdam into Hegotá. Besu prefers the first. It sees broken contracts with hard-coded gas pricing as an acceptable loss, but not broken try/catch-style functions. Ansgar's reply at 19:26 pointed out a third option, shipping as is, and noted that changing EIP-8037 would only help a minority of affected contracts, since most breakage comes from hard-coded gas pricing.",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "ACDE #249 会议纪要",
+      "note": "2026-11-20 00:06 发布（自动生成的 Zoom 纪要，录像）：",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-249-november-19-2026/30071/3",
+      "date": "2026-11-20",
+      "title_en": "ACDE #249 meeting summary",
+      "note_en": "Posted 2026-11-20 00:06 (auto-generated Zoom summary; recording):",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "录像",
+      "note": "ACDE #249 会议纪要 2026-11-20 00:06 发布（自动生成的 Zoom 纪要，录像）：",
+      "url": "https://youtube.com/watch?v=_1vhi09peLA",
+      "date": "2026-11-20",
+      "title_en": "recording",
+      "note_en": "ACDE #249 meeting summary, posted 2026-11-20 00:06 (auto-generated Zoom summary; recording):",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "EIPsInsight 的 ACDE #249 回顾",
+      "note": "2026-11-20 00:15：Glamsterdam 按现有规范、不做修改；Hoodi 暂定 12 月 14 日那一周；完整回顾和逐字稿。",
+      "url": "https://x.com/EIPsInsight/status/2123465286523515114",
+      "date": "2026-11-20",
+      "title_en": "EIPsInsight's ACDE #249 recap",
+      "note_en": "2026-11-20 00:15: Glamsterdam proceeds on the current spec with no changes, and Hoodi is tentatively set for the week of December 14. Full recap and transcript.",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "完整回顾和逐字稿",
+      "note": "EIPsInsight 的 ACDE #249 回顾 2026-11-20 00:15：Glamsterdam 按现有规范、不做修改；Hoodi 暂定 12 月 14 日那一周；完整回顾和逐字稿。",
+      "url": "https://eipsinsight.com/calls/acde/249",
+      "date": "2026-11-20",
+      "title_en": "Full recap and transcript",
+      "note_en": "EIPsInsight's ACDE #249 recap, 2026-11-20 00:15: Glamsterdam proceeds on the current spec with no changes, and Hoodi is tentatively set for the week of December 14. Full recap and transcript.",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "ChainSecurity：EIP-8037 与 EIP-8038 影响评估",
+      "note": "X 帖 2026-11-19 17:39：EF 委托的评估（报告完成于 11-18）结合 AI 代理审查和一年主网交易轨迹回放，共 200 个问题，3 个高危、30 个中危、167 个低危，没有严重级；受影响的有跨链桥和消息系统、钱包、交易所、治理、预言机、质押协议和链下服务，后果从运营中断到资金锁定。大多数可通过改配置修复，24 个需要升级合约或迁移。",
+      "url": "https://www.chainsecurity.com/security-audit/eip-8037-eip-8038-impact-assessment/",
+      "date": "2026-11-19",
+      "title_en": "ChainSecurity: EIP-8037 and EIP-8038 impact assessment",
+      "note_en": "X post 2026-11-19 17:39. The EF-commissioned assessment (report completed 11-18) combined AI agent reviews with replays of a year of mainnet transaction traces. It covers 200 findings: 3 High, 30 Medium, 167 Low and none Critical. Affected systems include bridges and messaging, wallets, exchanges, governance, oracles, staking protocols and off-chain services, with consequences ranging from interrupted operations to locked funds. Most can be fixed through configuration; 24 need contract upgrades or migration.",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "X 帖",
+      "note": "ChainSecurity：EIP-8037 与 EIP-8038 影响评估，X 帖 2026-11-19 17:39：EF 委托的评估（报告完成于 11-18）结合 AI 代理审查和一年主网交易轨迹回放，共 200 个问题，3 个高危、30 个中危、167 个低危，没有严重级；受影响的有跨链桥和消息系统、钱包、交易所、治理、预言机、质押协议和链下服务，后果从运营中断到资金锁定。大多数可通过改配置修复，24 个需要升级合约或迁移。",
+      "url": "https://x.com/chain_security/status/2123365533554729248",
+      "date": "2026-11-19",
+      "title_en": "X post",
+      "note_en": "ChainSecurity: EIP-8037 and EIP-8038 impact assessment, X post 2026-11-19 17:39. The EF-commissioned assessment (report completed 11-18) combined AI agent reviews with replays of a year of mainnet transaction traces. It covers 200 findings: 3 High, 30 Medium, 167 Low and none Critical. Affected systems include bridges and messaging, wallets, exchanges, governance, oracles, staking protocols and off-chain services, with consequences ranging from interrupted operations to locked funds. Most can be fixed through configuration; 24 need contract upgrades or migration.",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "ACDE #249：Glamsterdam 保留 EIP-8037，Gas 重新定价的影响摊开",
+      "title": "Toni：Glamsterdam 为什么一再推迟",
+      "note": "2026-11-20 19:02：原说 2026 年初上线，现在主网最早 2027 年 1 月中旬，他发长帖复盘原因。",
+      "url": "https://x.com/nero_eth/status/2123748758911607020",
+      "date": "2026-11-20",
+      "title_en": "Toni on why Glamsterdam kept slipping",
+      "note_en": "2026-11-20 19:02: it was meant to ship in early 2026 and now mid-January 2027 is the earliest mainnet date. He wrote a long thread looking at why.",
+      "topic_en": "ACDE #249: Glamsterdam keeps EIP-8037, and the cost of gas repricing comes into view"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "ACDE #249",
+      "note": "同一场 ACDE #249 讨论 Hegotá 执行层范围，Ansgar 公布了对比 5 个选项的幻灯片 2026-11-19 22:51：",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-249-november-19-2026/30071/3",
+      "date": "2026-11-19",
+      "title_en": "ACDE #249",
+      "note_en": "The same ACDE #249 discussed the execution-layer scope of Hegotá, and Ansgar shared the slide comparing 5 options at 2026-11-19 22:51:",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "Ansgar 公布了对比 5 个选项的幻灯片",
+      "note": "同一场 ACDE #249 讨论 Hegotá 执行层范围，Ansgar 公布了对比 5 个选项的幻灯片 2026-11-19 22:51：",
+      "url": "https://github.com/ethereum/pm/issues/2285#issuecomment-7014240900",
+      "date": "2026-11-19",
+      "title_en": "Ansgar shared the slide comparing 5 options",
+      "note_en": "The same ACDE #249 discussed the execution-layer scope of Hegotá, and Ansgar shared the slide comparing 5 options at 2026-11-19 22:51:",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "Magicians 讨论帖：leanSPHINCS 依赖 frame",
+      "note": "2026-11-19 17:59 由 ilitteri 发起，对应 PR #12672；他也在 ACDE 议题下申请介绍（11-19 04:58）。帖中说明 leanSPHINCS 签名有 7,740 字节，长期靠聚合解决，但账户的验证代码决定了去哪里找签名，所以接口要先定。",
+      "url": "https://ethereum-magicians.org/t/add-eip-dependency-frames-for-leansphincs-signatures/30448",
+      "date": "2026-11-19",
+      "title_en": "Magicians thread: leanSPHINCS dependency frames",
+      "note_en": "Opened by ilitteri at 2026-11-19 17:59 for PR #12672. He also asked for a slot on the ACDE agenda (11-19 04:58). The thread notes that a leanSPHINCS signature is 7,740 bytes and the lasting fix is aggregation, but an account's validation code fixes where it looks for a signature, so the interface has to be settled first.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "PR #12672",
+      "note": "Magicians 讨论帖：leanSPHINCS 依赖 frame 2026-11-19 17:59 由 ilitteri 发起，对应 PR #12672；他也在 ACDE 议题下申请介绍（11-19 04:58）。帖中说明 leanSPHINCS 签名有 7,740 字节，长期靠聚合解决，但账户的验证代码决定了去哪里找签名，所以接口要先定。",
+      "url": "https://github.com/ethereum/EIPs/pull/12672",
+      "date": "2026-11-19",
+      "title_en": "PR #12672",
+      "note_en": "Magicians thread: leanSPHINCS dependency frames, opened by ilitteri at 2026-11-19 17:59 for PR #12672. He also asked for a slot on the ACDE agenda (11-19 04:58). The thread notes that a leanSPHINCS signature is 7,740 bytes and the lasting fix is aggregation, but an account's validation code fixes where it looks for a signature, so the interface has to be settled first.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "ACDE 议题下申请介绍",
+      "note": "Magicians 讨论帖：leanSPHINCS 依赖 frame 2026-11-19 17:59 由 ilitteri 发起，对应 PR #12672；他也在 ACDE 议题下申请介绍（11-19 04:58）。帖中说明 leanSPHINCS 签名有 7,740 字节，长期靠聚合解决，但账户的验证代码决定了去哪里找签名，所以接口要先定。",
+      "url": "https://github.com/ethereum/pm/issues/2285#issuecomment-6992821759",
+      "date": "2026-11-19",
+      "title_en": "asked for a slot on the ACDE agenda",
+      "note_en": "Magicians thread: leanSPHINCS dependency frames, opened by ilitteri at 2026-11-19 17:59 for PR #12672. He also asked for a slot on the ACDE agenda (11-19 04:58). The thread notes that a leanSPHINCS signature is 7,740 bytes and the lasting fix is aggregation, but an account's validation code fixes where it looks for a signature, so the interface has to be settled first.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "AnkushinDaniil 提问",
+      "note": "11-20 21:10：是否复用 EIP-8288 的 DEP_VERIFY_FRAME_MODE 和三元组格式，方案能否保持为字段。",
+      "url": "https://ethereum-magicians.org/t/add-eip-dependency-frames-for-leansphincs-signatures/30448/2",
+      "date": "2026-11-21",
+      "title_en": "AnkushinDaniil asked",
+      "note_en": "At 11-20 21:10 whether it reuses EIP-8288's DEP_VERIFY_FRAME_MODE and triple layout, and whether the scheme can stay a field.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "ilitteri 回复",
+      "note": "22:17：都会这样写，目标是这个 EIP 下有效的 frame 在 8288 下字节完全一致；每个三元组都带方案字段，以后加新方案只需分叉启用一个新 id，不改 frame 或交易格式；账户仍可在 VERIFY 里用 EVM 验证作为不需要分叉的路径。",
+      "url": "https://ethereum-magicians.org/t/add-eip-dependency-frames-for-leansphincs-signatures/30448/3",
+      "date": "2026-11-21",
+      "title_en": "ilitteri replied",
+      "note_en": "At 22:17 that both are how the draft is being written: a frame valid under this EIP should be byte-identical under 8288. Every triple carries its scheme, so a later scheme only needs one new id enabled by a fork, with no change to the frame or transaction format. Accounts can still verify in the EVM inside VERIFY as the no-fork path.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "Toni 在 Magicians 的意见",
+      "note": "FOCIL 争论继续：Toni 在 Magicians 的意见 2026-11-18 13:57（X 版 14:07）主张 PQ 走“精简”分叉（Frames、leanVM、DC），FOCIL 等 PQ 共识形态明确后再回来，只同时发布加固和简化。Ladislaus 反驳 18:17：还没说清推迟 FOCIL 能加速什么，社区对 FOCIL 支持压倒性，现在重开 SFI 决定为时过早。fradamt 15:10 支持集中精力做 PQ 和加固。",
+      "url": "https://ethereum-magicians.org/t/thoughts-on-pqai-hegota-and-focil/30421/2",
+      "date": "2026-11-18",
+      "title_en": "Toni's comment on Magicians",
+      "note_en": "The FOCIL debate continued. Toni's comment on Magicians at 2026-11-18 13:57 (X version at 14:07) argued for doing PQ as \"slim\" feature forks (Frames, leanVM, DC), bringing FOCIL back once PQ consensus is clearer, and shipping only hardening and simplifications alongside. Ladislaus pushed back at 18:17: nobody has shown what deferring FOCIL would speed up, community support for FOCIL has been overwhelming, and reopening SFI decisions now is premature. fradamt at 15:10 backed a singular focus on PQ and hardening.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "X 版",
+      "note": "FOCIL 争论继续：Toni 在 Magicians 的意见 2026-11-18 13:57（X 版 14:07）主张 PQ 走“精简”分叉（Frames、leanVM、DC），FOCIL 等 PQ 共识形态明确后再回来，只同时发布加固和简化。Ladislaus 反驳 18:17：还没说清推迟 FOCIL 能加速什么，社区对 FOCIL 支持压倒性，现在重开 SFI 决定为时过早。fradamt 15:10 支持集中精力做 PQ 和加固。",
+      "url": "https://x.com/nero_eth/status/2122949842750119997",
+      "date": "2026-11-18",
+      "title_en": "X version",
+      "note_en": "The FOCIL debate continued. Toni's comment on Magicians at 2026-11-18 13:57 (X version at 14:07) argued for doing PQ as \"slim\" feature forks (Frames, leanVM, DC), bringing FOCIL back once PQ consensus is clearer, and shipping only hardening and simplifications alongside. Ladislaus pushed back at 18:17: nobody has shown what deferring FOCIL would speed up, community support for FOCIL has been overwhelming, and reopening SFI decisions now is premature. fradamt at 15:10 backed a singular focus on PQ and hardening.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "Ladislaus 反驳",
+      "note": "FOCIL 争论继续：Toni 在 Magicians 的意见 2026-11-18 13:57（X 版 14:07）主张 PQ 走“精简”分叉（Frames、leanVM、DC），FOCIL 等 PQ 共识形态明确后再回来，只同时发布加固和简化。Ladislaus 反驳 18:17：还没说清推迟 FOCIL 能加速什么，社区对 FOCIL 支持压倒性，现在重开 SFI 决定为时过早。fradamt 15:10 支持集中精力做 PQ 和加固。",
+      "url": "https://ethereum-magicians.org/t/thoughts-on-pqai-hegota-and-focil/30421/3",
+      "date": "2026-11-18",
+      "title_en": "Ladislaus pushed back",
+      "note_en": "The FOCIL debate continued. Toni's comment on Magicians at 2026-11-18 13:57 (X version at 14:07) argued for doing PQ as \"slim\" feature forks (Frames, leanVM, DC), bringing FOCIL back once PQ consensus is clearer, and shipping only hardening and simplifications alongside. Ladislaus pushed back at 18:17: nobody has shown what deferring FOCIL would speed up, community support for FOCIL has been overwhelming, and reopening SFI decisions now is premature. fradamt at 15:10 backed a singular focus on PQ and hardening.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "fradamt",
+      "note": "FOCIL 争论继续：Toni 在 Magicians 的意见 2026-11-18 13:57（X 版 14:07）主张 PQ 走“精简”分叉（Frames、leanVM、DC），FOCIL 等 PQ 共识形态明确后再回来，只同时发布加固和简化。Ladislaus 反驳 18:17：还没说清推迟 FOCIL 能加速什么，社区对 FOCIL 支持压倒性，现在重开 SFI 决定为时过早。fradamt 15:10 支持集中精力做 PQ 和加固。",
+      "url": "https://x.com/fradamt/status/2122965773698154776",
+      "date": "2026-11-18",
+      "title_en": "fradamt",
+      "note_en": "The FOCIL debate continued. Toni's comment on Magicians at 2026-11-18 13:57 (X version at 14:07) argued for doing PQ as \"slim\" feature forks (Frames, leanVM, DC), bringing FOCIL back once PQ consensus is clearer, and shipping only hardening and simplifications alongside. Ladislaus pushed back at 18:17: nobody has shown what deferring FOCIL would speed up, community support for FOCIL has been overwhelming, and reopening SFI decisions now is premature. fradamt at 15:10 backed a singular focus on PQ and hardening.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "EIP-8502：动态个体合并激励",
+      "note": "（PR #12673）2026-11-19 02:11，aelowsson 提出在验证者数量高于目标时，每个 epoch 从验证者余额中扣减一笔激励：32 ETH 验证者扣得最多（不超过满参与时的 attestation 奖励），随有效余额线性下降，到 2048 ETH 为零，以减少网络承载和聚合投票的负担。他说 FOCIL 按验证者挑选包含者，会让验证者倾向不合并。11-20 16:43 回复称目标是 I* 分叉的 PFI；gregk 在讨论中提到 EIP-8148 已 CFI 进 Hegotá。",
+      "url": "https://ethereum-magicians.org/t/eip-8502-dynamic-individual-consolidation-incentive/30436",
+      "date": "2026-11-19",
+      "title_en": "EIP-8502: Dynamic individual consolidation incentive",
+      "note_en": "(PR #12673), 2026-11-19 02:11. aelowsson proposes that while the validator count is above target, an incentive is deducted from validator balances each epoch: largest for 32 ETH validators (up to their attestation reward at full participation), falling linearly with effective balance to zero at 2048 ETH, to reduce the load of carrying and aggregating votes. He noted that FOCIL picks includers per validator, which pushes validators to stay unconsolidated. In a reply at 11-20 16:43 he said PFI for the I* fork is the target; gregk mentioned in the thread that EIP-8148 is already CFI'd for Hegotá.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "PR #12673",
+      "note": "EIP-8502：动态个体合并激励（PR #12673）2026-11-19 02:11，aelowsson 提出在验证者数量高于目标时，每个 epoch 从验证者余额中扣减一笔激励：32 ETH 验证者扣得最多（不超过满参与时的 attestation 奖励），随有效余额线性下降，到 2048 ETH 为零，以减少网络承载和聚合投票的负担。他说 FOCIL 按验证者挑选包含者，会让验证者倾向不合并。11-20 16:43 回复称目标是 I* 分叉的 PFI；gregk 在讨论中提到 EIP-8148 已 CFI 进 Hegotá。",
+      "url": "https://github.com/ethereum/EIPs/pull/12673",
+      "date": "2026-11-19",
+      "title_en": "PR #12673",
+      "note_en": "EIP-8502: Dynamic individual consolidation incentive (PR #12673), 2026-11-19 02:11. aelowsson proposes that while the validator count is above target, an incentive is deducted from validator balances each epoch: largest for 32 ETH validators (up to their attestation reward at full participation), falling linearly with effective balance to zero at 2048 ETH, to reduce the load of carrying and aggregating votes. He noted that FOCIL picks includers per validator, which pushes validators to stay unconsolidated. In a reply at 11-20 16:43 he said PFI for the I* fork is the target; gregk mentioned in the thread that EIP-8148 is already CFI'd for Hegotá.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Hegotá 范围与 PQ 签名：frames 是中心，FOCIL 去留待定",
+      "title": "11-20 16:43 回复",
+      "note": "EIP-8502：动态个体合并激励（PR #12673）2026-11-19 02:11，aelowsson 提出在验证者数量高于目标时，每个 epoch 从验证者余额中扣减一笔激励：32 ETH 验证者扣得最多（不超过满参与时的 attestation 奖励），随有效余额线性下降，到 2048 ETH 为零，以减少网络承载和聚合投票的负担。他说 FOCIL 按验证者挑选包含者，会让验证者倾向不合并。11-20 16:43 回复称目标是 I* 分叉的 PFI；gregk 在讨论中提到 EIP-8148 已 CFI 进 Hegotá。",
+      "url": "https://ethereum-magicians.org/t/eip-8502-dynamic-individual-consolidation-incentive/30436/7",
+      "date": "2026-11-19",
+      "title_en": "reply at 11-20 16:43",
+      "note_en": "EIP-8502: Dynamic individual consolidation incentive (PR #12673), 2026-11-19 02:11. aelowsson proposes that while the validator count is above target, an incentive is deducted from validator balances each epoch: largest for 32 ETH validators (up to their attestation reward at full participation), falling linearly with effective balance to zero at 2048 ETH, to reduce the load of carrying and aggregating votes. He noted that FOCIL picks includers per validator, which pushes validators to stay unconsolidated. In a reply at 11-20 16:43 he said PFI for the I* fork is the target; gregk mentioned in the thread that EIP-8148 is already CFI'd for Hegotá.",
+      "topic_en": "Hegotá scope and PQ signatures: frames at the centre, FOCIL undecided"
+    },
+    {
+      "topic": "Frame 交易的验证 gas 与 FOCIL 保护",
+      "title": "PR #12644：MAX_VERIFY_GAS 从 10 万提到 30 万",
+      "note": "2026-11-18 13:08，Toni 认为 30 万没问题，且不应受 FOCIL 限制，可以 FOCIL 继续只支持 10 万；20:40 补充前提是所有客户端都没问题。",
+      "url": "https://github.com/ethereum/EIPs/pull/12644#issuecomment-6970643954",
+      "date": "2026-11-18",
+      "title_en": "PR #12644: raise MAX_VERIFY_GAS from 100k to 300k",
+      "note_en": "2026-11-18 13:08. Toni said 300k is fine and shouldn't depend on FOCIL limits; FOCIL can keep supporting only 100k. He clarified at 20:40 that this assumes it is fine on all clients.",
+      "topic_en": "Verification gas and FOCIL protection for frame transactions"
+    },
+    {
+      "topic": "Frame 交易的验证 gas 与 FOCIL 保护",
+      "title": "20:40 补充",
+      "note": "PR #12644：MAX_VERIFY_GAS 从 10 万提到 30 万 2026-11-18 13:08，Toni 认为 30 万没问题，且不应受 FOCIL 限制，可以 FOCIL 继续只支持 10 万；20:40 补充前提是所有客户端都没问题。",
+      "url": "https://github.com/ethereum/EIPs/pull/12644#issuecomment-6980271272",
+      "date": "2026-11-18",
+      "title_en": "clarified at 20:40",
+      "note_en": "PR #12644: raise MAX_VERIFY_GAS from 100k to 300k, 2026-11-18 13:08. Toni said 300k is fine and shouldn't depend on FOCIL limits; FOCIL can keep supporting only 100k. He clarified at 20:40 that this assumes it is fine on all clients.",
+      "topic_en": "Verification gas and FOCIL protection for frame transactions"
+    },
+    {
+      "topic": "Frame 交易的验证 gas 与 FOCIL 保护",
+      "title": "AnkushinDaniil 的基准",
+      "note": "2026-11-19 06:37：在同一台机器上对 7 个执行层客户端测最坏情况（30 万 gas、VERIFY 失败、Keccak 密集）的 frame 交易，拒绝耗时中位数 3.1 到 5.3 毫秒。11-20 20:52 请 derekchiang 评审，PR 仍未合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12644#issuecomment-6994859383",
+      "date": "2026-11-19",
+      "title_en": "AnkushinDaniil's benchmarks",
+      "note_en": "2026-11-19 06:37: on a single host he ran the worst-case frame transaction (300k gas, failing VERIFY, Keccak-heavy) on all 7 execution clients, with median rejection times of 3.1 to 5.3 ms. On 11-20 at 20:52 he asked derekchiang to review. The PR is not merged yet.",
+      "topic_en": "Verification gas and FOCIL protection for frame transactions"
+    },
+    {
+      "topic": "Frame 交易的验证 gas 与 FOCIL 保护",
+      "title": "11-20 20:52",
+      "note": "AnkushinDaniil 的基准 2026-11-19 06:37：在同一台机器上对 7 个执行层客户端测最坏情况（30 万 gas、VERIFY 失败、Keccak 密集）的 frame 交易，拒绝耗时中位数 3.1 到 5.3 毫秒。11-20 20:52 请 derekchiang 评审，PR 仍未合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12644#issuecomment-7041258616",
+      "date": "2026-11-19",
+      "title_en": "11-20 at 20:52",
+      "note_en": "AnkushinDaniil's benchmarks, 2026-11-19 06:37: on a single host he ran the worst-case frame transaction (300k gas, failing VERIFY, Keccak-heavy) on all 7 execution clients, with median rejection times of 3.1 to 5.3 ms. On 11-20 at 20:52 he asked derekchiang to review. The PR is not merged yet.",
+      "topic_en": "Verification gas and FOCIL protection for frame transactions"
+    },
+    {
+      "topic": "Frame 交易的验证 gas 与 FOCIL 保护",
+      "title": "EIP 草案：Frame 交易的 FOCIL 遗漏见证（PR #12663）",
+      "note": "2026-11-19 23:37，soispoke 讨论 paymaster 风险：只要赞助方签出的未上链交易 max_fee 总和不超过 paymaster 余额减待提款额，这些交易在任何位置都付得起费，即把 EIP-8141 的 mempool 规则改由赞助方签名时自行执行。",
+      "url": "https://github.com/ethereum/EIPs/pull/12663#issuecomment-7015480726",
+      "date": "2026-11-19",
+      "title_en": "Draft EIP: FOCIL omission witnesses for frame transactions (PR #12663)",
+      "note_en": "2026-11-19 23:37. soispoke addressed paymaster risk: as long as the summed max_fee of a sponsor's signed but not yet included transactions stays at or below the paymaster balance minus pending withdrawals, every one of them stays payable at any position. In effect the sponsor applies EIP-8141's mempool rule when signing.",
+      "topic_en": "Verification gas and FOCIL protection for frame transactions"
+    },
+    {
+      "topic": "Frame 交易的验证 gas 与 FOCIL 保护",
+      "title": "ethresear.ch：EIP-8288 的网络侧",
+      "note": "2026-11-18 16:58，cskiraly 用离散事件模拟器研究递归聚合的网络选择。以接近今天的 15 笔/秒签名交易计算，其他节点平均上传带宽约 0.4 Mbit/s（2.5 kB 签名）或 1 Mbit/s（7,740 字节签名），今天的 mempool 能承载；聚合的意义在于承载 STARK 见证过大的隐私交易并进一步扩容。",
+      "url": "https://ethresear.ch/t/eip-8288-the-networking-side-of-recursive-aggregation/26263",
+      "date": "2026-11-18",
+      "title_en": "ethresear.ch: the networking side of EIP-8288",
+      "note_en": "2026-11-18 16:58. cskiraly built a discrete-event simulator for recursive aggregation's networking choices. At 15 signature transactions per second, close to today's rate, other nodes uploaded about 0.4 Mbit/s on average with 2.5 kB signatures or 1 Mbit/s with 7,740-byte signatures, which today's mempool can carry. Aggregation matters for carrying privacy transactions whose STARK witnesses are too big to gossip, and for scaling further.",
+      "topic_en": "Verification gas and FOCIL protection for frame transactions"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ-CL Breakout #3 纪要",
+      "note": "2026-11-21 00:05（会议 11-20 21:00）：PQ devnet 因客户端没用紧凑密钥加载而启动慢，决定采用 PR 802；模拟显示 GossipSub 难以在一个 slot 里处理 3.2 万个签名，devnet 将同时测试 GossipSub 和 Waggle；聚合在 NUC 上约 3 秒；讨论了迁移合约用 XMSS 签名、可能要求 0x02 凭证，以及丢失密钥的 0x00 验证者恢复机制。PQ-CL Breakout #4 定于 11-24 21:00。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-3-november-20-2026/30437/2",
+      "date": "2026-11-21",
+      "title_en": "PQ-CL Breakout #3 summary",
+      "note_en": "2026-11-21 00:05 (call held 11-20 21:00): the PQ devnet started slowly because clients weren't using compact key loading, so the group chose PR 802. Simulations suggest GossipSub struggles with 32,000 signatures in a slot, so the devnet will test both GossipSub and Waggle. Aggregation takes about 3 seconds on a NUC. They also discussed XMSS signatures for the migration contract, possibly requiring 0x02 credentials, and a recovery path for 0x00 validators who lost their keys. PQ-CL Breakout #4 is set for 11-24 21:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ-CL Breakout #4",
+      "note": "PQ-CL Breakout #3 纪要 2026-11-21 00:05（会议 11-20 21:00）：PQ devnet 因客户端没用紧凑密钥加载而启动慢，决定采用 PR 802；模拟显示 GossipSub 难以在一个 slot 里处理 3.2 万个签名，devnet 将同时测试 GossipSub 和 Waggle；聚合在 NUC 上约 3 秒；讨论了迁移合约用 XMSS 签名、可能要求 0x02 凭证，以及丢失密钥的 0x00 验证者恢复机制。PQ-CL Breakout #4 定于 11-24 21:00。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-4-november-24-2026/30460",
+      "date": "2026-11-21",
+      "title_en": "PQ-CL Breakout #4",
+      "note_en": "PQ-CL Breakout #3 summary, 2026-11-21 00:05 (call held 11-20 21:00): the PQ devnet started slowly because clients weren't using compact key loading, so the group chose PR 802. Simulations suggest GossipSub struggles with 32,000 signatures in a slot, so the devnet will test both GossipSub and Waggle. Aggregation takes about 3 seconds on a NUC. They also discussed XMSS signatures for the migration contract, possibly requiring 0x02 credentials, and a recovery path for 0x00 validators who lost their keys. PQ-CL Breakout #4 is set for 11-24 21:00.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Glamsterdam 范围合并",
+      "note": "2026-11-19 00:16：EIP-7773 加入 EIP-7495 和 EIP-7916；PR #12568 01:05 合并，清除已推迟的 Hoodi 激活信息。",
+      "url": "https://github.com/ethereum/EIPs/pull/12449",
+      "date": "2026-11-19",
+      "title_en": "Glamsterdam scope merge",
+      "note_en": "2026-11-19 00:16: EIP-7773 adds EIP-7495 and EIP-7916. PR #12568 merged at 01:05, clearing the postponed Hoodi activation.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PR #12568",
+      "note": "Glamsterdam 范围合并 2026-11-19 00:16：EIP-7773 加入 EIP-7495 和 EIP-7916；PR #12568 01:05 合并，清除已推迟的 Hoodi 激活信息。",
+      "url": "https://github.com/ethereum/EIPs/pull/12568",
+      "date": "2026-11-19",
+      "title_en": "PR #12568",
+      "note_en": "Glamsterdam scope merge, 2026-11-19 00:16: EIP-7773 adds EIP-7495 and EIP-7916. PR #12568 merged at 01:05, clearing the postponed Hoodi activation.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPIP 会议回顾",
+      "note": "2026-11-19 04:46：EIP 编辑将试点 AI 辅助评审（只评论、不自动合并），以处理 550 多个未关闭 PR；EIP-1 增加 EIP Coordinator 角色的 PR 可以合并；Keeper of Consensus 选举开放 30 天。",
+      "url": "https://x.com/poojaranjan19/status/2123171001890443509",
+      "date": "2026-11-19",
+      "title_en": "EIPIP meeting recap",
+      "note_en": "2026-11-19 04:46: EIP editors will pilot AI-assisted reviews (comments only, no auto-merging) to deal with 550-plus open PRs. The PR adding the EIP Coordinator role to EIP-1 can be merged, and the Keeper of Consensus election stays open for 30 days.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Encrypted Account",
+      "note": "2026-11-19 03:59：ERC-4337 智能账户把 PIN 用 Zama 门限 FHE 加密存在合约里，链上计数，30 天约 12 次猜测；只有私钥时只能在限额内向已知地址付款。Sepolia 原型，未审计。对用户的意义是私钥被盗后多一道链上检查的第二因素。",
+      "url": "https://ethresear.ch/t/encrypted-account-a-pin-that-lives-in-the-contract/26265",
+      "date": "2026-11-19",
+      "title_en": "ethresear.ch: Encrypted Account",
+      "note_en": "2026-11-19 03:59: an ERC-4337 smart account that keeps a PIN in the contract, encrypted under Zama's threshold FHE, counts guesses on-chain and allows about 12 guesses in 30 days. The key alone can only pay known addresses within set limits. It's an unaudited Sepolia prototype. For users, it adds an on-chain second factor if a key is stolen.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "以太坊官方账号：Zama 谈 FHE 隐私",
+      "note": "2026-11-21 01:57，客座长帖说明 FHE 隐私可以作用于共享状态、跨合约组合，与以 ZK 为主的现有方案不同。",
+      "url": "https://x.com/ethereum/status/2123853168140230951",
+      "date": "2026-11-21",
+      "title_en": "Ethereum's official account: Zama on FHE privacy",
+      "note_en": "2026-11-21 01:57: a guest thread explaining that FHE privacy works on shared state and composes across contracts, unlike today's mostly ZK-based approaches.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-5564 隐身地址讨论",
+      "note": "2026-11-20 17:43：有人指出 announce() 只记录 msg.sender，不检查是否真的转账，任何人都能复制公告重放，钱包不能据此判断付款方。",
+      "url": "https://ethereum-magicians.org/t/erc-5564-stealth-addresses/10614/20",
+      "date": "2026-11-20",
+      "title_en": "ERC-5564 stealth address discussion",
+      "note_en": "2026-11-20 17:43: a commenter pointed out that announce() records msg.sender without checking that a transfer happened, so anyone can replay an announcement and wallets can't use it to identify the payer.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereum.org 为每个 L2 上线详情页",
+      "note": "2026-11-19 22:44，L2 网络目录可查看成熟度、平均交易费、活跃地址、钱包支持和风险分析，选 L2 时可直接对比。",
+      "url": "https://x.com/ethdotorg/status/2123442195025809753",
+      "date": "2026-11-19",
+      "title_en": "ethereum.org adds a detail page for every L2",
+      "note_en": "2026-11-19 22:44. The L2 networks catalog shows maturity, average transaction fee, active addresses, wallet support and risk analysis, which makes comparing L2s easy.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "L2 网络目录",
+      "note": "ethereum.org 为每个 L2 上线详情页 2026-11-19 22:44，L2 网络目录可查看成熟度、平均交易费、活跃地址、钱包支持和风险分析，选 L2 时可直接对比。",
+      "url": "https://ethereum.org/layer-2/networks/",
+      "date": "2026-11-19",
+      "title_en": "L2 networks catalog",
+      "note_en": "Ethereum.org adds a detail page for every L2, 2026-11-19 22:44. The L2 networks catalog shows maturity, average transaction fee, active addresses, wallet support and risk analysis, which makes comparing L2s easy.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "LambdaClass：为 PQAI Day 做准备",
+      "note": "X 帖 2026-11-19 03:59，后量子系列第三篇，讲协议改动、迁移路径以及用户和验证者需要做什么。",
+      "url": "https://blog.lambdaclass.com/making-ethereum-ready-for-pqai-day/",
+      "date": "2026-11-19",
+      "title_en": "LambdaClass: getting ready for PQAI Day",
+      "note_en": "X post 2026-11-19 03:59, the third post in its post-quantum series, covering protocol changes, migration paths and what users and validators need to do.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "X 帖",
+      "note": "LambdaClass：为 PQAI Day 做准备，X 帖 2026-11-19 03:59，后量子系列第三篇，讲协议改动、迁移路径以及用户和验证者需要做什么。",
+      "url": "https://x.com/class_lambda/status/2123159252642549875",
+      "date": "2026-11-19",
+      "title_en": "X post",
+      "note_en": "LambdaClass: getting ready for PQAI Day, X post 2026-11-19 03:59, the third post in its post-quantum series, covering protocol changes, migration paths and what users and validators need to do.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Ethlabs：DAOfund 资助加固",
+      "note": "2026-11-19 01:08：DAOfund 有 75,000 ETH，本轮资助形式化验证等加固工作。",
+      "url": "https://x.com/ethlabs_org/status/2123116248498360559",
+      "date": "2026-11-19",
+      "title_en": "Ethlabs: DAOfund funds hardening",
+      "note_en": "2026-11-19 01:08: the DAOfund holds 75,000 ETH, and this round funds hardening work such as formal verification.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 收录 Derive V3",
+      "note": "2026-11-20 22:20：其交易所用 SP1 证明在以太坊结算批次，但用户无法独立检查被证明的程序；评测说明了提款时的情况。",
+      "url": "https://x.com/ethbeat_org/status/2123798534541750338",
+      "date": "2026-11-20",
+      "title_en": "ETHBEAT adds Derive V3",
+      "note_en": "2026-11-20 22:20: its exchange settles batches on Ethereum with SP1 proofs, but users can't independently inspect the program being proven. The review covers what happens when users need to withdraw.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "barnabé 谈 quick slots 让位于 PQ",
+      "note": "2026-11-19 00:03：Devcon 后发现直接做 PQ 解耦共识能跳过很多中间步骤，并带来快速最终性和更短 slot，所以他也支持“全力 PQ”。",
+      "url": "https://ethereum-magicians.org/t/an-ethlabs-view-on-post-quantum-and-post-ai-timelines-pqai27/30351/5",
+      "date": "2026-11-19",
+      "title_en": "barnabé on quick slots giving way to PQ",
+      "note_en": "2026-11-19 00:03: after Devcon it became clear that going straight to PQ decoupled consensus skips many intermediate steps and brings fast finality and shorter slots, so he now backs going all in on PQ too.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dapplion 转述 Vitalik",
+      "note": "2026-11-18 21:12：被问到以太坊同时失去前 10 名的人会怎样，Vitalik 答“基金会的多签钱包会变砖”。",
+      "url": "https://x.com/dapplion/status/2123056741902348339",
+      "date": "2026-11-18",
+      "title_en": "dapplion quoting Vitalik",
+      "note_en": "2026-11-18 21:12: asked what would happen if Ethereum lost its top 10 people at once, Vitalik answered \"the foundation's multisig wallet would get bricked\".",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "colludingnode：总是削弱隐私，从不提升安全",
+      "note": "2026-11-20 05:06。",
+      "url": "https://x.com/colludingnode/status/2123538478583415257",
+      "date": "2026-11-20",
+      "title_en": "colludingnode: it's always about weakening privacy, never improving security",
+      "note_en": "2026-11-20 05:06.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://www.chainsecurity.com/security-audit/eip-8037-eip-8038-impact-assessment/",
+    "credit": "ChainSecurity",
+    "local_path": "assets/2026-11-21.jpg",
+    "credit_en": "ChainSecurity"
+  },
+  "keywords_en": [
+    "ACDE #249",
+    "the fate of EIP-8037",
+    "Hegotá scope",
+    "leanSPHINCS dependency frames",
+    "MAX_VERIFY_GAS"
+  ],
+  "summary_en": "ACDE #249 reached rough consensus to ship Glamsterdam on the current spec with EIP-8037 unchanged. A Hoodi testnet fork is pencilled in for the week of December 14, with the final call at the next ACDC. ChainSecurity's public impact assessment found that 182 of 200 findings involve hard-coded gas budgets. On Hegotá, the option of dropping frames in favour of enshrined PQ got no support, client teams owe written positions by the end of next week, and FOCIL's fate goes to the next two ACDC calls. The PR raising EIP-8141's MAX_VERIFY_GAS to 300k now has benchmarks from all 7 execution clients, with a worst-case median rejection time of 3.1 to 5.3 ms."
+}
