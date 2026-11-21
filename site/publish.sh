@@ -91,6 +91,10 @@ if [[ "$DEPLOY" == "1" ]]; then
   if [[ -z "${CLOUDFLARE_API_TOKEN:-}" ]]; then
     echo "CLOUDFLARE_API_TOKEN not set; pushed but not deployed" >&2; exit 1
   fi
+  # wrangler writes its cache to the nearest node_modules/.cache. A root-owned
+  # /node_modules on the box makes that unwritable, so give it a local one
+  # (created after the commit, so it never enters git).
+  mkdir -p "$SITE_DIR/node_modules"
   echo "==> deploy $SHA to Pages project $PAGES_PROJECT"
   ( cd "$SITE_DIR" && npx --yes wrangler pages deploy dist \
       --project-name "$PAGES_PROJECT" --branch "$PAGES_BRANCH" \
