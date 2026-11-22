@@ -1,0 +1,377 @@
+{
+  "date": "2026-11-22",
+  "keywords": [
+    "EIP-8131 交易底价",
+    "EIP-8279 BAL 字节底价",
+    "leanSPHINCS 签名寿命",
+    "Agent 账户策略 ERC",
+    "FOCIL 区块大小 bug"
+  ],
+  "summary": "Toni 合并了 EIP-8131 和 EIP-8279 的 Glamsterdam 对齐更新：EIP-7702 授权按最大编码 133 字节计入交易底价，90 天 1.68 亿笔主网交易中只有 0.66% 会多付（全部是 blob 或 type-4 交易）；Łukasz 关闭了三个为 EIP-2780 和 EIP-8141 补 state gas 规则的 PR。PQ 交易签名方面，EIPsInsight 补充了 PQTS #17 纪要：按 2^24 的签名寿命，Circle 约每 1.5 年需要轮换一次密钥，Ledger 在更高寿命下性能吃紧。一份面向 agent 账户的“策略可读”ERC 草案进入 ERCs 仓库，首条评审就指出了策略放宽可绕过延迟的问题。",
+  "items": [
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "PR #12680：EIP-8131 与 Glamsterdam 对齐",
+      "note": "2026-11-21 15:48 合并（作者 Toni Wahrstätter）。EIP-8131（Unified Transaction Content Floor）把交易里所有用户可控字节（calldata、访问列表、EIP-7702 授权、EIP-4844 blob 哈希）统一按每字节 64 gas 计入底价，此前 7702 授权元组和 blob 哈希在底价里不收费。本次更新：",
+      "url": "https://github.com/ethereum/EIPs/pull/12680",
+      "date": "2026-11-21",
+      "title_en": "PR #12680: align EIP-8131 with Glamsterdam",
+      "note_en": "Was merged on 2026-11-21 at 15:48 (author Toni Wahrstätter). EIP-8131 (Unified Transaction Content Floor) charges every user-controlled byte in a transaction (calldata, access lists, EIP-7702 authorizations, EIP-4844 blob hashes) a flat 64 gas at the floor. Until now 7702 authorization tuples and blob hashes paid nothing at the floor. This update:",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "EIP-8131",
+      "note": "PR #12680：EIP-8131 与 Glamsterdam 对齐 2026-11-21 15:48 合并（作者 Toni Wahrstätter）。EIP-8131（Unified Transaction Content Floor）把交易里所有用户可控字节（calldata、访问列表、EIP-7702 授权、EIP-4844 blob 哈希）统一按每字节 64 gas 计入底价，此前 7702 授权元组和 blob 哈希在底价里不收费。本次更新：",
+      "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-8131.md",
+      "date": "2026-11-21",
+      "title_en": "EIP-8131",
+      "note_en": "PR #12680: align EIP-8131 with Glamsterdam was merged on 2026-11-21 at 15:48 (author Toni Wahrstätter). EIP-8131 (Unified Transaction Content Floor) charges every user-controlled byte in a transaction (calldata, access lists, EIP-7702 authorizations, EIP-4844 blob hashes) a flat 64 gas at the floor. Until now 7702 authorization tuples and blob hashes paid nothing at the floor. This update:",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "PR #12681：EIP-8279 与 Glamsterdam 对齐",
+      "note": "2026-11-21 16:01 合并。EIP-8279（Block Access List Byte Floor）在运行时计量执行写入 EIP-7928 BAL 的字节，按每字节 64 gas 并入 EIP-8131 的底价。本次更新：",
+      "url": "https://github.com/ethereum/EIPs/pull/12681",
+      "date": "2026-11-21",
+      "title_en": "PR #12681: align EIP-8279 with Glamsterdam",
+      "note_en": "Was merged on 2026-11-21 at 16:01. EIP-8279 (Block Access List Byte Floor) meters the bytes execution adds to the EIP-7928 BAL at runtime and folds them into the EIP-8131 floor at 64 gas per byte. This update:",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "EIP-8279",
+      "note": "PR #12681：EIP-8279 与 Glamsterdam 对齐 2026-11-21 16:01 合并。EIP-8279（Block Access List Byte Floor）在运行时计量执行写入 EIP-7928 BAL 的字节，按每字节 64 gas 并入 EIP-8131 的底价。本次更新：",
+      "url": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-8279.md",
+      "date": "2026-11-21",
+      "title_en": "EIP-8279",
+      "note_en": "PR #12681: align EIP-8279 with Glamsterdam was merged on 2026-11-21 at 16:01. EIP-8279 (Block Access List Byte Floor) meters the bytes execution adds to the EIP-7928 BAL at runtime and folds them into the EIP-8131 floor at 64 gas per byte. This update:",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "PR #12581",
+      "note": "同一天 11-21 18:04，PR #12581（EIP-2780：state gas 退还记入储备池并加入 legacy share）、PR #12582（EIP-2780：call frame 的 state gas 额度）和 PR #12588（EIP-8141：把 EIP-8037 的 legacy share 作为额外执行 gas 收取）由作者关闭，未合并。#12581 的讨论里，gretzke 曾以 Uniswap v4 PositionManager 的 `notifyUnsubscribe{gas: 150,000}` 为例指出，同一调用是否耗尽 gas 取决于用户签名时的 tx.gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/12581",
+      "date": "2026-11-21",
+      "title_en": "PR #12581",
+      "note_en": "The same day at 18:04, PR #12581 (EIP-2780: credit state gas refills to the reservoir and add a legacy share), PR #12582 (EIP-2780: state gas allowance for call frames) and PR #12588 (EIP-8141: charge the EIP-8037 legacy share as extra execution gas) were closed by their author without merging. In the #12581 discussion, gretzke had used the Uniswap v4 PositionManager's `notifyUnsubscribe{gas: 150,000}` to show that whether the same call runs out of gas depends on the tx.gas the user signs.",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "PR #12582",
+      "note": "同一天 11-21 18:04，PR #12581（EIP-2780：state gas 退还记入储备池并加入 legacy share）、PR #12582（EIP-2780：call frame 的 state gas 额度）和 PR #12588（EIP-8141：把 EIP-8037 的 legacy share 作为额外执行 gas 收取）由作者关闭，未合并。#12581 的讨论里，gretzke 曾以 Uniswap v4 PositionManager 的 `notifyUnsubscribe{gas: 150,000}` 为例指出，同一调用是否耗尽 gas 取决于用户签名时的 tx.gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/12582",
+      "date": "2026-11-21",
+      "title_en": "PR #12582",
+      "note_en": "The same day at 18:04, PR #12581 (EIP-2780: credit state gas refills to the reservoir and add a legacy share), PR #12582 (EIP-2780: state gas allowance for call frames) and PR #12588 (EIP-8141: charge the EIP-8037 legacy share as extra execution gas) were closed by their author without merging. In the #12581 discussion, gretzke had used the Uniswap v4 PositionManager's `notifyUnsubscribe{gas: 150,000}` to show that whether the same call runs out of gas depends on the tx.gas the user signs.",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "PR #12588",
+      "note": "同一天 11-21 18:04，PR #12581（EIP-2780：state gas 退还记入储备池并加入 legacy share）、PR #12582（EIP-2780：call frame 的 state gas 额度）和 PR #12588（EIP-8141：把 EIP-8037 的 legacy share 作为额外执行 gas 收取）由作者关闭，未合并。#12581 的讨论里，gretzke 曾以 Uniswap v4 PositionManager 的 `notifyUnsubscribe{gas: 150,000}` 为例指出，同一调用是否耗尽 gas 取决于用户签名时的 tx.gas。",
+      "url": "https://github.com/ethereum/EIPs/pull/12588",
+      "date": "2026-11-21",
+      "title_en": "PR #12588",
+      "note_en": "The same day at 18:04, PR #12581 (EIP-2780: credit state gas refills to the reservoir and add a legacy share), PR #12582 (EIP-2780: state gas allowance for call frames) and PR #12588 (EIP-8141: charge the EIP-8037 legacy share as extra execution gas) were closed by their author without merging. In the #12581 discussion, gretzke had used the Uniswap v4 PositionManager's `notifyUnsubscribe{gas: 150,000}` to show that whether the same call runs out of gas depends on the tx.gas the user signs.",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "交易底价与区块大小：EIP-7702 授权正式进入底价计算",
+      "title": "ACDE #250",
+      "note": "EIP-8131 和 EIP-8279 目前都是 Draft，是否被纳入某次升级要看 ACD 讨论；ACDE #250 定于 12 月 3 日 21:00，议程是 Glamsterdam、Hegotá 和杂项。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-250-december-3-2026/30463",
+      "date": "2026-11-21",
+      "title_en": "ACDE #250",
+      "note_en": "EIP-8131 and EIP-8279 are both still Draft, and inclusion in an upgrade depends on ACD discussion. ACDE #250 is set for December 3 at 21:00 with Glamsterdam, Hegotá and misc on the agenda.",
+      "topic_en": "Transaction floor and block size: EIP-7702 authorizations join the floor"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "EIPsInsight 在 Magicians 补充 PQTS #17 要点",
+      "note": "2026-11-21 23:23（会议本身在 10 月 28 日，完整笔记）：",
+      "url": "https://ethereum-magicians.org/t/post-quantum-transaction-signature-pqts-breakout-17/30058/5",
+      "date": "2026-11-21",
+      "title_en": "EIPsInsight posted extra PQTS #17 takeaways on Magicians",
+      "note_en": "On 2026-11-21 at 23:23 (the call itself was on October 28; full notes):",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "完整笔记",
+      "note": "EIPsInsight 在 Magicians 补充 PQTS #17 要点 2026-11-21 23:23（会议本身在 10 月 28 日，完整笔记）：",
+      "url": "https://eipsinsight.com/calls/pqts/017",
+      "date": "2026-11-21",
+      "title_en": "full notes",
+      "note_en": "EIPsInsight posted extra PQTS #17 takeaways on Magicians on 2026-11-21 at 23:23 (the call itself was on October 28; full notes):",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "PR #12672（leanSPHINCS 依赖 frame）",
+      "note": "2026-11-21 17:36 合入 abcoathup 建议的编辑修改；此前 11-20 已补齐依赖验证 frame 的编码、leanSPHINCS 方案定义（32 字节公钥、32 字节消息和 leansphincs_verify 接口固定，其余参数暂定）。PR 仍是草案，待分配正式编号。",
+      "url": "https://github.com/ethereum/EIPs/pull/12672",
+      "date": "2026-11-21",
+      "title_en": "PR #12672 (leanSPHINCS dependency frames)",
+      "note_en": "Took an editorial change suggested by abcoathup on 2026-11-21 at 17:36. On 11-20 it had already filled in the dependency verification frame encoding and the leanSPHINCS scheme definition (the 32-byte public key, 32-byte message and leansphincs_verify interface are fixed, other parameters are provisional). It is still a draft waiting for an EIP number.",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "gballet",
+      "note": "X 上的讨论：gballet 2026-11-21 15:17 认为“pqai”是个危险的标签，抗量子不等于抗 AI，二者可能要取舍；donnoh 15:35 表示赞同并在写文章。Dankrad 16:18 回应：选非常保守的 PQ 方案也更可能扛住 AI 密码分析，还可以叠加，比如用 SPHINCS 的同时仍要求一个椭圆曲线签名，安全性严格提高；他 16:43 补充没有方案能被证明不可破，哈希签名也依赖具体哈希函数，而加一个 EC 签名几乎没有成本。barnabé 22:59 表示 pqai 并不排斥双签名方案。",
+      "url": "https://x.com/gballet/status/2124054653151092846",
+      "date": "2026-11-21",
+      "title_en": "gballet",
+      "note_en": "On X, gballet argued on 2026-11-21 at 15:17 that \"pqai\" is a dangerous label: quantum security does not imply AI security, and the two may involve a trade-off. donnoh agreed at 15:35 and said he is writing a post. Dankrad replied at 16:18 that a very conservative PQ scheme is also more likely to survive AI cryptanalysis, and that schemes can be stacked, for example SPHINCS plus a required EC signature, which strictly increases security. He added at 16:43 that nothing can be proven unbreakable, hash-based schemes still rely on a specific hash function, and adding an EC signature costs almost nothing. barnabé said at 22:59 that pqai does not rule out a dual-signature scheme.",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "donnoh",
+      "note": "X 上的讨论：gballet 2026-11-21 15:17 认为“pqai”是个危险的标签，抗量子不等于抗 AI，二者可能要取舍；donnoh 15:35 表示赞同并在写文章。Dankrad 16:18 回应：选非常保守的 PQ 方案也更可能扛住 AI 密码分析，还可以叠加，比如用 SPHINCS 的同时仍要求一个椭圆曲线签名，安全性严格提高；他 16:43 补充没有方案能被证明不可破，哈希签名也依赖具体哈希函数，而加一个 EC 签名几乎没有成本。barnabé 22:59 表示 pqai 并不排斥双签名方案。",
+      "url": "https://x.com/donnoh_eth/status/2124059038564630744",
+      "date": "2026-11-21",
+      "title_en": "donnoh",
+      "note_en": "On X, gballet argued on 2026-11-21 at 15:17 that \"pqai\" is a dangerous label: quantum security does not imply AI security, and the two may involve a trade-off. donnoh agreed at 15:35 and said he is writing a post. Dankrad replied at 16:18 that a very conservative PQ scheme is also more likely to survive AI cryptanalysis, and that schemes can be stacked, for example SPHINCS plus a required EC signature, which strictly increases security. He added at 16:43 that nothing can be proven unbreakable, hash-based schemes still rely on a specific hash function, and adding an EC signature costs almost nothing. barnabé said at 22:59 that pqai does not rule out a dual-signature scheme.",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "Dankrad",
+      "note": "X 上的讨论：gballet 2026-11-21 15:17 认为“pqai”是个危险的标签，抗量子不等于抗 AI，二者可能要取舍；donnoh 15:35 表示赞同并在写文章。Dankrad 16:18 回应：选非常保守的 PQ 方案也更可能扛住 AI 密码分析，还可以叠加，比如用 SPHINCS 的同时仍要求一个椭圆曲线签名，安全性严格提高；他 16:43 补充没有方案能被证明不可破，哈希签名也依赖具体哈希函数，而加一个 EC 签名几乎没有成本。barnabé 22:59 表示 pqai 并不排斥双签名方案。",
+      "url": "https://x.com/dankrad/status/2124069866147848647",
+      "date": "2026-11-21",
+      "title_en": "Dankrad",
+      "note_en": "On X, gballet argued on 2026-11-21 at 15:17 that \"pqai\" is a dangerous label: quantum security does not imply AI security, and the two may involve a trade-off. donnoh agreed at 15:35 and said he is writing a post. Dankrad replied at 16:18 that a very conservative PQ scheme is also more likely to survive AI cryptanalysis, and that schemes can be stacked, for example SPHINCS plus a required EC signature, which strictly increases security. He added at 16:43 that nothing can be proven unbreakable, hash-based schemes still rely on a specific hash function, and adding an EC signature costs almost nothing. barnabé said at 22:59 that pqai does not rule out a dual-signature scheme.",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "16:43 补充",
+      "note": "X 上的讨论：gballet 2026-11-21 15:17 认为“pqai”是个危险的标签，抗量子不等于抗 AI，二者可能要取舍；donnoh 15:35 表示赞同并在写文章。Dankrad 16:18 回应：选非常保守的 PQ 方案也更可能扛住 AI 密码分析，还可以叠加，比如用 SPHINCS 的同时仍要求一个椭圆曲线签名，安全性严格提高；他 16:43 补充没有方案能被证明不可破，哈希签名也依赖具体哈希函数，而加一个 EC 签名几乎没有成本。barnabé 22:59 表示 pqai 并不排斥双签名方案。",
+      "url": "https://x.com/dankrad/status/2124076187806765076",
+      "date": "2026-11-21",
+      "title_en": "added at 16:43",
+      "note_en": "On X, gballet argued on 2026-11-21 at 15:17 that \"pqai\" is a dangerous label: quantum security does not imply AI security, and the two may involve a trade-off. donnoh agreed at 15:35 and said he is writing a post. Dankrad replied at 16:18 that a very conservative PQ scheme is also more likely to survive AI cryptanalysis, and that schemes can be stacked, for example SPHINCS plus a required EC signature, which strictly increases security. He added at 16:43 that nothing can be proven unbreakable, hash-based schemes still rely on a specific hash function, and adding an EC signature costs almost nothing. barnabé said at 22:59 that pqai does not rule out a dual-signature scheme.",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "PQ 账户签名：签名寿命、密钥轮换和“pqai”标签之争",
+      "title": "barnabé",
+      "note": "X 上的讨论：gballet 2026-11-21 15:17 认为“pqai”是个危险的标签，抗量子不等于抗 AI，二者可能要取舍；donnoh 15:35 表示赞同并在写文章。Dankrad 16:18 回应：选非常保守的 PQ 方案也更可能扛住 AI 密码分析，还可以叠加，比如用 SPHINCS 的同时仍要求一个椭圆曲线签名，安全性严格提高；他 16:43 补充没有方案能被证明不可破，哈希签名也依赖具体哈希函数，而加一个 EC 签名几乎没有成本。barnabé 22:59 表示 pqai 并不排斥双签名方案。",
+      "url": "https://x.com/barnabemonnot/status/2124170965575971042",
+      "date": "2026-11-21",
+      "title_en": "barnabé",
+      "note_en": "On X, gballet argued on 2026-11-21 at 15:17 that \"pqai\" is a dangerous label: quantum security does not imply AI security, and the two may involve a trade-off. donnoh agreed at 15:35 and said he is writing a post. Dankrad replied at 16:18 that a very conservative PQ scheme is also more likely to survive AI cryptanalysis, and that schemes can be stacked, for example SPHINCS plus a required EC signature, which strictly increases security. He added at 16:43 that nothing can be proven unbreakable, hash-based schemes still rely on a specific hash function, and adding an EC signature costs almost nothing. barnabé said at 22:59 that pqai does not rule out a dual-signature scheme.",
+      "topic_en": "PQ account signatures: signature lifetime, key rotation and the \"pqai\" label"
+    },
+    {
+      "topic": "Agent 账户与隐私：策略可读、关联可查",
+      "title": "Draft ERC：Policy-Enforced Agent Accounts",
+      "note": "2026-11-21 23:07 由 palisec-dev 发起，对应 ERCs PR #2196。它只定义“读取和证据层”，不规定如何执行：",
+      "url": "https://ethereum-magicians.org/t/draft-erc-policy-enforced-agent-accounts/30467",
+      "date": "2026-11-21",
+      "title_en": "Draft ERC: Policy-Enforced Agent Accounts",
+      "note_en": "Was opened by palisec-dev on 2026-11-21 at 23:07, with ERCs PR #2196. It only defines a read and evidence layer, not how enforcement works:",
+      "topic_en": "Agent accounts and privacy: readable policies, measurable linkability"
+    },
+    {
+      "topic": "Agent 账户与隐私：策略可读、关联可查",
+      "title": "ERCs PR #2196",
+      "note": "Draft ERC：Policy-Enforced Agent Accounts 2026-11-21 23:07 由 palisec-dev 发起，对应 ERCs PR #2196。它只定义“读取和证据层”，不规定如何执行：",
+      "url": "https://github.com/ethereum/ERCs/pull/2196",
+      "date": "2026-11-21",
+      "title_en": "ERCs PR #2196",
+      "note_en": "Draft ERC: Policy-Enforced Agent Accounts was opened by palisec-dev on 2026-11-21 at 23:07, with ERCs PR #2196. It only defines a read and evidence layer, not how enforcement works:",
+      "topic_en": "Agent accounts and privacy: readable policies, measurable linkability"
+    },
+    {
+      "topic": "Agent 账户与隐私：策略可读、关联可查",
+      "title": "Zealynx 的评审",
+      "note": "2026-11-22 06:08 指出：activate 接受任何更高版本并立即生效，注册表只看到哈希，分不清收紧还是放宽，延迟机制形同虚设；验证收据时不检查当前策略版本和 isStopped，也不记录 decisionId，同一收据可重复使用；Safe 的 call 和 delegatecall 得到相同的 intentHash，意图里应加入 operation 或 ERC-7579 执行模式。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-policy-enforced-agent-accounts/30467/3",
+      "date": "2026-11-22",
+      "title_en": "Zealynx's review",
+      "note_en": "On 2026-11-22 at 06:08 pointed out that activate accepts any higher version and applies it immediately, and since the registry only sees a hash it cannot tell a tightening from a loosening, so the delay is only as good as the publisher. Receipt verification does not check the current policy version or isStopped and does not remember decisionId, so a receipt can be reused. For Safes, call and delegatecall produce the same intentHash, so the intent should include the operation or the ERC-7579 execution mode.",
+      "topic_en": "Agent accounts and privacy: readable policies, measurable linkability"
+    },
+    {
+      "topic": "Agent 账户与隐私：策略可读、关联可查",
+      "title": "Pre-ERC：Agent Linkability Report",
+      "note": "2026-11-21 15:03（ERCs PR #2193）提出一种报告格式，说明从公开链上数据能把 ERC-8004 agent 的所有者、agentWallet、收款地址关联到什么程度；每个字段要么附证据，要么注明未读取的原因。作者 11-21 读取 Robinhood Chain 身份注册表，26,235 个 agent 里有 25,620 个没有独立于所有者的 agentWallet，付款直接落到所有者地址。",
+      "url": "https://ethereum-magicians.org/t/pre-erc-agent-linkability-report/30462",
+      "date": "2026-11-21",
+      "title_en": "Pre-ERC: Agent Linkability Report",
+      "note_en": "On 2026-11-21 at 15:03 (ERCs PR #2193) proposes a report format describing how far public chain data can link an ERC-8004 agent's owner, agentWallet and payment address. Every field either carries evidence or states why it was not read. Reading the Robinhood Chain identity registry on 11-21, the author found that 25,620 of 26,235 agents have no agentWallet separate from the owner, so payments land on the owner's own address.",
+      "topic_en": "Agent accounts and privacy: readable policies, measurable linkability"
+    },
+    {
+      "topic": "Agent 账户与隐私：策略可读、关联可查",
+      "title": "ERCs PR #2193",
+      "note": "Pre-ERC：Agent Linkability Report 2026-11-21 15:03（ERCs PR #2193）提出一种报告格式，说明从公开链上数据能把 ERC-8004 agent 的所有者、agentWallet、收款地址关联到什么程度；每个字段要么附证据，要么注明未读取的原因。作者 11-21 读取 Robinhood Chain 身份注册表，26,235 个 agent 里有 25,620 个没有独立于所有者的 agentWallet，付款直接落到所有者地址。",
+      "url": "https://github.com/ethereum/ERCs/pull/2193",
+      "date": "2026-11-21",
+      "title_en": "ERCs PR #2193",
+      "note_en": "Pre-ERC: Agent Linkability Report on 2026-11-21 at 15:03 (ERCs PR #2193) proposes a report format describing how far public chain data can link an ERC-8004 agent's owner, agentWallet and payment address. Every field either carries evidence or states why it was not read. Reading the Robinhood Chain identity registry on 11-21, the author found that 25,620 of 26,235 agents have no agentWallet separate from the owner, so payments land on the owner's own address.",
+      "topic_en": "Agent accounts and privacy: readable policies, measurable linkability"
+    },
+    {
+      "topic": "Agent 账户与隐私：策略可读、关联可查",
+      "title": "pcaversaccio",
+      "note": "FHE 隐私争议：上期以太坊官方账号发布 Zama 客座长帖后，围绕 Zama 的讨论继续。pcaversaccio 2026-11-21 16:48 批评这是“依赖厂商的隐私”，代码许可不授予专利权，商业部署需要 Zama 许可；donnoh 21:50 认为很多情况下能用线性运算推出准确金额或很窄的范围，之后的交易还可能回溯泄露隐私。",
+      "url": "https://x.com/pcaversaccio/status/2124077434697846817",
+      "date": "2026-11-21",
+      "title_en": "pcaversaccio",
+      "note_en": "The FHE privacy debate: after the official Ethereum account published Zama's guest thread last issue, the discussion around Zama continued. pcaversaccio criticised it on 2026-11-21 at 16:48 as \"vendor-dependent privacy\", since the code licence grants no patent rights and commercial deployments need Zama's permission. donnoh said at 21:50 that in many cases exact amounts or tight bounds can be derived with linear math, and later transactions can leak privacy retroactively.",
+      "topic_en": "Agent accounts and privacy: readable policies, measurable linkability"
+    },
+    {
+      "topic": "Agent 账户与隐私：策略可读、关联可查",
+      "title": "donnoh",
+      "note": "FHE 隐私争议：上期以太坊官方账号发布 Zama 客座长帖后，围绕 Zama 的讨论继续。pcaversaccio 2026-11-21 16:48 批评这是“依赖厂商的隐私”，代码许可不授予专利权，商业部署需要 Zama 许可；donnoh 21:50 认为很多情况下能用线性运算推出准确金额或很窄的范围，之后的交易还可能回溯泄露隐私。",
+      "url": "https://x.com/donnoh_eth/status/2124153379895267352",
+      "date": "2026-11-21",
+      "title_en": "donnoh",
+      "note_en": "The FHE privacy debate: after the official Ethereum account published Zama's guest thread last issue, the discussion around Zama continued. pcaversaccio criticised it on 2026-11-21 at 16:48 as \"vendor-dependent privacy\", since the code licence grants no patent rights and commercial deployments need Zama's permission. donnoh said at 21:50 that in many cases exact amounts or tight bounds can be derived with linear math, and later transactions can leak privacy retroactively.",
+      "topic_en": "Agent accounts and privacy: readable policies, measurable linkability"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7805（FOCIL）区块大小 bug",
+      "note": "2026-11-21 16:23：chfast 指出执行层规范没考虑 EIP-7934 的区块 RLP 大小上限，交易“可包含”但加入后区块无效；原型修复是 execution-specs PR #4041，他主张改为只限制区块的交易部分。另外 EIP-7805 rebase PR #12470 11-22 02:10 更新，等待 soispoke 再审。影响：FOCIL 是否进 Hegotá 仍待 ACDC 决定，这类规范问题会影响时间表。",
+      "url": "https://ethereum-magicians.org/t/eip-7805-committee-based-fork-choice-enforced-inclusion-lists-focil/21578/18",
+      "date": "2026-11-21",
+      "title_en": "EIP-7805 (FOCIL) block size bug",
+      "note_en": "2026-11-21 16:23: chfast noted the execution layer spec ignores the EIP-7934 block RLP size cap, so a transaction can be \"includable\" yet make the block invalid. A prototype fix is execution-specs PR #4041, and he argues for capping only the transaction part of the block. Separately, EIP-7805 rebase PR #12470 was updated at 11-22 02:10 and awaits another review from soispoke. Impact: whether FOCIL makes Hegotá is still up to ACDC, and spec issues like this affect the timeline.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "execution-specs PR #4041",
+      "note": "EIP-7805（FOCIL）区块大小 bug 2026-11-21 16:23：chfast 指出执行层规范没考虑 EIP-7934 的区块 RLP 大小上限，交易“可包含”但加入后区块无效；原型修复是 execution-specs PR #4041，他主张改为只限制区块的交易部分。另外 EIP-7805 rebase PR #12470 11-22 02:10 更新，等待 soispoke 再审。影响：FOCIL 是否进 Hegotá 仍待 ACDC 决定，这类规范问题会影响时间表。",
+      "url": "https://github.com/ethereum/execution-specs/pull/4041",
+      "date": "2026-11-21",
+      "title_en": "execution-specs PR #4041",
+      "note_en": "EIP-7805 (FOCIL) block size bug, 2026-11-21 16:23: chfast noted the execution layer spec ignores the EIP-7934 block RLP size cap, so a transaction can be \"includable\" yet make the block invalid. A prototype fix is execution-specs PR #4041, and he argues for capping only the transaction part of the block. Separately, EIP-7805 rebase PR #12470 was updated at 11-22 02:10 and awaits another review from soispoke. Impact: whether FOCIL makes Hegotá is still up to ACDC, and spec issues like this affect the timeline.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-7805 rebase PR #12470",
+      "note": "EIP-7805（FOCIL）区块大小 bug 2026-11-21 16:23：chfast 指出执行层规范没考虑 EIP-7934 的区块 RLP 大小上限，交易“可包含”但加入后区块无效；原型修复是 execution-specs PR #4041，他主张改为只限制区块的交易部分。另外 EIP-7805 rebase PR #12470 11-22 02:10 更新，等待 soispoke 再审。影响：FOCIL 是否进 Hegotá 仍待 ACDC 决定，这类规范问题会影响时间表。",
+      "url": "https://github.com/ethereum/EIPs/pull/12470",
+      "date": "2026-11-22",
+      "title_en": "EIP-7805 rebase PR #12470",
+      "note_en": "EIP-7805 (FOCIL) block size bug, 2026-11-21 16:23: chfast noted the execution layer spec ignores the EIP-7934 block RLP size cap, so a transaction can be \"includable\" yet make the block invalid. A prototype fix is execution-specs PR #4041, and he argues for capping only the transaction part of the block. Separately, EIP-7805 rebase PR #12470 was updated at 11-22 02:10 and awaits another review from soispoke. Impact: whether FOCIL makes Hegotá is still up to ACDC, and spec issues like this affect the timeline.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ACDE #250 议程",
+      "note": "2026-11-21 16:11 发布：12 月 3 日 21:00，讨论 Glamsterdam 和 Hegotá。",
+      "url": "https://github.com/ethereum/pm/issues/2316",
+      "date": "2026-11-21",
+      "title_en": "ACDE #250 agenda",
+      "note_en": "Posted 2026-11-21 16:11: December 3 at 21:00, covering Glamsterdam and Hegotá.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PQ-CL Breakout #3 补充",
+      "note": "2026-11-21 23:18（EIPsInsight）：80 万验证者模拟中 P99 聚合到达时间 11.7 秒；NUC 14 Pro 上聚合 3.5 秒，分配 6 个性能核可降到约 2 秒；暂定聚合者之间错开 500 毫秒；EIP-8148 被认定为在 H-star 限制新的 0x00 和 0x01 存款的依赖。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-3-november-20-2026/30437/4",
+      "date": "2026-11-21",
+      "title_en": "PQ-CL Breakout #3 extra notes",
+      "note_en": "2026-11-21 23:18 (EIPsInsight): an 800K validator simulation showed P99 aggregate arrival at 11.7 s; aggregation on a NUC 14 Pro took 3.5 s, possibly about 2 s with six performance cores; a 500 ms stagger between aggregators was tentatively accepted; EIP-8148 was identified as a dependency for restricting new 0x00 and 0x01 deposits at H-star.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP 编辑与 AI 辅助评审",
+      "note": "2026-11-22 07:26：Pooja 补充新工具只辅助编辑性审查，特殊情况仍需人工，且 EIP 编辑负责的是编辑性审查而非专业内容评判。",
+      "url": "https://x.com/poojaranjan19/status/2124298497667301513",
+      "date": "2026-11-22",
+      "title_en": "EIP editors and AI-assisted review",
+      "note_en": "2026-11-22 07:26: Pooja added that the new tool only helps with editorial review, special cases still need humans, and EIP editors are responsible for editorial review rather than subject matter judgement.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC 批量转入 Stagnant",
+      "note": "2026-11-22 07:10 前后：机器人为 ERC-2333、ERC-4883、ERC-6372、ERC-7632 等 10 个长期无更新的 ERC 开了转 Stagnant 的 PR。用到这些标准的项目可留意作者是否回应。",
+      "url": "https://github.com/ethereum/ERCs/pull/2203",
+      "date": "2026-11-22",
+      "title_en": "ERCs moved to Stagnant in bulk",
+      "note_en": "Around 2026-11-22 07:10: the bot opened PRs moving 10 long-idle ERCs, including ERC-2333, ERC-4883, ERC-6372 and ERC-7632, to Stagnant. Projects relying on these standards may want to watch whether the authors respond.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PPCR 研究草案",
+      "note": "2026-11-22 04:16：有人提出为 2017 年 Parity 库被销毁的代理钱包设计限定范围的恢复机制，扫描出 284 个候选代理，其中 93 个历史快照有 ETH 余额，合计 443,163 ETH（作者说明不是可恢复金额）。这类状态干预提案历来争议很大，目前只是预草案。",
+      "url": "https://ethereum-magicians.org/t/research-draft-ppcr-parity-proxy-contract-recovery-protocol/30469",
+      "date": "2026-11-22",
+      "title_en": "PPCR research draft",
+      "note_en": "2026-11-22 04:16: a proposal for a narrowly scoped recovery mechanism for proxy wallets hit by the 2017 Parity library destruction. It found 284 candidate proxies, 93 of which held ETH at the historical snapshot, totalling 443,163 ETH (the author stresses this is not a recoverable amount). State intervention proposals like this have always been highly contentious, and this is only a pre-draft.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec：Dark Forest 第二季上线",
+      "note": "2026-11-22 00:19，可体验 Aztec 上的隐私移动玩法。",
+      "url": "https://x.com/aztecnetwork/status/2124190967385469101",
+      "date": "2026-11-22",
+      "title_en": "Aztec: Dark Forest Season 2 is live",
+      "note_en": "2026-11-22 00:19, a way to try private movement gameplay on Aztec.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "LefterisJP 谈地址关联图",
+      "note": "2026-11-22 03:47：地址活动图会形成簇，可能暴露关联或共同所有权，隐私上必须把公开地址簇和私密地址簇分开。",
+      "url": "https://x.com/LefterisJP/status/2124243274625925287",
+      "date": "2026-11-22",
+      "title_en": "LefterisJP on address linkage graphs",
+      "note_en": "2026-11-22 03:47: address activity graphs form clusters that may reveal relationships or co-ownership, so for privacy, public and private address clusters must be kept apart.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst 谈机器支付",
+      "note": "2026-11-22 06:01：预计互联网会因 agent 而收紧，机器之间将用稳定币和智能合约协商互开大门。",
+      "url": "https://x.com/gakonst/status/2124277152246014347",
+      "date": "2026-11-22",
+      "title_en": "gakonst on machine payments",
+      "note_en": "2026-11-22 06:01: he expects the internet to close down because of agents, with machines then opening doors to other machines using stablecoins and negotiating over smart contracts.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dankrad：迭代太慢是主要担忧",
+      "note": "2026-11-21 17:19：在 gballet 的 pqai 讨论串中说，这给以太坊带来一些挑战，但以太坊在这些领域有专长、处境相对不错，他最担心的是迭代太慢。",
+      "url": "https://x.com/dankrad/status/2124085405796446352",
+      "date": "2026-11-21",
+      "title_en": "dankrad: slow iteration is the main worry",
+      "note_en": "2026-11-21 17:19: in gballet's pqai thread he said this brings some challenges for Ethereum, which is still relatively well positioned with real expertise on these topics, but his main worry is that iteration is far too slow.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://eipsinsight.com/calls/pqts/017",
+    "credit": "EIPsInsight",
+    "local_path": "assets/2026-11-22.jpg",
+    "credit_en": "EIPsInsight"
+  },
+  "keywords_en": [
+    "EIP-8131 transaction floor",
+    "EIP-8279 BAL byte floor",
+    "leanSPHINCS signature lifetime",
+    "agent account policy ERC",
+    "FOCIL block size bug"
+  ],
+  "summary_en": "Toni merged updates aligning EIP-8131 and EIP-8279 with Glamsterdam. EIP-7702 authorizations now count toward the transaction floor at their largest encoding of 133 bytes, and across 168M mainnet transactions over 90 days only 0.66% would pay more, all of them blob or type-4 transactions. Łukasz closed three PRs that tried to add state gas rules to EIP-2780 and EIP-8141. On PQ transaction signatures, EIPsInsight added notes from PQTS #17: at a 2^24 signature lifetime, Circle would need to rotate keys roughly every 1.5 years, and Ledger struggles at higher lifetimes. A draft ERC that makes agent account policies readable landed in the ERCs repo, and the first review already found that a policy loosening can skip the delay."
+}
