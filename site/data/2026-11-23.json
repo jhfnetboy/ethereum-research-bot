@@ -1,0 +1,377 @@
+{
+  "date": "2026-11-23",
+  "keywords": [
+    "区块最坏大小与 gas 上限",
+    "EIP-8279 存款请求计量",
+    "EIP-7702 规范修订",
+    "4337 隐私中继",
+    "Agent 账户策略评审"
+  ],
+  "summary": "Nero 在 ethresear.ch 发文测算 Glamsterdam 规则下区块最坏大小：最大的区块来自零字节 calldata 加数千个被跳过的 EIP-7702 授权，60M gas 时约 1.8 MiB，他主张 EIP-8131 与 EIP-8279 一起上线并给 gas 上限设硬顶，以修复 FOCIL 的“能否追加”检查。配套的 PR #12686 让 EIP-8279 计量存款请求的 192 字节。EIP-7702 收到两处规范修订 PR，EIP-8151 作者回应为什么不做成可选预编译；kassandra 主张隐私协议提款走 4337 中继路径。",
+  "items": [
+    {
+      "topic": "区块到底能有多大：gas 上限、字节上限与 FOCIL",
+      "title": "Nero（Toni Wahrstätter）发表《What's a block, and how big can it get?》",
+      "note": "2026-11-22 15:32，全部数字以 Glamsterdam 规则、60M gas 上限为基准：",
+      "url": "https://ethresear.ch/t/whats-a-block-and-how-big-can-it-get/26281",
+      "date": "2026-11-22",
+      "title_en": "Nero (Toni Wahrstätter) published \"What's a block, and how big can it get?\"",
+      "note_en": "On 2026-11-22 at 15:32. All numbers use Glamsterdam rules with a 60M gas limit as the reference:",
+      "topic_en": "How big can a block get: gas limit, byte limits and FOCIL"
+    },
+    {
+      "topic": "区块到底能有多大：gas 上限、字节上限与 FOCIL",
+      "title": "PR #12686：EIP-8279 计量存款请求字节",
+      "note": "2026-11-22 13:50（nerolation）：Gloas 让 DepositRequests 成为无上限列表，每个请求给负载增加 192 字节，但 EIP-8131 和 EIP-8279 都不计量。中继合约循环调用存款合约，每笔约 26k gas，可以藏在零字节 calldata 的底价之下，把负载推到约 1.44 × gas_limit / 64（原本约 1.15×）。PR 规定存款合约发出带存款事件 topic 的 LOG 时计量 192 字节，与 EIP-6110 把日志转为请求的条件相同；正常存款的执行 gas（约 26k）远高于 12,288 的额外底价，不受影响。eth-bot 显示已获所有审阅者批准。",
+      "url": "https://github.com/ethereum/EIPs/pull/12686",
+      "date": "2026-11-22",
+      "title_en": "PR #12686: EIP-8279 meters deposit request bytes",
+      "note_en": "2026-11-22 13:50 (nerolation). Gloas made DepositRequests an unbounded list, and each request adds 192 bytes to the payload, yet neither EIP-8131 nor EIP-8279 meters them. A relay contract calling the deposit contract in a loop, at about 26k gas per deposit, can hide under the floor of zero-byte calldata and push the payload to about 1.44 × gas_limit / 64 instead of about 1.15×. The PR meters 192 bytes when the deposit contract emits a LOG with the deposit event topic, the same condition EIP-6110 uses to turn logs into requests. Normal deposits use about 26k execution gas, well above the 12,288 extra floor gas, so they are unaffected. eth-bot shows all reviewers have approved.",
+      "topic_en": "How big can a block get: gas limit, byte limits and FOCIL"
+    },
+    {
+      "topic": "区块到底能有多大：gas 上限、字节上限与 FOCIL",
+      "title": "aelowsson 回复",
+      "note": "2026-11-23 00:57：EIP-7999 的思路是给每个 IL 分配区块数据上限的同等份额，用交易声明的数据上限来检查，这样数据上限独立约束信封，gas 上限可以继续提高；但数据资源同样要覆盖授权元组和请求，而声明数据上限需要新的交易格式。",
+      "url": "https://ethresear.ch/t/whats-a-block-and-how-big-can-it-get/26281/2",
+      "date": "2026-11-23",
+      "title_en": "aelowsson replied",
+      "note_en": "On 2026-11-23 at 00:57. EIP-7999's approach gives each IL an equal share of the block's data limit, checked against transactions' declared data limits, so the data limit bounds the envelope independently and the gas limit can keep rising. The data resource would still need to cover authorization tuples and requests, and declaring a data limit needs a new transaction format.",
+      "topic_en": "How big can a block get: gas limit, byte limits and FOCIL"
+    },
+    {
+      "topic": "区块到底能有多大：gas 上限、字节上限与 FOCIL",
+      "title": "PR #12702",
+      "note": "FOCIL 规范同步：PR #12702 2026-11-22 23:43（tcoratger）把 IL 的 MAX_BYTES_PER_INCLUSION_LIST 改为按 EIP-2718 编码计算（类型化交易是 type || payload，不是 RLP 项），与 Engine API 的 engine_getInclusionListV1 一致。nero_eth 回复 chfast（11-22 17:09）说还有更多问题，见 Discord 的 FOCIL 频道。",
+      "url": "https://github.com/ethereum/EIPs/pull/12702",
+      "date": "2026-11-22",
+      "title_en": "PR #12702",
+      "note_en": "FOCIL spec sync: PR #12702, 2026-11-22 23:43 (tcoratger), counts the IL's MAX_BYTES_PER_INCLUSION_LIST over the EIP-2718 encoding (a typed transaction is type || payload, not an RLP item), matching engine_getInclusionListV1 in the Engine API. nero_eth replied to chfast (11-22 17:09) that there are further issues, discussed in the FOCIL channel on Discord.",
+      "topic_en": "How big can a block get: gas limit, byte limits and FOCIL"
+    },
+    {
+      "topic": "区块到底能有多大：gas 上限、字节上限与 FOCIL",
+      "title": "nero_eth 回复 chfast",
+      "note": "FOCIL 规范同步：PR #12702 2026-11-22 23:43（tcoratger）把 IL 的 MAX_BYTES_PER_INCLUSION_LIST 改为按 EIP-2718 编码计算（类型化交易是 type || payload，不是 RLP 项），与 Engine API 的 engine_getInclusionListV1 一致。nero_eth 回复 chfast（11-22 17:09）说还有更多问题，见 Discord 的 FOCIL 频道。",
+      "url": "https://x.com/nero_eth/status/2124445128353874120",
+      "date": "2026-11-22",
+      "title_en": "nero_eth replied to chfast",
+      "note_en": "FOCIL spec sync: PR #12702, 2026-11-22 23:43 (tcoratger), counts the IL's MAX_BYTES_PER_INCLUSION_LIST over the EIP-2718 encoding (a typed transaction is type || payload, not an RLP item), matching engine_getInclusionListV1 in the Engine API. nero_eth replied to chfast (11-22 17:09) that there are further issues, discussed in the FOCIL channel on Discord.",
+      "topic_en": "How big can a block get: gas limit, byte limits and FOCIL"
+    },
+    {
+      "topic": "区块到底能有多大：gas 上限、字节上限与 FOCIL",
+      "title": "ACDE #250",
+      "note": "EIP-8131 与 EIP-8279 能否在 Hegotá 一起上线，以及是否引入 MAX_GAS_LIMIT 区块头检查。ACDE #250 定于 12 月 3 日。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-execution-acde-250-december-3-2026/30463",
+      "date": "2026-11-23",
+      "title_en": "ACDE #250",
+      "note_en": "Whether EIP-8131 and EIP-8279 ship together in Hegotá, and whether a MAX_GAS_LIMIT header check is added. ACDE #250 is set for December 3.",
+      "topic_en": "How big can a block get: gas limit, byte limits and FOCIL"
+    },
+    {
+      "topic": "EIP-7702 与账户签名：规范修订、旧密钥风险和 PQ 迁移",
+      "title": "PR #12685：EIP-7702 退款条件",
+      "note": "2026-11-22 12:41（tcoratger）：规范第 7 步说“authority 不为空”时退还 PER_EMPTY_ACCOUNT_COST - PER_AUTH_BASE_COST，而 Rationale 说“账户已存在于状态中”时退还。两者在“存在但为空”的账户上不同，参考实现按存在与否退款，PR 把第 7 步对齐到 Rationale。作者说明 EIP-7523 之后主网已没有这种账户，主网行为不变。",
+      "url": "https://github.com/ethereum/EIPs/pull/12685",
+      "date": "2026-11-22",
+      "title_en": "PR #12685: EIP-7702 refund condition",
+      "note_en": "2026-11-22 12:41 (tcoratger). Step 7 of the spec refunds PER_EMPTY_ACCOUNT_COST - PER_AUTH_BASE_COST \"if authority is not empty\", while the Rationale refunds it \"if the account already exists in state\". The two differ for an account that exists but is empty, and the reference implementation refunds by existence, so the PR aligns step 7 with the Rationale. The author notes that after EIP-7523 no such account exists on mainnet, so mainnet behavior does not change.",
+      "topic_en": "EIP-7702 and account signatures: spec fixes, old key risk and PQ migration"
+    },
+    {
+      "topic": "EIP-7702 与账户签名：规范修订、旧密钥风险和 PQ 迁移",
+      "title": "PR #12689：EIP-7702 签名载荷",
+      "note": "2026-11-22 21:04（tcoratger）：规范写签名是对 keccak256(SET_CODE_TX_TYPE || TransactionPayload) 签的，而 TransactionPayload 末尾包含 signature_y_parity、r、s，字面上签名覆盖了自己。PR 改为像 EIP-1559、EIP-2930、EIP-4844 那样逐项列出不含签名的字段。两个 PR 都需要 7702 作者（adietrichs、lightclient、samwilsn、vbuterin）之一和一位编辑审核。",
+      "url": "https://github.com/ethereum/EIPs/pull/12689",
+      "date": "2026-11-22",
+      "title_en": "PR #12689: EIP-7702 signed payload",
+      "note_en": "2026-11-22 21:04 (tcoratger). The spec says the signature is over keccak256(SET_CODE_TX_TYPE || TransactionPayload), but TransactionPayload ends with signature_y_parity, r and s, so read literally the signature covers itself. The PR lists the signed fields explicitly without the signature, as EIP-1559, EIP-2930 and EIP-4844 do. Both PRs need review from one 7702 author (adietrichs, lightclient, samwilsn, vbuterin) and one editor.",
+      "topic_en": "EIP-7702 and account signatures: spec fixes, old key risk and PQ migration"
+    },
+    {
+      "topic": "EIP-7702 与账户签名：规范修订、旧密钥风险和 PQ 迁移",
+      "title": "EIP-8151 作者回应",
+      "note": "2026-11-22 20:14（colinlyguo）：EIP-8151 让 ecRecover 遵循 EIP-3607 的账户代码限制（EIP-7702 委托指示符除外），并与 EIP-7851 的 0xef0101 停用授权对齐。对“做成可选预编译”的建议，作者说主要目标是 ERC-20 permit、Permit2 这类写死调用 0x01 的不可变合约；0x01 不变，退役的 ECDSA 密钥仍能通过这些合约转走资产。",
+      "url": "https://ethereum-magicians.org/t/eip-8151-account-code-restricted-ecrecover/27690/30",
+      "date": "2026-11-22",
+      "title_en": "The EIP-8151 author replied",
+      "note_en": "On 2026-11-22 at 20:14 (colinlyguo). EIP-8151 applies the EIP-3607 account-code restriction to ecRecover (except for EIP-7702 delegation indicators) and aligns with EIP-7851's 0xef0101 deactivated authorities. On the suggestion of an opt-in precompile, he said the main targets are immutable contracts like ERC-20 permit and Permit2 that hardcode calls to 0x01. If 0x01 stays unchanged, retired ECDSA keys can still drain assets through those contracts.",
+      "topic_en": "EIP-7702 and account signatures: spec fixes, old key risk and PQ migration"
+    },
+    {
+      "topic": "EIP-7702 与账户签名：规范修订、旧密钥风险和 PQ 迁移",
+      "title": "Vitalik 回复",
+      "note": "PQ 迁移讨论：Vitalik 回复 2026-11-22 19:56：几乎所有非哈希签名方案在构造中也用到哈希，所以“只依赖曲线或格”不存在，选择只有“只依赖哈希”或“同时依赖哈希和别的东西”。gballet 11-23 04:59 认为，弄清楚如何升级以太坊的签名方案比决定具体方案更紧迫。decentrek 11-23 03:40 回答提问时说，EIP-8130 本身可以支持 PQ 签名，但 Base 还没说会支持 leanSPHINCS 还是其他方案（或都支持）。",
+      "url": "https://x.com/VitalikButerin/status/2124487160736973184",
+      "date": "2026-11-22",
+      "title_en": "Vitalik replied",
+      "note_en": "PQ migration: Vitalik replied on 2026-11-22 at 19:56 that pretty much every non-hash-based signature scheme also uses hashes somewhere in its construction, so \"depend only on curves or lattices\" is not on the table. The choice is between depending only on hashes, or on hashes plus something else. gballet said at 11-23 04:59 that figuring out how to upgrade Ethereum's signature scheme is more urgent than choosing the specific scheme. decentrek answered a question at 11-23 03:40: EIP-8130 itself can support PQ signatures, but Base has not said whether it will support leanSPHINCS, another PQ scheme, or both.",
+      "topic_en": "EIP-7702 and account signatures: spec fixes, old key risk and PQ migration"
+    },
+    {
+      "topic": "EIP-7702 与账户签名：规范修订、旧密钥风险和 PQ 迁移",
+      "title": "gballet",
+      "note": "PQ 迁移讨论：Vitalik 回复 2026-11-22 19:56：几乎所有非哈希签名方案在构造中也用到哈希，所以“只依赖曲线或格”不存在，选择只有“只依赖哈希”或“同时依赖哈希和别的东西”。gballet 11-23 04:59 认为，弄清楚如何升级以太坊的签名方案比决定具体方案更紧迫。decentrek 11-23 03:40 回答提问时说，EIP-8130 本身可以支持 PQ 签名，但 Base 还没说会支持 leanSPHINCS 还是其他方案（或都支持）。",
+      "url": "https://x.com/gballet/status/2124623820497555591",
+      "date": "2026-11-22",
+      "title_en": "gballet",
+      "note_en": "PQ migration: Vitalik replied on 2026-11-22 at 19:56 that pretty much every non-hash-based signature scheme also uses hashes somewhere in its construction, so \"depend only on curves or lattices\" is not on the table. The choice is between depending only on hashes, or on hashes plus something else. gballet said at 11-23 04:59 that figuring out how to upgrade Ethereum's signature scheme is more urgent than choosing the specific scheme. decentrek answered a question at 11-23 03:40: EIP-8130 itself can support PQ signatures, but Base has not said whether it will support leanSPHINCS, another PQ scheme, or both.",
+      "topic_en": "EIP-7702 and account signatures: spec fixes, old key risk and PQ migration"
+    },
+    {
+      "topic": "EIP-7702 与账户签名：规范修订、旧密钥风险和 PQ 迁移",
+      "title": "decentrek",
+      "note": "PQ 迁移讨论：Vitalik 回复 2026-11-22 19:56：几乎所有非哈希签名方案在构造中也用到哈希，所以“只依赖曲线或格”不存在，选择只有“只依赖哈希”或“同时依赖哈希和别的东西”。gballet 11-23 04:59 认为，弄清楚如何升级以太坊的签名方案比决定具体方案更紧迫。decentrek 11-23 03:40 回答提问时说，EIP-8130 本身可以支持 PQ 签名，但 Base 还没说会支持 leanSPHINCS 还是其他方案（或都支持）。",
+      "url": "https://x.com/decentrek/status/2124603905833324867",
+      "date": "2026-11-22",
+      "title_en": "decentrek",
+      "note_en": "PQ migration: Vitalik replied on 2026-11-22 at 19:56 that pretty much every non-hash-based signature scheme also uses hashes somewhere in its construction, so \"depend only on curves or lattices\" is not on the table. The choice is between depending only on hashes, or on hashes plus something else. gballet said at 11-23 04:59 that figuring out how to upgrade Ethereum's signature scheme is more urgent than choosing the specific scheme. decentrek answered a question at 11-23 03:40: EIP-8130 itself can support PQ signatures, but Base has not said whether it will support leanSPHINCS, another PQ scheme, or both.",
+      "topic_en": "EIP-7702 and account signatures: spec fixes, old key risk and PQ migration"
+    },
+    {
+      "topic": "EIP-7702 与账户签名：规范修订、旧密钥风险和 PQ 迁移",
+      "title": "PQ-CL Breakout #4",
+      "note": "定于 11 月 24 日。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-4-november-24-2026/30460",
+      "date": "2026-11-23",
+      "title_en": "PQ-CL Breakout #4",
+      "note_en": "Is set for November 24.",
+      "topic_en": "EIP-7702 and account signatures: spec fixes, old key risk and PQ migration"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "kassandra 谈 4337 隐私中继",
+      "note": "2026-11-22 20:18：隐私协议的提款和交易走 4337 中继路径意味着自由和选择，4337 打包是通用基础设施，很多服务都在打包 UserOp。她 20:33 补充：不想依赖协议专用中继的可用性、规则或费用，账户抽象就是出路，今天是 4337 打包，明天是 Frame 交易。",
+      "url": "https://x.com/kassandraETH/status/2124492676984619502",
+      "date": "2026-11-22",
+      "title_en": "kassandra on 4337 privacy relaying",
+      "note_en": "2026-11-22 20:18: routing privacy protocol withdrawals and transactions through the 4337 relay path means freedom and choice, since 4337 bundling is general-purpose infrastructure and many services bundle UserOps. She added at 20:33 that if you do not want to depend on protocol-specific relayers being available, or on their rules and fees, account abstraction is the way out: 4337 bundling today, Frame transactions tomorrow.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "她 20:33 补充",
+      "note": "kassandra 谈 4337 隐私中继 2026-11-22 20:18：隐私协议的提款和交易走 4337 中继路径意味着自由和选择，4337 打包是通用基础设施，很多服务都在打包 UserOp。她 20:33 补充：不想依赖协议专用中继的可用性、规则或费用，账户抽象就是出路，今天是 4337 打包，明天是 Frame 交易。",
+      "url": "https://x.com/kassandraETH/status/2124496532896678166",
+      "date": "2026-11-22",
+      "title_en": "She added at 20:33",
+      "note_en": "Kassandra on 4337 privacy relaying, 2026-11-22 20:18: routing privacy protocol withdrawals and transactions through the 4337 relay path means freedom and choice, since 4337 bundling is general-purpose infrastructure and many services bundle UserOps. She added at 20:33 that if you do not want to depend on protocol-specific relayers being available, or on their rules and fees, account abstraction is the way out: 4337 bundling today, Frame transactions tomorrow.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "kassandra 22:27",
+      "note": "与 anondotinc 的讨论中，kassandra 22:27 认为 4337 中继路径配合 paymaster 可以获得较强隐私；23:38 指出若不愿泄露“同一用户在移动 WETH（手续费）和其他资产”，可以用 ZK 证明手续费 UTXO，可行但增加 gas；11-23 00:02 补充 Railgun 的 unshield 总带有承诺的代币标记属性。",
+      "url": "https://x.com/kassandraETH/status/2124525150917820748",
+      "date": "2026-11-23",
+      "title_en": "kassandra said at 22:27",
+      "note_en": "In a discussion with anondotinc, kassandra said at 22:27 that the 4337 relay path with a paymaster can give strong privacy. At 23:38 she noted that if leaking \"the same user is moving WETH (the fee) plus other assets\" is unacceptable, the fee UTXO can be ZK-proven, which works but adds gas. At 11-23 00:02 she added that Railgun unshields always carry this commitment token tagging property.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "23:38",
+      "note": "与 anondotinc 的讨论中，kassandra 22:27 认为 4337 中继路径配合 paymaster 可以获得较强隐私；23:38 指出若不愿泄露“同一用户在移动 WETH（手续费）和其他资产”，可以用 ZK 证明手续费 UTXO，可行但增加 gas；11-23 00:02 补充 Railgun 的 unshield 总带有承诺的代币标记属性。",
+      "url": "https://x.com/kassandraETH/status/2124543144742011223",
+      "date": "2026-11-23",
+      "title_en": "At 23:38",
+      "note_en": "In a discussion with anondotinc, kassandra said at 22:27 that the 4337 relay path with a paymaster can give strong privacy. At 23:38 she noted that if leaking \"the same user is moving WETH (the fee) plus other assets\" is unacceptable, the fee UTXO can be ZK-proven, which works but adds gas. At 11-23 00:02 she added that Railgun unshields always carry this commitment token tagging property.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "11-23 00:02",
+      "note": "与 anondotinc 的讨论中，kassandra 22:27 认为 4337 中继路径配合 paymaster 可以获得较强隐私；23:38 指出若不愿泄露“同一用户在移动 WETH（手续费）和其他资产”，可以用 ZK 证明手续费 UTXO，可行但增加 gas；11-23 00:02 补充 Railgun 的 unshield 总带有承诺的代币标记属性。",
+      "url": "https://x.com/kassandraETH/status/2124549166827246062",
+      "date": "2026-11-23",
+      "title_en": "At 11-23 00:02",
+      "note_en": "In a discussion with anondotinc, kassandra said at 22:27 that the 4337 relay path with a paymaster can give strong privacy. At 23:38 she noted that if leaking \"the same user is moving WETH (the fee) plus other assets\" is unacceptable, the fee UTXO can be ZK-proven, which works but adds gas. At 11-23 00:02 she added that Railgun unshields always carry this commitment token tagging property.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "Frame 交易隐私池讨论新回复",
+      "note": "2026-11-22 19:27：原帖（11-06，Nethermind）在 Frame 交易上跑了 BN254 Groth16 隐私池，提款 679,322 gas、无需中继，但证明检查超过验证 gas 上限，池子也无法代表用户自己的地址发起调用。liamwilliams 认为 EOA 场景对身份绑定的操作是真实需求（领空投、投票委托、续费域名），但频率低且集中在领取事件，建议当作兼容性功能，先测量领取和投票流程再决定是否为此提高验证预算。",
+      "url": "https://ethresear.ch/t/a-privacy-pool-on-frame-transactions-what-works-and-the-case-that-does-not-yet/26223/5",
+      "date": "2026-11-22",
+      "title_en": "New reply on the Frame transaction privacy pool thread",
+      "note_en": "2026-11-22 19:27. The original post (11-06, Nethermind) ran a BN254 Groth16 privacy pool on Frame transactions with withdrawals at 679,322 gas and no relayer, but the proof check exceeds the validation gas cap and the pool cannot make a call from the user's own address. liamwilliams said the EOA case is real for identity-bound actions (claiming airdrops, voting or delegating, renewing names), but rare and concentrated around claim events, so it should be treated as a compatibility feature and claim and vote flows measured before raising the verify budget for it.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "Secrypta 对 Policy-Enforced Agent Accounts 的评审",
+      "note": "Agent 账户安全评审继续：Secrypta 对 Policy-Enforced Agent Accounts 的评审（11-22 17:32）指出，多数资金被盗并不改策略，而是走早先授予且未撤销的权限：ERC-20 allowance 或 permit、operator 授权、已安装的模块或 executor，对 7702 账户则是委托目标本身；建议证据层暴露 7579 executor 和当前 7702 委托目标。Zealynx 核查参考注册表（11-23 04:53）后确认 declare 在同一区块生效，签名者更换等于把策略放宽到任意，建议 declare 也要遵守最小延迟。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-policy-enforced-agent-accounts/30467/4",
+      "date": "2026-11-23",
+      "title_en": "Secrypta's review of Policy-Enforced Agent Accounts",
+      "note_en": "Agent account safety reviews continued. Secrypta's review of Policy-Enforced Agent Accounts (11-22 17:32) noted that most drains do not touch the policy at all. Funds leave through authority granted earlier and never revoked: ERC-20 allowances or permits, operator approvals, installed modules or executors, and for 7702 accounts the delegation target itself. Secrypta suggested the evidence layer expose 7579 executors and the current 7702 delegation target. Zealynx checked the reference registry (11-23 04:53) and confirmed that declare takes effect in the same block, so a signer swap is equivalent to loosening the policy to anything, and declare should respect the minimum delay too.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "Zealynx 核查参考注册表",
+      "note": "Agent 账户安全评审继续：Secrypta 对 Policy-Enforced Agent Accounts 的评审（11-22 17:32）指出，多数资金被盗并不改策略，而是走早先授予且未撤销的权限：ERC-20 allowance 或 permit、operator 授权、已安装的模块或 executor，对 7702 账户则是委托目标本身；建议证据层暴露 7579 executor 和当前 7702 委托目标。Zealynx 核查参考注册表（11-23 04:53）后确认 declare 在同一区块生效，签名者更换等于把策略放宽到任意，建议 declare 也要遵守最小延迟。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-policy-enforced-agent-accounts/30467/5",
+      "date": "2026-11-23",
+      "title_en": "Zealynx checked the reference registry",
+      "note_en": "Agent account safety reviews continued. Secrypta's review of Policy-Enforced Agent Accounts (11-22 17:32) noted that most drains do not touch the policy at all. Funds leave through authority granted earlier and never revoked: ERC-20 allowances or permits, operator approvals, installed modules or executors, and for 7702 accounts the delegation target itself. Secrypta suggested the evidence layer expose 7579 executors and the current 7702 delegation target. Zealynx checked the reference registry (11-23 04:53) and confirmed that declare takes effect in the same block, so a signer swap is equivalent to loosening the policy to anything, and declare should respect the minimum delay too.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "ERC-8507 Agent Allowlist Framework 发布 0.2.0",
+      "note": "2026-11-23 00:46：草案拿到编号并更名，按评审意见加入按动作声明的复用策略（NONE、WHILE_CURRENT、ADMISSION，默认 NONE）。此前 Secrypta（11-22 17:31）提醒：EIP-7702 账户可以随时重新委托，地址不变代码变，白名单条目应可选择锁定评估时的委托目标或代码哈希。",
+      "url": "https://ethereum-magicians.org/t/erc-8507-agent-allowlist-framework-aaf/30456/4",
+      "date": "2026-11-23",
+      "title_en": "ERC-8507 Agent Allowlist Framework released 0.2.0",
+      "note_en": "On 2026-11-23 at 00:46. The draft got its number and a new name, and following review it adds a per-action reuse policy (NONE, WHILE_CURRENT, ADMISSION, defaulting to NONE). Earlier, Secrypta (11-22 17:31) warned that an EIP-7702 account can re-delegate at any time, changing code without changing address, so an allowlist entry should optionally pin the delegation target or code hash it was assessed with.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "隐私与账户抽象：4337 中继路径、Frame 交易隐私池和 Agent 账户安全",
+      "title": "Secrypta",
+      "note": "ERC-8507 Agent Allowlist Framework 发布 0.2.0 2026-11-23 00:46：草案拿到编号并更名，按评审意见加入按动作声明的复用策略（NONE、WHILE_CURRENT、ADMISSION，默认 NONE）。此前 Secrypta（11-22 17:31）提醒：EIP-7702 账户可以随时重新委托，地址不变代码变，白名单条目应可选择锁定评估时的委托目标或代码哈希。",
+      "url": "https://ethereum-magicians.org/t/erc-8507-agent-allowlist-framework-aaf/30456/2",
+      "date": "2026-11-23",
+      "title_en": "Secrypta",
+      "note_en": "ERC-8507 Agent Allowlist Framework released 0.2.0 on 2026-11-23 at 00:46. The draft got its number and a new name, and following review it adds a per-action reuse policy (NONE, WHILE_CURRENT, ADMISSION, defaulting to NONE). Earlier, Secrypta (11-22 17:31) warned that an EIP-7702 account can re-delegate at any time, changing code without changing address, so an allowlist entry should optionally pin the delegation target or code hash it was assessed with.",
+      "topic_en": "Privacy and account abstraction: the 4337 relay path, a Frame transaction privacy pool and agent account safety"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8304 无需信任的日志和交易索引",
+      "note": "2026-11-22 21:05：zsfelfoldi 说验证开销约占区块处理时间 1% 到 2%，计划很快作为 Geth 功能发布本地索引（替代基于 EIP-7745 的 filter maps），并在探索用 ZKP 证明索引表根，让协议改动变成可选。影响：将来轻客户端和钱包查日志可以不依赖可信 RPC。",
+      "url": "https://ethereum-magicians.org/t/eip-8304-trustless-log-and-transaction-index/28824/19",
+      "date": "2026-11-22",
+      "title_en": "EIP-8304 trustless log and transaction index",
+      "note_en": "2026-11-22 21:05: zsfelfoldi said validation adds about 1% to 2% of block processing time, a local index will ship soon as a Geth feature (replacing the filter maps index based on EIP-7745), and he is exploring ZK proofs of the index table roots so the protocol change could become optional. Impact: light clients and wallets could eventually query logs without trusting an RPC.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger 批量规范勘误",
+      "note": "2026-11-22 11:33 起：他在 EIPs 仓库开了约 20 个编辑性 PR，涉及 EIP-198、EIP-2718、EIP-1186、EIP-8070、EIP-8016 等，EIP-8024 的一处修改 21:16 已合并。对开发者主要是规范更清楚，不改变行为。",
+      "url": "https://github.com/ethereum/EIPs/pull/12684",
+      "date": "2026-11-22",
+      "title_en": "tcoratger's batch of spec fixes",
+      "note_en": "From 2026-11-22 11:33: he opened about 20 editorial PRs in the EIPs repo covering EIP-198, EIP-2718, EIP-1186, EIP-8070, EIP-8016 and more, and one change to EIP-8024 merged at 21:16. For developers this mostly means clearer specs, with no behavior change.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8024 的一处修改",
+      "note": "tcoratger 批量规范勘误 2026-11-22 11:33 起：他在 EIPs 仓库开了约 20 个编辑性 PR，涉及 EIP-198、EIP-2718、EIP-1186、EIP-8070、EIP-8016 等，EIP-8024 的一处修改 21:16 已合并。对开发者主要是规范更清楚，不改变行为。",
+      "url": "https://github.com/ethereum/EIPs/pull/12690",
+      "date": "2026-11-22",
+      "title_en": "one change to EIP-8024",
+      "note_en": "Tcoratger's batch of spec fixes from 2026-11-22 11:33: he opened about 20 editorial PRs in the EIPs repo covering EIP-198, EIP-2718, EIP-1186, EIP-8070, EIP-8016 and more, and one change to EIP-8024 merged at 21:16. For developers this mostly means clearer specs, with no behavior change.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "eth/74 依赖证明交换 PR #12551",
+      "note": "2026-11-22 20:41：EIP-8288 的配套网络协议，nerolation 重新触发检查，此前已表示可合并。EIPsInsight（11-22 11:43）也提到 Vitalik 对 LeanPCS 的支持让 EIP-8288 受到关注。",
+      "url": "https://github.com/ethereum/EIPs/pull/12551",
+      "date": "2026-11-22",
+      "title_en": "eth/74 dependency proof exchange, PR #12551",
+      "note_en": "2026-11-22 20:41: the networking companion to EIP-8288. nerolation re-triggered checks after earlier saying it was ready to merge. EIPsInsight (11-22 11:43) also noted that Vitalik's support for LeanPCS is drawing fresh attention to EIP-8288.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIPsInsight",
+      "note": "eth/74 依赖证明交换 PR #12551 2026-11-22 20:41：EIP-8288 的配套网络协议，nerolation 重新触发检查，此前已表示可合并。EIPsInsight（11-22 11:43）也提到 Vitalik 对 LeanPCS 的支持让 EIP-8288 受到关注。",
+      "url": "https://x.com/EIPsInsight/status/2124363174002737152",
+      "date": "2026-11-22",
+      "title_en": "EIPsInsight",
+      "note_en": "Eth/74 dependency proof exchange, PR #12551, 2026-11-22 20:41: the networking companion to EIP-8288. nerolation re-triggered checks after earlier saying it was ready to merge. EIPsInsight (11-22 11:43) also noted that Vitalik's support for LeanPCS is drawing fresh attention to EIP-8288.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ePBS 先发负载后揭示密钥",
+      "note": "2026-11-23 08:35：有人追问构建者预发大密文却不揭示密钥的成本，Gloas 是否有保证金、罚没或限速来约束。",
+      "url": "https://ethresear.ch/t/reveal-a-key-not-a-payload-sending-the-epbs-payload-before-the-reveal/26264/4",
+      "date": "2026-11-23",
+      "title_en": "ePBS: send the payload before revealing the key",
+      "note_en": "2026-11-23 08:35: a reply asks what it costs a builder to pre-seed a large ciphertext and never reveal the key, and whether Gloas has a bond, slashing or rate limit for it.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERC-8426 Wallet Pass",
+      "note": "2026-11-23 08:27：实现方反馈把 mint 设为独立动作并按 nonce 绑定账户，还发现负载均衡后的落后节点会误报“无此代币”。做 NFT 门票或会员卡的团队可参考。",
+      "url": "https://ethereum-magicians.org/t/erc-8426-wallet-pass-extension-for-nfts/29358/38",
+      "date": "2026-11-23",
+      "title_en": "ERC-8426 Wallet Pass",
+      "note_en": "2026-11-23 08:27: an implementer reported making mint its own action with the account bound to the nonce, and found that a lagging node behind a load balancer could wrongly report \"no such token\". Useful for teams building NFT tickets or membership passes.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Base：200ms 出块",
+      "note": "2026-11-23 02:21：Jesse Pollak 称 200ms 区块是让 Base 适合交易的核心。",
+      "url": "https://x.com/jessepollak/status/2124584181544227211",
+      "date": "2026-11-23",
+      "title_en": "Base: 200ms blocks",
+      "note_en": "2026-11-23 02:21: Jesse Pollak said 200ms blocks are core to making Base the place for trading.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP 编辑办公时间 #120",
+      "note": "定于 11 月 24 日，议程 11-22 更新。",
+      "url": "https://github.com/ethereum/pm/issues/2307",
+      "date": "2026-11-23",
+      "title_en": "EIP Editing Office Hour #120",
+      "note_en": "Is set for November 24, with the agenda updated on 11-22.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Eli Ben-Sasson 谈 AI 与密码学",
+      "note": "2026-11-22 20:59：如果 AI 推进数学的速度前所未有，就需要更强的密码学来保持领先。这与上期 pqai 讨论呼应。",
+      "url": "https://x.com/EliBenSasson/status/2124502989113032834",
+      "date": "2026-11-22",
+      "title_en": "Eli Ben-Sasson on AI and cryptography",
+      "note_en": "2026-11-22 20:59: if AI is advancing math faster than ever, stronger cryptography is how we stay ahead. This echoes last issue's pqai debate.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "dapplion 转述 Tomasz Stańczak",
+      "note": "2026-11-22 21:09：谈本地模型的未来，“新的身份象征是你帮助了多少家人、朋友和本地社区”。",
+      "url": "https://x.com/dapplion/status/2124505501824073969",
+      "date": "2026-11-22",
+      "title_en": "dapplion quoting Tomasz Stańczak",
+      "note_en": "2026-11-22 21:09: on where local models go, \"a totally new real status symbol, which is how much you helped your family, friends, and local community\".",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "gakonst 谈 agent 软件的扩散",
+      "note": "2026-11-23 02:58：缺的不是 agent 云，而是如何把这些软件工厂扩散到全球经济中。",
+      "url": "https://x.com/gakonst/status/2124593273679556937",
+      "date": "2026-11-23",
+      "title_en": "gakonst on spreading agent software",
+      "note_en": "2026-11-23 02:58: the missing piece is not the agentic cloud but how to diffuse these software factories through the global economy.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/whats-a-block-and-how-big-can-it-get/26281",
+    "credit": "ethresear.ch / Nero_eth",
+    "local_path": "assets/2026-11-23.jpg",
+    "credit_en": "ethresear.ch / Nero_eth"
+  },
+  "keywords_en": [
+    "worst-case block size and gas limit",
+    "EIP-8279 deposit request metering",
+    "EIP-7702 spec fixes",
+    "4337 privacy relaying",
+    "agent account policy reviews"
+  ],
+  "summary_en": "Nero published an ethresear.ch analysis of the worst-case block size under Glamsterdam rules. The biggest block comes from zero-byte calldata plus thousands of skipped EIP-7702 authorizations, about 1.8 MiB at 60M gas, and he argues for shipping EIP-8131 and EIP-8279 together with a hard cap on the gas limit to fix FOCIL's \"could have been appended\" check. A companion PR #12686 makes EIP-8279 meter the 192 bytes of each deposit request. EIP-7702 picked up two spec fix PRs, the EIP-8151 author explained why an opt-in precompile would not work, and kassandra made the case for routing privacy protocol withdrawals through the 4337 relay path."
+}
