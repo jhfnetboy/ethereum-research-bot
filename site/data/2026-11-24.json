@@ -1,0 +1,457 @@
+{
+  "date": "2026-11-24",
+  "keywords": [
+    "EIP-8430 AA 交易类型",
+    "EIP-8477 授权新鲜度",
+    "EIP-8141 Frame 交易",
+    "PQAI 后量子迁移",
+    "EIP-8037 重新定价"
+  ],
+  "summary": "EIP-8430（从 EIP-8130 拆出的 AA 交易类型，支持批量调用、gas 赞助、2D nonce 和内置 7702 式委托）与 EIP-8477（让 EIP-7702 授权绑定最近 256 个区块之一）作为草案合并进 EIPs 仓库。EF 博客发布 PQAI #0，把后量子和后 AI 的密码学迁移列为最高优先级，用户账户要迁到基于哈希的签名。ACDT #104 上多数人倾向不改 EIP-8037 规范，Bogota Devnet 3 和 Frame 交易如何支持 leanSPHINCS 推迟到下周继续讨论。",
+  "items": [
+    {
+      "topic": "原生 AA 与 Frame 交易：EIP-8430 合并，EIP-8141 收紧签名数据读取",
+      "title": "EIP-8430 AA Transaction Type 合并为草案",
+      "note": "2026-11-23 14:56（chunter-cb）。PR 描述列出的能力：分阶段的批量调用（调用可带原生 ETH）；gas 赞助，分绑定和开放两种付款方模式；2D nonce（key 0 就是账户 nonce）和免 nonce 模式；交易内置 EIP-7702 式代码委托（account_changes 类型 0x01）。认证器选择器、actor 解析钩子和预留的 account-change 类型，让其他账户模型不用新交易类型就能接入；EIP-8130（Keystore Accounts）在 PR #12386 里定义了其中一种接入。讨论帖。",
+      "url": "https://github.com/ethereum/EIPs/pull/12385",
+      "date": "2026-11-23",
+      "title_en": "EIP-8430 AA Transaction Type was merged as a draft",
+      "note_en": "On 2026-11-23 at 14:56 (chunter-cb). The PR lists phased call batching (calls can carry native ETH); gas sponsorship with bound and open payer modes; 2D nonces (key 0 is the account nonce) and a nonce-free mode; and in-band EIP-7702-style code delegation (account_changes type 0x01). An authenticator selector, an actor-resolution hook and reserved account-change types let other account models plug in without a new transaction type; EIP-8130 (Keystore Accounts) specifies one such integration in PR #12386. Discussion thread.",
+      "topic_en": "Native AA and Frame transactions: EIP-8430 merged, EIP-8141 tightens signature data reads"
+    },
+    {
+      "topic": "原生 AA 与 Frame 交易：EIP-8430 合并，EIP-8141 收紧签名数据读取",
+      "title": "讨论帖",
+      "note": "EIP-8430 AA Transaction Type 合并为草案 2026-11-23 14:56（chunter-cb）。PR 描述列出的能力：分阶段的批量调用（调用可带原生 ETH）；gas 赞助，分绑定和开放两种付款方模式；2D nonce（key 0 就是账户 nonce）和免 nonce 模式；交易内置 EIP-7702 式代码委托（account_changes 类型 0x01）。认证器选择器、actor 解析钩子和预留的 account-change 类型，让其他账户模型不用新交易类型就能接入；EIP-8130（Keystore Accounts）在 PR #12386 里定义了其中一种接入。讨论帖。",
+      "url": "https://ethereum-magicians.org/t/eip-8430-aa-transaction-type-split-out-from-8130/29810",
+      "date": "2026-11-23",
+      "title_en": "Discussion thread",
+      "note_en": "EIP-8430 AA Transaction Type was merged as a draft on 2026-11-23 at 14:56 (chunter-cb). The PR lists phased call batching (calls can carry native ETH); gas sponsorship with bound and open payer modes; 2D nonces (key 0 is the account nonce) and a nonce-free mode; and in-band EIP-7702-style code delegation (account_changes type 0x01). An authenticator selector, an actor-resolution hook and reserved account-change types let other account models plug in without a new transaction type; EIP-8130 (Keystore Accounts) specifies one such integration in PR #12386. Discussion thread.",
+      "topic_en": "Native AA and Frame transactions: EIP-8430 merged, EIP-8141 tightens signature data reads"
+    },
+    {
+      "topic": "原生 AA 与 Frame 交易：EIP-8430 合并，EIP-8141 收紧签名数据读取",
+      "title": "PR #12708：EIP-8141 只允许 VERIFY 帧读取签名哈希之外的签名字节",
+      "note": "2026-11-23 21:00（soispoke）。对 msg 为空的 ARBITRARY 条目，签名哈希只覆盖其长度，转发交易的任何人都能改这些字节，而目前任何帧里的代码都能复制它们。改动后在 VERIFY 帧之外调用 SIGDATACOPY 读这类条目会直接停止，对签名哈希做的自定义见证检查必须放在 VERIFY 帧里。",
+      "url": "https://github.com/ethereum/EIPs/pull/12708",
+      "date": "2026-11-23",
+      "title_en": "PR #12708: EIP-8141 lets only VERIFY frames read signature bytes outside the signature hash",
+      "note_en": "2026-11-23 21:00 (soispoke). For an ARBITRARY entry with an empty msg, the signature hash covers only its length, so anyone relaying the transaction can change those bytes, and today code in any frame can copy them. With the change, SIGDATACOPY on such an entry halts outside a VERIFY frame, so any custom witness check over the signature hash has to run in a VERIFY frame.",
+      "topic_en": "Native AA and Frame transactions: EIP-8430 merged, EIP-8141 tightens signature data reads"
+    },
+    {
+      "topic": "原生 AA 与 Frame 交易：EIP-8430 合并，EIP-8141 收紧签名数据读取",
+      "title": "PR #12506：EIP-8141 SENDER 模式下用默认代码设置代码",
+      "note": "2026-11-23 18:14 更新（AnkushinDaniil）。按 lightclient 的建议，SENDER 模式下的默认代码把 frame.data[0] 当选择器，0x01 表示 set code，对 tx.sender 执行 EIP-8298 的 SETCODEFROM，不加新标志，并把 EIP-8298 加入依赖。",
+      "url": "https://github.com/ethereum/EIPs/pull/12506",
+      "date": "2026-11-23",
+      "title_en": "PR #12506: EIP-8141 sets code from the default code in SENDER mode",
+      "note_en": "Updated 2026-11-23 18:14 (AnkushinDaniil). Following lightclient's suggestion, the default code in SENDER mode reads frame.data[0] as a selector, where 0x01 means set code, and runs EIP-8298's SETCODEFROM on tx.sender. No new flag is added, and EIP-8298 joins the requirements.",
+      "topic_en": "Native AA and Frame transactions: EIP-8430 merged, EIP-8141 tightens signature data reads"
+    },
+    {
+      "topic": "原生 AA 与 Frame 交易：EIP-8430 合并，EIP-8141 收紧签名数据读取",
+      "title": "PR #12672：EIP-8504 用依赖帧支持 leanSPHINCS 签名",
+      "note": "2026-11-23 23:03 更新（ilitteri）。依赖验证帧不执行代码，只声明 (scheme, data_hash, verification_key_hash) 三元组，目前只启用 leanSPHINCS；签名见证与交易分开携带，按 EIP-8288 的聚合接口处理，区块头承诺所携带的签名。",
+      "url": "https://github.com/ethereum/EIPs/pull/12672",
+      "date": "2026-11-23",
+      "title_en": "PR #12672: EIP-8504 supports leanSPHINCS signatures through dependency frames",
+      "note_en": "Updated 2026-11-23 23:03 (ilitteri). A dependency verification frame runs no code and only declares (scheme, data_hash, verification_key_hash) triples, with only leanSPHINCS enabled for now. Signature witnesses travel separately from transactions through the EIP-8288 aggregation interface, and the block header commits to the signatures carried.",
+      "topic_en": "Native AA and Frame transactions: EIP-8430 merged, EIP-8141 tightens signature data reads"
+    },
+    {
+      "topic": "原生 AA 与 Frame 交易：EIP-8430 合并，EIP-8141 收紧签名数据读取",
+      "title": "PR #12663（FOCIL 对 Frame 交易的遗漏见证）被关闭",
+      "note": "2026-11-24 01:37，未合并。",
+      "url": "https://github.com/ethereum/EIPs/pull/12663",
+      "date": "2026-11-24",
+      "title_en": "PR #12663 (FOCIL omission witnesses for Frame transactions) was closed",
+      "note_en": "On 2026-11-24 at 01:37 without being merged.",
+      "topic_en": "Native AA and Frame transactions: EIP-8430 merged, EIP-8141 tightens signature data reads"
+    },
+    {
+      "topic": "原生 AA 与 Frame 交易：EIP-8430 合并，EIP-8141 收紧签名数据读取",
+      "title": "ACDT #104 会议总结",
+      "note": "Frame 规范与 EIP-8288 的前向兼容引发讨论，焦点是用 proof frame 还是在签名列表里加入新方案来支持 LeanPCS 和 leanSPHINCS，涉及聚合、可延展性和 L2 集成；会议同意在 pq-el 和 8141 频道异步继续。（该总结为会议记录工具自动生成。）",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-104-november-23-2026/30411/3",
+      "date": "2026-11-24",
+      "title_en": "ACDT #104 meeting summary",
+      "note_en": "Forward compatibility between the Frame spec and EIP-8288 sparked debate over whether LeanPCS and leanSPHINCS should come in through a proof frame or through additions to the signature list, touching on aggregation, malleability and L2 integration. The call agreed to continue async in the pq-el and 8141 channels. (The summary was generated automatically by the meeting tool.)",
+      "topic_en": "Native AA and Frame transactions: EIP-8430 merged, EIP-8141 tightens signature data reads"
+    },
+    {
+      "topic": "EIP-7702 授权新鲜度与 agent 账户的委托风险",
+      "title": "EIP-8477 Recent Block Bound Delegation Authorizations 合并为草案",
+      "note": "2026-11-23 14:59（dangerousfood）。动机：未使用的 EIP-7702 授权在协议上没有有效期，只要账户 nonce 对得上就能随时被使用。方案扩展 type 0x04 的授权格式，要求签入执行层区块号和区块头哈希，只有该区块是包含区块前 256 个祖先之一时才能应用；保留 0x05 签名前缀，激活后拒绝旧的无锚定授权；授权列表的处理语义不变，也不会让已安装的委托失效。讨论帖。",
+      "url": "https://github.com/ethereum/EIPs/pull/12601",
+      "date": "2026-11-23",
+      "title_en": "EIP-8477 Recent Block Bound Delegation Authorizations was merged as a draft",
+      "note_en": "On 2026-11-23 at 14:59 (dangerousfood). The motivation: unused EIP-7702 authorizations have no protocol-enforced freshness bound and stay usable whenever the account nonce matches. The proposal extends the type 0x04 authorization format so it signs an execution block number and header hash, and allows it only while that block is one of the inclusion block's 256 preceding ancestors. It keeps the 0x05 signing prefix, rejects legacy unanchored authorizations after activation, leaves authorization-list processing unchanged and does not expire installed delegations. Discussion thread.",
+      "topic_en": "EIP-7702 authorization freshness and delegation risk in agent accounts"
+    },
+    {
+      "topic": "EIP-7702 授权新鲜度与 agent 账户的委托风险",
+      "title": "讨论帖",
+      "note": "EIP-8477 Recent Block Bound Delegation Authorizations 合并为草案 2026-11-23 14:59（dangerousfood）。动机：未使用的 EIP-7702 授权在协议上没有有效期，只要账户 nonce 对得上就能随时被使用。方案扩展 type 0x04 的授权格式，要求签入执行层区块号和区块头哈希，只有该区块是包含区块前 256 个祖先之一时才能应用；保留 0x05 签名前缀，激活后拒绝旧的无锚定授权；授权列表的处理语义不变，也不会让已安装的委托失效。讨论帖。",
+      "url": "https://ethereum-magicians.org/t/eip-8477-recent-block-bound-delegation-authorizations/30269",
+      "date": "2026-11-23",
+      "title_en": "Discussion thread",
+      "note_en": "EIP-8477 Recent Block Bound Delegation Authorizations was merged as a draft on 2026-11-23 at 14:59 (dangerousfood). The motivation: unused EIP-7702 authorizations have no protocol-enforced freshness bound and stay usable whenever the account nonce matches. The proposal extends the type 0x04 authorization format so it signs an execution block number and header hash, and allows it only while that block is one of the inclusion block's 256 preceding ancestors. It keeps the 0x05 signing prefix, rejects legacy unanchored authorizations after activation, leaves authorization-list processing unchanged and does not expire installed delegations. Discussion thread.",
+      "topic_en": "EIP-7702 authorization freshness and delegation risk in agent accounts"
+    },
+    {
+      "topic": "EIP-7702 授权新鲜度与 agent 账户的委托风险",
+      "title": "Policy-Enforced Agent Accounts 发布 Registry v2",
+      "note": "2026-11-24 03:21（palisec-dev）：按评审意见，发布者提交的每个策略都要经 setPending 并至少提前账户设定的 minDelay，只有账户自己能立即激活；注册表部署在 Robinhood Chain（4663），无 owner、不可升级，客户端库 0.2.0 已上 npm。此前 palisec-dev 回复 Secrypta（2026-11-23 14:39）同意在安全考虑里写明，策略承诺只覆盖需要策略签名者的操作，读者还要另外检查 allowance 和 permit、operator 授权、已安装模块和 executor、guard 和 hook、fallback handler，以及 ERC-7702 委托目标。Secrypta 建议（2026-11-23 16:39）把这些“出资面”快照做成独立的配套 ERC，因为快照只在拍摄的区块准确。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-policy-enforced-agent-accounts/30467/10",
+      "date": "2026-11-24",
+      "title_en": "Policy-Enforced Agent Accounts shipped Registry v2",
+      "note_en": "On 2026-11-24 at 03:21 (palisec-dev). Following review, every policy the publisher posts now goes through setPending at least the account's minDelay ahead, and only the account itself can activate immediately. The registry is deployed on Robinhood Chain (4663) with no owner and no upgrade path, and client library 0.2.0 is on npm. Earlier, palisec-dev replied to Secrypta (2026-11-23 14:39) agreeing that Security Considerations will state that a commitment only covers actions needing the policy signer, and that readers must separately check allowances and permits, operator approvals, installed modules and executors, guards and hooks, fallback handlers, and the ERC-7702 delegation target. Secrypta suggested (2026-11-23 16:39) making a snapshot of that fund-moving surface a separate companion ERC, since a snapshot is only accurate at the block it is taken.",
+      "topic_en": "EIP-7702 authorization freshness and delegation risk in agent accounts"
+    },
+    {
+      "topic": "EIP-7702 授权新鲜度与 agent 账户的委托风险",
+      "title": "palisec-dev 回复 Secrypta",
+      "note": "Policy-Enforced Agent Accounts 发布 Registry v2 2026-11-24 03:21（palisec-dev）：按评审意见，发布者提交的每个策略都要经 setPending 并至少提前账户设定的 minDelay，只有账户自己能立即激活；注册表部署在 Robinhood Chain（4663），无 owner、不可升级，客户端库 0.2.0 已上 npm。此前 palisec-dev 回复 Secrypta（2026-11-23 14:39）同意在安全考虑里写明，策略承诺只覆盖需要策略签名者的操作，读者还要另外检查 allowance 和 permit、operator 授权、已安装模块和 executor、guard 和 hook、fallback handler，以及 ERC-7702 委托目标。Secrypta 建议（2026-11-23 16:39）把这些“出资面”快照做成独立的配套 ERC，因为快照只在拍摄的区块准确。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-policy-enforced-agent-accounts/30467/7",
+      "date": "2026-11-24",
+      "title_en": "palisec-dev replied to Secrypta",
+      "note_en": "Policy-Enforced Agent Accounts shipped Registry v2 on 2026-11-24 at 03:21 (palisec-dev). Following review, every policy the publisher posts now goes through setPending at least the account's minDelay ahead, and only the account itself can activate immediately. The registry is deployed on Robinhood Chain (4663) with no owner and no upgrade path, and client library 0.2.0 is on npm. Earlier, palisec-dev replied to Secrypta (2026-11-23 14:39) agreeing that Security Considerations will state that a commitment only covers actions needing the policy signer, and that readers must separately check allowances and permits, operator approvals, installed modules and executors, guards and hooks, fallback handlers, and the ERC-7702 delegation target. Secrypta suggested (2026-11-23 16:39) making a snapshot of that fund-moving surface a separate companion ERC, since a snapshot is only accurate at the block it is taken.",
+      "topic_en": "EIP-7702 authorization freshness and delegation risk in agent accounts"
+    },
+    {
+      "topic": "EIP-7702 授权新鲜度与 agent 账户的委托风险",
+      "title": "Secrypta 建议",
+      "note": "Policy-Enforced Agent Accounts 发布 Registry v2 2026-11-24 03:21（palisec-dev）：按评审意见，发布者提交的每个策略都要经 setPending 并至少提前账户设定的 minDelay，只有账户自己能立即激活；注册表部署在 Robinhood Chain（4663），无 owner、不可升级，客户端库 0.2.0 已上 npm。此前 palisec-dev 回复 Secrypta（2026-11-23 14:39）同意在安全考虑里写明，策略承诺只覆盖需要策略签名者的操作，读者还要另外检查 allowance 和 permit、operator 授权、已安装模块和 executor、guard 和 hook、fallback handler，以及 ERC-7702 委托目标。Secrypta 建议（2026-11-23 16:39）把这些“出资面”快照做成独立的配套 ERC，因为快照只在拍摄的区块准确。",
+      "url": "https://ethereum-magicians.org/t/draft-erc-policy-enforced-agent-accounts/30467/8",
+      "date": "2026-11-24",
+      "title_en": "Secrypta suggested",
+      "note_en": "Policy-Enforced Agent Accounts shipped Registry v2 on 2026-11-24 at 03:21 (palisec-dev). Following review, every policy the publisher posts now goes through setPending at least the account's minDelay ahead, and only the account itself can activate immediately. The registry is deployed on Robinhood Chain (4663) with no owner and no upgrade path, and client library 0.2.0 is on npm. Earlier, palisec-dev replied to Secrypta (2026-11-23 14:39) agreeing that Security Considerations will state that a commitment only covers actions needing the policy signer, and that readers must separately check allowances and permits, operator approvals, installed modules and executors, guards and hooks, fallback handlers, and the ERC-7702 delegation target. Secrypta suggested (2026-11-23 16:39) making a snapshot of that fund-moving surface a separate companion ERC, since a snapshot is only accurate at the block it is taken.",
+      "topic_en": "EIP-7702 authorization freshness and delegation risk in agent accounts"
+    },
+    {
+      "topic": "EIP-7702 授权新鲜度与 agent 账户的委托风险",
+      "title": "ERC-8516 Sovereign ERC-20 Receive Protection",
+      "note": "2026-11-23 22:55（radek）：ERC-20 的可选扩展，让 EOA 和智能账户都能对转入和铸造设门槛（白名单、黑名单、一次性链下签名或外部策略合约），针对地址投毒和垃圾转账。ERCs PR #2213。",
+      "url": "https://ethereum-magicians.org/t/erc-8516-sovereign-erc-20-receive-protection/30485",
+      "date": "2026-11-23",
+      "title_en": "ERC-8516 Sovereign ERC-20 Receive Protection",
+      "note_en": "2026-11-23 22:55 (radek): an opt-in ERC-20 extension that lets both EOAs and smart accounts gate incoming transfers and mints (allowlists, denylists, one-off offchain signatures or external policy contracts), aimed at address poisoning and spam transfers. ERCs PR #2213.",
+      "topic_en": "EIP-7702 authorization freshness and delegation risk in agent accounts"
+    },
+    {
+      "topic": "EIP-7702 授权新鲜度与 agent 账户的委托风险",
+      "title": "ERCs PR #2213",
+      "note": "ERC-8516 Sovereign ERC-20 Receive Protection 2026-11-23 22:55（radek）：ERC-20 的可选扩展，让 EOA 和智能账户都能对转入和铸造设门槛（白名单、黑名单、一次性链下签名或外部策略合约），针对地址投毒和垃圾转账。ERCs PR #2213。",
+      "url": "https://github.com/ethereum/ERCs/pull/2213",
+      "date": "2026-11-23",
+      "title_en": "ERCs PR #2213",
+      "note_en": "ERC-8516 Sovereign ERC-20 Receive Protection, 2026-11-23 22:55 (radek): an opt-in ERC-20 extension that lets both EOAs and smart accounts gate incoming transfers and mints (allowlists, denylists, one-off offchain signatures or external policy contracts), aimed at address poisoning and spam transfers. ERCs PR #2213.",
+      "topic_en": "EIP-7702 authorization freshness and delegation risk in agent accounts"
+    },
+    {
+      "topic": "Gas 重新定价与后量子优先级：ACDT #104 和 PQAI #0",
+      "title": "ACDT #104",
+      "note": "2026-11-23 举行，议程第一项是 Glamsterdam 的 EIP-8037/EIP-8038 团队反馈。按会议总结：Rahul（EF）汇总了各团队意见，Uniswap、Snowbridge、CoW Swap、Safe 等关注 try-catch 模式被打破和 gasleft 不变量，多数高中危问题预计在 1 月中旬前处理；Toni Wahrstätter 展示了 EIP-8037 可能的规范修改决策树，Maria Silva 解释去掉 reservoir 机制需要大幅提高交易上限并影响并行化；多数人倾向暂不改规范，最终决定在下次 ACD。Bogota Devnet 3 是否要做意见不一，推迟到下周。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-104-november-23-2026/30411",
+      "date": "2026-11-23",
+      "title_en": "ACDT #104",
+      "note_en": "Met on 2026-11-23, opening with team feedback on Glamsterdam's EIP-8037/EIP-8038. Per the meeting summary, Rahul (EF) collected feedback from teams: Uniswap, Snowbridge, CoW Swap, Safe and others are concerned about the try-catch pattern breaking and about the gasleft invariant, and most high and medium severity issues are expected to be addressed by mid-January. Toni Wahrstätter walked through a decision tree of possible EIP-8037 spec changes, and Maria Silva explained that dropping the reservoir mechanism would require a much higher transaction limit and would hurt parallelization. Most leaned toward not changing the spec for now, with the final decision at the next ACD. Opinions on whether to run Bogota Devnet 3 were split, and that was pushed to next week.",
+      "topic_en": "Gas repricing and post-quantum priorities: ACDT #104 and PQAI #0"
+    },
+    {
+      "topic": "Gas 重新定价与后量子优先级：ACDT #104 和 PQAI #0",
+      "title": "会议总结",
+      "note": "ACDT #104 2026-11-23 举行，议程第一项是 Glamsterdam 的 EIP-8037/EIP-8038 团队反馈。按会议总结：Rahul（EF）汇总了各团队意见，Uniswap、Snowbridge、CoW Swap、Safe 等关注 try-catch 模式被打破和 gasleft 不变量，多数高中危问题预计在 1 月中旬前处理；Toni Wahrstätter 展示了 EIP-8037 可能的规范修改决策树，Maria Silva 解释去掉 reservoir 机制需要大幅提高交易上限并影响并行化；多数人倾向暂不改规范，最终决定在下次 ACD。Bogota Devnet 3 是否要做意见不一，推迟到下周。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-104-november-23-2026/30411/3",
+      "date": "2026-11-23",
+      "title_en": "the meeting summary",
+      "note_en": "ACDT #104 met on 2026-11-23, opening with team feedback on Glamsterdam's EIP-8037/EIP-8038. Per the meeting summary, Rahul (EF) collected feedback from teams: Uniswap, Snowbridge, CoW Swap, Safe and others are concerned about the try-catch pattern breaking and about the gasleft invariant, and most high and medium severity issues are expected to be addressed by mid-January. Toni Wahrstätter walked through a decision tree of possible EIP-8037 spec changes, and Maria Silva explained that dropping the reservoir mechanism would require a much higher transaction limit and would hurt parallelization. Most leaned toward not changing the spec for now, with the final decision at the next ACD. Opinions on whether to run Bogota Devnet 3 were split, and that was pushed to next week.",
+      "topic_en": "Gas repricing and post-quantum priorities: ACDT #104 and PQAI #0"
+    },
+    {
+      "topic": "Gas 重新定价与后量子优先级：ACDT #104 和 PQAI #0",
+      "title": "EIP-8487 Separate execution credits and billing credits",
+      "note": "2026-11-23 14:59 更新（Giulio2002）：用同一个 tx.gasLimit 初始化两个计数器，credits 沿用旧的 gas 表，管 EVM 可见的执行额度；billing 用新表，决定手续费；billing 不足时整笔交易不可捕获地中止。这是让重新定价不打破合约 gas 假设的一种思路。",
+      "url": "https://github.com/ethereum/EIPs/pull/12637",
+      "date": "2026-11-23",
+      "title_en": "EIP-8487 Separate execution credits and billing credits",
+      "note_en": "Updated 2026-11-23 14:59 (Giulio2002): two counters start from the same tx.gasLimit. Credits use the legacy schedule and govern EVM-visible execution allowances, billing uses the new schedule and sets the fee, and running out of billing aborts the whole transaction uncatchably. It is one way to reprice without breaking contracts' gas assumptions.",
+      "topic_en": "Gas repricing and post-quantum priorities: ACDT #104 and PQAI #0"
+    },
+    {
+      "topic": "Gas 重新定价与后量子优先级：ACDT #104 和 PQAI #0",
+      "title": "新草案 Bounded Storage Credit and Debit",
+      "note": "2026-11-23 19:18（cskiraly），作为停滞的 EIP-7519 的继任：SCREDIT 和 SDEBIT 在存储槽值处于上下界内时加减，按 SSTORE 计费，上界可服务 USDC 这类在余额字最高位放黑名单标志的布局。讨论帖。",
+      "url": "https://github.com/ethereum/EIPs/pull/12707",
+      "date": "2026-11-23",
+      "title_en": "New draft: Bounded Storage Credit and Debit",
+      "note_en": "2026-11-23 19:18 (cskiraly), a successor to the stagnant EIP-7519. SCREDIT and SDEBIT add to or subtract from a storage slot only if its value stays within lower and upper bounds, charged like SSTORE; the upper bound serves layouts like USDC's, which keeps a blacklist flag in the top bit of each balance word. Discussion thread.",
+      "topic_en": "Gas repricing and post-quantum priorities: ACDT #104 and PQAI #0"
+    },
+    {
+      "topic": "Gas 重新定价与后量子优先级：ACDT #104 和 PQAI #0",
+      "title": "讨论帖",
+      "note": "新草案 Bounded Storage Credit and Debit 2026-11-23 19:18（cskiraly），作为停滞的 EIP-7519 的继任：SCREDIT 和 SDEBIT 在存储槽值处于上下界内时加减，按 SSTORE 计费，上界可服务 USDC 这类在余额字最高位放黑名单标志的布局。讨论帖。",
+      "url": "https://ethereum-magicians.org/t/add-eip-bounded-storage-credit-and-debit/30477",
+      "date": "2026-11-23",
+      "title_en": "Discussion thread",
+      "note_en": "New draft: Bounded Storage Credit and Debit, 2026-11-23 19:18 (cskiraly), a successor to the stagnant EIP-7519. SCREDIT and SDEBIT add to or subtract from a storage slot only if its value stays within lower and upper bounds, charged like SSTORE; the upper bound serves layouts like USDC's, which keeps a blacklist flag in the top bit of each balance word. Discussion thread.",
+      "topic_en": "Gas repricing and post-quantum priorities: ACDT #104 and PQAI #0"
+    },
+    {
+      "topic": "Gas 重新定价与后量子优先级：ACDT #104 和 PQAI #0",
+      "title": "EF 博客 PQAI #0",
+      "note": "2026-11-23：EF 评估候选签名方案一年多后，主张用基于哈希的密码学替代椭圆曲线；三部分为共识（验证者用哈希签名）、用户账户（钱包提供迁到哈希签名的路径）、数据（blob 改用基于哈希的承诺）。文中写到 Justin Drake 在 Devcon 提出 2028 年 12 月的目标，EF 内部截止仍是 2029 年，1 月复审；Ethlabs 把自己的 Quick Slots 提案撤出 Hegotá 以腾出工程资源，EF 协议安全团队规模翻倍；剩余的 ACD 会议还会讨论从分叉中再拿掉哪些功能。@ethereumfndn 转发（2026-11-24 06:40）。",
+      "url": "https://blog.ethereum.org/2026/11/23/pqai-0",
+      "date": "2026-11-23",
+      "title_en": "The EF blog's PQAI #0",
+      "note_en": "2026-11-23: after more than a year of evaluating candidate signature schemes, the EF is advocating hash-based cryptography to replace elliptic curves. The three parts are consensus (validators sign with hash-based keys), user accounts (wallets give users a way to move to hash-based signatures) and data (blobs switch to hash-based commitments). The post notes Justin Drake proposed December 2028 as a target at Devcon, with 2029 still the EF's internal deadline and a review in January; Ethlabs pulled its own Quick Slots proposal out of Hegotá to free up engineering time, and the EF doubled its protocol security team. The remaining ACD calls this year will discuss what else to drop from the fork. Shared by @ethereumfndn (2026-11-24 06:40).",
+      "topic_en": "Gas repricing and post-quantum priorities: ACDT #104 and PQAI #0"
+    },
+    {
+      "topic": "Gas 重新定价与后量子优先级：ACDT #104 和 PQAI #0",
+      "title": "@ethereumfndn 转发",
+      "note": "EF 博客 PQAI #0 2026-11-23：EF 评估候选签名方案一年多后，主张用基于哈希的密码学替代椭圆曲线；三部分为共识（验证者用哈希签名）、用户账户（钱包提供迁到哈希签名的路径）、数据（blob 改用基于哈希的承诺）。文中写到 Justin Drake 在 Devcon 提出 2028 年 12 月的目标，EF 内部截止仍是 2029 年，1 月复审；Ethlabs 把自己的 Quick Slots 提案撤出 Hegotá 以腾出工程资源，EF 协议安全团队规模翻倍；剩余的 ACD 会议还会讨论从分叉中再拿掉哪些功能。@ethereumfndn 转发（2026-11-24 06:40）。",
+      "url": "https://x.com/ethereumfndn/status/2125011648675029353",
+      "date": "2026-11-23",
+      "title_en": "Shared by @ethereumfndn",
+      "note_en": "The EF blog's PQAI #0, 2026-11-23: after more than a year of evaluating candidate signature schemes, the EF is advocating hash-based cryptography to replace elliptic curves. The three parts are consensus (validators sign with hash-based keys), user accounts (wallets give users a way to move to hash-based signatures) and data (blobs switch to hash-based commitments). The post notes Justin Drake proposed December 2028 as a target at Devcon, with 2029 still the EF's internal deadline and a review in January; Ethlabs pulled its own Quick Slots proposal out of Hegotá to free up engineering time, and the EF doubled its protocol security team. The remaining ACD calls this year will discuss what else to drop from the fork. Shared by @ethereumfndn (2026-11-24 06:40).",
+      "topic_en": "Gas repricing and post-quantum priorities: ACDT #104 and PQAI #0"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8513 Pre-seeded Encrypted Execution Payloads",
+      "note": "2026-11-23 15:37（cskiraly）：ePBS 下构建者在出价被区块包含后就先发加密负载，揭示时只发 32 字节密钥，缩短负载传播时间。cskiraly 在 ethresear.ch 回复（2026-11-23 16:12）：Gloas 对缺失负载没有出价之外的保证金或罚没，预发也不增加；密文上限约 12 MB。",
+      "url": "https://ethereum-magicians.org/t/eip-8513-pre-seeded-encrypted-execution-payloads/30475",
+      "date": "2026-11-23",
+      "title_en": "EIP-8513 Pre-seeded Encrypted Execution Payloads",
+      "note_en": "2026-11-23 15:37 (cskiraly): under ePBS the builder sends the payload encrypted as soon as its bid is included in a block, and the reveal becomes a 32-byte key, cutting payload propagation time. cskiraly replied on ethresear.ch (2026-11-23 16:12) that Gloas has no bond or slashing for a missing payload beyond the bid, pre-seeding adds none, and the ciphertext is capped at about 12 MB.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "cskiraly 在 ethresear.ch 回复",
+      "note": "EIP-8513 Pre-seeded Encrypted Execution Payloads 2026-11-23 15:37（cskiraly）：ePBS 下构建者在出价被区块包含后就先发加密负载，揭示时只发 32 字节密钥，缩短负载传播时间。cskiraly 在 ethresear.ch 回复（2026-11-23 16:12）：Gloas 对缺失负载没有出价之外的保证金或罚没，预发也不增加；密文上限约 12 MB。",
+      "url": "https://ethresear.ch/t/reveal-a-key-not-a-payload-sending-the-epbs-payload-before-the-reveal/26264/6",
+      "date": "2026-11-23",
+      "title_en": "cskiraly replied on ethresear.ch",
+      "note_en": "EIP-8513 Pre-seeded Encrypted Execution Payloads, 2026-11-23 15:37 (cskiraly): under ePBS the builder sends the payload encrypted as soon as its bid is included in a block, and the reveal becomes a 32-byte key, cutting payload propagation time. cskiraly replied on ethresear.ch (2026-11-23 16:12) that Gloas has no bond or slashing for a missing payload beyond the bid, pre-seeding adds none, and the ciphertext is capped at about 12 MB.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8496 Code Reads in Block-Level Access Lists 合并",
+      "note": "2026-11-23 15:02：BAL 增加 code_hash，让无状态或证明输入只需区块、BAL 和状态快照就能组装。",
+      "url": "https://github.com/ethereum/EIPs/pull/12658",
+      "date": "2026-11-23",
+      "title_en": "EIP-8496 Code Reads in Block-Level Access Lists merged",
+      "note_en": "2026-11-23 15:02: the BAL gains a code_hash, so stateless or proving inputs can be built from the block, its BAL and a state snapshot alone.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8502 动态个人合并激励合并",
+      "note": "2026-11-23 15:02（anderselowsson）。trent_vanepps 统计（2026-11-23 22:22）：活跃验证者降到 77.4 万，为 2023-09-04 以来最低，46%（2.5 万）是 0x02 复利类型。质押者合并验证者可提高效率。",
+      "url": "https://github.com/ethereum/EIPs/pull/12673",
+      "date": "2026-11-23",
+      "title_en": "EIP-8502 Dynamic individual consolidation incentive merged",
+      "note_en": "2026-11-23 15:02 (anderselowsson). trent_vanepps reports (2026-11-23 22:22) that active validators fell to 774k, the lowest since 2023-09-04, with 46% (25k) on the 0x02 compounding type. Stakers can consolidate validators to run more efficiently.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "trent_vanepps 统计",
+      "note": "EIP-8502 动态个人合并激励合并 2026-11-23 15:02（anderselowsson）。trent_vanepps 统计（2026-11-23 22:22）：活跃验证者降到 77.4 万，为 2023-09-04 以来最低，46%（2.5 万）是 0x02 复利类型。质押者合并验证者可提高效率。",
+      "url": "https://x.com/trent_vanepps/status/2124886384024674683",
+      "date": "2026-11-23",
+      "title_en": "trent_vanepps reports",
+      "note_en": "EIP-8502 Dynamic individual consolidation incentive merged, 2026-11-23 15:02 (anderselowsson). trent_vanepps reports (2026-11-23 22:22) that active validators fell to 774k, the lowest since 2023-09-04, with 46% (25k) on the 0x02 compounding type. Stakers can consolidate validators to run more efficiently.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8512 eth/74 依赖证明交换",
+      "note": "当日合并的其他草案：EIP-8512 eth/74 依赖证明交换（2026-11-23 13:01）、EIP-8437 eth/75 证明包装传播（2026-11-24 01:05）、EIP-8456 CALLSTATUS、EIP-8452 EVM 跳转和调用表、EIP-8491 LUCID 密钥发布者优先列表（均为 2026-11-23 14:56 至 15:01）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12551",
+      "date": "2026-11-23",
+      "title_en": "EIP-8512 eth/74 Dependency Proof Exchange",
+      "note_en": "Other drafts merged the same day: EIP-8512 eth/74 Dependency Proof Exchange (2026-11-23 13:01), EIP-8437 eth/75 Proof Wrapper Propagation (2026-11-24 01:05), EIP-8456 CALLSTATUS, EIP-8452 Jump and Call Tables for the EVM and EIP-8491 LUCID Key Publisher Priority Lists (all 2026-11-23 between 14:56 and 15:01).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8437 eth/75 证明包装传播",
+      "note": "当日合并的其他草案：EIP-8512 eth/74 依赖证明交换（2026-11-23 13:01）、EIP-8437 eth/75 证明包装传播（2026-11-24 01:05）、EIP-8456 CALLSTATUS、EIP-8452 EVM 跳转和调用表、EIP-8491 LUCID 密钥发布者优先列表（均为 2026-11-23 14:56 至 15:01）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12423",
+      "date": "2026-11-23",
+      "title_en": "EIP-8437 eth/75 Proof Wrapper Propagation",
+      "note_en": "Other drafts merged the same day: EIP-8512 eth/74 Dependency Proof Exchange (2026-11-23 13:01), EIP-8437 eth/75 Proof Wrapper Propagation (2026-11-24 01:05), EIP-8456 CALLSTATUS, EIP-8452 Jump and Call Tables for the EVM and EIP-8491 LUCID Key Publisher Priority Lists (all 2026-11-23 between 14:56 and 15:01).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8456 CALLSTATUS",
+      "note": "当日合并的其他草案：EIP-8512 eth/74 依赖证明交换（2026-11-23 13:01）、EIP-8437 eth/75 证明包装传播（2026-11-24 01:05）、EIP-8456 CALLSTATUS、EIP-8452 EVM 跳转和调用表、EIP-8491 LUCID 密钥发布者优先列表（均为 2026-11-23 14:56 至 15:01）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12586",
+      "date": "2026-11-23",
+      "title_en": "EIP-8456 CALLSTATUS",
+      "note_en": "Other drafts merged the same day: EIP-8512 eth/74 Dependency Proof Exchange (2026-11-23 13:01), EIP-8437 eth/75 Proof Wrapper Propagation (2026-11-24 01:05), EIP-8456 CALLSTATUS, EIP-8452 Jump and Call Tables for the EVM and EIP-8491 LUCID Key Publisher Priority Lists (all 2026-11-23 between 14:56 and 15:01).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8452 EVM 跳转和调用表",
+      "note": "当日合并的其他草案：EIP-8512 eth/74 依赖证明交换（2026-11-23 13:01）、EIP-8437 eth/75 证明包装传播（2026-11-24 01:05）、EIP-8456 CALLSTATUS、EIP-8452 EVM 跳转和调用表、EIP-8491 LUCID 密钥发布者优先列表（均为 2026-11-23 14:56 至 15:01）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12556",
+      "date": "2026-11-23",
+      "title_en": "EIP-8452 Jump and Call Tables for the EVM",
+      "note_en": "Other drafts merged the same day: EIP-8512 eth/74 Dependency Proof Exchange (2026-11-23 13:01), EIP-8437 eth/75 Proof Wrapper Propagation (2026-11-24 01:05), EIP-8456 CALLSTATUS, EIP-8452 Jump and Call Tables for the EVM and EIP-8491 LUCID Key Publisher Priority Lists (all 2026-11-23 between 14:56 and 15:01).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8491 LUCID 密钥发布者优先列表",
+      "note": "当日合并的其他草案：EIP-8512 eth/74 依赖证明交换（2026-11-23 13:01）、EIP-8437 eth/75 证明包装传播（2026-11-24 01:05）、EIP-8456 CALLSTATUS、EIP-8452 EVM 跳转和调用表、EIP-8491 LUCID 密钥发布者优先列表（均为 2026-11-23 14:56 至 15:01）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12646",
+      "date": "2026-11-23",
+      "title_en": "EIP-8491 LUCID Key Publisher Priority Lists",
+      "note_en": "Other drafts merged the same day: EIP-8512 eth/74 Dependency Proof Exchange (2026-11-23 13:01), EIP-8437 eth/75 Proof Wrapper Propagation (2026-11-24 01:05), EIP-8456 CALLSTATUS, EIP-8452 Jump and Call Tables for the EVM and EIP-8491 LUCID Key Publisher Priority Lists (all 2026-11-23 between 14:56 and 15:01).",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP-8070 三个 PR 合并",
+      "note": "2026-11-23 16:23 至 17:07（tcoratger）：对齐 engine_getBlobsV4 等，属规范清理。",
+      "url": "https://github.com/ethereum/EIPs/pull/12701",
+      "date": "2026-11-23",
+      "title_en": "Three EIP-8070 PRs merged",
+      "note_en": "2026-11-23 16:23 to 17:07 (tcoratger): aligning engine_getBlobsV4 and related details, as spec cleanup.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2214 后量子验证者密钥派生",
+      "note": "2026-11-24 06:17（nalepae）：新 ERC 草案，质押工具开发者可关注。",
+      "url": "https://github.com/ethereum/ERCs/pull/2214",
+      "date": "2026-11-24",
+      "title_en": "ERCs PR #2214 Post-Quantum Validator Key Derivation",
+      "note_en": "2026-11-24 06:17 (nalepae): a new ERC draft worth watching for staking tool developers.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec 介绍 Nyx",
+      "note": "隐私：Aztec 介绍 Nyx（2026-11-24 00:12），用现有以太坊钱包（含 Rabby）私密收付、在 Aave 赚息，再退出到以太坊且出口与入口无关联，已在 Aztec Tierra 上线；recmo 展示实用见证加密（2026-11-24 00:13），用 ZKPassport 和 Noir 电路可以把消息或资金“加密给某个名字”。",
+      "url": "https://x.com/aztecnetwork/status/2124913947849761258",
+      "date": "2026-11-24",
+      "title_en": "Aztec introduced Nyx",
+      "note_en": "Privacy: Aztec introduced Nyx (2026-11-24 00:12), which lets you send and receive privately from the Ethereum wallet you already use (Rabby included), earn on Aave, then exit to Ethereum with nothing tying the exit to the entry; it is live on Aztec Tierra. recmo showed practical witness encryption (2026-11-24 00:13): with ZKPassport and a Noir circuit you can encrypt a message or send money to someone's name.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "recmo 展示实用见证加密",
+      "note": "隐私：Aztec 介绍 Nyx（2026-11-24 00:12），用现有以太坊钱包（含 Rabby）私密收付、在 Aave 赚息，再退出到以太坊且出口与入口无关联，已在 Aztec Tierra 上线；recmo 展示实用见证加密（2026-11-24 00:13），用 ZKPassport 和 Noir 电路可以把消息或资金“加密给某个名字”。",
+      "url": "https://x.com/recmo/status/2124914324003049877",
+      "date": "2026-11-24",
+      "title_en": "recmo showed practical witness encryption",
+      "note_en": "Privacy: Aztec introduced Nyx (2026-11-24 00:12), which lets you send and receive privately from the Ethereum wallet you already use (Rabby included), earn on Aave, then exit to Ethereum with nothing tying the exit to the entry; it is live on Aztec Tierra. recmo showed practical witness encryption (2026-11-24 00:13): with ZKPassport and a Noir circuit you can encrypt a message or send money to someone's name.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EthCLLib：Lean 4 共识规范框架",
+      "note": "2026-11-23 18:17（leolara）：Fulu、Gloas、Heze 三个分叉用一个包写成并通过 pyspec 向量，为形式化验证铺路。",
+      "url": "https://ethresear.ch/t/ethcllib-a-lean-4-framework-for-the-ethereum-consensus-specs/26283",
+      "date": "2026-11-23",
+      "title_en": "EthCLLib: a Lean 4 framework for the consensus specs",
+      "note_en": "2026-11-23 18:17 (leolara): Fulu, Gloas and Heze written in one package and passing the pyspec vectors, laying groundwork for formal verification.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "kevaundray：后量子、后 AI 过渡的现状和参与方式",
+      "note": "2026-11-24 06:19；binji_x：pqai 的关键是密码学敏捷性（2026-11-23 11:31），并于当天宣布加入 Ethlabs（21:42）。",
+      "url": "https://x.com/kevaundray/status/2125006422878331276",
+      "date": "2026-11-24",
+      "title_en": "kevaundray on where the post-quantum, post-AI transition stands and how to help",
+      "note_en": "2026-11-24 06:19. binji_x: the name of the game for pqai is cryptographic agility (2026-11-23 11:31), and the same day announced joining Ethlabs (21:42).",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "binji_x：pqai 的关键是密码学敏捷性",
+      "note": "kevaundray：后量子、后 AI 过渡的现状和参与方式 2026-11-24 06:19；binji_x：pqai 的关键是密码学敏捷性（2026-11-23 11:31），并于当天宣布加入 Ethlabs（21:42）。",
+      "url": "https://x.com/binji_x/status/2124722572889890856",
+      "date": "2026-11-24",
+      "title_en": "binji_x: the name of the game for pqai is cryptographic agility",
+      "note_en": "Kevaundray on where the post-quantum, post-AI transition stands and how to help, 2026-11-24 06:19. binji_x: the name of the game for pqai is cryptographic agility (2026-11-23 11:31), and the same day announced joining Ethlabs (21:42).",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "宣布加入 Ethlabs",
+      "note": "kevaundray：后量子、后 AI 过渡的现状和参与方式 2026-11-24 06:19；binji_x：pqai 的关键是密码学敏捷性（2026-11-23 11:31），并于当天宣布加入 Ethlabs（21:42）。",
+      "url": "https://x.com/binji_x/status/2124876282077081883",
+      "date": "2026-11-24",
+      "title_en": "announced joining Ethlabs",
+      "note_en": "Kevaundray on where the post-quantum, post-AI transition stands and how to help, 2026-11-24 06:19. binji_x: the name of the game for pqai is cryptographic agility (2026-11-23 11:31), and the same day announced joining Ethlabs (21:42).",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "barnabemonnot 推荐 decentrek 的 pqai 设计问题综述",
+      "note": "2026-11-23 08:52：共识、签名选择和生态迁移三类问题。",
+      "url": "https://x.com/barnabemonnot/status/2124682393802150215",
+      "date": "2026-11-23",
+      "title_en": "barnabemonnot recommended decentrek's overview of pqai design questions",
+      "note_en": "2026-11-23 08:52: consensus, signature choices and ecosystem migration.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "adietrichs：以太坊需要“密码朋克 x 激进市场”的另一半",
+      "note": "2026-11-23 22:20。",
+      "url": "https://x.com/adietrichs/status/2124885786273148985",
+      "date": "2026-11-23",
+      "title_en": "adietrichs: Ethereum needs the other half of \"cypherpunk x radical markets\"",
+      "note_en": "2026-11-23 22:20.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "koeppelmann 谈流动性碎片化",
+      "note": "2026-11-23 19:24：以太坊交易量前 100 的代币多数在 Base 和 Arbitrum 上没有，他称 EEZ 链上都会有。",
+      "url": "https://x.com/koeppelmann/status/2124841609762370033",
+      "date": "2026-11-23",
+      "title_en": "koeppelmann on fragmentation",
+      "note_en": "2026-11-23 19:24: most of the 100 most traded tokens on Ethereum are not available on Base or Arbitrum, while he says every one will be on every EEZ chain.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论",
+      "title": "Vitalik 回复谈渐进式意识上传",
+      "note": "2026-11-23 13:04：本期 Vitalik 只有非以太坊话题的回复。",
+      "url": "https://x.com/VitalikButerin/status/2124745919380013180",
+      "date": "2026-11-23",
+      "title_en": "Vitalik replied on gradual consciousness uploading",
+      "note_en": "2026-11-23 13:04: this edition, Vitalik only posted replies on non-Ethereum topics.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/2026/11/23/pqai-0",
+    "credit": "Ethereum Foundation Blog",
+    "local_path": "assets/2026-11-24.jpg",
+    "credit_en": "Ethereum Foundation Blog"
+  },
+  "keywords_en": [
+    "EIP-8430 AA transaction type",
+    "EIP-8477 authorization freshness",
+    "EIP-8141 Frame transactions",
+    "PQAI post-quantum migration",
+    "EIP-8037 repricing"
+  ],
+  "summary_en": "EIP-8430 (an AA transaction type split out of EIP-8130, with call batching, gas sponsorship, 2D nonces and built-in 7702-style delegation) and EIP-8477 (which binds each EIP-7702 authorization to one of the last 256 blocks) were merged into the EIPs repo as drafts. The EF blog published PQAI #0, making the post-quantum, post-AI cryptography migration its top priority, with user accounts moving to hash-based signatures. At ACDT #104 most participants leaned toward leaving the EIP-8037 spec as it is, while Bogota Devnet 3 and how Frame transactions should support leanSPHINCS were pushed to next week."
+}
