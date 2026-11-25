@@ -1,0 +1,437 @@
+{
+  "date": "2026-11-25",
+  "keywords": [
+    "EIP-8141 PROOF 帧",
+    "EIP-8288 签名聚合",
+    "PQAI #1 Keccak-256",
+    "ERC-8511 Agent 账户",
+    "EIP-8037 重新定价"
+  ],
+  "summary": "lightclient 提交 PR，给 EIP-8141 Frame 交易加入 PROOF 帧模式并把 leanSPHINCS 列为协议验证器，soispoke 则提议把 EIP-8288 的依赖声明放进签名列表，两种表达方式正在并行讨论。EF 博客发布 PQAI #1，推荐 Keccak-256 作为以太坊基于哈希的密码学的统一哈希，执行层客户端不需要引入新哈希。ERC-8511 Agent 账户注册表升级到 v3，评审者确认 minDelay 只约束发布者，不约束账户本身。",
+  "items": [
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "PR #12714：EIP-8141 加入 PROOF 帧模式",
+      "note": "2026-11-25 02:59 创建（lightclient，仍为开放状态）。作者说团队一直在争论 signature_list 是否足够、能否向前兼容，他倾向引入专门表达密码学声明的帧模式，这借鉴了 EIP-8288 的核心思路。理由：签名列表不容易被其他 EVM 链扩展，帧模式更无需许可；同时清理掉原设计里的 ARBITRARY 签名类型。PR 把 leanSPHINCS 加为协议验证器，因为该方案预计能在 Hegotá 前定稿；命名的验证器预编译可以直接作为 PROOF 帧目标，消费 (key, msg, proof)，任何合约实现同样接口也能成为验证器。示例里的标准 paymaster 改为读取 PROOF 帧（新操作码 PROOFPARAM），不再自己做 ecrecover，协议会在其他帧执行前先验证所有声明。",
+      "url": "https://github.com/ethereum/EIPs/pull/12714",
+      "date": "2026-11-25",
+      "title_en": "PR #12714: add a PROOF frame mode to EIP-8141",
+      "note_en": "Opened 2026-11-25 02:59 (lightclient, still open). The author says the team has gone back and forth on whether signature_list is sufficient and future compatible, and he now leans toward a dedicated frame mode for cryptographic claims, borrowing the core idea of EIP-8288. His reasons: other EVM chains cannot easily extend the signature list, a frame mode is more permissionless, and it removes the ARBITRARY signature type from the original design. The PR adds leanSPHINCS as a protocol verifier because the scheme should be finalized in time for Hegotá. Named verifier precompiles can be PROOF frame targets directly, consuming (key, msg, proof), and any contract that implements the same interface can become a verifier. The canonical paymaster example now reads a proof frame (new opcode PROOFPARAM) instead of calling ecrecover itself, since the protocol verifies every claim before any other frame runs.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "PR #12710：EIP-8288 把依赖声明放进签名列表",
+      "note": "2026-11-24 17:50 创建（soispoke）。依赖不再用一个不执行代码的帧来声明，而是在 EIP-8141 的 signatures 列表里加一条 [LEANSPHINCS_SCHEME, public key, msg, empty]，空 msg 就代表交易签名哈希；三元组、递归证明、包装、FOCIL 和每个签名 33,000 gas 的价格都不变，账户用 SIGPARAM 读取。这与 #12714 的方向正好相反。",
+      "url": "https://github.com/ethereum/EIPs/pull/12710",
+      "date": "2026-11-24",
+      "title_en": "PR #12710: declare EIP-8288 dependencies in the signature list",
+      "note_en": "Opened 2026-11-24 17:50 (soispoke). Instead of a frame that runs no code, a dependency becomes an entry in EIP-8141's signatures list: [LEANSPHINCS_SCHEME, public key, msg, empty]. An empty msg already stands for the transaction's signature hash. The triple, the recursive proof, the wrappers, FOCIL and the price of 33,000 gas per signature stay the same, and accounts read the entry with SIGPARAM. This points in the opposite direction from #12714.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "PR #12549 合并",
+      "note": "2026-11-24 20:52（nerolation）：EIP-8288（In-mempool signature and proof aggregation）的递归 STARK 移出区块头，作为 ExecutionPayload 的单独字段 recursiveStark；区块头保留 recursive_stark_hash 和 block_deps_hash 两个 32 字节字段，并新增 Engine API 一节。理由是区块头保持小，便于 skeleton sync，节点同步已最终确定的区块时可以不下载 STARK。",
+      "url": "https://github.com/ethereum/EIPs/pull/12549",
+      "date": "2026-11-24",
+      "title_en": "PR #12549 merged",
+      "note_en": "2026-11-24 20:52 (nerolation): the recursive STARK in EIP-8288 (In-mempool signature and proof aggregation) moves out of the block header into a separate ExecutionPayload field, recursiveStark. The header keeps two 32-byte fields, recursive_stark_hash and block_deps_hash, and a new Engine API section is added. Smaller headers help skeleton sync and let nodes fetch finalized blocks without downloading the STARKs.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "PR #12712",
+      "note": "网络层拆分：PR #12712 把 EIP-8437（eth/75）收窄为直接见证传播，聚合中继移到新草案 eth/76 Aggregated Proof Propagation（PR #12713），均为 2026-11-25 02:43 创建（Marchhill），讨论帖。目的是让带依赖的 Frame 交易不必等内存池聚合上线就能传播。",
+      "url": "https://github.com/ethereum/EIPs/pull/12712",
+      "date": "2026-11-25",
+      "title_en": "PR #12712",
+      "note_en": "Networking split: PR #12712 narrows EIP-8437 (eth/75) to direct witness propagation, and aggregate relay moves to a new draft, eth/76 Aggregated Proof Propagation (PR #12713). Both were opened 2026-11-25 02:43 (Marchhill), with a discussion thread. The goal is to let Frame transactions with dependencies propagate before mempool aggregation is deployed.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "eth/76 Aggregated Proof Propagation（PR #12713）",
+      "note": "网络层拆分：PR #12712 把 EIP-8437（eth/75）收窄为直接见证传播，聚合中继移到新草案 eth/76 Aggregated Proof Propagation（PR #12713），均为 2026-11-25 02:43 创建（Marchhill），讨论帖。目的是让带依赖的 Frame 交易不必等内存池聚合上线就能传播。",
+      "url": "https://github.com/ethereum/EIPs/pull/12713",
+      "date": "2026-11-25",
+      "title_en": "eth/76 Aggregated Proof Propagation (PR #12713)",
+      "note_en": "Networking split: PR #12712 narrows EIP-8437 (eth/75) to direct witness propagation, and aggregate relay moves to a new draft, eth/76 Aggregated Proof Propagation (PR #12713). Both were opened 2026-11-25 02:43 (Marchhill), with a discussion thread. The goal is to let Frame transactions with dependencies propagate before mempool aggregation is deployed.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "讨论帖",
+      "note": "网络层拆分：PR #12712 把 EIP-8437（eth/75）收窄为直接见证传播，聚合中继移到新草案 eth/76 Aggregated Proof Propagation（PR #12713），均为 2026-11-25 02:43 创建（Marchhill），讨论帖。目的是让带依赖的 Frame 交易不必等内存池聚合上线就能传播。",
+      "url": "https://ethereum-magicians.org/t/eip-eth-76-proof-wrapper-aggregation/30502",
+      "date": "2026-11-25",
+      "title_en": "discussion thread",
+      "note_en": "Networking split: PR #12712 narrows EIP-8437 (eth/75) to direct witness propagation, and aggregate relay moves to a new draft, eth/76 Aggregated Proof Propagation (PR #12713). Both were opened 2026-11-25 02:43 (Marchhill), with a discussion thread. The goal is to let Frame transactions with dependencies propagate before mempool aggregation is deployed.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "Project Eleven 称 Daisugi devnet 已集成 leanSPHINCS 签名、EIP-8141 Frame 交易和 EIP-8288 签名聚合",
+      "note": "2026-11-25 01:58，并称可用其开源钱包 NiceTry 发送后量子以太坊交易。",
+      "url": "https://x.com/projecteleven/status/2125302953594802575",
+      "date": "2026-11-25",
+      "title_en": "Project Eleven says the Daisugi devnet now combines leanSPHINCS signatures, EIP-8141 Frame transactions and EIP-8288 signature aggregation",
+      "note_en": "2026-11-25 01:58, and that you can send a post-quantum Ethereum transaction with its open source wallet NiceTry.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "Frame 交易怎么表达签名：PROOF 帧还是签名列表",
+      "title": "PQTS Breakout #19",
+      "note": "今晚 22:00 的 PQTS Breakout #19（后量子交易签名）。会前 johba37 在议题下提供了 leanSPHINCS 寿命参数的数据：在 240 MHz 的 ESP32 上，8 个签名平均耗时 2^24 为 15.2 秒、2^30 为 28.5 秒，生成一个密钥约 30 秒，这关系到硬件钱包能否用。",
+      "url": "https://github.com/ethereum/pm/issues/2312",
+      "date": "2026-11-25",
+      "title_en": "PQTS Breakout #19",
+      "note_en": "(post-quantum transaction signatures) tonight at 22:00. Ahead of the call, johba37 posted data on leanSPHINCS lifetime parameters: on a 240 MHz ESP32, eight signatures averaged 15.2 seconds at 2^24 and 28.5 seconds at 2^30, and generating a key took about 30 seconds. That matters for whether hardware wallets can use it.",
+      "topic_en": "How Frame transactions express signatures: PROOF frames or the signature list"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "EF 博客 PQAI #1",
+      "note": "2026-11-24（Kev Wedderburn）：推荐 Keccak-256 作为以太坊基于哈希的密码学的哈希，并使用 Keccak-f[1600] 派生的一组原语（Keccak-256 做标准哈希，Keccak-duplex 做 Fiat-Shamir，SHAKE256 做伪随机和密钥派生）。文章说二进制域 SNARK 和 GKR 证明器已能以每秒 50 万次哈希或更高的速度证明标准哈希，性能不再决定选择，安全性成为关键；比较了 Poseidon/Poseidon2、BLAKE3、BLAKE2、SHA2-256 和 Keccak-256。对客户端：执行层不需要新哈希，签名验证复用现有 Keccak-256，若随 Frame 交易在执行层引入 SSZ，建议用 Keccak-256；共识层长期建议把 SSZ 默克尔化从 SHA2-256 改为 Keccak-256。kevaundray 发帖介绍（2026-11-25 04:47），@ethereumfndn 引用转发（2026-11-25 05:32）。",
+      "url": "https://blog.ethereum.org/2026/11/24/pqai-1",
+      "date": "2026-11-24",
+      "title_en": "The EF blog's PQAI #1",
+      "note_en": "2026-11-24 (Kev Wedderburn), recommends Keccak-256 as the hash for Ethereum's hash-based cryptography, along with a family of primitives derived from Keccak-f[1600]: Keccak-256 for standard hashing, Keccak-duplex for Fiat-Shamir, and SHAKE256 for pseudorandomness and key derivation. The post says binary-field SNARKs and GKR-based provers now prove standard hashes at or well above 500K hashes per second, so performance no longer picks the winner and security does. It compared Poseidon/Poseidon2, BLAKE3, BLAKE2, SHA2-256 and Keccak-256. For clients: the execution layer needs no new hash and signature verification reuses existing Keccak-256 code; if SSZ comes to the execution layer with Frame transactions, Keccak-256 is recommended there. In the long term the consensus layer is advised to move SSZ merkleization from SHA2-256 to Keccak-256. kevaundray's post (2026-11-25 04:47), quoted by @ethereumfndn (2026-11-25 05:32).",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "kevaundray 发帖介绍",
+      "note": "EF 博客 PQAI #1 2026-11-24（Kev Wedderburn）：推荐 Keccak-256 作为以太坊基于哈希的密码学的哈希，并使用 Keccak-f[1600] 派生的一组原语（Keccak-256 做标准哈希，Keccak-duplex 做 Fiat-Shamir，SHAKE256 做伪随机和密钥派生）。文章说二进制域 SNARK 和 GKR 证明器已能以每秒 50 万次哈希或更高的速度证明标准哈希，性能不再决定选择，安全性成为关键；比较了 Poseidon/Poseidon2、BLAKE3、BLAKE2、SHA2-256 和 Keccak-256。对客户端：执行层不需要新哈希，签名验证复用现有 Keccak-256，若随 Frame 交易在执行层引入 SSZ，建议用 Keccak-256；共识层长期建议把 SSZ 默克尔化从 SHA2-256 改为 Keccak-256。kevaundray 发帖介绍（2026-11-25 04:47），@ethereumfndn 引用转发（2026-11-25 05:32）。",
+      "url": "https://x.com/kevaundray/status/2125345585943208051",
+      "date": "2026-11-24",
+      "title_en": "kevaundray's post",
+      "note_en": "The EF blog's PQAI #1, 2026-11-24 (Kev Wedderburn), recommends Keccak-256 as the hash for Ethereum's hash-based cryptography, along with a family of primitives derived from Keccak-f[1600]: Keccak-256 for standard hashing, Keccak-duplex for Fiat-Shamir, and SHAKE256 for pseudorandomness and key derivation. The post says binary-field SNARKs and GKR-based provers now prove standard hashes at or well above 500K hashes per second, so performance no longer picks the winner and security does. It compared Poseidon/Poseidon2, BLAKE3, BLAKE2, SHA2-256 and Keccak-256. For clients: the execution layer needs no new hash and signature verification reuses existing Keccak-256 code; if SSZ comes to the execution layer with Frame transactions, Keccak-256 is recommended there. In the long term the consensus layer is advised to move SSZ merkleization from SHA2-256 to Keccak-256. kevaundray's post (2026-11-25 04:47), quoted by @ethereumfndn (2026-11-25 05:32).",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "@ethereumfndn 引用转发",
+      "note": "EF 博客 PQAI #1 2026-11-24（Kev Wedderburn）：推荐 Keccak-256 作为以太坊基于哈希的密码学的哈希，并使用 Keccak-f[1600] 派生的一组原语（Keccak-256 做标准哈希，Keccak-duplex 做 Fiat-Shamir，SHAKE256 做伪随机和密钥派生）。文章说二进制域 SNARK 和 GKR 证明器已能以每秒 50 万次哈希或更高的速度证明标准哈希，性能不再决定选择，安全性成为关键；比较了 Poseidon/Poseidon2、BLAKE3、BLAKE2、SHA2-256 和 Keccak-256。对客户端：执行层不需要新哈希，签名验证复用现有 Keccak-256，若随 Frame 交易在执行层引入 SSZ，建议用 Keccak-256；共识层长期建议把 SSZ 默克尔化从 SHA2-256 改为 Keccak-256。kevaundray 发帖介绍（2026-11-25 04:47），@ethereumfndn 引用转发（2026-11-25 05:32）。",
+      "url": "https://x.com/ethereumfndn/status/2125356914846445600",
+      "date": "2026-11-24",
+      "title_en": "quoted by @ethereumfndn",
+      "note_en": "The EF blog's PQAI #1, 2026-11-24 (Kev Wedderburn), recommends Keccak-256 as the hash for Ethereum's hash-based cryptography, along with a family of primitives derived from Keccak-f[1600]: Keccak-256 for standard hashing, Keccak-duplex for Fiat-Shamir, and SHAKE256 for pseudorandomness and key derivation. The post says binary-field SNARKs and GKR-based provers now prove standard hashes at or well above 500K hashes per second, so performance no longer picks the winner and security does. It compared Poseidon/Poseidon2, BLAKE3, BLAKE2, SHA2-256 and Keccak-256. For clients: the execution layer needs no new hash and signature verification reuses existing Keccak-256 code; if SSZ comes to the execution layer with Frame transactions, Keccak-256 is recommended there. In the long term the consensus layer is advised to move SSZ merkleization from SHA2-256 to Keccak-256. kevaundray's post (2026-11-25 04:47), quoted by @ethereumfndn (2026-11-25 05:32).",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "PQ-CL Breakout #4",
+      "note": "2026-11-24 举行。按 EIPsInsight 的补充（2026-11-25 03:08）：XMSS 密钥生成延迟导致一次 55 个 slot 的重组，客户端在做预生成和缓存；LeanVM 0.17 用 FFI 取代 sidecar，递归快约 15%，所有客户端需协调更新；独立聚合者角色推迟出第一个 PQ 分叉。EIPsInsight 总结（2026-11-25 00:53）称 pq-devnet-1 将专注聚合和时序。下次会议 PQ-CL Breakout #5 在 11 月 27 日。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-4-november-24-2026/30460",
+      "date": "2026-11-24",
+      "title_en": "PQ-CL Breakout #4",
+      "note_en": "Took place on 2026-11-24. Per EIPsInsight's follow-up (2026-11-25 03:08): delayed XMSS key generation caused a 55-slot reorg and clients are working on pre-generation and caching; LeanVM 0.17 replaces the sidecar with FFI and recursion is about 15% faster, with all clients needing a coordinated update; a separate aggregator role is deferred from the first PQ fork. EIPsInsight's recap (2026-11-25 00:53) says pq-devnet-1 will focus on aggregation and timing. The next call, PQ-CL Breakout #5, is on November 27.",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "EIPsInsight 的补充",
+      "note": "PQ-CL Breakout #4 2026-11-24 举行。按 EIPsInsight 的补充（2026-11-25 03:08）：XMSS 密钥生成延迟导致一次 55 个 slot 的重组，客户端在做预生成和缓存；LeanVM 0.17 用 FFI 取代 sidecar，递归快约 15%，所有客户端需协调更新；独立聚合者角色推迟出第一个 PQ 分叉。EIPsInsight 总结（2026-11-25 00:53）称 pq-devnet-1 将专注聚合和时序。下次会议 PQ-CL Breakout #5 在 11 月 27 日。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-4-november-24-2026/30460/4",
+      "date": "2026-11-24",
+      "title_en": "EIPsInsight's follow-up",
+      "note_en": "PQ-CL Breakout #4 took place on 2026-11-24. Per EIPsInsight's follow-up (2026-11-25 03:08): delayed XMSS key generation caused a 55-slot reorg and clients are working on pre-generation and caching; LeanVM 0.17 replaces the sidecar with FFI and recursion is about 15% faster, with all clients needing a coordinated update; a separate aggregator role is deferred from the first PQ fork. EIPsInsight's recap (2026-11-25 00:53) says pq-devnet-1 will focus on aggregation and timing. The next call, PQ-CL Breakout #5, is on November 27.",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "EIPsInsight 总结",
+      "note": "PQ-CL Breakout #4 2026-11-24 举行。按 EIPsInsight 的补充（2026-11-25 03:08）：XMSS 密钥生成延迟导致一次 55 个 slot 的重组，客户端在做预生成和缓存；LeanVM 0.17 用 FFI 取代 sidecar，递归快约 15%，所有客户端需协调更新；独立聚合者角色推迟出第一个 PQ 分叉。EIPsInsight 总结（2026-11-25 00:53）称 pq-devnet-1 将专注聚合和时序。下次会议 PQ-CL Breakout #5 在 11 月 27 日。",
+      "url": "https://x.com/EIPsInsight/status/2125286589643522513",
+      "date": "2026-11-24",
+      "title_en": "EIPsInsight's recap",
+      "note_en": "PQ-CL Breakout #4 took place on 2026-11-24. Per EIPsInsight's follow-up (2026-11-25 03:08): delayed XMSS key generation caused a 55-slot reorg and clients are working on pre-generation and caching; LeanVM 0.17 replaces the sidecar with FFI and recursion is about 15% faster, with all clients needing a coordinated update; a separate aggregator role is deferred from the first PQ fork. EIPsInsight's recap (2026-11-25 00:53) says pq-devnet-1 will focus on aggregation and timing. The next call, PQ-CL Breakout #5, is on November 27.",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "PQ-CL Breakout #5",
+      "note": "PQ-CL Breakout #4 2026-11-24 举行。按 EIPsInsight 的补充（2026-11-25 03:08）：XMSS 密钥生成延迟导致一次 55 个 slot 的重组，客户端在做预生成和缓存；LeanVM 0.17 用 FFI 取代 sidecar，递归快约 15%，所有客户端需协调更新；独立聚合者角色推迟出第一个 PQ 分叉。EIPsInsight 总结（2026-11-25 00:53）称 pq-devnet-1 将专注聚合和时序。下次会议 PQ-CL Breakout #5 在 11 月 27 日。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-5-november-27-2026/30499",
+      "date": "2026-11-24",
+      "title_en": "PQ-CL Breakout #5",
+      "note_en": "PQ-CL Breakout #4 took place on 2026-11-24. Per EIPsInsight's follow-up (2026-11-25 03:08): delayed XMSS key generation caused a 55-slot reorg and clients are working on pre-generation and caching; LeanVM 0.17 replaces the sidecar with FFI and recursion is about 15% faster, with all clients needing a coordinated update; a separate aggregator role is deferred from the first PQ fork. EIPsInsight's recap (2026-11-25 00:53) says pq-devnet-1 will focus on aggregation and timing. The next call, PQ-CL Breakout #5, is on November 27.",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "FOCIL Breakout #47",
+      "note": "2026-11-24 举行。按 EIPsInsight 补充：5 到 7 KB 的 PQ 签名在初期可支持每个区块最多 16 笔 PQ 交易，无需大的网络改动；EIP-8288 路线拆成三部分。EIPsInsight 总结（2026-11-24 23:22）称 FOCIL 在 Hegotá 的范围目标在 12 月 10 日定案。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-47-november-24-2026/30420",
+      "date": "2026-11-24",
+      "title_en": "FOCIL Breakout #47",
+      "note_en": "Took place on 2026-11-24. Per EIPsInsight's follow-up: PQ signatures of 5 to 7 KB could initially support up to 16 PQ transactions per block without major networking changes, and the EIP-8288 roadmap is split into three parts. EIPsInsight's recap (2026-11-24 23:22) says a final decision on FOCIL's scope in Hegotá is targeted for December 10.",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "EIPsInsight 补充",
+      "note": "FOCIL Breakout #47 2026-11-24 举行。按 EIPsInsight 补充：5 到 7 KB 的 PQ 签名在初期可支持每个区块最多 16 笔 PQ 交易，无需大的网络改动；EIP-8288 路线拆成三部分。EIPsInsight 总结（2026-11-24 23:22）称 FOCIL 在 Hegotá 的范围目标在 12 月 10 日定案。",
+      "url": "https://ethereum-magicians.org/t/focil-breakout-47-november-24-2026/30420/4",
+      "date": "2026-11-24",
+      "title_en": "EIPsInsight's follow-up",
+      "note_en": "FOCIL Breakout #47 took place on 2026-11-24. Per EIPsInsight's follow-up: PQ signatures of 5 to 7 KB could initially support up to 16 PQ transactions per block without major networking changes, and the EIP-8288 roadmap is split into three parts. EIPsInsight's recap (2026-11-24 23:22) says a final decision on FOCIL's scope in Hegotá is targeted for December 10.",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "后量子路线：Keccak-256 统一哈希，PQ 共识和 PQ FOCIL 定节奏",
+      "title": "EIPsInsight 总结",
+      "note": "FOCIL Breakout #47 2026-11-24 举行。按 EIPsInsight 补充：5 到 7 KB 的 PQ 签名在初期可支持每个区块最多 16 笔 PQ 交易，无需大的网络改动；EIP-8288 路线拆成三部分。EIPsInsight 总结（2026-11-24 23:22）称 FOCIL 在 Hegotá 的范围目标在 12 月 10 日定案。",
+      "url": "https://x.com/EIPsInsight/status/2125263748994912375",
+      "date": "2026-11-24",
+      "title_en": "EIPsInsight's recap",
+      "note_en": "FOCIL Breakout #47 took place on 2026-11-24. Per EIPsInsight's follow-up: PQ signatures of 5 to 7 KB could initially support up to 16 PQ transactions per block without major networking changes, and the EIP-8288 roadmap is split into three parts. EIPsInsight's recap (2026-11-24 23:22) says a final decision on FOCIL's scope in Hegotá is targeted for December 10.",
+      "topic_en": "Post-quantum roadmap: Keccak-256 as the single hash, pacing for PQ consensus and PQ FOCIL"
+    },
+    {
+      "topic": "Agent 账户权限与 Gas 重新定价",
+      "title": "ERC-8511 Policy-Enforced Agent Accounts 讨论",
+      "note": "Revinand 2026-11-24 19:54 指出，v2 中清空签名者和在 policySigner 为零时声明都立即生效，账户可在一笔交易内替换签名者并降低 minDelay；Zealynx 复现确认（20:22）。palisec-dev 发布 Registry v3（21:44）：部署在 Robinhood Chain（4663），无 owner、不可升级；账户触发的暂停只有账户能解除，发布者尝试会回滚；作者采纳“minDelay 只约束发布者”的解释，并在安全考虑里写明，需要约束账户本身的读者应监听 SignersDeclared 和账户发出的 PolicyActivated；客户端库升到 0.3.0。Zealynx 再指出（2026-11-25 01:09）泄露的发布者密钥可排队 type(uint64).max 版本，若账户错过窗口就永久卡住，建议 setPending 只允许版本加 1。ERCs PR #2196 已更新。",
+      "url": "https://ethereum-magicians.org/t/erc-8511-policy-enforced-agent-accounts/30467/13",
+      "date": "2026-11-24",
+      "title_en": "ERC-8511 Policy-Enforced Agent Accounts discussion",
+      "note_en": "On 2026-11-24 at 19:54, Revinand pointed out that in v2 both clearing signers and declaring while policySigner is zero take effect immediately, so an account can swap its signers and lower minDelay in one transaction. Zealynx reproduced it (20:22). palisec-dev released Registry v3 (21:44) on Robinhood Chain (4663), with no owner and no upgrade path. A stop the account engaged can only be lifted by the account, and a publisher's attempt reverts. The author adopted the reading that minDelay binds the publisher only and now says so in Security Considerations; readers who need a delay on the account itself should watch SignersDeclared and PolicyActivated sent by the account. The client library is now 0.3.0. Zealynx then noted (2026-11-25 01:09) that a leaked publisher key could queue version type(uint64).max, which would get stuck permanently if the account misses the window, and suggested setPending only allow the next version. ERCs PR #2196 has been updated.",
+      "topic_en": "Agent account permissions and gas repricing"
+    },
+    {
+      "topic": "Agent 账户权限与 Gas 重新定价",
+      "title": "Zealynx 复现确认",
+      "note": "ERC-8511 Policy-Enforced Agent Accounts 讨论：Revinand 2026-11-24 19:54 指出，v2 中清空签名者和在 policySigner 为零时声明都立即生效，账户可在一笔交易内替换签名者并降低 minDelay；Zealynx 复现确认（20:22）。palisec-dev 发布 Registry v3（21:44）：部署在 Robinhood Chain（4663），无 owner、不可升级；账户触发的暂停只有账户能解除，发布者尝试会回滚；作者采纳“minDelay 只约束发布者”的解释，并在安全考虑里写明，需要约束账户本身的读者应监听 SignersDeclared 和账户发出的 PolicyActivated；客户端库升到 0.3.0。Zealynx 再指出（2026-11-25 01:09）泄露的发布者密钥可排队 type(uint64).max 版本，若账户错过窗口就永久卡住，建议 setPending 只允许版本加 1。ERCs PR #2196 已更新。",
+      "url": "https://ethereum-magicians.org/t/erc-8511-policy-enforced-agent-accounts/30467/14",
+      "date": "2026-11-24",
+      "title_en": "Zealynx reproduced it",
+      "note_en": "ERC-8511 Policy-Enforced Agent Accounts discussion: on 2026-11-24 at 19:54, Revinand pointed out that in v2 both clearing signers and declaring while policySigner is zero take effect immediately, so an account can swap its signers and lower minDelay in one transaction. Zealynx reproduced it (20:22). palisec-dev released Registry v3 (21:44) on Robinhood Chain (4663), with no owner and no upgrade path. A stop the account engaged can only be lifted by the account, and a publisher's attempt reverts. The author adopted the reading that minDelay binds the publisher only and now says so in Security Considerations; readers who need a delay on the account itself should watch SignersDeclared and PolicyActivated sent by the account. The client library is now 0.3.0. Zealynx then noted (2026-11-25 01:09) that a leaked publisher key could queue version type(uint64).max, which would get stuck permanently if the account misses the window, and suggested setPending only allow the next version. ERCs PR #2196 has been updated.",
+      "topic_en": "Agent account permissions and gas repricing"
+    },
+    {
+      "topic": "Agent 账户权限与 Gas 重新定价",
+      "title": "palisec-dev 发布 Registry v3",
+      "note": "ERC-8511 Policy-Enforced Agent Accounts 讨论：Revinand 2026-11-24 19:54 指出，v2 中清空签名者和在 policySigner 为零时声明都立即生效，账户可在一笔交易内替换签名者并降低 minDelay；Zealynx 复现确认（20:22）。palisec-dev 发布 Registry v3（21:44）：部署在 Robinhood Chain（4663），无 owner、不可升级；账户触发的暂停只有账户能解除，发布者尝试会回滚；作者采纳“minDelay 只约束发布者”的解释，并在安全考虑里写明，需要约束账户本身的读者应监听 SignersDeclared 和账户发出的 PolicyActivated；客户端库升到 0.3.0。Zealynx 再指出（2026-11-25 01:09）泄露的发布者密钥可排队 type(uint64).max 版本，若账户错过窗口就永久卡住，建议 setPending 只允许版本加 1。ERCs PR #2196 已更新。",
+      "url": "https://ethereum-magicians.org/t/erc-8511-policy-enforced-agent-accounts/30467/15",
+      "date": "2026-11-24",
+      "title_en": "palisec-dev released Registry v3",
+      "note_en": "ERC-8511 Policy-Enforced Agent Accounts discussion: on 2026-11-24 at 19:54, Revinand pointed out that in v2 both clearing signers and declaring while policySigner is zero take effect immediately, so an account can swap its signers and lower minDelay in one transaction. Zealynx reproduced it (20:22). palisec-dev released Registry v3 (21:44) on Robinhood Chain (4663), with no owner and no upgrade path. A stop the account engaged can only be lifted by the account, and a publisher's attempt reverts. The author adopted the reading that minDelay binds the publisher only and now says so in Security Considerations; readers who need a delay on the account itself should watch SignersDeclared and PolicyActivated sent by the account. The client library is now 0.3.0. Zealynx then noted (2026-11-25 01:09) that a leaked publisher key could queue version type(uint64).max, which would get stuck permanently if the account misses the window, and suggested setPending only allow the next version. ERCs PR #2196 has been updated.",
+      "topic_en": "Agent account permissions and gas repricing"
+    },
+    {
+      "topic": "Agent 账户权限与 Gas 重新定价",
+      "title": "Zealynx 再指出",
+      "note": "ERC-8511 Policy-Enforced Agent Accounts 讨论：Revinand 2026-11-24 19:54 指出，v2 中清空签名者和在 policySigner 为零时声明都立即生效，账户可在一笔交易内替换签名者并降低 minDelay；Zealynx 复现确认（20:22）。palisec-dev 发布 Registry v3（21:44）：部署在 Robinhood Chain（4663），无 owner、不可升级；账户触发的暂停只有账户能解除，发布者尝试会回滚；作者采纳“minDelay 只约束发布者”的解释，并在安全考虑里写明，需要约束账户本身的读者应监听 SignersDeclared 和账户发出的 PolicyActivated；客户端库升到 0.3.0。Zealynx 再指出（2026-11-25 01:09）泄露的发布者密钥可排队 type(uint64).max 版本，若账户错过窗口就永久卡住，建议 setPending 只允许版本加 1。ERCs PR #2196 已更新。",
+      "url": "https://ethereum-magicians.org/t/erc-8511-policy-enforced-agent-accounts/30467/16",
+      "date": "2026-11-24",
+      "title_en": "Zealynx then noted",
+      "note_en": "ERC-8511 Policy-Enforced Agent Accounts discussion: on 2026-11-24 at 19:54, Revinand pointed out that in v2 both clearing signers and declaring while policySigner is zero take effect immediately, so an account can swap its signers and lower minDelay in one transaction. Zealynx reproduced it (20:22). palisec-dev released Registry v3 (21:44) on Robinhood Chain (4663), with no owner and no upgrade path. A stop the account engaged can only be lifted by the account, and a publisher's attempt reverts. The author adopted the reading that minDelay binds the publisher only and now says so in Security Considerations; readers who need a delay on the account itself should watch SignersDeclared and PolicyActivated sent by the account. The client library is now 0.3.0. Zealynx then noted (2026-11-25 01:09) that a leaked publisher key could queue version type(uint64).max, which would get stuck permanently if the account misses the window, and suggested setPending only allow the next version. ERCs PR #2196 has been updated.",
+      "topic_en": "Agent account permissions and gas repricing"
+    },
+    {
+      "topic": "Agent 账户权限与 Gas 重新定价",
+      "title": "ERCs PR #2196",
+      "note": "ERC-8511 Policy-Enforced Agent Accounts 讨论：Revinand 2026-11-24 19:54 指出，v2 中清空签名者和在 policySigner 为零时声明都立即生效，账户可在一笔交易内替换签名者并降低 minDelay；Zealynx 复现确认（20:22）。palisec-dev 发布 Registry v3（21:44）：部署在 Robinhood Chain（4663），无 owner、不可升级；账户触发的暂停只有账户能解除，发布者尝试会回滚；作者采纳“minDelay 只约束发布者”的解释，并在安全考虑里写明，需要约束账户本身的读者应监听 SignersDeclared 和账户发出的 PolicyActivated；客户端库升到 0.3.0。Zealynx 再指出（2026-11-25 01:09）泄露的发布者密钥可排队 type(uint64).max 版本，若账户错过窗口就永久卡住，建议 setPending 只允许版本加 1。ERCs PR #2196 已更新。",
+      "url": "https://github.com/ethereum/ERCs/pull/2196",
+      "date": "2026-11-24",
+      "title_en": "ERCs PR #2196",
+      "note_en": "ERC-8511 Policy-Enforced Agent Accounts discussion: on 2026-11-24 at 19:54, Revinand pointed out that in v2 both clearing signers and declaring while policySigner is zero take effect immediately, so an account can swap its signers and lower minDelay in one transaction. Zealynx reproduced it (20:22). palisec-dev released Registry v3 (21:44) on Robinhood Chain (4663), with no owner and no upgrade path. A stop the account engaged can only be lifted by the account, and a publisher's attempt reverts. The author adopted the reading that minDelay binds the publisher only and now says so in Security Considerations; readers who need a delay on the account itself should watch SignersDeclared and PolicyActivated sent by the account. The client library is now 0.3.0. Zealynx then noted (2026-11-25 01:09) that a leaked publisher key could queue version type(uint64).max, which would get stuck permanently if the account misses the window, and suggested setPending only allow the next version. ERCs PR #2196 has been updated.",
+      "topic_en": "Agent account permissions and gas repricing"
+    },
+    {
+      "topic": "Agent 账户权限与 Gas 重新定价",
+      "title": "ethresear.ch 多维费用讨论",
+      "note": "2026-11-24 21:25（M1kuW1ll）：EIP-8037 状态重新定价后，同样的状态创建活动 gas 将比现在多 5 倍以上；在 EIP-7999 模拟中状态贡献了超过 99% 的区块费用，因为状态需求弹性最大。",
+      "url": "https://ethresear.ch/t/more-meters-or-more-prices-one-vs-multi-dimensional-fee-mechanisms-on-ethereum/26244/7",
+      "date": "2026-11-24",
+      "title_en": "ethresear.ch multidimensional fee discussion",
+      "note_en": "2026-11-24 21:25 (M1kuW1ll): after the EIP-8037 state repricing, the same state creation activity will cost more than 5x the gas it does today, and in the EIP-7999 simulations state makes up more than 99% of the block charge because state demand is the most elastic.",
+      "topic_en": "Agent account permissions and gas repricing"
+    },
+    {
+      "topic": "Agent 账户权限与 Gas 重新定价",
+      "title": "ACDT #105 议程发布",
+      "note": "2026-11-24 23:27：会议在 11 月 30 日 21:00，第一项仍是 Glamsterdam EIP-8037/EIP-8038 状态，另有 Bogota Devnet 3。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-testing-acdt-105-november-30-2026/30500",
+      "date": "2026-11-24",
+      "title_en": "ACDT #105 agenda posted",
+      "note_en": "2026-11-24 23:27. The call is on November 30 at 21:00, and the first item is again the status of Glamsterdam EIP-8037/EIP-8038, plus Bogota Devnet 3.",
+      "topic_en": "Agent account permissions and gas repricing"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereum.org 发布新版本",
+      "note": "2026-11-25 06:36：菜单重做，路线图页的升级轮播改用 Forkcast 数据，Glamsterdam 仍在测试、主网日期未定；gas 文档新增模拟器，可调区块满度看下一个区块 base fee 怎么变，适合给新手讲解 EIP-1559。",
+      "url": "https://x.com/ethdotorg/status/2125373032105664889",
+      "date": "2026-11-25",
+      "title_en": "ethereum.org shipped a new release",
+      "note_en": "2026-11-25 06:36: a redesigned menu, an upgrade carousel on the roadmap page that now pulls from Forkcast (Glamsterdam is in testing and has no mainnet date yet), and a simulator on the gas docs page where you change how full a block is and watch the next base fee. Handy for explaining EIP-1559 to newcomers.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "路线图页",
+      "note": "ethereum.org 发布新版本 2026-11-25 06:36：菜单重做，路线图页的升级轮播改用 Forkcast 数据，Glamsterdam 仍在测试、主网日期未定；gas 文档新增模拟器，可调区块满度看下一个区块 base fee 怎么变，适合给新手讲解 EIP-1559。",
+      "url": "https://ethereum.org/roadmap/",
+      "date": "2026-11-25",
+      "title_en": "roadmap page",
+      "note_en": "Ethereum.org shipped a new release, 2026-11-25 06:36: a redesigned menu, an upgrade carousel on the roadmap page that now pulls from Forkcast (Glamsterdam is in testing and has no mainnet date yet), and a simulator on the gas docs page where you change how full a block is and watch the next base fee. Handy for explaining EIP-1559 to newcomers.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "gas 文档",
+      "note": "ethereum.org 发布新版本 2026-11-25 06:36：菜单重做，路线图页的升级轮播改用 Forkcast 数据，Glamsterdam 仍在测试、主网日期未定；gas 文档新增模拟器，可调区块满度看下一个区块 base fee 怎么变，适合给新手讲解 EIP-1559。",
+      "url": "https://ethereum.org/developers/docs/gas/",
+      "date": "2026-11-25",
+      "title_en": "gas docs page",
+      "note_en": "Ethereum.org shipped a new release, 2026-11-25 06:36: a redesigned menu, an upgrade carousel on the roadmap page that now pulls from Forkcast (Glamsterdam is in testing and has no mainnet date yet), and a simulator on the gas docs page where you change how full a block is and watch the next base fee. Handy for explaining EIP-1559 to newcomers.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "growthepie 谈 blob",
+      "note": "2026-11-24 20:58：按日均已回到 Pectra 目标之上，但仍低于两次 Fusaka 提升后的目标；过去 7 天 Base 占 28.67%、Robinhood 占 13.89%；以太坊 blob 每 MB 成本 0.17 美元，比上周的 0.10 美元高 70%，日销毁不到 2 ETH。Rollup 的数据成本在上升。",
+      "url": "https://x.com/growthepie_eth/status/2125227647701582180",
+      "date": "2026-11-24",
+      "title_en": "growthepie on blobs",
+      "note_en": "2026-11-24 20:58: daily averages are back above the Pectra target but still below both Fusaka increases. Over the past 7 days Base used 28.67% and Robinhood 13.89%. Ethereum blobs cost $0.17 per MB, up 70% from $0.10 last week, and burn less than 2 ETH a day. Rollup data costs are rising.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 推荐钱包数据泄露“地铁图”",
+      "note": "隐私：ETHBEAT 推荐钱包数据泄露“地铁图” 2026-11-24 22:04，ethereumtransitauthority.com（austingriffith 制作）用真实钱包源码和网络流量展示 IP、余额、收款地址和已签名交易会经过哪些 RPC、筛查服务、中继和钱包后端，即使自建节点也不一定能堵住所有泄露。",
+      "url": "https://x.com/ethbeat_org/status/2125244277647106062",
+      "date": "2026-11-24",
+      "title_en": "ETHBEAT highlighted a \"subway map\" of wallet data leaks",
+      "note_en": "Privacy: ETHBEAT highlighted a \"subway map\" of wallet data leaks, 2026-11-24 22:04. ethereumtransitauthority.com, built by austingriffith, uses real wallet source code and network traffic to show which RPCs, screening services, relays and wallet backends see your IP, balances, recipient address and signed transaction. Even running your own node does not necessarily stop every leak.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethereumtransitauthority.com",
+      "note": "隐私：ETHBEAT 推荐钱包数据泄露“地铁图” 2026-11-24 22:04，ethereumtransitauthority.com（austingriffith 制作）用真实钱包源码和网络流量展示 IP、余额、收款地址和已签名交易会经过哪些 RPC、筛查服务、中继和钱包后端，即使自建节点也不一定能堵住所有泄露。",
+      "url": "https://ethereumtransitauthority.com/",
+      "date": "2026-11-24",
+      "title_en": "ethereumtransitauthority.com",
+      "note_en": "Privacy: ETHBEAT highlighted a \"subway map\" of wallet data leaks, 2026-11-24 22:04. ethereumtransitauthority.com, built by austingriffith, uses real wallet source code and network traffic to show which RPCs, screening services, relays and wallet backends see your IP, balances, recipient address and signed transaction. Even running your own node does not necessarily stop every leak.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Do bid cancellations matter?",
+      "note": "2026-11-24 19:13（BrunoMazorra）：ePBS 下提议者不一定尊重构建者撤价，按 relay 日志，签最高出价的收益平均每天 0.9 ETH，集中在波动期。",
+      "url": "https://ethresear.ch/t/do-bid-cancellations-matter/26287",
+      "date": "2026-11-24",
+      "title_en": "ethresear.ch: Do bid cancellations matter?",
+      "note_en": "2026-11-24 19:13 (BrunoMazorra): under ePBS, proposers may not respect builder bid cancellations. Relay logs show the gain from signing the highest bid averages 0.9 ETH per day, concentrated in volatile periods.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethresear.ch：Post-quantum DAS with improved provable security",
+      "note": "2026-11-24 16:47（b-wagn）：给 PQ DAS 一个证明界更紧的变体并在 Lean 中证明，代价是效率更低。",
+      "url": "https://ethresear.ch/t/post-quantum-das-with-improved-provable-security/26285",
+      "date": "2026-11-24",
+      "title_en": "ethresear.ch: Post-quantum DAS with improved provable security",
+      "note_en": "2026-11-24 16:47 (b-wagn): a PQ DAS variant with a tighter security bound, proven in Lean, at the cost of efficiency.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "PR #12711：EIP-7928 明确提款和系统调用的逐索引净额",
+      "note": "2026-11-24 22:00（danceratopz），起因是 go-ethereum 的一个 BAL 客户端 bug，属规范澄清。",
+      "url": "https://github.com/ethereum/EIPs/pull/12711",
+      "date": "2026-11-24",
+      "title_en": "PR #12711: EIP-7928 spells out per-index netting for withdrawals and system calls",
+      "note_en": "2026-11-24 22:00 (danceratopz), prompted by a go-ethereum BAL client bug. A spec clarification.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ERCs PR #2099 申请把 ERC-8107（ENS 的 agent 协作信任注册表）推进到 Last Call",
+      "note": "2026-11-25 00:13 更新，仍未合并。",
+      "url": "https://github.com/ethereum/ERCs/pull/2099",
+      "date": "2026-11-25",
+      "title_en": "ERCs PR #2099 asks to move ERC-8107 (an ENS trust registry for agent coordination) to Last Call",
+      "note_en": "Updated 2026-11-25 00:13 and not yet merged.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "gakonst：Tempo 的 Configurable Accounts 已上测试网",
+      "note": "2026-11-25 05:12，主网是下一步；这是非以太坊链上的账户方案，可作为可配置账户和后量子准备的参照。",
+      "url": "https://x.com/gakonst/status/2125351845556294024",
+      "date": "2026-11-25",
+      "title_en": "gakonst: Tempo's Configurable Accounts are live on testnet",
+      "note_en": "2026-11-25 05:12, with mainnet next. This is an account design on a non-Ethereum chain, useful as a reference for configurable accounts and post-quantum readiness.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "@ethereum 引用 kevaundray：“The Merge changed Ethereum's engine in flight. This time we change the locks”",
+      "note": "2026-11-24 23:24。",
+      "url": "https://x.com/ethereum/status/2125264201551892672",
+      "date": "2026-11-24",
+      "title_en": "@ethereum quoting kevaundray: \"The Merge changed Ethereum's engine in flight. This time we change the locks\"",
+      "note_en": "2026-11-24 23:24.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "barnabemonnot：LeanVM 是聚合验证者投票的基础",
+      "note": "2026-11-24 22:17，其性能提升让团队可以考虑加快在共识层部署 PQ 密码学。",
+      "url": "https://x.com/barnabemonnot/status/2125247511581675883",
+      "date": "2026-11-24",
+      "title_en": "barnabemonnot: LeanVM is fundamental to aggregating validator votes",
+      "note_en": "2026-11-24 22:17, and its performance gains mean the team can now consider speeding up PQ crypto on the consensus layer.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "trent_vanepps 谈人才留存",
+      "note": "2026-11-24 23:27：需要愿景、执行、文化和持续资金，他说资金这一项越来越令人担忧。",
+      "url": "https://x.com/trent_vanepps/status/2125265091818045794",
+      "date": "2026-11-24",
+      "title_en": "trent_vanepps on talent retention",
+      "note_en": "2026-11-24 23:27: it takes vision, execution, culture and consistent funding, and he says funding is increasingly concerning.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "kassandraETH：Lean 和形式化验证正在进入大众讨论",
+      "note": "2026-11-25 07:18。",
+      "url": "https://x.com/kassandraETH/status/2125383678704447928",
+      "date": "2026-11-25",
+      "title_en": "kassandraETH: Lean and formal verification are entering mainstream discussion",
+      "note_en": "2026-11-25 07:18.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "EIPsInsight 在 thedaofund 发起 AA 安全分析提案",
+      "note": "2026-11-24 21:55，覆盖 EIP-4337、EIP-7702、EIP-8141、内存池风险和 MEV 攻击。",
+      "url": "https://x.com/EIPsInsight/status/2125242024093958211",
+      "date": "2026-11-24",
+      "title_en": "EIPsInsight proposed an AA security analytics initiative on thedaofund",
+      "note_en": "2026-11-24 21:55, covering EIP-4337, EIP-7702, EIP-8141, mempool risks and MEV attacks.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://blog.ethereum.org/2026/11/24/pqai-1",
+    "credit": "Ethereum Foundation Blog",
+    "local_path": "assets/2026-11-25.jpg",
+    "credit_en": "Ethereum Foundation Blog"
+  },
+  "keywords_en": [
+    "EIP-8141 PROOF frames",
+    "EIP-8288 signature aggregation",
+    "PQAI #1 Keccak-256",
+    "ERC-8511 agent accounts",
+    "EIP-8037 repricing"
+  ],
+  "summary_en": "lightclient opened a PR adding a PROOF frame mode to EIP-8141 Frame transactions, with leanSPHINCS as a protocol verifier, while soispoke proposed declaring EIP-8288 dependencies in the signature list instead, so two ways of expressing signatures are now being debated side by side. The EF blog published PQAI #1, recommending Keccak-256 as the single hash for Ethereum's hash-based cryptography, which means execution clients need no new hash. The ERC-8511 agent account registry moved to v3, and reviewers confirmed that minDelay binds the publisher, not the account itself."
+}
