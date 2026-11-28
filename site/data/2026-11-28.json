@@ -1,0 +1,537 @@
+{
+  "date": "2026-11-28",
+  "keywords": [
+    "Glamsterdam EIP-8037",
+    "Hoodi 12 月 15 日",
+    "EIP-8476 7702 退出",
+    "Hegotá FOCIL 去留",
+    "后量子账户迁移"
+  ],
+  "summary": "ACDC #192 决定 Glamsterdam 按现有规范上线，保留 EIP-8037 状态创建重新定价，Hoodi 测试网定于 2026-12-15 19:12 UTC 升级。账户层新合并 EIP-8476（EOA 永久退出 EIP-7702 委托）和 EIP-8425 的种子证明恢复方案，EIP-8298 SETCODEFROM 在主网字节码测试后被提议加两条限制。Hegotá 是否保留 FOCIL、全力做后量子，要到约 12 月 10 日的 ACDC 才定。",
+  "items": [
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "Ethlabs 在 Magicians 发布对 Glamsterdam 的立场",
+      "note": "2026-11-26 03:26（caspar）：建议按现有规范推进。原因是大部分破坏来自状态创建重新定价，这是走向 1000 倍扩容的必要一步；撤掉 EIP-8037 会失去 Glamsterdam 约 3 倍的 gas 上限提升，只是把问题推到下一次分叉；新的 state gas reservoir 是第二个破坏来源，改 EIP 只能帮到一部分受影响项目，还要再拖几个月。Ethlabs 的 X 帖（2026-11-26 04:38）补充背景：10 月的审计发现这些重新定价会打破部分已部署合约依赖的假设，升级推进因此暂停。",
+      "url": "https://ethereum-magicians.org/t/ethlabs-position-on-glamsterdam/30518",
+      "date": "2026-11-26",
+      "title_en": "Ethlabs posted its position on Glamsterdam",
+      "note_en": "On Magicians at 2026-11-26 03:26 (caspar), recommending going ahead with the current spec. Most of the disruption comes from repricing state creation, which it calls a necessary step toward 1000x scaling. Pulling EIP-8037 would give up Glamsterdam's roughly 3x higher gas limit and only push the problem to a later fork. The new state gas reservoir is a secondary source of breakage, and changing the EIP would help only some affected projects at the cost of more months of delay. Ethlabs' X post (2026-11-26 04:38) gives the background: an October audit found the repricings break assumptions some deployed contracts rely on, and the rollout was paused.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "Ethlabs 的 X 帖",
+      "note": "Ethlabs 在 Magicians 发布对 Glamsterdam 的立场 2026-11-26 03:26（caspar）：建议按现有规范推进。原因是大部分破坏来自状态创建重新定价，这是走向 1000 倍扩容的必要一步；撤掉 EIP-8037 会失去 Glamsterdam 约 3 倍的 gas 上限提升，只是把问题推到下一次分叉；新的 state gas reservoir 是第二个破坏来源，改 EIP 只能帮到一部分受影响项目，还要再拖几个月。Ethlabs 的 X 帖（2026-11-26 04:38）补充背景：10 月的审计发现这些重新定价会打破部分已部署合约依赖的假设，升级推进因此暂停。",
+      "url": "https://x.com/ethlabs_org/status/2125705589229527045",
+      "date": "2026-11-26",
+      "title_en": "Ethlabs' X post",
+      "note_en": "Ethlabs posted its position on Glamsterdam on Magicians at 2026-11-26 03:26 (caspar), recommending going ahead with the current spec. Most of the disruption comes from repricing state creation, which it calls a necessary step toward 1000x scaling. Pulling EIP-8037 would give up Glamsterdam's roughly 3x higher gas limit and only push the problem to a later fork. The new state gas reservoir is a secondary source of breakage, and changing the EIP would help only some affected projects at the cost of more months of delay. Ethlabs' X post (2026-11-26 04:38) gives the background: an October audit found the repricings break assumptions some deployed contracts rely on, and the rollout was paused.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "ACDC #192 会议帖",
+      "note": "（2026-11-26）：执行层团队粗略共识按现有规范上线，自动摘要提到仍有人担心破坏和 GAS 操作码的可用性；共识层采用不破坏共识的 PR 5770（在 CL 引入 RLP 做 payload block hash 校验），PR 5820 推迟。EIPsInsight 补充（2026-11-26 23:50）确认 Hoodi 在 2026-12-15 19:12 UTC（epoch 143616）升级。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-192-november-26-2026/30388",
+      "date": "2026-11-26",
+      "title_en": "ACDC #192 meeting thread",
+      "note_en": "(2026-11-26): EL teams reached rough consensus to ship the current spec, though the auto summary notes lingering concerns about breakage and the usability of the GAS opcode. The CL side adopted the non consensus breaking PR 5770 (bringing RLP into the CL to verify the payload block hash) and deferred PR 5820. EIPsInsight's notes (2026-11-26 23:50) confirm the Hoodi upgrade for 2026-12-15 19:12 UTC (epoch 143616).",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "EIPsInsight 补充",
+      "note": "ACDC #192 会议帖（2026-11-26）：执行层团队粗略共识按现有规范上线，自动摘要提到仍有人担心破坏和 GAS 操作码的可用性；共识层采用不破坏共识的 PR 5770（在 CL 引入 RLP 做 payload block hash 校验），PR 5820 推迟。EIPsInsight 补充（2026-11-26 23:50）确认 Hoodi 在 2026-12-15 19:12 UTC（epoch 143616）升级。",
+      "url": "https://ethereum-magicians.org/t/all-core-devs-consensus-acdc-192-november-26-2026/30388/4",
+      "date": "2026-11-26",
+      "title_en": "EIPsInsight's notes",
+      "note_en": "ACDC #192 meeting thread (2026-11-26): EL teams reached rough consensus to ship the current spec, though the auto summary notes lingering concerns about breakage and the usability of the GAS opcode. The CL side adopted the non consensus breaking PR 5770 (bringing RLP into the CL to verify the payload block hash) and deferred PR 5820. EIPsInsight's notes (2026-11-26 23:50) confirm the Hoodi upgrade for 2026-12-15 19:12 UTC (epoch 143616).",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "PR #12717 把 EIP-8037 改为单一 gas_left 并移入 Review",
+      "note": "规范层面：PR #12717 把 EIP-8037 改为单一 gas_left 并移入 Review 提出去掉双池 reservoir 模型，2026-11-26 21:32 未合并即关闭，与“不改规范”的决定一致。PR #12732（2026-11-28 05:09，tcoratger，开放中）提议从 EIP-8037 中去掉 EIP-7610 存储碰撞相关内容。",
+      "url": "https://github.com/ethereum/EIPs/pull/12717",
+      "date": "2026-11-26",
+      "title_en": "PR #12717, which would have replaced the reservoir with a single gas_left and moved EIP-8037 to Review",
+      "note_en": "On the spec: PR #12717, which would have replaced the reservoir with a single gas_left and moved EIP-8037 to Review, was closed without merging at 2026-11-26 21:32, in line with the no spec change decision. PR #12732 (2026-11-28 05:09, tcoratger, open) proposes dropping the EIP-7610 storage collision text from EIP-8037.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "PR #12732",
+      "note": "规范层面：PR #12717 把 EIP-8037 改为单一 gas_left 并移入 Review 提出去掉双池 reservoir 模型，2026-11-26 21:32 未合并即关闭，与“不改规范”的决定一致。PR #12732（2026-11-28 05:09，tcoratger，开放中）提议从 EIP-8037 中去掉 EIP-7610 存储碰撞相关内容。",
+      "url": "https://github.com/ethereum/EIPs/pull/12732",
+      "date": "2026-11-26",
+      "title_en": "PR #12732",
+      "note_en": "On the spec: PR #12717, which would have replaced the reservoir with a single gas_left and moved EIP-8037 to Review, was closed without merging at 2026-11-26 21:32, in line with the no spec change decision. PR #12732 (2026-11-28 05:09, tcoratger, open) proposes dropping the EIP-7610 storage collision text from EIP-8037.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "milonite 在 ACDC 议程下请求",
+      "note": "会前后的应用方诉求：milonite 在 ACDC 议程下请求（2026-11-26 20:55）若 8037 有改动，恢复对不消耗状态的交易的 gas 回填（PR #12249）；gretzke 在 ACDE #250 议程下（2026-11-26 08:08）提议新增一个可以读取 reservoir 的操作码，会议在 12 月 3 日。",
+      "url": "https://github.com/ethereum/pm/issues/2305",
+      "date": "2026-11-26",
+      "title_en": "milonite asked on the ACDC agenda",
+      "note_en": "Requests from app developers: milonite asked on the ACDC agenda (2026-11-26 20:55) that, if 8037 changes at all, gas refills come back for transactions that do not consume state (PR #12249). gretzke asked on the ACDE #250 agenda (2026-11-26 08:08) to discuss a new opcode for reading the reservoir; that call is on December 3.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "PR #12249",
+      "note": "会前后的应用方诉求：milonite 在 ACDC 议程下请求（2026-11-26 20:55）若 8037 有改动，恢复对不消耗状态的交易的 gas 回填（PR #12249）；gretzke 在 ACDE #250 议程下（2026-11-26 08:08）提议新增一个可以读取 reservoir 的操作码，会议在 12 月 3 日。",
+      "url": "https://github.com/ethereum/EIPs/pull/12249",
+      "date": "2026-11-26",
+      "title_en": "PR #12249",
+      "note_en": "Requests from app developers: milonite asked on the ACDC agenda (2026-11-26 20:55) that, if 8037 changes at all, gas refills come back for transactions that do not consume state (PR #12249). gretzke asked on the ACDE #250 agenda (2026-11-26 08:08) to discuss a new opcode for reading the reservoir; that call is on December 3.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "gretzke 在 ACDE #250 议程下",
+      "note": "会前后的应用方诉求：milonite 在 ACDC 议程下请求（2026-11-26 20:55）若 8037 有改动，恢复对不消耗状态的交易的 gas 回填（PR #12249）；gretzke 在 ACDE #250 议程下（2026-11-26 08:08）提议新增一个可以读取 reservoir 的操作码，会议在 12 月 3 日。",
+      "url": "https://github.com/ethereum/pm/issues/2316",
+      "date": "2026-11-26",
+      "title_en": "gretzke asked on the ACDE #250 agenda",
+      "note_en": "Requests from app developers: milonite asked on the ACDC agenda (2026-11-26 20:55) that, if 8037 changes at all, gas refills come back for transactions that do not consume state (PR #12249). gretzke asked on the ACDE #250 agenda (2026-11-26 08:08) to discuss a new opcode for reading the reservoir; that call is on December 3.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "Versioned Opcodes for Gas Repricing 合并为 Draft",
+      "note": "新草案：Versioned Opcodes for Gas Repricing 合并为 Draft（2026-11-27 09:20，lglisic60）：新合约必须使用带 EIP-8037/8038 gas 表的 V2 操作码，已部署合约保留旧 gas 表，DELEGATECALL_V2 要求目标也是 V2，V2 中去掉 GAS 和 GASLIMIT 这类 gas 自省操作码。",
+      "url": "https://github.com/ethereum/EIPs/pull/12638",
+      "date": "2026-11-27",
+      "title_en": "Versioned Opcodes for Gas Repricing merged as a Draft",
+      "note_en": "New draft: Versioned Opcodes for Gas Repricing merged as a Draft (2026-11-27 09:20, lglisic60). New contracts would have to use V2 opcodes that carry the EIP-8037/8038 gas schedule, existing contracts keep the legacy schedule, DELEGATECALL_V2 requires a V2 target, and gas introspection opcodes such as GAS and GASLIMIT are left out of V2.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "HarryR 在 EIP-8037 讨论帖指出",
+      "note": "（2026-11-27 18:48）：状态创建变贵后，“1 wei 技巧”（转出余额时留下最小单位，让余额槽留在状态里）的激励会更强。",
+      "url": "https://ethereum-magicians.org/t/eip-8037-state-creation-gas-cost-increase/25694/54",
+      "date": "2026-11-27",
+      "title_en": "HarryR noted in the EIP-8037 thread",
+      "note_en": "(2026-11-27 18:48) that pricier state creation strengthens the incentive behind the \"1 wei trick\": leaving the smallest unit behind when forwarding a balance so the balance slot stays in state.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "growthepie 估算",
+      "note": "（2026-11-27 22:38）：Glamsterdam 把 gas 上限提高 3.3 倍，当前 24.9 TPS，预计 2027 年初升到约 80 TPS。",
+      "url": "https://x.com/growthepie_eth/status/2126339765909729504",
+      "date": "2026-11-27",
+      "title_en": "growthepie estimates",
+      "note_en": "(2026-11-27 22:38) that Glamsterdam raises the gas limit 3.3x, taking Ethereum from 24.9 TPS today to around 80 TPS in early 2027.",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "Glamsterdam 保留 EIP-8037：gas 重新定价照原样上线",
+      "title": "jihoonsong 认为",
+      "note": "12 月 3 日 ACDE #250 是否讨论 reservoir 自省操作码；12-15 Hoodi 升级是否顺利，以及主网时间（jihoonsong 认为在执行层不改规范的前提下 1 月是可行目标）。",
+      "url": "https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522",
+      "date": "2026-11-28",
+      "title_en": "jihoonsong sees January as plausible",
+      "note_en": "Whether ACDE #250 on December 3 takes up the reservoir introspection opcode, how the Hoodi upgrade goes on 12-15, and the mainnet date (jihoonsong sees January as plausible if the EL spec does not change).",
+      "topic_en": "Glamsterdam keeps EIP-8037: the gas repricing ships as is"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "EIP-8476 Permanent EOA Delegation Opt-Out",
+      "note": "2026-11-27 09:17 合并为 Draft Core EIP（nicolashw）。EOA 通过一种原本无效、被严格限定的 set-code 交易写入 3 字节标记 0xef0200，之后任何委托授权（包括清除授权）都不能替换它；EVM 把标记当作空代码（EXTCODESIZE 为 0），合约看到的仍是普通 EOA。动机是交易所热钱包、机构和金库这类账户不需要 7702，委托执行会破坏它们链下风控的假设。它只关掉委托，私钥泄露后仍能签普通交易。",
+      "url": "https://github.com/ethereum/EIPs/pull/12600",
+      "date": "2026-11-27",
+      "title_en": "EIP-8476 Permanent EOA Delegation Opt-Out",
+      "note_en": "Was merged as a Draft Core EIP at 2026-11-27 09:17 (nicolashw). Using a narrowly constrained, previously invalid form of set-code transaction, an EOA writes the 3-byte marker 0xef0200, after which no delegation authorization, including a clearing one, can replace it. The EVM treats the marker as empty code (EXTCODESIZE is 0), so contracts still see an ordinary EOA. The motivation is that exchange hot wallets, institutions and treasuries do not need 7702, and delegated execution can undermine the assumptions behind their offchain controls. It only removes delegation; a leaked key can still sign normal transactions.",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "EIP-8425 Quantum Freeze and Account Recovery 更新",
+      "note": "2026-11-27 22:12 合并（colinlyguo）。按作者在 Magicians 的说明（2026-11-27 20:41）：去掉冻结前的恢复承诺和单独截止期，改用 EIP-8298 迁移；种子证明绑定 (chain_id, account, nonce, source, code_hash)，账户装上常规代码后种子恢复永久结束；冻结范围扩展到 EIP-8141 的 SECP256K1 条目，保留 P256VERIFY 和 EIP-8141 P256。是否以及何时启用冻结仍由社区单独决定。",
+      "url": "https://github.com/ethereum/EIPs/pull/12722",
+      "date": "2026-11-27",
+      "title_en": "EIP-8425 Quantum Freeze and Account Recovery update",
+      "note_en": "Merged at 2026-11-27 22:12 (colinlyguo). Per the author's Magicians post (2026-11-27 20:41), pre-freeze recovery commitments and their separate cutoff are gone in favor of EIP-8298 migration. Seed proofs are bound to (chain_id, account, nonce, source, code_hash), seed recovery ends permanently once regular code is installed, and the freeze now also covers EIP-8141 SECP256K1 entries while keeping P256VERIFY and EIP-8141 P256. Whether and when to activate a freeze remains a separate community decision.",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "作者在 Magicians 的说明",
+      "note": "EIP-8425 Quantum Freeze and Account Recovery 更新 2026-11-27 22:12 合并（colinlyguo）。按作者在 Magicians 的说明（2026-11-27 20:41）：去掉冻结前的恢复承诺和单独截止期，改用 EIP-8298 迁移；种子证明绑定 (chain_id, account, nonce, source, code_hash)，账户装上常规代码后种子恢复永久结束；冻结范围扩展到 EIP-8141 的 SECP256K1 条目，保留 P256VERIFY 和 EIP-8141 P256。是否以及何时启用冻结仍由社区单独决定。",
+      "url": "https://ethereum-magicians.org/t/eip-8425-quantum-freeze-and-account-recovery/29770/32",
+      "date": "2026-11-27",
+      "title_en": "the author's Magicians post",
+      "note_en": "EIP-8425 Quantum Freeze and Account Recovery update merged at 2026-11-27 22:12 (colinlyguo). Per the author's Magicians post (2026-11-27 20:41), pre-freeze recovery commitments and their separate cutoff are gone in favor of EIP-8298 migration. Seed proofs are bound to (chain_id, account, nonce, source, code_hash), seed recovery ends permanently once regular code is installed, and the freeze now also covers EIP-8141 SECP256K1 entries while keeping P256VERIFY and EIP-8141 P256. Whether and when to activate a freeze remains a separate community decision.",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "CPerezz 在 ethresear.ch 用主网字节码测试 EIP-8298 SETCODEFROM",
+      "note": "（2026-11-27 15:11），对应 PR #12716（开放中）。发现两点：执行 SETCODEFROM 的帧仍在跑旧代码，而外部已看到新代码（“展示一套、运行另一套”，文中举了 sudoswap v1 路由按代码前 73 字节识别 pair 的例子）；借来的代码可以替换掉你的代码。提议代码变更延后生效，并只允许从账户自己的代码采用。",
+      "url": "https://ethresear.ch/t/a-state-backed-validation-of-setcodefrom/26300",
+      "date": "2026-11-27",
+      "title_en": "CPerezz tested EIP-8298 SETCODEFROM against mainnet bytecode on ethresear.ch",
+      "note_en": "(2026-11-27 15:11), with the matching PR #12716 (open). Two problems surfaced: the frame running SETCODEFROM keeps executing its old code while everyone else already sees the new code (\"show one code, run another\", illustrated with sudoswap v1's router, which recognizes pairs by the first 73 bytes of their code), and borrowed code can replace your own. The proposal defers the code change and only allows adopting from the account's own code.",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "PR #12716",
+      "note": "CPerezz 在 ethresear.ch 用主网字节码测试 EIP-8298 SETCODEFROM（2026-11-27 15:11），对应 PR #12716（开放中）。发现两点：执行 SETCODEFROM 的帧仍在跑旧代码，而外部已看到新代码（“展示一套、运行另一套”，文中举了 sudoswap v1 路由按代码前 73 字节识别 pair 的例子）；借来的代码可以替换掉你的代码。提议代码变更延后生效，并只允许从账户自己的代码采用。",
+      "url": "https://github.com/ethereum/EIPs/pull/12716",
+      "date": "2026-11-27",
+      "title_en": "PR #12716",
+      "note_en": "CPerezz tested EIP-8298 SETCODEFROM against mainnet bytecode on ethresear.ch (2026-11-27 15:11), with the matching PR #12716 (open). Two problems surfaced: the frame running SETCODEFROM keeps executing its old code while everyone else already sees the new code (\"show one code, run another\", illustrated with sudoswap v1's router, which recognizes pairs by the first 73 bytes of their code), and borrowed code can replace your own. The proposal defers the code change and only allows adopting from the account's own code.",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "ilitteri 的 Hegotá 后量子执行路径实验对比",
+      "note": "（2026-11-27 17:03）：ethrex 在同一基线上实现了 leanSPHINCS 的四种接入方式，结论是内联 PROOF 帧方案在无聚合阶段实现量最小、到聚合阶段累计改动也最少，隔离见证并没有明显降低带宽；文中说 bogota-devnet-2 已覆盖 EIP-8141、EIP-8298 和 EIP-8151。这为 lightclient 的 PROOF 帧 PR #12714 提供了数据。",
+      "url": "https://ethresear.ch/t/paths-to-post-quantum-execution-in-hegota-an-experimental-comparison/26304",
+      "date": "2026-11-27",
+      "title_en": "ilitteri's experimental comparison of post-quantum execution paths for Hegotá",
+      "note_en": "(2026-11-27 17:03): ethrex implemented four ways to integrate leanSPHINCS on the same baseline. The inline PROOF frame option had the smallest implementation footprint without aggregation and the lowest cumulative EL churn through aggregation, and segregating witnesses did not materially cut bandwidth. The post says bogota-devnet-2 already exercises EIP-8141, EIP-8298 and EIP-8151. This gives data to lightclient's PROOF frame PR #12714.",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "PROOF 帧 PR #12714",
+      "note": "ilitteri 的 Hegotá 后量子执行路径实验对比（2026-11-27 17:03）：ethrex 在同一基线上实现了 leanSPHINCS 的四种接入方式，结论是内联 PROOF 帧方案在无聚合阶段实现量最小、到聚合阶段累计改动也最少，隔离见证并没有明显降低带宽；文中说 bogota-devnet-2 已覆盖 EIP-8141、EIP-8298 和 EIP-8151。这为 lightclient 的 PROOF 帧 PR #12714 提供了数据。",
+      "url": "https://github.com/ethereum/EIPs/pull/12714",
+      "date": "2026-11-27",
+      "title_en": "PROOF frame PR #12714",
+      "note_en": "Ilitteri's experimental comparison of post-quantum execution paths for Hegotá (2026-11-27 17:03): ethrex implemented four ways to integrate leanSPHINCS on the same baseline. The inline PROOF frame option had the smallest implementation footprint without aggregation and the lowest cumulative EL churn through aggregation, and segregating witnesses did not materially cut bandwidth. The post says bogota-devnet-2 already exercises EIP-8141, EIP-8298 and EIP-8151. This gives data to lightclient's PROOF frame PR #12714.",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "potuz 的 Post-Quantum Material Registration 草案",
+      "note": "验证者和密钥：potuz 的 Post-Quantum Material Registration 草案（11-27 更新，开放中）让提款地址为验证者登记 32 字节 PQ 材料；ERCs 仓库合并 ERC-8517 PQ 验证者种子派生（2026-11-27 20:48）和 ERC-8499 基于 BIP-39 的哈希密钥派生（2026-11-27 20:44），ERC-8519 PQ 验证者和构建者 keystore 开始讨论（2026-11-27 20:56）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12609",
+      "date": "2026-11-27",
+      "title_en": "potuz's Post-Quantum Material Registration draft",
+      "note_en": "Validators and keys: potuz's Post-Quantum Material Registration draft (updated 11-27, open) lets a withdrawal address register 32 bytes of PQ material per validator. The ERCs repo merged ERC-8517 PQ validator seed derivation (2026-11-27 20:48) and ERC-8499 hash-based key derivation from BIP-39 (2026-11-27 20:44), and discussion opened on ERC-8519, a PQ validator and builder keystore (2026-11-27 20:56).",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "ERC-8517 PQ 验证者种子派生",
+      "note": "验证者和密钥：potuz 的 Post-Quantum Material Registration 草案（11-27 更新，开放中）让提款地址为验证者登记 32 字节 PQ 材料；ERCs 仓库合并 ERC-8517 PQ 验证者种子派生（2026-11-27 20:48）和 ERC-8499 基于 BIP-39 的哈希密钥派生（2026-11-27 20:44），ERC-8519 PQ 验证者和构建者 keystore 开始讨论（2026-11-27 20:56）。",
+      "url": "https://github.com/ethereum/ERCs/pull/2214",
+      "date": "2026-11-27",
+      "title_en": "ERC-8517 PQ validator seed derivation",
+      "note_en": "Validators and keys: potuz's Post-Quantum Material Registration draft (updated 11-27, open) lets a withdrawal address register 32 bytes of PQ material per validator. The ERCs repo merged ERC-8517 PQ validator seed derivation (2026-11-27 20:48) and ERC-8499 hash-based key derivation from BIP-39 (2026-11-27 20:44), and discussion opened on ERC-8519, a PQ validator and builder keystore (2026-11-27 20:56).",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "ERC-8499 基于 BIP-39 的哈希密钥派生",
+      "note": "验证者和密钥：potuz 的 Post-Quantum Material Registration 草案（11-27 更新，开放中）让提款地址为验证者登记 32 字节 PQ 材料；ERCs 仓库合并 ERC-8517 PQ 验证者种子派生（2026-11-27 20:48）和 ERC-8499 基于 BIP-39 的哈希密钥派生（2026-11-27 20:44），ERC-8519 PQ 验证者和构建者 keystore 开始讨论（2026-11-27 20:56）。",
+      "url": "https://github.com/ethereum/ERCs/pull/2172",
+      "date": "2026-11-27",
+      "title_en": "ERC-8499 hash-based key derivation from BIP-39",
+      "note_en": "Validators and keys: potuz's Post-Quantum Material Registration draft (updated 11-27, open) lets a withdrawal address register 32 bytes of PQ material per validator. The ERCs repo merged ERC-8517 PQ validator seed derivation (2026-11-27 20:48) and ERC-8499 hash-based key derivation from BIP-39 (2026-11-27 20:44), and discussion opened on ERC-8519, a PQ validator and builder keystore (2026-11-27 20:56).",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "ERC-8519 PQ 验证者和构建者 keystore",
+      "note": "验证者和密钥：potuz 的 Post-Quantum Material Registration 草案（11-27 更新，开放中）让提款地址为验证者登记 32 字节 PQ 材料；ERCs 仓库合并 ERC-8517 PQ 验证者种子派生（2026-11-27 20:48）和 ERC-8499 基于 BIP-39 的哈希密钥派生（2026-11-27 20:44），ERC-8519 PQ 验证者和构建者 keystore 开始讨论（2026-11-27 20:56）。",
+      "url": "https://ethereum-magicians.org/t/erc-8519-post-quantum-validator-and-builder-keystore/30525",
+      "date": "2026-11-27",
+      "title_en": "ERC-8519, a PQ validator and builder keystore",
+      "note_en": "Validators and keys: potuz's Post-Quantum Material Registration draft (updated 11-27, open) lets a withdrawal address register 32 bytes of PQ material per validator. The ERCs repo merged ERC-8517 PQ validator seed derivation (2026-11-27 20:48) and ERC-8499 hash-based key derivation from BIP-39 (2026-11-27 20:44), and discussion opened on ERC-8519, a PQ validator and builder keystore (2026-11-27 20:56).",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "ERC-8441 混合后量子隐身地址",
+      "note": "隐私：ERC-8441 混合后量子隐身地址 出现独立 TypeScript 实现，29 组官方向量全部匹配（2026-11-26 18:41），作者 namncc 表示正在修订以加入 KEM 可替换性。siriusthemaster 的 ethresear.ch 文章（2026-11-27 20:35）指出，ERC-5564 schemeId 1 的隐身输出在量子攻击下比从未使用过的 EOA 更危险，量子对手仅凭公开数据就能关联并盗取未花费输出，并列出钱包现在能堵的两个漏洞（付款方回收、由 ECDSA 签名派生的密钥）。",
+      "url": "https://ethereum-magicians.org/t/erc-8441-hybrid-post-quantum-stealth-address-scheme/29923/11",
+      "date": "2026-11-26",
+      "title_en": "ERC-8441 hybrid post-quantum stealth addresses",
+      "note_en": "Privacy: ERC-8441 hybrid post-quantum stealth addresses got an independent TypeScript implementation that matches all 29 official test vector rows (2026-11-26 18:41), and author namncc said the ERC is being revised to add KEM agility. siriusthemaster's ethresear.ch post (2026-11-27 20:35) argues that ERC-5564 schemeId 1 stealth outputs are worse off than never-used EOAs against a quantum adversary, who could link and steal unspent outputs from public data alone, and lists two holes wallets can close today (payer clawback and keys derived from ECDSA signatures).",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "账户迁移、后量子与隐私：7702 退出、种子恢复和 SETCODEFROM 收紧",
+      "title": "siriusthemaster 的 ethresear.ch 文章",
+      "note": "隐私：ERC-8441 混合后量子隐身地址 出现独立 TypeScript 实现，29 组官方向量全部匹配（2026-11-26 18:41），作者 namncc 表示正在修订以加入 KEM 可替换性。siriusthemaster 的 ethresear.ch 文章（2026-11-27 20:35）指出，ERC-5564 schemeId 1 的隐身输出在量子攻击下比从未使用过的 EOA 更危险，量子对手仅凭公开数据就能关联并盗取未花费输出，并列出钱包现在能堵的两个漏洞（付款方回收、由 ECDSA 签名派生的密钥）。",
+      "url": "https://ethresear.ch/t/stealth-addresses-after-secp256k1-falls-payer-clawback-signature-derived-keys-and-a-recovery-statement-for-erc-8441-outputs/26305",
+      "date": "2026-11-26",
+      "title_en": "siriusthemaster's ethresear.ch post",
+      "note_en": "Privacy: ERC-8441 hybrid post-quantum stealth addresses got an independent TypeScript implementation that matches all 29 official test vector rows (2026-11-26 18:41), and author namncc said the ERC is being revised to add KEM agility. siriusthemaster's ethresear.ch post (2026-11-27 20:35) argues that ERC-5564 schemeId 1 stealth outputs are worse off than never-used EOAs against a quantum adversary, who could link and steal unspent outputs from public data alone, and lists two holes wallets can close today (payer clawback and keys derived from ECDSA signatures).",
+      "topic_en": "Account migration, post-quantum and privacy: 7702 opt-out, seed recovery and a tighter SETCODEFROM"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "fradamt",
+      "note": "（2026-11-25 23:07）和 caspar（2026-11-26 12:53）主张为了尽快实现后量子和抗 AI 安全（pqai），Hegotá 暂时放弃 FOCIL，理由是两者争夺同一批高上下文的核心开发者。nflaig 反对（2026-11-26 19:07）：交易供应链中心化在加剧，没有 FOCIL 扩容会受限，Lodestar 已在主干合并完整实现。trent_vanepps 称（2026-11-26 00:56）Ethlabs 已撤回 EIP-8198 Quick Slots 的提案；potuz 则认为（2026-11-26 02:35）PQ 分叉会引入新攻击面，名字里的 “ai” 不必要。",
+      "url": "https://ethereum-magicians.org/t/thoughts-on-pqai-hegota-and-focil/30421/4",
+      "date": "2026-11-25",
+      "title_en": "fradamt",
+      "note_en": "(2026-11-25 23:07) and caspar (2026-11-26 12:53) argued that to make Ethereum secure against quantum and AI threats (pqai) as fast as possible, Hegotá should drop FOCIL for now, since both draw on the same small group of high-context core devs. nflaig disagreed (2026-11-26 19:07): transaction supply chain centralization keeps growing, scaling is limited without FOCIL, and Lodestar has already merged a complete implementation to its trunk. trent_vanepps said (2026-11-26 00:56) Ethlabs has withdrawn EIP-8198 Quick Slots from consideration, while potuz argued (2026-11-26 02:35) that a PQ fork adds new attack surface and the \"ai\" in pqai is unnecessary.",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "caspar",
+      "note": "fradamt（2026-11-25 23:07）和 caspar（2026-11-26 12:53）主张为了尽快实现后量子和抗 AI 安全（pqai），Hegotá 暂时放弃 FOCIL，理由是两者争夺同一批高上下文的核心开发者。nflaig 反对（2026-11-26 19:07）：交易供应链中心化在加剧，没有 FOCIL 扩容会受限，Lodestar 已在主干合并完整实现。trent_vanepps 称（2026-11-26 00:56）Ethlabs 已撤回 EIP-8198 Quick Slots 的提案；potuz 则认为（2026-11-26 02:35）PQ 分叉会引入新攻击面，名字里的 “ai” 不必要。",
+      "url": "https://ethereum-magicians.org/t/thoughts-on-pqai-hegota-and-focil/30421/6",
+      "date": "2026-11-25",
+      "title_en": "caspar",
+      "note_en": "Fradamt (2026-11-25 23:07) and caspar (2026-11-26 12:53) argued that to make Ethereum secure against quantum and AI threats (pqai) as fast as possible, Hegotá should drop FOCIL for now, since both draw on the same small group of high-context core devs. nflaig disagreed (2026-11-26 19:07): transaction supply chain centralization keeps growing, scaling is limited without FOCIL, and Lodestar has already merged a complete implementation to its trunk. trent_vanepps said (2026-11-26 00:56) Ethlabs has withdrawn EIP-8198 Quick Slots from consideration, while potuz argued (2026-11-26 02:35) that a PQ fork adds new attack surface and the \"ai\" in pqai is unnecessary.",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "nflaig 反对",
+      "note": "fradamt（2026-11-25 23:07）和 caspar（2026-11-26 12:53）主张为了尽快实现后量子和抗 AI 安全（pqai），Hegotá 暂时放弃 FOCIL，理由是两者争夺同一批高上下文的核心开发者。nflaig 反对（2026-11-26 19:07）：交易供应链中心化在加剧，没有 FOCIL 扩容会受限，Lodestar 已在主干合并完整实现。trent_vanepps 称（2026-11-26 00:56）Ethlabs 已撤回 EIP-8198 Quick Slots 的提案；potuz 则认为（2026-11-26 02:35）PQ 分叉会引入新攻击面，名字里的 “ai” 不必要。",
+      "url": "https://ethereum-magicians.org/t/thoughts-on-pqai-hegota-and-focil/30421/7",
+      "date": "2026-11-25",
+      "title_en": "nflaig disagreed",
+      "note_en": "Fradamt (2026-11-25 23:07) and caspar (2026-11-26 12:53) argued that to make Ethereum secure against quantum and AI threats (pqai) as fast as possible, Hegotá should drop FOCIL for now, since both draw on the same small group of high-context core devs. nflaig disagreed (2026-11-26 19:07): transaction supply chain centralization keeps growing, scaling is limited without FOCIL, and Lodestar has already merged a complete implementation to its trunk. trent_vanepps said (2026-11-26 00:56) Ethlabs has withdrawn EIP-8198 Quick Slots from consideration, while potuz argued (2026-11-26 02:35) that a PQ fork adds new attack surface and the \"ai\" in pqai is unnecessary.",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "trent_vanepps 称",
+      "note": "fradamt（2026-11-25 23:07）和 caspar（2026-11-26 12:53）主张为了尽快实现后量子和抗 AI 安全（pqai），Hegotá 暂时放弃 FOCIL，理由是两者争夺同一批高上下文的核心开发者。nflaig 反对（2026-11-26 19:07）：交易供应链中心化在加剧，没有 FOCIL 扩容会受限，Lodestar 已在主干合并完整实现。trent_vanepps 称（2026-11-26 00:56）Ethlabs 已撤回 EIP-8198 Quick Slots 的提案；potuz 则认为（2026-11-26 02:35）PQ 分叉会引入新攻击面，名字里的 “ai” 不必要。",
+      "url": "https://x.com/trent_vanepps/status/2125649806039334917",
+      "date": "2026-11-25",
+      "title_en": "trent_vanepps said",
+      "note_en": "Fradamt (2026-11-25 23:07) and caspar (2026-11-26 12:53) argued that to make Ethereum secure against quantum and AI threats (pqai) as fast as possible, Hegotá should drop FOCIL for now, since both draw on the same small group of high-context core devs. nflaig disagreed (2026-11-26 19:07): transaction supply chain centralization keeps growing, scaling is limited without FOCIL, and Lodestar has already merged a complete implementation to its trunk. trent_vanepps said (2026-11-26 00:56) Ethlabs has withdrawn EIP-8198 Quick Slots from consideration, while potuz argued (2026-11-26 02:35) that a PQ fork adds new attack surface and the \"ai\" in pqai is unnecessary.",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "potuz 则认为",
+      "note": "fradamt（2026-11-25 23:07）和 caspar（2026-11-26 12:53）主张为了尽快实现后量子和抗 AI 安全（pqai），Hegotá 暂时放弃 FOCIL，理由是两者争夺同一批高上下文的核心开发者。nflaig 反对（2026-11-26 19:07）：交易供应链中心化在加剧，没有 FOCIL 扩容会受限，Lodestar 已在主干合并完整实现。trent_vanepps 称（2026-11-26 00:56）Ethlabs 已撤回 EIP-8198 Quick Slots 的提案；potuz 则认为（2026-11-26 02:35）PQ 分叉会引入新攻击面，名字里的 “ai” 不必要。",
+      "url": "https://x.com/potuz_eth/status/2125674861557129250",
+      "date": "2026-11-25",
+      "title_en": "potuz argued",
+      "note_en": "Fradamt (2026-11-25 23:07) and caspar (2026-11-26 12:53) argued that to make Ethereum secure against quantum and AI threats (pqai) as fast as possible, Hegotá should drop FOCIL for now, since both draw on the same small group of high-context core devs. nflaig disagreed (2026-11-26 19:07): transaction supply chain centralization keeps growing, scaling is limited without FOCIL, and Lodestar has already merged a complete implementation to its trunk. trent_vanepps said (2026-11-26 00:56) Ethlabs has withdrawn EIP-8198 Quick Slots from consideration, while potuz argued (2026-11-26 02:35) that a PQ fork adds new attack surface and the \"ai\" in pqai is unnecessary.",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "barnabasbusa 在 ACDC 议程下提出 “FOCIL light”",
+      "note": "（2026-11-26 20:20）：EIP-7805 只对 legacy、2930、1559、7702 交易强制包含，Frame 交易可以进入包含列表但被遗漏总是可以豁免；他同时说在此之前不能弃用 ECDSA，因为 EOA 是唯一抗审查路径。",
+      "url": "https://github.com/ethereum/pm/issues/2305",
+      "date": "2026-11-26",
+      "title_en": "barnabasbusa proposed \"FOCIL light\" on the ACDC agenda",
+      "note_en": "(2026-11-26 20:20): EIP-7805 would enforce inclusion only for legacy, 2930, 1559 and 7702 transactions, and frame transactions could appear in inclusion lists but omitting them would always be excused. He added that until then ECDSA must not be deprecated, because EOAs are the only censorship resistant path.",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "jihoonsong 提出按研究、开发、测试流水线排期",
+      "note": "（2026-11-26 19:47）：PQ 共识（PQ Gasper 或 PQ Decoupled Consensus）仍在研究阶段，PQ 预注册可以在 Glamsterdam 后不久先上。他在 ethresear.ch 的文章（2026-11-25 19:30）说明 FOCIL 在 PQ 过渡期依然可用，8 KiB 的包含列表能装下一笔带 leanSPHINCS 签名（7,740 B）的交易。",
+      "url": "https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522",
+      "date": "2026-11-26",
+      "title_en": "jihoonsong proposed scheduling by the research, development and testing pipeline",
+      "note_en": "(2026-11-26 19:47): PQ consensus (PQ Gasper or PQ Decoupled Consensus) is still in research, and PQ preregistration could ship shortly after Glamsterdam. His ethresear.ch post (2026-11-25 19:30) explains that FOCIL keeps working through the PQ transition, and an 8 KiB inclusion list can carry one transaction with a leanSPHINCS signature (7,740 B).",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "ethresear.ch 的文章",
+      "note": "jihoonsong 提出按研究、开发、测试流水线排期（2026-11-26 19:47）：PQ 共识（PQ Gasper 或 PQ Decoupled Consensus）仍在研究阶段，PQ 预注册可以在 Glamsterdam 后不久先上。他在 ethresear.ch 的文章（2026-11-25 19:30）说明 FOCIL 在 PQ 过渡期依然可用，8 KiB 的包含列表能装下一笔带 leanSPHINCS 签名（7,740 B）的交易。",
+      "url": "https://ethresear.ch/t/focil-and-ethereums-pq-transition/26292",
+      "date": "2026-11-26",
+      "title_en": "ethresear.ch post",
+      "note_en": "Jihoonsong proposed scheduling by the research, development and testing pipeline (2026-11-26 19:47): PQ consensus (PQ Gasper or PQ Decoupled Consensus) is still in research, and PQ preregistration could ship shortly after Glamsterdam. His ethresear.ch post (2026-11-25 19:30) explains that FOCIL keeps working through the PQ transition, and an 8 KiB inclusion list can carry one transaction with a leanSPHINCS signature (7,740 B).",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "PQ-CL Breakout #5",
+      "note": "进展：PQ-CL Breakout #5（EIPsInsight 笔记 2026-11-28 01:56）称 PQ devnet-1 已启动，8 个 CL 客户端全部参与，下一个 devnet 测试分段证明广播；terencechain 称（2026-11-27 21:08）devnet-1 参与率接近完美。ACDC #192 没有决定 FOCIL 去留，完整的 Hegotá 范围预计在约 12 月 10 日的 ACDC 决定。同时 FOCIL 规范继续推进：EIP-7805 rebase 合并（2026-11-28 00:03）。",
+      "url": "https://ethereum-magicians.org/t/pq-cl-breakout-5-november-27-2026/30499/4",
+      "date": "2026-11-28",
+      "title_en": "PQ-CL Breakout #5",
+      "note_en": "Progress: PQ-CL Breakout #5 (EIPsInsight notes, 2026-11-28 01:56) reports that PQ devnet-1 launched with all 8 CL clients, and the next devnet will test segmented proof broadcast. terencechain said (2026-11-27 21:08) participation on devnet-1 is near perfect. ACDC #192 made no decision on FOCIL, and the full Hegotá scope is expected at the ACDC call around December 10. Meanwhile the FOCIL spec keeps moving: the EIP-7805 rebase was merged (2026-11-28 00:03).",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "terencechain 称",
+      "note": "进展：PQ-CL Breakout #5（EIPsInsight 笔记 2026-11-28 01:56）称 PQ devnet-1 已启动，8 个 CL 客户端全部参与，下一个 devnet 测试分段证明广播；terencechain 称（2026-11-27 21:08）devnet-1 参与率接近完美。ACDC #192 没有决定 FOCIL 去留，完整的 Hegotá 范围预计在约 12 月 10 日的 ACDC 决定。同时 FOCIL 规范继续推进：EIP-7805 rebase 合并（2026-11-28 00:03）。",
+      "url": "https://x.com/terencechain/status/2126317166454870476",
+      "date": "2026-11-28",
+      "title_en": "terencechain said",
+      "note_en": "Progress: PQ-CL Breakout #5 (EIPsInsight notes, 2026-11-28 01:56) reports that PQ devnet-1 launched with all 8 CL clients, and the next devnet will test segmented proof broadcast. terencechain said (2026-11-27 21:08) participation on devnet-1 is near perfect. ACDC #192 made no decision on FOCIL, and the full Hegotá scope is expected at the ACDC call around December 10. Meanwhile the FOCIL spec keeps moving: the EIP-7805 rebase was merged (2026-11-28 00:03).",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "EIP-7805 rebase 合并",
+      "note": "进展：PQ-CL Breakout #5（EIPsInsight 笔记 2026-11-28 01:56）称 PQ devnet-1 已启动，8 个 CL 客户端全部参与，下一个 devnet 测试分段证明广播；terencechain 称（2026-11-27 21:08）devnet-1 参与率接近完美。ACDC #192 没有决定 FOCIL 去留，完整的 Hegotá 范围预计在约 12 月 10 日的 ACDC 决定。同时 FOCIL 规范继续推进：EIP-7805 rebase 合并（2026-11-28 00:03）。",
+      "url": "https://github.com/ethereum/EIPs/pull/12470",
+      "date": "2026-11-28",
+      "title_en": "the EIP-7805 rebase was merged",
+      "note_en": "Progress: PQ-CL Breakout #5 (EIPsInsight notes, 2026-11-28 01:56) reports that PQ devnet-1 launched with all 8 CL clients, and the next devnet will test segmented proof broadcast. terencechain said (2026-11-27 21:08) participation on devnet-1 is near perfect. ACDC #192 made no decision on FOCIL, and the full Hegotá scope is expected at the ACDC call around December 10. Meanwhile the FOCIL spec keeps moving: the EIP-7805 rebase was merged (2026-11-28 00:03).",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "Hegotá 重新定范围：FOCIL 和后量子争资源",
+      "title": "PQ-CL Breakout #6",
+      "note": "12 月 1 日 PQ-CL Breakout #6，约 12 月 10 日 ACDC 的 Hegotá 范围决定。",
+      "url": "https://github.com/ethereum/pm/issues/2321",
+      "date": "2026-11-28",
+      "title_en": "PQ-CL Breakout #6",
+      "note_en": "On December 1, and the Hegotá scope decision at the ACDC call around December 10.",
+      "topic_en": "Rescoping Hegotá: FOCIL and post-quantum compete for the same people"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Vitalik 博客：A shallow dive into open-source chip design",
+      "note": "2026-11-26，讨论开源芯片设计与硬件可信，关心硬件钱包安全的可以读。",
+      "url": "https://vitalik.eth.limo/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html",
+      "date": "2026-11-26",
+      "title_en": "Vitalik's blog: A shallow dive into open-source chip design",
+      "note_en": "2026-11-26, on open-source chip design and trustworthy hardware. Worth a read if you care about hardware wallet security.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "dapplion：Vitalik 用 AI 写的 NixOS 配置重新在笔记本上跑自己的节点",
+      "note": "2026-11-25 21:13，说明本地节点的门槛在降低。",
+      "url": "https://x.com/dapplion/status/2125593711337668685",
+      "date": "2026-11-25",
+      "title_en": "dapplion: Vitalik is running his own node on his laptop again with an AI-written NixOS config",
+      "note_en": "2026-11-25 21:13, a sign that running a local node is getting easier.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Nero_eth：区块到底能有多大",
+      "note": "（2026-11-22 发布，11-25 推广）：Glamsterdam 定价下最大的区块来自零字节 calldata 加上数千个被跳过的 EIP-7702 授权，60M gas 时约 1.8 MiB；建议按字节计 gas 并由 gas 上限推导 CL 大小上限。",
+      "url": "https://ethresear.ch/t/whats-a-block-and-how-big-can-it-get/26281",
+      "date": "2026-11-22",
+      "title_en": "Nero_eth: how big can a block get",
+      "note_en": "(posted 2026-11-22, shared 11-25). Under Glamsterdam pricing the largest block comes from zero-byte calldata plus thousands of skipped EIP-7702 authorizations, about 1.8 MiB at 60M gas. He suggests pricing every payload byte in gas and deriving the CL size bound from the gas limit.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "EIP 草案 Variable-Size Blobs",
+      "note": "2026-11-27 03:41 提交（frisitano），对 L2 的数据成本可能有影响，处于早期。",
+      "url": "https://github.com/ethereum/EIPs/pull/12720",
+      "date": "2026-11-27",
+      "title_en": "Draft EIP: Variable-Size Blobs",
+      "note_en": "Submitted 2026-11-27 03:41 (frisitano). Could affect L2 data costs; still early.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ethrex v32.0.0 发布",
+      "note": "2026-11-26 01:08，无需重新同步，新增 eth_capabilities 和完整的 eth_subscribe 订阅支持，RPC 集成方可用。",
+      "url": "https://x.com/ethrex_client/status/2125652975234535881",
+      "date": "2026-11-26",
+      "title_en": "ethrex v32.0.0 is out",
+      "note_en": "2026-11-26 01:08. No resync needed, with eth_capabilities and full eth_subscribe support that RPC integrators can use.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "ETHBEAT 收录隐私协议 Hinkal",
+      "note": "2026-11-26 21:12，审查发现可能伪造 zk 证明的可信设置、明显的 RPC 泄露和对 Hinkal 控制 TEE 的隐私泄露；使用者应先看风险说明。",
+      "url": "https://x.com/ethbeat_org/status/2125955848325194176",
+      "date": "2026-11-26",
+      "title_en": "ETHBEAT added the privacy protocol Hinkal",
+      "note_en": "2026-11-26 21:12. Its review found a trusted setup that could allow forged zk proofs, significant RPC leaks and privacy leaks to a Hinkal-controlled TEE. Users should read the risk notes first.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "Aztec Tierra 的 Shield 上线",
+      "note": "2026-11-26 00:01，可从以太坊桥入最多 1,000 美元的 USDC、ETH 或 WETH 后私密交易。",
+      "url": "https://x.com/aztecnetwork/status/2125635911706976648",
+      "date": "2026-11-26",
+      "title_en": "Shield is live on Aztec Tierra",
+      "note_en": "2026-11-26 00:01. You can bridge up to $1,000 in USDC, ETH or WETH from Ethereum and then transact privately.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "其他动态",
+      "title": "tcoratger 整理 Vitalik 在 ETHTaipei 讲 EIP-8288",
+      "note": "2026-11-27 16:19：单个 PQ STARK 证明约需 640 万 gas，内存池递归聚合是降低成本的思路。",
+      "url": "https://x.com/tcoratger/status/2126244574373060979",
+      "date": "2026-11-27",
+      "title_en": "tcoratger summarizes Vitalik's ETHTaipei talk on EIP-8288",
+      "note_en": "2026-11-27 16:19: a single PQ STARK proof costs about 6.4M gas, and recursive aggregation in the mempool is the way to bring that down.",
+      "topic_en": "Other updates"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "barnabemonnot：核心开发是一艘去中心化的大船",
+      "note": "2026-11-26 13:51，呼应 caspar，主张先明确想要的结果再调配人力。",
+      "url": "https://x.com/barnabemonnot/status/2125844762699727206",
+      "date": "2026-11-26",
+      "title_en": "barnabemonnot: core development is a big decentralized ship",
+      "note_en": "2026-11-26 13:51, backing caspar and arguing for being clear about outcomes before allocating people.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "binji_x 谈 ACD 的性质",
+      "note": "2026-11-26 20:56：ACD 更像客户端团队的联合体，而不是替以太坊做决定的机构。",
+      "url": "https://x.com/binji_x/status/2125951954421678344",
+      "date": "2026-11-26",
+      "title_en": "binji_x on what ACD is",
+      "note_en": "2026-11-26 20:56: more a consortium of client teams than an institution that decides for Ethereum.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "adietrichs：以太坊治理过去离社区太远",
+      "note": "2026-11-26 23:48，Ethlabs 会把观点公开讨论。",
+      "url": "https://x.com/adietrichs/status/2125995101369340391",
+      "date": "2026-11-26",
+      "title_en": "adietrichs: Ethereum governance has been too distant from the community",
+      "note_en": "2026-11-26 23:48, and Ethlabs will keep putting its views out in the open.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "casparschwa：Glamsterdam 的教训是核心开发和应用开发需要更紧密合作",
+      "note": "2026-11-26 04:47。",
+      "url": "https://x.com/casparschwa/status/2125707902245884038",
+      "date": "2026-11-26",
+      "title_en": "casparschwa: the Glamsterdam lesson is that core devs and app devs need to work much more closely",
+      "note_en": "2026-11-26 04:47.",
+      "topic_en": "Community"
+    },
+    {
+      "topic": "社区讨论汇总",
+      "title": "kassandraETH 转发 EIP-8288 帖子",
+      "note": "2026-11-27 16:59，感叹要做的工作太多、上线速度不明。",
+      "url": "https://x.com/kassandraETH/status/2126254494375718997",
+      "date": "2026-11-27",
+      "title_en": "kassandraETH on the EIP-8288 thread",
+      "note_en": "2026-11-27 16:59: there is so much work to do and it is unclear how fast it can ship.",
+      "topic_en": "Community"
+    }
+  ],
+  "image": {
+    "source_url": "https://ethresear.ch/t/a-state-backed-validation-of-setcodefrom/26300",
+    "credit": "ethresear.ch（CPerezz）",
+    "local_path": "assets/2026-11-28.jpg",
+    "credit_en": "ethresear.ch (CPerezz)"
+  },
+  "keywords_en": [
+    "Glamsterdam EIP-8037",
+    "Hoodi on December 15",
+    "EIP-8476 7702 opt-out",
+    "Hegotá FOCIL decision",
+    "post-quantum account migration"
+  ],
+  "summary_en": "ACDC #192 agreed to ship Glamsterdam with its current spec, keeping the EIP-8037 state creation repricing, and scheduled the Hoodi testnet upgrade for 2026-12-15 19:12 UTC. On the account side, EIP-8476 (a permanent EOA opt-out from EIP-7702 delegation) and the seed-proof recovery update to EIP-8425 were merged, while mainnet bytecode tests led to two proposed restrictions on EIP-8298 SETCODEFROM. Whether Hegotá keeps FOCIL or goes all in on post-quantum work will be decided at the ACDC call around December 10."
+}
